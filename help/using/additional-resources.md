@@ -6,7 +6,7 @@ seo-description: Siga esta página para saber mais sobre o Adobe AEM Cloud Manag
 uuid: 9 aa 90 a 99-f 049-422 e -9 e 06-b 00 b 843 ed 98 b
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 translation-type: tm+mt
-source-git-commit: 8031df1c1ce9d7fee4ef33de289c6952370b7589
+source-git-commit: 7236e9d3bf5955509068757b34c81f0021db4270
 
 ---
 
@@ -23,9 +23,9 @@ Siga [a Adobe Experience Manager](https://expleague.azureedge.net/labs/L722/inde
 
 ## Série de webinars {#webinar-series}
 
-Siga [os Fóruns da Adobe] (https://forums.adobe.com/message/11061595) para obter um caminho de aprendizagem adicional criado para o Experience Manager Manager como série de webinars.
+Siga [os Fóruns da Adobe](https://forums.adobe.com/message/11061595) para obter um caminho de aprendizagem adicional criado para o Experience Manager Manager como série de webinars.
 
 ## Série de vídeos de demonstração {#demo-videos}
 
-Siga [o Pipeline CI/CD Pipeline no Gerenciador de nuvem para AEM] (https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cloud-manager-cicd-pipeline-feature-video-use.html)
-para que inclui a exploração de séries de vídeo, configuração e execução do pipeline CI/CD do Gerenciador de nuvem em cenários de falha e sucesso.
+Siga [o Pipeline CI/CD Pipeline no Gerenciador de nuvem para AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cloud-manager-cicd-pipeline-feature-video-use.html)
+que inclui séries de vídeo com base na exploração, configuração e execução do pipeline CI/CD do Gerenciador de nuvem em cenários de falha e sucesso.
