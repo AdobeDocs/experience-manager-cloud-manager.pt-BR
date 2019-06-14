@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 83299 ed 8-4 b 7 a -4 b 1 c-bd 56-1 bfc 7 e 7318 d 4
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
 
 ---
 
@@ -54,11 +54,11 @@ Como parte do pipeline, o código fonte é digitalizado para garantir que as imp
 >Consulte Definições [de métricas](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) para obter definições mais detalhadas.
 
 
-Você pode baixar a lista de regras aqui [sonarqube-rules.xlsx](assets/sonarqube-rules.xlsx)
+Você pode baixar a lista de regras aqui [code-quality-rules.xlsx](assets/code-quality-rules.xlsx)
 
 >[!NOTE]
 >
->Para saber mais sobre as regras personalizadas sonarqube executadas [!UICONTROL Cloud Manager]por, consulte Regras de qualidade de código [personalizadas](custom-code-quality-rules.md).
+>Para saber mais sobre as regras de qualidade de código personalizadas executadas [!UICONTROL Cloud Manager]por, consulte Regras de qualidade de código [personalizado](custom-code-quality-rules.md).
 
 ### Lidar com falsos positivos {#dealing-with-false-positives}
 
