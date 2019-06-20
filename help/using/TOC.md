@@ -5,12 +5,12 @@ archtype: administrador
 user-guide-title: Ajuda do Experience Manager Cloud Manager
 index: n
 translation-type: tm+mt
-source-git-commit: 1129ea26c51670c51ff9f7b8e492fbaac654019f
+source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
 
 ---
 
 
-# Ajuda do Experience Manager {#using}
+# Experience Manager Help {#using}
 
 + [Introdução ao Experience Cloud Manager](introduction-to-cloud-manager.md)
 + Visão geral {#overview}
@@ -19,7 +19,7 @@ source-git-commit: 1129ea26c51670c51ff9f7b8e492fbaac654019f
    + [Pipeline CI/CD](ci-cd-pipeline.md)
    + [Segurança e privacidade](security-and-privacy.md)
    + [Recursos de ajuda](help-resources.md)
-+ O que é obrigatório {#requirements}
++ What is Required {#requirements}
    + [Direitos de acesso concedidos](access-rights-granted.md)
    + [Repositório de código-fonte](source-code-repository.md)
    + [Adicionar usuários e funções](setting-up-users-and-roles.md)
@@ -30,7 +30,7 @@ source-git-commit: 1129ea26c51670c51ff9f7b8e492fbaac654019f
    + [Criar um projeto de aplicativo AEM](create-an-application-project.md)
    + [Configurar suas ramificações de lançamento](configure-your-release-branches.md)
    + [Gerenciar suas Configurações do Dispatcher](dispatcher-configurations.md)
-+ Como usar {#how-to-use}
++ How to Use {#how-to-use}
    + [Configurar seu pipeline CI/CD](configuring-pipeline.md)
    + [Implantar seu código](deploying-code.md)
    + [Entender os resultados do teste](understand-your-test-results.md)
@@ -39,8 +39,12 @@ source-git-commit: 1129ea26c51670c51ff9f7b8e492fbaac654019f
    + [API do Gerenciador de nuvem](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [Notificações](notifications.md)
    + [Regras de qualidade de código personalizadas](custom-code-quality-rules.md)
++ Product Update Wizard {#product-update-wizard}
+   + [Visão geral](overview-productupdate-wizard.md)
+   + [Avaliação](evaluation.md)
 + Notas de versão {#release-notes}
-   + [Notas de versão atuais (2019.5.0)](release-notes-current.md)
+   + [Notas de versão atuais (2019.6.0)](release-notes-current.md)
+   + [Notas de versão de 2019.5.0](release-notes-2019-5-0.md)
    + [Notas de versão de 2019.4.0](release-notes-2019-4-0.md)
    + [Notas de versão de 2019.3.0](release-notes-2019-3-0.md)
    + [Notas de versão de 2019.2.0](release-notes-2019-2-0.md)
