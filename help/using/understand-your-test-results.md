@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 83299 ed 8-4 b 7 a -4 b 1 c-bd 56-1 bfc 7 e 7318 d 4
 translation-type: tm+mt
-source-git-commit: 4c1c6786db9b8972f9315bd2f12fc1752881492f
+source-git-commit: ea5bf33dc67c9ce174801f6d905abfc4a21886a2
 
 ---
 
@@ -33,6 +33,10 @@ Para cada uma dessas porturas, há uma estrutura de três níveis para problemas
 * **Importante** - esses são problemas identificados pela portão que causam uma falha imediata do pipeline.
 * **Importante** - esses são problemas identificados pela portão que fazem com que o pipeline insira um estado pausado. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, nesse caso, o pipeline continua ou pode aceitar os problemas, e nesse caso o pipeline é interrompido com uma falha.
 * **Informações** - Esses são problemas identificados pela portão que são fornecidos exclusivamente para fins informativos e não afetam a execução do pipeline.
+
+>[!NOTE]
+>
+>Em um Pipeline somente de qualidade de código, falhas importantes na faixa Teste de qualidade do código não podem ser substituídas, pois a etapa Teste de qualidade de código é a etapa final do pipeline.
 
 ## Code Quality Testing {#code-quality-testing}
 
