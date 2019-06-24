@@ -8,14 +8,15 @@ contentOwner: jsyal
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
 translation-type: tm+mt
-source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
+source-git-commit: 9e33b90818c686f0b7aacaf0955c3f2eba05488f
 
 ---
 
 
 # Evaluation Phase {#evaluation}
 
-Once you click **[!UICONTROL Start Update]**, the first phase in Product Update wizard is the **[!UICONTROL Evaluation]** phase. Nessa fase, você pode avaliar a complexidade da atualização com o padrão detectado diretamente para você do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
+The first phase in the Product Update wizard is **[!UICONTROL Evaluation]** phase.
+Aqui, você pode avaliar a complexidade da atualização com o padrão detectado diretamente do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
 
 O relatório gerado permite verificar a instância do Autor para atualizá-la, detectando padrões que:
 
@@ -30,24 +31,21 @@ Isso serve como uma avaliação do esforço de desenvolvimento envolvido na atua
 
 ## Running the Evaluator {#running-evaluator}
 
-Siga as etapas abaixo para executar o avaliador:
+Siga as etapas abaixo para gerar o relatório de avaliação:
 
-1. Click on **[!UICONTROL Run Evaluation]** to run the pattern detector.
+1. Click on **[!UICONTROL Run Evaluation]**.
 
    >[!NOTE]
    >O detector padrão pode ser executado em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer lentidão em casos críticos de negócios, o Cloud Manager executará o procedimento no ambiente de preparo temporário na instância do autor.
 
    ![](assets/Run-Evaluation.png)
 
-1. O assistente informa o status da sua ação. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
+1. O assistente informa o status da ação. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
-   Once the report is generated, you can click on **[!UICONTROL Download report]** to save a copy of the evaluation report.
+   Once the report is generated, you can click on **[!UICONTROL Download report]** to save a copy.
 
    ![](assets/Evaluation-1.png)
 
-   Cumulativo, você pode exibir as notificações de pulso atualizadas, como atualizações de status.
-
-   ![](assets/Evaluation-pulse-notification.png)
 
 >[!NOTE]
->The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
+>The current release of Product Update wizard in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
