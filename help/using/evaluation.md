@@ -8,16 +8,16 @@ contentOwner: jsyal
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
 translation-type: tm+mt
-source-git-commit: 47331787d45fe68144cb90c4b907560fe0079b3c
+source-git-commit: 2fda16bb4826171c993ec07c7ff3e38d1675b9f5
 
 ---
 
 
-# Evaulation Phase {#evaluation}
+# Evaluation Phase {#evaluation}
 
-Após clicar em Iniciar atualização, a primeira fase do Assistente de atualização do produto será a fase de Avaliação. Nessa fase, você pode avaliar a complexidade da atualização com o padrão detectado diretamente para você do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
+Once you click **[!UICONTROL Start Update]**, the first phase in Product Update Wizard is the Evaluation phase. Nessa fase, você pode avaliar a complexidade da atualização com o padrão detectado diretamente para você do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
 
-O relatório gerado permite verificar a instância do Autor para atualizá-la, detectando padrões em uso:
+O relatório gerado permite verificar a instância do Autor para atualizá-la, detectando padrões que:
 
 * Violar determinadas regras e são feitas em áreas que serão afetadas ou substituídas pela atualização.
 
@@ -33,11 +33,15 @@ Isso serve como uma avaliação do esforço de desenvolvimento envolvido na atua
 
 Siga as etapas abaixo para executar o avaliador:
 
-1. Select [!UICONTROL Run evaluation] to run the pattern detector. O detector padrão pode ser executado em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer lentidão em casos críticos de negócios, o Cloud Manager executará o procedimento no ambiente de preparo temporário na instância do autor.
+1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector. O detector padrão pode ser executado em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer lentidão em casos críticos de negócios, o Cloud Manager executará o procedimento no ambiente de preparo temporário na instância do autor.
+
+![](assets/Run-Evaluation.png)
 
 1. O assistente informa o status da sua ação. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
 Once the report is generated, you can select [!UICONTROL Download] to save a copy of the evaluation report.
+
+![](assets/Evaluation-1.png)
 
 >[!NOTE]
 >The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
