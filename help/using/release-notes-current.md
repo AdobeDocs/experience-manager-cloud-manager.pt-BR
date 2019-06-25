@@ -4,13 +4,13 @@ seo-title: Notas de versão do Gerenciador do AEM Cloud para 2019.6.0
 description: Siga esta página para obter informações sobre a versão 2019.6.0 do Gerenciador de nuvem.
 seo-description: Siga esta página para obter informações sobre a versão 2019.6.0 do Gerenciador de AEM Cloud.
 translation-type: tm+mt
-source-git-commit: ef6a0a0bdc22e37357304823d6f0a70d84917fa4
+source-git-commit: 7373f674b9804c83fad0871a74ef85280ea24962
 
 ---
 
 # Release Notes for 2019.6.0 {#release-notes-for}
 
-The [!UICONTROL Cloud Manager] 2019.6.0 Release does not contain significant functional changes. Siga as seções abaixo para obter mais detalhes.
+The [!UICONTROL Cloud Manager] 2019.6.0 Release adds new code quality rules and new Product Update wizard. Siga as seções abaixo para obter mais detalhes.
 
 ## Release Date {#release-date}
 
