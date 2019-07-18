@@ -9,14 +9,14 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 8 ef 574 c 8-47 d 9-404 b -8 e 9 c -9 c 6716 c 1 f 49 a
 translation-type: tm+mt
-source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
+source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
 ---
 
 
 # Notificações {#notifications}
 
-[!UICONTROL Cloud Manager] permite que os usuários recebam notificações no início de uma implantação de produção, bem como quando as **etapas de Aprovação** em tempo real e **programado** são atingido. These notifications are sent through the Adobe [!UICONTROL Experience Cloud] Notification system.
+[!UICONTROL Cloud Manager] permite que o usuário receba notificações quando um Pipeline iniciar e concluir (com sucesso ou não sucesso), no início de uma implantação de produção, bem como quando a Aprovação **em tempo real** e as etapas **programadas** forem atingido. These notifications are sent through the Adobe [!UICONTROL Experience Cloud] Notification system.
 
 >[!NOTE]
 >
