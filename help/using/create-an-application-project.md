@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76 c 1 a 8 e 4-d 66 f -4 a 3 b -8 c 0 c-b 80 c 9 e 17700 e
 translation-type: tm+mt
-source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
+source-git-commit: b39fc865e3c34052fb94b223d9eebc0fce3495d2
 
 ---
 
@@ -104,6 +104,7 @@ Cloud Manager builds and tests your code using a specialized build runtime **Env
    * graphicsmagick
    * Se precisar de outros pacotes, será necessário solicitar aqueles por meio dos Engenheiros de sucesso do cliente (CSE).
 
+* Cada criação é feita em um ambiente inválido; o contêiner de compilação não mantém nenhum estado entre as execuções.
 * Maven is always run with the command: *mvn --batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * Maven is configured at a system level with a settings.xml file which automatically includes the public Adobe **Artifact** repository. (Refer to [Adobe Public Maven Repository](https://repo.adobe.com/) for more details).
 
