@@ -1,16 +1,15 @@
 ---
-cloud: experience-cloud
-product: gerente da nuvem do gerenciador de experiência do adobe
-archtype: administrador
+product: adobe experience manager
+sub-product: gerente da nuvem do gerenciador de experiência do adobe
+archetype: administrador
 user-guide-title: Ajuda do Experience Manager Cloud Manager
-index: n
 translation-type: tm+mt
-source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
+source-git-commit: c5f26158bd4268b866a0726fbd63009a779ddcf1
 
 ---
 
 
-# Experience Manager Help {#using}
+# Ajuda do Experience Manager {#using}
 
 + [Introdução ao Experience Cloud Manager](introduction-to-cloud-manager.md)
 + Visão geral {#overview}
@@ -19,7 +18,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [Pipeline CI/CD](ci-cd-pipeline.md)
    + [Segurança e privacidade](security-and-privacy.md)
    + [Recursos de ajuda](help-resources.md)
-+ What is Required {#requirements}
++ O que é obrigatório {#requirements}
    + [Direitos de acesso concedidos](access-rights-granted.md)
    + [Repositório de código-fonte](source-code-repository.md)
    + [Adicionar usuários e funções](setting-up-users-and-roles.md)
@@ -30,7 +29,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [Criar um projeto de aplicativo AEM](create-an-application-project.md)
    + [Configurar suas ramificações de lançamento](configure-your-release-branches.md)
    + [Gerenciar suas Configurações do Dispatcher](dispatcher-configurations.md)
-+ How to Use {#how-to-use}
++ Como usar {#how-to-use}
    + [Configurar seu pipeline CI/CD](configuring-pipeline.md)
    + [Implantar seu código](deploying-code.md)
    + [Entender os resultados do teste](understand-your-test-results.md)
@@ -39,7 +38,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [API do Gerenciador de nuvem](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [Notificações](notifications.md)
    + [Regras de qualidade de código personalizadas](custom-code-quality-rules.md)
-+ Product Update Wizard {#product-update-wizard}
++ Assistente de atualização do produto {#product-update-wizard}
    + [Visão geral](overview-productupdate-wizard.md)
    + [Avaliação](evaluation.md)
 + Notas de versão {#release-notes}
