@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76 c 1 a 8 e 4-d 66 f -4 a 3 b -8 c 0 c-b 80 c 9 e 17700 e
 translation-type: tm+mt
-source-git-commit: 81f4e0b3b31a8be1f0620b70442b0268159e4ec0
+source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
 
 ---
 
@@ -270,6 +270,43 @@ Essa mesma técnica pode ser usada para instalar pacotes específicos de idioma,
 >[!NOTE]
 >
 >Instalar um pacote do sistema dessa maneira **não a** instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote de sistema instalado no ambiente AEM, entre em contato com os Engenheiros de sucesso do cliente (CSE).
+
+## Ignorar pacotes de conteúdo {#skipping-content-packages}
+
+No Cloud Manager, é possível criar qualquer número de pacotes de conteúdo.
+Por diversos motivos, pode ser desejável disponibilizar um pacote de conteúdo, mas não implantá-lo. Isso pode ser útil, por exemplo, ao criar pacotes de conteúdo usados apenas para teste ou que serão reorganizados por outra etapa no processo de compilação, isto é, como um subpacote de outro pacote.
+
+Para acomodar esses cenários, o Cloud Manager procurará uma propriedade denominada ***cloudmanagertarget*** nas propriedades dos pacotes de conteúdo construídos. Se essa propriedade estiver definida como nenhum, o pacote será ignorado e não implantado. O mecanismo para definir essa propriedade depende da forma como a criação está produzindo o pacote de conteúdo. Por exemplo, com o filevault-plugin-plugin configuraria o plug-in como este:
+
+```xml
+        <plugin>
+            <groupId>org.apache.jackrabbit</groupId>
+            <artifactId>filevault-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+                <properties>
+                    <cloudManagerTarget>none</cloudManagerTarget>
+                </properties>
+        <!-- other configuration -->
+            </configuration>
+        </plugin>
+```
+
+Com o content-package-maven-plugin, é semelhante:
+
+```xml
+        <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+                <properties>
+                    <cloudManagerTarget>none</cloudManagerTarget>
+                </properties>
+        <!-- other configuration -->
+            </configuration>
+        </plugin>
+```
 
 ## Desenvolver seu código com base nas práticas recomendadas {#develop-your-code-based-on-best-practices}
 
