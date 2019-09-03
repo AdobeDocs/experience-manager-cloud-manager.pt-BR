@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 53807 ea 6-9464-429 d -9322-85 c 9 f 405 dff 6
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
 
 ---
 
@@ -80,5 +80,4 @@ Uma `master` única ramificação pode ser suficiente para projetos muito simple
 
 >[!NOTE]
 >
->Para exibir os comandos comuns de git, consulte a Planilha [Git Cheat](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf).
-
+>Para exibir os comandos comuns de git, consulte a Planilha [Git Cheat](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
