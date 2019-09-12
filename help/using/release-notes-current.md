@@ -4,17 +4,17 @@ seo-title: Notas de versão do Gerenciador do AEM Cloud para 2019.9.0
 description: Siga esta página para obter informações sobre a versão 2019.9.0 do Gerenciador de nuvem.
 seo-description: Siga esta página para obter informações sobre a versão 2019.9.0 do Gerenciador de AEM Cloud.
 translation-type: tm+mt
-source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
+source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
 
 # Notas de versão de 2019.9.0 {#release-notes-for}
 
-A versão [!UICONTROL Cloud Manager] 2019.9.0 da versão adiciona atualizações para verificação de integridade e verificação de integridade do Filtro de referência.
+A versão [!UICONTROL Cloud Manager] 2019.9.0 atualiza os critérios de teste de segurança, adiciona gráficos de monitoramento que podem ser obtidos por download e corrigem alguns problemas de usabilidade relatados pelo cliente.
 
 ## Data de lançamento {#release-date}
 
-A Data de lançamento da [!UICONTROL Cloud Manager] versão 2019.9.0 é 11 de setembro de 21 19.
+A Data de lançamento da [!UICONTROL Cloud Manager] versão 2019.9.0 é 12 de setembro de 22 19.
 
 ## Novidades {#whats-new}
 
@@ -38,4 +38,4 @@ A Data de lançamento da [!UICONTROL Cloud Manager] versão 2019.9.0 é 11 de se
 
 ## Problemas conhecidos {#known-issues}
 
-O download de gráficos de monitoramento não está disponível no Safari.
+* O download de gráficos de monitoramento não está disponível no Safari.
