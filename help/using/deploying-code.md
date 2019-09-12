@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 832 a 4647-9 b 83-4 a 9 d-b 373-30 fe 16092 b 15
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
@@ -46,13 +46,13 @@ Depois de configurar **o Pipeline** (repositório, ambiente e ambiente de teste)
    * Teste e unidade de teste
    * Digitalização de código
    * Implantar no palco
-   ![](assets/Stage_Testing.png)
+   ![](assets/Stage_Deployment1.png)
 
    O Teste **** do palco envolve as seguintes etapas:
 
    * Teste de segurança
    * Teste de desempenho
-   ![](assets/Stage_Deployment.png)
+   ![](assets/Stage_Testing1.png)
 
    A implantação **** de produção envolve as seguintes etapas:
 
@@ -60,6 +60,8 @@ Depois de configurar **o Pipeline** (repositório, ambiente e ambiente de teste)
    * **Programar implantação de produção** (se ativado)
    * **Suporte CSE** (se ativado)
    * **Implantar na produção**
+   ![](assets/Prod_Deployment1.png)
+
    >[!NOTE]
    >
    >A **Programação de produção agendada** está ativada durante a configuração do pipeline.
