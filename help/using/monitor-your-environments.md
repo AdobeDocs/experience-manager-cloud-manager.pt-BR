@@ -4,7 +4,7 @@ seo-title: Monitorar seus ambientes
 description: 'null'
 seo-description: Siga esta página para saber mais sobre o Monitoramento do sistema no Experience Manager Manager que é feito observando as instâncias individuais em um ambiente e rastreando várias métricas para cada instância.
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
@@ -29,7 +29,7 @@ A navegação para o recurso Monitoramento do sistema pode ser feita de duas for
 
    *Ou*,
 
-* Navigate to the **System Monitoring** landing page through the **Reports** global navigation menu item within [!UICONTROL Cloud Manager].
+* Navegue até a página **inicial do Monitoramento** do sistema através do **item** de menu de navegação global Relatórios.[!UICONTROL Cloud Manager]
 
 
 ## Página de visão geral do monitoramento do sistema {#system-monitoring-overview-page}
@@ -61,12 +61,12 @@ A navegação à esquerda mostrará as métricas disponíveis na categoria selec
 
 Um gráfico individual mostrará o status e um gráfico dos dados ao longo do tempo juntamente com os limites. Se várias instâncias forem exibidas, os dados de cada instância estarão em uma série separada.
 
-![](assets/System-Monitoring3.png)
+![](assets/Monitoring_Graphs1.png)
 
 As séries individuais podem ficar ocultas em um gráfico clicando na série na legenda.
 Por exemplo, se você clicar na série de limite de aviso, verá apenas o limite crítico.
 
-![](assets/System_Monitoring4.png)
+![](assets/Monitoring_Graphs2.png)
 
 ### Definições de métricas {#metric-definitions}
 
@@ -85,7 +85,7 @@ Por exemplo, se você clicar na série de limite de aviso, verá apenas o limite
 
 **Armazenamento**
 
-* Espaço em disco: O espaço em disco usado (em Megabytes) para cada ponto de montagem no host. Há diferentes métricas para cada ponto de montagem. No mínimo, você verá métricas para &quot;/&quot; e &quot;/mnt&quot;, mas outras métricas de ponto de montagem podem estar disponíveis dependendo da configuração de instância específica.
+* Espaço em disco: O espaço em disco usado (em Megabytes) para cada ponto de montagem no host. Há diferentes métricas para cada ponto de montagem. No mínimo, você verá métricas para "/" e "/mnt", mas outras métricas de ponto de montagem podem estar disponíveis dependendo da configuração de instância específica.
 * Tamanho da pasta: Loja de segmentos do AEM: O espaço em disco usado (em Gigabytes) para a Loja de segmentos do AEM.
 
 **Aplicativo**
