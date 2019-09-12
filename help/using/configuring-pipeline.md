@@ -10,7 +10,7 @@ topic-tags: usando
 content-type: referência
 discoiquuid: ba 6 c 763 a-b 78 a -439 e -8 c 40-367203 a 719 b 3
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
 
 ---
 
@@ -161,9 +161,9 @@ Siga as etapas abaixo para configurar o Dispatcher Invalidations:
 
    >[!NOTE]
    >
-   >Além disso, após configurar o pipeline, ainda é possível editar as configurações da mesma forma usando o bloco **de Configurações** do pipeline na [!UICONTROL Cloud Manager] interface do usuário.
+   >Além disso, após configurar o pipeline, ainda é possível editar as configurações da mesma forma usando o bloco de **Configurações do Pipeline de produção** na [!UICONTROL Cloud Manager] interface do usuário.
 
-   ![](assets/Configuring_Pipeline-Settings.png)
+   ![](assets/Prod-Pipeline-Settings-Dialog.png)
 
 ## Apenas pipeline de não produção e código
 
