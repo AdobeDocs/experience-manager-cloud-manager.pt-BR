@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 83299 ed 8-4 b 7 a -4 b 1 c-bd 56-1 bfc 7 e 7318 d 4
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
 
@@ -114,12 +114,12 @@ A tabela a seguir lista as verificações atuais:
 | As senhas padrão foram alteradas | Contas padrão de logon | Crítica |
 | O servlet GET de Sling é protegido contra ataques do DOS. | Sling Get Servlet | Crítica |
 | O Dispatcher está filtrando solicitações corretamente | Configuração do Dispatcher do controle de qualidade | Crítica |
-| O Adobe Granite HTML Library Manager está configurado adequadamente | Configuração do gerenciador de biblioteca HTML CQ | Importante |
 | O Sling Java Script Handler está configurado adequadamente | Sling Java Script Handler | Crítica |
 | O Sling JSP Script Handler é configurado adequadamente | Sling JSP Script Handler | Crítica |
-| O Filtro de referência de sling está configurado para impedir ataques CSRF | Sling Referrer Filter | Importante |
 | O SSL está configurado corretamente | Configuração do SSL | Crítica |
 | Não há, obviamente, políticas de perfil de usuário inseguras encontradas | Acesso padrão ao perfil de usuário | Crítica |
+| O Filtro de referência de sling está configurado para impedir ataques CSRF | Sling Referrer Filter | Importante |
+| O Adobe Granite HTML Library Manager está configurado adequadamente | Configuração do gerenciador de biblioteca HTML CQ | Importante |
 | O pacote de suporte do CRXDE está desativado | Suporte do CRXDE | Importante |
 | O pacote e o servlet Sling davex estão desativados | Verificação de integridade do DavEx | Importante |
 | O conteúdo de amostra não está instalado | Pacotes de conteúdo de exemplo | Importante |
