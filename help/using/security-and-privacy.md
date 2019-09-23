@@ -1,82 +1,82 @@
 ---
 title: Segurança e privacidade
-seo-title: Segurança e privacidade do Gerenciador do AEM Cloud
-description: Siga esta página para saber mais sobre a segurança e a privacidade de seus ativos (código/artefatos).
+seo-title: Segurança e privacidade do AEM Cloud Manager
+description: Siga esta página para saber mais sobre a segurança e privacidade de seus ativos (código/artefatos).
 seo-description: Siga esta página para saber mais sobre a segurança e a privacidade de seus ativos (código/artefatos) usando o AEM Cloud Manager.
-uuid: 68 bc 2330-a 62 c -4 c 2 c -925 c-daa 6788 b 143 a
+uuid: 68bc2330-a62c-4c2c-925c-daa6788b143a
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introdução
-discoiquuid: 67 a 54 bae -99 a 9-4405-91 e 3-9 a 0 a 8 b 3 ccc 98
+discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 949d3cf0239a02875ba4ad1888e081f104dec2e2
 
 ---
 
 
 # Segurança e privacidade {#security-and-privacy}
 
-[!UICONTROL Cloud Manager] tiver funções pré-configuradas com permissões apropriadas. Por exemplo, um desenvolvedor desenvolve o código e tem a permissão de enviar o código para o **Git Repository**. Como alternativa, um proprietário de negócios tem permissões diferentes permitindo que defina os Indicadores-chave de desempenho (kpis) e aprove implantações.
+[!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apropriadas. Por exemplo, um desenvolvedor desenvolve código e tem permissão para enviar o código para o Repositório **Git**. Como alternativa, um proprietário de negócios tem permissões diferentes que permitem definir os Indicadores-chave de desempenho (KPIs) e aprovar implantações.
 
-## Permissões com base em funções {#role-based-permissions}
+## Permissões baseadas em função {#role-based-permissions}
 
 ### Funções de usuário {#user-roles}
 
-O gerenciamento de função é [!UICONTROL Cloud Manager] feito no [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Qualquer usuário de [!UICONTROL Cloud Manager] deve ser um membro da Organização IMS do cliente e ter o Contexto do produto Adobe Managed Services. As associações de funções específicas são fornecidas adicionando o usuário a um [!UICONTROL Cloud Manager] Perfil de produto no Console de administração.
+O gerenciamento de funções para [!UICONTROL Cloud Manager] é feito dentro do [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Qualquer usuário do deve [!UICONTROL Cloud Manager] ser membro da Organização IMS do cliente e ter o Contexto de produto do Adobe Managed Services. Associações de função específicas são fornecidas adicionando o usuário a um Perfil [!UICONTROL Cloud Manager] de produto no Admin Console.
 
 Para saber mais sobre como configurar suas funções, consulte [Configuração de usuários e funções](setting-up-users-and-roles.md).
 
-A lista de tabela a seguir define as funções possíveis que podem ser atribuídas no Console de administração.
+A lista de tabelas a seguir define as possíveis funções que você pode atribuir no Admin Console.
 
 | **[!UICONTROL Cloud Manager]Função** | **Descrição** |
 |---|---|
-| Proprietário de negócios | Usuário principal que conclui a [!UICONTROL Cloud Manager] configuração inicial. Responsável pela definição de kpis, aprovação de implantações de produção e substituição de falhas importantes de 3 níveis. |
-| Gerenciador de Programas | Usa [!UICONTROL Cloud Manager] para executar configuração de equipe, verificar o status e exibir kpis. Pode aprovar falhas importantes em 3 níveis. |
-| Gerenciador de implantação | Gerencia as operações de implantação. Usa [!UICONTROL Cloud Manager] para executar implantações de estágio e produção. Pode aprovar falhas importantes em 3 níveis. Tem acesso ao repositório Git. |
-| Desenvolvedor | Desenvolve e teste o código do aplicativo personalizado. Principalmente usa [!UICONTROL Cloud Manager] para exibir o status. Confirmou o acesso ao repositório Git. |
-| Engenheiro de sucesso do cliente | Geralmente suporta o sucesso do cliente para clientes do AMS. Interage com [!UICONTROL Cloud Manager] a finalidade de execução de implantações que exigem a supervisão de Engenheiro de sucesso do cliente (CSE). |
-| Autor de conteúdo | Geralmente não interage [!UICONTROL Cloud Manager]com. Esse usuário pode usar o [!UICONTROL Cloud Manager] Alternador de Programas (com a partir [!UICONTROL Experience Cloud]de) para acessar o Adobe Experience Manager (AEM). |
+| Proprietário da empresa | Usuário principal que conclui a [!UICONTROL Cloud Manager] configuração inicial. Responsável por definir KPIs, aprovar implantações de produção e substituir falhas importantes de 3 níveis. |
+| Gerente do programa | Usa [!UICONTROL Cloud Manager] para executar a configuração do grupo, verificar o status e exibir KPIs. Pode aprovar falhas importantes de 3 níveis. |
+| Gerenciador de implantação | Gerencia as operações de implantação. Usa [!UICONTROL Cloud Manager] para executar implantações de estágio e produção. Pode aprovar falhas importantes de 3 níveis. Tem acesso ao repositório Git. |
+| Desenvolvedor | Desenvolve e testa o código personalizado do aplicativo. Utiliza principalmente [!UICONTROL Cloud Manager] para ver o estado. Tem acesso de confirmação ao repositório Git. |
+| Engenheiro de sucesso do cliente | Geralmente oferece suporte ao sucesso do cliente para clientes AMS. Interage com [!UICONTROL Cloud Manager] a finalidade de executar implantações que exigem a supervisão do CSE (Customer Success Engineer). |
+| Autor de conteúdo | Geralmente não interage com [!UICONTROL Cloud Manager]. Esse usuário pode usar o [!UICONTROL Cloud Manager] Comutador de programas (navegando de [!UICONTROL Experience Cloud]) para acessar o Adobe Experience Manager (AEM). |
 
 ### Permissões de usuário {#user-permissions}
 
-Cada uma das funções tem permissões específicas, tarefas pré-definidas ou permissões, associadas a cada função. Esta tabela lista as funções disponíveis e as funções que podem executar a função.
+Cada uma das funções tem permissões específicas, tarefas pré-configuradas ou permissões associadas a cada função. Esta tabela lista as funções disponíveis e as funções que podem executar a função.
 
-Para saber mais sobre como configurar os usuários, consulte [Configuração de usuários e funções](setting-up-users-and-roles.md).
+Para saber mais sobre como configurar seus usuários, consulte [Configuração de usuários e funções](setting-up-users-and-roles.md).
 
-| Permissão | Descrição | Proprietário de negócios | Gerenciador de implantação | Gerenciador de Programas | Desenvolvedor | CSE |
+| Permissão | Descrição | Proprietário da empresa | Gerenciador de implantação | Gerente do programa | Desenvolvedor | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
-| Ler aplicativo | Consulte detalhes do programa. | x | x | x | x | x |
-| Gravar aplicativo | Configurar programa (incluindo kpis). | x |
-| Ambiente de leitura | Consulte Detalhes do ambiente. | x | x | x | x | x |
-| Criar execução | Iniciar pipeline. | x | x | x |
+| Ler aplicativo | Ver detalhes do programa. | x | x | x | x | x |
+| Aplicativo de gravação | Configure o programa (incluindo KPIs). | x |  |  |  |  |
+| Ler ambiente | Consulte Detalhes do ambiente. | x | x | x | x | x |
+| Criar execução | Inicie o Pipeline. | x | x | x |  |  |
 | Execução de leitura | Consulte status de execução. | x | x | x | x | x |
-| Retomar execução | Pode retomar a execução quando pausada. | x | x | x | x |
-| Execução de execução na produção | Forneça aprovação do golive. | x | x | x |
-| Programação de execução implantada na produção | Programar implantação de produção. | x | x | x | x |
-| Execução na produção na produção | Implante o aplicativo na produção quando pausado para a Supervisão CSE. | x |
-| Cancelamento da execução | Cancelar execução atual. | x | x | x |
-| Falhas na execução de substituição de qualidade de execução | Aprovar falhas importantes no portão de qualidade. | x | x | x |
-| Criar pipeline | Configuração/Edição do pipeline. | x |
-| Pipeline lido | Consulte Detalhes do pipeline. | x | x | x | x | x |
-| Gravação de pipeline | Configuração/Edição do pipeline. | x |
-| Pipeline Modifique aprovação | Permite a edição da opção Proprietário do negócio. | x |
-| Pipeline Modifique implantação gerenciada | Permite a edição da opção Supervisão CSE. | x |
-| Leitura da solução | Leia os kpis do programa. | x | x | x | x | x |
-| Gravação de solução | Configurar programa (incluindo kpis) Setup/Edit Pipeline. | x |
-| Etapa Ler | Consulte os resultados das métricas de qualidade da etapa. | x | x | x | x | x |
+| Retomar execução | Pode retomar a execução quando pausada. | x | x | x |  | x |
+| Execução Aprovar implantação para produção | Fornecer aprovação do GoLive. | x | x | x |  |  |
+| Implementação da Programação de Execução para Produção | Agendar implantação de produção. | x | x | x |  | x |
+| Implementação para produção | Implante o aplicativo para a produção quando pausado para o CSE Oversight. |  |  |  |  | x |
+| Cancelamento de execução | Cancelar a execução atual. | x | x | x |  |  |
+| Falhas na Porta de Qualidade de Substituição de Execução | Aprovar Falhas Importantes Do Portão De Qualidade. | x | x | x |  |  |
+| Criação de Pipeline | Configuração / Editar Pipeline. |  | x |  |  |  |
+| Leitura do pipeline | Consulte Detalhes do pipeline. | x | x | x | x | x |
+| Gravação de Pipeline | Configuração / Editar Pipeline. |  | x |  |  |  |
+| Modificação de Pipeline Aprovação | Permite editar a opção Proprietário da empresa. |  | x |  |  |  |
+| Implantação gerenciada de modificação de pipeline | Permite a edição da opção Superintendência de CSE. |  | x |  |  |  |
+| Leitura da solução | Leia os KPIs do programa. | x | x | x | x | x |
+| Gravação de solução | Configurar programa (incluindo KPIs) / Editar pipeline. | x |  |  |  |  |
+| Leitura da etapa | Consulte os resultados das métricas de qualidade da etapa. | x | x | x | x | x |
 
-## Isolamento de recursos {#resource-isolation}
+## Isolamento do recurso {#resource-isolation}
 
-Os clientes que usam [!UICONTROL Cloud Manager] precisarão de suas credenciais IMS para autenticação, pois todas as permissões [!UICONTROL Cloud Manager] associadas serão configuradas e associadas à organização IMS. Durante o processo de ativado, a equipe de provisionamento garante que o isolamento de recursos seja aplicado [!UICONTROL Cloud Manager].
+Os clientes que usam [!UICONTROL Cloud Manager] suas credenciais de IMS precisarão ser autenticados, pois todas as permissões vinculadas [!UICONTROL Cloud Manager] serão configuradas e vinculadas à organização de IMS. Durante o processo de integração, a equipe de provisionamento garante que o isolamento de recursos seja aplicado em [!UICONTROL Cloud Manager].
 
 ## Segurança de dados {#data-security}
 
-O código no [!UICONTROL Cloud Manager] é criptografado em trânsito. Binários que o Cud Manager cria também são criptografados em trafego e criptografados quando armazenados.
+O código em [!UICONTROL Cloud Manager] é criptografado em trânsito. Os binários criados pelo Gerenciador de pods também são criptografados em trânsito e criptografados quando armazenados.
 
-Cada cliente recebe seu próprio **Repositório de Git** e seu código é protegido e não compartilhado com outras **Organizações**.
+Cada cliente recebe seu próprio Repositório **** Git e seu código é seguro e não é compartilhado com outras **Organizações**.
 
 ## Privacidade de dados {#data-privacy}
 
-[!UICONTROL Cloud Manager] obedece aos princípios de privacidade definidos pela Adobe. Os desenvolvedores empurram o código de forma segura para o **Git Repository** em HTTPS.
+[!UICONTROL Cloud Manager] segue os princípios de privacidade definidos pela Adobe. Os desenvolvedores enviam o código com segurança para o Repositório **Git** em HTTPS.
 
-O [! A interface do usuário do DNL (interface do usuário) para [!UICONTROL Cloud Manager]] é construída sobre os serviços que atendem a uma estrutura de controle comum definida pela Adobe. [! A interface do usuário do DNL (interface do usuário) para [!UICONTROL Cloud Manager]] usa serviços seguros de vários provedores de nuvem.
+A [!DNL User Interface (UI) para [!UICONTROL Cloud Manager]] é desenvolvida sobre serviços que estão em conformidade com uma estrutura de controle comum definida pela Adobe. A [!DNL User Interface (UI) para [!UICONTROL Cloud Manager]] usa serviços seguros de vários provedores de nuvem.
