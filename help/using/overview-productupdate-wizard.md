@@ -1,12 +1,12 @@
 ---
-title: Assistente de atualização do produto
-seo-title: Assistente de atualização do produto
-description: 'Esta página serve como um ponto de partida para o assistente de atualização do produto. '
-seo-description: 'Esta página serve como um ponto de partida para o assistente de atualização do produto. '
-uuid: 62 d 68 e 79-c 2 ba -4 d 8 b-ba 7 d -33709014 d 5 b 6
+title: Assistente de atualização de produto
+seo-title: Assistente de atualização de produto
+description: 'Esta página serve como ponto de partida para aprender sobre o Assistente de atualização de produto. '
+seo-description: 'Esta página serve como ponto de partida para aprender sobre o Assistente de atualização de produto. '
+uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
-discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
 source-git-commit: 7769911253c149f4b1f7d9dec5d94888ccdbcb59
 
@@ -15,26 +15,26 @@ source-git-commit: 7769911253c149f4b1f7d9dec5d94888ccdbcb59
 
 # Visão geral {#overview-product-update-wizard}
 
-O assistente de Atualização de produto é uma experiência guiada e passo a passo para clientes do Experience Cloud Manager que estão atualizando para o Adobe Experience Manager (AEM) 6.5 mais recente. Ela simplifica o processo completo, garante a aceitação das práticas recomendadas do AEM usando a estrutura CI/CD do Gerenciador de Cloud e o teste automatizado integrado.
+O Assistente de atualização de produto é uma experiência orientada e passo a passo para clientes do Cloud Manager que estão atualizando para o Adobe Experience Manager (AEM) 6.5 mais recente. Ele simplifica o processo completo, garante a adesão às práticas recomendadas do AEM usando a estrutura CI/CD do Cloud Manager e os testes automatizados integrados.
 
-O assistente inclui cinco fases que guiam o usuário durante uma atualização de produto do AEM:
+O assistente inclui cinco fases que orientam o usuário durante uma atualização do produto AEM:
 
 * **Avaliação**
-* **Remediação**
+* **Correção**
 * **Execução**
 * **Validação**
 * **Conclusão**
 
 
-## Using Product Update Wizard {#using-product-update-wizard}
+## Usando o Assistente de Atualização de Produto {#using-product-update-wizard}
 
 >[!NOTE]
->Os clientes integrados ao Cloud Manager e qualificados para atualizar para o AEM 6.5 poderão aproveitar o assistente de Atualização do produto. Entre em contato com o Engenheiro de sucesso do cliente (CSE) para obter mais detalhes.
+>Os clientes integrados ao Cloud Manager e qualificados para atualizar para o AEM 6.5 poderão aproveitar o assistente de atualização de produto. Entre em contato com o engenheiro de sucesso do cliente (CSE) para obter mais detalhes.
 
-1. Você receberá uma notificação por push pelo Gerente da nuvem informando que o AEM 6.5 está disponível para o seu programa.
+1. Você receberá uma notificação de pulso por meio do Gerenciador de nuvem informando que o AEM 6.5 está disponível para o seu programa.
 
-1. An **[!UICONTROL AEM 6.5 Update]** card displays on the overview screen of [!UICONTROL Cloud Manager]. Esse cartão ajudará a rastrear em qual fase do processo de atualização você está atualmente e vai informá-lo sobre qual é a próxima etapa a ser tomada. Select **[!UICONTROL Start Update]** to launch the wizard.
+1. Um **[!UICONTROL AEM 6.5 Update]** cartão é exibido na tela de visão geral do [!UICONTROL Cloud Manager]. Este cartão ajudará a rastrear qual fase do processo de atualização você está atualmente e informará sobre qual será a próxima etapa a ser realizada. Selecione **[!UICONTROL Start Update]** para iniciar o assistente.
 
    ![](assets/Start-Update.png)
 
-   The wizard now displays the first phase of **[!UICONTROL AEM 6.5 Update]** process as seen in the [Evaluation Phase](evaluation.md).
+   O assistente agora exibe a primeira fase do **[!UICONTROL AEM 6.5 Update]** processo, como visto na Fase [de](evaluation.md)avaliação.
