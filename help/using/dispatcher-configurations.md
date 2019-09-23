@@ -1,55 +1,55 @@
 ---
-title: Gerenciar suas Configurações do Dispatcher
-seo-title: Gerenciar suas Configurações do Dispatcher
+title: Gerenciar suas configurações do Dispatcher
+seo-title: Gerenciar suas configurações do Dispatcher
 description: 'null'
-seo-description: Siga esta página para saber como configurar o dispatcher.
-uuid: 3 asu 8 ca 3-5241-4811-87 fd -3284 a 8012 eda
+seo-description: Siga esta página para saber mais sobre como configurar o dispatcher.
+uuid: 3ecd8ca3-5241-4811-87fd-3284a8012eda
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: getting-started
-discoiquuid: 8888 dd 80-d 908-464 e -927 d -779 db 1 a 832 a 4
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: introdução
+discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 66ed6bdc8a98c77464c7324806cb5d2cb81da469
 
 ---
 
 
-# Gerenciar suas Configurações do Dispatcher {#manage-your-dispatcher-configurations}
+# Gerenciar suas configurações do Dispatcher {#manage-your-dispatcher-configurations}
 
-## Usando o Experience Cloud Manager para implantar arquivos de configuração do Dispatcher {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
+## Uso do Cloud Manager para implantar arquivos de configuração do Dispatcher {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
 
-O Cloud Manager é capaz de implantar o servidor Web e os arquivos de configuração do Dispatcher supondo que eles sejam armazenados no **Repositório Git**, além dos pacotes de conteúdo AEM normais.
+O Cloud Manager é capaz de implantar arquivos de configuração do servidor da Web e do Dispatcher, desde que estejam armazenados no Repositório **do** Git, além dos pacotes de conteúdo do AEM normais.
 
-Para aproveitar esse recurso, a criação do Maven deve produzir um arquivo zip que contenha pelo menos dois diretórios - ***conf*** e ***conf. d***. Esse arquivo zip pode ser produzido usando o maven-assembly-plugin. Os projetos gerados pelo Cloud Manager usando [o assistente incorporado](create-an-application-project.md) têm a estrutura correta do projeto Maven criada como parte da criação do projeto.
+Para aproveitar esse recurso, a compilação Maven deve produzir um arquivo zip que contenha pelo menos dois diretórios - ***conf*** e ***conf.d***. Esse arquivo zip pode ser produzido usando o plug-in maven-assembly. Os projetos gerados pelo Cloud Manager usando o [assistente](create-an-application-project.md) incorporado têm a estrutura correta do projeto Maven criada como parte da criação do projeto.
 
-Após a implantação para **uma instância do expedidor**, o conteúdo desses diretórios substituirá o conteúdo desses diretórios na instância do Dispatcher. Como os arquivos de configuração do servidor Web e do Dispatcher frequentemente exigem informações específicas do ambiente, para que esse recurso seja usado corretamente, primeiro você precisará trabalhar com os Engenheiros de Sucesso do Cliente (CSE) para extrair essas variáveis de ambiente em ***/etc/sysconfig/httpd***. [](create-an-application-project.md)
+Após a implantação em uma **instância** do dispatcher, o conteúdo desses diretórios substituirá o conteúdo desses diretórios na instância do Dispatcher. Como os arquivos de configuração do servidor da Web e do Dispatcher geralmente exigem informações específicas do ambiente, para que esse recurso seja usado corretamente, você primeiro precisará trabalhar com os engenheiros de sucesso do cliente (CSE) para extrair essas variáveis de ambiente em ***/etc/sysconfig/httpd***. [](create-an-application-project.md)
 
-### Etapas para Configuração do Dispatcher {#steps-for-configuring-dispatcher}
+### Etapas para configurar o Dispatcher {#steps-for-configuring-dispatcher}
 
 Siga as etapas abaixo para concluir o processo inicial na configuração do Dispatcher:
 
-1. Obtenha os arquivos de configuração de produção atuais do CSE.
-1. Remova dados específicos do ambiente codificados (por exemplo, publicar IP renderizador) e substitua por variáveis.
-1. Defina as variáveis necessárias em pares de valores chave para cada Target Dispatcher e solicite ao CSE que adicione a ***/etc/sysconfig/httpd*** em cada instância.
-1. Teste as configurações atualizadas no ambiente do palco e solicite a sua CSE para implantar na produção.
-1. Confirmar arquivos no **Git Repository**.
+1. Obtenha os arquivos de configuração de produção atuais do seu CSE.
+1. Remova dados específicos do ambiente codificados permanentemente (por exemplo, publicar IP do renderizador) e substitua por variáveis.
+1. Defina as variáveis necessárias em pares de valores chave para cada Dispatcher de destino e solicite que seu CSE adicione a ***/etc/sysconfig/httpd*** em cada instância.
+1. Teste as configurações atualizadas em seu ambiente de estágio e, em seguida, solicite que seu CSE implante na produção.
+1. Confirmar arquivos no repositório **Git**.
 
-1. Implantar por meio do Gerenciador de nuvem.
+1. Implantar por meio do Cloud Manager.
 
 >[!NOTE]
 >
->A migração de configurações do Dispatcher e do servidor da Web para **o Git Repository** pode ser feita durante o gerenciador do Cloud Manager, mas também pode ser feita posteriormente em um momento posterior.
+>A migração das configurações do Dispatcher e do servidor Web para o Repositório **** Git pode ser feita durante a integração do Cloud Manager, mas também pode ser feita posteriormente.
 
 ### Exemplo {#example}
 
-O arquivo e a estrutura de diretório específicos podem variar com base nas especificações do projeto, mas este exemplo deve fornecer um guia concreto para estruturar seu projeto para incluir o Apache e o Dispatcher Configurations.
+A estrutura de arquivos e diretórios específica pode variar de acordo com as especificações do seu projeto, mas este exemplo deve fornecer um guia concreto sobre como estruturar seu projeto para incluir as Configurações do Apache e do Dispatcher.
 
 1. Crie um subdiretório chamado `dispatcher`.
 
    >[!NOTE]
-   Use qualquer nome aqui, mas o nome do diretório criado nessa etapa deve ser o mesmo que o nome usado na Etapa 6.
+   Sinta-se à vontade para usar qualquer nome aqui, mas o nome do diretório criado nesta etapa deve ser o mesmo nome usado na Etapa 6.
 
-1. Esse subdiretório conterá um módulo Maven que cria o arquivo zip do Dispatcher usando o Plug-in de Agrupamento Maven. Para iniciar isso, no `dispatcher` diretório, crie `pom.xml` um arquivo com este conteúdo, alterando a referência principal, o artifactid e o nome conforme necessário.
+1. Esse subdiretório conterá um módulo Maven que cria o arquivo zip Dispatcher usando o Plug-in Maven Assembly. Para iniciar isso, no `dispatcher` diretório, crie um `pom.xml` arquivo com esse conteúdo, alterando a referência pai, a artefatoId e o nome, conforme necessário.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -90,9 +90,9 @@ O arquivo e a estrutura de diretório específicos podem variar com base nas esp
    ```
 
    >[!NOTE]
-   Como na Etapa 1, o artifactid e o nome aqui podem ser outros valores, se desejar; `dispatcher` aqui apenas um exemplo usado para simplificar.
+   Como na Etapa 1, o nome e a ID do artefato aqui podem ser outros valores, se desejar; `dispatcher` aqui está apenas um exemplo usado para simplicidade.
 
-1. O plug-in de montagem Maven requer um *descritor* para definir como o arquivo zip é criado. Para criar esse descritor, crie um arquivo (novamente, no `dispatcher` subdiretório) chamado `assembly.xml`com este conteúdo. Observe que esse nome de arquivo é referenciado na linha 26 no `pom.xml` arquivo acima.
+1. O Plug-in Maven Assembly requer um *descritor* para definir como o arquivo zip é criado. Para criar este descritor, crie um arquivo (novamente, no `dispatcher` subdiretório) nomeado `assembly.xml`com este conteúdo. Observe que esse nome de arquivo é referenciado na linha 26 do `pom.xml` arquivo acima.
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -115,8 +115,8 @@ O arquivo e a estrutura de diretório específicos podem variar com base nas esp
    </assembly>
    ```
 
-1. Agora, crie um subdiretório chamado `src` (como referenciado no descritor de agrupamento acima da linha 11) no subdiretório do expedidor para armazenar as configurações reais do Apache e do Dispatcher. Nesse `src` diretório, crie diretórios nomeados `conf``conf.d`, `conf.dispatcher.d`e `conf.modules.d`.
-1. Agora, é possível preencher os `conf`diretórios `conf.d`, `conf.dispatcher.d`e os `conf.modules.d` diretórios com seus arquivos de configuração. Por exemplo, a configuração padrão consiste nesses arquivos e links simbólicos.
+1. Agora, crie um subdiretório com o nome `src` (conforme referenciado no descritor de assembly acima na linha 11) dentro do subdiretório dispatcher para armazenar as configurações reais do Apache e do Dispatcher. Dentro desse `src` diretório, crie diretórios nomeados `conf`, `conf.d`, `conf.dispatcher.d`e `conf.modules.d`.
+1. Agora você pode preencher os diretórios `conf`, `conf.d`e `conf.dispatcher.d`e `conf.modules.d` com seus arquivos de configuração. Por exemplo, a configuração padrão consiste nesses arquivos e links simbólicos.
 
    ```
    dispatcher
@@ -191,9 +191,9 @@ O arquivo e a estrutura de diretório específicos podem variar com base nas esp
            └── 02-dispatcher.conf
    ```
 
-1. Por fim, no arquivo pom.xml na raiz do projeto, adicione um `<module>` elemento para incluir o módulo do expedidor.
+1. Finalmente, no arquivo pom.xml na raiz do seu projeto, adicione um `<module>` elemento para incluir o módulo dispatcher.
 
-   Por exemplo, se sua lista de módulo existente for
+   Por exemplo, se sua lista de módulos existente for
 
    ```xml
        <modules>
@@ -203,7 +203,7 @@ O arquivo e a estrutura de diretório específicos podem variar com base nas esp
        </modules>
    ```
 
-   Você deve alterá-lo para
+   Você deveria mudar para
 
    ```xml
        <modules>
@@ -217,7 +217,7 @@ O arquivo e a estrutura de diretório específicos podem variar com base nas esp
    >[!NOTE]
    Conforme observado na Etapa 1, o valor do `<module>` elemento **deve** corresponder ao nome do diretório criado.
 
-1. Por fim, para testar, execute o pacote mvn limpo no diretório raiz do projeto. Você deve ver linhas como isso na saída
+1. Finalmente, para testar, execute o pacote mvn clean no diretório raiz do projeto. Você deve ver linhas como essa na saída
 
    ```
    [INFO] --- maven-assembly-plugin:3.1.0:single (default) @ dispatcher ---
@@ -225,7 +225,7 @@ O arquivo e a estrutura de diretório específicos podem variar com base nas esp
    [INFO] Building zip: /Users/me/mycompany/dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
    ```
 
-   Também é possível descompactar esse arquivo para exibir seu conteúdo.
+   Você também pode descompactar esse arquivo para exibir seu conteúdo.
 
    ```shell
    $ unzip -l dispatcher/target/dispatcher-1.0-SNAPSHOT.zip
