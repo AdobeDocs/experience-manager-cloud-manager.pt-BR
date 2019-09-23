@@ -2,12 +2,12 @@
 title: Notificações
 seo-title: Notificações
 description: Como os usuários recebem notificações no AEM Cloud Manager
-seo-description: Siga esta página para saber como os usuários recebem notificações quando um pipeline começa e é concluído - com êxito ou não - no Gerenciador do AEM Cloud.
-uuid: 73 e 4 bb 80-36 c 1-4408-bdbd -1 ac 5328359 d 1
+seo-description: Siga esta página para saber como os usuários recebem notificações quando um pipeline é iniciado e concluído - com êxito ou sem êxito - no AEM Cloud Manager.
+uuid: 73e4bb80-36c1-4408-bdbd-1ac5328359d1
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
-discoiquuid: 8 ef 574 c 8-47 d 9-404 b -8 e 9 c -9 c 6716 c 1 f 49 a
+discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
 translation-type: tm+mt
 source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
@@ -16,15 +16,15 @@ source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
 # Notificações {#notifications}
 
-[!UICONTROL Cloud Manager] permite que o usuário receba notificações quando um Pipeline iniciar e concluir (com sucesso ou não sucesso), no início de uma implantação de produção, bem como quando a Aprovação **em tempo real** e as etapas **programadas** forem atingido. These notifications are sent through the Adobe [!UICONTROL Experience Cloud] Notification system.
+[!UICONTROL Cloud Manager] permite que o usuário receba notificações quando um Pipeline é iniciado e concluído (com êxito ou sem êxito), no início de uma implantação de produção, bem como quando as etapas Aprovação **** em tempo real e **Agendada** são atingidas. Essas notificações são enviadas pelo sistema de notificação da Adobe [!UICONTROL Experience Cloud] .
 
 >[!NOTE]
 >
->A aprovação e as notificações programadas são enviadas somente para usuários nas funções Proprietário do negócio, Gerenciador de programas e Gerenciador de implantação.
+>As notificações de aprovação e programadas são enviadas somente para usuários nas funções Proprietário da empresa, Gerente de programa e Gerenciador de implantação.
 
-The notifications appear in a sidebar in [!UICONTROL Cloud Manager] UI (User Interface) and throughout the Adobe [!UICONTROL Experience Cloud].
+As notificações são exibidas em uma barra lateral na [!UICONTROL Cloud Manager] interface do usuário e em toda a Adobe [!UICONTROL Experience Cloud].
 
-Clique no ícone de sintoma no cabeçalho para abrir a barra lateral e exibir as notificações, conforme mostrado na figura abaixo:
+Clique no ícone de sino no cabeçalho para abrir a barra lateral e exibir as notificações, como mostrado na figura abaixo:
 
 ![](assets/image2018-7-12_11-52-40.png)
 
@@ -32,24 +32,24 @@ A barra lateral lista as notificações mais recentes.
 
 ![](assets/screen_shot_2018-07-20at91406pm.png)
 
-Additionally, click on one of these notifications and then click on **View Details** to access the Pipeline execution details page.
+Além disso, clique em uma dessas notificações e, em seguida, clique em **Exibir detalhes** para acessar a página Detalhes de execução do Pipeline.
 
 ![](assets/screen_shot_2018-08-14at43503pm.png)
 
-## Email Notifications {#email-notifications}
+## Notificações por email {#email-notifications}
 
-By default, notifications are available in the web user interface across Adobe [!UICONTROL Experience Cloud] solutions. Os usuários individuais também podem optar por que essas notificações sejam enviadas por email, seja de forma imediata ou resumo.
+Por padrão, as notificações estão disponíveis na interface do usuário da Web nas [!UICONTROL Experience Cloud] soluções da Adobe. Os usuários individuais também podem optar por essas notificações serem enviadas por email, imediatamente ou por compilação.
 
-Clique no ícone de engrenagem na parte inferior da barra lateral Notificações, conforme mostrado na figura abaixo:
+Clique no ícone de engrenagem na parte inferior da barra lateral das notificações, conforme mostrado na figura abaixo:
 
 ![](assets/image2018-7-12_12-8-19.png)
 
-This will take the user to the Notifications Preferences screen in Adobe [!UICONTROL Experience Cloud].
+Isso levará o usuário para a tela Preferências de notificações na Adobe [!UICONTROL Experience Cloud].
 
-Os usuários podem ativar notificações por email e (opcionalmente) selecionar os tipos de notificações que desejam receber por email.
+Os usuários podem ativar as notificações por email e (opcionalmente) selecionar os tipos de notificações que desejam receber por email.
 
 >[!NOTE]
 >
->You can also enable digesting from the Adobe [!UICONTROL Experience Cloud], as shown below:
+>Você também pode ativar a compilação da Adobe [!UICONTROL Experience Cloud], como mostrado abaixo:
 
 ![](assets/image2018-7-12_12-10-51.png)
