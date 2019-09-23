@@ -1,248 +1,248 @@
 ---
-title: Usando o Experience Cloud Manager
+title: Uso do Cloud Manager
 seo-title: Uso do Adobe AEM Cloud Manager
-description: Interface do usuário do Gerenciador do AEM Cloud explicado
-seo-description: Interface do usuário do Gerenciador do Adobe AEM Cloud explicado
+description: Explicação da interface do usuário do AEM Cloud Manager
+seo-description: Explicação da interface do usuário do Adobe AEM Cloud Manager
 page-status-flag: nunca ativado
-uuid: cef 44 d 35-75 ed -44 bb -9636-2 de 2 bca 5 e 458
+uuid: cef44d35-75ed-44bb-9636-2de2bca5e458
 contentOwner: jsyal
-discoiquuid: c 37566 d 5-0 d 1 b -4 c 44-abd 7-b 271 ea 443 c 1 a
+discoiquuid: c37566d5-0d1b-4c44-abd7-b271ea443c1a
 translation-type: tm+mt
 source-git-commit: 4c1c6786db9b8972f9315bd2f12fc1752881492f
 
 ---
 
 
-# Using Cloud Manager{#using-cloud-manager}
+# Uso do Cloud Manager{#using-cloud-manager}
 
-This section explains the User Interface (UI) for [!UICONTROL Cloud Manager] and explains the workflow from setting up the program to code deployment followed by quality checks.
+Esta seção explica a interface do usuário (UI) para [!UICONTROL Cloud Manager] e explica o fluxo de trabalho da configuração do programa para a implantação do código, seguido de verificações de qualidade.
 
 ## Pré-requisitos {#prerequisites}
 
-Before you get into the details of using the [!UICONTROL Cloud Manager], it is recommended to go though the following sections:
+Antes de entrar nos detalhes de uso do [!UICONTROL Cloud Manager], é recomendável passar pelas seguintes seções:
 
-* [Entendendo os conceitos antes de usar [! Gerenciador de nuvem UICONTROL]](understanding-concepts.md)
-* [Configuração das Configurações Gerais para [! Gerenciador de nuvem UICONTROL]](setting-configurations-for-cloud-manager.md)
+* [Compreensão dos conceitos antes de usar o [!UICONTROL Cloud Manager]](understanding-concepts.md)
+* [Configuração de Configurações Gerais para [!UICONTROL Cloud Manager]](setting-configurations-for-cloud-manager.md)
 
 ## Getting Started with [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 
-Once you have setup the general configurations for [!UICONTROL Cloud Manager], you are ready to use the [!UICONTROL Cloud Manager].
+Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar o [!UICONTROL Cloud Manager].
 
-1. Log in to the Adobe [!UICONTROL Experience Cloud] and you will see the list of solutions.
+1. Faça logon na Adobe [!UICONTROL Experience Cloud] e você verá a lista de soluções.
 
    ![](assets/screen_shot_2018-04-22at92951am.png)
 
-1. Select the program and click on the top left icon to open [!UICONTROL Cloud Manager].
+1. Selecione o programa e clique no ícone superior esquerdo para abrir [!UICONTROL Cloud Manager].
 
    ![](assets/screen_shot_2018-04-22at93346am.png)
 
-## Setting Up Program {#setting-up-program}
+## Configuração do programa {#setting-up-program}
 
-Após a integração, o proprietário do negócio precisará fazer uma configuração inicial do programa. Isso envolve definir a descrição do programa e definir os kpis que serão usados para testes de desempenho. Opcionalmente, uma miniatura pode ser carregada.
+Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do programa. Isso envolve definir a descrição do programa e definir os KPIs que serão usados para testes de desempenho. Como opção, uma miniatura pode ser carregada.
 
-Os kpis definidas servem como uma linha de base para o teste de desempenho passado cada vez que o pipeline é executado.
+Os KPIs definidos servem como uma linha de base para testes de desempenho que são passados cada vez que o pipeline é executado.
 
 >[!NOTE]
 >
->The KPIs defined are measured on tests run on the **stage** environment. Normalmente, esses kpis são reduzidos para se ajustar aos recursos do ambiente stage.
+>Os KPIs definidos são medidos em testes executados no ambiente do **palco** . Normalmente, esses KPIs são reduzidos para se ajustarem aos recursos do ambiente do palco.
 >
->For example, a user expecting an average of 1000 page views per minute in their production environment and having four `dispatcher/publish` servers in production should scale this to 250 page views per minute (assuming their stage environment consists of only a single `dispatcher/publish` server pair).
+>Por exemplo, um usuário que espera uma média de 1.000 exibições de página por minuto em seu ambiente de produção e que tenha quatro `dispatcher/publish` servidores em produção deve dimensionar isso para 250 exibições de página por minuto (considerando que seu ambiente de estágio consista em apenas um par de `dispatcher/publish` servidores).
 >
->Além disso, muitos usuários terão um CDN (Akamai, cloudfront) na frente do ambiente de produção. Since [!UICONTROL Cloud Manager] tests against the stage environment directly, the KPI should reflect only the traffic expected to pass through the CDN, that is, the cache misses. Geralmente, isso será um subconjunto relativamente pequeno do tráfego total de produção.
+>Além disso, muitos usuários terão um CDN (Akamai, CloudFront) em frente ao ambiente de produção. Como [!UICONTROL Cloud Manager] os testes contra o ambiente do palco são feitos diretamente, o KPI deve refletir apenas o tráfego que se espera que passe pelo CDN, ou seja, o cache não tem acesso. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
 
-### Using [!UICONTROL Cloud Manager] to define KPIs {#using-cloud-manager-to-define-kpis}
+### Usar [!UICONTROL Cloud Manager] para definir KPIs {#using-cloud-manager-to-define-kpis}
 
-Siga as etapas abaixo para configurar o programa e definir kpis:
+Siga as etapas abaixo para configurar o programa e definir KPIs:
 
-1. Click **Setup Program** to start the setup process in [!UICONTROL Cloud Manager].
-1. The **Edit Program Information** screen displays.
+1. Clique em **Programa** de instalação para iniciar o processo de configuração em [!UICONTROL Cloud Manager].
+1. A tela **Editar informações** do programa é exibida.
 
-   Carregue uma miniatura em seu programa. You can also add a relevant description to your program and click **Next**.
+   Carregue uma miniatura em seu programa. Você também pode adicionar uma descrição relevante ao seu programa e clicar em **Avançar**.
 
-1. The **Configure Users** screen displays.
+1. A tela **Configurar usuários** é exibida.
 
-   Você pode configurar suas funções e usuários de equipe. Clique em **Avançar**.
+   Você pode configurar as funções e os usuários de sua equipe. Clique em **Avançar**.
 
-1. The **Configure General Business KPIs** screen displays.
+1. A tela **Configure General Business KPIs (Configurar KPIs** Gerais de Negócios) é exibida.
 
-   Você pode definir seus dois kpis (expectativas para cada implantação):
+   Você pode definir seus dois KPIs (expectativas para cada implantação):
 
-   1. O que é o 95 º tempo de resposta de percentil aceitável para você?
+   1. Qual é o tempo de resposta do 95º percentil que é aceitável para você?
 
       1. Valor recomendado - 3 segundos
-   1. Quantas exibições de página por minuto abaixo do pico de pico?
+   1. Quantas Exibições de página por minuto sob o pico de carga?
 
       1. Valor recomendado - 200 pv/m
 
 
-1. Click **Submit** to complete the setup wizard.
+1. Clique em **Enviar** para concluir o assistente de configuração.
 
-   You will see the home screen for [!UICONTROL Cloud Manager] change to **Deploy**.
+   Você verá a tela inicial para [!UICONTROL Cloud Manager] alterar para **Implantar**.
 
-## Available Environments {#available-environments}
+## Ambientes disponíveis {#available-environments}
 
-The **Available Environments** in the [!UICONTROL Cloud Manager] lists all the managed AEM environments.
+Os Ambientes **** disponíveis na lista [!UICONTROL Cloud Manager] todos os ambientes AEM gerenciados.
 
 Cada um dos ambientes listados terá um status associado a ele.
 
-## Configuring Pipeline {#configuring-pipeline}
+## Configurando o Pipeline {#configuring-pipeline}
 
-### Setting up Pipeline {#setting-up-pipeline}
+### Configuração do Pipeline {#setting-up-pipeline}
 
 >[!CAUTION]
 >
->O pipeline não pode ser configurado até que o repositório git tenha pelo menos um ramificação.
+>O pipeline não pode ser configurado até que o repositório git tenha pelo menos uma ramificação.
 
-Before you start to deploy your code, you must configure your pipeline settings from the [!UICONTROL Cloud Manager].
+Antes de começar a implantar seu código, você deve definir as configurações de pipeline do [!UICONTROL Cloud Manager].
 
-To learn more about pipeline configuration, see **Pipeline Overview** section in ** [Understanding Concepts before Using [!UICONTROL Cloud Manager]](understanding-concepts.md)**.
+Para saber mais sobre a configuração de pipeline, consulte a seção Visão geral **de** pipeline em ** [Compreensão de conceitos antes de Usar o [!UICONTROL Cloud Manager]](understanding-concepts.md)**.
 
 >[!NOTE]
 >
 >É possível alterar as configurações do pipeline após a configuração inicial.
 
-### Configuring Pipeline Settings from the [!UICONTROL Cloud Manager] {#configuring-pipeline-settings-from-the-cloud-manager}
+### Configuração das configurações de pipeline a partir do [!UICONTROL Cloud Manager]{#configuring-pipeline-settings-from-the-cloud-manager}
 
-Follow the steps below from the [!UICONTROL Cloud Manager] to configure the bahavior and preferences for your pipeline:
+Siga as etapas abaixo de [!UICONTROL Cloud Manager] para configurar o comportamento e as preferências do pipeline:
 
-1. Access the **Branch** tab to set up the application branch.
+1. Acesse a guia **Ramificação** para configurar a ramificação do aplicativo.
 
-   Selecione o ramo de git que você deseja configurar.
+   Selecione a ramificação git que deseja configurar.
 
    >[!NOTE]
    >
-   >As ramificações encontradas no repositório Git são vinculadas ao seu programa.
+   >As ramificações encontradas no repositório Git estão vinculadas ao seu programa.
 
    ![](assets/screen_shot_2018-05-06at73604pm.png)
 
-1. Access the **Environments** tab to select **Stage** and **Production** options.
+1. Acesse a guia **Ambientes** para selecionar as opções **Estágio** e **Produção** .
 
-   É possível definir o acionador que iniciará o pipeline:
+   Você pode definir o acionador que iniciará o pipeline:
 
    * **Manual** - alguém precisa clicar manualmente na interface do usuário para iniciar o pipeline.
-   Agora, você define os parâmetros que controlam a implantação de produção. As três opções disponíveis são as seguintes:
+   Agora você define os parâmetros que controlam a implantação de produção. As três opções disponíveis são as seguintes:
 
-   * **Usar aprovação em tempo real**- uma implantação deve ser aprovada manualmente por um proprietário de negócios, gerente de projeto ou gerente de implantação por meio da [!UICONTROL Cloud Manager] interface do usuário.
-   * **Use a CSE Monitoring** - a CSE está envolvida para iniciar a implantação.
+   * **Usar aprovação** em tempo real - uma implantação deve ser aprovada manualmente por um proprietário comercial, gerente de projeto ou gerente de implantação por meio da [!UICONTROL Cloud Manager] interface do usuário.
+   * **Usar a Supervisão** de CSE - Um CSE está envolvido para realmente iniciar a implantação.
    ![](assets/screen_shot_2018-05-06at73715pm.png)
 
-1. Access the **Testing** tab to define your testing criteria for your program.
+1. Acesse a guia **Teste** para definir seus critérios de teste para o programa.
 
    Agora, você pode configurar os parâmetros de teste de desempenho.
 
    ![](assets/screen_shot_2018-05-06at73750pm.png)
 
-## Deploying Code {#deploying-code}
+## Implantação de código {#deploying-code}
 
-Depois de configurar o pipeline (repositório, ambiente e ambiente de teste), você está pronto para implantar seu código.
+Depois de configurar seu pipeline (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
-### Deploying Code from [!UICONTROL Cloud Manager] {#deploying-code-from-cloud-manager}
+### Implantação de código de [!UICONTROL Cloud Manager]{#deploying-code-from-cloud-manager}
 
 Siga as etapas abaixo para implantar seu código no ambiente de produção:
 
-1. Click **Deploy** from the [!UICONTROL Cloud Manager] to start the deployment process.
-1. The **Stage Deployment** screen displays.
+1. Clique em **Implantar** do [!UICONTROL Cloud Manager] para iniciar o processo de implantação.
+1. A tela Implantação **do** estágio é exibida.
 
-   Click **Build** to start the process.
+   Clique em **Criar** para iniciar o processo.
 
-1. O processo de compilação completo considera vários parâmetros para verificar e implantar seu código.
+1. O processo de compilação completo leva em conta vários parâmetros para verificar e implantar seu código.
 
-   Os seguintes parâmetros marcados são os seguintes:
+   Os seguintes parâmetros que são marcados são os seguintes:
 
-   **Implantação do palco**
+   **Implantação do estágio**
 
    * Repositório
    * Teste de unidade
    * Digitalização de código
-   * Implantado no ambiente do palco
+   * Implantado no ambiente de estágio
    **Teste de pré-produção**
 
    * Teste de segurança
    * Teste de desempenho
    >[!NOTE]
    >
-   >Além disso, você pode exibir registros ou revisar os resultados dos critérios de teste mencionados acima.
+   >Além disso, você pode visualizar registros ou revisar resultados para os critérios de teste mencionados acima.
 
-## Results from Quality Checks {#results-from-quality-checks}
+## Resultados das verificações de qualidade {#results-from-quality-checks}
 
-Há três passagens no pipeline: Qualidade do código, teste de desempenho e teste de segurança.
+Há três portões no pipeline: Qualidade de código, teste de desempenho e teste de segurança.
 
-Para cada uma dessas porturas, há uma estrutura de três níveis para problemas identificados pelo portfólio.
+Para cada uma dessas portas, existe uma estrutura em três níveis para as questões identificadas pela porta.
 
-* **Importante** - esses são problemas identificados pela portão que causam uma falha imediata do pipeline.
-* **Importante** - esses são problemas identificados pela portão que fazem com que o pipeline insira um estado pausado. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, nesse caso, o pipeline continua ou pode aceitar os problemas, e nesse caso o pipeline é interrompido com uma falha.
-* **Informações** - Esses são problemas identificados pela portão que são fornecidos exclusivamente para fins informativos e não afetam a execução do pipeline.
+* **Crítico** - São problemas identificados pela porta que causam uma falha imediata do pipeline.
+* **Importante** - são problemas identificados pela porta que fazem com que o pipeline entre em um estado de pausa. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso em que o pipeline continua, ou pode aceitar os problemas, caso em que o pipeline pára com uma falha.
+* **Informações** - São questões identificadas pela porta, que são fornecidas apenas para fins informativos e não têm impacto na execução do pipeline.
 
-### Code Scanning {#code-scanning}
+### Digitalização de código {#code-scanning}
 
 ![](assets/screen_shot_2018-04-22at101443am.png)
 
-### Performance Testing {#performance-testing}
+### Teste de desempenho {#performance-testing}
 
-*O teste de desempenho* em [!UICONTROL Cloud Manager] é implementado usando um teste por 30 minutos.
+*O teste* de desempenho em [!UICONTROL Cloud Manager] é implementado usando um teste de 30 minutos.
 
-Durante a configuração do pipeline, o gerenciador de implantação pode decidir quanto tráfego leva para cada grupo. Eles podem escolher em qualquer lugar de um a três grupos. A distribuição do tráfego é baseada no número de compartimentos selecionados, ou seja, se todos os três estiverem selecionados, 33% do total de exibições de página serão colocados em cada grupo; se duas estiverem selecionadas, 50% vai para cada conjunto; se uma estiver selecionada, 100% do tráfego vai para esse conjunto.
+Durante a configuração do pipeline, o gerente de implantação pode decidir quanto tráfego direcionar para cada bucket. Eles podem escolher em qualquer lugar de um a todos os três baldes. A distribuição do tráfego se baseia no número de compartimentos selecionados, ou seja, se todos os três forem selecionados, 33% do total de exibições de página serão colocadas em cada grupo; se dois forem selecionados, 50% serão atribuídos a cada conjunto; se um estiver selecionado, 100% do tráfego vai para esse conjunto.
 
-Por exemplo, digamos que há uma divisão de 50%/50% entre as páginas populares populares e novas páginas (neste exemplo, Outras páginas ativas não são usadas) e o conjunto Novas páginas contém 3000 páginas. As exibições de página por minuto KPI estão definidas como 200. Durante o período de teste de 30 minutos:
+Por exemplo, digamos que haja uma divisão de 50%/50% entre as Páginas ativas populares e as Novas páginas definidas (neste exemplo, Outras páginas ao vivo não são usadas) e o conjunto Novas páginas contém 3000 páginas. O KPI de exibições de página por minuto está definido como 200. Durante o período de teste de 30 minutos:
 
-* Each of the 25 pages in the Popular Live Pages set will be hit 240 times - `((200 &#42; 0.5) / 25) &#42; 30 = 120`
-* Each of the 3000 pages in the New Pages set will be hit once - `((200 &#42; 0.5) / 3000) &#42; 30 = 1`
+* Cada uma das 25 páginas no conjunto de páginas ativas populares será acessada 240 vezes - `((200 &#42; 0.5) / 25) &#42; 30 = 120`
+* Cada uma das 3000 páginas no conjunto Novas páginas será acessada uma vez - `((200 &#42; 0.5) / 3000) &#42; 30 = 1`
 
 ![](assets/image2018-3-14_16-23-56.png)
 
-### Performance Test Metrics {#performance-test-metrics}
+### Métricas de teste de desempenho {#performance-test-metrics}
 
-Durante o período de teste, várias métricas são capturadas e comparadas aos kpis definidas pelo proprietário do negócio ou pelas normas definidas pelo AMS.
+Durante o período de teste, várias métricas são capturadas e comparadas com os KPIs definidos pelo proprietário da empresa ou com os padrões definidos pelo AMS.
 
-Eles são relatados usando o sistema de rotação em três níveis da seguinte maneira:
+Estes são reportados utilizando o sistema de portagem de três níveis da seguinte forma:
 
-### Three-Tier Gates while Running a Pipeline {#three-tier-gates-while-running-a-pipeline}
+### Portas de três níveis ao executar um pipeline {#three-tier-gates-while-running-a-pipeline}
 
-Há três passagens no pipeline como Qualidade de código, Teste de desempenho e Teste de segurança.
+Há três portas no pipeline como Qualidade de código, Teste de desempenho e Teste de segurança.
 
-Para cada uma dessas porturas, há uma estrutura de três níveis para os problemas identificados pela portão:
+Para cada uma dessas portas, existe uma estrutura em três níveis para as questões identificadas pela porta:
 
-* **Crítica**: Esses são problemas identificados pela portão que causam uma falha imediata do pipeline.
-* **Importante**: Esses são problemas identificados pela portão que fazem com que o pipeline insira um estado pausado. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, nesse caso, o pipeline continua ou pode aceitar os problemas, e nesse caso o pipeline é interrompido com uma falha.
-* **Informações**: Esses são problemas identificados pela portão que são fornecidos exclusivamente para fins informativos e não afetam a execução do pipeline.
+* **Crítico**: Estes são problemas identificados pela porta que causam uma falha imediata do pipeline.
+* **Importante**: Esses são problemas identificados pela porta que fazem com que o pipeline entre em um estado de pausa. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso em que o pipeline continua, ou pode aceitar os problemas, caso em que o pipeline pára com uma falha.
+* **Informações**: Trata-se de questões identificadas pela porta, que são fornecidas apenas para fins informativos e não têm impacto na execução do gasoduto.
 
-A tabela a seguir resume a matriz de teste de desempenho usando o sistema de rotação de três níveis:
+A tabela a seguir resume a matriz de teste de desempenho usando o sistema portátil de três níveis:
 
 | **Métrica** | **Categoria** | **Limite de falha** |
 |---|---|---|
-| Taxa de erro de solicitação de página % | Crítica | &gt;= 2% |
-| Taxa de utilização da CPU | Crítica | &gt;= 80% |
-| Tempo de espera do disco | Crítica | &gt;= 50% |
-| Tempo de resposta de Percent5 percentil | Importante | &gt; = KPI de nível de programa |
-| Tempo de resposta de pico | Importante | &gt; = 18 segundos |
+| Taxa de erro de solicitação de página % |  Crítico | &gt;= 2% |
+| Taxa de utilização da CPU |  Crítico | &gt;= 80% |
+| Tempo de espera de E/S de disco |  Crítico | &gt;= 50% |
+| Tempo de Resposta de 95% | Importante | &gt;= KPI de nível de programa |
+| Tempo de resposta máximo | Importante | &gt;= 18 segundos |
 | Exibições de página por minuto | Importante | &lt; KPI de nível de programa |
-| Uso de largura de banda do disco | Importante | &gt;= 90% |
-| Uso de largura de banda de rede | Importante | &gt;= 90% |
+| Utilização da largura de banda do disco | Importante | &gt;= 90% |
+| Utilização da largura de banda da rede | Importante | &gt;= 90% |
 | Solicitações por minuto | Informações | &lt; 6000 |
 
-### Security Testing {#security-testing}
+### Teste de segurança {#security-testing}
 
-[!UICONTROL Cloud Manager] executa as Verificações existentes *de segurança do AEM* no estágio após a implantação e relata seu status por meio da interface do usuário. Os resultados são agregados de todas as instâncias do AEM no ambiente.
+[!UICONTROL Cloud Manager] executa as verificações *de integridade de segurança do* AEM na etapa seguinte à implantação e relata seu status pela interface do usuário. Os resultados são agregados de todas as instâncias do AEM no ambiente.
 
-Se qualquer uma das instâncias relatar uma falha para determinada verificação de integridade, o ambiente inteiro falhará essa verificação de integridade. Assim como com a Qualidade de código e o Teste de desempenho, essas verificações de integridade são organizadas em categorias e informadas usando o sistema de rotação em três níveis. A única distinção é que não há limite no caso de teste de segurança. Todas as verificações de integridade simplesmente passam ou falharam.
+Se alguma das instâncias reportar uma falha para uma determinada verificação de integridade, todo o ambiente falhará nessa verificação de integridade. Como acontece com o teste de qualidade e desempenho de código, essas verificações de integridade são organizadas em categorias e relatadas usando o sistema de portagem de três níveis. A única distinção é que não existe um limiar no caso dos testes de segurança. Todos os exames de saúde são simplesmente aprovados ou reprovados.
 
 As verificações atuais são:
 
 | **Verificação de integridade** | **Categoria** |
 |---|---|
-| Disponibilidade da API de anexo do firewall de desserialização | Crítica |
-| Firewall de desserialização funcional | Crítica |
-| Firewall de desserialização carregado | Crítica |
-| Geração do nome do nó autorizada | Crítica |
-| Contas padrão de logon | Crítica |
-| Sling Get Servlet | Crítica |
-| Configuração do Dispatcher do controle de qualidade | Crítica |
-| Configuração do gerenciador de biblioteca HTML CQ | Crítica |
-| Sling Java Script Handler | Crítica |
-| Sling Jsp Script Handler | Crítica |
-| Sling Referrer Filter | Crítica |
-| Configuração do SSL | Crítica |
-| Acesso padrão ao perfil de usuário | Crítica |
+| Disponibilidade da API de anexo do firewall de desserialização |  Crítico |
+| Firewall de desserialização funcional |  Crítico |
+| Firewall de desserialização carregado |  Crítico |
+| Geração do nome do nó autorizada |  Crítico |
+| Contas padrão de logon |  Crítico |
+| Sling Get Servlet |  Crítico |
+| Configuração do Dispatcher do controle de qualidade |  Crítico |
+| Configuração do gerenciador de biblioteca HTML CQ |  Crítico |
+| Sling Java Script Handler |  Crítico |
+| Sling Jsp Script Handler |  Crítico |
+| Sling Referrer Filter |  Crítico |
+| Configuração do SSL |  Crítico |
+| Acesso padrão ao perfil de usuário |  Crítico |
 | Suporte do CRXDE | Importante |
 | Verificação de integridade do DavEx | Importante |
 | Pacotes de conteúdo de exemplo | Importante |
@@ -251,36 +251,36 @@ As verificações atuais são:
 | Configuração de servidor da Web | Importante |
 | Reprodução e usuários de transporte | Informações |
 
-### Quality Check Implementation by SonarQube {#quality-check-implementation-by-sonarqube}
+### Implementação da verificação de qualidade por SonarQube {#quality-check-implementation-by-sonarqube}
 
-Como parte do pipeline, conforme demonstrado acima, o código é digitalizado. Atualmente, isso é implementado por sonarqube. Temos 93 regras que são uma combinação de regras genéricas Java e regras específicas do AEM (incluindo alguns do conjunto de regras existente do Knowifide). A list of these rules can be found here: [code-quality-rules.xlsx](/help/using/assets/code-quality-rules.xlsx)
+Como parte do pipeline, conforme descrito acima, o código é verificado. Atualmente, isso é implementado pela SonarQube. Temos 93 regras que são uma combinação de regras genéricas do Java e regras específicas do AEM (incluindo algumas do conjunto de regras existente do Cognifide). Uma lista dessas regras pode ser encontrada aqui: [code-quality-rules.xlsx](/help/using/assets/code-quality-rules.xlsx)
 
-A partir dessas regras, uma variedade de métricas é calculada, sendo que algumas são usadas como uma porta de qualidade antes de permitir uma implantação para o ambiente stage.
+Dessas regras, é calculada uma variedade de métricas, algumas das quais são usadas como uma porta de qualidade antes de permitir uma implantação no ambiente de estágio.
 
-Estes são os limites atuais:
+Estes são os limiares atuais:
 
 | Nome | Definição | Categoria | Limite de falha |
 |--- |--- |--- |--- |
-| Classificação de segurança | A = 0 Vulnerability <br/>B = at least 1 Minor Vulnerability<br/> C = at least 1 Major Vulnerability <br/>D = at least 1 Critical Vulnerability <br/>E = at least 1 Blocker Vulnerability | Crítica | &lt; B |
-| Classificação confiável | A = 0 Bug <br/>B = at least 1 Minor Bug <br/>C = at least 1 Major Bug <br/>D = at least 1 Critical Bug E = at least 1 Blocker Bug | Importante | &lt; C |
-| Classificação de maintainability | Outstanding remediation cost for code smells is: <br/><ul><li>&lt; = 5% do tempo que já passou no aplicativo, a classificação é A </li><li>entre 6 a 10% a classificação é B </li><li>entre 11 e 20% a classificação é um C </li><li>entre 21 e 50% a classificação é um D</li><li>qualquer coisa acima de 50% é um E</li></ul> | Importante | &lt; A |
-| Cobertura | A mix of line coverage and condition coverage using this formula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>where: CT = conditions that have been evaluated to &#39;true&#39; at least once <br/>CF = conditions that have been evaluated to &#39;false&#39; at least once <br/>LC = covered lines = lines_to_cover - uncovered_lines <br/><br/> B = total number of conditions <br/>EL = total number of executable lines (lines_to_cover) | Importante | &lt; 50% |
-| Teste de unidade ignorado | Número de testes de unidade ignorados. | Informações | &gt; 1 |
-| Problemas em aberto | Tipos de problemas gerais - Vulnerabilidades, erros e codificação de código | Informações | &gt; 1 |
-| Linhas duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado duplicado: <ul><li> **Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser distribuídos pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outros idiomas</li></ul><ul><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>Diferenças no recuo e em literais de string são ignoradas ao detectar duplicações. | Informações | &gt; 1% |
+| Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 Vulnerabilidade<br/> Menor C = pelo menos 1 Vulnerabilidade Principal <br/>D = pelo menos 1 Vulnerabilidade Crítica <br/>E = pelo menos 1 Vulnerabilidade Bloqueadora |  Crítico | &lt; B |
+| Classificação da confiabilidade | A = 0 Bug <br/>B = pelo menos 1 Bug Menor <br/>C = pelo menos 1 Bug Principal <br/>D = pelo menos 1 Bug Crítico E = pelo menos 1 Bug Bloqueador | Importante | &lt; C |
+| Classificação da manutenção | O custo de correção excepcional para cheiros de código é: <br/><ul><li>&lt;=5% do tempo que já passou para o aplicativo, a classificação é A </li><li>entre 6 e 10%, a classificação é de </li><li>entre 11 e 20% a classificação é de C </li><li>entre 21 e 50% a classificação é um D</li><li>algo acima de 50% é um E</li></ul> | Importante | &lt; A |
+| Cobertura | Uma combinação de cobertura de linha e cobertura de condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>onde: CT = condições que foram avaliadas como 'true' pelo menos uma vez <br/>CF = condições que foram avaliadas como 'false' pelo menos uma vez <br/>LC = linhas cobertas = lines_to_cover - uncovered_lines <br/><br/> B = número total de condições <br/>EL = número total de linhas executáveis (lines_to_cover) | Importante | &lt; 50% |
+| Testes de unidade ignorados | Número de testes de unidade ignorados. | Informações | &gt; 1 |
+| Problemas em aberto | Tipos de edição geral - Vulnerabilidades, Erros e Cheiros de código | Informações | &gt; 1 |
+| Linhas Duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado como duplicado: <ul><li> **Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser espalhados pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras línguas</li></ul><ul><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>As diferenças no recuo, bem como nos literais de string, são ignoradas ao detectar duplicações. | Informações | &gt; 1% |
 
-### False Positives {#false-positives}
+### Falsos Positivos {#false-positives}
 
-O processo de leitura de qualidade não é perfeito e, às vezes, identificará incorretamente os problemas que não são realmente problemáticos. This is called a *false positive* (although *false negative* would probably be more semantically correct). In these cases, the source code can be annotated with the standard Java `@SuppressWarnings` annotation specifying the rule ID as the annotation attribute. Por exemplo, um problema comum é que a regra sonarqube para detectar senhas codificadas é muito liberal sobre o que considera uma senha codificada.
+O processo de verificação da qualidade não é perfeito e, por vezes, identificará incorretamente questões que não são realmente problemáticas. Isso é chamado de *falso positivo* (embora *falso negativo* provavelmente seja mais semanticamente correto). Nesses casos, o código fonte pode ser anotado com a `@SuppressWarnings` anotação padrão Java que especifica a ID da regra como o atributo de anotação. Por exemplo, um problema comum é que a regra SonarQube para detectar senhas codificadas é muito liberal sobre o que considera uma senha codificada.
 
-Para ver um exemplo específico, esse código seria muito comum em um projeto do AEM que tinha código para se conectar a algum serviço externo:
+Para ver um exemplo específico, esse código seria bastante comum em um projeto do AEM que tem código para se conectar a algum serviço externo:
 
 ```java
 @Property(label = "Service Password")
 private static final String SERVICE_PASSWORD = "password";
 ```
 
-Sonarqube vai levantar isso como uma Vulnerabilidade de bloqueador. Nesse caso, o cliente pode identificar que essa não é uma vulnerabilidade e anotar isso com a ID da regra apropriada:
+A SonarQube vai aumentar isto como uma Vulnerabilidade do Bloqueador. Nesse caso, o cliente pode identificar que isso não é uma vulnerabilidade e anotar isso com a ID de regra apropriada:
 
 ```java
 @SuppressWarnings("squid:S2068")
@@ -288,16 +288,16 @@ Sonarqube vai levantar isso como uma Vulnerabilidade de bloqueador. Nesse caso, 
 private static final String SERVICE_PASSWORD = "password";
 ```
 
-No entanto, por outro lado, se o código foi, na verdade:
+No entanto, por outro lado, se o código era realmente este:
 
 ```java
 @Property(label = "Service Password", value = "mysecretpassword")
 private static final String SERVICE_PASSWORD = "password";
 ```
 
-Em seguida, o cliente deve considerar o aviso sonarqube como coração e remover a senha codificada. They will still, however, need to add the `@SuppressWarnings` annotation since the SonarQube rule is actually being triggered by the term `password`.
+Em seguida, o cliente deve levar a sério o aviso da SonarQube e remover a senha codificada. No entanto, eles ainda precisarão adicionar a `@SuppressWarnings` anotação, pois a regra SonarQube está sendo acionada pelo termo `password`.
 
 >[!NOTE]
 >
->It is a best practice to make the `@SuppressWarnings` annotation as specific as possible, i.e. annotate only the specific statement or block causing the issue, it is possible to annotate at a class level.
+>É uma prática recomendada tornar a `@SuppressWarnings` anotação o mais específica possível, ou seja, anotar somente a declaração específica ou o bloco que está causando o problema, é possível fazer anotações em nível de classe.
 
