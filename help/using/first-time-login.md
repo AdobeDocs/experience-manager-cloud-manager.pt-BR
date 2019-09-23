@@ -1,43 +1,43 @@
 ---
-title: Login pela primeira vez
-seo-title: Logon pela primeira vez no Adobe AEM Cloud Manager
-description: Siga esta página se você configurou suas configurações gerais e estiver pronto para usar o Experience Cloud Manager pela primeira vez.
-seo-description: Siga esta página se você configurou suas configurações gerais e estiver pronto para usar o Adobe AEM Cloud Manager pela primeira vez.
-uuid: 7 c 8458 a 6-6 de 8-4946-ac 0 c-fb 10 bce 17 a 15
+title: Primeiro logon
+seo-title: Primeiro logon no Adobe AEM Cloud Manager
+description: Siga esta página se tiver configurado suas configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
+seo-description: Siga esta página se tiver configurado suas configurações gerais e estiver pronto para usar o Adobe AEM Cloud Manager pela primeira vez.
+uuid: 7c8458a6-6de8-4946-ac0c-fb10bce17a15
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: getting-started
-discoiquuid: 2221 d 1 d 5-dbc 2-4175-8371-60344 f 932 a 82
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: introdução
+discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: fea7cbe19989272100d76092198afcfac17c1c3a
 
 ---
 
 
-# Login pela primeira vez {#first-time-login}
+# Primeiro logon {#first-time-login}
 
-Once you have setup the general configurations for [!UICONTROL Cloud Manager], you are ready to use the User Interface (UI) for [!UICONTROL Cloud Manager].
+Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar a interface do usuário para [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
->Dependendo das funções atribuídas [!UICONTROL Cloud Manager] e do estado do aplicativo, você verá telas diferentes ao usar [!UICONTROL Cloud Manager] a interface do usuário.
+>Dependendo das funções atribuídas em [!UICONTROL Cloud Manager] e do estado do aplicativo, você verá telas diferentes ao usar a [!UICONTROL Cloud Manager] interface do usuário.
 
-## Fazer logon pela primeira vez {#logging-in-for-the-first-time}
+## Logon pela primeira vez {#logging-in-for-the-first-time}
 
-1. Faça logon na **Adobe[!UICONTROL Experience Cloud]** e você verá a lista **de Programas**.
+1. Faça logon na **Adobe[!UICONTROL Experience Cloud]** e você verá a lista de **Programas**.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
-1. Selecione o programa (por exemplo **, We. Retail Global**) e clique no ícone superior esquerdo para abrir [!UICONTROL Cloud Manager].
+1. Selecione o programa (por exemplo, **We.Retail Global**) e clique no ícone superior esquerdo para abrir [!UICONTROL Cloud Manager].
 
    ![](assets/screen_shot_2018-06-04at12611pm.png)
 
-1. O painel para [!UICONTROL Cloud Manager] exibições.
+1. O painel para [!UICONTROL Cloud Manager] é exibido.
 
    ![](assets/FirstLogin1.png)
 
-1. Clique **em Configuração Programa** para definir a descrição **do Programa** e definir os Indicadores-chave de desempenho (kpis).
+1. Clique em **Configurar programa** para definir a descrição do **programa** e definir os Indicadores-chave de desempenho (KPIs).
 
    >[!NOTE]
    >
-   >Consulte [Configuração do programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
+   >Consulte [Configurar seu programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
