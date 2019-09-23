@@ -1,28 +1,28 @@
 ---
 title: Direitos de acesso concedidos
-seo-title: Direitos de acesso concedidos no Gerenciador do AEM Cloud
+seo-title: Direitos de acesso concedidos no AEM Cloud Manager
 description: Saiba mais sobre a Adobe ID e os recursos da Experience Cloud.
-seo-description: Siga esta página para saber mais sobre os recursos da Adobe ID e da Experience Cloud.
-uuid: 9 aa 90 a 99-f 049-422 e -9 e 06-b 00 b 843 ed 98 b
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
+seo-description: Siga esta página para saber mais sobre a Adobe ID e os recursos da AEM Experience Cloud.
+uuid: 9aa90a99-f049-422e-9e06-b00b843ed98b
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requisitos
-discoiquuid: 072 dbc 1 b-e 608-4 b 1 f-b 0 e 8-0 e 4 f 88 c 8 ad 12
+discoiquuid: 072dbc1b-e608-4b1f-b0e8-0e4f88c8ad12
 translation-type: tm+mt
 source-git-commit: 0f29b3f9cf4bd53d0e57c7793fe05cd3afeea5e1
 
 ---
 
 
-# Access Rights Granted {#access-rights-granted}
+# Direitos de acesso concedidos {#access-rights-granted}
 
-## User Identity Types {#user-identity-types}
+## Tipos de identidade de usuário {#user-identity-types}
 
-As part of the on-boarding process, Adobe will create an **Organization** identifier for your company in the Adobe Identity Management System (IMS), where all your users and their permissions can be managed. Each user, who needs to be a member of this organization, and will be granted access to any of the [!UICONTROL Experience Cloud] services, will need to have their own **Adobe ID**.
+Como parte do processo de integração, a Adobe criará um identificador de **organização** para sua empresa no Adobe Identity Management System (IMS), onde todos os usuários e suas permissões podem ser gerenciados. Cada usuário, que precisa ser membro dessa organização e receber acesso a qualquer um dos [!UICONTROL Experience Cloud] serviços, precisará ter sua própria ID **da** Adobe.
 
-To get started with an Adobe ID, please visit [Manage Adobe Identity Types](https://helpx.adobe.com/enterprise/using/identity.html) for detailed instructions on how to obtain an Adobe ID using one of the identity types available.
+Para começar a usar uma Adobe ID, visite [Gerenciar tipos](https://helpx.adobe.com/enterprise/using/identity.html) de identidade da Adobe para obter instruções detalhadas sobre como obter uma Adobe ID usando um dos tipos de identidade disponíveis.
 
-### Users and Roles {#users-and-roles}
+### Usuários e funções {#users-and-roles}
 
-Depois que a Adobe tiver criado uma organização para sua empresa, o administrador designado será adicionado como o primeiro membro a esta organização. The administrator will be granted the administrator permissions by default, and assigned the [!UICONTROL AEM Managed Services] P **roduct**, and one or more [!UICONTROL Cloud Manager] **Product Profiles**. Please visit [Add Users and Roles](setting-up-users-and-roles.md) to learn more about how to configure and manage your team users using the Admin Console.
+Depois que a Adobe criar uma organização para sua empresa, o administrador designado será adicionado como o primeiro membro dessa organização. Por padrão, o administrador receberá as permissões de administrador e receberá o [!UICONTROL AEM Managed Services] Produto **, além de um ou mais Perfis**[!UICONTROL Cloud Manager] de **** Produto. Visite [Adicionar usuários e funções](setting-up-users-and-roles.md) para saber mais sobre como configurar e gerenciar os usuários da equipe usando o Admin Console.
 
-With these rights granted, your administrator is now set up with a single sign-on (using Adobe ID) to access the [!UICONTROL Experience Cloud] services, login to your AEM cloud environments, and use [!UICONTROL Cloud Manager].
+Com esses direitos concedidos, seu administrador agora está configurado com um logon único (usando a Adobe ID) para acessar os [!UICONTROL Experience Cloud] serviços, fazer logon nos ambientes da nuvem do AEM e usar [!UICONTROL Cloud Manager].
