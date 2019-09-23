@@ -1,51 +1,51 @@
 ---
 title: Avaliação
 seo-title: Avaliação
-description: 'Esta página serve como um ponto de partida para a fase de avaliação no Assistente de atualização do produto. '
-seo-description: Esta página serve como um ponto de partida para a fase de avaliação no Assistente de atualização do produto.
-uuid: 62 d 68 e 79-c 2 ba -4 d 8 b-ba 7 d -33709014 d 5 b 6
+description: 'Esta página serve como ponto de partida para aprender a fase de Avaliação no Assistente de Atualização de Produto. '
+seo-description: Esta página serve como ponto de partida para aprender a fase de Avaliação no Assistente de Atualização de Produto.
+uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
-discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
 source-git-commit: 9e33b90818c686f0b7aacaf0955c3f2eba05488f
 
 ---
 
 
-# Evaluation Phase {#evaluation}
+# Fase de avaliação {#evaluation}
 
-The first phase in the Product Update wizard is **[!UICONTROL Evaluation]** phase.
-Aqui, você pode avaliar a complexidade da atualização com o padrão detectado diretamente do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
+A primeira fase do assistente de Atualização de produto é a **[!UICONTROL Evaluation]** fase.
+Aqui você pode avaliar a complexidade da atualização com o detector de padrões acessível diretamente do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
 
-O relatório gerado permite verificar a instância do Autor para atualizá-la, detectando padrões que:
+O relatório gerado permite que você verifique se a instância do autor tem capacidade de atualização detectando padrões que:
 
-* Violar determinadas regras e são feitas em áreas que serão afetadas ou substituídas pela atualização.
+* Violar certas regras e são feitas em áreas que serão afetadas ou substituídas pela atualização.
 
-* Use um recurso AEM 6. x ou uma API que não seja compatível com o novo AEM e que possa ser break após a atualização.
+* Use um recurso do AEM 6.x ou uma API que não seja compatível com versões anteriores no novo AEM e que possa ser interrompida após a atualização.
 
 Isso serve como uma avaliação do esforço de desenvolvimento envolvido na atualização para o Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
->To learn more about pattern detector, refer to [Assessing the Upgrade Complexity with the Pattern Detector](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
+>Para saber mais sobre o detector de padrões, consulte [Avaliação da complexidade de atualização com o Detector de padrões](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
 
-## Running the Evaluator {#running-evaluator}
+## Executar o Avaliador {#running-evaluator}
 
 Siga as etapas abaixo para gerar o relatório de avaliação:
 
-1. Click on **[!UICONTROL Run Evaluation]**.
+1. Clique em **[!UICONTROL Run Evaluation]**.
 
    >[!NOTE]
-   >O detector padrão pode ser executado em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer lentidão em casos críticos de negócios, o Cloud Manager executará o procedimento no ambiente de preparo temporário na instância do autor.
+   >O detector de padrões pode funcionar em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer lentidão em instâncias críticas para os negócios, o Cloud Manager a executará no ambiente de preparo na instância do autor.
 
    ![](assets/Run-Evaluation.png)
 
-1. O assistente informa o status da ação. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
+1. O assistente informa o status de sua ação. Você notará **Em andamento** ou **concluído** , conforme aplicável, quando o relatório de avaliação estiver sendo gerado.
 
-   Once the report is generated, you can click on **[!UICONTROL Download report]** to save a copy.
+   Depois que o relatório é gerado, você pode clicar em **[!UICONTROL Download report]** para salvar uma cópia.
 
    ![](assets/Evaluation-1.png)
 
 
 >[!NOTE]
->The current release of Product Update wizard in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
+>A versão atual do assistente de Atualização de produto no Cloud Manager é compatível somente com a fase de **avaliação** . As outras quatro fases, **Remediação**, **Execução**, **Validação** e **Conclusão** , estarão em breve.
