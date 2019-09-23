@@ -1,82 +1,82 @@
 ---
-title: Entender os resultados do teste
-seo-title: Entender os resultados do teste
+title: Entenda seus resultados de teste
+seo-title: Entenda seus resultados de teste
 description: 'null'
-seo-description: Siga esta página para saber mais sobre três faixas de níveis ao executar um pipeline, digitalização de código, desempenho e testes de segurança validando seu programa no Cloud Manager.
-uuid: 93 caa 01 f -0 df 2-4 a 6 f -81 dc -23 dfee 24 dc 93
+seo-description: Siga esta página para saber mais sobre portas de três níveis ao executar um pipeline, verificação de código, desempenho e testes de segurança que validam seu programa no Cloud Manager.
+uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
-discoiquuid: 83299 ed 8-4 b 7 a -4 b 1 c-bd 56-1 bfc 7 e 7318 d 4
+discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
 source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
 
 
-# Entender os resultados do teste {#understand-your-test-results}
+# Entenda seus resultados de teste {#understand-your-test-results}
 
-Durante o **processo Pipeline** , várias métricas são capturadas e comparadas aos Indicadores-chave de desempenho (kpis) definidas pelo proprietário do negócio ou por padrões definidos pelo Adobe Managed Services.
+Durante o processo de **Pipeline** , várias métricas são capturadas e comparadas aos Indicadores-chave de desempenho (KPIs) definidos pelo proprietário da empresa ou aos padrões definidos pelos Serviços gerenciados da Adobe.
 
-Eles são relatados usando o sistema de rotação de três níveis, conforme definido nesta seção.
+Eles são reportados usando o sistema de portagem de três níveis, conforme definido nesta seção.
 
-## Portfólios de três níveis ao executar um pipeline {#three-tier-gates-while-running-a-pipeline}
+## Portas de três níveis ao executar um pipeline {#three-tier-gates-while-running-a-pipeline}
 
-Há três passagens no pipeline:
+Há três portões no pipeline:
 
 * Qualidade do código
 * Teste de desempenho
 * Teste de segurança
 
-Para cada uma dessas porturas, há uma estrutura de três níveis para problemas identificados pelo portfólio.
+Para cada uma dessas portas, existe uma estrutura em três níveis para as questões identificadas pela porta.
 
-* **Importante** - esses são problemas identificados pela portão que causam uma falha imediata do pipeline.
-* **Importante** - esses são problemas identificados pela portão que fazem com que o pipeline insira um estado pausado. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, nesse caso, o pipeline continua ou pode aceitar os problemas, e nesse caso o pipeline é interrompido com uma falha.
-* **Informações** - Esses são problemas identificados pela portão que são fornecidos exclusivamente para fins informativos e não afetam a execução do pipeline.
+* **Crítico** - São problemas identificados pela porta que causam uma falha imediata do pipeline.
+* **Importante** - são problemas identificados pela porta que fazem com que o pipeline entre em um estado de pausa. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso em que o pipeline continua, ou pode aceitar os problemas, caso em que o pipeline pára com uma falha.
+* **Informações** - São questões identificadas pela porta, que são fornecidas apenas para fins informativos e não têm impacto na execução do pipeline.
 
 >[!NOTE]
 >
->Em um Pipeline somente de qualidade de código, falhas importantes na faixa Teste de qualidade do código não podem ser substituídas, pois a etapa Teste de qualidade de código é a etapa final do pipeline.
+>Em um pipeline de qualidade de código somente, falhas importantes na porta de teste de qualidade de código não podem ser substituídas, pois a etapa de teste de qualidade de código é a etapa final no pipeline.
 
-## Teste de qualidade do código {#code-quality-testing}
+## Teste de qualidade de código {#code-quality-testing}
 
-Como parte do pipeline, o código fonte é digitalizado para garantir que as implantações atendam a determinados critérios de qualidade. Atualmente, isso é implementado por uma combinação de sonarqube e de conteúdo de conteúdo a nível de pacote usando o oakpal. Há mais de 100 regras combinando regras genéricas Java e regras específicas do AEM. A tabela a seguir resume a classificação para critérios de teste:
+Como parte do pipeline, o código fonte é verificado para garantir que as implantações atendam a determinados critérios de qualidade. Atualmente, esta ação é implementada através de uma combinação de SonarQube e exame de nível de pacote de conteúdo utilizando OakPAL. Há mais de 100 regras que combinam regras genéricas do Java e regras específicas do AEM. A tabela a seguir resume a classificação dos critérios de teste:
 
 | Nome | Definição | Categoria | Limite de falha |
 |--- |--- |--- |--- |
-| Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 menor vulnerabilidade<br/> C = pelo menos 1 vulnerabilidade principal <br/>D = pelo menos 1 Vulnerabilidade crítica <br/>E = pelo menos 1 Vulnerability do bloqueador | Crítica | &lt; B |
-| Classificação confiável | A = 0 Bug <br/>B = pelo menos 1 menor bug <br/>C = pelo menos 1 Bug principal <br/>D = pelo menos 1 Bug crítico E = pelo menos 1 Bug de bloqueador | Importante | &lt; C |
-| Classificação de maintainability | O custo de reparo pendente para o código smells é: <br/><ul><li>&lt; = 5% do tempo que já passou no aplicativo, a classificação é A </li><li>entre 6 a 10% a classificação é B </li><li>entre 11 e 20% a classificação é um C </li><li>entre 21 e 50% a classificação é um D</li><li>qualquer coisa acima de 50% é um E</li></ul> | Importante | &lt; A |
-| Cobertura | Uma combinação de cobertura de linha de teste de unidade e cobertura de condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`<br/>em que: CT = condições que foram avaliadas para'true'pelo menos uma vez ao executar testes de unidade <br/>CF = condições que foram avaliadas como'false'pelo menos uma vez ao executar testes de unidade <br/>LC = covered lines = lines_ to_ cover - uncover_ lines <br/><br/> B = o número total de condições <br/>EL = o número total de linhas executáveis (linhas_ to_ capa) | Importante | &lt; 50% |
-| Teste de unidade ignorado | Número de testes de unidade ignorados. | Informações | &gt; 1 |
-| Problemas em aberto | Tipos de problemas gerais - Vulnerabilidades, erros e codificação de código | Informações | &gt; 1 |
-| Linhas duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado duplicado: <br/><ul><li>**Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser distribuídos pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outros idiomas</li><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul> <br/>Diferenças no recuo e em literais de string são ignoradas ao detectar duplicações. | Informações | &gt; 1% |
+| Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 Vulnerabilidade<br/> Menor C = pelo menos 1 Vulnerabilidade Principal <br/>D = pelo menos 1 Vulnerabilidade Crítica <br/>E = pelo menos 1 Vulnerabilidade Bloqueadora |  Crítico | &lt; B |
+| Classificação da confiabilidade | A = 0 Bug <br/>B = pelo menos 1 Bug Menor <br/>C = pelo menos 1 Bug Principal <br/>D = pelo menos 1 Bug Crítico E = pelo menos 1 Bug Bloqueador | Importante | &lt; C |
+| Classificação da manutenção | O custo de correção excepcional para cheiros de código é: <br/><ul><li>&lt;=5% do tempo que já passou para o aplicativo, a classificação é A </li><li>entre 6 e 10%, a classificação é de </li><li>entre 11 e 20% a classificação é de C </li><li>entre 21 e 50% a classificação é um D</li><li>algo acima de 50% é um E</li></ul> | Importante | &lt; A |
+| Cobertura | Uma combinação da cobertura da linha de teste da unidade e da cobertura da condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>onde: CT = condições que foram avaliadas como 'true' pelo menos uma vez durante a execução de testes de unidade <br/>CF = condições que foram avaliadas como 'false' pelo menos uma vez durante a execução de testes de unidade <br/>LC = linhas cobertas = lines_to_cover - uncovered_lines <br/><br/> B = número total de condições <br/>EL = número total de linhas executáveis (lines_to_cover) | Importante | &lt; 50% |
+| Testes de unidade ignorados | Número de testes de unidade ignorados. | Informações | &gt; 1 |
+| Problemas em aberto | Tipos de edição geral - Vulnerabilidades, Erros e Cheiros de código | Informações | &gt; 1 |
+| Linhas Duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado como duplicado: <br/><ul><li>**Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser espalhados pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras línguas</li><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul> <br/>As diferenças no recuo, bem como nos literais de string, são ignoradas ao detectar duplicações. | Informações | &gt; 1% |
 
 
 >[!NOTE]
 >
->Consulte Definições [de métricas](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) para obter definições mais detalhadas.
+>Consulte Definições [de](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) métricas para obter definições mais detalhadas.
 
-Você pode baixar a lista de regras aqui [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx)
+Você pode fazer download da lista de regras aqui [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx)
 
 >[!NOTE]
 >
->Para saber mais sobre as regras de qualidade de código personalizadas executadas [!UICONTROL Cloud Manager]por, consulte Regras de qualidade de código [personalizado](custom-code-quality-rules.md).
+>Para saber mais sobre as regras de qualidade de código personalizadas executadas por [!UICONTROL Cloud Manager], consulte Regras [de qualidade de código](custom-code-quality-rules.md)personalizadas.
 
 ### Lidar com falsos positivos {#dealing-with-false-positives}
 
-O processo de leitura de qualidade não é perfeito e, às vezes, identificará incorretamente os problemas que não são realmente problemáticos. Isso é conhecido como "falso positivo".
+O processo de verificação da qualidade não é perfeito e, por vezes, identificará incorretamente questões que não são realmente problemáticas. Isso é conhecido como "falso positivo".
 
-Nesses casos, o código fonte pode ser anotado com a anotação padrão Java `@SuppressWarnings` que especifica a ID da regra como o atributo de anotação. Por exemplo, um problema comum é que a regra sonarqube para detectar senhas codificadas pode ser agressiva sobre como uma senha codificada é identificada.
+Nesses casos, o código fonte pode ser anotado com a `@SuppressWarnings` anotação padrão Java que especifica a ID da regra como o atributo de anotação. Por exemplo, um problema comum é que a regra SonarQube para detectar senhas codificadas pode ser agressiva sobre como uma senha codificada é identificada.
 
-Para ver um exemplo específico, esse código seria muito comum em um projeto do AEM que tinha código para se conectar a algum serviço externo:
+Para ver um exemplo específico, esse código seria bastante comum em um projeto do AEM que tem código para se conectar a algum serviço externo:
 
 ```java
 @Property(label = "Service Password")
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-Sonarqube então aumentará uma Vulnerabilidade do bloqueador. Depois de revisar o código, você identifica que essa não é uma vulnerabilidade e pode anotar isso com a ID de regra apropriada.
+A SonarQube criará uma Vulnerabilidade do Bloqueador. Depois de revisar o código, você identifica que isso não é uma vulnerabilidade e pode anotar isso com a ID de regra apropriada.
 
 ```java
 @SuppressWarnings("squid:S2068")
@@ -84,7 +84,7 @@ Sonarqube então aumentará uma Vulnerabilidade do bloqueador. Depois de revisar
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-No entanto, por outro lado, se o código foi, na verdade:
+No entanto, por outro lado, se o código era realmente este:
 
 ```java
 @Property(label = "Service Password", value = "mysecretpassword")
@@ -95,97 +95,97 @@ Em seguida, a solução correta é remover a senha codificada.
 
 >[!NOTE]
 >
->Embora seja uma prática recomendada tornar a `@SuppressWarnings` anotação o mais específica possível, isto é, anotar apenas a declaração ou bloco específico que causa o problema, é possível anotar em nível de classe.
+>Embora seja uma prática recomendada tornar a `@SuppressWarnings` anotação o mais específica possível, ou seja, anotar somente a declaração específica ou o bloco que está causando o problema, é possível fazer anotações em nível de classe.
 
 ## Teste de segurança {#security-testing}
 
-[!UICONTROL Cloud Manager] executa as Verificações existentes ***de segurança do AEM*** no estágio após a implantação e relata o status por meio da interface do usuário. Os resultados são agregados de todas as instâncias do AEM no ambiente.
+[!UICONTROL Cloud Manager] executa as verificações ***de integridade de segurança do*** AEM na etapa seguinte à implantação e relata o status pela interface do usuário. Os resultados são agregados de todas as instâncias do AEM no ambiente.
 
-Se qualquer uma das **Instâncias** relatar uma falha para determinada verificação de integridade, todo **o Ambiente** falhará essa verificação de integridade. Assim como com a Qualidade de código e o Teste de desempenho, essas verificações de integridade são organizadas em categorias e informadas usando o sistema de rotação em três níveis. A única distinção é que não há limite no caso de teste de segurança. Todas as verificações de integridade simplesmente passam ou falharam.
+Se alguma das **Instâncias** reportar uma falha para uma determinada verificação de integridade, todo o **Ambiente** falhará nessa verificação de integridade. Como acontece com o teste de qualidade e desempenho de código, essas verificações de integridade são organizadas em categorias e relatadas usando o sistema de portagem de três níveis. A única distinção é que não existe um limiar no caso dos testes de segurança. Todos os exames de saúde são simplesmente aprovados ou reprovados.
 
 A tabela a seguir lista as verificações atuais:
 
-| **Nome** | **Implementação de verificação de integridade** | **Categoria** |
+| **Nome** | **Implementação da verificação de integridade** | **Categoria** |
 |---|---|---|
-| O firewall de desserialização Anexar a API está em um estado aceitável | Disponibilidade da API de anexo do firewall de desserialização | Crítica |
-| O firewall de dessserialização está funcionando | Firewall de desserialização funcional | Crítica |
-| O firewall de dessserialização é carregado | Firewall de desserialização carregado | Crítica |
-| A implementação de authorizablenodename não expõe a ID autorizável no nome/caminho do nó. | Geração do nome do nó autorizada | Crítica |
-| As senhas padrão foram alteradas | Contas padrão de logon | Crítica |
-| O servlet GET de Sling é protegido contra ataques do DOS. | Sling Get Servlet | Crítica |
-| O Dispatcher está filtrando solicitações corretamente | Configuração do Dispatcher do controle de qualidade | Crítica |
-| O Sling Java Script Handler está configurado adequadamente | Sling Java Script Handler | Crítica |
-| O Sling JSP Script Handler é configurado adequadamente | Sling JSP Script Handler | Crítica |
-| O SSL está configurado corretamente | Configuração do SSL | Crítica |
-| Não há, obviamente, políticas de perfil de usuário inseguras encontradas | Acesso padrão ao perfil de usuário | Crítica |
-| O Filtro de referência de sling está configurado para impedir ataques CSRF | Sling Referrer Filter | Importante |
+| A prontidão para anexar API do firewall de desserialização está em um estado aceitável | Disponibilidade da API de anexo do firewall de desserialização |  Crítico |
+| O firewall de desserialização está funcionando | Firewall de desserialização funcional |  Crítico |
+| O firewall de desserialização é carregado | Firewall de desserialização carregado |  Crítico |
+| A implementação AuthorizableNodeName não expõe a ID autorizada no nome/caminho do nó. | Geração do nome do nó autorizada |  Crítico |
+| As senhas padrão foram alteradas | Contas padrão de logon |  Crítico |
+| O servlet GET padrão Sling está protegido contra ataques DOS. | Sling Get Servlet |  Crítico |
+| O Dispatcher está filtrando corretamente solicitações | Configuração do Dispatcher do controle de qualidade |  Crítico |
+| O Manipulador de Sling Java Script está configurado adequadamente | Sling Java Script Handler |  Crítico |
+| O Sling JSP Script Handler está configurado adequadamente | Manipulador de script JSP Sling |  Crítico |
+| O SSL está configurado corretamente | Configuração do SSL |  Crítico |
+| Nenhuma política de perfil de usuário obviamente insegura encontrada | Acesso padrão ao perfil de usuário |  Crítico |
+| O Filtro do Sling Referrer está configurado para impedir ataques de CSRF | Sling Referrer Filter | Importante |
 | O Adobe Granite HTML Library Manager está configurado adequadamente | Configuração do gerenciador de biblioteca HTML CQ | Importante |
-| O pacote de suporte do CRXDE está desativado | Suporte do CRXDE | Importante |
-| O pacote e o servlet Sling davex estão desativados | Verificação de integridade do DavEx | Importante |
+| O pacote de suporte CRXDE está desativado | Suporte do CRXDE | Importante |
+| O conjunto e o servlet Sling DavEx estão desativados | Verificação de integridade do DavEx | Importante |
 | O conteúdo de amostra não está instalado | Pacotes de conteúdo de exemplo | Importante |
-| O Filtro de solicitação WCM e o Filtro de depuração WCM estão desativados | Configuração de filtros WCM | Importante |
-| O pacote e o servlet Sling webdav estão configurados adequadamente | Verificação de integridade do WebDAV | Importante |
-| O servidor Web está configurado para impedir o clickjacking | Configuração de servidor da Web | Importante |
-| A replicação não está usando o usuário "admin" | Reprodução e usuários de transporte | Informações |
+| O Filtro de Solicitação WCM e o Filtro de Depuração WCM estão desativados | Configuração de filtros WCM | Importante |
+| O pacote e o servlet WebDAV Sling estão configurados adequadamente | Verificação de integridade do WebDAV | Importante |
+| O servidor da Web está configurado para impedir o recurso de clickjacking | Configuração de servidor da Web | Importante |
+| A replicação não está usando o usuário 'admin' | Reprodução e usuários de transporte | Informações |
 
 ## Teste de desempenho {#performance-testing}
 
-*O teste de desempenho* em [!UICONTROL Cloud Manager] é implementado usando um teste de 30 minutos.
+*O teste* de desempenho em [!UICONTROL Cloud Manager] é implementado usando um teste de 30 minutos.
 
-Durante a configuração do pipeline, o gerenciador de implantação pode decidir quanto tráfego leva para cada grupo.
+Durante a configuração do pipeline, o gerente de implantação pode decidir quanto tráfego direcionar para cada bucket.
 
-Você pode saber mais sobre controles de bucket, de [Configurar seu CI/Pipeline de CD](configuring-pipeline.md).
+Você pode saber mais sobre controles de bucket, em [Configure seu Pipeline](configuring-pipeline.md)CI/CD.
 
 >[!NOTE]
 >
->Para configurar seu programa e definir seus kpis, consulte [Configurar seu programa](setting-up-program.md).
+>Para configurar seu programa e definir seus KPIs, consulte [Configurar seu programa](setting-up-program.md).
 
-A tabela a seguir resume a matriz de teste de desempenho usando o sistema de rotação de três níveis:
+A tabela a seguir resume a matriz de teste de desempenho usando o sistema portátil de três níveis:
 
 | **Métrica** | **Categoria** | **Limite de falha** |
 |---|---|---|
-| Taxa de erro de solicitação de página % | Crítica | &gt;= 2% |
-| Taxa de utilização da CPU | Crítica | &gt;= 80% |
-| Tempo de espera do disco | Crítica | &gt;= 50% |
-| Tempo de resposta de Percent5 percentil | Importante | &gt; = KPI de nível de programa |
-| Tempo de resposta de pico | Importante | &gt; = 18 segundos |
+| Taxa de erro de solicitação de página % |  Crítico | &gt;= 2% |
+| Taxa de utilização da CPU |  Crítico | &gt;= 80% |
+| Tempo de espera de E/S de disco |  Crítico | &gt;= 50% |
+| Tempo de Resposta de 95% | Importante | &gt;= KPI de nível de programa |
+| Tempo de resposta máximo | Importante | &gt;= 18 segundos |
 | Exibições de página por minuto | Importante | &lt; KPI de nível de programa |
-| Uso de largura de banda do disco | Importante | &gt;= 90% |
-| Uso de largura de banda de rede | Importante | &gt;= 90% |
+| Utilização da largura de banda do disco | Importante | &gt;= 90% |
+| Utilização da largura de banda da rede | Importante | &gt;= 90% |
 | Solicitações por minuto | Informações | &lt; 6000 |
 
-### Gráficos de resultados do teste de desempenho {#performance-testing-results-graphs}
+### Gráficos de resultados de teste de desempenho {#performance-testing-results-graphs}
 
 Novos gráficos e opções de download foram adicionados à caixa de diálogo Resultados do teste de desempenho.
 
-Quando você abre a caixa de diálogo Teste de desempenho, os painéis de métricas podem ser expandidos para exibir um gráfico, fornecer um link para o download ou ambos.
+Ao abrir a caixa de diálogo Teste de desempenho, os painéis de métricas podem ser expandidos para exibir um gráfico, fornecer um link para um download ou ambos.
 
-Para [!UICONTROL Cloud Manager] a versão 2018.7.0, essa funcionalidade está disponível para as seguintes métricas:
+Para a [!UICONTROL Cloud Manager] versão 2018.7.0, essa funcionalidade está disponível para as seguintes métricas:
 
 * **Utilização da CPU**
-   * Um gráfico da utilização da CPU durante o período de teste.
+   * Um gráfico de Utilização da CPU durante o período de teste.
 
-* **Tempo de espera do disco E/E**
-   * Um gráfico de Tempo de espera I/O durante o período de teste.
+* **Tempo de espera de E/S do disco**
+   * Um gráfico de Tempo de espera de E/S do disco durante o período de teste.
 
 * **Taxa de erro de página**
    * Um gráfico de erros de página por minuto durante o período de teste.
-   * Um arquivo CSV que lista páginas que produziram um erro durante o teste.
+   * Um arquivo CSV que lista as páginas que apresentaram um erro durante o teste.
 
-* **Uso de largura de banda do disco**
-   * Um gráfico de utilização de largura de banda do disco durante o período de teste.
+* **Utilização da largura de banda do disco**
+   * Um gráfico de Utilização da Largura de Banda do Disco durante o período de teste.
 
-* **Uso de largura de banda de rede**
-   * Um gráfico de utilização de largura de banda de rede durante o período de teste.
+* **Utilização da largura de banda da rede**
+   * Um gráfico de Utilização da Largura de Banda da Rede durante o período de teste.
 
-* **Tempo de resposta de pico**
-   * Um gráfico de tempo de resposta por minuto durante o período de teste.
+* **Tempo de resposta máximo**
+   * Um gráfico do tempo de resposta de pico por minuto durante o período de teste.
 
-* **Tempo de resposta de Percent5 º percentil**
-   * Um gráfico de 95% de tempo de resposta por minuto durante o período de teste.
-   * Um arquivo CSV que lista páginas cujo time 5 º percentil de resposta excedeu o KPI definido.
+* **95.º Percentual de Tempo de Resposta**
+   * Gráfico de 95% de tempo de resposta por minuto durante o período de teste.
+   * Um arquivo CSV que lista as páginas cujo tempo de resposta de 95% excedeu o KPI definido.
 
-As imagens a seguir exibem os gráficos de teste de desempenho:
+As seguintes imagens exibem os gráficos de teste de desempenho:
 
 ![](assets/understand_test-results-screen1.png)
 
