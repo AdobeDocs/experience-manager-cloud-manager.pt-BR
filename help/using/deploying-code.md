@@ -2,12 +2,12 @@
 title: Implantar seu código
 seo-title: Implantar seu código
 description: 'null'
-seo-description: Depois de configurar o pipeline (repositório, ambiente e ambiente de teste), você está pronto para implantar seu código. Siga esta página para saber mais.
-uuid: 4 e 3807 e 1-437 e -4922-ba 48-0 bcadf 293 a 99
+seo-description: Depois de configurar seu pipeline (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código. Siga esta página para saber mais.
+uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
-discoiquuid: 832 a 4647-9 b 83-4 a 9 d-b 373-30 fe 16092 b 15
+discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
 source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
@@ -16,117 +16,117 @@ source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 # Implantar seu código {#deploy-your-code}
 
-## Implantação de código com o Gerenciador de nuvem {#deploying-code-with-cloud-manager}
+## Implantação de código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
-Depois de configurar **o Pipeline** (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
+Depois de configurar seu **Pipeline** (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
-1. Clique **em Implantar** no Gerenciador da nuvem para iniciar o processo de implantação.
+1. Clique em **Implantar** no Gerenciador de nuvem para iniciar o processo de implantação.
 
    ![](assets/Deploy1.png)
 
-1. A **tela Execução** de pipeline é exibida.
+1. A tela Execução **do pipeline** é exibida.
 
-   Clique **em Criar** para iniciar o processo.
+   Click **Build** to start the process.
 
    ![](assets/Deploy2.png)
 
-1. O processo de criação completo implanta seu código.
+1. The complete build process deploys your code.
 
-   Os seguintes estágios estão envolvidos no processo de compilação:
+   As etapas a seguir estão envolvidas no processo de construção:
 
-   1. Implantação do palco
-   1. Teste do palco
+   1. Implantação do estágio
+   1. Teste de estágio
    1. Implantação de produção
    >[!NOTE]
    >
-   >Além disso, você pode rever as etapas de vários processos de implantação exibindo registros ou revisando resultados para os critérios de teste.
+   >Além disso, você pode revisar as etapas de vários processos de implantação ao exibir registros ou revisar os resultados para os critérios de teste.
 
-   A implantação **** do palco envolve as seguintes etapas:
+   A implantação **do** estágio envolve as seguintes etapas:
 
-   * Teste e unidade de teste
+   * Compilação e teste de unidade
    * Digitalização de código
    * Implantar no palco
    ![](assets/Stage_Deployment1.png)
 
-   O Teste **** do palco envolve as seguintes etapas:
+   O **Stage Testing** envolve as seguintes etapas:
 
-   * Teste de segurança
+   * Security Testing
    * Teste de desempenho
    ![](assets/Stage_Testing1.png)
 
-   A implantação **** de produção envolve as seguintes etapas:
+   A implantação **de produção** envolve as seguintes etapas:
 
-   * **Aplicativo para aprovação** (se ativado)
-   * **Programar implantação de produção** (se ativado)
-   * **Suporte CSE** (se ativado)
+   * **Pedido de aprovação** (se ativado)
+   * **Schedule Production Deployment** (if enabled)
+   * **Suporte** CSE (se ativado)
    * **Implantar na produção**
    ![](assets/Prod_Deployment1.png)
 
    >[!NOTE]
    >
-   >A **Programação de produção agendada** está ativada durante a configuração do pipeline.
+   >A Implantação **de Produção de** Programação está ativada ao configurar o pipeline.
    >
    >
-   >Com essa opção, você pode programar o seu dourado de produção ou clicar **em Agora** para executar a implantação de produção imediatamente.
+   >Using this option, you can either schedule your production delpoyment or click Now to execute the production deployment immediately.****
    >
    >
-   >A data e hora programadas são especificadas em termos do fuso horário do usuário.
+   >The scheduled date and time is specified in terms of the user's timezone.
    >
    >
-   >Clique **em Confirmar** para verificar suas configurações.
+   >Clique em **Confirmar** para verificar suas configurações.
 
    ![](assets/Production_Deployment1.png)
 
-   Após confirmar o agendamento de implantação, a implantação do código é concluída.
+   Once you confirm the deployment schedule, your code deployment completes.
 
-   A tela a seguir é exibida, quando **a** opção Agora está selecionada na etapa acima.
+   The following screen displays, when Now option is selected from the above step.****
 
    ![](assets/Production_Deployment2.png)
 
-## Processo de implantação {#deployment-process}
+## Deployment Process {#deployment-process}
 
-A seção a seguir descreve como os pacotes do AEM e do expedidor são implantados na fase do estágio e na fase de produção.
+The following section describes how AEM and dispatcher packages are deployed in the stage phase and in the production phase.
 
-O Cloud Manager carrega todos os arquivos target/*.zip produzidos pelo processo de criação para um local de armazenamento. Esses artefatos são recuperados desse local durante as fases de implantação do pipeline.
+Cloud Manager uploads all target/*.zip files produced by the build process to a storage location.  These artifacts are retrieved from this location during the deploy phases of the pipeline.
 
-Quando o Experience Cloud Manager implanta em topologias de não produção, o objetivo é concluir a implantação o mais rápido possível e, portanto, os artefatos são implantados em todos os nós simultaneamente da seguinte maneira:
+When Cloud Manager deploys to non-production topologies, the goal is to complete the deployment as quickly as possible and therefore the artifacts are deployed to all nodes simultaneously as follows:
 
-1. O Gerenciador de nuvem determina se cada artefato é um pacote AEM ou expedidor.
-1. O Cloud Manager remove todos os dispatchers do Balanceador de carga para isolar o ambiente durante a implantação.
-1. Cada artefato AEM é implantado em cada instância AEM por meio de apis do Gerenciador de pacotes, com dependências de pacote que determinam a ordem de implantação.
+1. Cloud Manager determines whether each artifact is an AEM or dispatcher package.
+1. Cloud Manager removes all dispatchers from the Load Balancer to isolate the environment during the deployment.
+1. Cada artefato AEM é implantado em cada instância do AEM por meio de APIs do Gerenciador de pacotes, com dependências de pacotes determinando a ordem de implantação.
 
-   Para saber mais sobre como usar os pacotes para instalar uma nova funcionalidade, transferir conteúdo entre instâncias e fazer backup do conteúdo repositório, consulte Como trabalhar com pacotes.
+   Para saber mais sobre como usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório, consulte Como trabalhar com pacotes.
 
    >[!NOTE]
    >
-   >Todos os artefatos AEM são implantados tanto no autor como nos editores. Os modos de execução devem ser aproveitados quando configurações específicas de nó são necessárias. Para saber mais sobre como os modos de execução permitem ajustar sua instância do AEM para uma finalidade específica, consulte Executar modos.
+   >Todos os artefatos do AEM são implantados no autor e nos editores. Os modos de execução devem ser utilizados quando configurações específicas do nó forem necessárias. Para saber mais sobre como os modos de execução permitem ajustar sua instância do AEM para uma finalidade específica, consulte Modos de execução.
 
-1. O artefato do expedidor é implantado em cada dispatcher da seguinte maneira:
+1. O artefato do dispatcher é implantado em cada dispatcher da seguinte maneira:
 
-   1. As configurações atuais são armazenadas e copiadas em um local temporário
-   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte Gerenciar suas Configurações do Dispatcher para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado em espera.
-   1. O artefato é extraído para o diretório httpd. Arquivos imaláveis não são substituídos. Todas as alterações feitas em arquivos imutáveis no seu repositório de git serão ignoradas no momento da implantação. Esses arquivos são essenciais para a estrutura do dispatcher AMS e não podem ser alterados.
-   1. O Apache realiza um teste de configuração. Se nenhum erro for encontrado, o serviço será recarregado. Se ocorrer um erro, as configurações serão restauradas de backup, o serviço será recarregado e o erro será relatado de volta para o Experience Cloud Manager.
-   1. Cada caminho especificado na configuração do pipeline é invalidado ou liberado do cache do expedidor.
+   1. O backup das configurações atuais é feito e copiado para um local temporário
+   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte Gerenciar configurações do Dispatcher para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
+   1. O artefato é extraído para o diretório httpd.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do despachante do AMS e não podem ser alterados.
+   1. Apache performs a config test. Se nenhum erro for encontrado, o serviço será recarregado. If an error occurs, the configs are restored from backup, the service is reloaded, and the error is reported back to Cloud Manager.
+   1. Cada caminho especificado na configuração do pipeline é invalidado ou liberado do cache do dispatcher.
    >[!NOTE]
    >
-   >O Gerenciador de nuvem espera que o artefato do expedidor contenha o conjunto completo de arquivos. Todos os arquivos de configuração do expedidor devem estar presentes no repositório do git. Arquivos ou pastas ausentes resultarão na falha de implantação.
+   >O Cloud Manager espera que o artefato do dispatcher contenha o conjunto de arquivos completo.  Todos os arquivos de configuração do dispatcher devem estar presentes no repositório git. Arquivos ou pastas ausentes resultarão em falha de implantação.
 
-1. Após a implantação bem-sucedida de todos os pacotes do AEM e do dispatcher para todos os nós, os dispatchers são adicionados ao balanceador de carga e a implantação é concluída.
+1. Após a implantação bem-sucedida de todos os pacotes do AEM e do dispatcher para todos os nós, os despachantes são adicionados de volta ao balanceador de carga e a implantação é concluída.
 
 ### Implantação para fase de produção {#deployment-production-phase}
 
-O processo de implantação em topologias de produção difere ligeiramente para minimizar o impacto nos visitantes do AEM Site.
+O processo de implantação das topologias de produção é ligeiramente diferente para minimizar o impacto para os visitantes do site do AEM.
 
-As implantações de produção geralmente seguem as mesmas etapas acima, mas de forma contínua:
+As implantações de produção geralmente seguem as mesmas etapas acima, mas de maneira contínua:
 
-1. Implante pacotes do AEM para autor.
-1. Desconecte o dispatcher 1 do balanceador de carga.
-1. Implante pacotes do AEM para publicar 1 e o pacote do dispatcher no dispatcher 1, esvaziar o cache do dispatcher.
-1. Coloque o dispatcher 1 de volta no balanceador de carga.
-1. Depois que o dispatcher 1 voltar ao serviço, desconecte o dispatcher 2 do balanceador de carga.
-1. Implante pacotes do AEM para publicar 2 e o pacote do dispatcher no dispatcher 2, esvaziar o cache do dispatcher.
-1. Coloque o dispatcher 2 de volta no balanceador de carga.
-Esse processo continua até que a implantação atinja todos os editores e os dispatchers na topologia.
+1. Implantar pacotes do AEM para o autor.
+1. Desconecte o dispatcher1 do balanceador de carga.
+1. Implante pacotes AEM para publicar1 e o pacote do dispatcher para o dispatcher1, liberar o cache do dispatcher.
+1. Put dispatcher1 back into the load balancer.
+1. Once dispatcher1 is back in service, detach dispatcher2 from the load balancer.
+1. Implante pacotes AEM para publicar2 e o pacote do dispatcher para o dispatcher2, liberar o cache do dispatcher.
+1. Recoloque o dispatcher2 no balanceador de carga.
+Esse processo continua até que a implantação tenha atingido todos os editores e despachantes na topologia.
 
 
