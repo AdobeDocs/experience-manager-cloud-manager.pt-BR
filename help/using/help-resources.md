@@ -1,21 +1,21 @@
 ---
 title: Recursos de ajuda
-seo-title: Recursos de ajuda para o Adobe AEM Cloud Manager
-description: Recursos de ajuda para o Gerenciador de nuvem
-seo-description: Recursos de ajuda para o Adobe AEM Cloud Manager
-uuid: bab 98819-57 c 1-4408-98 ab -2898 bd 9 b 1 a 1 d
+seo-title: Recursos de ajuda do Adobe AEM Cloud Manager
+description: Recursos de ajuda do Cloud Manager
+seo-description: Recursos de ajuda do Adobe AEM Cloud Manager
+uuid: bab98819-57c1-4408-98ab-2898bd9b1a1d
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introdução
-discoiquuid: e 35 be 81 f-cfe 5-4 f 14-b 9 c 8-59235 a 7 ef 22 c
+discoiquuid: e35be81f-cfe5-4f14-b9c8-59235a7ef22c
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
 
 ---
 
 
 # Recursos de ajuda {#help-resources}
 
-Primeiro, você deve acessar seu [!UICONTROL Adobe Managed Services Customer Success Engineer] (CSE) para obter suporte relacionado [!UICONTROL Cloud Manager]. O CSE informará se eles podem ajudá-lo com o problema ou se você precisa criar um ticket de suporte usando o Atendimento ao cliente.
+Primeiro, entre em contato com seu [!UICONTROL Adobe Managed Services Customer Success Engineer] (CSE) para obter suporte relacionado a [!UICONTROL Cloud Manager]. Seu CSE lhe avisará se eles podem ajudá-lo com seu problema ou se você precisa criar um ticket de suporte usando o Atendimento ao cliente.
 
-Você pode acessar [o Suporte empresarial](https://helpx.adobe.com/contact/enterprise-support.ec.html) para criar ingressos de suporte. Consulte [Acessar o portal de suporte do AEM](https://help.adobe.com/experience-manager/kb/accessing-aem-support-portal.html) para obter mais informações sobre como criar ingressos de suporte no Atendimento ao cliente.
+Você pode acessar o Suporte [](https://helpx.adobe.com/contact/enterprise-support.ec.html) corporativo para criar tíquetes de suporte. Consulte [Acessar o portal](https://help.adobe.com/experience-manager/kb/accessing-aem-support-portal.html) de suporte do AEM para obter mais informações sobre como criar tíquetes de suporte no Atendimento ao cliente.
