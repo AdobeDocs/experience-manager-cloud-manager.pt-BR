@@ -1,36 +1,36 @@
 ---
-title: Entendendo os conceitos antes de usar o Experience Cloud Manager
-seo-title: Entendendo os conceitos antes de usar o Experience Cloud Manager
+title: Compreensão dos conceitos antes de usar o Cloud Manager
+seo-title: Compreensão dos conceitos antes de usar o Cloud Manager
 description: 'null'
 seo-description: 'null'
 page-status-flag: nunca ativado
-uuid: 55 cc 551 a-e 812-4102-96 c 8-13 d 2 cdd 79 c 84
+uuid: 55cc551a-e812-4102-96c8-13d2cdd79c84
 contentOwner: jsyal
-discoiquuid: c 3 fd 3 f 4 e -0 b 57-4377-b 923-a 440 c 74773 d 8
+discoiquuid: c3fd3f4e-0b57-4377-b923-a440c74773d8
 preview: verdadeiro
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f135526c6a47f1502395e6d53f9e286c0f935da5
 
 ---
 
 
-# Entendendo os conceitos antes de usar o Experience Cloud Manager{#understanding-concepts-before-using-cloud-manager}
+# Compreensão dos conceitos antes de usar o Cloud Manager{#understanding-concepts-before-using-cloud-manager}
 
-Esta seção fornece conceitos e terminações que são boas para saber antes de trabalhar no Cloud Manager e abranger os seguintes tópicos:
+Esta seção fornece conceitos e terminologias que devem ser conhecidos antes de trabalhar no Cloud Manager e aborda os seguintes tópicos:
 
 * **Ambiente de implantação**
-* **Repositório de código-fonte**
+* **Repositório de código fonte**
 * **Segurança e privacidade**
 * **Visão geral do pipeline**
 * **Recursos de ajuda**
 
 ## Ambiente de implantação {#deployment-environment}
 
-Você pode ser novo no Adobe Experience Manager (AEM) 6.4 ou precisa de uma atualização para o AEM 6.4.
+Você pode ser novo no Adobe Experience Manager (AEM) 6.4 ou precisa de uma atualização para a versão AEM 6.4.
 
-Se você for um novo AEM 6.4, você já terá acesso ao Experience Cloud Manager.
+Se você for novo no AEM 6.4, já terá acesso ao Cloud Manager.
 
-Se você for um cliente existente, precisará atualizar para o AEM 6.4 para ter acesso ao Gerenciador de nuvem. Você pode começar a usar o Experience Cloud Manager depois de receber URL e credenciais de Engenheiros de sucesso do cliente (CSE).
+Se você já for um cliente, será necessário atualizar para o AEM 6.4 para ter acesso ao Cloud Manager. Você pode começar a usar o Cloud Manager, depois de receber o URL e as credenciais dos engenheiros de sucesso do cliente (CSE).
 
 <!-- 
 
@@ -42,11 +42,11 @@ Section is redundant with the section in the Overview topic
 
  -->
 
-## Repositório de código-fonte {#source-code-repository}
+## Repositório de código fonte {#source-code-repository}
 
-**Vários servidores Git**: Em alguns casos, os clientes terão um repositório git existente e desejam continuar usando.
+**Vários servidores** Git: Em alguns casos, os clientes terão um repositório git existente e desejam continuar usando-o.
 
-Nesses casos, você pode usar o suporte do git para vários repositórios remotos. O desenvolvimento do dia para o dia continuaria a ocorrer no seu repositório de git. Quando uma implantação é desejada, basta mover o código mais recente para o repositório do git do Experience Cloud Manager.
+Nesses casos, você pode usar o suporte da git para vários repositórios remotos. O desenvolvimento cotidiano continuaria a ocorrer no repositório git. Quando uma implantação for desejada, basta enviar o código mais recente para o repositório git do Cloud Manager.
 
 <!-- 
 
@@ -72,46 +72,46 @@ Query for Brad B.
 
 ## Visão geral do pipeline {#pipeline-overview}
 
-O Cloud Manager oferecerá suporte a um único pipeline por programa (definição acima), que manipula implantações para estágio e produção. ****
+O Cloud Manager oferecerá suporte a um único pipeline por programa (definição acima) que lida com as implantações no palco e na produção. ****
 
-A ramificação do git usada para implantações de estágio e produção é mestre.
+O ramo git usado para implantações de estágio e produção é mestre.
 
 >[!NOTE]
 >
->É uma prática recomendada usar mestre como um ramo de git para stage e production, mas você pode usar qualquer uma da ramificação enquanto configura o pipeline.
+>É uma prática recomendada usar o master como uma ramificação git para o palco e a produção, mas você pode usar qualquer uma das ramificações ao configurar o pipeline.
 
-O único processo de pipeline é ilustrado abaixo:
+O processo de pipeline único é ilustrado abaixo:
 
 ![](assets/screen_shot_2018-04-30at30318pm.png)
 
 ### Como entender o fluxo {#understanding-the-flow}
 
-Você pode configurar seu pipeline no [!UICONTROL Pipeline Settings] bloco da interface do usuário do Experience Cloud Manager.
+Você pode configurar seu pipeline a partir do [!UICONTROL Pipeline Settings] bloco da interface do usuário do Cloud Manager.
 
-Consulte [Usar o Experience Cloud Manager](hhttps://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html) para obter mais informações.
+Consulte [Usando o Cloud Manager,](hhttps://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html) para obter mais informações.
 
-O Gerenciador de implantação é responsável pela configuração do pipeline, isto é:
+O Gerenciador de implantação é responsável pela configuração do pipeline, ou seja:
 
-* atribuição de ramificação do aplicativo
-* como atribuir ambientes de implantação
-* como definir opções de teste
+* atribuição de ramificação de aplicativo
+* atribuição de ambientes de implantação
+* definição das opções de teste
 
-Ao fazer isso, primeiro selecione uma ramificação a partir do repositório do git. Em seguida, defina o acionador que iniciará o pipeline.
+Ao fazer isso, selecione primeiro uma ramificação do repositório git. Em seguida, defina o acionador que iniciará o pipeline.
 
-Em seguida, é possível definir os parâmetros que controlam a implantação de produção.
+Em seguida, você pode definir os parâmetros que controlam a implantação de produção.
 
-Por fim, você poderá configurar os parâmetros de teste de desempenho.
+Finalmente, você poderá configurar os parâmetros de teste de desempenho.
 
 >[!NOTE]
 >
->Para saber como configurar o comportamento e as preferências do seu pipeline, consulte **Configuração de pipeline** em [Uso do Gerenciador de nuvem](using-cloud-manager.md).
+>Para saber mais sobre como configurar o comportamento e as preferências do pipeline, consulte a seção **Configuração do pipeline** em [Uso do Cloud Manager](using-cloud-manager.md).
 
 ### Recursos de ajuda {#help-resources}
 
-Entre em contato com o Engenheiro de sucesso do cliente Adobe Managed Services para obter suporte.
+Entre em contato com o engenheiro de sucesso do cliente dos serviços gerenciados da Adobe para obter suporte.
 
 ### Próximas etapas {#the-next-steps}
 
-Agora você tem melhor compreensão dos conceitos do Experience Cloud Manager.
+Agora você tem uma melhor compreensão dos conceitos do Cloud Manager.
 
-Para configurar o projeto, o ambiente e a equipe (usuário e funções), consulte [Configuração de configurações gerais para o Gerenciador](setting-configurations-for-cloud-manager.md)de nuvem.
+Para configurar seu projeto, o ambiente e a equipe (usuário e funções), consulte [Configuração geral para o Cloud Manager](setting-configurations-for-cloud-manager.md).
