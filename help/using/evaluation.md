@@ -13,21 +13,21 @@ source-git-commit: 9e33b90818c686f0b7aacaf0955c3f2eba05488f
 ---
 
 
-# Fase de avaliação {#evaluation}
+# Evaluation Phase {#evaluation}
 
-A primeira fase do assistente de Atualização de produto é a **[!UICONTROL Evaluation]** fase.
-Aqui você pode avaliar a complexidade da atualização com o detector de padrões acessível diretamente do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
+The first phase in the Product Update wizard is **[!UICONTROL Evaluation]** phase.
+Here you can assess the upgrade complexity with the pattern detector accessible to you directly from the wizard. At the end of this step, you will have access to the evaluation report.
 
-O relatório gerado permite que você verifique se a instância do autor tem capacidade de atualização detectando padrões que:
+The generated report allows you to check the Author instance for upgradability by detecting patterns that:
 
-* Violar certas regras e são feitas em áreas que serão afetadas ou substituídas pela atualização.
+* Violate certain rules and are done in areas that will be affected or overwritten by the upgrade.
 
-* Use um recurso do AEM 6.x ou uma API que não seja compatível com versões anteriores no novo AEM e que possa ser interrompida após a atualização.
+* Use an AEM 6.x feature or an API that is not backwards compatible on the new AEM and can potentially break after upgrade.
 
-Isso serve como uma avaliação do esforço de desenvolvimento envolvido na atualização para o Adobe Experience Manager (AEM) 6.5.
+This serves as an assessment of the development effort that is involved in upgrading to Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
->Para saber mais sobre o detector de padrões, consulte [Avaliação da complexidade de atualização com o Detector de padrões](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
+>To learn more about pattern detector, refer to Assessing the Upgrade Complexity with the Pattern Detector[](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
 
 ## Executar o Avaliador {#running-evaluator}
 
