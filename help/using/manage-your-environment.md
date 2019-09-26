@@ -26,18 +26,18 @@ Cada um dos ambientes listados exibe seu status associado.
 
 O bloco **Ambientes** exibe os ambientes Produção e Fase provisionados em seu programa junto com o status.
 
-O status é o estado de energia acumulada nos nós no ambiente. É verde se todos os nós estiverem em execução, vermelho se mesmo um nó estiver parado, azul se mesmo um nó estiver aparecendo e amarelo se mesmo um nó tiver um estado de energia indisponível (nessa ordem de prioridade).
+O status é o estado de energia acumulada nos nós no ambiente. It is green if all nodes are running, red if even one node is stopped, blue if even one node is coming up, and yellow if even one node has a power state unavailable (in this order of priority).
 
 ![](assets/manage_environments-screen2.png)
 
-### Ambientes {#environments}
+### Environments {#environments}
 
-Clique em **Gerenciar** para exibir a tela **Ambientes** .
+Click Manage to display the Environments screen.********
 
-A tela **Ambientes** exibe um cartão cada para os ambientes *Produção* e *Fase* (conforme aplicável) no programa. O nome do ambiente é visto acima de cada placa. A placa inclui uma tabela de nós no ambiente, juntamente com o tamanho de t-shirt da cpu, o armazenamento, a região e o status.
+The Environments screen displays a card each for Production and Stage environments (as applicable) in your program. ******** The name of the environment is seen above each card. The card includes a table of nodes in the environment along with the t-shirt size of the cpu, the storage, the region, and the status.
 
 >[!NOTE]
 >
->O **STATUS** do nó representa o estado de energia da VM e não reflete o status do AEM no servidor. O status pode ser **Em execução** (círculo verde), **Interrompido** (círculo vermelho), **Subindo** (círculo azul) ou **Indisponível** (círculo amarelo).
+>The STATUS of the node represents the power state of the VM and does not reflect the status of AEM on the server. **** O status pode ser **Em execução** (círculo verde), **Interrompido** (círculo vermelho), **Subindo** (círculo azul) ou **Indisponível** (círculo amarelo).
 
 ![](assets/Manage_Environments2.png)
