@@ -97,7 +97,7 @@ public class DoThis implements Runnable {
 
 O uso de uma string de formato de uma fonte externa (como um parâmetro de solicitação ou conteúdo gerado pelo usuário) pode produzir pode expor um aplicativo a ataques de negação de serviço. Há circunstâncias em que uma string de formato pode ser controlada externamente, mas só é permitida de fontes confiáveis.
 
-#### Código não compatível {#non-compliant-code-1}
+#### Non-Compliant Code {#non-compliant-code-1}
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -107,19 +107,19 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-### As solicitações HTTP devem sempre ter tempos limite de soquete e conexão {#http-requests-should-always-have-socket-and-connect-timeouts}
+### HTTP requests should always have socket and connect timeouts {#http-requests-should-always-have-socket-and-connect-timeouts}
 
-**Chave**: CQRules:ConnectionTimeoutMechanism
+**Key: CQRules:ConnectionTimeoutMechanism**
 
-**Tipo**: Bug
+**Type: Bug**
 
-**Gravidade**: Crítico
+**Severity: Critical**
 
-**Desde**: Versão 2018.6.0
+**Since: Version 2018.6.0**
 
-Ao executar solicitações HTTP de dentro de um aplicativo AEM, é essencial garantir que os tempos limite apropriados sejam configurados para evitar o consumo desnecessário de thread. Infelizmente, o comportamento padrão do cliente HTTP padrão do Java (java.net.HttpUrlConnection) e do cliente Apache HTTP Components comumente usado é nunca expirar, portanto, os tempos limite devem ser definidos explicitamente. Além disso, como prática recomendada, esses tempos limite não devem exceder 60 segundos.
+When executing HTTP requests from inside an AEM application, it is critical to ensure that proper timeouts are configured in order to avoid unnecessary thread consumption. Unfortunately, the default behavior of both Java's default HTTP Client (java.net.HttpUrlConnection) and the commonly used Apache HTTP Components client is to never timeout, so timeouts must be explicitly set. Further, as a best practice, these timeouts should be no more than 60 seconds.
 
-#### Código não compatível {#non-compliant-code-2}
+#### Non-Compliant Code {#non-compliant-code-2}
 
 ```java
 @Reference
@@ -187,13 +187,13 @@ public void orDoThis() {
 
 ### As APIs de produto anotadas com @ProviderType não devem ser implementadas ou estendidas pelos clientes {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
-**Chave**: CQBP-84, CQBP-84-dependências
+**Key: CQBP-84, CQBP-84-dependencies**
 
-**Tipo**: Bug
+**Type: Bug**
 
-**Gravidade**: Crítico
+**Severity: Critical**
 
-**Desde**: Versão 2018.7.0
+**Since: Version 2018.7.0**
 
 A API do AEM contém interfaces e classes Java que devem ser usadas apenas, mas não implementadas, pelo código personalizado. Por exemplo, a interface *com.day.cq.wcm.api.Page* foi projetada para ser implementada somente ***pelo*** AEM.
 
@@ -279,19 +279,19 @@ public class DontDoThis extends SlingAllMethodsServlet {
 }
 ```
 
-### As exceções obtidas devem ser registradas ou lançadas, mas não ambas {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
+### Caught Exceptions should be logged or thrown, but not both {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
-**Chave**: CQRules:CQBP-44—CatchAndOrThrow
+**Key: CQRules:CQBP-44---CatchAndEitherLogOrThrow**
 
-**Tipo**: Cheiro de código
+**Type: Code Smell**
 
-**Gravidade**: Menor
+**Severity: Minor**
 
-**Desde**: Versão 2018.4.0
+**Since: Version 2018.4.0**
 
-Em geral, uma exceção deve ser registrada exatamente uma vez. O registro de exceções várias vezes pode causar confusão, pois não está claro quantas vezes uma exceção ocorreu. O padrão mais comum que leva a isso é cortar e lançar uma exceção.
+In general, an exception should be logged exactly one time. Logging exceptions multiple times can cause confusion as it is unclear how many times an exception occurred. The most common pattern which leads to this is logging and throwing a caught exception.
 
-#### Código não compatível {#non-compliant-code-6}
+#### Non-Compliant Code {#non-compliant-code-6}
 
 ```java
 public void dontDoThis() throws Exception {
@@ -324,15 +324,15 @@ public void orDoThis() throws MyCustomException {
 }
 ```
 
-### Evite ter uma declaração de log imediatamente seguida de uma declaração de lançamento {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
+### Avoid having a log statement immediately followed by a throw statement {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
-**Chave**: CQRules:CQBP-44—ConsecutivelyLogAndThrow
+**Key: CQRules:CQBP-44---ConsecutivelyLogAndThrow**
 
-**Tipo**: Cheiro de código
+**Type: Code Smell**
 
-**Gravidade**: Menor
+**Severity: Minor**
 
-**Desde**: Versão 2018.4.0
+**Since: Version 2018.4.0**
 
 Outro padrão comum a ser evitado é registrar uma mensagem e imediatamente lançar uma exceção. Isso geralmente indica que a mensagem de exceção acabará duplicada nos arquivos de registro.
 
@@ -425,13 +425,13 @@ public void doThis() {
 
 **Tipo**: Cheiro de código
 
-**Gravidade**: Menor
+**Severity: Minor**
 
-**Desde**: Versão 2018.4.0
+**Since: Version 2018.4.0**
 
-Como o nome sugere, as exceções de Java devem ser sempre usadas em circunstâncias *excepcionais* . Como resultado, quando uma exceção é detectada, é importante garantir que as mensagens de log sejam registradas no nível apropriado - WARN ou ERROR. Isso garante que essas mensagens sejam exibidas corretamente nos registros.
+As the name suggests, Java exceptions should always be used in exceptional circumstances. ** As a result, when an exception is caught, it is important to ensure that log messages are logged at the appropriate level - either WARN or ERROR. This ensures that those messages appear correctly in the logs.
 
-#### Código não compatível {#non-compliant-code-10}
+#### Non-Compliant Code {#non-compliant-code-10}
 
 ```java
 public void dontDoThis() {
@@ -443,7 +443,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Código compatível {#compliant-code-7}
+#### Compliant Code {#compliant-code-7}
 
 ```java
 public void doThis() {
@@ -455,9 +455,9 @@ public void doThis() {
 }
 ```
 
-### Não imprimir rastreamentos de pilha no console {#do-not-print-stack-traces-to-the-console}
+### Do not print stack traces to the console {#do-not-print-stack-traces-to-the-console}
 
-**Chave**: CQRules:CQBP-44—ExceptionPrintStackTrace
+**Key: CQRules:CQBP-44---ExceptionPrintStackTrace**
 
 **Tipo**: Cheiro de código
 
@@ -563,11 +563,11 @@ Encontre abaixo as verificações do OakPAL executadas pelo Cloud Manager.
 >[!NOTE]
 >O OakPAL é uma estrutura desenvolvida por um parceiro AEM (e vencedor do AEM Rockstar North America 2019) que valida pacotes de conteúdo usando um repositório Oak independente.
 
-### Os pacotes do cliente não devem criar ou modificar nós em /libs {#oakpal-customer-package}
+### Customer Packages Should Not Create or Modify Nodes Under /libs {#oakpal-customer-package}
 
-**Chave**: Caminhos Banidos
+**Key: BannedPaths**
 
-**Tipo**: Bug
+**Type: Bug**
 
 **Gravidade**: Bloqueador
 
@@ -643,7 +643,7 @@ Um problema comum é o uso de nós nomeados `config` nas caixas de diálogo do c
 
 **Chave**: PackageOverlaps
 
-**Tipo**: Bug
+**Type: Bug**
 
 **Gravidade**: Major
 
