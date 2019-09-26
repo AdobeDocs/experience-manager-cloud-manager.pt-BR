@@ -1,6 +1,6 @@
 ---
 title: Notas de versão para 2019.6.0
-seo-title: Notas de versão do AEM Cloud Manager para 2019.6.0
+seo-title: Notas de versão do AEM Cloud Manager para 2019.8.0
 description: Siga esta página para obter informações sobre a versão 2019.6.0 do Cloud Manager.
 seo-description: Siga esta página para obter informações sobre a versão 2019.6.0 do AEM Cloud Manager.
 translation-type: tm+mt
