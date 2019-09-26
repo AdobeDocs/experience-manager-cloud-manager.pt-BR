@@ -1,7 +1,7 @@
 ---
 title: Assistente de atualização de produto
 seo-title: Assistente de atualização de produto
-description: 'Esta página serve como ponto de partida para aprender sobre o Assistente de atualização de produto. '
+description: 'This page serves as a starting point for learning Product Update Wizard. '
 seo-description: 'Esta página serve como ponto de partida para aprender sobre o Assistente de atualização de produto. '
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
