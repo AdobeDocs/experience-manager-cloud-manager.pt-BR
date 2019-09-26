@@ -115,7 +115,7 @@ Após a implantação em uma instância do dispatcher, o conteúdo desses diret�
 Siga as etapas abaixo para concluir o processo inicial na configuração do dispatcher:
 
 1. Obtenha os arquivos de configuração de produção atuais de seu CSE.
-1. Remova dados específicos do ambiente codificados permanentemente (por exemplo, IP de renderizador de publicação) e substitua por variáveis.
+1. Remova dados específicos de ambiente codificados permanentemente (por exemplo, IP de renderizador de publicação) e substitua por variáveis.
 1. Defina as variáveis necessárias em pares de valor chave para cada despachante de destino e solicite CSE para adicionar a ***/etc/sysconfig/httpd*** em cada instância.
 1. Teste as configurações atualizadas no palco e, em seguida, solicite que CSE implante na produção para garantir que elas funcionem corretamente.
 1. Confirmar arquivos para obter.
