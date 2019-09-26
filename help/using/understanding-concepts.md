@@ -86,32 +86,32 @@ O processo de pipeline único é ilustrado abaixo:
 
 ### Como entender o fluxo {#understanding-the-flow}
 
-Você pode configurar seu pipeline a partir do [!UICONTROL Pipeline Settings] bloco da interface do usuário do Cloud Manager.
+You can configure your pipeline from the  tile from Cloud Manager UI.[!UICONTROL Pipeline Settings]
 
-Consulte [Usando o Cloud Manager,](hhttps://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html) para obter mais informações.
+Refer to Using Cloud Manager, for more information.[](hhttps://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html)
 
-O Gerenciador de implantação é responsável pela configuração do pipeline, ou seja:
+The Deployment Manager is responsible for setting up the pipeline, that is:
 
-* atribuição de ramificação de aplicativo
-* atribuição de ambientes de implantação
-* definição das opções de teste
+* assigning application branch
+* assigning deployment environments
+* defining test options
 
-Ao fazer isso, selecione primeiro uma ramificação do repositório git. Em seguida, defina o acionador que iniciará o pipeline.
+When doing so, you first select a branch from their git repository. Next, define the trigger that will start the pipeline.
 
-Em seguida, você pode definir os parâmetros que controlam a implantação de produção.
+Next, you can define the parameters controlling the production deployment.
 
-Finalmente, você poderá configurar os parâmetros de teste de desempenho.
+Finally, you will be able to configure the performance test parameters.
 
 >[!NOTE]
 >
->Para saber mais sobre como configurar o comportamento e as preferências do pipeline, consulte a seção **Configuração do pipeline** em [Uso do Cloud Manager](using-cloud-manager.md).
+>To learn about configuring the behavior and preferences for your pipeline, see Configuring Pipeline section in Using Cloud Manager.****[](using-cloud-manager.md)
 
-### Recursos de ajuda {#help-resources}
+### Help Resources {#help-resources}
 
-Entre em contato com o engenheiro de sucesso do cliente dos serviços gerenciados da Adobe para obter suporte.
+Contact Adobe Managed Services Customer Success Engineer for support.
 
 ### Próximas etapas {#the-next-steps}
 
-Agora você tem uma melhor compreensão dos conceitos do Cloud Manager.
+Now you have better understanding of the Cloud Manager concepts.
 
-Para configurar seu projeto, o ambiente e a equipe (usuário e funções), consulte [Configuração geral para o Cloud Manager](setting-configurations-for-cloud-manager.md).
+To set up your project, environment, and the team (user and roles), refer to [Setting up General Configurations for Cloud Manager](setting-configurations-for-cloud-manager.md).
