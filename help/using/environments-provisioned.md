@@ -18,7 +18,7 @@ source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
 
 ## Provisionamento {#provisioning}
 
-Durante o processo de integração do cliente, todos os ambientes em nuvem do AEM adquiridos por um cliente serão automaticamente provisionados pela Adobe e vinculados de volta ao programa em [!UICONTROL Cloud Manager]. Esses **Ambientes** em nuvem do AEM estão incluídos em todas as assinaturas do Adobe Managed Services e geralmente são compostos de pelo menos um ambiente de produção, um ambiente de estágio e, opcionalmente, um ou mais ambientes de desenvolvimento ou teste.
+Durante o processo de integração do cliente, todos os ambientes em nuvem do AEM adquiridos por um cliente serão provisionados automaticamente pela Adobe e vinculados de volta ao programa em [!UICONTROL Cloud Manager]. Esses **Ambientes** em nuvem do AEM estão incluídos em todas as assinaturas do Adobe Managed Services e geralmente são compostos de pelo menos um ambiente de produção, um ambiente de estágio e, opcionalmente, um ou mais ambientes de desenvolvimento ou teste.
 
 ## Email de boas-vindas {#welcome-email}
 
