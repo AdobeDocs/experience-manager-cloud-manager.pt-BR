@@ -20,15 +20,15 @@ A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Mana
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.5.0 é 12 de julho de 2018.
+The Release Date for  Version 2018.5.0 is July 12, 2018.[!UICONTROL Cloud Manager]
 
 ## Novidades {#what-s-new}
 
-* **Notificações** de pipeline de CI/CD - os usuários agora verão [!UICONTROL Experience Cloud] notificações para eventos de pipeline. Consulte as [Notificações](notifications.md) para saber mais.
+* **CI/CD Pipeline Notifications** - Users will now see [!UICONTROL Experience Cloud] notifications for pipeline events. Please refer to the Notifications to learn more.[](notifications.md)
 
-* **Implantações** de produção agendadas - os usuários agora podem agendar uma data ou hora para implantações de produção. Consulte [Implantar seu código](deploying-code.md) para saber mais.
+* **Implantações** de produção agendadas - os usuários agora podem agendar uma data ou hora para implantações de produção. Please refer to Deploy Your Code to learn more.[](deploying-code.md)
 
-* **Página de status** autorizada para **Atividade**.
+* **Status page retitled to Activity.******
 
 * Informações mais específicas exibidas na página inicial para problemas encontrados durante a execução do pipeline.
 * Melhorias na infraestrutura de teste de desempenho.
@@ -41,5 +41,5 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.5.0 é 12 de ju
 
 ## Problemas conhecidos {#known-issues}
 
-* Os links para o **AEM** e o **monitoramento** na tela Lista de programas substituem a guia atual do navegador e abrem para uma nova guia.
+* Links to AEM and Monitoring from Program List screen both replace the current browser tab and opens to a new tab.********
 
