@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -93,6 +93,13 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
 
 1. O Cloud Manager determina se cada artefato é um pacote AEM ou dispatcher.
 1. O Cloud Manager remove todos os despachadores do Balanceador de carga para isolar o ambiente durante a implantação.
+
+   A menos que configurado de outra forma, você pode ignorar as Alterações do Balanceador de Carga nas Implantações de Dev e Stage, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes dev e pipeline de produção, para ambientes de estágio.
+
+   >[!NOTE]
+   >
+   >Espera-se que esse recurso seja usado principalmente por clientes 1 a 1.
+
 1. Cada artefato AEM é implantado em cada instância do AEM por meio de APIs do Gerenciador de pacotes, com dependências de pacotes determinando a ordem de implantação.
 
    Para saber mais sobre como usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório, consulte Como trabalhar com pacotes.
@@ -113,6 +120,10 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
    >O Cloud Manager espera que o artefato do dispatcher contenha o conjunto de arquivos completo.  Todos os arquivos de configuração do dispatcher devem estar presentes no repositório git. Arquivos ou pastas ausentes resultarão em falha de implantação.
 
 1. Após a implantação bem-sucedida de todos os pacotes do AEM e do dispatcher para todos os nós, os despachantes são adicionados de volta ao balanceador de carga e a implantação é concluída.
+
+   >[!NOTE]
+   >
+   >Você pode ignorar as mudanças de carregamento de lancer nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes de desenvolvedor e pipeline de produção, para ambientes de estágio. Espera-se que esse recurso seja usado principalmente por clientes 1 a 1.
 
 ### Implantação para fase de produção {#deployment-production-phase}
 
