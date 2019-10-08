@@ -4,7 +4,7 @@ sub-product: gerenciador de nuvem do Experience Manager
 archetype: administrador
 user-guide-title: Ajuda do Experience Manager Cloud Manager
 translation-type: tm+mt
-source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -39,6 +39,9 @@ source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
    + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
    + [Notificações](notifications.md)
    + [Regras de qualidade de código personalizado](custom-code-quality-rules.md)
++ Gerenciar seu código {#managing-code}
+   + [Ativando perfis Maven](activating-maven-project.md)
+   + [Integração com o Git](setup-cloud-manager-git-integration.md)
 + Assistente de atualização de produto {#product-update-wizard}
    + [Visão geral](overview-productupdate-wizard.md)
    + [Avaliação](evaluation.md)
@@ -58,4 +61,3 @@ source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
    + [Notas de versão para 2018.7.0](release-notes-2018-7-0.md)
    + [Notas de versão para 2018.6.0](release-notes-2018-6-0.md)
    + [Notas de versão para 2018.5.0](release-notes-2018-5-0.md)
-
