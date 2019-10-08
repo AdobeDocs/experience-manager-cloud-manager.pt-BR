@@ -4,7 +4,7 @@ seo-title: Monitore seus ambientes
 description: 'null'
 seo-description: Siga esta página para saber mais sobre o Monitoramento do sistema no Gerenciador de nuvem que é feito observando as instâncias individuais em um ambiente e rastreando várias métricas para cada instância.
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -48,6 +48,13 @@ O status em cada categoria é um resumo de métricas individuais - se qualquer m
 >[!NOTE]
 >
 >Por padrão, ao navegar até essa página, as instâncias do ambiente de produção ficam visíveis, mas outros ambientes também podem ser abertos.
+
+## Vídeo de visão geral para relatórios {#video-reports}
+
+Os Relatórios do Gerenciador de nuvem fornecem uma visualização das instâncias do Programa em Ambiente e AEM por meio de um conjunto de gráficos que relatam e rastreiam várias métricas para cada instância do AEM.
+Consulte o vídeo abaixo para obter mais detalhes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26315/?captions=por_br)
 
 ## Detalhes do monitoramento do sistema {#system-monitoring-detail}
 
