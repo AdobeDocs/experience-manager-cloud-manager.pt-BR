@@ -1,22 +1,22 @@
 ---
-title: First Time Login
-seo-title: First Time Login to Adobe AEM Cloud Manager
-description: Follow this page if you have set up your general configurations and you are ready to use Cloud Manager for the first time.
-seo-description: Follow this page if you have set up your general configurations and you are ready to use Adobe AEM Cloud Manager for the first time.
+title: Primeiro logon
+seo-title: Primeiro logon no Adobe AEM Cloud Manager
+description: Siga esta página se tiver configurado suas configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
+seo-description: Siga esta página se tiver configurado suas configurações gerais e estiver pronto para usar o Adobe AEM Cloud Manager pela primeira vez.
 uuid: 7c8458a6-6de8-4946-ac0c-fb10bce17a15
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introdução
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: ec35af20dceeb50610bc365c8e00d5ee0374ea34
+source-git-commit: eea425b9bfa178720cbea0653cf8c8f17702281b
 
 ---
 
 
 # Primeiro logon {#first-time-login}
 
-Once you have setup the general configurations for , you are ready to use the User Interface (UI) for .[!UICONTROL Cloud Manager][!UICONTROL Cloud Manager]
+Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar a interface do usuário para [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -25,9 +25,6 @@ Once you have setup the general configurations for , you are ready to use the Us
 ## Uma visão geral dos programas {#programs-video}
 
 O vídeo a seguir fornece uma visão geral dos Programas do Cloud Manager que representam conjuntos de ambientes AEM que suportam conjuntos lógicos de iniciativas de negócios, normalmente correspondentes a um SLA (Service Level Agreement, contrato de nível de serviço) adquirido.
-
-
-[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&captions=por_br)
 
 
 ## Logon pela primeira vez {#logging-in-for-the-first-time}
@@ -44,8 +41,8 @@ O vídeo a seguir fornece uma visão geral dos Programas do Cloud Manager que re
 
    ![](assets/FirstLogin1.png)
 
-1. Click Setup Program for setting the Program description and defining the Key Performance Indicators (KPIs).********
+1. Clique em **Configurar programa** para definir a descrição do **programa** e definir os Indicadores-chave de desempenho (KPIs).
 
    >[!NOTE]
    >
-   >Please see [Setup your Program](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) to complete the next steps.
+   >Consulte [Configurar seu programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
