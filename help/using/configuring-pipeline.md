@@ -7,10 +7,10 @@ uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
-content-type: referência
+content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -168,6 +168,13 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 ## Pipelines que não são de produção e qualidade de código
 
 Para além do principal gasoduto que vai para a fase de construção e de produção, os clientes estão em condições de instalar gasodutos adicionais, denominados "gasodutos **não produtivos"**. Esses pipelines sempre executam as etapas de qualidade de compilação e código. Como opção, eles também podem implantar no ambiente do Adobe Managed Services.
+
+### Vídeo sobre Pipelines que não são de produção e qualidade de código
+
+IC/CD Os gasodutos de não produção são divididos em duas categorias: gasodutos de qualidade do código e gasodutos de implantação. A qualidade do código anula todos os códigos de uma ramificação Git para criar e ser avaliada em relação à verificação da qualidade do código do Cloud Manager.
+Consulte o vídeo a seguir para obter mais detalhes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=por_br)
 
 Na tela inicial, esses pipelines são listados em um novo cartão:
 
