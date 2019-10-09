@@ -4,7 +4,7 @@ seo-title: Manuseio de versão do projeto Maven
 description: Saiba mais sobre o Maven Project Version Handling.
 seo-description: Siga esta página para saber mais sobre o Maven Project Version Handling
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
@@ -29,4 +29,4 @@ Se a versão original atender a esses critérios, a versão gerada será anexada
 
 >[!NOTE]
 >
->Independentemente de a versão original ter sido incorporada ou não à versão inicializada do Gerenciador de nuvem, a versão original está disponível como uma propriedade Maven com o nome *cloudManagerOriginalVersion*.
+>Independentemente de a versão original ter sido incorporada ou não à versão inicializada do Gerenciador de nuvem, a versão original está disponível como uma propriedade Maven com o nome *cloudManagerOriginalVersion.*
