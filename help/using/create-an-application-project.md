@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introdução
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
 
 ---
 
@@ -108,11 +108,56 @@ O Cloud Manager cria e testa seu código usando um ambiente de compilação espe
 * Maven é sempre executado com o comando: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * O Maven é configurado no nível do sistema com um arquivo settings.xml que inclui automaticamente o repositório público do Adobe **Artifato** . (Consulte o Repositório [do](https://repo.adobe.com/) Adobe Public Maven para obter mais detalhes).
 
+
+## Variáveis de ambiente {#environment-variables}
+
+### Variáveis de ambiente padrão {#standard-environ-variables}
+
+Em alguns casos, os clientes acham necessário variar o processo de criação com base nas informações sobre o programa ou pipeline.
+
+Por exemplo, se a miniificação do JavaScript em tempo de criação estiver sendo feita, por meio de uma ferramenta como gulp, pode haver um desejo de usar um nível de miniificação diferente ao criar um ambiente dev em vez de construir para o estágio e a produção.
+
+Para suportar isso, o Cloud Manager adiciona essas variáveis de ambiente padrão ao contêiner de compilação para cada execução.
+
+| **Nome da variável** | **Definição** |
+|---|---|
+| CM_BUILD | Sempre definido como "true" |
+| RAMIFICAÇÃO | A ramificação configurada para a execução |
+| CM_PIPELINE_ID | O identificador de pipeline numérico |
+| CM_PIPELINE_NAME | O nome do pipeline |
+| CM_PROGRAM_ID | O identificador numérico do programa |
+| CM_PROGRAM_NAME | O nome do programa |
+| ARTIFTS_VERSION | Para um pipeline de estágio ou produção, a versão sintética gerada pelo Cloud Manager |
+
+### Variáveis de ambiente personalizadas {#custom-environ-variables}
+
+Em alguns casos, o processo de compilação de um cliente pode depender de variáveis de configuração específicas que não seriam adequadas para serem inseridas no repositório git. O Cloud Manager permite que essas variáveis sejam configuradas por um CSE (Customer Success Engineer, engenheiro de sucesso do cliente) com base no cliente. Essas variáveis são armazenadas em um local de armazenamento seguro e são visíveis apenas no contêiner de compilação do cliente específico. Os clientes que desejarem usar esse recurso precisam entrar em contato com o CSE para configurar suas variáveis.
+
+Depois de configuradas, essas variáveis estarão disponíveis como variáveis de ambiente. Para usá-las como propriedades Maven, é possível referenciá-las no arquivo pom.xml, possivelmente em um perfil como descrito acima:
+
+```xml
+        <profile>
+            <id>cmBuild</id>
+            <activation>
+                  <property>
+                        <name>env.CM_BUILD</name>
+                  </property>
+            </activation>
+            <properties>
+                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
+            </properties>
+        </profile>
+```
+
+>[!NOTE]
+>
+>Os nomes das variáveis de ambiente podem conter apenas caracteres alfanuméricos e sublinhado (_). Por convenção, os nomes devem ser todos maiúsculos.
+
 ## Ativar perfis Maven no Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
 Em alguns casos limitados, pode ser necessário variar um pouco o processo de compilação ao ser executado no Gerenciador de nuvem em vez de quando é executado em estações de trabalho de desenvolvedor. Nesses casos, os Perfis [](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) Maven podem ser usados para definir como a compilação deve ser diferente em ambientes diferentes, incluindo o Cloud Manager.
 
-A ativação de um Perfil Maven dentro do ambiente de criação do Cloud Manager deve ser feita procurando a presença de uma variável de ambiente chamada `CM_BUILD`. Essa variável sempre será definida dentro do ambiente de criação do Cloud Manager. Em contrapartida, um perfil destinado a ser usado somente fora do ambiente de criação do Cloud Manager deve ser feito procurando o absentido dessa variável.
+A ativação de um Perfil Maven dentro do ambiente de compilação do Cloud Manager deve ser feita procurando pela variável de ambiente CM_BUILD descrita acima. Em contrapartida, um perfil destinado a ser usado somente fora do ambiente de criação do Cloud Manager deve ser feito procurando o absentido dessa variável.
 
 Por exemplo, se você quiser enviar uma mensagem simples somente quando a compilação for executada dentro do Cloud Manager, você deve fazer o seguinte:
 
@@ -186,31 +231,6 @@ E se você quiser enviar uma mensagem simples somente quando a criação for exe
         </profile>
 ```
 
-## Variáveis de ambiente {#environment-variables}
-
-### Variáveis de ambiente padrão {#standard-environ-variables}
-
-Em alguns casos, o processo de compilação de um cliente pode depender de variáveis de configuração específicas que não seriam adequadas para serem inseridas no repositório git. O Cloud Manager permite que essas variáveis sejam configuradas por um CSE (Customer Success Engineer, engenheiro de sucesso do cliente) com base no cliente. Essas variáveis são armazenadas em um local de armazenamento seguro e são visíveis apenas no contêiner de compilação do cliente específico. Os clientes que desejarem usar esse recurso precisam entrar em contato com o CSE para configurar suas variáveis.
-
-Depois de configuradas, essas variáveis estarão disponíveis como variáveis de ambiente. Para usá-las como propriedades Maven, é possível referenciá-las no arquivo pom.xml, possivelmente em um perfil como descrito acima:
-
-```xml
-        <profile>
-            <id>cmBuild</id>
-            <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
-            </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
-        </profile>
-```
-
->[!NOTE]
->
->Os nomes das variáveis de ambiente podem conter apenas caracteres alfanuméricos e sublinhado (_). Por convenção, os nomes devem ser todos maiúsculos.
 
 ## Instalação de pacotes adicionais do sistema {#installing-additional-system-packages}
 
