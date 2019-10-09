@@ -10,7 +10,7 @@ topic-tags: usando
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
@@ -127,6 +127,11 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
    Clique em **Salvar** para persistir nesta configuração.
 
    ![](assets/image2018-8-7_15-4-30.png)
+
+   **Aprovar após implantação** do estágioHá uma etapa opcional **Aprovar após implantação** do estágio que pode ser configurada no pipeline de produção.
+   >[!NOTE]
+   >
+   >**Aprovar após a implantação** do estágio funciona de forma semelhante à aprovação antes da implantação da produção, mas ocorre imediatamente após a etapa de implantação do estágio, ou seja, antes que qualquer teste seja feito, comparado com a aprovação antes da implantação da produção, que é feita após a conclusão de todos os testes.
 
 1. Acesse a guia **Teste** para definir seus critérios de teste para o programa.
 
