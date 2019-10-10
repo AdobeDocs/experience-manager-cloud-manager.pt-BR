@@ -10,7 +10,7 @@ topic-tags: usando
 content-type: referência
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
 
 ---
 
@@ -18,6 +18,15 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 # Configure seu pipeline CI/CD {#configure-your-ci-cd-pipeline}
 
 A página a seguir explica como configurar o **Pipeline**. Para consultar mais informações conceituais sobre como o pipeline funciona, consulte a visão geral [do pipeline de](ci-cd-pipeline.md)IC/CD.
+
+## Tutorial em vídeo {#video-tutorial-one}
+
+### Configuração do pipeline no Cloud Manager {#config-pipeline-video}
+
+A configuração do CI/CD Production Pipeline define o acionador que iniciará o pipeline, os parâmetros que controlam a implantação da produção e os parâmetros de teste de desempenho.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=por_br)
+
 
 ## Como entender o fluxo {#understanding-the-flow}
 
@@ -100,6 +109,21 @@ Selecione a ramificação Git e clique em **Avançar**.
 >
 >A opção **Usar Supervisão** de CSE não está disponível para todos os clientes.
 
+**Aprovar após implantação do estágio**
+
+Há uma etapa opcional **Aprovar após a implantação** do estágio que pode ser configurada no pipeline de produção.
+Isso está ativado em uma nova opção na tela Edição **de** Pipeline:
+
+![](assets/post_deployment1.png)
+
+Em seguida, é mostrado como uma etapa separada durante a execução do pipeline:
+
+![](assets/post_deployment2.png)
+
+>[!NOTE]
+>
+>**Aprovar após a implantação** do estágio funciona de forma semelhante à aprovação antes da implantação da produção, mas ocorre imediatamente após a etapa de implantação do estágio, ou seja, antes que qualquer teste seja feito, comparado com a aprovação antes da implantação da produção, que é feita após a conclusão de todos os testes.
+
 **Invalidação do Dispatcher**
 
 Como um Gerenciador de implantação, você tem a oportunidade de configurar um conjunto de caminhos que serão **invalidados** ou **liberados** do cache do AEM Dispatcher, ao configurar ou editar o pipeline.
@@ -127,18 +151,6 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
    Clique em **Salvar** para persistir nesta configuração.
 
    ![](assets/image2018-8-7_15-4-30.png)
-
-   **Aprovar após implantação** do estágioHá uma etapa opcional **Aprovar após implantação** do estágio que pode ser configurada no pipeline de produção.
-Isso está ativado em uma nova opção na tela Edição **de** Pipeline:
-
-   ![](assets/post_deployment1.png)
-
-   Em seguida, é mostrado como uma etapa separada durante a execução do pipeline:
-   ![](assets/post_deployment2.png)
-
-   >[!NOTE]
-   >
-   >**Aprovar após a implantação** do estágio funciona de forma semelhante à aprovação antes da implantação da produção, mas ocorre imediatamente após a etapa de implantação do estágio, ou seja, antes que qualquer teste seja feito, comparado com a aprovação antes da implantação da produção, que é feita após a conclusão de todos os testes.
 
 
 1. Acesse a guia **Teste** para definir seus critérios de teste para o programa.
@@ -182,10 +194,13 @@ Isso está ativado em uma nova opção na tela Edição **de** Pipeline:
 
 Para além do principal gasoduto que vai para a fase de construção e de produção, os clientes estão em condições de instalar gasodutos adicionais, denominados "gasodutos **não produtivos"**. Esses pipelines sempre executam as etapas de qualidade de compilação e código. Como opção, eles também podem implantar no ambiente do Adobe Managed Services.
 
-### Vídeo sobre Pipelines que não são de produção e qualidade de código
+## Vídeo sobre Pipelines que não são de produção e qualidade de código
+
+## Tutorial em vídeo {#video-tutorial-two}
+
+### Pipelines de gerenciamento de nuvem somente para produção e qualidade de código {#non-prod-video}
 
 IC/CD Os gasodutos de não produção são divididos em duas categorias: gasodutos de qualidade do código e gasodutos de implantação. A qualidade do código anula todos os códigos de uma ramificação Git para criar e ser avaliada em relação à verificação da qualidade do código do Cloud Manager.
-Consulte o vídeo a seguir para obter mais detalhes.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=por_br)
 
