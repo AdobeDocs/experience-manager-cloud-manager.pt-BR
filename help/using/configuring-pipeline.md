@@ -10,7 +10,7 @@ topic-tags: usando
 content-type: referência
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
+source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
 
 ---
 
@@ -193,8 +193,6 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 ## Pipelines que não são de produção e qualidade de código
 
 Para além do principal gasoduto que vai para a fase de construção e de produção, os clientes estão em condições de instalar gasodutos adicionais, denominados "gasodutos **não produtivos"**. Esses pipelines sempre executam as etapas de qualidade de compilação e código. Como opção, eles também podem implantar no ambiente do Adobe Managed Services.
-
-## Vídeo sobre Pipelines que não são de produção e qualidade de código
 
 ## Tutorial em vídeo {#video-tutorial-two}
 
