@@ -7,10 +7,10 @@ uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
-content-type: reference
+content-type: referência
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
+source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 ---
 
@@ -129,9 +129,17 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
    ![](assets/image2018-8-7_15-4-30.png)
 
    **Aprovar após implantação** do estágioHá uma etapa opcional **Aprovar após implantação** do estágio que pode ser configurada no pipeline de produção.
+Isso está ativado em uma nova opção na tela Edição **de** Pipeline:
+
+   ![](assets/post_deployment1.png)
+
+   Em seguida, é mostrado como uma etapa separada durante a execução do pipeline:
+   ![](assets/post_deployment2.png)
+
    >[!NOTE]
    >
    >**Aprovar após a implantação** do estágio funciona de forma semelhante à aprovação antes da implantação da produção, mas ocorre imediatamente após a etapa de implantação do estágio, ou seja, antes que qualquer teste seja feito, comparado com a aprovação antes da implantação da produção, que é feita após a conclusão de todos os testes.
+
 
 1. Acesse a guia **Teste** para definir seus critérios de teste para o programa.
 
