@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 ---
 
@@ -95,6 +95,8 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
 1. O Cloud Manager remove todos os despachadores do Balanceador de carga para isolar o ambiente durante a implantação.
 
    A menos que configurado de outra forma, você pode ignorar as Alterações do Balanceador de Carga nas Implantações de Dev e Stage, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes dev e pipeline de produção, para ambientes de estágio.
+
+   ![](assets/load_balancer.png)
 
    >[!NOTE]
    >
