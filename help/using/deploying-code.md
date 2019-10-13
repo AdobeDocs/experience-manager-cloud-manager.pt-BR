@@ -1,6 +1,6 @@
 ---
-title: Implantar seu código
-seo-title: Implantar seu código
+title: Implantar o código
+seo-title: Implantar o código
 description: 'null'
 seo-description: Depois de configurar seu pipeline (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código. Siga esta página para saber mais.
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
 ---
 
 
-# Implantar seu código {#deploy-your-code}
+# Implantar o código {#deploy-your-code}
 
 ## Implantação de código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
@@ -125,7 +125,7 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
 
    >[!NOTE]
    >
-   >Você pode ignorar as mudanças de carregamento de lancer nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes de desenvolvedor e pipeline de produção, para ambientes de estágio. Espera-se que esse recurso seja usado principalmente por clientes 1 a 1.
+   >Você pode ignorar as mudanças de carregamento de lancer nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes de desenvolvedor e pipeline de produção, para ambientes de estágio.
 
 ### Implantação para fase de produção {#deployment-production-phase}
 
