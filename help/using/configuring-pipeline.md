@@ -1,6 +1,6 @@
 ---
-title: Configure seu pipeline CI/CD
-seo-title: Configure seu pipeline CI/CD
+title: Configurar o pipeline de CI/CD
+seo-title: Configurar o pipeline de CI/CD
 description: Siga esta página para definir as configurações de pipeline do Gerenciador de nuvem.
 seo-description: 'Antes de começar a implantar o código, é necessário definir as configurações de pipeline do Gerenciador da AEM Cloud. '
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
@@ -10,12 +10,12 @@ topic-tags: usando
 content-type: referência
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
+source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
 
 ---
 
 
-# Configure seu pipeline CI/CD {#configure-your-ci-cd-pipeline}
+# Configurar o pipeline de CI/CD {#configure-your-ci-cd-pipeline}
 
 A página a seguir explica como configurar o **Pipeline**. Para consultar mais informações conceituais sobre como o pipeline funciona, consulte a visão geral [do pipeline de](ci-cd-pipeline.md)IC/CD.
 
