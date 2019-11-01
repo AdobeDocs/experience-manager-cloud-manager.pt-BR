@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
+source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
 
 ---
 
@@ -43,15 +43,16 @@ Depois de configurar seu **Pipeline** (repositório, ambiente e ambiente de test
 
    A implantação **do** estágio envolve as seguintes etapas:
 
-   * Compilação e teste de unidade
-   * Digitalização de código
+   * Validação: Essa etapa garante que o pipeline esteja configurado para usar os recursos disponíveis no momento, por exemplo, que a ramificação configurada exista, os ambientes estarão disponíveis.
+   * Compilação e teste de unidade: Esta etapa executa um processo de criação contido. Consulte [Criar um projeto](create-an-application-project.md) de aplicativo AEM para obter detalhes sobre o ambiente de criação.
+   * Digitalização de código: Esta etapa avalia a qualidade do código do aplicativo. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
    * Implantar no palco
    ![](assets/Stage_Deployment1.png)
 
    O **Stage Testing** envolve as seguintes etapas:
 
-   * Teste de segurança
-   * Teste de desempenho
+   * Teste de segurança — esta etapa avalia o impacto de segurança do código de seu aplicativo no ambiente do AEM. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
+   * Teste de desempenho — Esta etapa avalia o desempenho do código do aplicativo. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
    ![](assets/Stage_Testing1.png)
 
    A implantação **de produção** envolve as seguintes etapas:
