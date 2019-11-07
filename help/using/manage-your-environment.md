@@ -1,6 +1,6 @@
 ---
-title: Gerenciar seus ambientes
-seo-title: Gerenciar seus ambientes
+title: Gerenciar os ambientes
+seo-title: Gerenciar os ambientes
 description: 'null'
 seo-description: Siga esta página para exibir a lista de ambientes de produção e de não produção usados para configurar e executar o pipeline de CI/CD no Cloud Manager.
 uuid: 04e67572-11db-4d5d-acf3-fd7f644a95f0
@@ -9,18 +9,18 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 72daabd54cd6216743dfbf4d843f685b3b12b3aa
 
 ---
 
 
-# Gerenciar seus ambientes {#manage-your-environments}
+# Gerenciar os ambientes {#manage-your-environments}
 
 A página **Visão geral** do Gerenciador de nuvem inclui o bloco **Ambientes** que lista todos os ambientes AEM gerenciados.
 
 Cada um dos ambientes listados exibe seu status associado.
 
-![](assets/Manage_Environments1.png)
+![](assets/Manage-Environments1.png)
 
 ## Tutorial em vídeo {#video-tutorial}
 
@@ -36,7 +36,7 @@ O bloco **Ambientes** exibe os ambientes Produção e Fase provisionados em seu 
 
 O status é o estado de energia acumulada nos nós no ambiente. É verde se todos os nós estiverem em execução, vermelho se mesmo um nó estiver parado, azul se mesmo um nó estiver aparecendo e amarelo se mesmo um nó tiver um estado de energia indisponível (nessa ordem de prioridade).
 
-![](assets/manage_environments-screen2.png)
+![](assets/Environments-card-new.png)
 
 ### Ambientes {#environments}
 
@@ -48,4 +48,4 @@ A tela **Ambientes** exibe um cartão cada para os ambientes *Produção* e *Fas
 >
 >O **STATUS** do nó representa o estado de energia da VM e não reflete o status do AEM no servidor. O status pode ser **Em execução** (círculo verde), **Interrompido** (círculo vermelho), **Subindo** (círculo azul) ou **Indisponível** (círculo amarelo).
 
-![](assets/Manage_Environments2.png)
+![](assets/Environments-tab.png)
