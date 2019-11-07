@@ -1,52 +1,53 @@
 ---
 product: adobe experience manager
-sub-product: gerenciador de nuvem do Experience Manager
+sub-product: experience manager cloud manager
 archetype: administrador
 user-guide-title: Ajuda do Experience Manager Cloud Manager
 translation-type: tm+mt
-source-git-commit: d458e0735b558940a3da3a7f3129dbec49cc1688
+source-git-commit: 52c54568d8ab7b5091c25b3b65b4baa126bf61f5
 
 ---
 
 
-# Experience Manager Help {#using}
+# Ajuda do Experience Manager {#using}
 
 + [Introdução ao Cloud Manager](introduction-to-cloud-manager.md)
 + Visão geral {#overview}
    + [Principais conceitos](key-concepts.md)
    + [Jornada do cliente](customer-journey.md)
-   + [Pipeline CI/CD](ci-cd-pipeline.md)
+   + [Pipeline de CI/CD](ci-cd-pipeline.md)
    + [Segurança e privacidade](security-and-privacy.md)
    + [Recursos de ajuda](help-resources.md)
 + O que é obrigatório {#requirements}
    + [Direitos de acesso concedidos](access-rights-granted.md)
-   + [Repositório de código fonte](source-code-repository.md)
+   + [Repositório de código-fonte](source-code-repository.md)
    + [Adicionar usuários e funções](setting-up-users-and-roles.md)
    + [Ambientes provisionados](environments-provisioned.md)
 + Introdução {#getting-started}
    + [Primeiro logon](first-time-login.md)
-   + [Configure seu programa](setting-up-program.md)
+   + [Configurar o programa](setting-up-program.md)
    + [Criar um projeto de aplicativo AEM](create-an-application-project.md)
-   + [Configurar suas Ramificações de Liberação](configure-your-release-branches.md)
-   + [Gerenciar suas configurações do Dispatcher](dispatcher-configurations.md)
+   + [Configurar as ramificações de liberação](configure-your-release-branches.md)
+   + [Gerenciar as configurações do Dispatcher](dispatcher-configurations.md)
 + Como usar {#how-to-use}
-   + [Configure seu pipeline CI/CD](configuring-pipeline.md)
-   + [Implantar seu código](deploying-code.md)
-   + [Entenda seus resultados de teste](understand-your-test-results.md)
-   + [Gerenciar seus ambientes](manage-your-environment.md)
-   + [Monitore seus ambientes](monitor-your-environments.md)
+   + [Configurar o pipeline de CI/CD](configuring-pipeline.md)
+   + [Implantar o código](deploying-code.md)
+   + [Entender os resultados de teste](understand-your-test-results.md)
+   + [Gerenciar os ambientes](manage-your-environment.md)
+   + [Monitorar os ambientes](monitor-your-environments.md)
    + [API do Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
    + [Notificações](notifications.md)
-   + [Regras de qualidade de código personalizado](custom-code-quality-rules.md)
+   + [Regras de qualidade do código personalizado](custom-code-quality-rules.md)
 + Gerenciar seu código {#managing-code}
    + [Manuseio de versão do projeto Maven](activating-maven-project.md)
    + [Integração com o Git](setup-cloud-manager-git-integration.md)
-+ Assistente de atualização de produto {#product-update-wizard}
++ Assistente de atualização do produto {#product-update-wizard}
    + [Visão geral](overview-productupdate-wizard.md)
    + [Avaliação](evaluation.md)
-+ Notas de lançamento {#release-notes}
-   + [Notas de versão atuais (2019.10.0)](release-notes-current.md)
++ Notas de versão {#release-notes}
+   + [Notas de versão atuais (2019.11.0)](release-notes-current.md)
+   + [Notas de versão para 2019.10.0](release-notes-2019-10-0.md)
    + [Notas de versão para 2019.9.0](release-notes-2019-9-0.md)
    + [Notas de versão para 2019.8.0](release-notes-2019-8-0.md)
    + [Notas de versão para 2019.7.0](release-notes-2019-7-0.md)
