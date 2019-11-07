@@ -10,7 +10,7 @@ topic-tags: usando
 content-type: referência
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 06154ad565168d25e18de49c10e5944f39a293c2
+source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
 
 ---
 
@@ -219,7 +219,7 @@ Na tela inicial, esses pipelines são listados em um novo cartão:
    * **Editar** - permite a edição das configurações de pipeline
    * **Detalhe** - exibe a última execução do pipeline (se houver um)
    * **Build** - navega até a página de execução, a partir da qual o pipeline pode ser executado
-   ![](assets/Configuring_Pipeline_Add-Production3.png)
+   ![](assets/Non-prod-2.png)
 
    >[!NOTE]
    >
