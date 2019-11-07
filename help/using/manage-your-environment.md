@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: usando
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: 72daabd54cd6216743dfbf4d843f685b3b12b3aa
+source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
 
 ---
 
@@ -20,7 +20,7 @@ A página **Visão geral** do Gerenciador de nuvem inclui o bloco **Ambientes** 
 
 Cada um dos ambientes listados exibe seu status associado.
 
-![](assets/Manage-Environments1.png)
+![](assets/Manage-Environ-Overview.png)
 
 ## Tutorial em vídeo {#video-tutorial}
 
