@@ -1,10 +1,10 @@
 ---
-title: Monitore seus ambientes
-seo-title: Monitore seus ambientes
+title: Monitorar os ambientes
+seo-title: Monitorar os ambientes
 description: 'null'
 seo-description: Siga esta página para saber mais sobre o Monitoramento do sistema no Gerenciador de nuvem que é feito observando as instâncias individuais em um ambiente e rastreando várias métricas para cada instância.
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 1edfbc0adb04026cd29ba93b4ba155d3b61439dc
 
 ---
 
@@ -43,7 +43,7 @@ A página Visão geral do monitoramento do sistema lista os ambientes monitorado
 
 O status em cada categoria é um resumo de métricas individuais - se qualquer métrica em uma categoria estiver no estado crítico, a categoria inteira estará em estado crítico para a finalidade da página de visão geral. O mesmo resumo pode ser visualizado em nível de ambiente e instância.
 
-![](assets/Reports.png)
+![](assets/System-Monitoring-Reports.png)
 
 >[!NOTE]
 >
@@ -107,11 +107,11 @@ Por exemplo, se você clicar na série de limites de aviso, verá apenas o limit
 Os clientes podem ver o desempenho de seu ambiente de produção do AEM em relação ao SLA (Service Level Agreement, contrato de nível de serviço). Isso está disponível por meio de um submenu na tela Relatórios.
 Por exemplo, o gráfico abaixo mostra o nível de SLA mensal para 2018.
 
-![](assets/sla-reporting1.png)
+![](assets/SLA-Reports-one.png)
 
 Assim como nos gráficos de monitoramento do sistema, rolar sobre um ponto de dados mostra os valores específicos para esse mês.
 
-![](assets/sla-reporting2.png)
+![](assets/SLA-Reports-two.png)
 
 A seção Análise de eventos neste gráfico mostra o conjunto de incidentes que ocorreram no programa durante o ano selecionado. Cada incidente tem um intervalo de tempo, uma causa e um conjunto de comentários.
 
