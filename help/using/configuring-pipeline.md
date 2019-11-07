@@ -10,7 +10,7 @@ topic-tags: usando
 content-type: referência
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
+source-git-commit: 06154ad565168d25e18de49c10e5944f39a293c2
 
 ---
 
@@ -58,7 +58,7 @@ Siga estas etapas para configurar o comportamento e as preferências do seu pipe
 
 1. Clique em **Configurar pipeline** para configurar e configurar seu pipeline.
 
-   ![](assets/Configure_ci-cd-1.png)
+   ![](assets/Setup-Pipeline.png)
 
 1. A tela **Setup Pipeline (Instalar pipeline** ) é exibida.
 
@@ -188,7 +188,7 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
    >
    >Além disso, depois de configurar o pipeline, você ainda poderá editar configurações para o mesmo usando o bloco de Configurações **do pipeline de** produção da [!UICONTROL Cloud Manager] interface do usuário.
 
-   ![](assets/Prod-Pipeline-Settings-Dialog.png)
+   ![](assets/Production-Pipeline.png)
 
 ## Pipelines que não são de produção e qualidade de código
 
@@ -206,7 +206,7 @@ Na tela inicial, esses pipelines são listados em um novo cartão:
 
 1. Acesse o bloco Pipelines **de** não produção na tela inicial do Cloud Manager.
 
-   ![](assets/Configuring_Pipeline_Add-Production.png)
+   ![](assets/Non-Production-Pipeline.png)
 
 1. Clique no botão Adicionar para especificar o Nome do Pipeline, o Tipo de Pipeline e a Ramificação Git.
 
