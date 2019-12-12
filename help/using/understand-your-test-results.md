@@ -1,20 +1,20 @@
 ---
-title: Entenda seus resultados de teste
-seo-title: Entenda seus resultados de teste
+title: Entender os resultados de teste
+seo-title: Entender os resultados de teste
 description: 'null'
 seo-description: Siga esta página para saber mais sobre portas de três níveis ao executar um pipeline, verificação de código, desempenho e testes de segurança que validam seu programa no Cloud Manager.
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: usando
+topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
+source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
 
 ---
 
 
-# Entenda seus resultados de teste {#understand-your-test-results}
+# Entender os resultados de teste {#understand-your-test-results}
 
 Durante o processo de **Pipeline** , várias métricas são capturadas e comparadas aos Indicadores-chave de desempenho (KPIs) definidos pelo proprietário da empresa ou aos padrões definidos pelos Serviços gerenciados da Adobe.
 
@@ -44,7 +44,7 @@ Como parte do pipeline, o código fonte é verificado para garantir que as impla
 
 | Nome | Definição | Categoria | Limite de falha |
 |--- |--- |--- |--- |
-| Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 Vulnerabilidade<br/> Menor C = pelo menos 1 Vulnerabilidade Principal <br/>D = pelo menos 1 Vulnerabilidade Crítica <br/>E = pelo menos 1 Vulnerabilidade Bloqueadora |  Crítico | &lt; B |
+| Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 Vulnerabilidade<br/> Menor C = pelo menos 1 Vulnerabilidade Principal <br/>D = pelo menos 1 Vulnerabilidade Crítica <br/>E = pelo menos 1 Vulnerabilidade Bloqueadora | Crítico | &lt; B |
 | Classificação da confiabilidade | A = 0 Bug <br/>B = pelo menos 1 Bug Menor <br/>C = pelo menos 1 Bug Principal <br/>D = pelo menos 1 Bug Crítico E = pelo menos 1 Bug Bloqueador | Importante | &lt; C |
 | Classificação da manutenção | O custo de correção excepcional para cheiros de código é: <br/><ul><li>&lt;=5% do tempo que já passou para o aplicativo, a classificação é A </li><li>entre 6 e 10%, a classificação é de </li><li>entre 11 e 20% a classificação é de C </li><li>entre 21 e 50% a classificação é um D</li><li>algo acima de 50% é um E</li></ul> | Importante | &lt; A |
 | Cobertura | Uma combinação da cobertura da linha de teste da unidade e da cobertura da condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>onde: CT = condições que foram avaliadas como 'true' pelo menos uma vez durante a execução de testes de unidade <br/>CF = condições que foram avaliadas como 'false' pelo menos uma vez durante a execução de testes de unidade <br/>LC = linhas cobertas = lines_to_cover - uncovered_lines <br/><br/> B = número total de condições <br/>EL = número total de linhas executáveis (lines_to_cover) | Importante | &lt; 50% |
@@ -107,17 +107,16 @@ A tabela a seguir lista as verificações atuais:
 
 | **Nome** | **Implementação da verificação de integridade** | **Categoria** |
 |---|---|---|
-| A prontidão para anexar API do firewall de desserialização está em um estado aceitável | Disponibilidade da API de anexo do firewall de desserialização |  Crítico |
-| O firewall de desserialização está funcionando | Firewall de desserialização funcional |  Crítico |
-| O firewall de desserialização é carregado | Firewall de desserialização carregado |  Crítico |
-| A implementação AuthorizableNodeName não expõe a ID autorizada no nome/caminho do nó. | Geração do nome do nó autorizada |  Crítico |
-| As senhas padrão foram alteradas | Contas padrão de logon |  Crítico |
-| O servlet GET padrão Sling está protegido contra ataques DOS. | Sling Get Servlet |  Crítico |
-| O Dispatcher está filtrando corretamente solicitações | Configuração do Dispatcher do controle de qualidade |  Crítico |
-| O Manipulador de Sling Java Script está configurado adequadamente | Sling Java Script Handler |  Crítico |
-| O Sling JSP Script Handler está configurado adequadamente | Manipulador de script JSP Sling |  Crítico |
-| O SSL está configurado corretamente | Configuração do SSL |  Crítico |
-| Nenhuma política de perfil de usuário obviamente insegura encontrada | Acesso padrão ao perfil de usuário |  Crítico |
+| A prontidão para anexar API do firewall de desserialização está em um estado aceitável | Disponibilidade da API de anexo do firewall de desserialização | Crítico |
+| O firewall de desserialização está funcionando | Firewall de desserialização funcional | Crítico |
+| O firewall de desserialização é carregado | Firewall de desserialização carregado | Crítico |
+| A implementação AuthorizableNodeName não expõe a ID autorizada no nome/caminho do nó. | Geração do nome do nó autorizada | Crítico |
+| As senhas padrão foram alteradas | Contas padrão de logon | Crítico |
+| O servlet GET padrão Sling está protegido contra ataques DOS. | Sling Get Servlet | Crítico |
+| O Manipulador de Sling Java Script está configurado adequadamente | Sling Java Script Handler | Crítico |
+| O Sling JSP Script Handler está configurado adequadamente | Manipulador de script JSP Sling | Crítico |
+| O SSL está configurado corretamente | Configuração do SSL | Crítico |
+| Nenhuma política de perfil de usuário obviamente insegura encontrada | Acesso padrão ao perfil de usuário | Crítico |
 | O Filtro do Sling Referrer está configurado para impedir ataques de CSRF | Sling Referrer Filter | Importante |
 | O Adobe Granite HTML Library Manager está configurado adequadamente | Configuração do gerenciador de biblioteca HTML CQ | Importante |
 | O pacote de suporte CRXDE está desativado | Suporte do CRXDE | Importante |
@@ -144,9 +143,9 @@ A tabela a seguir resume a matriz de teste de desempenho usando o sistema portá
 
 | **Métrica** | **Categoria** | **Limite de falha** |
 |---|---|---|
-| Taxa de erro de solicitação de página % |  Crítico | &gt;= 2% |
-| Taxa de utilização da CPU |  Crítico | &gt;= 80% |
-| Tempo de espera de E/S de disco |  Crítico | &gt;= 50% |
+| Taxa de erro de solicitação de página % | Crítico | &gt;= 2% |
+| Taxa de utilização da CPU | Crítico | &gt;= 80% |
+| Tempo de espera de E/S de disco | Crítico | &gt;= 50% |
 | Tempo de Resposta de 95% | Importante | &gt;= KPI de nível de programa |
 | Tempo de resposta máximo | Importante | &gt;= 18 segundos |
 | Exibições de página por minuto | Importante | &lt; KPI de nível de programa |
