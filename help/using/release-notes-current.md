@@ -1,29 +1,36 @@
 ---
-title: Notas de versão para 2019.11.0
-seo-title: Notas de versão do AEM Cloud Manager para 2019.11.0
-description: Siga esta página para obter informações sobre a versão 2019.11.0 do Cloud Manager.
-seo-description: Siga esta página para obter informações sobre a versão 2019.11.0 do AEM Cloud Manager.
+title: Notas de versão para 2019.12.0
+seo-title: Notas de versão do AEM Cloud Manager para 2019.12.0
+description: Siga esta página para obter informações sobre a versão 2019.12.0 do Cloud Manager.
+seo-description: Siga esta página para obter informações sobre a versão 2019.12.0 do AEM Cloud Manager.
 translation-type: tm+mt
-source-git-commit: 52c54568d8ab7b5091c25b3b65b4baa126bf61f5
+source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
 
 ---
 
-# Notas de versão para 2019.11.0 {#release-notes-for}
+# Notas de versão para 2019.12.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2019.11.0 e adiciona atualizações ao processo de validação de pipeline e melhorias ao teste de desempenho de ativos.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2019.12.0 e adiciona atualizações à execução de pipeline e melhorias nas verificações de qualidade de código.
 Siga as seções abaixo para obter mais detalhes.
 
-## Data de lançamento {#release-date}
+## Release Date {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.11.0 é 7 de novembro de 2019.
+A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.12.0 é 12 de dezembro de 2019.
 
 ## Novidades {#whats-new}
 
-* Se a etapa de pipeline de validação falhar, agora exibirá o erro de validação específico encontrado.
-* O mecanismo usado para excluir ativos durante o teste de desempenho de ativos foi aprimorado.
-* Os cartões *Pipelines* e *Environments* na página **Visão geral** foram atualizados visualmente.
-* O Alternador de programas foi movido (agora está sob o logotipo do Adobe Experience Manager).
+* As etapas na execução do pipeline agora mostram o carimbo de data e hora de conclusão para cada etapa.
+* As verificações de qualidade de código para projetos que não contêm código Java agora reportam uma taxa de cobertura de código de 100%.
+* A verificação de integridade da Configuração do Dispatcher CQ foi removida.
+
 
 ## Correções de erros {#bug-fixes}
 
-* Em algumas situações, selecionar a opção **Ignorar alterações** do balanceador de carga em pipelines que não sejam de produção não ativou essa opção.
+* As datas não eram exibidas corretamente em determinados navegadores.
+* Em casos raros, o pipeline de produção passaria para a etapa de aprovação enquanto o teste de desempenho ainda estava em execução.
+* Em determinados estados, os botões na área superior da página de visão geral não estavam alinhados corretamente.
+* Em determinadas circunstâncias, os utilizadores não autorizados viram um botão para iniciar o pipeline, embora o botão em si não fosse clicável.
+* Os botões de ação para pipelines de não produção às vezes eram exibidos no local errado.
+* Os pacotes com o tipo de nó granite:Ranking não puderam ser verificados para verificar se havia certas violações de regras de qualidade.
+* Algumas falhas no processo de qualidade do código foram contadas incorretamente como erros.
+* Não foi possível carregar os dados de monitoramento de determinadas topologias.
