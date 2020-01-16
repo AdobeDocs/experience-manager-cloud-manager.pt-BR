@@ -6,15 +6,15 @@ seo-description: Você pode atribuir associações de função específicas adic
 uuid: fa204c28-83df-48bb-8360-e158f080dee7
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: requisitos
+topic-tags: requirements
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
 translation-type: tm+mt
-source-git-commit: 73203dca7b20570103af429cf933610941b787be
+source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
 
 ---
 
 
-# Adicionar usuários e funções{#add-users-and-roles}
+# Adicionar usuários e funções {#add-users-and-roles}
 
 Muitos recursos em [!UICONTROL Cloud Manager] exigem permissões específicas para operar. Por exemplo, somente alguns usuários podem definir os Indicadores-chave de desempenho (KPIs) para um programa. Essas permissões são logicamente agrupadas em funções.
 
@@ -41,16 +41,10 @@ A tabela a seguir resume as funções:
 |--- |--- |
 | Proprietário da empresa | Responsável por definir KPIs, aprovar implantações de produção e substituir falhas importantes de 3 níveis. |
 | Gerente do programa | Usa [!UICONTROL Cloud Manager] para executar a configuração do grupo, verificar o status e exibir KPIs. Pode aprovar falhas importantes de 3 níveis. |
-| Gerenciador de implantação | Gerencia operações de implantação. Usa [!UICONTROL Cloud Manager] para executar implantações de estágio/produção. É possível editar Pipelines de CI/CD. Pode aprovar falhas importantes de 3 níveis. Pode obter acesso ao repositório Git. Entre em contato com seu representante CSE/AMS para solicitar. |
-| Desenvolvedor | Desenvolve e testa o código personalizado do aplicativo. Utiliza principalmente [!UICONTROL Cloud Manager] para ver o estado. Deve obter acesso ao repositório Git para confirmação de código. Entre em contato com seu representante CSE/AMS ao adicionar um usuário com essa função para conceder acesso ao repositório Git. |
+| Gerenciador de implantação | Gerencia operações de implantação. Usa [!UICONTROL Cloud Manager] para executar implantações de estágio/produção. É possível editar Pipelines de CI/CD. Pode aprovar falhas importantes de 3 níveis. Pode obter acesso ao repositório Git. |
+| Desenvolvedor | Desenvolve e testa o código personalizado do aplicativo. Utiliza principalmente [!UICONTROL Cloud Manager] para ver o estado. Pode obter acesso ao repositório Git para confirmação de código. |
 | Engenheiro de sucesso do cliente | Geralmente oferece suporte ao sucesso do cliente para clientes AMS. Interage com [!UICONTROL Cloud Manager] a finalidade de executar implantações que exigem supervisão CSE. |
 | Autor de conteúdo | Geralmente não interage com [!UICONTROL Cloud Manager]. Pode usar o [!UICONTROL Cloud Manager] Comutador de programas (navegando de [!UICONTROL Experience Cloud]) para acessar o AEM. |
-
->[!NOTE]
->
->O acesso ao repositório do [!UICONTROL Cloud Manager] Git é gerenciado pelo seu CSE. Entre em contato com eles para adicionar e remover usuários.
->
->Se um usuário recém-adicionado exigir acesso ao repositório Git, será necessário entrar em contato com seu representante CSE/AMS para que o acesso seja concedido. Essas funções não fornecem acesso automático ao repositório Git. Você só pode ter no máximo 3 usuários com acesso ao repositório Git.
 
 ## Usando o Admin Console para criar um perfil {#using-admin-console-to-create-a-profile}
 
