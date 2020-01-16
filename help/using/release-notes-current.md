@@ -1,36 +1,30 @@
 ---
-title: Notas de versão para 2019.12.0
-seo-title: Notas de versão do AEM Cloud Manager para 2019.12.0
-description: Siga esta página para obter informações sobre a versão 2019.12.0 do Cloud Manager.
-seo-description: Siga esta página para obter informações sobre a versão 2019.12.0 do AEM Cloud Manager.
+title: Notas de versão para 2020.1.0
+seo-title: Notas de versão do AEM Cloud Manager para 2020.1.0
+description: Siga esta página para obter informações sobre a versão 2020.1.0 do Cloud Manager
+seo-description: Siga esta página para obter informações sobre a versão 2020.1.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
+source-git-commit: e22345e23731cf97502e6a8654d254d68f884ba7
 
 ---
 
-# Notas de versão para 2019.12.0 {#release-notes-for}
+# Notas de versão para 2020.1.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2019.12.0 e adiciona atualizações à execução de pipeline e melhorias nas verificações de qualidade de código.
-Siga as seções abaixo para obter mais detalhes.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2020.1.0 e adiciona atualizações ao acesso às credenciais Git e à experiência de logon.
 
 ## Release Date {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.12.0 é 12 de dezembro de 2019.
+A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.1.0 é 16 de janeiro de 2020.
 
 ## Novidades {#whats-new}
 
-* As etapas na execução do pipeline agora mostram o carimbo de data e hora de conclusão para cada etapa.
-* As verificações de qualidade de código para projetos que não contêm código Java agora reportam uma taxa de cobertura de código de 100%.
-* A verificação de integridade da Configuração do Dispatcher CQ foi removida.
+* As credenciais Git agora podem ser obtidas na interface do usuário do Gerenciador de nuvem. Consulte [Acessando o Git](/help/using/accessing-git.md) para obter mais detalhes.
+* A experiência de logon e a estrutura do URL foram alteradas como parte de uma iniciativa da Adobe. Marcadores antigos serão redirecionados para os novos URLs.
 
 
 ## Correções de erros {#bug-fixes}
 
-* As datas não eram exibidas corretamente em determinados navegadores.
-* Em casos raros, o pipeline de produção passaria para a etapa de aprovação enquanto o teste de desempenho ainda estava em execução.
-* Em determinados estados, os botões na área superior da página de visão geral não estavam alinhados corretamente.
-* Em determinadas circunstâncias, os utilizadores não autorizados viram um botão para iniciar o pipeline, embora o botão em si não fosse clicável.
-* Os botões de ação para pipelines de não produção às vezes eram exibidos no local errado.
-* Os pacotes com o tipo de nó granite:Ranking não puderam ser verificados para verificar se havia certas violações de regras de qualidade.
-* Algumas falhas no processo de qualidade do código foram contadas incorretamente como erros.
-* Não foi possível carregar os dados de monitoramento de determinadas topologias.
+* As implantações em topologias somente para autor não implantaram alterações na configuração do dispatcher.
+* Em determinadas configurações, não foi possível criar um pipeline somente de qualidade de código.
+* O cartão de resumo do ambiente na página de visão geral às vezes não era renderizado corretamente.
+* As execuções de pipeline podem expirar em topologias grandes.
