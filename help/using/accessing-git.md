@@ -4,7 +4,7 @@ seo-title: Acesso ao Git
 description: Esta página descreve como você pode acessar e gerenciar o repositório Git.
 seo-description: Siga esta página para saber como acessar e gerenciar seu repositório Git.
 translation-type: tm+mt
-source-git-commit: f0d11c07ddbde1550e038abfce3bb081f24b6f3c
+source-git-commit: 027408326960153963d2e8604dc0ed33d921df66
 
 ---
 
@@ -25,7 +25,7 @@ Use o botão **Gerenciar Git** disponível na interface do usuário do Cloud Man
 
    Além disso, se você selecionar a guia pipeline **Não-produção** , também será exibida a opção **Gerenciar Git** .
 
-   ![](assets/manage-git2.png)
+   ![](assets/manage-git-new2.png)
 
 >[!NOTE]
 >A opção **Gerenciar Git** está visível para os usuários na função Desenvolvedor ou Gerenciador de implantação. Clicar nesse botão abre uma caixa de diálogo que permite que o usuário localize o URL de seu Repositório Git do Cloud Manager junto com seu nome de usuário e senha.
