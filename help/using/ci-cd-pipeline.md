@@ -1,18 +1,18 @@
 ---
-title: Pipeline CI/CD
-seo-title: Pipeline CI/CD
+title: Pipeline de CI/CD
+seo-title: Pipeline de CI/CD
 description: 'null'
 seo-description: Siga esta seção para saber mais sobre o pipeline de CI/CD, que lida com implantações para o palco e produção no Cloud Manager.
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
-topic-tags: introdução
+topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
-source-git-commit: 949d3cf0239a02875ba4ad1888e081f104dec2e2
+source-git-commit: 2d7b18ea55e2bd5879cf8bd896cafed4d46c0011
 
 ---
 
-
-# Pipeline CI/CD {#ci-cd-pipeline}
+SHANKARI_TEST_CHANGE
+# Pipeline de CI/CD {#ci-cd-pipeline}
 
 ## Visão geral do pipeline {#pipeline-overview}
 
@@ -65,4 +65,4 @@ Este é um exemplo de uma verificação de código com problemas identificados p
 
 ### Como configurar portas {#how-to-setup-gates}
 
-Consulte **[Configuração de portões](configuring-pipeline.md)** para obter detalhes sobre como configurar seu código, suas portas de qualidade e desempenho.
+Consulte **[Configuração de portões](configuring-pipeline.md)**para obter detalhes sobre como configurar seu código, suas portas de qualidade e desempenho.
