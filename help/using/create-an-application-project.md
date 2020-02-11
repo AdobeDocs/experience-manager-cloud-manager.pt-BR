@@ -6,10 +6,10 @@ seo-description: Siga esta página para saber mais sobre como configurar um proj
 uuid: 7b976ebf-5358-49d8-a58d-0bae026303fa
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: introdução
+topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 8daee34e6cfaddb31fc447f64de9ce5ca7ed54ba
+source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: 8daee34e6cfaddb31fc447f64de9ce5ca7ed54ba
 
 Quando os clientes são embarcados no Cloud Manager, eles recebem um repositório git vazio. Os clientes atuais do Adobe Managed Services (AMS) (ou clientes locais do AEM que estão migrando para o AMS) geralmente já têm o código do projeto em git (ou outro sistema de controle de versão) e importarão seu projeto para o repositório de git do Cloud Manager. Novos clientes, no entanto, não têm projetos existentes.
 
-Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto AEM mínimo como ponto de partida. Esse processo se baseia no [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto AEM mínimo como ponto de partida. Esse processo se baseia no [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 <!-- 
 
@@ -38,6 +38,7 @@ Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
 
    ![](assets/image2018-10-3_14-29-44.png)
 
+[Shankari] a segunda etapa descrita abaixo está incorreta. exclua-o, por favor.
 1. Clique em **Criar** para navegar até a tela Configuração **do** pipeline.
 
    ![](assets/image2018-10-3_14-30-22.png)
@@ -121,7 +122,7 @@ Para suportar isso, o Cloud Manager adiciona essas variáveis de ambiente padrã
 
 | **Nome da variável** | **Definição** |
 |---|---|
-| CM_BUILD | Sempre definido como "true" |
+| CM_BUILD | Sempre definido como &quot;true&quot; |
 | RAMIFICAÇÃO | A ramificação configurada para a execução |
 | CM_PIPELINE_ID | O identificador de pipeline numérico |
 | CM_PIPELINE_NAME | O nome do pipeline |
