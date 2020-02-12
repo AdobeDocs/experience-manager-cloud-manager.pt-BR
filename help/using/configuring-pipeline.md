@@ -6,11 +6,11 @@ seo-description: 'Antes de começar a implantar o código, é necessário defini
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: usando
-content-type: referência
+topic-tags: using
+content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 
 ---
 
@@ -25,7 +25,7 @@ A página a seguir explica como configurar o **Pipeline**. Para consultar mais i
 
 A configuração do CI/CD Production Pipeline define o acionador que iniciará o pipeline, os parâmetros que controlam a implantação da produção e os parâmetros de teste de desempenho.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
 ## Como entender o fluxo {#understanding-the-flow}
@@ -78,7 +78,6 @@ Selecione a ramificação Git e clique em **Avançar**.
 
    * **On Git Changes** (Alterações no Git) - inicia o pipeline de CI/CD sempre que houver confirmações adicionadas à ramificação git configurada. Mesmo se você selecionar essa opção, sempre poderá iniciar o pipeline manualmente.
    * **Manual** - usar a interface de usuário para iniciar manualmente o pipeline.
-   * **Programada** - esta opção estará disponível em breve em uma versão futura.
    Durante a configuração ou edição do pipeline, o Gerenciador de implantação tem a opção de definir o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade, como Qualidade de código, Teste de segurança e Teste de desempenho.
 
    Isso é útil para clientes que desejam processos mais automatizados. As opções disponíveis são:
@@ -101,7 +100,7 @@ Selecione a ramificação Git e clique em **Avançar**.
 >
 >Se a opção **Agendado** estiver selecionada, você poderá programar a implantação de produção para o pipeline **após** a implantação do estágio (e **Usar aprovação** em tempo real, se isso tiver sido ativado) aguardar a definição de uma programação. O usuário também pode optar por executar a implantação de produção imediatamente.
 >
->Consulte [**Implantar seu código**](deploying-code.md)para definir a programação de implantação ou executar a produção imediatamente.
+>Consulte [**Implantar seu código **](deploying-code.md)para definir a programação de implantação ou executar a produção imediatamente.
 
 ![](assets/Configure_ci-cd-3.png)
 
@@ -170,7 +169,7 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
    * Cada uma das 3000 páginas no conjunto Novas páginas será acessada uma vez - ((200 * 0.5) / 3000) * 30 = 1
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
-   **AEM Assets:**
+   **Ativos AEM:**
 
    O Cloud Manager executa testes de desempenho para programas do AEM Assets, carregando ativos repetidamente por um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo, bem como várias métricas no nível do sistema. Esse recurso pode carregar imagens e documentos PDF. A distribuição de quantos ativos de cada tipo são carregados por minuto é definida na tela Configuração do pipeline ou Editar.
 
@@ -192,7 +191,7 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 
 ## Pipelines que não são de produção e qualidade de código
 
-Para além do principal gasoduto que vai para a fase de construção e de produção, os clientes estão em condições de instalar gasodutos adicionais, denominados "gasodutos **não produtivos"**. Esses pipelines sempre executam as etapas de qualidade de compilação e código. Como opção, eles também podem implantar no ambiente do Adobe Managed Services.
+Para além do principal gasoduto que vai para a fase de construção e de produção, os clientes estão em condições de instalar gasodutos adicionais, denominados &quot;gasodutos **não produtivos&quot;**. Esses pipelines sempre executam as etapas de qualidade de compilação e código. Como opção, eles também podem implantar no ambiente do Adobe Managed Services.
 
 ## Tutorial em vídeo {#video-tutorial-two}
 
@@ -200,7 +199,7 @@ Para além do principal gasoduto que vai para a fase de construção e de produ�
 
 IC/CD Os gasodutos de não produção são divididos em duas categorias: gasodutos de qualidade do código e gasodutos de implantação. A qualidade do código anula todos os códigos de uma ramificação Git para criar e ser avaliada em relação à verificação da qualidade do código do Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 Na tela inicial, esses pipelines são listados em um novo cartão:
 
