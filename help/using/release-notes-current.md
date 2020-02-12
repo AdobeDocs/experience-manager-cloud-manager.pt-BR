@@ -1,30 +1,34 @@
 ---
-title: Notas de versão para 2020.1.0
-seo-title: Notas de versão do AEM Cloud Manager para 2020.1.0
-description: Siga esta página para obter informações sobre a versão 2020.1.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.1.0 do AEM Cloud Manager
+title: Notas de versão para 2020.2.0
+seo-title: Notas de versão do AEM Cloud Manager para 2020.2.0
+description: Siga esta página para obter informações sobre a versão 2020.2.0 do Cloud Manager
+seo-description: Siga esta página para obter informações sobre a versão 2020.2.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: e22345e23731cf97502e6a8654d254d68f884ba7
+source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 
 ---
 
 # Notas de versão para 2020.1.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2020.1.0 e adiciona atualizações ao acesso às credenciais Git e à experiência de logon.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2020.2.0 e adiciona atualizações ao acesso às credenciais Git e à experiência de logon.
 
 ## Release Date {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.1.0 é 16 de janeiro de 2020.
+A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.2.0 é 13 de fevereiro de 2020.
 
 ## Novidades {#whats-new}
 
-* As credenciais Git agora podem ser obtidas na interface do usuário do Gerenciador de nuvem. Consulte [Acessando o Git](/help/using/accessing-git.md) para obter mais detalhes.
-* A experiência de logon e a estrutura do URL foram alteradas como parte de uma iniciativa da Adobe. Marcadores antigos serão redirecionados para os novos URLs.
-
+* A versão do arquivo do Adobe Experience Manager foi atualizada para a versão 22.
+* Adicionar instâncias ativas nos registros de implantações de palco
+* Os URLs usados nas notificações da Experience Cloud foram otimizados para evitar um redirecionamento extra.
+* As etapas de execução de pipeline que expiraram agora indicam explicitamente isso.
+* A etapa de Digitalização de código agora tem um registro baixável.
+* A etapa Teste de segurança agora tem um registro baixável.
+* A lista de páginas acessadas durante o Teste de desempenho agora pode ser baixada.
+* A planilha que contém problemas descobertos durante a verificação de código agora tem uma coluna com um link para a documentação da regra específica.
+* Se a etapa Teste de desempenho não for iniciada, o motivo da falha será exibido.
 
 ## Correções de erros {#bug-fixes}
 
-* As implantações em topologias somente para autor não implantaram alterações na configuração do dispatcher.
-* Em determinadas configurações, não foi possível criar um pipeline somente de qualidade de código.
-* O cartão de resumo do ambiente na página de visão geral às vezes não era renderizado corretamente.
-* As execuções de pipeline podem expirar em topologias grandes.
+* Às vezes, as políticas de segurança do navegador impediriam que determinados botões na tela de execução do pipeline funcionassem corretamente.
+* Os links Visão geral, Ambientes e Atividade às vezes estavam disponíveis na página de aterrissagem do Cloud Manager.
