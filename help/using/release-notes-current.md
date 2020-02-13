@@ -4,13 +4,13 @@ seo-title: Notas de versão do AEM Cloud Manager para 2020.2.0
 description: Siga esta página para obter informações sobre a versão 2020.2.0 do Cloud Manager
 seo-description: Siga esta página para obter informações sobre a versão 2020.2.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
+source-git-commit: f9c8c1d7b63749e6994481324392aee7330046fb
 
 ---
 
 # Notas de versão para 2020.1.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2020.2.0 e adiciona atualizações ao acesso às credenciais Git e à experiência de logon.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.2.0.
 
 ## Release Date {#release-date}
 
@@ -19,7 +19,7 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.2.0 é 13 de fe
 ## Novidades {#whats-new}
 
 * A versão do arquivo do Adobe Experience Manager foi atualizada para a versão 22.
-* Adicionar instâncias ativas nos registros de implantações de palco
+* Adição de instâncias ativas em registros de implantações de palco
 * Os URLs usados nas notificações da Experience Cloud foram otimizados para evitar um redirecionamento extra.
 * As etapas de execução de pipeline que expiraram agora indicam explicitamente isso.
 * A etapa de Digitalização de código agora tem um registro baixável.
