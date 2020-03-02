@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: a038a3d6e35ff28190441e9d11d9c539641a85af
+source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
 
 ---
 
@@ -42,6 +42,7 @@ Para saber mais sobre como configurar seus usuários, consulte [Configuração d
 |--- |--- |--- |--- |--- |--- |--- |
 | Ler aplicativo | Leia os KPIs do programa. | x | x | x | x | x |
 | Aplicativo de gravação | Configuração ou edição do programa. | x |  |  |  |  |
+| Adicionar programa | Adicionar novo programa. | x |  |  |  |  |
 | Ler ambiente | Consulte Detalhes do ambiente. | x | x | x | x | x |
 | Criar execução | Inicie o Pipeline. | x | x | x |  |  |
 | Execução de leitura | Consulte status de execução. | x | x | x | x | x |
