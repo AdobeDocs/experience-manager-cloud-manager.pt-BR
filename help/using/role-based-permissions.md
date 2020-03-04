@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
+source-git-commit: 157370b193c104915be063d1a4375f81839b88a2
 
 ---
 
@@ -26,7 +26,7 @@ A lista de tabelas a seguir define as possíveis funções que você pode atribu
 | **[!UICONTROL Cloud Manager]Função ** | **Descrição** |
 |---|---|
 | Proprietário da empresa | Usuário principal que conclui a [!UICONTROL Cloud Manager] configuração inicial. Responsável por definir KPIs, aprovar implantações de produção e substituir falhas importantes de 3 níveis. |
-| Gerente do programa | Usa [!UICONTROL Cloud Manager] para executar a configuração do grupo, verificar o status e exibir KPIs. Pode aprovar falhas importantes de 3 níveis. |
+| Gerente do programa | Usa [!UICONTROL Cloud Manager] para executar a configuração do grupo, revisar o status e exibir KPIs. Pode aprovar falhas importantes de 3 níveis. |
 | Gerenciador de implantação | Gerencia as operações de implantação. Usa [!UICONTROL Cloud Manager] para executar implantações de estágio e produção. Pode aprovar falhas importantes de 3 níveis. Tem acesso ao repositório Git. |
 | Desenvolvedor | Desenvolve e testa o código personalizado do aplicativo. Utiliza principalmente [!UICONTROL Cloud Manager] para ver o estado. Tem acesso de confirmação ao repositório Git. |
 | Engenheiro de sucesso do cliente | Geralmente oferece suporte ao sucesso do cliente para clientes AMS. Interage com [!UICONTROL Cloud Manager] a finalidade de executar implantações que exigem a supervisão do CSE (Customer Success Engineer). |
@@ -53,8 +53,10 @@ Para saber mais sobre como configurar seus usuários, consulte [Configuração d
 | Cancelamento de execução | Cancelar a execução atual. | x | x | x |  |  |
 | Falhas na Porta de Qualidade de Substituição de Execução | Aprovar Falhas Importantes Do Portão De Qualidade. | x | x | x |  |  |
 | Criação de Pipeline | Configuração / Editar Pipeline. |  | x |  |  |  |
-| Leitura do pipeline | Consulte Detalhes do pipeline. | x | x | x | x | x |
+| Leitura do Pipeline | Consulte Detalhes do pipeline. | x | x | x | x | x |
 | Gravação de Pipeline | Configuração / Editar Pipeline. |  | x |  |  |  |
-| Modificação de Pipeline Aprovação | Permite editar a opção Proprietário da empresa. |  | x |  |  |  |
+| Modificação de Pipeline Aprovação | Permite a edição da opção Proprietário da empresa. |  | x |  |  |  |
 | Implantação gerenciada de modificação de pipeline | Permite a edição da opção Superintendência de CSE. |  | x |  |  |  |
 | Leitura da etapa | Consulte os resultados das métricas de qualidade da etapa. | x | x | x | x | x |
+| Gerar token de acesso pessoal | Git de acesso. |  | x |  | x |  |
+
