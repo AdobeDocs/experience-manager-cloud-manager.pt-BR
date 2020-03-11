@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
+source-git-commit: b093f1712d9ca9e91b87e925a43e2992a4f11cc0
 
 ---
 
@@ -22,23 +22,13 @@ Quando os clientes são embarcados no Cloud Manager, eles recebem um repositóri
 
 Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto AEM mínimo como ponto de partida. Esse processo se baseia no [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
-<!-- 
-
-Comment Type: annotation
-Last Modified By: jsyal
-Last Modified Date: 2018-10-08T12:52:50.071-0400
-
-2018.8.0: Added this new section
-
- -->
 
 Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
 
-1. Quando você fizer logon no Cloud Manager e a configuração básica do programa for concluída, uma chamada especial para o cartão de ação será exibida na tela **Visão geral** , se o repositório estiver vazio.
+1. Quando você fizer logon no Cloud Manager e a configuração básica do programa for concluída, uma chamada especial para o cartão de ação será exibida na tela **Visão geral** se o repositório estiver vazio.
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-[Shankari] a segunda etapa descrita abaixo está incorreta. exclua-o, por favor.
 1. Clique em **Criar** para navegar até a tela Configuração **do** pipeline.
 
    ![](assets/image2018-10-3_14-30-22.png)
@@ -50,13 +40,13 @@ Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
    * **Novo nome** da ramificação - por padrão, é *mestre*
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
-   A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração do Archetype. Muitos desses parâmetros têm valores padrão que são gerados com base no **Título**.
+   A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração para o Archetype. Muitos desses parâmetros têm valores padrão que são gerados com base no **Título**.
 
    ![](assets/screen_shot_2018-10-08at60032am.png)
 
    >[!NOTE]
    >
-   >Por exemplo, se o **Título** for ***We.Finance***, o parâmetro de Id de artefato de base de máscara será gerado como ***com.wefinance***. Esses valores podem ser alterados, se desejado.
+   >Por exemplo, se o **Título** for ***We.Finance***, o parâmetro de Id de artefato da base de Maven é gerado como ***com.wefinance***. Esses valores podem ser alterados, se desejado.
    >
    >
    >Por exemplo, você pode alterar do ***valor gerado com.wefinance*** para ***net.wefinance***.
@@ -73,7 +63,7 @@ Para ser criado e implantado com êxito com o Cloud Manager, os projetos AEM exi
 * Deve haver um arquivo *pom.xml* na raiz do repositório Git. Esse arquivo *pom.xml* pode fazer referência a quantos submódulos (que por sua vez podem ter outros submódulos etc.) conforme necessário.
 
 * Você pode adicionar referências a repositórios de artefatos Maven adicionais em seus arquivos *pom.xml* . No entanto, o acesso a repositórios de artefatos protegidos por senha ou pela rede não é suportado.
-* Os pacotes de conteúdo implantáveis são detectados ao verificar se há arquivos *zip* do pacote de conteúdo contidos em um diretório chamado *target*. Qualquer número de submódulos pode produzir pacotes de conteúdo.
+* Os pacotes de conteúdo implantáveis são detectados ao verificar se há arquivos *zip* do pacote de conteúdo que estão contidos em um diretório chamado *target*. Qualquer número de submódulos pode produzir pacotes de conteúdo.
 
 * Os artefatos do Dispatcher que podem ser implantados são descobertos pela varredura de arquivos *zip* (novamente, contidos em um diretório chamado *target*) que têm diretórios chamados *conf* e *conf.d*.
 
@@ -154,7 +144,7 @@ Depois de configuradas, essas variáveis estarão disponíveis como variáveis d
 >
 >Os nomes das variáveis de ambiente podem conter apenas caracteres alfanuméricos e sublinhado (_). Por convenção, os nomes devem ser todos maiúsculos.
 
-## Ativar perfis Maven no Cloud Manager {#activating-maven-profiles-in-cloud-manager}
+## Ativação de perfis Maven no Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
 Em alguns casos limitados, pode ser necessário variar um pouco o processo de compilação ao ser executado no Gerenciador de nuvem em vez de quando é executado em estações de trabalho de desenvolvedor. Nesses casos, os Perfis [](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) Maven podem ser usados para definir como a compilação deve ser diferente em ambientes diferentes, incluindo o Cloud Manager.
 
@@ -198,7 +188,7 @@ Por exemplo, se você quiser enviar uma mensagem simples somente quando a compil
 >
 >Para testar esse perfil em uma estação de trabalho de desenvolvedor, você pode ativá-lo na linha de comando (com `-PcmBuild`) ou no Ambiente de desenvolvimento integrado (IDE).
 
-E se você quiser enviar uma mensagem simples somente quando a criação for executada fora do Gerenciador de nuvem, você faria isso:
+E se você quiser enviar uma mensagem simples somente quando a criação for executada fora do Gerenciador de nuvem, você deve fazer o seguinte:
 
 ```xml
         <profile>
@@ -299,7 +289,7 @@ Essa mesma técnica pode ser usada para instalar pacotes específicos de idioma,
 No Cloud Manager, as compilações podem produzir qualquer número de pacotes de conteúdo.
 Por vários motivos, pode ser desejável produzir um pacote de conteúdo, mas não implantá-lo. Isso pode ser útil, por exemplo, ao criar pacotes de conteúdo usados apenas para teste ou que serão reempacotados por outra etapa do processo de compilação, ou seja, como um subpacote de outro pacote.
 
-Para acomodar esses cenários, o Cloud Manager procurará uma propriedade chamada ***cloudManagerTarget*** nas propriedades dos pacotes de conteúdo criados. Se essa propriedade estiver definida como nenhum, o pacote será ignorado e não implantado. O mecanismo para definir essa propriedade depende da forma como a compilação está produzindo o pacote de conteúdo. Por exemplo, com o plugin filevault-maven, você configuraria o plug-in da seguinte maneira:
+Para acomodar esses cenários, o Cloud Manager procurará uma propriedade chamada ***cloudManagerTarget*** nas propriedades dos pacotes de conteúdo incorporados. Se essa propriedade estiver definida como Nenhum, o pacote será ignorado e não implantado. O mecanismo para definir essa propriedade depende da forma como a compilação está produzindo o pacote de conteúdo. Por exemplo, no plugin filevault-maven, você o configuraria da seguinte maneira:
 
 ```xml
         <plugin>
