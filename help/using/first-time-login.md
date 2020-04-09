@@ -6,10 +6,10 @@ seo-description: Siga esta página se tiver configurado suas configurações ger
 uuid: 7c8458a6-6de8-4946-ac0c-fb10bce17a15
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: introdução
+topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
@@ -26,34 +26,34 @@ Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], 
 
 ### Programas do Cloud Manager {#programs-video}
 
-O vídeo a seguir fornece uma visão geral dos Programas do Cloud Manager que representam conjuntos de ambientes AEM que suportam conjuntos lógicos de iniciativas de negócios, normalmente correspondentes a um SLA (Service Level Agreement, contrato de nível de serviço) adquirido.
+O vídeo a seguir fornece uma visão geral dos Programas do Gerenciador de nuvem que representam conjuntos de ambientes AEM que suportam conjuntos lógicos de iniciativas de negócios, geralmente correspondentes a um SLA (Service Level Agreement, contrato de nível de serviço) adquirido.
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
 ## Logon pela primeira vez {#logging-in-for-the-first-time}
 
-1. Faça logon na **Adobe[!UICONTROL Experience Cloud]** e você verá a lista de **Programas**.
+1. Faça logon na **Adobe[!UICONTROL Experience Cloud]**e você verá a lista de** Programas **.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
 1. Selecione o programa (por exemplo, **We.Retail Global**) e clique no ícone superior esquerdo para abrir [!UICONTROL Cloud Manager].
 
-   ![](assets/screen_shot_2018-06-04at12611pm.png)
+   ![](assets/first-timea1.png)
 
 1. O painel para [!UICONTROL Cloud Manager] é exibido.
 
    ![](assets/FirstLogin1.png)
 
-1. Clique em **Configurar programa** para definir a descrição do **programa** e definir os Indicadores-chave de desempenho (KPIs).
+1. Clique em **Programa de configuração** para definir a descrição do **programa** e os Indicadores principais de desempenho (KPIs).
 
    >[!NOTE]
    >
-   >Consulte [Configurar seu programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
+   >Consulte [Configurar seu Programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
 
 ## Tutorial em vídeo {#video-tutorial-two}
 
 ### Guia Atividade do Cloud Manager {#activity-video}
 
-O Cloud Manager fornece uma visão consolidada da atividade de um Programa, relacionando todas as execuções de Pipeline CI/CD, tanto a produção quanto a não produção, permitindo a visibilidade da atividade atual e passada, e os Detalhes de qualquer atividade podem ser revisados.
+O Cloud Manager fornece uma visualização consolidada para uma atividade, relacionando todas as execuções do pipeline de CI/CD, tanto a produção quanto a não-produção, permitindo a visibilidade da atividade atual e passada, e qualquer Detalhes da atividade pode ser revisado.
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)
