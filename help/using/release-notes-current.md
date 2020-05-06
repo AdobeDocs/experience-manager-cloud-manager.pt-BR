@@ -1,35 +1,43 @@
 ---
-title: Notas de versão para 2020.4.0
-seo-title: Notas de versão do AEM Cloud Manager para 2020.4.0
-description: Siga esta página para obter informações sobre a versão 2020.4.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.4.0 do AEM Cloud Manager
+title: Notas de versão para 2020.5.0
+seo-title: Notas de versão do AEM Cloud Manager para 2020.5.0
+description: Siga esta página para obter informações sobre a versão 2020.5.0 do Cloud Manager
+seo-description: Siga esta página para obter informações sobre a versão 2020.5.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: ee7fc8a23dd0719eda84638c810842c2dc1772bb
+source-git-commit: 278858465592482449080fedc3c0165805db223d
+workflow-type: tm+mt
+source-wordcount: '187'
+ht-degree: 6%
 
 ---
 
-# Notas de versão para 2020.4.0 {#release-notes-for}
+# Notas de versão para 2020.5.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.4.0.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.5.0.
 
-## Release Date {#release-date}
+## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.4.0 é 9 de abril de 2020.
+A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.5.0 é 7 de maio de 2020.
 
 ## Novidades {#whats-new}
 
-* Alterações na página de visão geral do Gerenciador de nuvem de navegação para permitir que o usuário edite ou alterne o programa.
-* Alterações para permitir que o usuário edite o programa do cartão de programa na landing page do Cloud Manager.
-* Novo status de pipeline **Pipeline Running** exibido no ambiente ao qual está associado.
-* Melhorias na compreensão da página de execução de pipeline. Isso inclui a exibição do nome do Pipeline (somente pipeline de não produção) e do Tipo e um selo para indicar se o status do pipeline está Em andamento/Cancelado/Com falha.
-* O processo usado para gerar senhas git tornou-se mais resiliente a problemas na camada de serviço subjacente.
+* Seis regras adicionais de qualidade de código foram adicionadas para ajudar os clientes a identificar possíveis problemas ao planejar uma migração para o Serviço da nuvem.
+
+* Uma nova métrica de Compatibilidade *do serviço da* Cloud foi adicionada para resumir o número de problemas relacionados à compatibilidade.
+
+* O desempenho da página de Atividade e da API de Lista de execuções de pipeline foi aprimorado.
+
+* O log de qualidade do código agora contém rastreamentos completos de pilha para exceções.
 
 ## Correções de erros {#bug-fixes}
 
-* Os dados de monitorização podem, por vezes, ser apresentados de forma incorreta ou não ser apresentados de forma alguma com base em variações menores de valores técnicos.
-* A configuração Maven usada no container build foi atualizada para evitar bloqueios ao baixar metadados de artefato.
-* Ocasionalmente, o processo de teste de desempenho do Assets não conseguia descriptografar a senha do AEM, causando falha no teste.
-* Determinadas topologias com instâncias stand-by podem ter falsos negativos em testes de segurança.
-* Se o ambiente stage contivesse uma instância interrompida, a etapa de teste de segurança às vezes falharia.
-* As notificações da Experience Cloud não foram recebidas de forma consistente.
+* Um cartão enganoso foi exibido na página de visão geral enquanto o pipeline de produção estava em execução.
+
+* A regra de qualidade do código *DontImplantaçãoOrExtendProviderTypesPomCheck* pode, às vezes, produzir uma Exceção de Ponteiro Nulo.
+
+* Alguns links de documentação da página de visão geral não funcionavam corretamente.
+
+* Determinados cartões na página de visão geral não exibiam os nomes das entidades corretamente.
+
+* Determinadas configurações de topologia faziam com que a etapa de teste de desempenho gerasse um erro, em vez de relatórios de métricas ausentes.
 
