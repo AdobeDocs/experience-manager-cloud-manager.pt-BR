@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: cd6272bfd1ffdbf1802c30217e0c615392076109
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2282'
 ht-degree: 6%
 
 ---
@@ -558,6 +558,35 @@ public void doThis(Resource resource) {
 }
 ```
 
+### Scheduler Sling Não Deve Ser Usado {#sonarqube-sling-scheduler}
+
+**Chave**: CQRules:AMSCORE-554
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+O Scheduler Sling não deve ser usado para tarefas que exigem uma execução garantida. As Tarefas Agendadas de Varejo garantem a execução e são mais adequadas para ambientes clusterizados e não clusterizados.
+
+Consulte [Apache Sling Event e Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) para saber mais sobre como os Sling Jobs são tratados em ambientes agrupados.
+
+### APIs obsoletas do AEM não devem ser usadas {#sonarqube-aem-deprecated}
+
+**Chave**: AMSCORE-553
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+A superfície da API do AEM está sob revisão constante para identificar APIs para as quais o uso é desencorajado e, portanto, considerado obsoleto.
+
+Em muitos casos, essas APIs são descontinuadas com o uso da anotação padrão Java *@obsoleta* e, como tal, como identificado pela `squid:CallToDeprecatedMethod`.
+
+No entanto, há casos em que uma API está obsoleta no contexto do AEM, mas pode não estar obsoleta em outros contextos. Essa regra identifica essa segunda classe.
 
 ## Regras de conteúdo OakPAL {#oakpal-rules}
 
@@ -642,7 +671,7 @@ Um problema comum é o uso de nós nomeados `config` nas caixas de diálogo do c
       + rtePlugins [nt:unstructured]
 ```
 
-#### Os Pacotes Não Devem Sobrepor {#oakpal-no-overlap}
+### Os Pacotes Não Devem Sobrepor {#oakpal-no-overlap}
 
 **Chave**: PackageOverlaps
 
@@ -654,7 +683,7 @@ Um problema comum é o uso de nós nomeados `config` nas caixas de diálogo do c
 
 Semelhante aos *pacotes não devem conter configurações* OSGi do Duplicado, esse é um problema comum em projetos complexos nos quais o mesmo caminho de nó é gravado por vários pacotes de conteúdo separados. Embora seja possível usar dependências de pacote de conteúdo para garantir um resultado consistente, é melhor evitar sobreposições completamente.
 
-#### OakPAL - O modo de criação padrão não deve ser a interface clássica {#oakpal-default-authoring}
+### O modo de criação padrão não deve ser a interface clássica {#oakpal-default-authoring}
 
 **Chave**: ClassicUIAuthoringMode
 
@@ -666,7 +695,7 @@ Semelhante aos *pacotes não devem conter configurações* OSGi do Duplicado, es
 
 A configuração do OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` define o modo de criação padrão no AEM. Como a interface clássica está obsoleta desde o AEM 6.4, um problema agora será gerado quando o modo de criação padrão estiver configurado para a interface clássica.
 
-#### OakPal - Os componentes com caixas de diálogo devem ter caixas de diálogo de interface de toque {#oakpal-components-dialogs}
+### Os Componentes Com Caixas De Diálogo Devem Ter Caixas De Diálogo De IU De Toque {#oakpal-components-dialogs}
 
 **Chave**: ComponentWithOnlyClassicUIDialog
 
@@ -684,7 +713,7 @@ Os componentes do AEM que têm uma caixa de diálogo de interface clássica deve
 
 A documentação das Ferramentas de modernização do AEM fornece documentação e ferramentas para como converter componentes da interface clássica para a interface de usuário de toque. Consulte [as Ferramentas](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) de modernização do AEM para obter mais detalhes.
 
-#### OakPal - Os pacotes não devem misturar conteúdo mutável e imutável {#oakpal-packages-immutable}
+### Os pacotes não devem misturar conteúdo mutável e imutável {#oakpal-packages-immutable}
 
 **Chave**: ImmutableMutableMixedPackage
 
@@ -698,7 +727,7 @@ Para serem compatíveis com o modelo de implantação do serviço em nuvem, os p
 
 Consulte a Estrutura [do projeto do](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEM para obter mais detalhes.
 
-### OakPal - Agentes de Replicação Inversa Não Devem Ser Usados {#oakpal-reverse-replication}
+### Os Agentes De Replicação Reversa Não Devem Ser Utilizados {#oakpal-reverse-replication}
 
 **Chave**: ReverseReplication
 
@@ -712,35 +741,7 @@ O suporte para Replicação reversa não está disponível nas implantações do
 
 Os clientes que usam replicação reversa devem entrar em contato com a Adobe para obter soluções alternativas.
 
-### SonarQube - Scheduler Sling Não Deve Ser Utilizado {#sonarqube-sling-scheduler}
 
-**Chave**: CQRules:AMSCORE-554
-
-**Tipo**: Cheiro de código
-
-**Gravidade**: Menor
-
-**Desde**: Versão 2020.5.0
-
-O Scheduler Sling não deve ser usado para tarefas que exigem uma execução garantida. As Tarefas Agendadas de Varejo garantem a execução e são mais adequadas para ambientes clusterizados e não clusterizados.
-
-Consulte [Apache Sling Event e Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) para saber mais sobre como os Sling Jobs são tratados em ambientes agrupados.
-
-### SonarQube - SonarQube - APIs obsoletas do AEM não devem ser usadas {#sonarqube-aem-deprecated}
-
-**Chave**: AMSCORE-553
-
-**Tipo**: Cheiro de código
-
-**Gravidade**: Menor
-
-**Desde**: Versão 2020.5.0
-
-A superfície da API do AEM está sob revisão constante para identificar APIs para as quais o uso é desencorajado e, portanto, considerado obsoleto.
-
-Em muitos casos, essas APIs são descontinuadas com o uso da anotação padrão Java *@obsoleta* e, como tal, como identificado pela `squid:CallToDeprecatedMethod`.
-
-No entanto, há casos em que uma API está obsoleta no contexto do AEM, mas pode não estar obsoleta em outros contextos. Essa regra identifica essa segunda classe.
 
 
 
