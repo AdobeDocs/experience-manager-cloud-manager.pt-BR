@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
+source-git-commit: 278858465592482449080fedc3c0165805db223d
+workflow-type: tm+mt
+source-wordcount: '1461'
+ht-degree: 8%
 
 ---
 
@@ -20,7 +23,7 @@ Durante o processo de **Pipeline** , várias métricas são capturadas e compara
 
 Eles são reportados usando o sistema de portagem de três níveis, conforme definido nesta seção.
 
-## Portas de três níveis ao executar um pipeline {#three-tier-gates-while-running-a-pipeline}
+## Portas de três níveis ao executar um pipeline  {#three-tier-gates-while-running-a-pipeline}
 
 Há três portões no pipeline:
 
@@ -47,17 +50,18 @@ Como parte do pipeline, o código fonte é verificado para garantir que as impla
 | Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 Vulnerabilidade<br/> Menor C = pelo menos 1 Vulnerabilidade Principal <br/>D = pelo menos 1 Vulnerabilidade Crítica <br/>E = pelo menos 1 Vulnerabilidade Bloqueadora | Crítico | &lt; B |
 | Classificação da confiabilidade | A = 0 Bug <br/>B = pelo menos 1 Bug Menor <br/>C = pelo menos 1 Bug Principal <br/>D = pelo menos 1 Bug Crítico E = pelo menos 1 Bug Bloqueador | Importante | &lt; C |
 | Classificação da manutenção | O custo de correção excepcional para cheiros de código é: <br/><ul><li>&lt;=5% do tempo que já passou para o aplicativo, a classificação é A </li><li>entre 6 e 10%, a classificação é de </li><li>entre 11 e 20% a classificação é de C </li><li>entre 21 e 50% a classificação é um D</li><li>algo acima de 50% é um E</li></ul> | Importante | &lt; A |
-| Cobertura | Uma combinação da cobertura da linha de teste da unidade e da cobertura da condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>onde: CT = condições que foram avaliadas como 'true' pelo menos uma vez durante a execução de testes de unidade <br/>CF = condições que foram avaliadas como 'false' pelo menos uma vez durante a execução de testes de unidade <br/>LC = linhas cobertas = lines_to_cover - uncovered_lines <br/><br/> B = número total de condições <br/>EL = número total de linhas executáveis (lines_to_cover) | Importante | &lt; 50% |
-| Testes de unidade ignorados | Número de testes de unidade ignorados. | Informações | &gt; 1 |
-| Problemas em aberto | Tipos de edição geral - Vulnerabilidades, Erros e Cheiros de código | Informações | &gt; 1 |
-| Linhas Duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado como duplicado: <br/><ul><li>**Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser espalhados pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras línguas</li><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul> <br/>As diferenças no recuo, bem como nos literais de string, são ignoradas ao detectar duplicações. | Informações | &gt; 1% |
+| Cobertura | Uma combinação da cobertura da linha de teste da unidade e da cobertura da condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>em que: CT = condições que foram avaliadas como &#39;true&#39; pelo menos uma vez durante a execução de testes de unidade <br/>CF = condições que foram avaliadas como &#39;false&#39; pelo menos uma vez durante a execução de testes de unidade <br/>LC = linhas cobertas = lines_to_cover - uncovered_lines <br/><br/> B = número total de condições <br/>EL = número total de linhas executáveis (lines_to_cover) | Importante | &lt; 50% |
+| Testes de unidade ignorados | Número de testes de unidade ignorados. | Informações | > 1 |
+| Problemas em aberto | Tipos de edição geral - Vulnerabilidades, Erros e Cheiros de código | Informações | > 1 |
+| Linhas Duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado como duplicado: <br/><ul><li>**Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser espalhados pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras línguas</li><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul> <br/>As diferenças no recuo, bem como nos literais de string, são ignoradas ao detectar duplicações. | Informações | > 1% |
+| Compatibilidade do serviço em nuvem | Número de problemas identificados de Compatibilidade do serviço em nuvem. | Informações | >0 |
 
 
 >[!NOTE]
 >
 >Consulte Definições [de](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) métricas para obter definições mais detalhadas.
 
-Você pode fazer download da lista de regras aqui [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx)
+Você pode fazer download da lista de regras aqui [code-quality-rules.xlsx](/help/using/assets/CodeQuality-rules-latest.xlsx)
 
 >[!NOTE]
 >
@@ -65,7 +69,7 @@ Você pode fazer download da lista de regras aqui [code-quality-rules.xlsx](/hel
 
 ### Lidar com falsos positivos {#dealing-with-false-positives}
 
-O processo de verificação da qualidade não é perfeito e, por vezes, identificará incorretamente questões que não são realmente problemáticas. Isso é conhecido como "falso positivo".
+O processo de verificação da qualidade não é perfeito e, por vezes, identificará incorretamente questões que não são realmente problemáticas. Isso é conhecido como &quot;falso positivo&quot;.
 
 Nesses casos, o código fonte pode ser anotado com a `@SuppressWarnings` anotação padrão Java que especifica a ID da regra como o atributo de anotação. Por exemplo, um problema comum é que a regra SonarQube para detectar senhas codificadas pode ser agressiva sobre como uma senha codificada é identificada.
 
@@ -101,7 +105,7 @@ Em seguida, a solução correta é remover a senha codificada.
 
 [!UICONTROL Cloud Manager] executa as verificações ***de integridade de segurança do*** AEM na etapa seguinte à implantação e relata o status pela interface do usuário. Os resultados são agregados de todas as instâncias do AEM no ambiente.
 
-Se alguma das **Instâncias** reportar uma falha para uma determinada verificação de integridade, todo o **Ambiente** falhará nessa verificação de integridade. Como acontece com o teste de qualidade e desempenho de código, essas verificações de integridade são organizadas em categorias e relatadas usando o sistema de portagem de três níveis. A única distinção é que não existe um limiar no caso dos testes de segurança. Todos os exames de saúde são simplesmente aprovados ou reprovados.
+Se alguma das **Instâncias** reportar uma falha para uma determinada verificação de integridade, todo o **Ambiente** falhará nessa verificação de integridade. Como acontece com o teste de qualidade e desempenho de código, essas verificações de integridade são organizadas em categorias e reportadas usando o sistema de portagem de três níveis. A única distinção é que não existe um limiar no caso dos testes de segurança. Todos os exames de saúde são simplesmente aprovados ou reprovados.
 
 A tabela a seguir lista as verificações atuais:
 
@@ -110,14 +114,14 @@ A tabela a seguir lista as verificações atuais:
 | A prontidão para anexar API do firewall de desserialização está em um estado aceitável | Disponibilidade da API de anexo do firewall de desserialização | Crítico |
 | O firewall de desserialização está funcionando | Firewall de desserialização funcional | Crítico |
 | O firewall de desserialização é carregado | Firewall de desserialização carregado | Crítico |
-| A implementação AuthorizableNodeName não expõe a ID autorizada no nome/caminho do nó. | Geração do nome do nó autorizada | Crítico |
+| A implementação AuthorizableNodeName não expõe a ID autorizável no nome/caminho do nó. | Geração do nome do nó autorizada | Crítico |
 | As senhas padrão foram alteradas | Contas padrão de logon | Crítico |
 | O servlet GET padrão Sling está protegido contra ataques DOS. | Sling Get Servlet | Crítico |
 | O Manipulador de Sling Java Script está configurado adequadamente | Sling Java Script Handler | Crítico |
 | O Sling JSP Script Handler está configurado adequadamente | Manipulador de script JSP Sling | Crítico |
 | O SSL está configurado corretamente | Configuração do SSL | Crítico |
-| Nenhuma política de perfil de usuário obviamente insegura encontrada | Acesso padrão ao perfil de usuário | Crítico |
-| O Filtro do Sling Referrer está configurado para impedir ataques de CSRF | Sling Referrer Filter | Importante |
+| Nenhuma política de perfil do usuário obviamente insegura encontrada | Acesso padrão ao perfil de usuário | Crítico |
+| O Filtro de Quem indicou Sling está configurado para impedir ataques CSRF | Sling Referrer Filter | Importante |
 | O Adobe Granite HTML Library Manager está configurado adequadamente | Configuração do gerenciador de biblioteca HTML CQ | Importante |
 | O pacote de suporte CRXDE está desativado | Suporte do CRXDE | Importante |
 | O conjunto e o servlet Sling DavEx estão desativados | Verificação de integridade do DavEx | Importante |
@@ -125,7 +129,7 @@ A tabela a seguir lista as verificações atuais:
 | O Filtro de Solicitação WCM e o Filtro de Depuração WCM estão desativados | Configuração de filtros WCM | Importante |
 | O pacote e o servlet WebDAV Sling estão configurados adequadamente | Verificação de integridade do WebDAV | Importante |
 | O servidor da Web está configurado para impedir o recurso de clickjacking | Configuração de servidor da Web | Importante |
-| A replicação não está usando o usuário 'admin' | Reprodução e usuários de transporte | Informações |
+| A replicação não está usando o usuário &#39;admin&#39; | Reprodução e usuários de transporte | Informações |
 
 ## Teste de desempenho {#performance-testing}
 
@@ -137,20 +141,20 @@ Você pode saber mais sobre controles de bucket, em [Configure seu Pipeline](con
 
 >[!NOTE]
 >
->Para configurar seu programa e definir seus KPIs, consulte [Configurar seu programa](setting-up-program.md).
+>Para configurar seu programa e definir seus KPIs, consulte [Configurar seu Programa](setting-up-program.md).
 
 A tabela a seguir resume a matriz de teste de desempenho usando o sistema portátil de três níveis:
 
 | **Métrica** | **Categoria** | **Limite de falha** |
 |---|---|---|
-| Taxa de erro de solicitação de página % | Crítico | &gt;= 2% |
-| Taxa de utilização da CPU | Crítico | &gt;= 80% |
-| Tempo de espera de E/S de disco | Crítico | &gt;= 50% |
-| Tempo de Resposta de 95% | Importante | &gt;= KPI de nível de programa |
-| Tempo de resposta máximo | Importante | &gt;= 18 segundos |
-| Exibições de página por minuto | Importante | &lt; KPI de nível de programa |
-| Utilização da largura de banda do disco | Importante | &gt;= 90% |
-| Utilização da largura de banda da rede | Importante | &gt;= 90% |
+| Taxa de erro de solicitação de página % | Crítico | >= 2% |
+| Taxa de utilização da CPU | Crítico | >= 80% |
+| Tempo de espera de E/S de disco | Crítico | >= 50% |
+| Tempo de Resposta de 95% | Importante | >= KPI em nível de Programa |
+| Tempo de resposta máximo | Importante | >= 18 segundos |
+| Visualizações de página por minuto | Importante | &lt; KPI em nível de Programa |
+| Utilização da largura de banda do disco | Importante | >= 90% |
+| Utilização da largura de banda da rede | Importante | >= 90% |
 | Solicitações por minuto | Informações | &lt; 6000 |
 
 ### Gráficos de resultados de teste de desempenho {#performance-testing-results-graphs}
@@ -182,7 +186,7 @@ Para a [!UICONTROL Cloud Manager] versão 2018.7.0, essa funcionalidade está di
 
 * **95.º Percentual de Tempo de Resposta**
    * Gráfico de 95% de tempo de resposta por minuto durante o período de teste.
-   * Um arquivo CSV que lista as páginas cujo tempo de resposta de 95% excedeu o KPI definido.
+   * Um arquivo CSV que lista as páginas cujo tempo de resposta do 95º percentil excedeu o KPI definido.
 
 As seguintes imagens exibem os gráficos de teste de desempenho:
 
