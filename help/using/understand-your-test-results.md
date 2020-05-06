@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: 4edbbff4e519a1403c3140cc742def35f9516eff
 workflow-type: tm+mt
 source-wordcount: '1461'
 ht-degree: 8%
@@ -54,7 +54,7 @@ Como parte do pipeline, o código fonte é verificado para garantir que as impla
 | Testes de unidade ignorados | Número de testes de unidade ignorados. | Informações | > 1 |
 | Problemas em aberto | Tipos de edição geral - Vulnerabilidades, Erros e Cheiros de código | Informações | > 1 |
 | Linhas Duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado como duplicado: <br/><ul><li>**Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser espalhados pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras línguas</li><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul> <br/>As diferenças no recuo, bem como nos literais de string, são ignoradas ao detectar duplicações. | Informações | > 1% |
-| Compatibilidade do serviço em nuvem | Número de problemas identificados de Compatibilidade do serviço em nuvem. | Informações | >0 |
+| Compatibilidade do serviço em nuvem | Número de problemas identificados de Compatibilidade do serviço em nuvem. | Informações | > 0 |
 
 
 >[!NOTE]
