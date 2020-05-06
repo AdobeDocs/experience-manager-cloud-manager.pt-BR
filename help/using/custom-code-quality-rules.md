@@ -1,20 +1,23 @@
 ---
-title: Regras de qualidade de código personalizado
-seo-title: Regras de qualidade de código personalizado
+title: Regras de qualidade do código personalizado
+seo-title: Regras de qualidade do código personalizado
 description: Siga esta página para saber mais sobre as regras de qualidade de código personalizadas executadas pelo Cloud Manager.
 seo-description: Siga esta página para saber mais sobre as regras de qualidade de código personalizadas executadas pelo Adobe Experience Manager Cloud Manager.
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: usando
+topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 4881ff8be97451aa90c3430259ce13faef182e4f
+source-git-commit: 278858465592482449080fedc3c0165805db223d
+workflow-type: tm+mt
+source-wordcount: '2289'
+ht-degree: 6%
 
 ---
 
 
-# Regras de qualidade de código personalizado {#custom-code-quality-rules}
+# Regras de qualidade do código personalizado {#custom-code-quality-rules}
 
 Esta página descreve as regras de qualidade de código personalizadas executadas pelo Cloud Manager criadas com base nas práticas recomendadas da engenharia do AEM.
 
@@ -36,7 +39,7 @@ A seção a seguir destaca as regras do SonarQube:
 
 **Desde**: Versão 2018.4.0
 
-Os métodos ***Thread.stop()*** e ***Thread.interrupt()*** podem gerar problemas difíceis de reproduzir e, em alguns casos, vulnerabilidades de segurança. A sua utilização deve ser rigorosamente monitorizada e validada. Em geral, a transmissão de mensagens é uma forma mais segura de atingir objetivos semelhantes.
+Os métodos ***Thread.stop()*** e ***Thread.interrupt()*** podem gerar problemas de difícil reprodução e, em alguns casos, vulnerabilidades de segurança. A utilização deve ser rigorosamente monitorizada e validada. Em geral, a transmissão de mensagens é uma forma mais segura de atingir objetivos semelhantes.
 
 #### Código não compatível {#non-compliant-code}
 
@@ -97,7 +100,7 @@ public class DoThis implements Runnable {
 
 O uso de uma string de formato de uma fonte externa (como um parâmetro de solicitação ou conteúdo gerado pelo usuário) pode produzir pode expor um aplicativo a ataques de negação de serviço. Há circunstâncias em que uma string de formato pode ser controlada externamente, mas só é permitida de fontes confiáveis.
 
-#### Non-Compliant Code {#non-compliant-code-1}
+#### Código não compatível {#non-compliant-code-1}
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -107,19 +110,19 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-### HTTP requests should always have socket and connect timeouts {#http-requests-should-always-have-socket-and-connect-timeouts}
+### As solicitações HTTP devem sempre ter tempos limite de soquete e conexão {#http-requests-should-always-have-socket-and-connect-timeouts}
 
-**Key: CQRules:ConnectionTimeoutMechanism**
+**Chave**: CQRules:ConnectionTimeoutMechanism
 
-**Type: Bug**
+**Tipo**: Bug
 
-**Severity: Critical**
+**Gravidade**: Crítico
 
-**Since: Version 2018.6.0**
+**Desde**: Versão 2018.6.0
 
-When executing HTTP requests from inside an AEM application, it is critical to ensure that proper timeouts are configured in order to avoid unnecessary thread consumption. Unfortunately, the default behavior of both Java's default HTTP Client (java.net.HttpUrlConnection) and the commonly used Apache HTTP Components client is to never timeout, so timeouts must be explicitly set. Further, as a best practice, these timeouts should be no more than 60 seconds.
+Ao executar solicitações HTTP de dentro de um aplicativo AEM, é essencial garantir que os tempos limite apropriados sejam configurados para evitar o consumo desnecessário de thread. Infelizmente, o comportamento padrão do cliente HTTP padrão do Java (java.net.HttpUrlConnection) e do cliente Apache HTTP Components comumente usado é nunca expirar, portanto, os tempos limite devem ser definidos explicitamente. Além disso, como prática recomendada, esses tempos limite não devem exceder 60 segundos.
 
-#### Non-Compliant Code {#non-compliant-code-2}
+#### Código não compatível {#non-compliant-code-2}
 
 ```java
 @Reference
@@ -187,17 +190,17 @@ public void orDoThis() {
 
 ### As APIs de produto anotadas com @ProviderType não devem ser implementadas ou estendidas pelos clientes {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
-**Key: CQBP-84, CQBP-84-dependencies**
+**Chave**: CQBP-84, CQBP-84-dependências
 
-**Type: Bug**
+**Tipo**: Bug
 
-**Severity: Critical**
+**Gravidade**: Crítico
 
-**Since: Version 2018.7.0**
+**Desde**: Versão 2018.7.0
 
-A API do AEM contém interfaces e classes Java que devem ser usadas apenas, mas não implementadas, pelo código personalizado. Por exemplo, a interface *com.day.cq.wcm.api.Page* foi projetada para ser implementada somente ***pelo*** AEM.
+A API do AEM contém interfaces e classes do Java que devem ser usadas, mas não implementadas, apenas pelo código personalizado. Por exemplo, a interface *com.day.cq.wcm.api.Page* foi projetada para ser implementada ***somente pelo AEM***.
 
-Quando novos métodos são adicionados a essas interfaces, esses métodos adicionais não afetam o código existente que usa essas interfaces e, como resultado, a adição de novos métodos a essas interfaces é considerada retrocompatível. No entanto, se o código personalizado ***implementa*** uma dessas interfaces, ele apresenta um risco de compatibilidade com versões anteriores para o cliente.
+Quando novos métodos são adicionados a essas interfaces, esses métodos adicionais não afetam o código existente que usa essas interfaces e, como resultado, a adição de novos métodos a essas interfaces é considerada compatível com versões anteriores. No entanto, se o código personalizado ***implementa*** uma dessas interfaces, ele apresenta um risco de compatibilidade com versões anteriores para o cliente.
 
 As interfaces (e classes) que só devem ser implementadas pelo AEM são anotadas com *org.osgi.annotation.versioning.ProviderType* (ou, em alguns casos, uma anotação herdada similar *aQute.bnd.annotation.ProviderType*). Essa regra identifica os casos em que tal interface é implementada (ou uma classe é estendida) pelo código personalizado.
 
@@ -223,7 +226,7 @@ public class DontDoThis implements Page {
 
 Os objetos ResourceResolver obtidos a partir do ResourceResolverFactory consomem recursos do sistema. Embora existam medidas para recuperar esses recursos quando um ResourceResolver não estiver mais em uso, é mais eficiente fechar explicitamente quaisquer objetos ResourceResolver abertos chamando o método close().
 
-Um equívoco relativamente comum é que os objetos ResourceResolver criados usando uma Sessão JCR existente não devem ser explicitamente fechados ou que isso fechará a Sessão JCR subjacente. Esse não é o caso - independentemente de como um ResourceResolver é aberto, ele deve ser fechado quando não for mais usado. Como o ResourceResolver implementa a interface Fechável, também é possível usar a sintaxe try-with-resources em vez de chamar explicitamente close().
+Um equívoco relativamente comum é que os objetos ResourceResolver criados usando uma Sessão JCR existente não devem ser explicitamente fechados ou que isso fechará a Sessão JCR subjacente. Esse não é o caso - independentemente de como um ResourceResolver é aberto, ele deve ser fechado quando não for mais usado. Como o ResourceResolver implementa a interface Closeable, também é possível usar a sintaxe try-with-resources em vez de chamar explicitamente close().
 
 #### Código não compatível {#non-compliant-code-4}
 
@@ -266,7 +269,7 @@ public void orDoThis(Session session) throws Exception {
 
 **Desde**: Versão 2018.4.0
 
-Conforme descrito na documentação [do](http://sling.apache.org/documentation/the-sling-engine/servlets.html)Sling, os servlets de vinculação por caminhos são desencorajados. Os servlets vinculados ao caminho não podem usar controles de acesso JCR padrão e, como resultado, exigem rigor de segurança adicional. Em vez de usar servlets vinculados a caminho, é recomendável criar nós no repositório e registrar servlets por tipo de recurso.
+Conforme descrito na documentação [do](http://sling.apache.org/documentation/the-sling-engine/servlets.html)Sling, os servlets de vinculação por caminhos são desencorajados. Servlets com caminho não podem usar controles de acesso JCR padrão e, como resultado, exigem rigor de segurança adicional. Em vez de usar servlets vinculados a caminho, é recomendável criar nós no repositório e registrar servlets por tipo de recurso.
 
 #### Código não compatível {#non-compliant-code-5}
 
@@ -279,19 +282,19 @@ public class DontDoThis extends SlingAllMethodsServlet {
 }
 ```
 
-### Caught Exceptions should be logged or thrown, but not both {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
+### As exceções obtidas devem ser registradas ou lançadas, mas não ambas {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
-**Key: CQRules:CQBP-44---CatchAndEitherLogOrThrow**
+**Chave**: CQRules:CQBP-44—CatchAndOrThrow
 
-**Type: Code Smell**
+**Tipo**: Cheiro de código
 
-**Severity: Minor**
+**Gravidade**: Menor
 
-**Since: Version 2018.4.0**
+**Desde**: Versão 2018.4.0
 
-In general, an exception should be logged exactly one time. Logging exceptions multiple times can cause confusion as it is unclear how many times an exception occurred. The most common pattern which leads to this is logging and throwing a caught exception.
+Em geral, uma exceção deve ser registrada exatamente uma vez. O registro de exceções várias vezes pode causar confusão, pois não está claro quantas vezes uma exceção ocorreu. O padrão mais comum que leva a isso é cortar e lançar uma exceção.
 
-#### Non-Compliant Code {#non-compliant-code-6}
+#### Código não compatível {#non-compliant-code-6}
 
 ```java
 public void dontDoThis() throws Exception {
@@ -324,15 +327,15 @@ public void orDoThis() throws MyCustomException {
 }
 ```
 
-### Avoid having a log statement immediately followed by a throw statement {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
+### Evite ter uma declaração de log imediatamente seguida de uma declaração de lançamento {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
-**Key: CQRules:CQBP-44---ConsecutivelyLogAndThrow**
+**Chave**: CQRules:CQBP-44—ConsecutivelyLogAndThrow
 
-**Type: Code Smell**
+**Tipo**: Cheiro de código
 
-**Severity: Minor**
+**Gravidade**: Menor
 
-**Since: Version 2018.4.0**
+**Desde**: Versão 2018.4.0
 
 Outro padrão comum a ser evitado é registrar uma mensagem e imediatamente lançar uma exceção. Isso geralmente indica que a mensagem de exceção acabará duplicada nos arquivos de registro.
 
@@ -425,13 +428,13 @@ public void doThis() {
 
 **Tipo**: Cheiro de código
 
-**Severity: Minor**
+**Gravidade**: Menor
 
-**Since: Version 2018.4.0**
+**Desde**: Versão 2018.4.0
 
-As the name suggests, Java exceptions should always be used in exceptional circumstances. ** As a result, when an exception is caught, it is important to ensure that log messages are logged at the appropriate level - either WARN or ERROR. This ensures that those messages appear correctly in the logs.
+Como o nome sugere, as exceções de Java devem ser sempre usadas em circunstâncias *excepcionais* . Como resultado, quando uma exceção é detectada, é importante garantir que as mensagens de log sejam registradas no nível apropriado - WARN ou ERROR. Isso garante que essas mensagens sejam exibidas corretamente nos registros.
 
-#### Non-Compliant Code {#non-compliant-code-10}
+#### Código não compatível {#non-compliant-code-10}
 
 ```java
 public void dontDoThis() {
@@ -443,7 +446,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Compliant Code {#compliant-code-7}
+#### Código compatível {#compliant-code-7}
 
 ```java
 public void doThis() {
@@ -455,9 +458,9 @@ public void doThis() {
 }
 ```
 
-### Do not print stack traces to the console {#do-not-print-stack-traces-to-the-console}
+### Não imprimir rastreamentos de pilha no console {#do-not-print-stack-traces-to-the-console}
 
-**Key: CQRules:CQBP-44---ExceptionPrintStackTrace**
+**Chave**: CQRules:CQBP-44—ExceptionPrintStackTrace
 
 **Tipo**: Cheiro de código
 
@@ -537,7 +540,7 @@ public void doThis() {
 
 **Desde**: Versão 2018.4.0
 
-Em geral, os caminhos que começam com /libs e /apps não devem ser codificados, pois os caminhos aos quais se referem são mais comumente armazenados como caminhos relativos ao caminho de pesquisa Sling (que é definido como /libs,/apps por padrão). O uso do caminho absoluto pode apresentar defeitos sutis que só apareceriam posteriormente no ciclo de vida do projeto.
+Em geral, os caminhos que são start com /libs e /apps não devem ser codificados, pois os caminhos a que se referem são mais comumente armazenados como caminhos relativos ao caminho de pesquisa Sling (que é definido como /libs,/apps por padrão). O uso do caminho absoluto pode apresentar defeitos sutis que só apareceriam posteriormente no ciclo de vida do projeto.
 
 #### Código não compatível {#non-compliant-code-13}
 
@@ -563,19 +566,19 @@ Encontre abaixo as verificações do OakPAL executadas pelo Cloud Manager.
 >[!NOTE]
 >O OakPAL é uma estrutura desenvolvida por um parceiro AEM (e vencedor do AEM Rockstar North America 2019) que valida pacotes de conteúdo usando um repositório Oak independente.
 
-### Customer Packages Should Not Create or Modify Nodes Under /libs {#oakpal-customer-package}
+### Os pacotes do cliente não devem criar ou modificar nós em /libs {#oakpal-customer-package}
 
-**Key: BannedPaths**
+**Chave**: Caminhos Banidos
 
-**Type: Bug**
+**Tipo**: Bug
 
 **Gravidade**: Bloqueador
 
 **Desde**: Versão 2019.6.0
 
-É uma prática recomendada antiga que a árvore de conteúdo /libs no repositório de conteúdo do AEM seja considerada somente leitura pelos clientes. Modificar nós e propriedades em */libs* cria um risco significativo para atualizações principais e secundárias. As modificações em */libs* só devem ser feitas pela Adobe através de canais oficiais.
+É uma prática recomendada antiga que a árvore de conteúdo /libs no repositório de conteúdo do AEM seja considerada somente leitura pelos clientes. Modificar nós e propriedades em */libs* cria um risco significativo para atualizações principais e secundárias. As modificações em */libs* só devem ser feitas pela Adobe por meio de canais oficiais.
 
-### Os pacotes não devem conter configurações OSGi duplicadas {#oakpal-package-osgi}
+### Os pacotes não devem conter configurações OSGi de Duplicado {#oakpal-package-osgi}
 
 **Chave**: DuplicateOsgiConfigurations
 
@@ -585,7 +588,7 @@ Encontre abaixo as verificações do OakPAL executadas pelo Cloud Manager.
 
 **Desde**: Versão 2019.6.0
 
-Um problema comum que ocorre em projetos complexos é onde o mesmo componente OSGi é configurado várias vezes. Isso cria uma ambiguidade sobre qual configuração será operável. Essa regra é "sensível ao modo de execução", pois identificará apenas problemas em que o mesmo componente é configurado várias vezes no mesmo modo de execução (ou combinação de modos de execução).
+Um problema comum que ocorre em projetos complexos é onde o mesmo componente OSGi é configurado várias vezes. Isso cria uma ambiguidade sobre qual configuração será operável. Essa regra é &quot;sensível ao modo de execução&quot;, pois identificará apenas problemas em que o mesmo componente é configurado várias vezes no mesmo modo de execução (ou combinação de modos de execução).
 
 #### Código não compatível {#non-compliant-code-osgi}
 
@@ -639,14 +642,105 @@ Um problema comum é o uso de nós nomeados `config` nas caixas de diálogo do c
       + rtePlugins [nt:unstructured]
 ```
 
-### Os Pacotes Não Devem Sobrepor {#oakpal-no-overlap}
+#### Os Pacotes Não Devem Sobrepor {#oakpal-no-overlap}
 
 **Chave**: PackageOverlaps
 
-**Type: Bug**
+**Tipo**: Bug
 
 **Gravidade**: Major
 
 **Desde**: Versão 2019.6.0
 
-Semelhante aos *pacotes não devem conter configurações* OSGi duplicadas, esse é um problema comum em projetos complexos nos quais o mesmo caminho de nó é gravado por vários pacotes de conteúdo separados. Embora seja possível usar dependências de pacote de conteúdo para garantir um resultado consistente, é melhor evitar sobreposições completamente.
+Semelhante aos *pacotes não devem conter configurações* OSGi do Duplicado, esse é um problema comum em projetos complexos nos quais o mesmo caminho de nó é gravado por vários pacotes de conteúdo separados. Embora seja possível usar dependências de pacote de conteúdo para garantir um resultado consistente, é melhor evitar sobreposições completamente.
+
+#### OakPAL - O modo de criação padrão não deve ser a interface clássica {#oakpal-default-authoring}
+
+**Chave**: ClassicUIAuthoringMode
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+A configuração do OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` define o modo de criação padrão no AEM. Como a interface clássica está obsoleta desde o AEM 6.4, um problema agora será gerado quando o modo de criação padrão estiver configurado para a interface clássica.
+
+#### OakPal - Os componentes com caixas de diálogo devem ter caixas de diálogo de interface de toque {#oakpal-components-dialogs}
+
+**Chave**: ComponentWithOnlyClassicUIDialog
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+Os componentes do AEM que têm uma caixa de diálogo de interface clássica devem sempre ter uma caixa de diálogo de interface de usuário de toque correspondente para fornecer uma experiência de criação ideal e para serem compatíveis com o modelo de implantação do Serviço de nuvem, onde a interface de usuário clássica não é suportada. Essa regra verifica os seguintes cenários:
+
+* Um componente com uma caixa de diálogo Interface clássica (ou seja, um nó filho da caixa de diálogo) deve ter uma caixa de diálogo Interface do usuário de toque correspondente (ou seja, um nó `cq:dialog` filho).
+* Um componente com uma caixa de diálogo de design da interface clássica (ou seja, um nó design_dialog) deve ter uma caixa de diálogo de design da interface do usuário de toque correspondente (ou seja, um nó `cq:design_dialog` filho).
+* Um componente com uma caixa de diálogo de design de interface clássica e uma caixa de diálogo de design de interface clássica deve ter uma caixa de diálogo de interface de toque correspondente e uma caixa de diálogo de design de interface de toque correspondente.
+
+A documentação das Ferramentas de modernização do AEM fornece documentação e ferramentas para como converter componentes da interface clássica para a interface de usuário de toque. Consulte [as Ferramentas](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) de modernização do AEM para obter mais detalhes.
+
+#### OakPal - Os pacotes não devem misturar conteúdo mutável e imutável {#oakpal-packages-immutable}
+
+**Chave**: ImmutableMutableMixedPackage
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+Para serem compatíveis com o modelo de implantação do serviço em nuvem, os pacotes de conteúdo individuais devem conter conteúdo para as áreas imutáveis do repositório (ou seja, não devem ser modificados pelo código do cliente e causarão uma violação separada) ou a área mutável (ou seja, tudo o mais), mas não ambos. `/apps and /libs, although /libs` Por exemplo, um pacote que inclui ambos não `/apps/myco/components/text and /etc/clientlibs/myco` é compatível com o serviço em nuvem e fará com que um problema seja relatado.
+
+Consulte a Estrutura [do projeto do](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEM para obter mais detalhes.
+
+### OakPal - Agentes de Replicação Inversa Não Devem Ser Usados {#oakpal-reverse-replication}
+
+**Chave**: ReverseReplication
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+O suporte para Replicação reversa não está disponível nas implantações do Serviço em nuvem, conforme descrito nas Notas de [versão: Remoção dos agentes](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents)de replicação.
+
+Os clientes que usam replicação reversa devem entrar em contato com a Adobe para obter soluções alternativas.
+
+### SonarQube - Scheduler Sling Não Deve Ser Utilizado {#sonarqube-sling-scheduler}
+
+**Chave**: CQRules:AMSCORE-554
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+O Scheduler Sling não deve ser usado para tarefas que exigem uma execução garantida. As Tarefas Agendadas de Varejo garantem a execução e são mais adequadas para ambientes clusterizados e não clusterizados.
+
+Consulte [Apache Sling Event e Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) para saber mais sobre como os Sling Jobs são tratados em ambientes agrupados.
+
+### SonarQube - SonarQube - APIs obsoletas do AEM não devem ser usadas {#sonarqube-aem-deprecated}
+
+**Chave**: AMSCORE-553
+
+**Tipo**: Cheiro de código
+
+**Gravidade**: Menor
+
+**Desde**: Versão 2020.5.0
+
+A superfície da API do AEM está sob revisão constante para identificar APIs para as quais o uso é desencorajado e, portanto, considerado obsoleto.
+
+Em muitos casos, essas APIs são descontinuadas com o uso da anotação padrão Java *@obsoleta* e, como tal, como identificado pela `squid:CallToDeprecatedMethod`.
+
+No entanto, há casos em que uma API está obsoleta no contexto do AEM, mas pode não estar obsoleta em outros contextos. Essa regra identifica essa segunda classe.
+
+
+
