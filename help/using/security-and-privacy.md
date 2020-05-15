@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 7cbc42108a6ccc8f7303eb76fd8ca2e9027f49e0
+source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +30,7 @@ Os clientes que usam [!UICONTROL Cloud Manager] suas credenciais de IMS precisar
 
 ## Segurança de dados {#data-security}
 
-O código em [!UICONTROL Cloud Manager] é criptografado em trânsito. Os binários criados pelo Gerenciador de pods também são criptografados em trânsito e criptografados quando armazenados.
+O código em [!UICONTROL Cloud Manager] é criptografado em trânsito. Os binários criados pelo Cloud Manager também são criptografados em trânsito e criptografados quando armazenados.
 
 Cada cliente recebe seu próprio Repositório **** Git e seu código é seguro e não é compartilhado com outras **Organizações**.
 
