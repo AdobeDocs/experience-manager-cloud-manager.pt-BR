@@ -1,17 +1,20 @@
 ---
-title: Manuseio de versão do projeto Maven
-seo-title: Manuseio de versão do projeto Maven
+title: Manuseio da versão do projeto Maven
+seo-title: Manuseio da versão do projeto Maven
 description: Saiba mais sobre o Maven Project Version Handling.
-seo-description: Siga esta página para saber mais sobre o Maven Project Version Handling
+seo-description: Siga esta página para saber mais sobre o Maven Project Version Handling.
 translation-type: tm+mt
-source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
+source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 7%
 
 ---
 
 
-# Manuseio de versão do projeto Maven {#project-version}
+# Manuseio da versão do projeto Maven {#project-version}
 
-## Noções Gerais do Processamento de Versão do Projeto Maven {#understanding-project-version}
+## Understanding Maven Project Version Handling {#understanding-project-version}
 
 Para implantações de estágio e de produção, o Cloud Manager gera uma versão única, que aumenta.
 
