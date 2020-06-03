@@ -1,43 +1,41 @@
 ---
-title: Notas de versão para 2020.5.0
-seo-title: Notas de versão do AEM Cloud Manager para 2020.5.0
-description: Siga esta página para obter informações sobre a versão 2020.5.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.5.0 do AEM Cloud Manager
+title: Notas de versão para 2020.6.0
+seo-title: Notas de versão do AEM Cloud Manager para 2020.6.0
+description: Siga esta página para obter informações sobre a versão 2020.6.0 do Cloud Manager
+seo-description: Siga esta página para obter informações sobre a versão 2020.6.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: 0652436ec0c1c95d270a06a600424dbfd0140b27
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '177'
 ht-degree: 6%
 
 ---
 
-# Notas de versão para 2020.5.0 {#release-notes-for}
+# Notas de versão para 2020.6.0 {#release-notes-for}
 
 A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.5.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.5.0 é 7 de maio de 2020.
+A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.6.0 é 4 de junho de 2020.
 
 ## Novidades {#whats-new}
 
-* Seis regras adicionais de qualidade de código foram adicionadas para ajudar os clientes a identificar possíveis problemas ao planejar uma migração para o Serviço da nuvem.
+* O treinador marca na landing page para informar e instruir o usuário sobre a navegação básica.
 
-* Uma nova métrica de Compatibilidade *do serviço da* Cloud foi adicionada para resumir o número de problemas relacionados à compatibilidade.
+* Uma página **APRENDIZADO** está disponível no Cloud Manager, acessível por meio da navegação superior. Esta página inclui recursos para ajudar os usuários a saber mais sobre os fluxos de trabalho usados com mais frequência, conforme relevante para suas funções atribuídas no Cloud Manager.
 
-* O desempenho da página de Atividade e da API de Lista de execuções de pipeline foi aprimorado.
+* O valor máximo para o 95º Percentil de Tempo de Processamento do Assets foi aumentado para 500 segundos.
 
-* O log de qualidade do código agora contém rastreamentos completos de pilha para exceções.
+* O log de compilação agora inclui a lista de artefatos descobertos, incluindo pacotes de conteúdo ignorados.
+
+* A etapa Criar agora valida que todos os pacotes de conteúdo gerados incluem todas as propriedades obrigatórias - nome, grupo e versão.
 
 ## Correções de erros {#bug-fixes}
 
-* Um cartão enganoso foi exibido na página de visão geral enquanto o pipeline de produção estava em execução.
 
-* A regra de qualidade do código *DontImplantaçãoOrExtendProviderTypesPomCheck* pode, às vezes, produzir uma Exceção de Ponteiro Nulo.
+* Ao configurar o pipeline de produção, a opção Implantação programada não estava visível para alguns clientes.
 
-* Alguns links de documentação da página de visão geral não funcionavam corretamente.
+* Algumas mensagens de implantação foram truncadas.
 
-* Determinados cartões na página de visão geral não exibiam os nomes das entidades corretamente.
-
-* Determinadas configurações de topologia faziam com que a etapa de teste de desempenho gerasse um erro, em vez de relatórios de métricas ausentes.
 
