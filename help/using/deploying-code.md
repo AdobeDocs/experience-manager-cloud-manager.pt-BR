@@ -6,10 +6,13 @@ seo-description: Depois de configurar seu pipeline (repositório, ambiente e amb
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: usando
+topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
+source-git-commit: ce3ed17e74a5cb7e798bb583ddd75b18518a59bd
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 3%
 
 ---
 
@@ -18,15 +21,15 @@ source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
 
 ## Implantação de código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
-Depois de configurar seu **Pipeline** (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
+Depois de configurar o **Pipeline** (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
-1. Clique em **Implantar** no Gerenciador de nuvem para iniciar o processo de implantação.
+1. Clique em **Implantar** no Gerenciador de nuvem para start do processo de implantação.
 
    ![](assets/Deploy1.png)
 
 1. A tela Execução **do pipeline** é exibida.
 
-   Clique em **Criar** para iniciar o processo.
+   Clique em **Criar** para start do processo.
 
    ![](assets/Deploy2.png)
 
@@ -41,7 +44,7 @@ Depois de configurar seu **Pipeline** (repositório, ambiente e ambiente de test
    >
    >Além disso, você pode revisar as etapas de vários processos de implantação ao exibir registros ou revisar os resultados para os critérios de teste.
 
-   A implantação **do** estágio envolve as seguintes etapas:
+   A **Implantação do preparo** envolve estas etapas:
 
    * Validação: Essa etapa garante que o pipeline esteja configurado para usar os recursos disponíveis no momento, por exemplo, que a ramificação configurada exista, os ambientes estarão disponíveis.
    * Compilação e teste de unidade: Esta etapa executa um processo de criação contido. Consulte [Criar um projeto](create-an-application-project.md) de aplicativo AEM para obter detalhes sobre o ambiente de criação.
@@ -49,13 +52,13 @@ Depois de configurar seu **Pipeline** (repositório, ambiente e ambiente de test
    * Implantar no palco
    ![](assets/Stage_Deployment1.png)
 
-   O **Stage Testing** envolve as seguintes etapas:
+   The **Stage Testing**, involves the following steps:
 
-   * Teste de segurança: Esta etapa avalia o impacto sobre a segurança do código de seu aplicativo no ambiente do AEM. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
+   * Teste de segurança: Esta etapa avalia o impacto sobre a segurança do código de seu aplicativo no ambiente AEM. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
    * Teste de desempenho: Esta etapa avalia o desempenho do código do aplicativo. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
    ![](assets/Stage_Testing1.png)
 
-   A implantação **de produção** envolve as seguintes etapas:
+   The **Production Deployment**, involves the following steps:
 
    * **Pedido de aprovação** (se ativado)
    * **Programar implantação** de produção (se ativada)
@@ -65,7 +68,7 @@ Depois de configurar seu **Pipeline** (repositório, ambiente e ambiente de test
 
    >[!NOTE]
    >
-   >A Implantação **de Produção de** Programação está ativada ao configurar o pipeline.
+   >A Implantação **de Produção de** Programação é ativada durante a configuração do pipeline.
    >
    >
    >Usando essa opção, você pode programar sua implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
@@ -88,20 +91,20 @@ Depois de configurar seu **Pipeline** (repositório, ambiente e ambiente de test
 
 A seção a seguir descreve como os pacotes do AEM e do dispatcher são implantados na fase de estágio e na fase de produção.
 
-O Cloud Manager carrega todos os arquivos target/*.zip produzidos pelo processo de compilação em um local de armazenamento.  Esses artefatos são recuperados desse local durante as fases de implantação do pipeline.
+O Cloud Manager carrega todos os arquivos público alvo/*.zip produzidos pelo processo de compilação para um local do armazenamento.  Esses artefatos são recuperados desse local durante as fases de implantação do pipeline.
 
 Quando o Cloud Manager é implantado em topologias que não sejam de produção, o objetivo é concluir a implantação o mais rápido possível e, portanto, os artefatos são implantados em todos os nós simultaneamente, da seguinte forma:
 
 1. O Cloud Manager determina se cada artefato é um pacote AEM ou dispatcher.
-1. O Cloud Manager remove todos os despachadores do Balanceador de carga para isolar o ambiente durante a implantação.
+1. O Cloud Manager remove todos os despachantes do Balanceador de carga para isolar o ambiente durante a implantação.
 
-   A menos que configurado de outra forma, você pode ignorar as Alterações do Balanceador de Carga nas Implantações de Dev e Stage, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes dev e pipeline de produção, para ambientes de estágio.
+   A menos que configurado de outra forma, você pode ignorar as Alterações do Balanceador de Carga nas Implantações de Dev e Stage, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes dev e o pipeline de produção, para ambientes de palco.
 
    ![](assets/load_balancer.png)
 
    >[!NOTE]
    >
-   >Espera-se que esse recurso seja usado principalmente por clientes 1 a 1.
+   >Espera-se que esse recurso seja usado principalmente por clientes 1-1-1.
 
 1. Cada artefato AEM é implantado em cada instância do AEM por meio de APIs do Gerenciador de pacotes, com dependências de pacotes determinando a ordem de implantação.
 
@@ -114,7 +117,7 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
 1. O artefato do dispatcher é implantado em cada dispatcher da seguinte maneira:
 
    1. O backup das configurações atuais é feito e copiado para um local temporário
-   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte Gerenciar configurações do Dispatcher para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
+   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte Gerenciar suas configurações do Dispatcher para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
    1. O artefato é extraído para o diretório httpd.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do despachante do AMS e não podem ser alterados.
    1. O Apache realiza um teste de configuração. Se nenhum erro for encontrado, o serviço será recarregado. Se ocorrer um erro, as configurações serão restauradas a partir do backup, o serviço será recarregado e o erro será reportado de volta ao Cloud Manager.
    1. Cada caminho especificado na configuração do pipeline é invalidado ou liberado do cache do dispatcher.
@@ -126,11 +129,11 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
 
    >[!NOTE]
    >
-   >Você pode ignorar as mudanças de carregamento de lancer nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines de não produção, para ambientes de desenvolvedor e pipeline de produção, para ambientes de estágio.
+   >Você pode ignorar as alterações no Balanceador de Carga nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines de não-produção, para ambientes de desenvolvedor e pipeline de produção, para ambientes de estágio.
 
 ### Implantação para fase de produção {#deployment-production-phase}
 
-O processo de implantação das topologias de produção é ligeiramente diferente para minimizar o impacto para os visitantes do site do AEM.
+O processo de implantação das topologias de produção é ligeiramente diferente para minimizar o impacto nos visitantes do site do AEM.
 
 As implantações de produção geralmente seguem as mesmas etapas acima, mas de maneira contínua:
 
