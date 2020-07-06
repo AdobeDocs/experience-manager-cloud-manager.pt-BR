@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ce3ed17e74a5cb7e798bb583ddd75b18518a59bd
+source-git-commit: 509a74b2e85d5880bafa56cd0ab3bae9c57b0683
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 3%
 
 ---
@@ -118,7 +118,7 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
 
    1. O backup das configurações atuais é feito e copiado para um local temporário
    1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte Gerenciar suas configurações do Dispatcher para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
-   1. O artefato é extraído para o diretório httpd.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do despachante do AMS e não podem ser alterados.
+   1. O artefato é extraído para o `httpd` diretório.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do despachante do AMS e não podem ser alterados.
    1. O Apache realiza um teste de configuração. Se nenhum erro for encontrado, o serviço será recarregado. Se ocorrer um erro, as configurações serão restauradas a partir do backup, o serviço será recarregado e o erro será reportado de volta ao Cloud Manager.
    1. Cada caminho especificado na configuração do pipeline é invalidado ou liberado do cache do dispatcher.
    >[!NOTE]
