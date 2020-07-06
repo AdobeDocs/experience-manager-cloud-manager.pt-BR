@@ -2,14 +2,14 @@
 title: Regras de qualidade do código personalizado
 seo-title: Regras de qualidade do código personalizado
 description: Siga esta página para saber mais sobre as regras de qualidade de código personalizadas executadas pelo Cloud Manager.
-seo-description: Siga esta página para saber mais sobre as regras de qualidade de código personalizadas executadas pelo Adobe Experience Manager Cloud Manager.
+seo-description: Siga esta página para saber mais sobre as regras de qualidade de código personalizadas executadas pelo Gerenciador da Adobe Experience Manager Cloud.
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 3663bd773c0043282359d690621de5023fa2974c
+source-git-commit: 8c651bcb187d911448475f6031c93bf956277e9f
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 6%
@@ -621,7 +621,8 @@ Um problema comum que ocorre em projetos complexos é onde o mesmo componente OS
 
 #### Código não compatível {#non-compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + projectA
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -632,7 +633,8 @@ Um problema comum que ocorre em projetos complexos é onde o mesmo componente OS
 
 #### Código compatível {#compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + shared-config
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -681,7 +683,7 @@ Um problema comum é o uso de nós nomeados `config` nas caixas de diálogo do c
 
 **Desde**: Versão 2019.6.0
 
-Semelhante aos *pacotes não devem conter configurações* OSGi do Duplicado, esse é um problema comum em projetos complexos nos quais o mesmo caminho de nó é gravado por vários pacotes de conteúdo separados. Embora seja possível usar dependências de pacote de conteúdo para garantir um resultado consistente, é melhor evitar sobreposições completamente.
+Semelhante aos *pacotes não devem conter configurações* OSGi de Duplicado, esse é um problema comum em projetos complexos nos quais o mesmo caminho de nó é gravado por vários pacotes de conteúdo separados. Embora seja possível usar dependências de pacote de conteúdo para garantir um resultado consistente, é melhor evitar sobreposições completamente.
 
 ### O modo de criação padrão não deve ser a interface clássica {#oakpal-default-authoring}
 
@@ -705,7 +707,7 @@ A configuração do OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` d
 
 **Desde**: Versão 2020.5.0
 
-Os componentes do AEM que têm uma caixa de diálogo de interface clássica devem sempre ter uma caixa de diálogo de interface de usuário de toque correspondente para fornecer uma experiência de criação ideal e para serem compatíveis com o modelo de implantação do Serviço de nuvem, onde a interface de usuário clássica não é suportada. Essa regra verifica os seguintes cenários:
+Os componentes do AEM que têm uma caixa de diálogo de interface clássica devem sempre ter uma caixa de diálogo de interface de usuário de toque correspondente para fornecer uma experiência de criação ideal e para serem compatíveis com o modelo de implantação do Cloud Service, onde a interface de usuário clássica não é suportada. Essa regra verifica os seguintes cenários:
 
 * Um componente com uma caixa de diálogo Interface clássica (ou seja, um nó filho da caixa de diálogo) deve ter uma caixa de diálogo Interface do usuário de toque correspondente (ou seja, um nó `cq:dialog` filho).
 * Um componente com uma caixa de diálogo de design da interface clássica (ou seja, um nó design_dialog) deve ter uma caixa de diálogo de design da interface do usuário de toque correspondente (ou seja, um nó `cq:design_dialog` filho).
@@ -723,9 +725,9 @@ A documentação das Ferramentas de modernização do AEM fornece documentação
 
 **Desde**: Versão 2020.5.0
 
-Para serem compatíveis com o modelo de implantação do serviço em nuvem, os pacotes de conteúdo individuais devem conter conteúdo para as áreas imutáveis do repositório (ou seja, não devem ser modificados pelo código do cliente e causarão uma violação separada) ou a área mutável (ou seja, tudo o mais), mas não ambos. `/apps and /libs, although /libs` Por exemplo, um pacote que inclui ambos não `/apps/myco/components/text and /etc/clientlibs/myco` é compatível com o serviço em nuvem e fará com que um problema seja relatado.
+Para serem compatíveis com o modelo de implantação do Cloud Service, os pacotes de conteúdo individuais devem conter conteúdo para as áreas imutáveis do repositório (ou seja, não devem ser modificados pelo código do cliente e causarão uma violação separada) ou a área silenciosa (ou seja, tudo o mais), mas não ambos. `/apps and /libs, although /libs` Por exemplo, um pacote que inclui ambos `/apps/myco/components/text and /etc/clientlibs/myco` não é compatível com o Cloud Service e fará com que um problema seja relatado.
 
-Consulte a Estrutura [do projeto do](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEM para obter mais detalhes.
+Refer to [AEM Project Structure](https://docs.adobe.com/content/help/pt-BR/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.translate.html) for more details.
 
 ### Os Agentes De Replicação Reversa Não Devem Ser Utilizados {#oakpal-reverse-replication}
 
@@ -737,7 +739,7 @@ Consulte a Estrutura [do projeto do](https://docs.adobe.com/content/help/en/expe
 
 **Desde**: Versão 2020.5.0
 
-O suporte para Replicação reversa não está disponível nas implantações do Serviço em nuvem, conforme descrito nas Notas de [versão: Remoção dos agentes](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents)de replicação.
+O suporte para replicação reversa não está disponível em implantações de Cloud Service, conforme descrito nas Notas de [versão: Remoção dos agentes](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents)de replicação.
 
 Os clientes que usam replicação reversa devem entrar em contato com a Adobe para obter soluções alternativas.
 
