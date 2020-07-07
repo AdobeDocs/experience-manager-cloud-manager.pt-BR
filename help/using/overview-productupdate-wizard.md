@@ -1,23 +1,26 @@
 ---
-title: Assistente de atualização de produto
-seo-title: Assistente de atualização de produto
-description: 'This page serves as a starting point for learning Product Update Wizard. '
+title: Assistente de atualização do produto
+seo-title: Assistente de atualização do produto
+description: 'Esta página serve como ponto de partida para aprender sobre o Assistente de atualização de produto. '
 seo-description: 'Esta página serve como ponto de partida para aprender sobre o Assistente de atualização de produto. '
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 7769911253c149f4b1f7d9dec5d94888ccdbcb59
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 5%
 
 ---
 
 
 # Visão geral {#overview-product-update-wizard}
 
-O Assistente de atualização de produto é uma experiência orientada e passo a passo para clientes do Cloud Manager que estão atualizando para o Adobe Experience Manager (AEM) 6.5 mais recente. Ele simplifica o processo completo, garante a adesão às práticas recomendadas do AEM usando a estrutura CI/CD do Cloud Manager e os testes automatizados integrados.
+O Assistente de atualização de produto é uma experiência guiada e passo a passo para clientes do Cloud Manager que estão atualizando para o último Adobe Experience Manager (AEM) 6.5. Ele simplifica o processo completo, garante a adesão às práticas recomendadas do AEM usando a estrutura CI/CD do Cloud Manager e os testes automatizados integrados.
 
-O assistente inclui cinco fases que orientam o usuário durante uma atualização do produto AEM:
+O assistente inclui cinco fases que orientam o usuário durante uma atualização de produto do AEM:
 
 * **Avaliação**
 * **Correção**
@@ -26,9 +29,10 @@ O assistente inclui cinco fases que orientam o usuário durante uma atualizaçã
 * **Conclusão**
 
 
-## Usando o Assistente de Atualização de Produto {#using-product-update-wizard}
+## Using Product Update Wizard {#using-product-update-wizard}
 
 >[!NOTE]
+>
 >Os clientes integrados ao Cloud Manager e qualificados para atualizar para o AEM 6.5 poderão aproveitar o assistente de atualização de produto. Entre em contato com o engenheiro de sucesso do cliente (CSE) para obter mais detalhes.
 
 1. Você receberá uma notificação de pulso por meio do Gerenciador de nuvem informando que o AEM 6.5 está disponível para o seu programa.
