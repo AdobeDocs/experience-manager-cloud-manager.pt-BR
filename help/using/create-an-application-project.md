@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
+source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 7%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
 
 ## Usar o Assistente para criar um projeto de aplicativo AEM {#using-wizard-to-create-an-aem-application-project}
 
-Quando os clientes são embarcados no Cloud Manager, eles recebem um repositório git vazio. Os clientes atuais do Adobe Managed Services (AMS) (ou clientes locais do AEM que estão migrando para o AMS) geralmente já têm o código do projeto em git (ou outro sistema de controle de versão) e importarão seu projeto para o repositório de git do Cloud Manager. Novos clientes, no entanto, não têm projetos existentes.
+Quando os clientes são embarcados no Cloud Manager, eles recebem um repositório git vazio. Os clientes atuais da Adobe Managed Services (AMS) (ou os clientes locais do AEM que estão migrando para o AMS) geralmente já terão o código do projeto em git (ou outro sistema de controle de versão) e importarão seu projeto para o repositório de git do Cloud Manager. Novos clientes, no entanto, não têm projetos existentes.
 
 Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto AEM mínimo como ponto de partida. Esse processo se baseia no [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
@@ -31,9 +34,9 @@ Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
 
 1. Clique em **Criar para** abrir uma caixa de diálogo, que permite ao usuário fornecer os parâmetros exigidos pelo AEM Project Archetype. Em seu formulário padrão, a caixa de diálogo solicita dois valores:
 
-   * **Título** - por padrão, isso é definido como Nome *do programa*
+   * **Título** - por padrão, está definido como Nome do *Programa*
 
-   * **Novo nome** da ramificação - por padrão, é *mestre*
+   * **Novo nome** da ramificação - por padrão, isso é *principal*
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
    A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração para o Archetype. Muitos desses parâmetros têm valores padrão que são gerados com base no **Título**.
@@ -59,9 +62,9 @@ Para ser criado e implantado com êxito com o Cloud Manager, os projetos AEM exi
 * Deve haver um arquivo *pom.xml* na raiz do repositório Git. Esse arquivo *pom.xml* pode fazer referência a quantos submódulos (que por sua vez podem ter outros submódulos etc.) conforme necessário.
 
 * Você pode adicionar referências a repositórios de artefatos Maven adicionais em seus arquivos *pom.xml* . No entanto, o acesso a repositórios de artefatos protegidos por senha ou pela rede não é suportado.
-* Os pacotes de conteúdo implantáveis são detectados ao verificar se há arquivos *zip* do pacote de conteúdo que estão contidos em um diretório chamado *target*. Qualquer número de submódulos pode produzir pacotes de conteúdo.
+* Os pacotes de conteúdo implantáveis são detectados ao verificar se há arquivos *zip* do pacote de conteúdo contidos em um diretório chamado *público alvo*. Qualquer número de submódulos pode produzir pacotes de conteúdo.
 
-* Os artefatos do Dispatcher que podem ser implantados são descobertos pela varredura de arquivos *zip* (novamente, contidos em um diretório chamado *target*) que têm diretórios chamados *conf* e *conf.d*.
+* Os artefatos implantáveis do Dispatcher são descobertos pela verificação de arquivos *zip* (novamente, contidos em um diretório chamado *público alvo*) que têm diretórios chamados *conf* e *conf.d*.
 
 * Se houver mais de um pacote de conteúdo, a ordem de implantações de pacote não é garantida. Se uma ordem específica for necessária, as dependências do pacote de conteúdo poderão ser usadas para definir a ordem. Os pacotes podem ser [ignorados](#skipping-content-packages) da implantação.
 
@@ -75,13 +78,13 @@ Last Modified Date: 2018-10-08T09:20:10.106-0400
 
  -->
 
-## Criar detalhes do ambiente {#build-environment-details}
+## Criar detalhes do Ambiente {#build-environment-details}
 
 O Cloud Manager cria e testa seu código usando um ambiente de compilação especializado. Esse ambiente tem os seguintes atributos:
 
-* O ambiente de compilação é baseado no Linux, derivado do Ubuntu 18.04.
+* O ambiente build é baseado no Linux, derivado do Ubuntu 18.04.
 * O Apache Maven 3.6.0 está instalado.
-* A versão do Java instalada é o Oracle JDK 8u202.
+* As versões do Java instaladas são o Oracle JDK 8u202 e 11.0.2.
 * Existem outros pacotes de sistema instalados que são necessários:
 
    * bzip2
@@ -91,20 +94,51 @@ O Cloud Manager cria e testa seu código usando um ambiente de compilação espe
    * gráfico
 
 * Outros pacotes podem ser instalados no momento da criação, conforme descrito [abaixo](#installing-additional-system-packages).
-* Cada construção é feita num ambiente intocado; o contêiner de compilação não mantém nenhum estado entre as execuções.
+* Cada obra é feita com um ambiente intocado; o container build não mantém nenhum estado entre as execuções.
 * Maven é sempre executado com o comando: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * O Maven é configurado no nível do sistema com um arquivo settings.xml que inclui automaticamente o repositório público do Adobe **Artifato** . (Consulte o Repositório [do](https://repo.adobe.com/) Adobe Public Maven para obter mais detalhes).
 
+### Uso do Java 11 {#using-java-11}
 
-## Variáveis de ambiente {#environment-variables}
+O Cloud Manager agora é compatível com a criação de projetos de clientes com Java 8 e Java 11. Por padrão, os projetos são criados usando o Java 8. Os clientes que pretendem usar o Java 11 em seus projetos podem fazer isso usando o plug-in [](https://maven.apache.org/plugins/maven-toolchains-plugin/)Apache Maven Toolchain.
 
-### Variáveis de ambiente padrão {#standard-environ-variables}
+Para fazer isso, no arquivo pom.xml, adicione uma `<plugin>` entrada com a seguinte aparência:
+
+```xml
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-toolchains-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>toolchain</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <toolchains>
+                    <jdk>
+                    <version>11</version>
+                    <vendor>oracle</vendor>
+                    </jdk>
+                </toolchains>
+            </configuration>
+        </plugin>
+```
+
+>[!NOTE]
+>Os Fornecedores Suportados são Oracle e Sun Microsystems e as Versões Suportadas são 1.8, 1.11 e 11.
+
+## Variáveis de Ambiente {#environment-variables}
+
+### Variáveis de Ambiente padrão {#standard-environ-variables}
 
 Em alguns casos, os clientes acham necessário variar o processo de criação com base nas informações sobre o programa ou pipeline.
 
-Por exemplo, se a miniificação do JavaScript em tempo de criação estiver sendo feita, por meio de uma ferramenta como gulp, pode haver um desejo de usar um nível de miniificação diferente ao criar um ambiente dev em vez de construir para o estágio e a produção.
+Por exemplo, se a miniificação do JavaScript em tempo de criação estiver sendo feita, por meio de uma ferramenta como gulp, pode haver um desejo de usar um nível de miniificação diferente ao criar um ambiente dev em vez de construir para o palco e a produção.
 
-Para suportar isso, o Cloud Manager adiciona essas variáveis de ambiente padrão ao contêiner de compilação para cada execução.
+Para suportar isso, o Cloud Manager adiciona essas variáveis de ambiente padrão ao container build para cada execução.
 
 | **Nome da variável** | **Definição** |
 |---|---|
@@ -112,39 +146,45 @@ Para suportar isso, o Cloud Manager adiciona essas variáveis de ambiente padrã
 | RAMIFICAÇÃO | A ramificação configurada para a execução |
 | CM_PIPELINE_ID | O identificador de pipeline numérico |
 | CM_PIPELINE_NAME | O nome do pipeline |
-| CM_PROGRAM_ID | O identificador numérico do programa |
-| CM_PROGRAM_NAME | O nome do programa |
+| CM_PROGRAMA_ID | O identificador de programa numérico |
+| CM_PROGRAMA_NAME | O nome do programa |
 | ARTIFTS_VERSION | Para um pipeline de estágio ou produção, a versão sintética gerada pelo Cloud Manager |
 
-### Variáveis de ambiente personalizadas {#custom-environ-variables}
+### Variáveis de pipeline {#pipeline-variables}
 
-Em alguns casos, o processo de compilação de um cliente pode depender de variáveis de configuração específicas que não seriam adequadas para serem inseridas no repositório git. O Cloud Manager permite que essas variáveis sejam configuradas por um CSE (Customer Success Engineer, engenheiro de sucesso do cliente) com base no cliente. Essas variáveis são armazenadas em um local de armazenamento seguro e são visíveis apenas no contêiner de compilação do cliente específico. Os clientes que desejarem usar esse recurso precisam entrar em contato com o CSE para configurar suas variáveis.
+Em alguns casos, o processo de compilação de um cliente pode depender de variáveis de configuração específicas que não seriam adequadas para serem inseridas no repositório git. O Cloud Manager permite que essas variáveis sejam configuradas por meio da API do Cloud Manager ou da CLI do Cloud Manager por pipeline. As variáveis podem ser armazenadas como texto sem formatação ou como criptografadas em repouso. Em ambos os casos, as variáveis são disponibilizadas no ambiente build como uma variável de ambiente que pode ser referenciada no arquivo pom.xml ou em outros scripts de compilação.
 
-Depois de configuradas, essas variáveis estarão disponíveis como variáveis de ambiente. Para usá-las como propriedades Maven, é possível referenciá-las no arquivo pom.xml, possivelmente em um perfil como descrito acima:
+Para definir uma variável usando a CLI, execute um comando como:
+
+`$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
+
+As variáveis atuais podem ser listadas:
+
+`$ aio cloudmanager:list-pipeline-variables PIPELINEID`
+
+Os nomes de variáveis podem conter apenas caracteres alfanuméricos e sublinhados. Por convenção, os nomes devem ser todos maiúsculos. Há um limite de 200 variáveis por pipeline, cada nome deve ter menos de 100 caracteres e cada valor deve ter menos de 2048 caracteres.
+
+Quando usado em um arquivo pom.xml Maven, é útil mapear essas variáveis para as propriedades Maven usando uma sintaxe semelhante a esta:
 
 ```xml
         <profile>
             <id>cmBuild</id>
             <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
+            <property>
+                <name>env.CM_BUILD</name>
+            </property>
             </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
+                <properties>
+                <my.custom.property>${env.MY_CUSTOM_VARIABLE}</my.custom.property> 
+                </properties>
         </profile>
 ```
 
->[!NOTE]
->
->Os nomes das variáveis de ambiente podem conter apenas caracteres alfanuméricos e sublinhado (_). Por convenção, os nomes devem ser todos maiúsculos.
-
-## Ativação de perfis Maven no Cloud Manager {#activating-maven-profiles-in-cloud-manager}
+## Ativar Perfis Maven no Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
 Em alguns casos limitados, pode ser necessário variar um pouco o processo de compilação ao ser executado no Gerenciador de nuvem em vez de quando é executado em estações de trabalho de desenvolvedor. Nesses casos, os Perfis [](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) Maven podem ser usados para definir como a compilação deve ser diferente em ambientes diferentes, incluindo o Cloud Manager.
 
-A ativação de um Perfil Maven dentro do ambiente de compilação do Cloud Manager deve ser feita procurando pela variável de ambiente CM_BUILD descrita acima. Em contrapartida, um perfil destinado a ser usado somente fora do ambiente de criação do Cloud Manager deve ser feito procurando o absentido dessa variável.
+A Ativação de um Perfil Maven dentro do ambiente de compilação do Cloud Manager deve ser feita procurando a variável de ambiente CM_BUILD descrita acima. Em contrapartida, um perfil destinado a ser usado somente fora do ambiente de criação do Cloud Manager deve ser feito procurando o absentido dessa variável.
 
 Por exemplo, se você quiser enviar uma mensagem simples somente quando a compilação for executada dentro do Cloud Manager, você deve fazer o seguinte:
 
@@ -218,7 +258,6 @@ E se você quiser enviar uma mensagem simples somente quando a criação for exe
         </profile>
 ```
 
-
 ## Instalação de pacotes adicionais do sistema {#installing-additional-system-packages}
 
 Algumas compilações exigem a instalação de pacotes adicionais do sistema para funcionar totalmente. Por exemplo, uma compilação pode chamar um script Python ou ruby e, como resultado, precisa ter um interpretador de idioma apropriado instalado. Isso pode ser feito chamando o plug-in [exec-maven](https://www.mojohaus.org/exec-maven-plugin/) para chamar a APT. Essa execução geralmente deve estar envolvida em um perfil Maven específico do Cloud Manager. Por exemplo, para instalar o python:
@@ -278,7 +317,7 @@ Essa mesma técnica pode ser usada para instalar pacotes específicos de idioma,
 
 >[!NOTE]
 >
->Instalar um pacote do sistema dessa maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote de sistema instalado no ambiente AEM, entre em contato com o CSE (Customer Success Engineers).
+>Instalar um pacote do sistema dessa maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote do sistema instalado no ambiente AEM, entre em contato com o CSE (Customer Success Engineers).
 
 ## Ignorando pacotes de conteúdo {#skipping-content-packages}
 
