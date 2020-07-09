@@ -4,7 +4,7 @@ seo-title: Notas de versão do AEM Cloud Manager para 2020.7.0
 description: Siga esta página para obter informações sobre a versão 2020.7.0 do Cloud Manager
 seo-description: Siga esta página para obter informações sobre a versão 2020.7.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 33aeba59c149e5ba3300b9d798356ec5e9bcd4b8
+source-git-commit: a0917f5cecbe552807d9147cd20316e02c2dd1a0
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 8%
@@ -24,7 +24,6 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.7.0 é 9 de jul
 * A detecção e anexação de instâncias do dispatcher de balanceadores de carga durante implantações de produção agora funciona de forma mais consistente.
 
 * O container de criação do Cloud Manager agora é compatível com Java 8 e Java 11.
-
 
 ## Correções de erros {#bug-fixes}
 
