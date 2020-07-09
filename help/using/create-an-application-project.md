@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+source-git-commit: 02515ac6e3ac54909e23a276a78f571ea5c249c4
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1518'
 ht-degree: 7%
 
 ---
@@ -37,6 +37,7 @@ Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
    * **Título** - por padrão, está definido como Nome do *Programa*
 
    * **Novo nome** da ramificação - por padrão, isso é *principal*
+
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
    A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração para o Archetype. Muitos desses parâmetros têm valores padrão que são gerados com base no **Título**.
@@ -152,13 +153,15 @@ Para suportar isso, o Cloud Manager adiciona essas variáveis de ambiente padrã
 
 ### Variáveis de pipeline {#pipeline-variables}
 
-Em alguns casos, o processo de compilação de um cliente pode depender de variáveis de configuração específicas que não seriam adequadas para serem inseridas no repositório git. O Cloud Manager permite que essas variáveis sejam configuradas por meio da API do Cloud Manager ou da CLI do Cloud Manager por pipeline. As variáveis podem ser armazenadas como texto sem formatação ou como criptografadas em repouso. Em ambos os casos, as variáveis são disponibilizadas no ambiente build como uma variável de ambiente que pode ser referenciada no arquivo pom.xml ou em outros scripts de compilação.
+Em alguns casos, o processo de compilação de um cliente pode depender de variáveis de configuração específicas que não seriam adequadas para serem inseridas no repositório Git. O Cloud Manager permite que essas variáveis sejam configuradas por meio da API do Cloud Manager ou da CLI do Cloud Manager por pipeline.
 
-Para definir uma variável usando a CLI, execute um comando como:
+As variáveis podem ser armazenadas como texto sem formatação ou como criptografadas em repouso. Em ambos os casos, as variáveis são disponibilizadas no ambiente build como uma variável de ambiente que pode ser referenciada no arquivo pom.xml ou em outros scripts de compilação.
+
+Use o comando abaixo para definir uma variável usando a CLI:
 
 `$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
 
-As variáveis atuais podem ser listadas:
+Você pode lista as variáveis atuais, como mostrado abaixo:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
