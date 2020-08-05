@@ -1,43 +1,50 @@
 ---
-title: Notas de versão para 2020.7.0
-seo-title: Notas de versão do AEM Cloud Manager para 2020.7.0
-description: Siga esta página para obter informações sobre a versão 2020.7.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.7.0 do AEM Cloud Manager
+title: Notas da versão 2020.8.0
+seo-title: Notas de versão do AEM Cloud Manager para 2020.8.0
+description: Siga esta página para obter informações sobre a versão 2020.8.0 do Cloud Manager
+seo-description: Siga esta página para obter informações sobre a versão 2020.8.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 0d46abc386460ccbaf7ba10b93286bc8e4af2395
+source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 6%
+source-wordcount: '243'
+ht-degree: 20%
 
 ---
 
-# Notas de versão para 2020.7.0 {#release-notes-for}
+# Notas da versão 2020.8.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.7.0.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.8.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.7.0 é 9 de julho de 2020.
+A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.8.0 é 6 de agosto de 2020.
 
 ## Novidades {#whats-new}
 
-* A detecção e anexação de instâncias do dispatcher de balanceadores de carga durante implantações de produção agora funciona de forma mais consistente.
+* O teste de desempenho de sites agora suporta o uso opcional da autenticação.
 
-* O container de criação do Cloud Manager agora é compatível com Java 8 e Java 11.
+   Consulte para obter mais detalhes.
 
-* Os pipelines do Cloud Manager agora oferecem suporte a variáveis e segredos definidos pelo cliente.
-Consulte Variáveis [de](/help/using/create-an-application-project.md#pipeline-variables) pipeline para obter mais detalhes.
+* Agora há suporte para Repositórios de Maven Privado com vínculo de autenticação.
 
 ## Correções de erros {#bug-fixes}
 
-* As opções **Cancelar** e **Salvar** na página Edição de Pipeline de Não Produção nem sempre estavam visíveis.
+* Alguns plug-ins SonarQube desnecessários e indesejados estavam sendo executados como parte da verificação de qualidade de código.
 
-* Certas falhas no processo de qualidade do código podem resultar na não geração correta do arquivo de log.
+* Na página de execução de pipeline, o nome da ramificação estava formatado incorretamente.
 
-* Alguns grandes logs de etapas de pipeline não puderam ser baixados consistentemente pela interface do usuário.
+* Ao implantar topologias com uma única publicação, um único despachante e um autor em modo de espera frio, o despachante foi removido erroneamente do balanceador de carga.
+
+* Em alguns casos, as execuções de pipeline concluídas não foram registradas com êxito como tendo sido concluídas, impedindo assim novas execuções do pipeline.
+
+* Ocasionalmente, as execuções de tubulação ficariam *presas* devido a problemas de comunicação interna.
+
+* A dica de ferramenta nos cartões de programa não estava consistentemente correta.
+
+* Houve uma incompatibilidade de cores na página de visão geral.
 
 ## Problemas conhecidos {#known-issues}
 
 * Quando um ambiente AMS contém uma instância stand-by, a mensagem registrada informa que a instância está inativa em vez de no modo de espera.
 
-* Devido a uma mudança na forma como a cobertura de código é calculada, a versão _mínima_ do plug-in Jacoco agora é 0.7.5.201505241946 (lançado em maio de 2015). Os clientes que referenciarem explicitamente uma versão mais antiga receberão uma mensagem de erro no processo de qualidade do código.
+* Devido a uma mudança na forma como a cobertura de código é calculada, a versão _mínima_ do plug-in Jacoco agora é a 0.7.5.201505241946 (lançada em maio de 2015). Os clientes que indicarem uma versão mais antiga receberão uma mensagem de erro no processo de qualidade do código.
