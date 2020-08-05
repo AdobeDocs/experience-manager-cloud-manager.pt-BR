@@ -4,10 +4,10 @@ seo-title: Notas de versão do AEM Cloud Manager para 2020.8.0
 description: Siga esta página para obter informações sobre a versão 2020.8.0 do Cloud Manager
 seo-description: Siga esta página para obter informações sobre a versão 2020.8.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
+source-git-commit: c0881ccf602a14b00b7cc68c3d1fc60e7b6954ed
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 20%
+source-wordcount: '191'
+ht-degree: 6%
 
 ---
 
@@ -43,8 +43,3 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.8.0 é 6 de ago
 
 * Houve uma incompatibilidade de cores na página de visão geral.
 
-## Problemas conhecidos {#known-issues}
-
-* Quando um ambiente AMS contém uma instância stand-by, a mensagem registrada informa que a instância está inativa em vez de no modo de espera.
-
-* Devido a uma mudança na forma como a cobertura de código é calculada, a versão _mínima_ do plug-in Jacoco agora é a 0.7.5.201505241946 (lançada em maio de 2015). Os clientes que indicarem uma versão mais antiga receberão uma mensagem de erro no processo de qualidade do código.
