@@ -2,16 +2,16 @@
 title: Criar um projeto de aplicativo AEM
 seo-title: Criar um projeto de aplicativo AEM
 description: 'null'
-seo-description: Siga esta página para saber mais sobre como configurar um projeto do AEM na introdução ao Cloud Manager.
+seo-description: Siga esta página para saber mais sobre como configurar um projeto AEM ao começar a usar o Cloud Manager.
 uuid: 7b976ebf-5358-49d8-a58d-0bae026303fa
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 0fda91c2fe319fb58b3a6dd09f75eac7a60d9038
+source-git-commit: 200057885f068ff8df889601a401e06d89981209
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1721'
 ht-degree: 6%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 6%
 
 # Criar um projeto de aplicativo AEM {#create-an-aem-application-project}
 
-## Usar o Assistente para criar um projeto de aplicativo AEM {#using-wizard-to-create-an-aem-application-project}
+## Usando o Assistente para Criar um Projeto de Aplicativo AEM {#using-wizard-to-create-an-aem-application-project}
 
-Quando os clientes são embarcados no Cloud Manager, eles recebem um repositório git vazio. Os clientes atuais da Adobe Managed Services (AMS) (ou os clientes locais do AEM que estão migrando para o AMS) geralmente já terão o código do projeto em git (ou outro sistema de controle de versão) e importarão seu projeto para o repositório de git do Cloud Manager. Novos clientes, no entanto, não têm projetos existentes.
+Quando os clientes são embarcados no Cloud Manager, eles recebem um repositório git vazio. Os clientes atuais do Adobe Managed Services (AMS) (ou clientes no local AEM que estão migrando para o AMS) geralmente já terão o código do projeto em git (ou outro sistema de controle de versão) e importarão seu projeto para o repositório git do Cloud Manager. Novos clientes, no entanto, não têm projetos existentes.
 
-Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto AEM mínimo como ponto de partida. Esse processo se baseia no [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto de AEM mínimo como ponto de partida. Esse processo se baseia no [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 
 Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
@@ -65,7 +65,7 @@ Para ser criado e implantado com êxito com o Cloud Manager, os projetos AEM exi
 * Você pode adicionar referências a repositórios de artefatos Maven adicionais em seus arquivos *pom.xml* . O acesso a repositórios [de artefatos protegidos por](#password-protected-maven-repositories) senha é suportado quando configurado. No entanto, o acesso a repositórios de artefatos protegidos pela rede não é suportado.
 * Os pacotes de conteúdo implantáveis são detectados ao verificar se há arquivos *zip* do pacote de conteúdo contidos em um diretório chamado *público alvo*. Qualquer número de submódulos pode produzir pacotes de conteúdo.
 
-* Os artefatos implantáveis do Dispatcher são descobertos pela verificação de arquivos *zip* (novamente, contidos em um diretório chamado *público alvo*) que têm diretórios chamados *conf* e *conf.d*.
+* Os artefatos do Dispatcher que podem ser implantados são descobertos pela varredura de arquivos *zip* (novamente, contidos em um diretório chamado *público alvo*) que têm diretórios chamados *conf* e *conf.d*.
 
 * Se houver mais de um pacote de conteúdo, a ordem de implantações de pacote não é garantida. Se uma ordem específica for necessária, as dependências do pacote de conteúdo poderão ser usadas para definir a ordem. Os pacotes podem ser [ignorados](#skipping-content-packages) da implantação.
 
@@ -97,7 +97,7 @@ O Cloud Manager cria e testa seu código usando um ambiente de compilação espe
 * Outros pacotes podem ser instalados no momento da criação, conforme descrito [abaixo](#installing-additional-system-packages).
 * Cada obra é feita com um ambiente intocado; o container build não mantém nenhum estado entre as execuções.
 * Maven é sempre executado com o comando: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
-* O Maven é configurado no nível do sistema com um arquivo settings.xml que inclui automaticamente o repositório público do Adobe **Artifato** . (Consulte o Repositório [do](https://repo.adobe.com/) Adobe Public Maven para obter mais detalhes).
+* O Maven é configurado no nível do sistema com um arquivo settings.xml que inclui automaticamente o repositório público do **Artefato** de Adobe. (Consulte o Repositório [Adobe Public Maven](https://repo.adobe.com/) para obter mais detalhes).
 
 >[!NOTE]
 >Embora o Gerenciador de nuvem não defina uma versão específica do `jacoco-maven-plugin`, a versão usada deve ser pelo menos `0.7.5.201505241946`.
@@ -134,7 +134,7 @@ Para fazer isso, no arquivo pom.xml, adicione uma `<plugin>` entrada com a segui
 >[!NOTE]
 >Os `vendor` valores suportados são `oracle` e `sun` os `version` valores suportados são `1.8`, `1.11`e `11`.
 
-## Variáveis de Ambiente {#environment-variables}
+## Variáveis de ambiente {#environment-variables}
 
 ### Variáveis de Ambiente padrão {#standard-environ-variables}
 
@@ -190,7 +190,7 @@ Quando usado em um `Maven pom.xml` arquivo, é útil mapear essas variáveis par
 
 Em alguns casos limitados, pode ser necessário variar um pouco o processo de compilação ao ser executado no Gerenciador de nuvem em vez de quando é executado em estações de trabalho de desenvolvedor. Nesses casos, os Perfis [](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) Maven podem ser usados para definir como a compilação deve ser diferente em ambientes diferentes, incluindo o Cloud Manager.
 
-A Ativação de um Perfil Maven dentro do ambiente de compilação do Cloud Manager deve ser feita procurando a variável de ambiente CM_BUILD descrita acima. Em contrapartida, um perfil destinado a ser usado somente fora do ambiente de criação do Cloud Manager deve ser feito procurando o absentido dessa variável.
+A ativação de um Perfil Maven dentro do ambiente de compilação do Cloud Manager deve ser feita procurando a variável de ambiente CM_BUILD descrita acima. Em contrapartida, um perfil destinado a ser usado somente fora do ambiente de criação do Cloud Manager deve ser feito procurando o absentido dessa variável.
 
 Por exemplo, se você quiser enviar uma mensagem simples somente quando a compilação for executada dentro do Cloud Manager, você deve fazer o seguinte:
 
@@ -266,7 +266,7 @@ E se você quiser enviar uma mensagem simples somente quando a criação for exe
 
 ## Suporte ao repositório Maven protegido por senha {#password-protected-maven-repositories}
 
-Para usar um repositório Maven protegido por senha do Gerenciador de nuvem, especifique a senha (e, opcionalmente, o nome de usuário) como uma Variável [secreta do](#pipeline-variables) Pipeline e faça referência a esse segredo em um arquivo chamado `.cloudmanager/maven/settings.xml` no repositório git. Esse arquivo segue o [schema de Arquivo](https://maven.apache.org/settings.html) de Configurações Maven. Quando os start de processo de criação do Gerenciador de nuvem, o `<servers>` elemento nesse arquivo será mesclado no arquivo padrão `settings.xml` fornecido pelo Gerenciador de nuvem. Com esse arquivo no lugar, a ID do servidor seria referenciada de dentro de um `<repository>` e/ou `<pluginRepository>` elemento dentro do `pom.xml` arquivo. Geralmente, esses `<repository>` e/ou `<pluginRepository>` elementos estariam contidos em um perfil [específico do]{#activating-maven-profiles-in-cloud-manager}Cloud Manager, embora isso não seja estritamente necessário.
+Para usar um repositório Maven protegido por senha do Gerenciador de nuvem, especifique a senha (e, opcionalmente, o nome de usuário) como uma Variável [secreta do](#pipeline-variables) Pipeline e faça referência a esse segredo em um arquivo chamado `.cloudmanager/maven/settings.xml` no repositório git. Esse arquivo segue o [schema de Arquivo](https://maven.apache.org/settings.html) de Configurações Maven. Quando os start de processo de criação do Gerenciador de nuvem, o `<servers>` elemento nesse arquivo será mesclado no arquivo padrão `settings.xml` fornecido pelo Gerenciador de nuvem. As IDs de servidor que começam com `adobe` e `cloud-manager` são consideradas reservadas e não devem ser usadas por servidores personalizados. Com esse arquivo no lugar, a ID do servidor seria referenciada de dentro de um `<repository>` e/ou `<pluginRepository>` elemento dentro do `pom.xml` arquivo. Geralmente, esses `<repository>` e/ou `<pluginRepository>` elementos estariam contidos em um perfil [específico do]{#activating-maven-profiles-in-cloud-manager}Cloud Manager, embora isso não seja estritamente necessário.
 
 Por exemplo, digamos que o repositório esteja em https://repository.myco.com/maven2, o usuário que o Gerenciador da Cloud deve usar é `cloudmanager` e a senha é `secretword`.
 
@@ -392,7 +392,7 @@ Essa mesma técnica pode ser usada para instalar pacotes específicos de idioma,
 
 >[!NOTE]
 >
->Instalar um pacote do sistema dessa maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote do sistema instalado no ambiente AEM, entre em contato com o CSE (Customer Success Engineers).
+>Instalar um pacote do sistema desta maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote de sistema instalado no ambiente AEM, entre em contato com o CSE (Customer Success Engineers).
 
 ## Ignorando pacotes de conteúdo {#skipping-content-packages}
 
@@ -433,4 +433,4 @@ Com o plug-in content-package-maven-é semelhante:
 
 ## Desenvolver seu código com base nas práticas recomendadas {#develop-your-code-based-on-best-practices}
 
-As equipes de engenharia e consultoria da Adobe desenvolveram um conjunto [abrangente de práticas recomendadas para desenvolvedores](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html)do AEM.
+As equipes de engenharia e consultoria de Adobe desenvolveram um conjunto [abrangente de práticas recomendadas para desenvolvedores](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html)de AEM.
