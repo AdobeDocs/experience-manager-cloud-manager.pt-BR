@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
+source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 2%
+source-wordcount: '1751'
+ht-degree: 1%
 
 ---
 
@@ -104,7 +104,7 @@ Selecione a ramificação Git e clique em **Avançar**.
 >
 >Se a opção **Programado** estiver selecionada, você poderá programar a implantação de produção para o pipeline **após** a implantação do palco (e **Usar aprovação** de GoLive, se isso tiver sido ativado) aguardar a definição de uma programação. O usuário também pode optar por executar a implantação de produção imediatamente.
 >
->Consulte [**Implantar seu código **](deploying-code.md)para definir a programação de implantação ou executar a produção imediatamente.
+>Consulte [**Implantar seu código**](deploying-code.md) para definir a programação de implantação ou executar a produção imediatamente.
 
 ![](assets/configure-pipeline3.png)
 
@@ -129,7 +129,7 @@ Em seguida, é mostrado como uma etapa separada durante a execução do pipeline
 
 **Invalidação do Dispatcher**
 
-Como um Gerenciador de implantação, você tem a oportunidade de configurar um conjunto de caminhos de conteúdo que serão **invalidados** ou **liberados** do cache do Dispatcher AEM ao configurar ou editar o pipeline.
+Como um Gerenciador de implantação, você tem a oportunidade de configurar um conjunto de caminhos de conteúdo que serão **invalidados** ou **liberados** do cache do Dispatcher AEM para instâncias de publicação, ao configurar ou editar o pipeline.
 
 Você pode configurar um conjunto separado de caminhos para a implantação de Estágio e Produção. Se configurado, essas ações de cache serão executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão AEM Dispatcher - invalidate executa uma invalidação de cache, semelhante a quando o conteúdo é ativado do autor para publicar; flush executa uma exclusão de cache.
 
@@ -178,6 +178,8 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
+   Consulte Teste [de desempenho](#authenticated-performance-testing) autenticado para obter mais detalhes.
+
    **Ativos AEM:**
 
    O Cloud Manager executa testes de desempenho para programas AEM Assets, fazendo upload de ativos repetidamente por um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo, bem como de várias métricas no nível do sistema. Esse recurso pode carregar imagens e documentos PDF. A distribuição de quantos ativos de cada tipo são carregados por minuto é definida na tela Configuração do pipeline ou Editar.
@@ -198,6 +200,17 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 
    ![](assets/Production-Pipeline.png)
 
+### Teste de desempenho autenticado {#authenticated-performance-testing}
+
+Os clientes do AMS com sites autenticados podem especificar um nome de usuário e uma senha que o Cloud Manager usará para acessar o site durante o Teste de desempenho do site.
+
+O nome de usuário e a senha são especificados como Variáveis [](/help/using/create-an-application-project.md#pipeline-variables) Pipeline com os nomes `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
+
+Embora não seja estritamente necessário, é recomendável usar o tipo de variável de string para o nome de usuário e o tipo de variável secretString para a senha. Se ambos forem especificados, todas as solicitações do crawler de teste de desempenho e dos usuários virtuais de teste conterão essas credenciais como autenticação HTTP Basic.
+
+Para definir essas variáveis usando a CLI [do](https://github.com/adobe/aio-cli-plugin-cloudmanager)Cloud Manager, execute:
+
+`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## Pipelines que não são de produção e qualidade de código
 
