@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
+source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 7%
@@ -19,7 +19,7 @@ ht-degree: 7%
 
 # Entender os resultados de teste {#understand-your-test-results}
 
-Durante o processo de **Pipeline** , várias métricas são capturadas e comparadas aos Indicadores-chave de desempenho (KPIs) definidos pelo proprietário da empresa ou aos padrões definidos pelos Serviços gerenciados da Adobe.
+Durante a execução do Pipeline, várias métricas são capturadas e comparadas aos Indicadores-chave de desempenho (KPIs) definidos pelo proprietário da empresa ou aos padrões definidos pelos Serviços gerenciados da Adobe.
 
 Eles são reportados usando o sistema de portagem de três níveis, conforme definido nesta seção.
 
@@ -47,9 +47,10 @@ Esta etapa avalia a qualidade do código do aplicativo. É o objetivo principal 
 
 ### Como entender o teste de qualidade de código {#understanding-code-quality-testing}
 
-Em Teste de qualidade de código, o código fonte é verificado para garantir que as implantações atendam a determinados critérios de qualidade. Atualmente, esta ação é implementada através de uma combinação de SonarQube e exame de nível de pacote de conteúdo utilizando OakPAL. Há mais de 100 regras que combinam regras genéricas do Java e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas AEM engenharia e são chamadas de Regras [de qualidade de código](/help/using/custom-code-quality-rules.md)personalizado.
+Em Teste de qualidade de código, o código fonte é verificado para garantir que ele atenda a determinados critérios de qualidade. Atualmente, esta ação é implementada através de uma combinação de SonarQube e exame de nível de pacote de conteúdo utilizando OakPAL. Há mais de 100 regras que combinam regras genéricas do Java e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas AEM engenharia e são chamadas de Regras [de qualidade de código](/help/using/custom-code-quality-rules.md)personalizado.
 
-Você pode baixar a lista de regras [aqui](/help/using/assets/CodeQuality-rules-latest.xlsx).
+>[!NOTE]
+>Você pode baixar a lista completa de regras [aqui](/help/using/assets/CodeQuality-rules-latest.xlsx).
 
 Os resultados desta etapa são fornecidos como *Classificação*. A tabela abaixo resume as classificações de vários critérios de teste:
 
