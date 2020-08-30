@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -21,13 +21,13 @@ ht-degree: 0%
 A primeira fase do assistente de Atualização de produto é a **[!UICONTROL Evaluation]** fase.
 Aqui você pode avaliar a complexidade da atualização com o detector de padrões acessível diretamente do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
 
-O relatório gerado permite que você verifique se a instância do autor tem capacidade de atualização detectando padrões que:
+O relatório gerado permite que você verifique a instância do autor para atualização detectando padrões que:
 
 * Violar certas regras e são feitas em áreas que serão afetadas ou substituídas pela atualização.
 
-* Use um recurso do AEM 6.x ou uma API que não seja compatível com versões anteriores no novo AEM e que possa ser interrompida após a atualização.
+* Use um recurso AEM 6.x ou uma API que não seja compatível com versões anteriores no novo AEM e que possa ser interrompida após a atualização.
 
-Isso serve como uma avaliação do esforço de desenvolvimento que está envolvido na atualização para o Adobe Experience Manager (AEM) 6.5.
+Isto serve como uma avaliação do esforço de desenvolvimento que está envolvido na atualização para a Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
 >
