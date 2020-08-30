@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%
@@ -75,7 +75,7 @@ Depois de configurar seu pipeline de produção (repositório, ambiente e ambien
    >A Implantação **de Produção de** Programação é ativada durante a configuração do pipeline.
    >
    >
-   >Usando essa opção, você pode programar sua implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
+   >Usando essa opção, você pode programar a implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
    >
    >
    >A data e a hora programadas são especificadas em termos do fuso horário do usuário.
@@ -127,13 +127,11 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
    1. Cada caminho especificado na configuração do pipeline é invalidado ou liberado do cache do dispatcher.
 
    >[!NOTE]
-   >
    >O Cloud Manager espera que o artefato do dispatcher contenha o conjunto de arquivos completo.  Todos os arquivos de configuração do dispatcher devem estar presentes no repositório git. Arquivos ou pastas ausentes resultarão em falha de implantação.
 
 1. Após a implantação bem-sucedida de todos os pacotes de AEM e despachante para todos os nós, os despachantes são adicionados de volta ao balanceador de carga e a implantação é concluída.
 
    >[!NOTE]
-   >
    >Você pode ignorar as alterações no Balanceador de Carga nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines de não-produção, para ambientes de desenvolvedor e pipeline de produção, para ambientes de estágio.
 
 ### Implantação para fase de produção {#deployment-production-phase}
