@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 5%
@@ -18,9 +18,9 @@ ht-degree: 5%
 
 # Visão geral {#overview-product-update-wizard}
 
-O Assistente de atualização de produto é uma experiência guiada e passo a passo para clientes do Cloud Manager que estão atualizando para o último Adobe Experience Manager (AEM) 6.5. Ele simplifica o processo completo, garante a adesão às práticas recomendadas do AEM usando a estrutura CI/CD do Cloud Manager e os testes automatizados integrados.
+O Assistente de atualização de produto é uma experiência orientada e passo a passo para clientes do Cloud Manager que estão atualizando para a Adobe Experience Manager (AEM) 6.5 mais recente. Ele simplifica o processo completo, garante a adesão às práticas recomendadas AEM usando a estrutura CI/CD do Cloud Manager e os testes automatizados integrados.
 
-O assistente inclui cinco fases que orientam o usuário durante uma atualização de produto do AEM:
+O assistente inclui cinco fases que orientam o usuário durante uma atualização de produto AEM:
 
 * **Avaliação**
 * **Correção**
