@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -21,19 +21,19 @@ ht-degree: 2%
 
 ## Uso do Cloud Manager para implantar arquivos de configuração do Dispatcher {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
 
-O Cloud Manager é capaz de implantar arquivos de configuração do Dispatcher e do servidor da Web, desde que estejam armazenados no Repositório **do** Git, além de pacotes de conteúdo do AEM normais.
+O Cloud Manager é capaz de implantar arquivos de configuração do servidor da Web e do Dispatcher, desde que estejam armazenados no Repositório **do** Git, além de pacotes de conteúdo AEM normais.
 
-Para aproveitar esse recurso, a compilação Maven deve produzir um arquivo zip que contenha pelo menos dois diretórios - ***conf*** e ***conf.d***. Esse arquivo zip pode ser produzido usando o plug-in maven-assembly. Os projetos gerados pelo Cloud Manager usando o [assistente](/help/using/create-an-application-project.md) incorporado têm a estrutura correta do projeto Maven criada como parte da criação do projeto. Esse é o caminho recomendado para novos clientes do Managed Services.
+Para aproveitar esse recurso, a compilação Maven deve produzir um arquivo zip que contenha pelo menos dois diretórios - ***conf*** e ***conf.d***. Esse arquivo zip pode ser produzido usando o plug-in maven-assembly. Os projetos gerados pelo Cloud Manager usando o [assistente](/help/using/create-an-application-project.md) incorporado têm a estrutura correta do projeto Maven criada como parte da criação do projeto. Esse é o caminho recomendado para novos clientes Managed Services.
 
-Após a implantação em uma **Instância** de despachante, o conteúdo desses diretórios substituirá o conteúdo desses diretórios na instância do Dispatcher. Como os arquivos de configuração do servidor Web e do Dispatcher geralmente exigem informações específicas do ambiente, para que esse recurso seja usado corretamente, você primeiro precisará trabalhar com os engenheiros de sucesso do cliente (CSE) para definir essas variáveis de ambiente em ***/etc/sysconfig/httpd***.
+Após a implantação em uma **Instância** de despachante, o conteúdo desses diretórios substituirá o conteúdo desses diretórios na instância do Dispatcher. Como os arquivos de configuração do servidor da Web e do Dispatcher geralmente exigem informações específicas do ambiente, para que esse recurso seja usado corretamente, você primeiro precisará trabalhar com os engenheiros de sucesso do cliente (CSE) para definir essas variáveis do ambiente no `/etc/sysconfig/httpd`.
 
-### Etapas para configurar a Dispatcher para clientes de serviços gerenciados existentes {#steps-for-configuring-dispatcher}
+### Etapas para configurar o Dispatcher para clientes Managed Services existentes {#steps-for-configuring-dispatcher}
 
 Siga as etapas abaixo para concluir o processo inicial na configuração do Dispatcher:
 
 1. Obtenha os arquivos de configuração de produção atuais do seu CSE.
 1. Remova dados específicos do ambiente codificados permanentemente (por exemplo, publicar IP do renderizador) e substitua por variáveis.
-1. Defina as variáveis necessárias em pares de valores chave para cada Dispatcher de público alvo e solicite que seu CSE adicione a ***/etc/sysconfig/httpd*** em cada instância.
+1. Defina as variáveis necessárias em pares de valores chave para cada Dispatcher de público alvo e solicite que seu CSE adicione a `/etc/sysconfig/httpd` cada instância.
 1. Teste as configurações atualizadas em seu ambiente de palco e, em seguida, solicite que seu CSE implante na produção.
 1. Confirmar arquivos no repositório **Git**.
 
@@ -41,18 +41,18 @@ Siga as etapas abaixo para concluir o processo inicial na configuração do Disp
 
 >[!NOTE]
 >
->A migração das configurações do Dispatcher e do servidor da Web para o Repositório **** Git pode ser feita durante a integração do Cloud Manager, mas também pode ser feita posteriormente.
+>A migração das configurações do Dispatcher e do servidor Web para o Repositório **** Git pode ser feita durante a integração do Cloud Manager, mas também pode ser feita posteriormente.
 
 ### Exemplo {#example}
 
-A estrutura de arquivos e diretórios específica pode variar de acordo com as especificações do seu projeto, mas este exemplo deve fornecer um guia concreto sobre como estruturar seu projeto para incluir as Configurações do Apache e da Dispatcher.
+A estrutura de arquivos e diretórios específica pode variar de acordo com as especificações do seu projeto, mas este exemplo deve fornecer um guia concreto sobre como estruturar seu projeto para incluir as Configurações do Apache e do Dispatcher.
 
 1. Crie um subdiretório chamado `dispatcher`.
 
    >[!NOTE]
    Sinta-se à vontade para usar qualquer nome aqui, mas o nome do diretório criado nesta etapa deve ser o mesmo nome usado na Etapa 6.
 
-1. Esse subdiretório conterá um módulo Maven que cria o arquivo zip do Dispatcher usando o Plug-in Maven Assembly. Para start disso, no `dispatcher` diretório, crie um `pom.xml` arquivo com esse conteúdo, alterando a referência pai, o artefatoId e o nome, conforme necessário.
+1. Esse subdiretório conterá um módulo Maven que cria o arquivo zip Dispatcher usando o Plug-in Maven Assembly. Para start disso, no `dispatcher` diretório, crie um `pom.xml` arquivo com esse conteúdo, alterando a referência pai, o artefatoId e o nome, conforme necessário.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
