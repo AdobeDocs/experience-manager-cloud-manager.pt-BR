@@ -5,10 +5,10 @@ archetype: administrator
 user-guide-title: Ajuda do Experience Manager Cloud Manager
 user-guide-description: Learn to use Adobe Managed Services to self-manage Experience Manager in the cloud.
 translation-type: tm+mt
-source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
+source-git-commit: f73ea3db4bc50891518bebbe5da2d69dd2890a81
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 89%
+source-wordcount: '221'
+ht-degree: 86%
 
 ---
 
@@ -32,8 +32,9 @@ ht-degree: 89%
    + [Primeiro logon](first-time-login.md)
    + [Configurar o programa](setting-up-program.md)
    + Criar um projeto de aplicativo AEM {#create-application-project}
-      + [Criar um projeto de aplicativo AEM](create-an-application-project.md)
       + [Uso do Assistente](using-the-wizard.md)
+      + [Configuração do projeto](setting-up-project.md)
+      + [Noções básicas sobre o Ambiente Build](build-environment-details.md)
    + [Configurar as ramificações de liberação](configure-your-release-branches.md)
    + [Gerenciar as configurações do Dispatcher](dispatcher-configurations.md)
 + Como usar {#how-to-use}
