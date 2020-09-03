@@ -5,10 +5,10 @@ archetype: administrator
 user-guide-title: Ajuda do Experience Manager Cloud Manager
 user-guide-description: Learn to use Adobe Managed Services to self-manage Experience Manager in the cloud.
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 90%
+source-wordcount: '218'
+ht-degree: 89%
 
 ---
 
@@ -31,7 +31,9 @@ ht-degree: 90%
 + Introdução {#getting-started}
    + [Primeiro logon](first-time-login.md)
    + [Configurar o programa](setting-up-program.md)
-   + [Criar um projeto de aplicativo AEM](create-an-application-project.md)
+   + Criar um projeto de aplicativo AEM {#create-application-project}
+      + [Criar um projeto de aplicativo AEM](create-an-application-project.md)
+      + [Uso do Assistente](using-the-wizard.md)
    + [Configurar as ramificações de liberação](configure-your-release-branches.md)
    + [Gerenciar as configurações do Dispatcher](dispatcher-configurations.md)
 + Como usar {#how-to-use}
@@ -52,7 +54,8 @@ ht-degree: 90%
    + [Visão geral](overview-productupdate-wizard.md)
    + [Avaliação](evaluation.md)
 + Notas de versão {#release-notes}
-   + [Notas de versão atuais (2020.8.0)](release-notes-current.md)
+   + [Notas de versão atuais (2020.9.0)](release-notes-current.md)
+   + [Notas da versão 2020.8.0](release-notes-2020-8-0.md)
    + [Notas da versão 2020.7.0](release-notes-2020-7-0.md)
    + [Notas da versão 2020.6.0](release-notes-2020-6-0.md)
    + [Notas da versão 2020.5.0](release-notes-2020-5-0.md)
