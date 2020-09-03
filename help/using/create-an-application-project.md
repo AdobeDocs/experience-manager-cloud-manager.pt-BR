@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: f281b919b0ffaf4ca20a241d056c132e08e95206
+source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1861'
 ht-degree: 6%
 
 ---
@@ -96,7 +96,12 @@ O Cloud Manager cria e testa seu código usando um ambiente de compilação espe
 
 * Outros pacotes podem ser instalados no momento da criação, conforme descrito [abaixo](#installing-additional-system-packages).
 * Cada obra é feita com um ambiente intocado; o container build não mantém nenhum estado entre as execuções.
-* Maven é sempre executado com o comando: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
+* O Maven é sempre executado com estes três comandos:
+
+   * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
+   * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
+   * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
+
 * O Maven é configurado no nível do sistema com um arquivo settings.xml que inclui automaticamente o repositório público do **Artefato** de Adobe. (Consulte o Repositório [Adobe Public Maven](https://repo.adobe.com/) para obter mais detalhes).
 
 >[!NOTE]
