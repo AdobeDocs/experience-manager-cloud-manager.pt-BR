@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Depois de configurar seu pipeline de produção (repositório, ambiente e ambien
    A **Implantação do preparo** envolve estas etapas:
 
    * Validação: Essa etapa garante que o pipeline esteja configurado para usar os recursos disponíveis no momento, por exemplo, que a ramificação configurada exista, os ambientes estarão disponíveis.
-   * Compilação e teste de unidade: Esta etapa executa um processo de criação contido. Consulte [Criar um projeto](create-an-application-project.md) de aplicativo AEM para obter detalhes sobre o ambiente de criação.
+   * Compilação e teste de unidade: Esta etapa executa um processo de criação contido. Consulte [Compreensão do Ambiente](/help/using/build-environment-details.md) Build para obter detalhes sobre o ambiente build.
    * Digitalização de código: Esta etapa avalia a qualidade do código do aplicativo. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
    * Implantar no palco
 
