@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
 source-wordcount: '1751'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -41,7 +41,7 @@ O Gerenciador de implantação é responsável pela configuração do pipeline. 
 * definição dos parâmetros que controlam a implantação de produção.
 * configuração dos parâmetros de teste de desempenho.
 
-## Configuração do gasoduto {#setting-up-the-pipeline}
+## Configuração do pipeline {#setting-up-the-pipeline}
 
 >[!CAUTION]
 >
@@ -204,7 +204,7 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 
 Os clientes do AMS com sites autenticados podem especificar um nome de usuário e uma senha que o Cloud Manager usará para acessar o site durante o Teste de desempenho do site.
 
-O nome de usuário e a senha são especificados como Variáveis [](/help/using/create-an-application-project.md#pipeline-variables) Pipeline com os nomes `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
+O nome de usuário e a senha são especificados como Variáveis [](/help/using/build-environment-details.md#pipeline-variables) Pipeline com os nomes `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
 
 Embora não seja estritamente necessário, é recomendável usar o tipo de variável de string para o nome de usuário e o tipo de variável secretString para a senha. Se ambos forem especificados, todas as solicitações do crawler de teste de desempenho e dos usuários virtuais de teste conterão essas credenciais como autenticação HTTP Basic.
 
