@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 O Cloud Manager é capaz de implantar arquivos de configuração do servidor da Web e do Dispatcher, desde que estejam armazenados no Repositório **do** Git, além de pacotes de conteúdo AEM normais.
 
-Para aproveitar esse recurso, a compilação Maven deve produzir um arquivo zip que contenha pelo menos dois diretórios - ***conf*** e ***conf.d***. Esse arquivo zip pode ser produzido usando o plug-in maven-assembly. Os projetos gerados pelo Cloud Manager usando o [assistente](/help/using/create-an-application-project.md) incorporado têm a estrutura correta do projeto Maven criada como parte da criação do projeto. Esse é o caminho recomendado para novos clientes Managed Services.
+Para aproveitar esse recurso, a compilação Maven deve produzir um arquivo zip que contenha pelo menos dois diretórios - ***conf*** e ***conf.d***. Esse arquivo zip pode ser produzido usando o plug-in maven-assembly. Os projetos gerados pelo Cloud Manager usando o [assistente](/help/using/using-the-wizard.md) incorporado têm a estrutura correta do projeto Maven criada como parte da criação do projeto. Esse é o caminho recomendado para novos clientes Managed Services.
 
 Após a implantação em uma **Instância** de despachante, o conteúdo desses diretórios substituirá o conteúdo desses diretórios na instância do Dispatcher. Como os arquivos de configuração do servidor da Web e do Dispatcher geralmente exigem informações específicas do ambiente, para que esse recurso seja usado corretamente, você primeiro precisará trabalhar com os engenheiros de sucesso do cliente (CSE) para definir essas variáveis do ambiente no `/etc/sysconfig/httpd`.
 
