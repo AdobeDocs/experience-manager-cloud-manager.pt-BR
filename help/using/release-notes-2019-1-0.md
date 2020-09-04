@@ -1,5 +1,5 @@
 ---
-title: Notas de versão para 2019.1.0
+title: Notas da versão 2019.1.0
 seo-title: Notas de versão do AEM Cloud Manager para 2019.1.0
 description: Siga esta página para obter informações sobre a versão 2019.1.0 do Cloud Manager.
 seo-description: Siga esta página para obter informações sobre a versão 2019.1.0 do AEM Cloud Manager.
@@ -9,17 +9,17 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '335'
 ht-degree: 4%
 
 ---
 
 
-# Notas de versão para 2019.1.0 {#release-notes-for}
+# Notas da versão 2019.1.0 {#release-notes-for}
 
-A versão [!UICONTROL Cloud Manager] 2018.9.0 adiciona programas de teste de suporte, bem como tipos de pipeline adicionais que executam as etapas de qualidade de código e compilação, opcionalmente implantando em um ambiente que não seja de produção.
+A versão [!UICONTROL Cloud Manager] 2018.9.0 adiciona suporte para testes de programas AEM Assets, bem como tipos adicionais de pipeline que executam as etapas de qualidade de código e compilação, opcionalmente implantando em um ambiente que não seja de produção.
 
 ## Data de lançamento {#release-date}
 
@@ -27,9 +27,9 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.1.0 é 17 de ja
 
 ## Novidades {#whats-new}
 
-* Adicionado suporte para teste de desempenho de AEM Assets. Consulte Configurar seu [CI/CD](configuring-pipeline.md)Pipeline para obter mais detalhes.
+* Adicionado suporte para teste de desempenho da AEM Assets. Consulte Configurar seu [CI/CD](configuring-pipeline.md)Pipeline para obter mais detalhes.
 * Adicionado suporte para pipelines que executam somente etapas de compilação e qualidade de código e implantações em ambientes que não sejam de produção. Consulte a seção Pipelines **somente para** não produção e qualidade de código em [Configure seu pipeline](configuring-pipeline.md) CI/CD para obter mais detalhes.
-* Adicionado suporte para variáveis de ambiente personalizadas no ambiente de compilação. Consulte [Criar um projeto](/help/using/create-an-application-project.md) de aplicativo AEM para obter mais detalhes.
+* Adicionado suporte para variáveis de ambiente personalizadas no ambiente de compilação.
 * Para clientes com vários ambientes de estágio ou produção, a seleção para qual ambiente será implantado como parte do pipeline de produção está disponível em [Configure sua página do pipeline](configuring-pipeline.md) CI/CD.
 * httxt2dbm foi adicionado ao container build.
 * Todos os itens do menu de ajuda abrem uma nova guia.
