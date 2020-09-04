@@ -1,5 +1,5 @@
 ---
-title: Notas de versão para 2018.8.0
+title: Notas da versão 2018.8.0
 seo-title: Notas de versão do AEM Cloud Manager para 2018.8.0
 description: Siga esta página para obter informações sobre a versão 2018.8.0 do Cloud Manager.
 seo-description: Siga esta página para obter informações sobre a versão 2018.8.0 do AEM Cloud Manager.
@@ -9,17 +9,17 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '329'
 ht-degree: 4%
 
 ---
 
 
-# Notas de versão para 2018.8.0 {#release-notes-for}
+# Notas da versão 2018.8.0 {#release-notes-for}
 
-A versão [!UICONTROL Cloud Manager] 2018.8.0 adiciona suporte para acionar o pipeline de CI/CD automaticamente após confirmações de git e um novo assistente para criar projetos de aplicativos no git com base no AEM Project Archetype.
+A versão [!UICONTROL Cloud Manager] 2018.8.0 adiciona suporte para acionar o pipeline de CI/CD automaticamente após a confirmação de git e um novo assistente para criar projetos de aplicativos no git com base no AEM Project Archetype.
 
 ## Data de lançamento {#release-date}
 
@@ -27,14 +27,14 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.8.0 é 4 de out
 
 ## Novidades {#what-s-new}
 
-* **Configuração** do Programa - Novo assistente para criar um projeto de aplicativo no git usando o Arquivo de projeto do AEM Consulte [Criar um projeto](/help/using/create-an-application-project.md) de aplicativo do AEM para saber mais.
+* **Configuração** do programa - Novo assistente para criar um projeto de aplicativo no git usando o AEM Project Archetype
 
-* **Pipeline** CI/CD - As seguintes alterações são adicionadas ao pipeline CI/CD. Consulte [Configure seu pipeline](configuring-pipeline.md) de CI/CD para saber mais.
+* **Pipeline** CI/CD - As seguintes alterações são adicionadas ao pipeline CI/CD. Consulte [Configure seu pipeline](configuring-pipeline.md) CI/CD para saber mais.
 
    * Acionador On Git Changes, que start o pipeline CI/CD sempre que houver confirmações adicionadas ao ramo git configurado.
    * Os cartões na tela inicial agora se vinculam profundamente a seções específicas da página de execução de pipeline.
-   * A página Atividade agora lista a ramificação específica usada para cada execução.
-   * A página Atividade agora indica a duração em horas e minutos.
+   * A página atividade agora lista a ramificação específica usada para cada execução.
+   * A página atividade agora indica a duração em horas e minutos.
    * A página de execução do pipeline agora exibe o nome da versão/tag criado para a execução.
    * Apache Maven versão atualizada para 3.5.3.
 
