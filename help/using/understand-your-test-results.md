@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 7%
@@ -162,7 +162,7 @@ A tabela a seguir resume a matriz de teste de desempenho usando o sistema portá
 | Visualizações de página por minuto | Importante | &lt; KPI em nível de Programa |
 | Utilização da largura de banda do disco | Importante | >= 90% |
 | Utilização da largura de banda da rede | Importante | >= 90% |
-| Solicitações por minuto | Informações | &lt; 6000 |
+| Solicitações por minuto | Informações | >= 6000 |
 
 ### Gráficos de resultados de teste de desempenho {#performance-testing-results-graphs}
 
