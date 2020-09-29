@@ -2,9 +2,9 @@
 title: Noções básicas sobre o Ambiente Build
 description: Siga esta página para saber mais sobre ambientes
 translation-type: tm+mt
-source-git-commit: f73ea3db4bc50891518bebbe5da2d69dd2890a81
+source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,9 @@ Para fazer isso, no arquivo pom.xml, adicione uma `<plugin>` entrada com a segui
 
 >[!NOTE]
 >Os `vendor` valores suportados são `oracle` e `sun` os `version` valores suportados são `1.8`, `1.11`e `11`.
+
+>[!NOTE]
+>A compilação do projeto do Gerenciador de nuvem ainda está usando o Java 8 para chamar o Maven, portanto, verificar ou impor a versão do Java configurada no plug-in da cadeia de ferramentas por meio de plug-ins como o Plug-in [](https://maven.apache.org/enforcer/maven-enforcer-plugin/) Apache Maven Execcer não funciona e esses plug-ins não devem ser usados.
 
 ## Variáveis de ambiente {#environment-variables}
 
