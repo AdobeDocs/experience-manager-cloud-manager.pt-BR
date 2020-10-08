@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: 8d1a100420129d234fe21911f165621405a04a9b
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -40,6 +40,7 @@ Siga as etapas abaixo para gerar o relatório de avaliação:
 1. Clique em **[!UICONTROL Run Evaluation]**.
 
    >[!NOTE]
+   >
    >O detector de padrões pode funcionar em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer lentidão em instâncias críticas para os negócios, o Cloud Manager a executará em ambientes de preparo na instância do autor.
 
    ![](assets/Run-Evaluation.png)
