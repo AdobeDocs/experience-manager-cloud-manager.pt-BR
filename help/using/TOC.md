@@ -2,19 +2,19 @@
 product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
-user-guide-title: Guia do gerenciador da Experience Manager Cloud
-breadcrumb-title: Cloud Manager Guide
-user-guide-description: Learn to use Adobe Managed Services to self-manage Experience Manager in the cloud.
+user-guide-title: Guia do Experience Manager Cloud Manager
+breadcrumb-title: Guia do Cloud Manager
+user-guide-description: Saiba como usar os Adobe Managed Services para gerenciar o Experience Manager na nuvem por conta própria.
 translation-type: tm+mt
 source-git-commit: 928b430dde75070178fac323eb7bc959d35a2ae7
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 83%
+source-wordcount: '240'
+ht-degree: 87%
 
 ---
 
 
-# Guia do Gerenciador de nuvem {#using}
+# Guia do Cloud Manager {#using}
 
 + [Introdução ao Cloud Manager](introduction-to-cloud-manager.md)
 + Visão geral {#overview}
