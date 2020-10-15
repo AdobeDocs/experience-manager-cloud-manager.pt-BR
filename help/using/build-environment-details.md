@@ -2,9 +2,9 @@
 title: Noções básicas sobre o Ambiente Build
 description: Siga esta página para saber mais sobre ambientes
 translation-type: tm+mt
-source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
+source-git-commit: 000843f902a180181981de2b1307fd2777d32994
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ As variáveis atuais podem ser listadas:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
-Os nomes de variáveis podem conter somente caracteres alfanuméricos e sublinhado (_). Por convenção, os nomes devem ser todos maiúsculos. Há um limite de 200 variáveis por pipeline, cada nome deve ter menos de 100 caracteres e cada valor deve ter menos de 2048 caracteres.
+Os nomes de variáveis podem conter somente caracteres alfanuméricos e sublinhado (_). Por convenção, os nomes devem ser todos maiúsculos. Há um limite de 200 variáveis por pipeline, cada nome deve ter menos de 100 caracteres e cada valor deve ter menos de 2048 caracteres no caso de variáveis de tipo de string e 500 caracteres no caso de variáveis de tipo secretString.
 
 Quando usado em um `Maven pom.xml` arquivo, é útil mapear essas variáveis para as propriedades do Maven usando uma sintaxe semelhante a esta:
 
@@ -183,5 +183,4 @@ Algumas compilações exigem a instalação de pacotes adicionais do sistema par
 Essa mesma técnica pode ser usada para instalar pacotes específicos de idioma, ou seja, usar `gem` para RubyGems ou `pip` para pacotes Python.
 
 >[!NOTE]
->
->Instalar um pacote do sistema desta maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote de sistema instalado no ambiente AEM, entre em contato com o CSE (Customer Success Engineers).
+>Instalar um pacote do sistema desta maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote do sistema instalado no ambiente AEM, entre em contato com o representante do Adobe.
