@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
+source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +22,6 @@ source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar a interface do usuário para [!UICONTROL Cloud Manager].
 
 >[!NOTE]
->
 >Dependendo das funções atribuídas em [!UICONTROL Cloud Manager] e do estado do aplicativo, você verá telas diferentes ao usar a [!UICONTROL Cloud Manager] interface do usuário.
 
 ## Tutorial em vídeo {#video-tutorial-one}
@@ -32,7 +34,7 @@ O vídeo a seguir fornece uma visão geral dos Programas do Gerenciador de nuvem
 
 ## Logon pela primeira vez {#logging-in-for-the-first-time}
 
-1. Faça logon na **Adobe[!UICONTROL Experience Cloud]**e você verá a lista de** Programas **.
+1. Faça logon no **Adobe[!UICONTROL Experience Cloud]** e você verá a lista dos **Programas**.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
