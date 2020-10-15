@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 4838de3d6c78884333d8088eb38f388fbcd0e707
+source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 91%
@@ -70,4 +70,7 @@ O [!UICONTROL Cloud Manager] detecta a necessidade de capacidade adicional quand
 
 Durante um evento de dimensionamento automático, o [!UICONTROL Cloud Manager] aciona automaticamente o processo de provisionamento de dimensionamento automático, envia uma notificação do evento de dimensionamento automático e fornece a capacidade adicional online em minutos. A capacidade adicional será provisionada no ambiente de produção, nas mesmas regiões, e corresponderá às mesmas especificações do sistema que os nós do Dispatcher/Publish em execução.
 
-O recurso de dimensionamento automático se aplica somente à camada do Dispatcher/Publish e sempre será executado usando um método de dimensionamento horizontal, com no mínimo um segmento adicional de um par do Dispatcher/Publish e até no máximo dez segmentos. Qualquer capacidade adicional fornecida será dimensionada manualmente em um período de dez dias úteis, conforme determinado pelo CSE (Customer Success Engineer, Engenheiro especializado na fidelização de clientes). Os clientes interessados em explorar se a Autoescala é adequada para seu aplicativo devem entrar em contato com seu representante CSE ou Adobe.
+O recurso de dimensionamento automático se aplica somente à camada do Dispatcher/Publish e sempre será executado usando um método de dimensionamento horizontal, com no mínimo um segmento adicional de um par do Dispatcher/Publish e até no máximo dez segmentos. Qualquer capacidade adicional fornecida será dimensionada manualmente em um período de dez dias úteis, conforme determinado pelo CSE (Customer Success Engineer, Engenheiro especializado na fidelização de clientes).
+
+>[!NOTE]
+>Os clientes interessados em explorar se a Autoescala é adequada para seu aplicativo devem entrar em contato com seu representante CSE ou Adobe.
