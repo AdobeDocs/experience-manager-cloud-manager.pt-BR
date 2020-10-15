@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+source-git-commit: d3f17b1fd4fcc1c75836c9dd67d54e22422db120
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 91%
@@ -73,4 +73,4 @@ Durante um evento de dimensionamento automático, o [!UICONTROL Cloud Manager] a
 O recurso de dimensionamento automático se aplica somente à camada do Dispatcher/Publish e sempre será executado usando um método de dimensionamento horizontal, com no mínimo um segmento adicional de um par do Dispatcher/Publish e até no máximo dez segmentos. Qualquer capacidade adicional fornecida será dimensionada manualmente em um período de dez dias úteis, conforme determinado pelo CSE (Customer Success Engineer, Engenheiro especializado na fidelização de clientes).
 
 >[!NOTE]
->Os clientes interessados em explorar se a Autoescala é adequada para seu aplicativo devem entrar em contato com seu representante CSE ou Adobe.
+>Os clientes interessados em explorar se a autoescala é adequada para seu aplicativo devem entrar em contato com o representante do CSE ou do Adobe.
