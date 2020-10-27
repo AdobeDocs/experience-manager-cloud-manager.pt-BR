@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: a8cd1ac2448b9f875c1d925c62e7fe42c8ceec2a
+source-git-commit: 71a760997ec2a0873a7f39d206086a8b4fd6854e
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2314'
 ht-degree: 6%
 
 ---
@@ -561,7 +561,7 @@ public void doThis(Resource resource) {
 
 **Chave**: CQRules:AMSCORE-554
 
-**Tipo**: Cheiro de código
+**Tipo**: Compatibilidade entre código e Cloud Service
 
 **Gravidade**: Menor
 
@@ -575,7 +575,7 @@ Consulte [Apache Sling Event e Job Handling](https://sling.apache.org/documentat
 
 **Chave**: AMSCORE-553
 
-**Tipo**: Cheiro de código
+**Tipo**: Compatibilidade entre código e Cloud Service
 
 **Gravidade**: Menor
 
@@ -689,7 +689,7 @@ Semelhante aos *pacotes não devem conter configurações* OSGi do Duplicado, es
 
 **Chave**: ClassicUIAuthoringMode
 
-**Tipo**: Cheiro de código
+**Tipo**: Compatibilidade entre código e Cloud Service
 
 **Gravidade**: Menor
 
@@ -701,7 +701,7 @@ A configuração do OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` d
 
 **Chave**: ComponentWithOnlyClassicUIDialog
 
-**Tipo**: Cheiro de código
+**Tipo**: Compatibilidade entre código e Cloud Service
 
 **Gravidade**: Menor
 
@@ -719,7 +719,7 @@ A documentação das Ferramentas de modernização AEM fornece documentação e 
 
 **Chave**: ImmutableMutableMixedPackage
 
-**Tipo**: Cheiro de código
+**Tipo**: Compatibilidade entre código e Cloud Service
 
 **Gravidade**: Menor
 
@@ -733,7 +733,7 @@ Refer to [AEM Project Structure](https://docs.adobe.com/content/help/pt-BR/exper
 
 **Chave**: ReverseReplication
 
-**Tipo**: Cheiro de código
+**Tipo**: Compatibilidade entre código e Cloud Service
 
 **Gravidade**: Menor
 
