@@ -10,9 +10,9 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1776'
 ht-degree: 2%
 
 ---
@@ -164,7 +164,7 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 
    **AEM Sites:**
 
-   O Cloud Manager executa testes de desempenho para programas AEM Sites, solicitando páginas (como um usuário não autenticado por padrão) no servidor de publicação do palco por um período de teste de 30 minutos e medindo o tempo de resposta para cada página, bem como várias métricas no nível do sistema.
+   O Cloud Manager executa testes de desempenho para programas AEM Sites, solicitando páginas (como um usuário não autenticado por padrão) no servidor de publicação do palco por um período de teste de 30 minutos e medindo o tempo de resposta para cada página, bem como várias métricas no nível do sistema. Essas solicitações são feitas a partir de um conjunto de endereços dedicados conhecidos. Os intervalos de endereços podem ser obtidos do engenheiro de sucesso do cliente ou representante do Adobe.
 
    Antes do start do período de teste de 30 minutos, o Cloud Manager rastreará o ambiente do Palco usando um conjunto de um ou mais URLs *semente* configurados pelo engenheiro de sucesso do cliente. A partir desses URLs, o HTML de cada página é inspecionado e os links são percorridos de uma maneira ampla. Esse processo de rastreamento é limitado a um máximo de 5000 páginas. As solicitações do rastreador têm um tempo limite fixo de 10 segundos.
 
