@@ -1,5 +1,5 @@
 ---
-title: Notas de versão para 2020.4.0
+title: Notas da versão 2020.4.0
 seo-title: Notas de versão do AEM Cloud Manager para 2020.4.0
 description: Siga esta página para obter informações sobre a versão 2020.4.0 do Cloud Manager
 seo-description: Siga esta página para obter informações sobre a versão 2020.4.0 do AEM Cloud Manager
@@ -11,13 +11,13 @@ ht-degree: 37%
 
 ---
 
-# Notas de versão para 2020.4.0 {#release-notes-for}
+# Notas da versão 2020.4.0 {#release-notes-for}
 
 A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.4.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.4.0 é 9 de abril de 2020.
+A data de lançamento da versão 2020.4.0 [!UICONTROL Cloud Manager] é 9 de abril de 2020.
 
 ## Novidades {#whats-new}
 
@@ -30,7 +30,7 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.4.0 é 9 de abr
 ## Correções de erros {#bug-fixes}
 
 * Os dados de monitorização podem, por vezes, ser apresentados de forma incorreta ou não ser apresentados de forma alguma com base em variações menores de valores técnicos.
-* A configuração de Maven usada em Criar container foi atualizada para evitar bloqueios ao baixar metadados de artefato.
+* A configuração de Maven usada em Criar contêiner foi atualizada para evitar bloqueios ao baixar metadados de artefato.
 * Ocasionalmente, o processo de teste de desempenho do Assets não conseguia descriptografar a senha do AEM, causando falha no teste.
 * Determinadas topologias com instâncias stand-by podem ter falsos negativos em testes de segurança.
 * Se o ambiente stage contivesse uma instância interrompida, a etapa de teste de segurança às vezes falharia.
