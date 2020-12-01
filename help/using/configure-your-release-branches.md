@@ -1,24 +1,27 @@
 ---
-title: Configurar suas Ramificações de Liberação
-seo-title: Configurar suas Ramificações de Liberação
-description: Configurar ramificações de versão no Git para o AEM Cloud Manager
+title: Configurar as ramificações de liberação
+seo-title: Configurar as ramificações de liberação
+description: Configurar ramificações de lançamento no Git para AEM Cloud Manager
 seo-description: Siga esta página para saber como configurar suas ramificações de lançamento no git.
 uuid: d12a8b85-b7fd-4b55-a05a-a0f874ce598c
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: introdução
+topic-tags: getting-started
 discoiquuid: 53807ea6-9464-429d-9322-85c9f405dff6
 translation-type: tm+mt
 source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 3%
 
 ---
 
 
-# Configurar suas Ramificações de Liberação {#configure-your-release-branches}
+# Configurar as ramificações de liberação {#configure-your-release-branches}
 
 ## Configurando sua primeira ramificação no Git {#setting-up-your-first-branch-in-git}
 
-Um único repositório **** Git, inicialmente vazio, é provisionado para cada programa integrado no Cloud Manager. Esse repositório pode conter quantas ramificações (ou quantos) seu processo de desenvolvimento seguir, mas deve haver pelo menos uma ramificação que seja usada pelo pipeline de CI/CD para implantar o código do aplicativo no estágio e na produção. A prática recomendada é usar `master` como nome desse ramo. Convenientemente, esse é o comportamento padrão dos clientes Git ao configurar novos projetos.
+Um único, inicialmente vazio, **Repositório Git** é provisionado para cada programa a bordo no Cloud Manager. Esse repositório pode conter quantas ramificações (ou quantos) seu processo de desenvolvimento seguir, mas deve haver pelo menos uma ramificação que seja usada pelo pipeline de CI/CD para implantar o código do aplicativo no estágio e na produção. A prática recomendada é usar `master` como o nome desta ramificação. Convenientemente, esse é o comportamento padrão dos clientes Git ao configurar novos projetos.
 
 Por exemplo, ao configurar um novo projeto, você executará um conjunto de comandos como este:
 
@@ -52,11 +55,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Não é um requisito para usar o cliente de linha de comando. Há uma variedade de clientes Git gráficos disponíveis como aplicativos independentes ou como parte de um Ambiente de Desenvolvimento Integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente suporte o Git usando HTTPS, ele deve ser compatível com [!UICONTROL Cloud Manager].
+>Não é um requisito para usar o cliente de linha de comando. Há uma variedade de clientes Git gráficos disponíveis como aplicativos independentes ou como parte de um Ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente suporte o Git usando HTTPS, ele deve ser compatível com [!UICONTROL Cloud Manager].
 
 ## Empurrando sua primeira ramificação {#pushing-your-first-branch}
 
-Depois de confirmar pelo menos uma revisão, você pode adicionar o [!UICONTROL Cloud Manager] repositório como um **remoto** e, em seguida, enviar seus compromissos para ele:
+Depois de confirmar pelo menos uma revisão, você pode adicionar o repositório [!UICONTROL Cloud Manager] como um **remote** e, em seguida, enviar seus compromissos para ele:
 
 ```shell
 $ git remote add adobe <url>
@@ -72,12 +75,12 @@ To <url>
 
 >[!NOTE]
 >
->O URL específico, juntamente com suas credenciais, será fornecido ao cliente pela sua equipe de engenharia de sucesso durante a [!UICONTROL Cloud Manager] integração.
+>O URL específico, juntamente com suas credenciais, será fornecido ao cliente pela sua equipe de engenharia de sucesso do cliente durante a [!UICONTROL Cloud Manager] integração.
 
 ## Ramificações adicionais {#additional-branches}
 
-Um único `master` ramo pode ser suficiente para projetos muito simples, mas na maioria dos casos será necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que as atividades de desenvolvimento do dia a dia são executadas em uma ramificação chamada `develop` e a ramificação de desenvolvimento é mesclada na `master` ramificação quando é hora de uma implantação.
+Uma única ramificação `master` pode ser suficiente para projetos muito simples, mas na maioria dos casos, será necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que atividades de desenvolvimento diárias são executadas em uma ramificação chamada `develop` e a ramificação de desenvolvimento é unida na ramificação `master` quando é hora de uma implantação.
 
 >[!NOTE]
 >
->Para exibir os comandos git comuns, consulte a Folha [](https://github.github.com/training-kit/downloads/github-git-cheat-sheet)Git Cheat.
+>Para visualização dos comandos git comuns, consulte [Git Cheat](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
