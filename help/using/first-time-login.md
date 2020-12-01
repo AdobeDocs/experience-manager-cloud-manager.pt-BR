@@ -19,10 +19,10 @@ ht-degree: 8%
 
 # Primeiro logon {#first-time-login}
 
-Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar a interface do usuário para [!UICONTROL Cloud Manager].
+Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar a Interface do usuário (UI) para [!UICONTROL Cloud Manager].
 
 >[!NOTE]
->Dependendo das funções atribuídas em [!UICONTROL Cloud Manager] e do estado do aplicativo, você verá telas diferentes ao usar a [!UICONTROL Cloud Manager] interface do usuário.
+>Dependendo das funções atribuídas em [!UICONTROL Cloud Manager] e do estado do aplicativo, você verá telas diferentes ao usar a interface do usuário [!UICONTROL Cloud Manager].
 
 ## Tutorial em vídeo {#video-tutorial-one}
 
@@ -32,9 +32,9 @@ O vídeo a seguir fornece uma visão geral dos Programas do Gerenciador de nuvem
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
-## Logon pela primeira vez {#logging-in-for-the-first-time}
+## Efetuando login pela primeira vez {#logging-in-for-the-first-time}
 
-1. Faça logon no **Adobe[!UICONTROL Experience Cloud]** e você verá a lista dos **Programas**.
+1. Faça logon no Adobe **e você verá a lista de** Programas **.[!UICONTROL Experience Cloud]**
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
@@ -50,11 +50,11 @@ O vídeo a seguir fornece uma visão geral dos Programas do Gerenciador de nuvem
 
    >[!NOTE]
    >
-   >Consulte [Configurar seu Programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
+   >Consulte [Configure seu Programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
 
 ## Tutorial em vídeo {#video-tutorial-two}
 
-### Guia Atividade do Cloud Manager {#activity-video}
+### Guia Atividade do Gerenciador de nuvem {#activity-video}
 
 O Cloud Manager fornece uma visualização consolidada para uma atividade, relacionando todas as execuções do pipeline de CI/CD, tanto a produção quanto a não-produção, permitindo a visibilidade da atividade atual e passada, e qualquer Detalhes da atividade pode ser revisado.
 
