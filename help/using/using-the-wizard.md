@@ -10,7 +10,7 @@ ht-degree: 9%
 ---
 
 
-# Uso do Assistente {#using-wizard-to-create-an-aem-application-project}
+# Usando o Assistente {#using-wizard-to-create-an-aem-application-project}
 
 Quando os clientes são embarcados no Cloud Manager, eles recebem um repositório git vazio. Os clientes atuais do Adobe Managed Services (AMS) (ou clientes no local AEM que estão migrando para o AMS) geralmente já terão o código do projeto em git (ou outro sistema de controle de versão) e importarão seu projeto para o repositório git do Cloud Manager. Novos clientes, no entanto, não têm projetos existentes.
 
@@ -25,21 +25,21 @@ Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
 
 1. Clique em **Criar para** abrir uma caixa de diálogo, que permite ao usuário fornecer os parâmetros exigidos pelo AEM Project Archetype. Em seu formulário padrão, a caixa de diálogo solicita dois valores:
 
-   * **Título** - por padrão, está definido como Nome do *Programa*
+   * **Título**  - por padrão, isso é definido como Nome do  *Programa*
 
-   * **Novo nome** da ramificação - por padrão, isso é *principal*
+   * **Novo nome**  da ramificação - por padrão, isso é  *principal*
 
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
-   A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração para o Archetype. Muitos desses parâmetros têm valores padrão que são gerados com base no **Título**.
+   A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração para o Archetype. Muitos desses parâmetros têm valores padrão que são gerados com base em **Title**.
 
    ![](assets/screen_shot_2018-10-08at60032am.png)
 
    >[!NOTE]
    >
-   >Por exemplo, se o **Título** for ***We.Finance***, o parâmetro de Id de artefato da base de Maven é gerado como ***com.wefinance***. Esses valores podem ser alterados, se desejado.
+   >Por exemplo, se **Title** for ***We.Finance***, o parâmetro de Id de artefato de base Maven será gerado como ***com.wefinance***. Esses valores podem ser alterados, se desejado.
    >
    >
-   >Por exemplo, você pode alterar do ***valor gerado com.wefinance*** para ***net.wefinance***.
+   >Por exemplo, você pode alterar do ***valor com.wefinance*** gerado para ***net.wefinance***.
 
-1. Clique em **Criar** na etapa anterior para criar o projeto inicial usando o arquétipo e confirmando o ramo git nomeado. Quando isso estiver feito, você poderá configurar o pipeline.
+1. Clique em **Criar** na etapa anterior para criar o projeto inicial usando o arquétipo e confirmando a ramificação git nomeada. Quando isso estiver feito, você poderá configurar o pipeline.
