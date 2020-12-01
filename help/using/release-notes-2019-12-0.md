@@ -1,22 +1,25 @@
 ---
-title: Notas de versão para 2019.12.0
+title: Notas da versão 2019.12.0
 seo-title: Notas de versão do AEM Cloud Manager para 2019.12.0
 description: Siga esta página para obter informações sobre a versão 2019.12.0 do Cloud Manager.
 seo-description: Siga esta página para obter informações sobre a versão 2019.12.0 do AEM Cloud Manager.
 translation-type: tm+mt
 source-git-commit: 0fa1fedccb013e82c8df5838a612ce26a1efb7e8
+workflow-type: tm+mt
+source-wordcount: '229'
+ht-degree: 5%
 
 ---
 
 
-# Notas de versão para 2019.12.0 {#release-notes-for}
+# Notas da versão 2019.12.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2019.12.0 e adiciona atualizações à execução de pipeline e melhorias nas verificações de qualidade de código.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2019.12.0 e adiciona atualizações à execução de pipeline e melhorias às verificações de qualidade de código.
 Siga as seções abaixo para obter mais detalhes.
 
-## Release Date {#release-date}
+## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.12.0 é 12 de dezembro de 2019.
+A data de lançamento da versão [!UICONTROL Cloud Manager] 2019.12.0 é 12 de dezembro de 2019.
 
 ## Novidades {#whats-new}
 
@@ -29,8 +32,8 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.12.0 é 12 de d
 * As datas não eram exibidas corretamente em determinados navegadores.
 * Em casos raros, o pipeline de produção passaria para a etapa de aprovação enquanto o teste de desempenho ainda estava em execução.
 * Em determinados estados, os botões na área superior da página de visão geral não estavam alinhados corretamente.
-* Em determinadas circunstâncias, os utilizadores não autorizados viram um botão para iniciar o pipeline, embora o botão em si não fosse clicável.
+* Em determinadas circunstâncias, os utilizadores não autorizados viram um botão para start do gasoduto, embora o botão em si não fosse clicável.
 * Os botões de ação para pipelines de não produção às vezes eram exibidos no local errado.
 * Os pacotes com o tipo de nó granite:Ranking não puderam ser verificados para verificar se havia certas violações de regras de qualidade.
-* Algumas falhas no processo de qualidade do código foram contadas incorretamente como erros.
+* Certas falhas no processo de qualidade do código foram contadas incorretamente como erros.
 * Não foi possível carregar os dados de monitoramento para determinadas topologias.
