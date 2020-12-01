@@ -17,7 +17,7 @@ A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Mana
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.8.0 é 6 de agosto de 2020.
+A data de lançamento da versão 2020.8.0 [!UICONTROL Cloud Manager] é 6 de agosto de 2020.
 
 ## Novidades {#whats-new}
 
@@ -33,11 +33,11 @@ Agora há suporte para Repositórios de Maven Privado com vínculo de autentica�
 
 * Em alguns casos, as execuções de pipeline concluídas não foram registradas com êxito como tendo sido concluídas, impedindo assim novas execuções do pipeline.
 
-* Ocasionalmente, as execuções de pipeline ficariam *presas* devido a problemas de comunicação interna.
+* Ocasionalmente, as execuções de pipeline ficariam *emperradas* devido a problemas de comunicação interna.
 
 * A dica de ferramenta nos cartões de programa não estava consistentemente correta.
 
-* Ocorreu um erro de correspondência de cor na página **Visão geral** .
+* Houve uma incompatibilidade de cores na página **Visão geral**.
 
 * O teste de desempenho de sites agora suporta o uso opcional da autenticação.
 
