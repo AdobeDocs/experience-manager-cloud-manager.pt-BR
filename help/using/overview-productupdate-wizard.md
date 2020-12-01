@@ -29,7 +29,7 @@ O assistente inclui cinco fases que orientam o usuário durante uma atualizaçã
 * **Conclusão**
 
 
-## Using Product Update Wizard {#using-product-update-wizard}
+## Usando o Assistente de Atualização de Produto {#using-product-update-wizard}
 
 >[!NOTE]
 >
@@ -37,8 +37,8 @@ O assistente inclui cinco fases que orientam o usuário durante uma atualizaçã
 
 1. Você receberá uma notificação de pulso por meio do Gerenciador de nuvem informando que o AEM 6.5 está disponível para o seu programa.
 
-1. Um **[!UICONTROL AEM 6.5 Update]** cartão é exibido na tela de visão geral do [!UICONTROL Cloud Manager]. Este cartão ajudará a rastrear qual fase do processo de atualização você está atualmente e informará sobre qual será a próxima etapa a ser realizada. Selecione **[!UICONTROL Start Update]** para iniciar o assistente.
+1. Um cartão **[!UICONTROL AEM 6.5 Update]** é exibido na tela de visão geral de [!UICONTROL Cloud Manager]. Este cartão ajudará a rastrear qual fase do processo de atualização você está atualmente e informará sobre qual será a próxima etapa a ser realizada. Selecione **[!UICONTROL Start Update]** para iniciar o assistente.
 
    ![](assets/Start-Update.png)
 
-   O assistente agora exibe a primeira fase do **[!UICONTROL AEM 6.5 Update]** processo, como visto na Fase [de](evaluation.md)avaliação.
+   O assistente agora exibe a primeira fase do processo **[!UICONTROL AEM 6.5 Update]**, como visto em [Fase de avaliação](evaluation.md).
