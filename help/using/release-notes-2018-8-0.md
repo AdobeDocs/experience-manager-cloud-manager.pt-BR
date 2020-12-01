@@ -23,13 +23,13 @@ A versão [!UICONTROL Cloud Manager] 2018.8.0 adiciona suporte para acionar o pi
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.8.0 é 4 de outubro de 2018.
+A data de lançamento da versão 2018.8.0 [!UICONTROL Cloud Manager] é 4 de outubro de 2018.
 
 ## Novidades {#what-s-new}
 
-* **Configuração** do programa - Novo assistente para criar um projeto de aplicativo no git usando o AEM Project Archetype
+* **Configuração**  do programa - Novo assistente para criar um projeto de aplicativo no git usando o AEM Project Archetype
 
-* **Pipeline** CI/CD - As seguintes alterações são adicionadas ao pipeline CI/CD. Consulte [Configure seu pipeline](configuring-pipeline.md) CI/CD para saber mais.
+* **Pipeline**  CI/CD - As seguintes alterações são adicionadas ao pipeline CI/CD. Consulte [Configure seu pipeline CI/CD](configuring-pipeline.md) para saber mais.
 
    * Acionador On Git Changes, que start o pipeline CI/CD sempre que houver confirmações adicionadas ao ramo git configurado.
    * Os cartões na tela inicial agora se vinculam profundamente a seções específicas da página de execução de pipeline.
@@ -38,10 +38,10 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.8.0 é 4 de out
    * A página de execução do pipeline agora exibe o nome da versão/tag criado para a execução.
    * Apache Maven versão atualizada para 3.5.3.
 
-* **Navegação** - as seguintes alterações são adicionadas ao [!UICONTROL Cloud Manager].
+* **Navegação**  - as seguintes alterações são adicionadas ao  [!UICONTROL Cloud Manager].
 
    * O link Recursos na navegação global navegará até o Runbook no Sharepoint.
-   * O menu Ajuda foi reorganizado para incluir conteúdo mais [!UICONTROL Cloud Manager]específico.
+   * O menu Ajuda foi reorganizado para incluir mais conteúdo específico de [!UICONTROL Cloud Manager].
 
 ## Correções de erros {#bug-fixes}
 
@@ -54,5 +54,5 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.8.0 é 4 de out
 ## Problemas conhecidos {#known-issues}
 
 * As ramificações criadas usando o Assistente de projeto de aplicativo não podem conter traços.
-* A barra lateral de [!UICONTROL Experience Cloud] notificação pode não carregar as notificações de forma consistente. No entanto, as notificações estão visíveis no e, se configuradas, ainda serão enviadas por email. [!UICONTROL Experience Cloud]
+* A barra lateral de notificação [!UICONTROL Experience Cloud] pode não carregar as notificações de forma consistente. No entanto, as notificações estão visíveis no [!UICONTROL Experience Cloud] e, se configuradas, ainda serão enviadas por email.
 
