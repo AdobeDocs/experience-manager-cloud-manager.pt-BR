@@ -17,7 +17,7 @@ A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Mana
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.9.0 é 3 de setembro de 2020.
+A data de lançamento da versão 2020.9.0 [!UICONTROL Cloud Manager] é 3 de setembro de 2020.
 
 ## Novidades {#whats-new}
 
