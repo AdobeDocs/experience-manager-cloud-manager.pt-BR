@@ -23,7 +23,7 @@ Durante a execução do Pipeline, várias métricas são capturadas e comparadas
 
 Eles são reportados usando o sistema de portagem de três níveis, conforme definido nesta seção.
 
-## Portas de três níveis ao executar um pipeline  {#three-tier-gates-while-running-a-pipeline}
+## Portas de três níveis ao executar um pipeline {#three-tier-gates-while-running-a-pipeline}
 
 Há três portões no pipeline:
 
@@ -33,9 +33,9 @@ Há três portões no pipeline:
 
 Para cada uma dessas portas, existe uma estrutura em três níveis para as questões identificadas pela porta.
 
-* **Crítico** - São problemas identificados pela porta que causam uma falha imediata do pipeline.
-* **Importante** - são problemas identificados pela porta que fazem com que o pipeline entre em um estado de pausa. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso em que o pipeline continua, ou pode aceitar os problemas, caso em que o pipeline pára com uma falha.
-* **Informações** - São questões identificadas pela porta, que são fornecidas apenas para fins informativos e não têm impacto na execução do pipeline.
+* **Crítico**  - São problemas identificados pela porta que causam uma falha imediata do pipeline.
+* **Importante** : são problemas identificados pela porta que fazem com que o pipeline entre em um estado de pausa. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso em que o pipeline continua, ou pode aceitar os problemas, caso em que o pipeline pára com uma falha.
+* **Informações**  - São questões identificadas pela porta, que são fornecidas apenas para fins informativos e não têm impacto na execução do gasoduto.
 
 >[!NOTE]
 >
@@ -43,42 +43,42 @@ Para cada uma dessas portas, existe uma estrutura em três níveis para as quest
 
 ## Teste de qualidade de código {#code-quality-testing}
 
-Esta etapa avalia a qualidade do código do aplicativo. É o objetivo principal de um gasoduto de qualidade-código e é executado imediatamente após a etapa de construção em todos os gasodutos de não-produção e de produção. Consulte [Configuração do seu pipeline](/help/using/configuring-pipeline.md) CI-CD para saber mais sobre diferentes tipos de pipeline.
+Esta etapa avalia a qualidade do código do aplicativo. É o objetivo principal de um gasoduto de qualidade-código e é executado imediatamente após a etapa de construção em todos os gasodutos de não-produção e de produção. Consulte [Configurando seu pipeline CI-CD](/help/using/configuring-pipeline.md) para saber mais sobre diferentes tipos de pipeline.
 
-### Como entender o teste de qualidade de código {#understanding-code-quality-testing}
+### Noções básicas sobre o teste de qualidade de código {#understanding-code-quality-testing}
 
-Em Teste de qualidade de código, o código fonte é verificado para garantir que ele atenda a determinados critérios de qualidade. Atualmente, esta ação é implementada através de uma combinação de SonarQube e exame de nível de pacote de conteúdo utilizando OakPAL. Há mais de 100 regras que combinam regras genéricas do Java e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas AEM engenharia e são chamadas de Regras [de qualidade de código](/help/using/custom-code-quality-rules.md)personalizado.
+Em Teste de qualidade de código, o código fonte é verificado para garantir que ele atenda a determinados critérios de qualidade. Atualmente, esta ação é implementada através de uma combinação de SonarQube e exame de nível de pacote de conteúdo utilizando OakPAL. Há mais de 100 regras que combinam regras genéricas do Java e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas AEM engenharia e são chamadas de [Regras de qualidade de código personalizadas](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->Você pode baixar a lista completa de regras [aqui](/help/using/assets/CodeQuality-rules-latest.xlsx).
+>Você pode baixar a lista completa das regras [aqui](/help/using/assets/CodeQuality-rules-latest.xlsx).
 
 Os resultados desta etapa são fornecidos como *Classificação*. A tabela abaixo resume as classificações de vários critérios de teste:
 
 | Nome | Definição | Categoria | Limite de falha |
 |--- |--- |--- |--- |
-| Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 Vulnerabilidade<br/> Menor C = pelo menos 1 Vulnerabilidade Principal <br/>D = pelo menos 1 Vulnerabilidade Crítica <br/>E = pelo menos 1 Vulnerabilidade Bloqueadora | Crítico | &lt; B |
-| Classificação da confiabilidade | A = 0 Bug <br/>B = pelo menos 1 Bug Menor <br/>C = pelo menos 1 Bug Principal <br/>D = pelo menos 1<br/>BugE Crítico = pelo menos 1 Bug Bloqueador | Importante | &lt; C |
-| Classificação da manutenção | O custo de correção excepcional para cheiros de código é: <br/><ul><li>&lt;=5% do tempo que já passou para o aplicativo, a classificação é A </li><li>entre 6 e 10%, a classificação é de </li><li>entre 11 e 20% a classificação é de C </li><li>entre 21 e 50% a classificação é um D</li><li>algo acima de 50% é um E</li></ul> | Importante | &lt; A |
-| Cobertura | Uma combinação da cobertura da linha de teste da unidade e da cobertura da condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>em que: CT = condições que foram avaliadas como &#39;true&#39; pelo menos uma vez durante a execução de testes de unidade <br/>CF = condições que foram avaliadas como &#39;false&#39; pelo menos uma vez durante a execução de testes de unidade <br/>LC = linhas cobertas = lines_to_cover - uncovered_lines <br/><br/> B = número total de condições <br/>EL = número total de linhas executáveis (lines_to_cover) | Importante | &lt; 50% |
+| Classificação de segurança | A = 0 Vulnerabilidade <br/>B = pelo menos 1 Menor Vulnerabilidade<br/> C = pelo menos 1 Grande Vulnerabilidade <br/>D = pelo menos 1 Vulnerabilidade Crítica <br/>E = pelo menos 1 Vulnerabilidade Bloqueadora | Crítico | &lt; B |
+| Classificação da confiabilidade | A = 0 Bug <br/>B = pelo menos 1 Bug Menor <br/>C = pelo menos 1 Bug Maior <br/>D = pelo menos 1 Bug Crítico<br/>E = pelo menos 1 Bug Bloqueador | Importante | &lt; C |
+| Classificação da manutenção | O custo de correção excepcional para cheiros de código é: <br/><ul><li>&lt;> </li><li>entre 6 e 10%, a classificação é de </li><li>entre 11 e 20% a classificação é de C </li><li>entre 21 e 50% a classificação é um D</li><li>algo acima de 50% é um E</li></ul> | Importante | &lt; A |
+| Cobertura | Uma combinação da cobertura da linha de teste da unidade e da cobertura da condição usando esta fórmula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>em que: CT = condições que foram avaliadas como &#39;true&#39; pelo menos uma vez durante a execução de testes de unidade <br/>CF = condições que foram avaliadas como &#39;false&#39; pelo menos uma vez durante a execução de testes de unidade <br/>LC = linhas cobertas = lines_to_cover - uncovered_lines <br/><br/> B = número total de condições <br/>EL = número total de linhas executáveis (lines_to_cover) | Importante | &lt; 50% |
 | Testes de unidade ignorados | Número de testes de unidade ignorados. | Informações | > 1 |
 | Problemas em aberto | Tipos de edição geral - Vulnerabilidades, Erros e Cheiros de código | Informações | > 0 |
-| Linhas Duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado como duplicado: <br/><ul><li>**Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser espalhados pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras línguas</li><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul> <br/>As diferenças no recuo, bem como nos literais de string, são ignoradas ao detectar duplicações. | Informações | > 1% |
+| Linhas Duplicadas | Número de linhas envolvidas em blocos duplicados. <br/>Para que um bloco de código seja considerado como duplicado:  <br/><ul><li>**Projetos não Java:**</li><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem ser espalhados pelo menos em: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras línguas</li><li>**Projetos Java:**</li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul> <br/>As diferenças no recuo, bem como nos literais de string, são ignoradas ao detectar duplicações. | Informações | > 1% |
 | Compatibilidade com Cloud Service | Número de problemas de compatibilidade de Cloud Service identificados. | Informações | > 0 |
 
 
 >[!NOTE]
 >
->Consulte Definições [de](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) métricas para obter definições mais detalhadas.
+>Consulte [Definições de métrica](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) para obter definições mais detalhadas.
 
 >[!NOTE]
 >
->Para saber mais sobre as regras de qualidade de código personalizadas executadas por [!UICONTROL Cloud Manager], consulte Regras [de qualidade de código](custom-code-quality-rules.md)personalizadas.
+>Para saber mais sobre as regras de qualidade de código personalizadas executadas por [!UICONTROL Cloud Manager], consulte [Regras de qualidade de código personalizadas](custom-code-quality-rules.md).
 
 ### Lidar com falsos positivos {#dealing-with-false-positives}
 
 O processo de verificação da qualidade não é perfeito e, por vezes, identificará incorretamente questões que não são realmente problemáticas. Isso é conhecido como &quot;falso positivo&quot;.
 
-Nesses casos, o código fonte pode ser anotado com a `@SuppressWarnings` anotação padrão Java que especifica a ID da regra como o atributo de anotação. Por exemplo, um problema comum é que a regra SonarQube para detectar senhas codificadas pode ser agressiva sobre como uma senha codificada é identificada.
+Nesses casos, o código fonte pode ser anotado com a anotação padrão Java `@SuppressWarnings` especificando a ID da regra como o atributo de anotação. Por exemplo, um problema comum é que a regra SonarQube para detectar senhas codificadas pode ser agressiva sobre como uma senha codificada é identificada.
 
 Para ver um exemplo específico, esse código seria bastante comum em um projeto AEM que tem código para se conectar a algum serviço externo:
 
@@ -106,13 +106,13 @@ Em seguida, a solução correta é remover a senha codificada.
 
 >[!NOTE]
 >
->Embora seja uma prática recomendada tornar a `@SuppressWarnings` anotação o mais específica possível, ou seja, anotar somente a declaração específica ou o bloco que está causando o problema, é possível fazer anotações em nível de classe.
+>Embora seja uma prática recomendada tornar a anotação `@SuppressWarnings` o mais específica possível, isto é, anotar somente a declaração ou o bloco específico que está causando o problema, é possível fazer anotações em nível de classe.
 
 ## Teste de segurança {#security-testing}
 
-[!UICONTROL Cloud Manager] executa as ***AEM verificações*** de integridade de segurança existentes na etapa seguinte à implantação e relata o status pela interface do usuário. Os resultados são agregados de todas as instâncias AEM no ambiente.
+[!UICONTROL Cloud Manager] executa o estágio  ***AEM Security Heath*** Checkson existente após a implantação e relata o status pela interface do usuário. Os resultados são agregados de todas as instâncias AEM no ambiente.
 
-Se alguma das **Instâncias** reportar uma falha para uma determinada verificação de integridade, todo o **Ambiente** falhará nessa verificação de integridade. Como acontece com o teste de qualidade e desempenho de código, essas verificações de integridade são organizadas em categorias e reportadas usando o sistema de portagem de três níveis. A única distinção é que não existe um limiar no caso dos testes de segurança. Todos os exames de saúde são simplesmente aprovados ou reprovados.
+Se alguma das **Instâncias** reportar uma falha para uma determinada verificação de integridade, o Ambiente **inteiro** falhará nessa verificação de integridade. Como acontece com o teste de qualidade e desempenho de código, essas verificações de integridade são organizadas em categorias e reportadas usando o sistema de portagem de três níveis. A única distinção é que não existe um limiar no caso dos testes de segurança. Todos os exames de saúde são simplesmente aprovados ou reprovados.
 
 A tabela a seguir lista as verificações atuais:
 
@@ -140,11 +140,11 @@ A tabela a seguir lista as verificações atuais:
 
 ## Teste de desempenho {#performance-testing}
 
-*O teste* de desempenho em [!UICONTROL Cloud Manager] é implementado usando um teste de 30 minutos.
+*O* teste de desempenho  [!UICONTROL Cloud Manager] é implementado usando um teste de 30 minutos.
 
 Durante a configuração do pipeline, o gerente de implantação pode decidir quanto tráfego direcionar para cada bucket.
 
-Você pode saber mais sobre controles de bucket, em [Configure seu Pipeline](configuring-pipeline.md)CI/CD.
+Você pode saber mais sobre controles de bucket, em [Configure seu pipeline CI/CD](configuring-pipeline.md).
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ A tabela a seguir resume a matriz de teste de desempenho usando o sistema portá
 | Tempo de espera de E/S de disco | Crítico | >= 50% |
 | Tempo de Resposta de 95% | Importante | >= KPI em nível de Programa |
 | Tempo de resposta máximo | Importante | >= 18 segundos |
-| Visualizações de página por minuto | Importante | &lt; KPI em nível de Programa |
+| Visualizações de página por minuto | Importante | &lt; Program-level=&quot;&quot; KPI=&quot;&quot;> |
 | Utilização da largura de banda do disco | Importante | >= 90% |
 | Utilização da largura de banda da rede | Importante | >= 90% |
 | Solicitações por minuto | Informações | >= 6000 |
@@ -170,7 +170,7 @@ Novos gráficos e opções de download foram adicionados à caixa de diálogo Re
 
 Ao abrir a caixa de diálogo Teste de desempenho, os painéis de métricas podem ser expandidos para exibir um gráfico, fornecer um link para um download ou ambos.
 
-Para a [!UICONTROL Cloud Manager] versão 2018.7.0, essa funcionalidade está disponível para as seguintes métricas:
+Para [!UICONTROL Cloud Manager] Versão 2018.7.0, essa funcionalidade está disponível para as seguintes métricas:
 
 * **Utilização da CPU**
    * Um gráfico de Utilização da CPU durante o período de teste.
