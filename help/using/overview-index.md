@@ -21,7 +21,7 @@ O [!UICONTROL Cloud Manager] é uma estrutura de ferramentas e tecnologias dispo
 
 Esta seção fornece a exibição de alto nível da lista de recursos que permite começar a usar o [!UICONTROL Cloud Manager].
 
-Follow the resources below to begin your journey for using [!UICONTROL Cloud Manager], from understanding the key concepts and terminologies to setting up configurations (pre-requisites), that finally lets you get started with [!UICONTROL Cloud Manager].
+Siga os recursos abaixo para começar sua jornada para usar [!UICONTROL Cloud Manager], desde a compreensão dos conceitos e terminologias principais até a configuração de configurações (pré-requisitos), que finalmente permite que você comece com [!UICONTROL Cloud Manager].
 
 A figura abaixo ilustra o roteiro para sua aprendizagem sobre [!UICONTROL Cloud Manager]:
 
