@@ -19,15 +19,15 @@ ht-degree: 2%
 
 # Repositório de código-fonte {#source-code-repository}
 
-## Cloud Manager Repository {#cloud-manager-repository}
+## Repositório do Cloud Manager {#cloud-manager-repository}
 
-Sua [!UICONTROL AEM Managed Services] subscrição incluirá um repositório de código fonte provisionado e gerenciado pelo Adobe. A cada programa do cliente é atribuído um único repositório **** Git exclusivo, no qual o código associado será armazenado e protegido.
+Sua subscrição [!UICONTROL AEM Managed Services] incluirá um repositório de código fonte provisionado e gerenciado pelo Adobe. A cada programa do cliente é atribuído um único e exclusivo **Repositório Git**, no qual seu código associado será armazenado e protegido.
 
-Como prática recomendada, você deve sempre usar o Repositório Git do Gerenciador de nuvem, que fica vazio sem ramificações configuradas ou projetos de amostra. Para usar o Repositório Git do Cloud Manager, você receberá um token de acesso **** privado que permitirá que você use qualquer cliente compatível com Git para criar ramificações, armazenar e recuperar seu código, lista o histórico de confirmação etc.
+Como prática recomendada, você deve sempre usar o Repositório Git do Gerenciador de nuvem, que fica vazio sem ramificações configuradas ou projetos de amostra. Para usar o Repositório Git do Gerenciador de Nuvem, você receberá um **token de acesso privado** que permitirá que você use qualquer cliente compatível com Git para criar ramificações, armazenar e recuperar seu código, lista o histórico de confirmações etc.
 
-Para obter mais informações sobre como configurar ramificações no Git, consulte [Configuração das Ramificações](configure-your-release-branches.md)de Liberação.
+Para obter mais informações sobre como configurar ramificações no Git, consulte [Configurando suas Ramificações de Liberação](configure-your-release-branches.md).
 
-Para obter mais informações sobre como usar o Repositório **Git do Cloud Manager com o Pipeline CI/CD, consulte** Configuração do pipeline [](configuring-pipeline.md)CI/CD.
+Para obter mais informações sobre como usar o **Repositório Git** do Cloud Manager com o Pipeline CI/CD, consulte [Configuração do pipeline CI/CD](configuring-pipeline.md).
 
 ## Repositório local {#on-premise-repository}
 
@@ -35,5 +35,5 @@ Em alguns casos, você terá um Repositório Git existente e deseja continuar us
 
 >[!NOTE]
 >
->Para visualização dos comandos Git comuns, consulte a Folha [](https://education.github.com/git-cheat-sheet-education.pdf)Git Cheat.
+>Para visualização dos comandos Git comuns, consulte [Git Cheat](https://education.github.com/git-cheat-sheet-education.pdf).
 
