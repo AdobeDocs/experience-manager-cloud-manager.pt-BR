@@ -13,15 +13,15 @@ ht-degree: 7%
 
 # Notas da versão 2020.11.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] versão 2020.11.0.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.11.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2020.11.0 é 12 de novembro de 2020.
+A data de lançamento da versão 2020.11.0 [!UICONTROL Cloud Manager] é 12 de novembro de 2020.
 
 ## Novidades {#whats-new}
 
-* A guia **Aprendizagem** no Gerenciador de nuvem é atualizada com novas imagens na interface do usuário.
+* A guia **Learn** no Cloud Manager é atualizada com novas imagens na interface do usuário.
 
 ## Correções de erros {#bug-fixes}
 
