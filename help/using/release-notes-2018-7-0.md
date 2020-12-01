@@ -19,25 +19,25 @@ ht-degree: 5%
 
 # Notas da versão 2018.7.0 {#release-notes-for}
 
-A seção a seguir descreve a versão [!UICONTROL Cloud Manager] 2018.7.0 que oferece o recurso de *dimensionamento automático* .
+A seção a seguir descreve a versão [!UICONTROL Cloud Manager] 2018.7.0 que oferece o recurso *autoescala*.
 
-**O dimensionamento** automático é ativado por meio do dimensionamento horizontal de `Dispatcher/Publish` segmentos no ambiente de produção para suportar um aumento brusco na carga, no volume, no acesso e em outras métricas monitoradas definidas.
+**O dimensionamento** automático é habilitado por meio da escalação horizontal de  `Dispatcher/Publish` segmentos no ambiente de produção para suportar um aumento brusco na carga, no volume, no acesso e em outras métricas monitoradas definidas.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.7.0 é 10 de setembro de 2018.
+A data de lançamento da versão 2018.7.0 [!UICONTROL Cloud Manager] é 10 de setembro de 2018.
 
 ## Novidades {#what-s-new}
 
-* **Provisionamento** - [!UICONTROL Cloud Manager] agora terá a capacidade de dimensionar automaticamente o ambiente de produção no programa do cliente, dimensionando horizontalmente para menos com segmentos do Dispatcher/Publish. A novidade na interface do usuário é a seção Provisionamento na Configuração do Programa que será exibida se o dimensionamento automático estiver ativado no programa do cliente. Consulte [Configure seu Programa](setting-up-program.md) para saber mais.
+* **Provisionamento**  -  [!UICONTROL Cloud Manager] agora terá a capacidade de dimensionar automaticamente o ambiente de produção no programa do cliente, dimensionando horizontalmente para menos com segmentos do Dispatcher/Publish. A novidade na interface do usuário é a seção Provisionamento na Configuração do Programa que será exibida se o dimensionamento automático estiver ativado no programa do cliente. Consulte [Configure seu Programa](setting-up-program.md) para saber mais.
 
-* **Ambientes** - agora é possível ver uma visualização detalhada de ambientes de Produção e Estágio juntamente com o tamanho, o armazenamento, a região e o status dos nós associados a cada ambiente. Consulte [Gerenciar seus Ambientes](manage-your-environment.md) para saber mais.
+* **Ambientes**  - Agora é possível ver uma visualização detalhada de ambientes de Produção e Estágio juntamente com o tamanho, o armazenamento, a região e o status dos nós associados a cada ambiente. Consulte [Gerenciar seus Ambientes](manage-your-environment.md) para saber mais.
 
-* **Análise** de qualidade de código - Nova regra para identificar o uso incorreto da API. Consulte Regras [de qualidade de código](custom-code-quality-rules.md) personalizado para saber mais.
+* **Análise**  de qualidade de código - Nova regra para identificar o uso incorreto da API. Consulte [Regras de qualidade de código personalizadas](custom-code-quality-rules.md) para saber mais.
 
-* **Teste** de desempenho - Ao visualizar os resultados do teste de desempenho, estão disponíveis gráficos para Utilização da CPU, Tempo de espera de E/S do disco, Taxa de erro da página, Utilização da largura de banda do disco, Utilização da largura de banda da rede, Tempo de resposta de página de pico e 95% do tempo de resposta da página. Consulte a seção Teste *de* desempenho na página [Compreender os resultados](understand-your-test-results.md) do teste.
+* **Teste**  de desempenho - Ao visualizar os resultados do teste de desempenho, estão disponíveis os gráficos de Utilização da CPU, Tempo de espera de E/S do disco, Taxa de erro da página, Utilização da largura de banda do disco, Utilização da largura de banda da rede, Tempo de resposta de página de pico e 95% do tempo de resposta da página. Consulte a seção *Teste de desempenho* na página [Entender os resultados do teste](understand-your-test-results.md).
 
-* **Teste** de desempenho - durante a exibição dos resultados do teste de desempenho, é possível baixar a lista de erros de página e solicitações lentas. Consulte a seção Teste *de* desempenho na página [Compreender os resultados](understand-your-test-results.md) do teste.
+* **Teste**  de desempenho - Durante a exibição dos resultados do teste de desempenho, é possível baixar a lista de erros de página e solicitações lentas. Consulte a seção *Teste de desempenho* na página [Entender os resultados do teste](understand-your-test-results.md).
 
 ## Correções de erros {#bug-fixes}
 
@@ -48,5 +48,5 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2018.7.0 é 10 de se
 ## Problemas conhecidos {#known-issues}
 
 * Embora os clientes possam selecionar o acionador de confirmação, o pipeline pode não ser start com base em novos compromissos.
-* A barra lateral de [!UICONTROL Experience Cloud] notificação pode não carregar as notificações de forma consistente. No entanto, as notificações estão visíveis no e, se configuradas, ainda serão enviadas por email. [!UICONTROL Experience Cloud]
+* A barra lateral de notificação [!UICONTROL Experience Cloud] pode não carregar as notificações de forma consistente. No entanto, as notificações estão visíveis no [!UICONTROL Experience Cloud] e, se configuradas, ainda serão enviadas por email.
 
