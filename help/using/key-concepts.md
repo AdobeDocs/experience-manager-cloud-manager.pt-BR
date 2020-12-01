@@ -21,28 +21,28 @@ ht-degree: 1%
 
 Esta página descreve algumas terminologias básicas usadas no Cloud Manager. Recomendamos que você leia esta página antes de revisar o restante da documentação do Cloud Manager.
 
-**Aplicativo** O conjunto de personalizações e configurações criadas por um cliente para adaptar a solução subjacente aos casos e necessidades de uso específicos. Um aplicativo é uma unidade lógica que pode ser composta de vários artefatos.
+**** AplicativoO conjunto de personalizações e configurações criadas por um cliente para adaptar a solução subjacente aos casos e necessidades de uso específicos. Um aplicativo é uma unidade lógica que pode ser composta de vários artefatos.
 
 Por exemplo, *We.Retail*.
 
-**Artefato** Uma unidade implantável. O resultado de algum processo de compilação que transforma o código fonte em uma única unidade. Por exemplo, um arquivo Zip contendo o código-fonte.
+**** ArtefatoUma unidade implantável. O resultado de algum processo de compilação que transforma o código fonte em uma única unidade. Por exemplo, um arquivo Zip contendo o código-fonte.
 
-**Repositório** de artefatos Um local de armazenamento onde artefatos específicos do cliente são salvos e protegidos.
+**Repositório** de artefatosUm local de armazenamento onde artefatos específicos do cliente são salvos e protegidos.
 
-**Ambiente** Um único cluster de máquinas virtuais em um programa. Para AEM, é composto por uma instância do autor (opcionalmente com uma instância adicional de autor em espera), zero ou mais instâncias de publicação, uma ou mais instâncias do dispatcher e um balanceador de carga.
+**** AmbienteUm único cluster de máquinas virtuais em um programa. Para AEM, é composto por uma instância do autor (opcionalmente com uma instância adicional de autor em espera), zero ou mais instâncias de publicação, uma ou mais instâncias do dispatcher e um balanceador de carga.
 
-**Repositório** Git Um local onde o código fonte específico do cliente é armazenado, acessível usando o protocolo Git.
+**Repositório** de GitUm local onde o código fonte específico do cliente é armazenado, acessível usando o protocolo Git.
 
-**Instância** Um servidor virtual específico executando a solução AEM. As instâncias representam uma única unidade lógica de uma perspectiva de implantação.
+**** InstânciaUm servidor virtual específico executando a solução AEM. As instâncias representam uma única unidade lógica de uma perspectiva de implantação.
 
-**Construção de Adobe da organização** que representa um cliente Enterprise. Uma empresa pode ter várias organizações, dependendo de como elas foram originalmente provisionadas no Adobe System.
+**Construção** OrganizationAdobe representando um cliente Enterprise. Uma empresa pode ter várias organizações, dependendo de como elas foram originalmente provisionadas no Adobe System.
 
-**Pipeline** Um conjunto de etapas de implantação executadas em sequência.
+**** PipelineUm conjunto de etapas de implantação executadas em sequência.
 
-**Produto** Um conjunto específico de funcionalidades em uma solução licenciada por uma organização. Diferentes programas dentro de uma organização podem ter direito a diferentes conjuntos de produtos. Por exemplo, Sites, Ativos do Forms.
+**** ProdutoUm conjunto específico de funcionalidades em uma solução licenciada por uma organização. Diferentes programas dentro de uma organização podem ter direito a diferentes conjuntos de produtos. Por exemplo, Sites, Ativos do Forms.
 
-**Programa** Um conjunto de ambientes que oferecem suporte a um agrupamento lógico de iniciativas de clientes, geralmente correspondente a um SLA (Service Level Agreements, contratos de nível de serviço) adquirido. Cada programa tem exatamente um ambiente de produção e pode ter muitos ambientes que não são de produção.
+**** ProgramaUm conjunto de ambientes que oferecem suporte a um agrupamento lógico de iniciativas de clientes, geralmente correspondente a um SLA (Service Level Agreements, contratos de nível de serviço) adquirido. Cada programa tem exatamente um ambiente de produção e pode ter muitos ambientes que não são de produção.
 
-**Solução** Uma das soluções Adobe [!UICONTROL Experience Cloud] . Por exemplo, Adobe Experience Manager, Adobe Target ou Adobe Analytics.
+**** SoluçãoUma das  [!UICONTROL Experience Cloud] soluções Adobe. Por exemplo, Adobe Experience Manager, Adobe Target ou Adobe Analytics.
 
-**Etapa** Um conjunto de instruções configurado que realiza alguma unidade de trabalho, bloco de construção de um pipeline.
+**** EtapaUm conjunto de instruções configurado que realiza alguma unidade de trabalho, bloco de construção de um pipeline.
