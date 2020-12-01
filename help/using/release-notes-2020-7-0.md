@@ -17,7 +17,7 @@ A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Mana
 
 ## Data de lançamento {#release-date}
 
-The Release Date for [!UICONTROL Cloud Manager] Version 2020.7.0 is July 09, 2020.
+A data de lançamento da versão 2020.7.0 [!UICONTROL Cloud Manager] é 9 de julho de 2020.
 
 ## Novidades {#whats-new}
 
@@ -30,7 +30,7 @@ Consulte [Variáveis de pipeline](/help/using/build-environment-details.md#pipel
 
 ## Correções de erros {#bug-fixes}
 
-* The **Cancel** and **Save** options on the Non-Production Pipeline Edit page were not always visible.
+* As opções **Cancelar** e **Salvar** na página Edição de Pipeline de Não Produção nem sempre estavam visíveis.
 
 * Certas falhas no processo de qualidade do código podiam resultar na geração incorreta do arquivo de log.
 
