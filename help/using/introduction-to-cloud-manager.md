@@ -44,7 +44,7 @@ A interface do usuário (UI) para [!UICONTROL Cloud Manager] permite que os clie
 
 Os clientes definem os KPIs (Key Performance Indicators, Indicadores-chave de desempenho) específicos do aplicativo - pico de exibições de página por minuto e tempo de resposta esperado para um carregamento de página, que formam a base para medir uma implantação bem-sucedida. As funções e permissões de diferentes membros da equipe podem ser facilmente definidas. Embora a nova interface de autoatendimento devolva o controle para você, ela também oferece links para as práticas recomendadas e acesso a especialistas na Adobe que podem fornecer as orientações necessárias, conforme necessário.
 
-Para explorar e começar a usar [!UICONTROL Cloud Manager]a interface do usuário do, consulte [Logon](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html)pela primeira vez.
+Para explorar e começar a usar a interface do usuário de [!UICONTROL Cloud Manager], consulte [Logon pela primeira vez](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
 
 ### Pipeline de CI/CD {#ci-cd-pipeline}
 
@@ -52,7 +52,7 @@ Um dos principais recursos do [!UICONTROL Cloud Manager] é a capacidade de util
 
 Por meio da interface do usuário do [!UICONTROL Cloud Manager], os clientes podem configurar e iniciar o pipeline de CI/CD. Durante esse pipeline, uma varredura de código completa é executada para garantir que somente aplicativos de alta qualidade passem para o ambiente de produção.
 
-Para saber mais sobre como configurar o pipeline da interface do usuário [!UICONTROL Cloud Manager]do, consulte [Configurar o pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Para saber mais sobre como configurar o pipeline na interface do usuário de [!UICONTROL Cloud Manager], consulte [Configurar o pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
 
 ### Modos de implantação flexíveis {#flexible-deployment-modes}
 
