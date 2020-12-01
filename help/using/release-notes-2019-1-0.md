@@ -19,18 +19,18 @@ ht-degree: 4%
 
 # Notas da versão 2019.1.0 {#release-notes-for}
 
-A versão [!UICONTROL Cloud Manager] 2018.9.0 adiciona suporte para testes de programas AEM Assets, bem como tipos adicionais de pipeline que executam as etapas de qualidade de código e compilação, opcionalmente implantando em um ambiente que não seja de produção.
+A versão [!UICONTROL Cloud Manager] 2018.9.0 adiciona suporte ao teste de programas AEM Assets, bem como tipos de pipeline adicionais que executam as etapas de qualidade de código e compilação, opcionalmente implantando em um ambiente que não seja de produção.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.1.0 é 17 de janeiro de 2019.
+A data de lançamento da versão 2019.1.0 [!UICONTROL Cloud Manager] é 17 de janeiro de 2019.
 
 ## Novidades {#whats-new}
 
-* Adicionado suporte para teste de desempenho da AEM Assets. Consulte Configurar seu [CI/CD](configuring-pipeline.md)Pipeline para obter mais detalhes.
-* Adicionado suporte para pipelines que executam somente etapas de compilação e qualidade de código e implantações em ambientes que não sejam de produção. Consulte a seção Pipelines **somente para** não produção e qualidade de código em [Configure seu pipeline](configuring-pipeline.md) CI/CD para obter mais detalhes.
+* Adicionado suporte para teste de desempenho da AEM Assets. Consulte Configurar seu [Pipeline CI/CD](configuring-pipeline.md)para obter mais detalhes.
+* Adicionado suporte para pipelines que executam somente etapas de compilação e qualidade de código e implantações em ambientes que não sejam de produção. Consulte a seção **Pipelines que não são de produção e qualidade de código** em [Configure seu pipeline CI/CD](configuring-pipeline.md) para obter mais detalhes.
 * Adicionado suporte para variáveis de ambiente personalizadas no ambiente de compilação.
-* Para clientes com vários ambientes de estágio ou produção, a seleção para qual ambiente será implantado como parte do pipeline de produção está disponível em [Configure sua página do pipeline](configuring-pipeline.md) CI/CD.
+* Para clientes com vários ambientes de estágio ou produção, a seleção para qual ambiente será implantado como parte do pipeline de produção está disponível na página [Configure seu pipeline CI/CD](configuring-pipeline.md).
 * httxt2dbm foi adicionado ao container build.
 * Todos os itens do menu de ajuda abrem uma nova guia.
 
@@ -48,4 +48,4 @@ A data de lançamento da [!UICONTROL Cloud Manager] versão 2019.1.0 é 17 de ja
 
 ## Problemas conhecidos {#known-issues}
 
-* Ao abrir um programa que tenha Sites, mas não Ativos, KPIs definidos, todos os usuários veem uma chamada para um cartão de ação com um botão **Configurar Programa** . Entretanto, somente os usuários na função Proprietário comercial podem clicar no botão **Configurar Programa** .
+* Ao abrir um programa que tenha Sites, mas não Ativos, KPIs definidos, todos os usuários veem uma chamada para cartão de ação com um botão **Configurar Programa**. Entretanto, somente os usuários na função Proprietário da empresa podem clicar no botão **Configurar Programa**.
