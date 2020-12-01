@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Fase de avaliação {#evaluation}
 
-A primeira fase do assistente de Atualização de produto é a **[!UICONTROL Evaluation]** fase.
+A primeira fase do assistente de Atualização de produto é **[!UICONTROL Evaluation]**.
 Aqui você pode avaliar a complexidade da atualização com o detector de padrões acessível diretamente do assistente. No final desta etapa, você terá acesso ao relatório de avaliação.
 
 O relatório gerado permite que você verifique a instância do autor para atualização detectando padrões que:
@@ -33,7 +33,7 @@ Isto serve como uma avaliação do esforço de desenvolvimento que está envolvi
 >
 >Para saber mais sobre o detector de padrões, consulte [Avaliação da complexidade de atualização com o Detector de padrões](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
 
-## Executando o Avaliador {#running-evaluator}
+## Execução do Avaliador {#running-evaluator}
 
 Siga as etapas abaixo para gerar o relatório de avaliação:
 
@@ -45,7 +45,7 @@ Siga as etapas abaixo para gerar o relatório de avaliação:
 
    ![](assets/Run-Evaluation.png)
 
-1. O assistente informa o status de sua ação. Você notará **Em andamento** ou **concluído** , conforme o caso, quando o relatório de avaliação estiver sendo gerado.
+1. O assistente informa o status de sua ação. Você notará **Em andamento** ou **concluído**, conforme aplicável, quando o relatório de avaliação estiver sendo gerado.
 
    Depois que o relatório é gerado, você pode clicar em **[!UICONTROL Download report]** para salvar uma cópia.
 
@@ -54,4 +54,4 @@ Siga as etapas abaixo para gerar o relatório de avaliação:
 
    >[!NOTE]
    >
-   >A versão atual do assistente de Atualização de produto no Cloud Manager é compatível somente com a fase de **avaliação** . As outras quatro fases, **Remediação**, **Execução**, **Validação** e **Conclusão** , estarão em breve.
+   >A versão atual do assistente de Atualização de produto no Gerenciador de nuvem oferece suporte somente à fase **Avaliação**. As outras quatro fases, nomeadamente **Remediação**, **Execução**, **Validação** e **Conclusão**, estão em breve.
