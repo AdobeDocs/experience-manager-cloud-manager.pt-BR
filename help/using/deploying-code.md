@@ -23,11 +23,11 @@ ht-degree: 1%
 
 Depois de configurar seu pipeline de produção (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
-1. Clique em **Implantar** no Gerenciador de nuvem para start do processo de implantação.
+1. Clique em **Implantar** do Gerenciador de nuvem para start do processo de implantação.
 
    ![](assets/Deploy1.png)
 
-1. A tela Execução **do pipeline** é exibida.
+1. A tela **Execução do pipeline** é exibida.
 
    Clique em **Criar** para start do processo.
 
@@ -48,34 +48,34 @@ Depois de configurar seu pipeline de produção (repositório, ambiente e ambien
    A **Implantação do preparo** envolve estas etapas:
 
    * Validação: Essa etapa garante que o pipeline esteja configurado para usar os recursos disponíveis no momento, por exemplo, que a ramificação configurada exista, os ambientes estarão disponíveis.
-   * Compilação e teste de unidade: Esta etapa executa um processo de criação contido. Consulte [Compreensão do Ambiente](/help/using/build-environment-details.md) Build para obter detalhes sobre o ambiente build.
-   * Digitalização de código: Esta etapa avalia a qualidade do código do aplicativo. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
+   * Compilação e teste de unidade: Esta etapa executa um processo de criação contido. Consulte [Entendendo o Ambiente de compilação](/help/using/build-environment-details.md) para obter detalhes sobre o ambiente de compilação.
+   * Digitalização de código: Esta etapa avalia a qualidade do código do aplicativo. Consulte [Entender os resultados do teste](understand-your-test-results.md) para obter detalhes sobre o processo de teste.
    * Implantar no palco
 
    ![](assets/Stage_Deployment1.png)
 
-   The **Stage Testing**, involves the following steps:
+   O **Teste do palco** envolve as seguintes etapas:
 
-   * Teste de segurança: Esta etapa avalia o impacto sobre a segurança do código do aplicativo no ambiente AEM. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
-   * Teste de desempenho: Esta etapa avalia o desempenho do código do aplicativo. Consulte [Entender os resultados](understand-your-test-results.md) do teste para obter detalhes sobre o processo de teste.
+   * Teste de segurança: Esta etapa avalia o impacto sobre a segurança do código do aplicativo no ambiente AEM. Consulte [Entender os resultados do teste](understand-your-test-results.md) para obter detalhes sobre o processo de teste.
+   * Teste de desempenho: Esta etapa avalia o desempenho do código do aplicativo. Consulte [Entender os resultados do teste](understand-your-test-results.md) para obter detalhes sobre o processo de teste.
 
    ![](assets/Stage_Testing1.png)
 
-   The **Production Deployment**, involves the following steps:
+   A **Implantação de Produção** envolve as seguintes etapas:
 
-   * **Pedido de aprovação** (se ativado)
-   * **Programar implantação** de produção (se ativada)
-   * **Suporte** CSE (se ativado)
+   * **Pedido de aprovação**  (se ativado)
+   * **Programar implantação**  de produção (se ativado)
+   * **Suporte**  CSE (se ativado)
    * **Implantar na produção**
 
    ![](assets/Prod_Deployment1.png)
 
    >[!NOTE]
    >
-   >A Implantação **de Produção de** Programação é ativada durante a configuração do pipeline.
+   >A **Implementação da Produção de Programação** está ativada durante a configuração do pipeline.
    >
    >
-   >Usando essa opção, você pode programar a implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
+   >Usando essa opção, você pode programar sua implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
    >
    >
    >A data e a hora programadas são especificadas em termos do fuso horário do usuário.
@@ -87,7 +87,7 @@ Depois de configurar seu pipeline de produção (repositório, ambiente e ambien
 
    Após confirmar o agendamento da implantação, a implantação do código será concluída.
 
-   A tela a seguir é exibida quando a opção **Agora** é selecionada na etapa acima.
+   A tela a seguir é exibida quando a opção **Now** é selecionada na etapa acima.
 
    ![](assets/Production_Deployment2.png)
 
@@ -122,7 +122,7 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
 
    1. O backup das configurações atuais é feito e copiado para um local temporário
    1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte Gerenciar configurações do Dispatcher para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
-   1. O artefato é extraído para o `httpd` diretório.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do despachante do AMS e não podem ser alterados.
+   1. O artefato é extraído para o diretório `httpd`.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do despachante do AMS e não podem ser alterados.
    1. O Apache realiza um teste de configuração. Se nenhum erro for encontrado, o serviço será recarregado. Se ocorrer um erro, as configurações serão restauradas a partir do backup, o serviço será recarregado e o erro será reportado de volta ao Cloud Manager.
    1. Cada caminho especificado na configuração do pipeline é invalidado ou liberado do cache do dispatcher.
 
@@ -134,7 +134,7 @@ Quando o Cloud Manager é implantado em topologias que não sejam de produção,
    >[!NOTE]
    >Você pode ignorar as alterações no Balanceador de Carga nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines de não-produção, para ambientes de desenvolvedor e pipeline de produção, para ambientes de estágio.
 
-### Implantação para fase de produção {#deployment-production-phase}
+### Implantação para a fase de produção {#deployment-production-phase}
 
 O processo de implantação das topologias de produção difere um pouco para minimizar o impacto nos visitantes AEM Site.
 
