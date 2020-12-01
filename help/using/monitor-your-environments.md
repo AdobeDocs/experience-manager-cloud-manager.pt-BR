@@ -5,21 +5,24 @@ description: 'null'
 seo-description: Siga esta página para saber mais sobre o Monitoramento do sistema no Gerenciador de nuvem que é feito observando as instâncias individuais em um ambiente e rastreando várias métricas para cada instância.
 translation-type: tm+mt
 source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
+workflow-type: tm+mt
+source-wordcount: '958'
+ht-degree: 1%
 
 ---
 
 
 # Monitoramento do sistema {#system-monitoring}
 
-O monitoramento do sistema em [!UICONTROL Cloud Manager] é feito observando as instâncias individuais em um ambiente e rastreando várias métricas para cada instância. Cada métrica tem dois limites definidos - um limite *de* aviso e um limite ** crítico.
+O monitoramento do sistema em [!UICONTROL Cloud Manager] é feito observando as instâncias individuais em um ambiente e rastreando uma variedade de métricas para cada instância. Cada métrica tem dois limites definidos - um *limite de aviso* e um *limite crítico*.
 
 Se uma métrica ultrapassar o seu limite crítico, considera-se que se encontra num estado crítico; se uma métrica estiver acima de seu limite de aviso (mas abaixo de seu limite crítico), ela será considerada como estando em um estado de aviso. Os limites são definidos pelo Adobe Managed Services e podem ser visualizados em [!UICONTROL Cloud Manager]. Na maioria dos casos, os limites são consistentes entre os clientes, mas há casos em que o Adobe Managed Services modificará os limites para atender às necessidades específicas do cliente. As perguntas sobre os limites devem ser direcionadas ao engenheiro de sucesso do cliente (CSE).
 
-## Navegação até o monitoramento do sistema {#navigating-system-monitoring}
+## Navegação até o Monitoramento do Sistema {#navigating-system-monitoring}
 
 Navegar até o recurso Monitoramento do sistema pode ser feito de duas formas.
 
-1. Faça logon nos Serviços **gerenciados - landing page de Programas** .
+1. Faça logon na landing page **Managed Services - Programas**.
 
    ![](assets/ProgramLanding.png)
 
@@ -29,10 +32,10 @@ Navegar até o recurso Monitoramento do sistema pode ser feito de duas formas.
 
    *Ou*,
 
-* Navegue até a landing page Monitoramento **do** Sistema pelo item de menu de navegação global **Relatórios** dentro [!UICONTROL Cloud Manager].
+* Navegue até a landing page **Monitoramento do sistema** pelo item de menu de navegação global **Relatórios** em [!UICONTROL Cloud Manager].
 
 
-## Página Visão geral do monitoramento do sistema {#system-monitoring-overview-page}
+## Página Visão Geral do Monitoramento do Sistema {#system-monitoring-overview-page}
 
 A página Visão geral de monitoramento do sistema lista os ambientes monitorados no programa e relata sobre sua integridade de alto nível em quatro categorias separadas:
 
@@ -53,7 +56,7 @@ O status em cada categoria é um resumo de métricas individuais - se qualquer m
 
 ### Visão geral dos relatórios do Cloud Manager {#reports-video}
 
-Os Relatórios do Gerenciador de nuvem fornecem uma visualização aos Ambientes do Programa e às instâncias do AEM por meio de um conjunto de gráficos que relatam e rastreiam várias métricas para cada instância do AEM.
+Os Relatórios do Gerenciador de nuvem fornecem uma visualização para os Ambientes e instâncias de AEM do Programa por meio de um conjunto de gráficos que relatam e rastreiam várias métricas para cada instância de AEM.
 Consulte o vídeo abaixo para obter mais detalhes.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315/)
@@ -95,7 +98,7 @@ Por exemplo, se você clicar na série de limites de aviso, verá apenas o limit
 **Armazenamento**
 
 * Espaço em disco: O espaço em disco usado (em Megabytes) para cada ponto de montagem no host. Há métricas diferentes para cada ponto de montagem. No mínimo, você verá métricas para &quot;/&quot; e &quot;/mnt&quot;, mas métricas adicionais de ponto de montagem podem estar disponíveis dependendo da configuração específica da instância.
-* Tamanho da pasta: Armazenamento de segmentos do AEM: O espaço em disco usado (em Gigabytes) para o AEM Segment Store.
+* Tamanho da pasta: Loja de segmentos AEM: O espaço em disco usado (em Gigabytes) para a Loja de segmentos AEM.
 
 **Aplicativo**
 
@@ -104,7 +107,7 @@ Por exemplo, se você clicar na série de limites de aviso, verá apenas o limit
 
 ## Relatórios SLA {#sla-reporting}
 
-Os clientes podem ver o desempenho de seu ambiente AEM de produção em relação ao SLA (Service Level Agreement, contrato de nível de serviço). Isso está disponível por meio de um submenu na tela Relatórios.
+Os clientes podem ver o desempenho de seu ambiente de produção AEM em relação ao SLA (Service Level Agreement, contrato de nível de serviço). Isso está disponível por meio de um submenu na tela Relatórios.
 Por exemplo, o gráfico abaixo mostra o nível de SLA mensal para 2018.
 
 ![](assets/SLA-Reports-one.png)
@@ -121,7 +124,7 @@ A seção Análise do Evento neste gráfico mostra o conjunto de incidentes que 
 
 * **Contrato** do autor: Este é o SLA definido em seu contrato com os Serviços gerenciados da Adobe para a camada do autor.
 
-* **SLA** do autor do AMS: Esse é o tempo de atividade medido dos incidentes de factoring de nível do autor da produção causados pela Adobe ou por nossos fornecedores.
+* **SLA** do autor do AMS: Esse é o tempo de atividade medido dos incidentes de factoring de nível do autor de produção causados pela Adobe ou por nossos fornecedores.
 
 * **SLA** do autor: Esse é o tempo de atividade medido da camada do autor ignorando o tempo de inatividade programado, como janelas de manutenção.
 
