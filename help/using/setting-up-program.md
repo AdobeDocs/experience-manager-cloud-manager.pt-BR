@@ -25,13 +25,13 @@ Os KPIs definidos servem como uma linha de base para o teste de desempenho, que 
 
 >[!NOTE]
 >
->Os KPIs definidos são medidos em testes executados no ambiente do **palco** . Normalmente, esses KPIs são reduzidos para se ajustarem aos recursos do ambiente stage.
+>Os KPIs definidos são medidos em testes executados no ambiente **stage**. Normalmente, esses KPIs são reduzidos para se ajustarem aos recursos do ambiente stage.
 >
->Por exemplo, um usuário que espera uma média de 1.000 visualizações de página por minuto em seu **Ambiente** de produção e que tenha quatro servidores de despacho/publicação em produção deve dimensionar isso para 250 visualizações de página por minuto (considerando que seu ambiente de estágio consiste em apenas um único par de despachantes/servidores de publicação).
+>Por exemplo, um usuário que espera uma média de 1.000 visualizações de página por minuto em sua produção **Ambiente** e ter quatro servidores de despacho/publicação em produção deve dimensionar isso para 250 visualizações de página por minuto (considerando que seu ambiente de estágio consiste em apenas um único par de despachantes/servidores de publicação).
 >
->Além disso, muitos usuários terão uma Rede de Delivery de conteúdo (CDN), como Akamai ou CloudFront na frente do ambiente de produção. Como [!UICONTROL Cloud Manager] testa diretamente o ambiente do palco, o KPI deve refletir apenas o tráfego que se espera que passe pelo CDN, ou seja, o cache não tem acesso. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
+>Além disso, muitos usuários terão uma Rede de Delivery de conteúdo (CDN), como Akamai ou CloudFront na frente do ambiente de produção. Como [!UICONTROL Cloud Manager] testa diretamente contra o ambiente stage, o KPI deve refletir apenas o tráfego esperado para atravessar o CDN, ou seja, o cache não tem acesso. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
 
-## Usar [!UICONTROL Cloud Manager] para configurar seu Programa {#using-cloud-manager-to-setup-your-program}
+## Usando [!UICONTROL Cloud Manager] para configurar seu Programa {#using-cloud-manager-to-setup-your-program}
 
 Siga as etapas abaixo para configurar o programa e definir KPIs:
 
@@ -45,11 +45,11 @@ Siga as etapas abaixo para configurar o programa e definir KPIs:
    ![image1](assets/set-up-program/setup2.png)
 
 
-1. A tela **Setup Programa** (Configurar ) exibe Edit Programa Information (Editar informações do ).
+1. A tela **Programa de instalação** exibe Editar informações do Programa.
 
-1. Você verá três opções como **Geral**, **KPI** e guia **Provisionamento** .
+1. Você verá três opções como **Geral**, **KPI** e **guia Provisionamento**.
 
-1. Na guia **Geral** , carregue uma miniatura em seu programa. Você também pode adicionar uma descrição relevante ao seu programa.
+1. Na guia **Geral**, carregue uma miniatura em seu programa. Você também pode adicionar uma descrição relevante ao seu programa.
 
    ![](assets/Setup_Program-General.png)
 
@@ -63,21 +63,23 @@ Siga as etapas abaixo para configurar o programa e definir KPIs:
    1. Quantas Visualizações de página por minuto sob o pico de carga?
 
       * Valor recomendado - 200 visualizações de página por minuto
+
    **Ativos AEM**
 
-   Desde sua versão inicial, o Cloud Manager tem sido capaz de executar testes de desempenho para programas do AEM Sites. Com esta versão, o recurso foi adicionado para executar testes de desempenho para programas do AEM Assets também. O teste de desempenho do ativo é feito fazendo upload de ativos repetidamente durante um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo, bem como de várias métricas no nível do sistema.
+   Desde sua versão inicial, o Cloud Manager tem sido capaz de executar testes de desempenho para programas AEM Sites. Com esta versão, a capacidade foi adicionada para executar testes de desempenho para programas AEM Assets também. O teste de desempenho do ativo é feito fazendo upload de ativos repetidamente durante um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo, bem como de várias métricas no nível do sistema.
 Durante a Configuração do Programa, os KPIs específicos dos ativos são especificados:
 
    * 95% do tempo de processamento
    * Ativos carregados por minuto
+
    ![](assets/Setup_Program-KPIs.png)
 
-1. Em **Provisionamento**, você pode visualização ou editar a configuração de provisionamento para ambientes de produção e não-produção em seu programa. Você verá que a **Autoescala está ativada**, se a autoescala tiver sido ativada para o programa.
+1. Em **Provisionamento**, você pode visualização ou editar a configuração de provisionamento para ambientes de produção e não-produção em seu programa. Você verá que **A Autoescala está ativada**, se a autoescala tiver sido ativada para o programa.
 
    >[!NOTE]
    >
    >* O recurso de dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas do cliente.
-   >* O dimensionamento sob demanda não está disponível para esta versão do [!UICONTROL Cloud Manager].
+   >* A escala sob demanda não está disponível para esta versão de [!UICONTROL Cloud Manager].
 
 
    ![](assets/Setup_Program-Provisioning.png)
@@ -90,11 +92,11 @@ Durante a Configuração do Programa, os KPIs específicos dos ativos são espec
 
 ## Edição de um Programa
 
-1. Navegue até a solução na tela inicial do **Cloud Manager** .
+1. Navegue até a solução na tela inicial **Cloud Manager**.
 
    ![](assets/SetUpProgram5.png)
 
-1. Selecione a solução e clique em **Editar** para atualizar ou modificar seu programa, como mostrado na figura abaixo.
+1. Selecione a solução e clique em **Editar** para atualizar ou modificar o seu programa, conforme mostrado na figura abaixo.
 
    ![](assets/SetUpProgram6.png)
 
@@ -106,4 +108,4 @@ Durante a Configuração do Programa, os KPIs específicos dos ativos são espec
 
 Se você já tiver configurado o **Pipeline**, a execução seguinte levará em conta as configurações atualizadas. Se você ainda não tiver configurado o pipeline, siga as etapas para configurar seu pipeline primeiro.
 
-Consulte [Configurar o pipeline de CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html) para configurar o pipeline.
+Consulte [Configure seu pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html) para configurar o pipeline.
