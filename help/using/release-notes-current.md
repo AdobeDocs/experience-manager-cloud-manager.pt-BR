@@ -1,36 +1,24 @@
 ---
-title: Notas da versão 2020.11.0
-seo-title: Notas de versão do AEM Cloud Manager para 2020.11.0
-description: Siga esta página para obter informações sobre a versão 2020.11.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.11.0 do AEM Cloud Manager
+title: Notas da versão 2020.12.0
+seo-title: Notas de versão do AEM Cloud Manager para 2020.12.0
+description: Siga esta página para obter informações sobre a versão 2020.12.0 do Cloud Manager
+seo-description: Siga esta página para obter informações sobre a versão 2020.12.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
+source-git-commit: 4767e782019998564f4fd238ef2555ab0a4f6d62
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 7%
+source-wordcount: '66'
+ht-degree: 15%
 
 ---
 
-# Notas da versão 2020.11.0 {#release-notes-for}
+# Notas da versão 2020.12.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.11.0.
+A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.12.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2020.11.0 [!UICONTROL Cloud Manager] é 12 de novembro de 2020.
-
-## Novidades {#whats-new}
-
-* A guia **Learn** no Cloud Manager é atualizada com novas imagens na interface do usuário.
+A data de lançamento da versão 2020.12.0 [!UICONTROL Cloud Manager] é 10 de dezembro de 2020.
 
 ## Correções de erros {#bug-fixes}
 
-* Determinados erros de implantação causados pelo cliente agora serão explicitamente encontrados nos logs de implantação.
-
-* O carregamento de dependências feitas antes da execução da compilação exigia o download de um plug-in Maven.
-
-* O link do rodapé do Gerenciador de nuvem para selecionar um idioma agora navegará até o local correto.
-
-* Às vezes, durante a digitalização do código, o processo SonarQube não era start. Isso será detectado automaticamente e uma tentativa de reinicialização será feita.
-
-* Durante o processo de rastreamento do site usado no teste de desempenho, as solicitações que expirarem nos três primeiros níveis de detalhamento serão automaticamente repetidas.
+* Algumas ocorrências de falhas em estágio de digitalização de código sem fornecer resultados abordados.
