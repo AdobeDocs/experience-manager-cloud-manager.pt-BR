@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: d02292e4f6369e0e0bf8fcf60cb8fe299854b3cc
+source-git-commit: bbcd5e59a9f9e8cb83cefb8af79d3ce7987bf388
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 2%
@@ -170,7 +170,7 @@ Siga as etapas abaixo para configurar as validações do Dispatcher:
 
    Por exemplo, digamos que há uma divisão de 50%/50% entre as Páginas ativas populares e as Novas páginas definidas (neste exemplo, Outras páginas ao vivo não são usadas) e o conjunto Novas páginas contém 3000 páginas. As visualizações de página por minuto KPI é definido como 200. Durante o período de teste de 30 minutos:
 
-   * Cada uma das 25 páginas no conjunto de Páginas ativas populares será acessada 240 vezes - ((200 * 0.5) / 25) * 30 = 120
+   * Cada uma das 25 páginas no conjunto de Páginas ativas populares será acessada 120 vezes - ((200 * 0.5) / 25) * 30 = 120
 
    * Cada uma das 3000 páginas no conjunto Novas páginas será acessada uma vez - ((200 * 0.5) / 3000) * 30 = 1
 
