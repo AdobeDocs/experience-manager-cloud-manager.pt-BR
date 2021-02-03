@@ -6,7 +6,7 @@ user-guide-title: Guia do Experience Manager Cloud Manager
 breadcrumb-title: Guia do Cloud Manager
 user-guide-description: Saiba como usar os Adobe Managed Services para gerenciar o Experience Manager na nuvem por conta própria.
 translation-type: tm+mt
-source-git-commit: 5688e956c4c21968ce691b560a6ce519496f7563
+source-git-commit: f3e5e4be7ac4ba7eef158cea3c1c19ea83ec4d75
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 85%
@@ -45,7 +45,7 @@ ht-degree: 85%
    + [Gerenciar os ambientes](manage-your-environment.md)
    + [Monitorar os ambientes](monitor-your-environments.md)
    + [API do Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
-   + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
+   + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Notificações](notifications.md)
    + [Regras de qualidade do código personalizado](custom-code-quality-rules.md)
 + Gerenciar seu código {#managing-code}
