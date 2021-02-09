@@ -2,9 +2,9 @@
 title: Noções básicas sobre o Ambiente Build
 description: Siga esta página para saber mais sobre ambientes
 translation-type: tm+mt
-source-git-commit: 000843f902a180181981de2b1307fd2777d32994
+source-git-commit: 60270a7adb612355ff6d6928adcff8e94cabe092
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,14 @@ O Cloud Manager cria e testa seu código usando um ambiente de compilação espe
 
 >[!NOTE]
 >Embora o Cloud Manager não defina uma versão específica de `jacoco-maven-plugin`, a versão usada deve ser pelo menos `0.7.5.201505241946`.
+
+
+>[!NOTE]
+>Consulte os seguintes recursos adicionais para saber como usar as APIs do Cloud Manager:
+> * [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+>* [Criação de uma integração de API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/create-api-integration.md)
+>* [Permissões da API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md)
+
 
 ## Uso do Java 11 {#using-java-11}
 
@@ -97,7 +105,7 @@ Para suportar isso, o Cloud Manager adiciona essas variáveis de ambiente padrã
 
 Em alguns casos, o processo de compilação de um cliente pode depender de variáveis de configuração específicas que não seriam adequadas para serem colocadas no repositório Git ou que precisariam variar entre execuções de pipeline usando a mesma ramificação.
 
-O Cloud Manager permite que essas variáveis sejam configuradas por meio da API do Cloud Manager ou da CLI do Cloud Manager por pipeline. As variáveis podem ser armazenadas como texto sem formatação ou como criptografadas em repouso. Em ambos os casos, as variáveis são disponibilizadas no ambiente build como uma variável de ambiente que pode ser referenciada no arquivo `pom.xml` ou em outros scripts build.
+O Cloud Manager permite que essas variáveis sejam configuradas por meio da API do Cloud Manager ou da CLI do Cloud Manager por pipeline. As variáveis podem ser armazenadas como texto sem formatação ou como criptografadas em repouso. Em ambos os casos, as variáveis são disponibilizadas no ambiente de compilação como uma variável de ambiente que pode ser referenciada no arquivo `pom.xml` ou em outros scripts de compilação.
 
 Para definir uma variável usando a CLI, execute um comando como:
 
@@ -107,9 +115,9 @@ As variáveis atuais podem ser listadas:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
-Os nomes de variáveis podem conter somente caracteres alfanuméricos e sublinhado (_). Por convenção, os nomes devem ser todos maiúsculos. Há um limite de 200 variáveis por pipeline, cada nome deve ter menos de 100 caracteres e cada valor deve ter menos de 2048 caracteres no caso de variáveis de tipo de string e 500 caracteres no caso de variáveis de tipo secretString.
+Os nomes de variáveis só podem conter caracteres alfanuméricos e sublinhados (_). Por convenção, os nomes devem ser todos maiúsculos. Há um limite de 200 variáveis por pipeline, cada nome deve ter menos de 100 caracteres e cada valor deve ter menos de 2048 caracteres no caso de variáveis de tipo de sequência de caracteres e 500 caracteres no caso de variáveis de tipo de sequência de caracteres secreta.
 
-Quando usado dentro de um arquivo `Maven pom.xml`, é útil mapear essas variáveis para as propriedades Maven usando uma sintaxe semelhante a esta:
+Quando usado dentro de um arquivo `Maven pom.xml`, geralmente é útil mapear essas variáveis para propriedades Maven usando uma sintaxe semelhante a esta:
 
 ```xml
         <profile>
@@ -125,9 +133,10 @@ Quando usado dentro de um arquivo `Maven pom.xml`, é útil mapear essas variáv
         </profile>
 ```
 
-## Instalação de pacotes adicionais do sistema {#installing-additional-system-packages}
 
-Algumas compilações exigem a instalação de pacotes adicionais do sistema para funcionar totalmente. Por exemplo, uma compilação pode chamar um script Python ou ruby e, como resultado, precisa ter um interpretador de idioma apropriado instalado. Isso pode ser feito chamando [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) para chamar a APT. Essa execução geralmente deve estar envolvida em um perfil Maven específico do Cloud Manager. Por exemplo, para instalar o python:
+## Instalação de pacotes de sistema adicionais {#installing-additional-system-packages}
+
+Algumas compilações exigem a instalação de pacotes de sistema adicionais para funcionar totalmente. Por exemplo, uma compilação pode chamar um script Python ou ruby e, como resultado, precisa ter um intérprete de linguagem apropriado instalado. Isso pode ser feito chamando o [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) para chamar a APT. Essa execução geralmente deve ser envolvida em um perfil Maven específico do Cloud Manager. Por exemplo, para instalar o python:
 
 ```xml
         <profile>
@@ -183,4 +192,4 @@ Algumas compilações exigem a instalação de pacotes adicionais do sistema par
 Essa mesma técnica pode ser usada para instalar pacotes específicos de idioma, ou seja, usar `gem` para RubyGems ou `pip` para pacotes Python.
 
 >[!NOTE]
->Instalar um pacote do sistema desta maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote do sistema instalado no ambiente AEM, entre em contato com o representante do Adobe.
+>Instalar um pacote de sistema desta maneira **não** o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote de sistema instalado no ambiente AEM, entre em contato com o representante do Adobe.
