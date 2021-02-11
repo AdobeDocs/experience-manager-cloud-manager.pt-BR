@@ -4,14 +4,14 @@ seo-title: Notas de versão do AEM Cloud Manager para 2021.2.0
 description: Siga esta página para obter informações sobre a versão 2021.2.0 do Cloud Manager
 seo-description: Siga esta página para obter informações sobre a versão 2021.2.0 do AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
+source-git-commit: 67cdd39cb511763a42391c7896924a1433e4e58f
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '231'
 ht-degree: 5%
 
 ---
 
-# Notas da versão 2020.12.0 {#release-notes-for}
+# Notas da versão 2021.2.0 {#release-notes-for}
 
 A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2021.2.0.
 
@@ -27,9 +27,9 @@ A data de lançamento da versão 2021.2.0 [!UICONTROL Cloud Manager] é 11 de fe
 
 * As implantações de produção agora implantam nas instâncias de publicação e despachante emparelhadas em paralelo.
 
-* O perfil SonarQube para o Gerenciador de nuvem foi atualizado para remover o Lula de regra Sonar:S2142. Isso não entrará em conflito com as verificações de interrupção de thread
+* O perfil SonarQube para o Cloud Manager foi atualizado para remover a regra Sonar `squid:S2142`. Isso não entrará em conflito com as verificações de interrupção de thread.
 
-* As propriedades definidas nos arquivos pom.xml do cliente com o prefixo sonar e agora serão removidas dinamicamente para evitar falhas de compilação e verificação de qualidade.
+* As propriedades definidas nos arquivos `pom.xml` do cliente prefixados com o Sonar serão removidas dinamicamente para evitar falhas na compilação e na verificação de qualidade.
 
 ## Correções de erros {#bug-fixes}
 
