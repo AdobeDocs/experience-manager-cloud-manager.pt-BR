@@ -1,17 +1,17 @@
 ---
 title: Implantar o código
 seo-title: Implantar o código
-description: 'null'
-seo-description: Depois de configurar seu pipeline (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código. Siga esta página para saber mais.
+description: Fornece uma visão geral sobre o processo de implantação no Cloud Manager
+seo-description: Saiba como implantar seu código depois de configurar seu pipeline (repositório, ambiente e ambiente de teste)
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '957'
 ht-degree: 1%
 
 ---
@@ -142,10 +142,10 @@ As implantações de produção geralmente seguem as mesmas etapas acima, mas de
 
 1. Implante AEM pacotes para o autor.
 1. Desconecte o dispatcher1 do balanceador de carga.
-1. Implante AEM pacotes para publicar1 e o pacote do dispatcher para o dispatcher1, liberar o cache do dispatcher.
+1. Implante AEM pacotes para publicar1 e o pacote do dispatcher para o dispatcher1 em cache do dispatcher paralelo e nivelado.
 1. Recoloque o dispatcher1 no balanceador de carga.
 1. Quando o dispatcher1 voltar a funcionar, desconecte o dispatcher2 do balanceador de carga.
-1. Implante AEM pacotes para publicar2 e o pacote do dispatcher para o dispatcher2, liberar o cache do dispatcher.
+1. Implante AEM pacotes para publicar2 e o pacote do dispatcher para o dispatcher2 em cache do dispatcher de liberação paralela.
 1. Recoloque o dispatcher2 no balanceador de carga.
 Esse processo continua até que a implantação tenha atingido todos os editores e despachantes na topologia.
 
