@@ -1,7 +1,7 @@
 ---
 title: Entender os resultados de teste
 seo-title: Entender os resultados de teste
-description: 'null'
+description: Saiba mais sobre os portões de três camadas ao executar um pipeline no Gerenciador de nuvem
 seo-description: Siga esta página para saber mais sobre portas de três níveis ao executar um pipeline, verificação de código, desempenho e testes de segurança que validam seu programa no Cloud Manager.
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1556'
 ht-degree: 7%
 
 ---
@@ -50,7 +50,7 @@ Esta etapa avalia a qualidade do código do aplicativo. É o objetivo principal 
 Em Teste de qualidade de código, o código fonte é verificado para garantir que ele atenda a determinados critérios de qualidade. Atualmente, esta ação é implementada através de uma combinação de SonarQube e exame de nível de pacote de conteúdo utilizando OakPAL. Há mais de 100 regras que combinam regras genéricas do Java e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas AEM engenharia e são chamadas de [Regras de qualidade de código personalizadas](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->Você pode baixar a lista completa das regras [aqui](/help/using/assets/CodeQuality-rules-latest.xlsx).
+>Você pode baixar a lista completa das regras [aqui](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx).
 
 Os resultados desta etapa são fornecidos como *Classificação*. A tabela abaixo resume as classificações de vários critérios de teste:
 
