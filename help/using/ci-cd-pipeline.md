@@ -1,15 +1,15 @@
 ---
 title: Pipeline de CI/CD
 seo-title: Pipeline de CI/CD
-description: 'null'
-seo-description: Siga esta seção para saber mais sobre o pipeline de CI/CD, que lida com implantações para o palco e produção no Cloud Manager.
+description: Visão geral do CI/CD Pipeline, que lida com as implantações no palco e na produção no Cloud Manager
+seo-description: Siga esta seção para saber mais sobre o pipeline de CI/CD, que lida com as implantações no palco e produção no Cloud Manager
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
-source-git-commit: 8580cec50ac5dafb4e2525371a39d58c82f1cbc9
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '546'
 ht-degree: 1%
 
 ---
