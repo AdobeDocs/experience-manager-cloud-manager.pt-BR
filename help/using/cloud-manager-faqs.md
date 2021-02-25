@@ -4,9 +4,9 @@ seo-title: Perguntas frequentes sobre o Cloud Manager
 description: Consulte Perguntas frequentes do Cloud Manager para obter algumas dicas de solução de problemas
 seo-description: Siga esta página para obter respostas sobre as perguntas frequentes do Cloud Manager
 translation-type: tm+mt
-source-git-commit: d901fd27626640e71d367d3f138d7ba2e907fa9a
+source-git-commit: 31627bf11a46b2e6f1d0aa196bc4a9cf9648e775
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Perguntas frequentes do Cloud Manager {#cloud-manager-faqs}
 
-A seção a seguir fornece respostas para algumas perguntas frequentes mais frequentes relacionadas ao Cloud Manager.
+A seção a seguir fornece respostas para perguntas frequentes relacionadas ao Cloud Manager.
 
 ## É possível usar o Java 11 com compilações do Cloud Manager? {#java-11-cloud-manager}
 
@@ -22,7 +22,7 @@ A compilação do AEM Cloud Manager falha ao tentar alternar a compilação do J
 
 * Adicione o maven-toolchain-plugin com as configurações corretas para Java 11, conforme documentado [here](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started).  Por exemplo, consulte [código de exemplo de projeto wknd](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
-* Se você encontrar o erro abaixo, será necessário remover o uso do plug-in maven-scr e converter todas as anotações OSGi em anotações OSGi R6. Para obter instruções, consulte [here](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+* Se você encontrar o erro abaixo, será necessário remover o uso de `maven-scr-plugin` e converter todas as anotações OSGi em anotações OSGi R6. Para obter instruções, consulte [here](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
    `[main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]`
 
@@ -47,11 +47,11 @@ Algumas observações sobre a etapa do Teste de desempenho:
 
 ## Podemos usar o SNAPSHOT na versão do projeto Maven? Como o controle de versão dos pacotes e arquivos jar de pacote funciona para implantações de estágio e produção? {#snapshot-version}
 
-1. Para implantações dev, os arquivos Git branch `pom.xml` devem conter -SNAPSHOT no final do valor `<version>`. Isso permite a implantação subsequente em que a versão não é alterada para ainda ser instalada. Em implantações dev, nenhuma versão automática é adicionada ou gerada para a compilação Mven.
+1. Para implantações dev, os arquivos Git branch `pom.xml` devem conter `-SNAPSHOT` no final do valor `<version>`. Isso permite a implantação subsequente em que a versão não é alterada para ainda ser instalada. Em implantações dev, nenhuma versão automática é adicionada ou gerada para a compilação maven.
 
 1. Na implantação de estágio e produção, uma versão automática é gerada como documentada [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
 
-1. Para o controle de versão personalizado em implantações de estágio e produção, defina uma versão Maven correta de 3 partes, como `1.0.0`. Aumente a versão sempre que precisar fazer outra implantação na produção.
+1. Para o controle de versão personalizado em implantações de estágio e produção, defina uma versão maven correta de 3 partes, como `1.0.0`. Aumente a versão sempre que precisar fazer outra implantação na produção.
 
 1. O Cloud Manager adiciona automaticamente sua versão aos builds Stage e Production e até cria uma ramificação Git. Nenhuma configuração especial é necessária. Se a etapa 3 acima for ignorada, a implantação ainda funcionará normalmente e uma versão será definida automaticamente.
 
