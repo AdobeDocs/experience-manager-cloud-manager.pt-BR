@@ -4,9 +4,9 @@ seo-title: Perguntas frequentes sobre o Cloud Manager
 description: Consulte Perguntas frequentes do Cloud Manager para obter algumas dicas de solução de problemas
 seo-description: Siga esta página para obter respostas sobre as perguntas frequentes do Cloud Manager
 translation-type: tm+mt
-source-git-commit: cb63a8bbe30b28668313dc851f17aa34fc166474
+source-git-commit: 1d4f07ba0aa4630585ccbb35f2d48f0c7e1f3df2
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Perguntas frequentes do Cloud Manager {#cloud-manager-faqs}
 
-A seção a seguir fornece respostas para algumas das perguntas frequentes mais frequentes relacionadas ao Cloud Manager.
+A seção a seguir fornece respostas para algumas perguntas frequentes mais frequentes relacionadas ao Cloud Manager.
 
 ## 1. É possível usar o Java 11 com compilações do Cloud Manager? {#java-11-cloud-manager}
 
-A compilação do AEM Cloud Manager falha ao tentar alternar a compilação do Java 8 para o Java 11. O problema pode ter muitas causas e as mais comuns estão documentadas abaixo:
+A compilação do AEM Cloud Manager falha ao tentar alternar a compilação do Java 8 para o 11. O problema pode ter muitas causas e as mais comuns estão documentadas abaixo:
 
 * Adicione o maven-toolchain-plugin com as configurações corretas para Java 11, conforme documentado [here](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started).  Por exemplo, consulte [código de exemplo de projeto wknd](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
@@ -43,7 +43,7 @@ Algumas observações sobre a etapa do teste de desempenho:
 * A *Etapa de desempenho* é uma etapa de desempenho da Web - o que significa que é o momento de carregar a página usando um navegador da Web.
 * Os URLs listados no arquivo CSV de resultado são carregados em um navegador Chrome na infraestrutura do Cloud Manager durante o teste.
 * Uma métrica comum que falha é a *taxa de erro*. Para que um URL seja aprovado, o URL principal deve ser carregado com o status 200 e em menos de 20 segundos. As cargas de página que excedem 20 segundos são marcadas como erros 504.
-* Se o site exigir autenticação do usuário, consulte esta documentação para configurar o teste para autenticação no site.
+* Se o site exigir a autenticação do usuário, consulte [Teste de desempenho autenticado](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) para configurar o teste para autenticação no site.
 
 ## 4. Podemos usar o SNAPSHOT na versão do projeto maven? Como o controle de versão dos pacotes e arquivos jar de pacote funciona para implantações de estágio e produção? {#snapshot-version}
 
@@ -75,7 +75,7 @@ Consulte [Git Resource](https://github.com/cqsupport/cloud-manager/blob/main/cm-
 
 ## 6. Não é possível definir uma variável por meio de variáveis de pipeline definidas pelo gerenciador de nuvem do rádio. Como depurar esses problemas? {#set-variable}
 
-Se você estiver recebendo um erro 403 ao tentar lista ou definir variáveis de pipeline por comandos semelhantes aos abaixo, então será necessário adicionar uma função de produto *Gerenciador de implantação* do Gerenciador de nuvem no console de administração.\
+Se você estiver recebendo um erro 403 ao tentar lista ou definir variáveis de pipeline por comandos semelhantes aos abaixo, então será necessário adicionar uma função de produto *Gerenciador de implantação* do Gerenciador de nuvem no Admin Console.\
 Consulte [Permissões de API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md) para obter mais detalhes.
 
 Comandos e erros relacionados:
