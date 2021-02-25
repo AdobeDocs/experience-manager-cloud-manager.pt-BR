@@ -4,9 +4,9 @@ seo-title: Perguntas frequentes sobre o Cloud Manager
 description: Consulte Perguntas frequentes do Cloud Manager para obter algumas dicas de solução de problemas
 seo-description: Siga esta página para obter respostas sobre as perguntas frequentes do Cloud Manager
 translation-type: tm+mt
-source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
+source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,9 @@ Algumas observações sobre a etapa do Teste de desempenho:
 
 1. O Cloud Manager adiciona automaticamente sua versão aos builds Stage e Production e até cria uma ramificação Git. Nenhuma configuração especial é necessária. Se a etapa 3 acima for ignorada, a implantação ainda funcionará normalmente e uma versão será definida automaticamente.
 
-1. Se você deixar a versão com `-SNAPSHOT` para compilações ou implantações de estágio e produção, tudo bem. O Cloud Manager define automaticamente um número de versão adequado e cria uma tag para você no Git. Essa tag pode ser consultada posteriormente, se necessário.
+1. Não há problemas, se você deixar a versão com `-SNAPSHOT` para o Stage e o Production builds ou implantações. O Cloud Manager define automaticamente um número de versão adequado e cria uma tag para você no Git. Essa tag pode ser consultada posteriormente, se necessário.
 
-1. Se quiser testar algum código experimental no ambiente de desenvolvimento, você pode criar um novo ramo Git e definir o pipeline para usar esse ramo diferente. Isso é útil quando o start de implantações falha e você gostaria de testar com versões mais antigas do código para ver quando ele quebrou.
+1. Se quiser experimentar algum código experimental no Development ambiente, você pode criar um novo ramo do Git e definir o pipeline para usar esse ramo diferente. Isso é útil quando o start de implantações falha e você gostaria de testar com versões mais antigas do código para ver quando ele quebrou.
 
    O comando Git abaixo cria uma ramificação remota chamada *testbranch1* contra uma confirmação preexistente específica `485548e4fbafbc83b11c3cb12b035c9d26b6532b`.  Essa ramificação especial pode ser usada no Gerenciador de nuvem sem afetar outras ramificações:
 
