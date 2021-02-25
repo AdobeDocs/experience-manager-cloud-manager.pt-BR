@@ -6,10 +6,10 @@ user-guide-title: Guia do Experience Manager Cloud Manager
 breadcrumb-title: Guia do Cloud Manager
 user-guide-description: Saiba como usar os Adobe Managed Services para gerenciar o Experience Manager na nuvem por conta própria.
 translation-type: tm+mt
-source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
+source-git-commit: 12898b57c3e7039da271481a6619d4ad0a0a90d1
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 85%
+source-wordcount: '258'
+ht-degree: 84%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 85%
    + [Pipeline de CI/CD](ci-cd-pipeline.md)
    + [Segurança e privacidade](security-and-privacy.md)
    + [Recursos de ajuda](help-resources.md)
+   + [Perguntas frequentes sobre o Cloud Manager](cloud-manager-faqs.md)
 + O que é obrigatório {#requirements}
    + [Direitos de acesso concedidos](access-rights-granted.md)
    + [Repositório de código-fonte](source-code-repository.md)
