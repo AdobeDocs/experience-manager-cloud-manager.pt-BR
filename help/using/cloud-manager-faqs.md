@@ -4,7 +4,7 @@ seo-title: Perguntas frequentes sobre o Cloud Manager
 description: Consulte Perguntas frequentes do Cloud Manager para obter algumas dicas de solução de problemas
 seo-description: Siga esta página para obter respostas sobre as perguntas frequentes do Cloud Manager
 translation-type: tm+mt
-source-git-commit: fbf91ad0d200a9f1cbde4e87cf6b78a8479d0614
+source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 0%
@@ -47,11 +47,11 @@ Algumas observações sobre a etapa do Teste de desempenho:
 
 ## Podemos usar o SNAPSHOT na versão do projeto Maven? Como o controle de versão dos pacotes e arquivos jar de pacote funciona para implantações de estágio e produção? {#snapshot-version}
 
-1. Para implantações dev, os arquivos Git branch `pom.xml` devem conter `-SNAPSHOT` no final do valor `<version>`. Isso permite a implantação subsequente em que a versão não é alterada para ainda ser instalada. Em implantações dev, nenhuma versão automática é adicionada ou gerada para a compilação maven.
+1. Para implantações de desenvolvedores, os arquivos Git branch `pom.xml` devem conter `-SNAPSHOT` no final do valor `<version>`. Isso permite a implantação subsequente em que a versão não é alterada para ainda ser instalada. Em implantações de desenvolvedor, nenhuma versão automática é adicionada ou gerada para a compilação maven.
 
-1. Na implantação de estágio e produção, uma versão automática é gerada como documentada [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
+1. Na implantação de Estágio e Produção, uma versão automática é gerada como documentada [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
 
-1. Para o controle de versão personalizado em implantações de estágio e produção, defina uma versão maven correta de 3 partes, como `1.0.0`. Aumente a versão sempre que precisar fazer outra implantação na produção.
+1. Para o controle de versão personalizado em implantações de Palco e Produção, defina uma versão maven correta de 3 partes, como `1.0.0`. Aumente a versão sempre que precisar fazer outra implantação na produção.
 
 1. O Cloud Manager adiciona automaticamente sua versão aos builds Stage e Production e até cria uma ramificação Git. Nenhuma configuração especial é necessária. Se a etapa 3 acima for ignorada, a implantação ainda funcionará normalmente e uma versão será definida automaticamente.
 
@@ -82,8 +82,8 @@ Comandos e erros relacionados:
 
 `$ aio cloudmanager:list-pipeline-variables 222`
 
-Erro: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Erro*:  `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
 
 `$ aio cloudmanager:set-pipeline-variables 222 --variable TEST 1`
 
-Erro: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Erro*:  `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
