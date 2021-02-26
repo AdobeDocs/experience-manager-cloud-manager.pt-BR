@@ -4,9 +4,9 @@ seo-title: Perguntas frequentes sobre o Cloud Manager
 description: Consulte Perguntas frequentes do Cloud Manager para obter algumas dicas de solução de problemas
 seo-description: Siga esta página para obter respostas sobre as perguntas frequentes do Cloud Manager
 translation-type: tm+mt
-source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
+source-git-commit: cf5c02c8c594015b6baa00e1a8aaa2d898aa60a9
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,9 @@ Algumas observações sobre a etapa do Teste de desempenho:
 * Uma métrica comum que falha é a *taxa de erro*. Para que um URL seja aprovado, o URL principal deve ser carregado com o status `200` e em menos de `20` segundos. As cargas de página que excedem `20` segundos são marcadas como erros `504`.
 * Se o site exigir a autenticação do usuário, consulte [Teste de desempenho autenticado](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) para configurar o teste para autenticação no site.
 
-## Podemos usar o SNAPSHOT na versão do projeto Maven? Como o controle de versão dos pacotes e arquivos jar de pacote funciona para implantações de estágio e produção? {#snapshot-version}
+## Podemos usar o SNAPSHOT na versão do projeto Maven? Como o controle de versão dos pacotes e arquivos jar de pacotes funciona para implantações de Stage e Production? {#snapshot-version}
+
+Consulte os seguintes cenários para saber mais sobre o controle de versão de pacotes e arquivos jar de pacotes para implantações de Stage e Production:
 
 1. Para implantações de desenvolvedores, os arquivos Git branch `pom.xml` devem conter `-SNAPSHOT` no final do valor `<version>`. Isso permite a implantação subsequente em que a versão não é alterada para ainda ser instalada. Em implantações de desenvolvedor, nenhuma versão automática é adicionada ou gerada para a compilação maven.
 
