@@ -1,44 +1,40 @@
 ---
-title: Notas da versão 2021.2.0
-seo-title: Notas de versão do AEM Cloud Manager para 2021.2.0
-description: Siga esta página para obter informações sobre a versão 2021.2.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2021.2.0 do AEM Cloud Manager
+title: Notas da versão 2021.3.0
+seo-title: Notas de versão do AEM Cloud Manager para 2021.3.0
+description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.3.0
+seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2021.3.0
 translation-type: tm+mt
-source-git-commit: d956c7a2d3833e357920a9602e4f5a5b37f2c98a
+source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 4%
+source-wordcount: '221'
+ht-degree: 5%
 
 ---
 
-# Notas da versão 2021.2.0 {#release-notes-for}
+# Notas da versão 2021.3.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2021.2.0.
+A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2021.3.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2021.2.0 [!UICONTROL Cloud Manager] é 11 de fevereiro de 2021.
+A Data de lançamento da versão 2021.3.0 é 11 de março de 2021.[!UICONTROL Cloud Manager]
 
 ## Novidades {#whats-new}
 
-* O AEM Project Archetype usado em Projeto e criação de caixa de proteção foi atualizado para a versão 25.
+* Uma nova ferramenta de qualidade de código foi introduzida para validar a configuração do dispatcher do cliente (Ferramenta de Otimização do Dispatcher).
 
-* A lista de APIs obsoletas identificadas durante a digitalização de código foi refinada para incluir classes e métodos adicionais obsoletos nas versões mais recentes do Cloud Service SDK.
+* Os usuários agora podem ver suas funções do Cloud Manager selecionando a opção **Exibir função(ões) do Cloud Manager** após navegar até o ícone Perfil do usuário (canto superior direito) do Unified Shell.
 
-* As implantações de produção agora implantam nas instâncias de publicação e despachante emparelhadas em paralelo.
+* O rótulo **Application for Approval** foi renomeado para **Production Approval** para maior clareza.
 
-* O perfil SonarQube para o Cloud Manager foi atualizado para remover a regra Sonar `squid:S2142`. Isso não entrará em conflito com as verificações de interrupção de thread.
+* O rótulo **Version** foi renomeado para **Git Tag** na tela de execução do pipeline de Produção.
 
-* As propriedades definidas nos arquivos `pom.xml` do cliente prefixados com o sonar agora serão removidas dinamicamente para evitar falhas de compilação e verificação de qualidade.
+* Os rótulos que definem o comportamento quando métricas importantes não alcançam o limite definido foram renomeados para refletir seu comportamento verdadeiro - Cancelar imediatamente e Aprovar imediatamente.
 
-* Regras adicionais de qualidade de código foram adicionadas para cobrir problemas de compatibilidade de Cloud Service.
+* As listas de desaprovação de classe e método foram atualizadas com base na versão `2021.3.4997.20210303T022849Z-210225` do SDK do Cloud Service AEM.
 
 ## Correções de erros {#bug-fixes}
 
-* Ocasionalmente, o pipeline CI/CD (implantação) falhou durante uma etapa de teste de desempenho devido a um container que executava o teste de carga que encontrou um erro.
+* Alguns problemas de qualidade não foram detectados corretamente quando os pacotes eram incorporados em outros pacotes.
 
-* Ocasionalmente, o container de teste de carga pode relatar a execução como com falha mesmo se apenas uma exceção ocorrer. A falha será relatada somente se o processo de teste não puder ser restaurado.
-
-* Alguns erros de correspondência entre a forma como os nomes dos ambientes são armazenados resultariam em falhas no teste de desempenho.
-
-* Algumas falhas de pipeline foram relatadas incorretamente como erros de pipeline.
+* Ocasionalmente, se o usuário sair da página de execução do pipeline imediatamente após iniciar um pipeline, uma mensagem de erro será exibida informando que a ação falhou, embora a execução realmente comece.
