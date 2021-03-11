@@ -6,10 +6,10 @@ user-guide-title: Guia do Experience Manager Cloud Manager
 breadcrumb-title: Guia do Cloud Manager
 user-guide-description: Saiba como usar os Adobe Managed Services para gerenciar o Experience Manager na nuvem por conta própria.
 translation-type: tm+mt
-source-git-commit: 12898b57c3e7039da271481a6619d4ad0a0a90d1
+source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 84%
+source-wordcount: '261'
+ht-degree: 85%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 84%
    + [Pipeline de CI/CD](ci-cd-pipeline.md)
    + [Segurança e privacidade](security-and-privacy.md)
    + [Recursos de ajuda](help-resources.md)
-   + [Perguntas frequentes sobre o Cloud Manager](cloud-manager-faqs.md)
+   + [Perguntas frequentes do Cloud Manager](cloud-manager-faqs.md)
 + O que é obrigatório {#requirements}
    + [Direitos de acesso concedidos](access-rights-granted.md)
    + [Repositório de código-fonte](source-code-repository.md)
@@ -34,9 +34,9 @@ ht-degree: 84%
    + [Primeiro logon](first-time-login.md)
    + [Configurar o programa](setting-up-program.md)
    + Criar um projeto de aplicativo AEM {#create-application-project}
-      + [Uso do Assistente](using-the-wizard.md)
-      + [Configuração do projeto](setting-up-project.md)
-      + [Noções básicas sobre o Ambiente Build](build-environment-details.md)
+      + [Usar o Assistente](using-the-wizard.md)
+      + [Configurar o projeto](setting-up-project.md)
+      + [Compreensão do ambiente de criação](build-environment-details.md)
    + [Configurar as ramificações de liberação](configure-your-release-branches.md)
    + [Gerenciar as configurações do Dispatcher](dispatcher-configurations.md)
 + Como usar {#how-to-use}
@@ -49,16 +49,17 @@ ht-degree: 84%
    + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Notificações](notifications.md)
    + [Regras de qualidade do código personalizado](custom-code-quality-rules.md)
-+ Gerenciar seu código {#managing-code}
++ Gerenciar o código {#managing-code}
    + [Manuseio da versão do projeto Maven](activating-maven-project.md)
    + [Acesso ao Git](accessing-git.md)
-   + [Integração com o Git](setup-cloud-manager-git-integration.md)
+   + [Integração com Git](setup-cloud-manager-git-integration.md)
    + [Trabalhando com vários repositórios Git de origem](/help/using/working-with-multiple-source-git-repos.md)
 + Assistente de atualização do produto {#product-update-wizard}
    + [Visão geral](overview-productupdate-wizard.md)
    + [Avaliação](evaluation.md)
 + Notas de versão {#release-notes}
-   + [Notas de versão atuais (2021.2.0)](release-notes-current.md)
+   + [Notas de versão atuais (2021.3.0)](release-notes-current.md)
+   + [Notas da versão 2021.2.0](release-notes-2021-2-0.md)
    + [Notas da versão 2020.12.0](release-notes-2020-12-0.md)
    + [Notas da versão 2020.11.0](release-notes-2020-11-0.md)
    + [Notas da versão 2020.10.0](release-notes-2020-10-0.md)
