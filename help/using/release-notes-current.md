@@ -4,10 +4,10 @@ seo-title: Notas de versão do AEM Cloud Manager para 2021.3.0
 description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.3.0
 seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2021.3.0
 translation-type: tm+mt
-source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
+source-git-commit: 090505e737b8cb224d87f117a9b5e786a4f99851
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 4%
+source-wordcount: '311'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +35,7 @@ A Data de lançamento da versão 2021.3.0 é 11 de março de 2021.[!UICONTROL Cl
 
 * O rótulo **Version** foi renomeado para **Git Tag** na tela de execução do pipeline de Produção.
 
-* Os rótulos que definem o comportamento quando métricas importantes não atingem o limite definido foram renomeados para refletir seu comportamento verdadeiro - **Cancelar imediatamente** e **Aprovar imediatamente**.
+* Os rótulos que definem o comportamento quando métricas importantes não atingem o limite definido foram renomeados para refletir seu comportamento verdadeiro - **Cancelar imediatamente** e **Aprovar imediatamente**. Consulte [Configurar as configurações de pipeline no Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) para obter mais detalhes.
 
 * As listas de desaprovação de classe e método foram atualizadas com base na versão `2021.3.4997.20210303T022849Z-210225` do SDK do Cloud Service AEM.
 
