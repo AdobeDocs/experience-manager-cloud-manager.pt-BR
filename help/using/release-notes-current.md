@@ -4,10 +4,10 @@ seo-title: Notas de versão do AEM Cloud Manager para 2021.3.0
 description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.3.0
 seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2021.3.0
 translation-type: tm+mt
-source-git-commit: fde8cbd22ff36e0d30409f68e8a0523c814ccf90
+source-git-commit: 8c057ca2d3dfe8c8575300084b7bc83c95556d67
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 3%
+source-wordcount: '257'
+ht-degree: 4%
 
 ---
 
@@ -22,12 +22,6 @@ A Data de lançamento da versão 2021.3.0 é 11 de março de 2021.
 A próxima versão está planejada para 8 de abril de 2021.
 
 ## Novidades {#whats-new}
-
-* Os usuários com as permissões necessárias agora podem editar o programa, permitindo que façam o seguinte de maneira automatizada:
-
-   * Adicionar a solução Sites a um programa existente com Ativos (ou vice-versa).
-   * Remova Sites (ou Ativos) de um programa existente com Sites e Ativos.
-   * Adicionar (voltar) uma solução pode ser feita ao programa existente ou como um novo Programa.
 
 * Uma nova ferramenta de qualidade de código [Ferramenta de Otimização do Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) foi introduzida para validar a configuração do dispatcher do cliente.
 
