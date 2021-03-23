@@ -1,23 +1,24 @@
 ---
 title: Notas da versão 2020.6.0
 seo-title: Notas de versão do AEM Cloud Manager para 2020.6.0
-description: Siga esta página para obter informações sobre a versão 2020.6.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.6.0 do AEM Cloud Manager
+description: Siga esta página para obter informações sobre o Cloud Manager Versão 2020.6.0
+seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2020.6.0
+feature: Informações da versão
 translation-type: tm+mt
-source-git-commit: f673a7c6e0d8e0814101beab1ad529ea69350a2a
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 63%
+source-wordcount: '179'
+ht-degree: 64%
 
 ---
 
 # Notas da versão 2020.6.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.6.0.
+A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2020.6.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2020.6.0 [!UICONTROL Cloud Manager] é 4 de junho de 2020.
+A Data de lançamento da versão 2020.6.0 é 4 de junho de 2020.[!UICONTROL Cloud Manager]
 
 ## Novidades {#whats-new}
 
@@ -25,7 +26,7 @@ A data de lançamento da versão 2020.6.0 [!UICONTROL Cloud Manager] é 4 de jun
 
 * Agora há uma página **Saiba mais** na área de navegação superior do Cloud Manager. Essa página inclui recursos para ajudar os usuários a saber mais sobre os fluxos de trabalho usados com mais frequência, conforme a relevância para as suas funções atribuídas no Cloud Manager.
 
-* O valor máximo para o 95º Percentil de Tempo de Processamento do Assets foi aumentado para 500 segundos.
+* O valor máximo do 95º percentual de tempo de processamento do Assets foi aumentado para 500 segundos.
 
 * O log da etapa Criar agora inclui a lista de artefatos descobertos, incluindo pacotes de conteúdo ignorados.
 
@@ -35,4 +36,4 @@ A data de lançamento da versão 2020.6.0 [!UICONTROL Cloud Manager] é 4 de jun
 
 * Ao configurar o pipeline de produção, a opção Implantação agendada não estava visível para alguns clientes.
 
-* Algumas mensagens de implantação foram truncadas.
+* Certas mensagens de implantação foram truncadas.
