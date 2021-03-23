@@ -1,23 +1,24 @@
 ---
 title: Notas da versão 2020.3.0
 seo-title: Notas de versão do AEM Cloud Manager para 2020.3.0
-description: Siga esta página para obter informações sobre a versão 2020.3.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.3.0 do AEM Cloud Manager
+description: Siga esta página para obter informações sobre o Cloud Manager Versão 2020.3.0
+seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2020.3.0
+feature: Informações da versão
 translation-type: tm+mt
-source-git-commit: e7da473a22bec1d3d9b3d39bf654af0c596fe86d
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '164'
 ht-degree: 51%
 
 ---
 
 # Notas da versão 2020.3.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.3.0.
+A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2020.3.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2020.3.0 [!UICONTROL Cloud Manager] é 5 de março de 2020.
+A Data de lançamento da versão 2020.3.0 é 5 de março de 2020.[!UICONTROL Cloud Manager]
 
 ## Novidades {#whats-new}
 
@@ -26,7 +27,7 @@ A data de lançamento da versão 2020.3.0 [!UICONTROL Cloud Manager] é 5 de mar
 
 ## Correções de erros {#bug-fixes}
 
-* Determinadas configurações de implantação podem fazer com que os registros das etapas de implantação fiquem indisponíveis se a implantação falhar.
-* Falhas específicas nas etapas de implantação para programas Managed Services podem causar falha no start das execuções subsequentes.
+* Certas configurações de implantação podem fazer com que os logs das etapas de implantação fiquem indisponíveis se a implantação falhar.
+* Falhas específicas nas etapas de implantação para programas Managed Services podem causar falha no início das execuções subsequentes.
 * Ocasionalmente, ocorria uma falha na instância efêmera SonarQube usada na etapa de build, ao iniciar dentro do tempo limite configurado.
 * Em projetos específicos, os objetos *ResourceResolver devem ser sempre fechados*, gerando uma Exceção de Null Pointer. No entanto, isso não teve impacto na execução do pipeline.
