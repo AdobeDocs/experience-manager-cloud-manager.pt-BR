@@ -8,33 +8,34 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
+feature: Introdução
 translation-type: tm+mt
-source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 8%
+source-wordcount: '249'
+ht-degree: 9%
 
 ---
 
 
 # Primeiro logon {#first-time-login}
 
-Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar a Interface do usuário (UI) para [!UICONTROL Cloud Manager].
+Depois de configurar as configurações gerais para [!UICONTROL Cloud Manager], você estará pronto para usar a interface do usuário para [!UICONTROL Cloud Manager].
 
 >[!NOTE]
->Dependendo das funções atribuídas em [!UICONTROL Cloud Manager] e do estado do aplicativo, você verá telas diferentes ao usar a interface do usuário [!UICONTROL Cloud Manager].
+>Dependendo das funções atribuídas em [!UICONTROL Cloud Manager] e do estado do aplicativo, você verá telas diferentes ao usar a interface [!UICONTROL Cloud Manager].
 
 ## Tutorial em vídeo {#video-tutorial-one}
 
 ### Programas do Cloud Manager {#programs-video}
 
-O vídeo a seguir fornece uma visão geral dos Programas do Gerenciador de nuvem que representam conjuntos de ambientes AEM que suportam conjuntos lógicos de iniciativas de negócios, geralmente correspondentes a um SLA (Service Level Agreement, contrato de nível de serviço) adquirido.
+O vídeo a seguir fornece uma visão geral dos Programas do Cloud Manager que representam conjuntos de ambientes de AEM compatíveis com conjuntos lógicos de iniciativas de negócios, normalmente correspondentes a um Contrato de nível de serviço (SLA) adquirido.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
-## Efetuando login pela primeira vez {#logging-in-for-the-first-time}
+## Efetuando logon pela primeira vez {#logging-in-for-the-first-time}
 
-1. Faça logon no Adobe **e você verá a lista de** Programas **.[!UICONTROL Experience Cloud]**
+1. Faça logon no **Adobe[!UICONTROL Experience Cloud]** e você verá a lista de **Programas**.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
@@ -50,12 +51,12 @@ O vídeo a seguir fornece uma visão geral dos Programas do Gerenciador de nuvem
 
    >[!NOTE]
    >
-   >Consulte [Configure seu Programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
+   >Consulte [Configurar o programa](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) para concluir as próximas etapas.
 
 ## Tutorial em vídeo {#video-tutorial-two}
 
-### Guia Atividade do Gerenciador de nuvem {#activity-video}
+### Guia Atividade do Cloud Manager {#activity-video}
 
-O Cloud Manager fornece uma visualização consolidada para uma atividade, relacionando todas as execuções do pipeline de CI/CD, tanto a produção quanto a não-produção, permitindo a visibilidade da atividade atual e passada, e qualquer Detalhes da atividade pode ser revisado.
+O Cloud Manager fornece uma visualização consolidada da atividade de um Programa, listando todas as execuções de pipeline de CI/CD, tanto a produção quanto a não produção, permitindo a visibilidade da atividade anterior e atual, e os Detalhes de qualquer atividade podem ser revisados.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/)
