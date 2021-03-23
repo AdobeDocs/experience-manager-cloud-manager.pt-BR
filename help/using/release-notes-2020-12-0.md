@@ -1,23 +1,24 @@
 ---
 title: Notas da versão 2020.12.0
 seo-title: Notas de versão do AEM Cloud Manager para 2020.12.0
-description: Siga esta página para obter informações sobre a versão 2020.12.0 do Cloud Manager
-seo-description: Siga esta página para obter informações sobre a versão 2020.12.0 do AEM Cloud Manager
+description: Siga esta página para obter informações sobre o Cloud Manager Versão 2020.12.0
+seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2020.12.0
+feature: Informações da versão
 translation-type: tm+mt
-source-git-commit: 88b17f05a577b5c46b5b352d7340228353b49a38
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 15%
+source-wordcount: '68'
+ht-degree: 17%
 
 ---
 
 # Notas da versão 2020.12.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais da [!UICONTROL Cloud Manager] Versão 2020.12.0.
+A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2020.12.0.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2020.12.0 [!UICONTROL Cloud Manager] é 10 de dezembro de 2020.
+A Data de lançamento da versão 2020.12.0 é 10 de dezembro de 2020.[!UICONTROL Cloud Manager]
 
 ## Correções de erros {#bug-fixes}
 
