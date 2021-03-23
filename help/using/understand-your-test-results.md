@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: f62c967feec3960499de93443548422167fedfa7
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 7%
+source-wordcount: '2681'
+ht-degree: 4%
 
 ---
 
@@ -112,43 +112,72 @@ Em seguida, a solução correta é remover a senha codificada.
 
 [!UICONTROL Cloud Manager] executa o estágio  ***AEM Security Heath*** Checkson existente após a implantação e relata o status pela interface do usuário. Os resultados são agregados de todas as instâncias AEM no ambiente.
 
+Essas mesmas Verificações de Integridade podem ser executadas a qualquer momento pelo Console da Web ou pelo Painel de Operações.
+
 Se qualquer um dos relatórios **Instâncias** falhar em uma determinada verificação de integridade, todo o **Ambiente** falhará nessa verificação de integridade. Como acontece com o teste de qualidade e desempenho do código, essas verificações de integridade são organizadas em categorias e relatadas por meio do sistema de marcação de três níveis. A única distinção é que não existe qualquer limiar no caso dos testes de segurança. Todos os controlos de saúde são pura e simplesmente aprovados ou reprovados.
 
 A tabela a seguir lista as verificações atuais:
 
 | **Nome** | **Implementação de verificação de integridade** | **Categoria** |
 |---|---|---|
-| A opção Anexar disponibilidade da API do firewall de desserialização está em um estado aceitável | Disponibilidade da API de anexo do firewall de desserialização | Crítico |
-| O firewall de desserialização está funcionando | Firewall de desserialização funcional | Crítico |
-| O firewall de desserialização é carregado | Firewall de desserialização carregado | Crítico |
-| A implementação AuthorizableNodeName não expõe a ID autorizável no nome/caminho do nó. | Geração do nome do nó autorizada | Crítico |
-| As senhas padrão foram alteradas | Contas padrão de logon | Crítico |
+| A opção Anexar disponibilidade da API do firewall de desserialização está em um estado aceitável | [Disponibilidade da API de anexo do firewall de desserialização](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Crítico |
+| O firewall de desserialização está funcionando | [Firewall de desserialização funcional](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Crítico |
+| O firewall de desserialização é carregado | [Firewall de desserialização carregado](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Crítico |
+| A implementação AuthorizableNodeName não expõe a ID autorizável no nome/caminho do nó. | [Geração do nome do nó autorizada](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security-checklist.html?lang=en#security) | Crítico |
+| As senhas padrão foram alteradas | [Contas padrão de logon](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#users-and-groups-in-aem) | Crítico |
 | O servlet de GET padrão Sling é protegido contra ataques de DOS. | Sling Get Servlet | Crítico |
 | O Manipulador de Sling Java Script está configurado adequadamente | Sling Java Script Handler | Crítico |
 | O Manipulador de Script JSP do Sling está configurado adequadamente | Manipulador de script JSP Sling | Crítico |
 | O SSL está configurado corretamente | Configuração do SSL | Crítico |
 | Nenhuma política de perfil de usuário obviamente insegura encontrada | Acesso padrão ao perfil de usuário | Crítico |
-| O Sling Referrer Filter é configurado para impedir ataques de CSRF | Sling Referrer Filter | Importante |
+| O Sling Referrer Filter é configurado para impedir ataques de CSRF | [Sling Referrer Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en#security) | Importante |
 | O Gerenciador de biblioteca HTML do Adobe Granite está configurado adequadamente | Configuração do gerenciador de biblioteca HTML CQ | Importante |
 | O pacote de suporte CRXDE está desativado | Suporte do CRXDE | Importante |
 | O pacote e o servlet Sling DavEx estão desativados | Verificação de integridade do DavEx | Importante |
 | O conteúdo de amostra não está instalado | Pacotes de conteúdo de exemplo | Importante |
-| O Filtro de Solicitação WCM e o Filtro de Depuração do WCM estão desativados | Configuração de filtros WCM | Importante |
+| O Filtro de Solicitação WCM e o Filtro de Depuração do WCM estão desativados | [Configuração de filtros WCM](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=en#configuring) | Importante |
 | O pacote e o servlet do Sling WebDAV estão configurados adequadamente | Verificação de integridade do WebDAV | Importante |
 | O servidor da Web está configurado para impedir o clickjacking | Configuração de servidor da Web | Importante |
 | A replicação não está usando o usuário &#39;admin&#39; | Reprodução e usuários de transporte | Informações |
 
 ## Teste de desempenho {#performance-testing}
 
-*O* teste de desempenho  [!UICONTROL Cloud Manager] é implementado com o uso de um teste de 30 minutos.
+### AEM Sites {#aem-sites}
 
-Durante a configuração do pipeline, o gerente de implantação pode decidir quanto tráfego direcionar para cada bucket.
+O Cloud Manager executa testes de desempenho para programas AEM Sites. O teste de desempenho é executado por cerca de 30 minutos, girando usuários virtuais (contêineres) que simulam usuários reais para acessar páginas no ambiente de Preparo e simular o tráfego. Essas páginas são encontradas usando um crawler.
 
-Você pode saber mais sobre controles de bucket, em [Configurar o pipeline de CI/CD](configuring-pipeline.md).
+1. **Usuários virtuais**
 
->[!NOTE]
->
->Para configurar seu programa e definir seus KPIs, consulte [Configurar seu programa](setting-up-program.md).
+   O número de usuários virtuais ou contêineres que são gerados pelo Cloud Manager é determinado pelo KPI (tempo de resposta e pageviews/min) definido pelo usuário na função Proprietário comercial enquanto [cria ou edita o programa](setting-up-program.md). Com base nos KPIs definidos, até 10 contêineres que simulam usuários reais serão gerados. As páginas selecionadas para teste são divididas e atribuídas a cada virtual.
+
+1. **Crawler**
+
+   Antes do início do período de teste de 30 minutos, o Cloud Manager rastreará o ambiente de Preparo usando um conjunto de um ou mais URLs de propagação configurados pelo engenheiro de sucesso do cliente. A partir desses URLs, o HTML de cada página é inspecionado e os links são percorridos de uma maneira ampla. Esse processo de rastreamento é limitado a no máximo 5000 páginas. As solicitações do crawler têm um tempo limite fixo de 10 segundos.
+
+1. **Conjuntos de páginas para teste**
+
+   As páginas são selecionadas por três conjuntos de páginas. O Cloud Manager usa os logs de acesso das instâncias de AEM em Produção e Estágio para determinar os três compartimentos a seguir:
+
+   * *Páginas* em tempo real populares: Essa opção é selecionada para garantir que as páginas mais populares acessadas por clientes ao vivo sejam testadas. O Cloud Manager lerá o log de acesso e determinará as 25 principais páginas mais acessadas por clientes ao vivo para gerar uma lista das principais `Popular Live Pages`. A interseção desses itens que também estão presentes no Stage é então rastreada no ambiente Stage .
+
+   * *Outras páginas* em tempo real: Essa opção é selecionada para garantir que as páginas que estão fora das 25 páginas ativas populares que podem não ser populares, mas importantes para o teste, sejam testadas. Semelhante às páginas ativas populares, elas são extraídas do log de acesso e também devem estar presentes no Palco.
+
+   * *Novas páginas*: Essa opção é selecionada para testar novas páginas que só podem ter sido implantadas no Stage e não ainda no Production, mas que devem ser testadas.
+
+      **Distribuição do tráfego em conjuntos de páginas selecionados**
+
+      Você pode escolher qualquer lugar de um para todos os três conjuntos na guia &quot;Teste&quot; da configuração do pipeline (Link Inserir). A distribuição do tráfego é baseada no número de conjuntos selecionados, ou seja, se todos os três forem selecionados, 33% do total de exibições de página serão colocadas em cada conjunto; se dois forem selecionados, 50% vão para cada conjunto; se uma for selecionada, 100% do tráfego será direcionado para esse conjunto.
+
+      Por exemplo, digamos que haja uma divisão de 50% a 50% entre as Páginas em tempo real populares e o conjunto Novas páginas (neste exemplo, Outras páginas em tempo real não é usado) e o conjunto Novas páginas contém 3000 páginas. O KPI de exibições de página por minuto é definido como 200. Durante o período de ensaio de 30 minutos:
+
+      * Cada uma das 25 páginas no conjunto de Páginas em tempo real populares será acessada 120 vezes - ((200 * 0.5) / 25) * 30 = 120
+
+      * Cada uma das 3000 páginas no conjunto Novas páginas será acessada uma vez - ((200 * 0.5) / 3000) * 30 = 1
+
+#### Testes e relatórios {#testing-reporting}
+
+O Cloud Manager executa testes de desempenho para programas do AEM Sites solicitando páginas (como um usuário não autenticado por padrão) no servidor de publicação de palco por um período de teste de 30 minutos e medindo as métricas (virtuais) geradas pelo usuário (tempo de resposta, taxa de erro, exibições por minuto, etc.) para cada página, bem como várias métricas no nível do sistema (CPU, memória, dados de rede) para todas as instâncias.\
+A tabela a seguir resume as métricas de teste de desempenho vis-à-vis usando o sistema de marcação de três níveis:
 
 A tabela a seguir resume a matriz de teste de desempenho usando o sistema de marcação de três níveis:
 
@@ -163,6 +192,50 @@ A tabela a seguir resume a matriz de teste de desempenho usando o sistema de mar
 | Utilização da Largura de Banda do Disco | Importante | >= 90% |
 | Utilização da largura de banda da rede | Importante | >= 90% |
 | Solicitações por minuto | Informações | >= 6000 |
+
+Consulte a seção abaixo, **Teste de desempenho autenticado** para obter mais detalhes sobre o uso da autenticação básica para testes de desempenho de Sites e Ativos.
+
+>[!NOTE]
+>Cada instância é monitorada durante o período do teste, tanto para Publicar quanto para Autor. Se qualquer métrica para uma instância não for obtida, essa métrica será relatada como desconhecida e a etapa correspondente falhará.
+
+#### Teste de desempenho autenticado {#authenticated-performance-testing}
+
+Este recurso é opcional Sites .
+Os clientes do AMS com sites autenticados podem especificar um nome de usuário e senha que o Cloud Manager usará para acessar o site durante os Testes de desempenho do Sites.
+O nome de usuário e a senha são especificados como Variáveis de pipeline com os nomes `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
+Embora não seja estritamente necessário, é recomendável usar o tipo de variável da string para o nome de usuário e o tipo de variável secretString para a senha. Se ambos forem especificados, cada solicitação do crawler de teste de desempenho e dos usuários virtuais de teste conterá essas credenciais como autenticação do HTTP Basic.
+
+Para definir essas variáveis usando a CLI do Cloud Manager, execute:
+
+```shell
+$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
+```
+
+Consulte [Variáveis](https://www.adobe.io/apis/experiencecloud/cloud-manager/api-reference.html#/Variables/patchPipelineVariables) para saber como usar a API.
+
+### AEM Assets {#aem-assets}
+
+O Cloud Manager executa testes de desempenho para programas AEM Assets fazendo o upload de ativos repetidamente por um período de teste de 30 minutos.
+
+1. **Requisitos de integração**
+
+   Para testes de desempenho do Assets, o Engenheiro de sucesso do cliente criará um `cloudmanager` usuário (e senha) durante a integração do Autor ao ambiente de preparo. As etapas do teste de desempenho precisarão do usuário chamado `cloudmanager` e da senha associada configurada pelo seu CSE. Isso não deve ser removido do Autor nem alterado para permissões. Isso provavelmente falhará no teste de desempenho do Assets.
+
+1. **Imagens e ativos para teste**
+
+   Os clientes podem fazer upload de seus próprios ativos para testes. Isso pode ser feito na tela Configuração do pipeline ou Editar. Formatos de imagem comuns, como JPEG, PNG, GIF e BMP são compatíveis com arquivos Photoshop, Illustrator e Postscript. No entanto, se nenhuma imagem for carregada, o Cloud Manager usará uma imagem padrão e um documento PDF para testes.
+
+1. **Distribuição de ativos para teste**
+
+   A distribuição de quantos ativos de cada tipo são carregados por minuto é definida na tela Configuração de pipeline ou Editar.
+Por exemplo, se uma divisão 70/30 for usada, como mostrado na figura abaixo. Há 10 ativos carregados por minuto, 7 imagens serão carregadas por minuto e 3 documentos.
+
+1. **Teste e relatórios**
+
+   O Cloud Manager criará uma pasta na instância do Autor, usando a configuração de nome de usuário e senha pelo CSE da etapa 1 (Requisitos de integração), como mencionado acima, e fará upload de ativos na pasta usando uma biblioteca de código aberto. Os testes executados pela etapa de teste de Ativos são gravados usando esta [biblioteca de código aberto](https://github.com/adobe/toughday2). O tempo de processamento de cada ativo e de várias métricas no nível do sistema é medido durante a duração do teste de 30 minutos. Esse recurso pode carregar imagens e documentos PDF.
+
+   >[!NOTE]
+   >Saiba mais sobre como configurar testes de desempenho, em [Configurar o pipeline de CI/CD](configuring-pipeline.md). Consulte [Configurar o programa](setting-up-program.md) para saber como configurar o programa e definir os KPIs.
 
 ### Gráficos de resultados de testes de desempenho {#performance-testing-results-graphs}
 
