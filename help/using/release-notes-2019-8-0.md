@@ -1,36 +1,37 @@
 ---
 title: Notas da versão 2019.8.0
 seo-title: Notas de versão do AEM Cloud Manager para 2019.8.0
-description: Siga esta página para obter informações sobre a versão 2019.8.0 do Cloud Manager.
-seo-description: Siga esta página para obter informações sobre a versão 2019.8.0 do AEM Cloud Manager.
+description: Siga esta página para obter informações sobre o Cloud Manager Versão 2019.8.0.
+seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2019.8.0.
+feature: Informações da versão
 translation-type: tm+mt
-source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 7%
+source-wordcount: '225'
+ht-degree: 8%
 
 ---
 
 # Notas da versão 2019.8.0 {#release-notes-for}
 
-A versão [!UICONTROL Cloud Manager] 2019.8.0 adiciona suporte para pacotes de conteúdo criados seletivamente, melhora o desempenho da compilação e corrige uma variedade de bugs secundários.
+A versão [!UICONTROL Cloud Manager] 2019.8.0 adiciona suporte para pacotes de conteúdo construído seletivos, melhora o desempenho da compilação e corrige uma variedade de pequenos erros.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2019.8.0 [!UICONTROL Cloud Manager] é 19 de agosto de 2019.
+A Data de lançamento da versão [!UICONTROL Cloud Manager] 2019.8.0 é 19 de agosto de 2019.
 
 ## Novidades {#whats-new}
 
-* Nova interface de linha de comando para a API do Gerenciador de nuvem, com a tecnologia [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
-* Os pacotes de conteúdo específico produzidos pela compilação podem ser declarados como ignorados e não serão implantados. Consulte [Ignorando pacotes de conteúdo](/help/using/setting-up-project.md#skipping-content-packages) para obter mais detalhes.
-* O conjunto de dependências pré-carregadas no container build foi retrabalhado para evitar algumas solicitações de rede desnecessárias.
+* Nova interface de linha de comando para a API do Cloud Manager, fornecida pelo [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+* Pacotes de conteúdo específicos produzidos pela build podem ser declarados como ignorados e não serão implantados. Consulte [Ignorando pacotes de conteúdo](/help/using/setting-up-project.md#skipping-content-packages) para obter mais detalhes.
+* O conjunto de dependências pré-carregadas no contêiner de criação foi retrabalhado para evitar algumas solicitações desnecessárias de rede.
 * A mensagem na página de visão geral de determinados programas configurados incorretamente foi aprimorada.
 
 ## Correções de erros {#bug-fixes}
 
-* Ao acessar os relatórios de SLA, o ano padrão era 2018, não 2019.
-* Para nomes de ambientes longos, o seletor de ambientes na tela Relatórios não aumentou corretamente o tamanho.
-* A regra de qualidade do código ***ConfigAndInstallshouldOnlyContainOsgiNodes*** produziu falsos positivos quando o componente Sling Rewriter foi usado.
+* Ao acessar os relatórios do SLA, o ano padrão era 2018, não 2019.
+* Para nomes de ambiente longos, o seletor de ambiente na tela Relatórios não aumentou corretamente no tamanho.
+* A regra de qualidade de código ***ConfigAndInstallshouldOnlyContainOsgiNodes*** produziu falsos positivos quando o componente do Sling Rewriter foi usado.
 * A regra de qualidade de código ***ConfigAndInstallshouldOnlyContainOsgiNodes*** produziu falsos positivos para determinadas estruturas de caminho incomuns.
-* Clientes somente de ativos podem não ter sido consistentemente capazes de navegar até seus ambientes AEM.
-* A caixa de diálogo Criar uma Ramificação e um Projeto foi renderizada de forma diferente em navegadores diferentes.
+* Clientes somente de ativos podem não ter navegado de forma consistente para seus ambientes de AEM.
+* A caixa de diálogo Criar uma ramificação e projeto foi renderizada de forma diferente em navegadores diferentes.
