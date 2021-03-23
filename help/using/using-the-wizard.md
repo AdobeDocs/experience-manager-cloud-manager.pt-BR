@@ -1,20 +1,21 @@
 ---
-title: Uso do Assistente
+title: Usar o Assistente
 description: Siga esta página para saber como usar o assistente para criar um projeto de aplicativo AEM
+feature: Introdução
 translation-type: tm+mt
-source-git-commit: 7146a41d64365c9de03d32f4fc4c33f9e366c244
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 9%
+source-wordcount: '334'
+ht-degree: 10%
 
 ---
 
 
-# Usando o Assistente {#using-wizard-to-create-an-aem-application-project}
+# Usar o Assistente {#using-wizard-to-create-an-aem-application-project}
 
-Quando os clientes são embarcados no Cloud Manager, eles recebem um repositório git vazio. Os clientes atuais do Adobe Managed Services (AMS) (ou clientes no local AEM que estão migrando para o AMS) geralmente já terão o código do projeto em git (ou outro sistema de controle de versão) e importarão seu projeto para o repositório git do Cloud Manager. Novos clientes, no entanto, não têm projetos existentes.
+Quando os clientes são integrados ao Cloud Manager, eles recebem um repositório Git vazio. Os clientes atuais do Adobe Managed Services (AMS) (ou clientes no local AEM que estão migrando para o AMS) geralmente já têm o código do projeto no git (ou em outro sistema de controle de versão) e importarão seu projeto para o repositório de git do Cloud Manager. Os novos clientes, no entanto, não têm projetos existentes.
 
-Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto de AEM mínimo como ponto de partida. Esse processo se baseia no [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Para ajudar a iniciar novos clientes, o Cloud Manager agora pode criar um projeto de AEM mínimo como ponto de partida. Esse processo é baseado no [**AEM Arquétipo de Projeto**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 
 Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
@@ -23,23 +24,23 @@ Siga as etapas abaixo para criar um projeto de aplicativo AEM no Cloud Manager:
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-1. Clique em **Criar para** abrir uma caixa de diálogo, que permite ao usuário fornecer os parâmetros exigidos pelo AEM Project Archetype. Em seu formulário padrão, a caixa de diálogo solicita dois valores:
+1. Clique em **Criar para** para abrir uma caixa de diálogo, que permite que o usuário forneça os parâmetros exigidos pelo Arquétipo de projeto AEM. Em seu formulário padrão, a caixa de diálogo solicita dois valores:
 
-   * **Título**  - por padrão, isso é definido como Nome do  *Programa*
+   * **Título**  - por padrão, isso é definido como Nome do  *programa*
 
-   * **Novo nome**  da ramificação - por padrão, isso é  *principal*
+   * **Novo nome da ramificação**  - por padrão, isso é  *principal*
 
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
-   A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração para o Archetype. Muitos desses parâmetros têm valores padrão que são gerados com base em **Title**.
+   A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior da caixa de diálogo. Em seu formulário expandido, a caixa de diálogo mostra todos os parâmetros de configuração do Arquétipo. Muitos desses parâmetros têm valores padrão que são gerados com base no **Title**.
 
    ![](assets/screen_shot_2018-10-08at60032am.png)
 
    >[!NOTE]
    >
-   >Por exemplo, se **Title** for ***We.Finance***, o parâmetro de Id de artefato de base Maven será gerado como ***com.wefinance***. Esses valores podem ser alterados, se desejado.
+   >Por exemplo, se o **Title** for ***We.Finance***, o parâmetro Base Maven Artifact Id será gerado como ***com.wefinance***. Esses valores podem ser alterados, se desejado.
    >
    >
    >Por exemplo, você pode alterar do ***valor com.wefinance*** gerado para ***net.wefinance***.
 
-1. Clique em **Criar** na etapa anterior para criar o projeto inicial usando o arquétipo e confirmando a ramificação git nomeada. Quando isso estiver feito, você poderá configurar o pipeline.
+1. Clique em **Create** na etapa anterior para criar o projeto inicial usando o arquétipo e confirmando na ramificação git nomeada. Feito isso, você pode configurar o pipeline.
