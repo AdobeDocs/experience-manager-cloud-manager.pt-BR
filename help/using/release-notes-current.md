@@ -4,7 +4,7 @@ description: Siga esta página para obter informações sobre o Cloud Manager Ve
 feature: Informações da versão
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
-source-git-commit: 0c33fd9f1af4c98564c9fd14a468fc3bf27744ee
+source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 7%
@@ -33,11 +33,11 @@ A próxima versão está planejada para 06 de maio de 2021.
 
 * A mensagem de erro ao iniciar um pipeline quando um ambiente foi excluído foi esclarecida.
 
-* Pacotes OSGi fornecidos por projetos Eclipse agora são excluídos da regra.
+* Pacotes OSGi fornecidos por projetos Eclipse agora são excluídos da regra `CQBP-84--dependencies`.
 
 ## Correções de erros {#bug-fixes}
 
-* Erros raros e transitórios que podem ocorrer na etapa Teste de ativos no pipeline de produção.
+* Erros raros e transitórios que podem ocorrer na etapa *Teste de ativos* no pipeline de produção.
 
 * Uma barra à direita no pipeline de produção Load Test estava causando uma falha 404.
 
