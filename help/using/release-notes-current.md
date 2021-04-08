@@ -1,42 +1,44 @@
 ---
-title: Notas da versão 2021.3.0
-description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.3.0
+title: Notas da versão 2021.4.0
+description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.4.0
 feature: Informações da versão
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 0c33fd9f1af4c98564c9fd14a468fc3bf27744ee
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 5%
+source-wordcount: '192'
+ht-degree: 7%
 
 ---
 
+# Notas da versão 2021.4.0 {#release-notes-for}
 
-# Notas da versão 2021.3.0 {#release-notes-for}
-
-A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2021.3.0.
+A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2021.4.0.
 
 ## Data de lançamento {#release-date}
 
-A Data de lançamento da versão 2021.3.0 é 11 de março de 2021.
+A Data de lançamento da versão 2021.4.0 é 8 de abril de 2021.
 [!UICONTROL Cloud Manager]
-A próxima versão está planejada para 8 de abril de 2021.
+A próxima versão está planejada para 06 de maio de 2021.
 
 ## Novidades {#whats-new}
 
-* Uma nova ferramenta de qualidade de código [Ferramenta de Otimização do Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) foi introduzida para validar a configuração do dispatcher do cliente.
+* O tempo limite da solicitação para os usuários virtuais do teste de desempenho foi aumentado de 20 segundos para 60 segundos.
 
-* Os usuários agora podem ver suas funções do Cloud Manager selecionando a opção **Exibir função(ões) do Cloud Manager** após navegar até o ícone Perfil do usuário (canto superior direito) do Unified Shell.
+* O botão Gerenciar Git é exibido no cartão Pipelines, mesmo quando nenhum pipeline foi configurado.
 
-* O rótulo **Application for Approval** foi renomeado para **Production Approval** para maior clareza.
+* Durante a etapa de implantação da página de execução do pipeline, o usuário poderá ver as etapas de implantação concluídas e futuras, além da etapa atual na interface do usuário para o estado *Em andamento*.
 
-* O rótulo **Version** foi renomeado para **Git Tag** na tela de execução do pipeline de Produção.
+* A versão do arquétipo de projeto AEM usado pelo Cloud Manager foi atualizada para a versão 27.
 
-* Os rótulos que definem o comportamento quando métricas importantes não atingem o limite definido foram renomeados para refletir seu comportamento verdadeiro - **Cancelar imediatamente** e **Aprovar imediatamente**. Consulte [Configuração das configurações de pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) para obter mais detalhes.
+* A mensagem de erro ao iniciar um pipeline quando um ambiente foi excluído foi esclarecida.
 
-* As listas de desaprovação de classe e método foram atualizadas com base na versão `2021.3.4997.20210303T022849Z-210225` do SDK do Cloud Service AEM.
+* Pacotes OSGi fornecidos por projetos Eclipse agora são excluídos da regra.
 
 ## Correções de erros {#bug-fixes}
 
-* Alguns problemas de qualidade não foram detectados corretamente quando os pacotes eram incorporados em outros pacotes.
+* Erros raros e transitórios que podem ocorrer na etapa Teste de ativos no pipeline de produção.
 
-* Ocasionalmente, se o usuário sair da página de execução do pipeline imediatamente após iniciar um pipeline, uma mensagem de erro será exibida informando que a ação falhou, embora a execução realmente comece.
+* Uma barra à direita no pipeline de produção Load Test estava causando uma falha 404.
+
+* A verificação `Runmode` estava produzindo falsos positivos em nós que não eram pastas.
