@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com vários repositórios Git de origem
 description: Trabalhar com vários repositórios Git de origem - Cloud Manager
-feature: Repositórios Git
+feature: Git Repositories
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

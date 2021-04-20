@@ -3,7 +3,7 @@ title: Monitorar os ambientes
 seo-title: Monitorar os ambientes
 description: Saiba como monitorar seus ambientes no Cloud Manager
 seo-description: Siga esta página para saber mais sobre o Monitoramento de sistema no Cloud Manager, que é feito observando as instâncias individuais em um ambiente e rastreando diversas métricas para cada instância.
-feature: Ambientes
+feature: Environments
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
