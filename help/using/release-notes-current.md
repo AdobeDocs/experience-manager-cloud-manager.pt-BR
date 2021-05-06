@@ -3,10 +3,10 @@ title: Notas da versão 2021.5.0
 description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.5.0
 feature: Informações da versão
 translation-type: tm+mt
-source-git-commit: 3d6f9a760a1e5bafdae6ece5627358524467a0d2
+source-git-commit: 849a2df2f272973740c1dd8580daaa518f2c9ec4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '181'
+ht-degree: 7%
 
 ---
 
@@ -33,8 +33,6 @@ A próxima versão está planejada para 3 de junho de 2021.
 * A experiência Editar programa foi atualizada.
 
 ## Correções de erros {#bug-fixes}
-
-* Ocasionalmente, o usuário pode ver um status verde *ativo* ao lado de uma  de IP Lista de permissões mesmo quando essa configuração não foi implantada.
 
 * Em vez de remover variáveis &quot;excluídas&quot;, a API de variáveis de pipelines somente as marcaria com o status &quot;EXCLUÍDO&quot;.
 
