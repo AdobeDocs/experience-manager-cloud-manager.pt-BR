@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-feature: CI-CD Pipeline, Test Results
+feature: Pipeline de CI-CD, resultados de teste
+exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2694'
 ht-degree: 4%
 
 ---
-
 
 # Entender os resultados de teste {#understand-your-test-results}
 
@@ -35,7 +35,7 @@ Há três portas no pipeline:
 Para cada uma dessas portas, existe uma estrutura em três níveis para as questões identificadas pela porta.
 
 * **Crítico**  - São problemas identificados pela porta que causam uma falha imediata do pipeline.
-* **Importante** : esses são problemas identificados pela porta que fazem com que o pipeline entre em um estado pausado. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso o pipeline continue, ou pode aceitar os problemas, caso o pipeline pare com uma falha.
+* **Importante** : esses são problemas identificados pela porta que fazem com que o pipeline entre em um estado pausado. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso o pipeline continue, ou pode aceitar os problemas, caso o pipeline pare com uma falha. A substituição de falhas importantes está sujeita a um [Tempo limite](deploying-code.md#timeouts).
 * **Informações**  - São problemas identificados pela porta, que são fornecidos apenas para fins informativos e não têm impacto na execução do pipeline.
 
 >[!NOTE]
@@ -274,4 +274,3 @@ As imagens a seguir exibem os gráficos de teste de desempenho:
 ![](assets/understand_test-results-screen1.png)
 
 ![](assets/screen_shot_2018-09-05at83933pm.png)
-
