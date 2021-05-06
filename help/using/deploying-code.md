@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Code Deployment
+feature: Implantação do código
+exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
-
 
 # Implantar o código {#deploy-your-code}
 
@@ -92,6 +92,19 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
 
    ![](assets/Production_Deployment2.png)
 
+## Limites de tempo {#timeouts}
+
+As etapas a seguir atingirão o tempo limite se forem deixadas aguardando o feedback do usuário:
+
+| Etapa | Tempo limite |
+|--- |--- |
+| Teste de qualidade do código | 7 dias |
+| Teste de segurança | 7 dias |
+| Teste de desempenho | 7 dias |
+| Pedido de aprovação | 7 dias |
+| Agendar implantação de produção | 7 dias |
+| Suporte CSE | 7 dias |
+
 ## Processo de implantação {#deployment-process}
 
 A seção a seguir descreve como os pacotes de AEM e dispatcher são implantados na fase de estágio e na fase de produção.
@@ -149,5 +162,3 @@ As implantações de produção geralmente seguem as mesmas etapas descritas aci
 1. Implante AEM pacotes para publish2 e o pacote do dispatcher para o dispatcher2 em paralelo, liberar o cache do dispatcher.
 1. Coloque o dispatcher2 de volta no balanceador de carga.
 Esse processo continua até que a implantação tenha atingido todos os editores e dispatchers na topologia.
-
-
