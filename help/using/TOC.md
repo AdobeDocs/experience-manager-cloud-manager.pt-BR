@@ -3,16 +3,15 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Guia do Experience Manager Cloud Manager
-breadcrumb-title: Guia do Cloud Manager
+breadcrumb-title: Guia do Cloud Manager para AEM 6.x
 user-guide-description: Saiba como usar os Adobe Managed Services para gerenciar o Experience Manager na nuvem por conta própria.
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Administrator
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+source-git-commit: 9cca6fd7d4ef3351fa024bac0f95f5592105dbae
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '270'
+ht-degree: 83%
 
 ---
 
@@ -81,16 +80,16 @@ ht-degree: 0%
    + [Notas da versão 2019.11.0](release-notes-2019-11-0.md)
    + [Notas da versão 2019.10.0](release-notes-2019-10-0.md)
    + [Notas da versão 2019.9.0](release-notes-2019-9-0.md)
-   + [Notas de versão para 2019.8.0](release-notes-2019-8-0.md)
-   + [Notas de versão para 2019.7.0](release-notes-2019-7-0.md)
-   + [Notas de versão para 2019.6.0](release-notes-2019-6-0.md)
-   + [Notas de versão para 2019.5.0](release-notes-2019-5-0.md)
-   + [Notas de versão para 2019.4.0](release-notes-2019-4-0.md)
-   + [Notas de versão para 2019.3.0](release-notes-2019-3-0.md)
-   + [Notas de versão para 2019.2.0](release-notes-2019-2-0.md)
-   + [Notas de versão para 2019.1.0](release-notes-2019-1-0.md)
-   + [Notas de versão para 2018.9.0](release-notes-2018-9-0.md)
-   + [Notas de versão para 2018.8.0](release-notes-2018-8-0.md)
-   + [Notas de versão para 2018.7.0](release-notes-2018-7-0.md)
-   + [Notas de versão para 2018.6.0](release-notes-2018-6-0.md)
-   + [Notas de versão para 2018.5.0](release-notes-2018-5-0.md)
+   + [Notas da versão 2019.8.0](release-notes-2019-8-0.md)
+   + [Notas da versão 2019.7.0](release-notes-2019-7-0.md)
+   + [Notas da versão 2019.6.0](release-notes-2019-6-0.md)
+   + [Notas da versão 2019.5.0](release-notes-2019-5-0.md)
+   + [Notas da versão 2019.4.0](release-notes-2019-4-0.md)
+   + [Notas da versão 2019.3.0](release-notes-2019-3-0.md)
+   + [Notas da versão 2019.2.0](release-notes-2019-2-0.md)
+   + [Notas da versão 2019.1.0](release-notes-2019-1-0.md)
+   + [Notas da versão 2018.9.0](release-notes-2018-9-0.md)
+   + [Notas da versão 2018.8.0](release-notes-2018-8-0.md)
+   + [Notas da versão 2018.7.0](release-notes-2018-7-0.md)
+   + [Notas da versão 2018.6.0](release-notes-2018-6-0.md)
+   + [Notas da versão 2018.5.0](release-notes-2018-5-0.md)
