@@ -10,10 +10,9 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Implantação do código
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-translation-type: tm+mt
-source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1020'
 ht-degree: 1%
 
 ---
@@ -21,6 +20,9 @@ ht-degree: 1%
 # Implantar o código {#deploy-your-code}
 
 ## Implantação do código com o Cloud Manager {#deploying-code-with-cloud-manager}
+
+>[!NOTE]
+>Para saber mais sobre a implantação do código para o Cloud Manager no AEM as a Cloud Service, consulte [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
 
 Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
@@ -92,7 +94,7 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
 
    ![](assets/Production_Deployment2.png)
 
-## Limites de tempo {#timeouts}
+## Tempos limite {#timeouts}
 
 As etapas a seguir atingirão o tempo limite se forem deixadas aguardando o feedback do usuário:
 
