@@ -8,16 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-feature: Getting Started
+feature: Introdução
 level: Beginner
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
+source-git-commit: 81c14382821de6b2d249000a79799747a6d9cb19
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 85%
+source-wordcount: '805'
+ht-degree: 79%
 
 ---
-
 
 # Introdução à [!UICONTROL Cloud Manager]{#introduction-to-cloud-manager}
 
@@ -31,6 +30,8 @@ ht-degree: 85%
 ## Introdução {#introduction}
 
 [!UICONTROL Cloud Manager], parte do Adobe Experience Manager (AEM) na Cloud, permite que as organizações autogerenciem o Experience Manager na nuvem. Inclui uma estrutura de integração contínua e entrega contínua (CI/CD) que permite que as equipes de TI e os parceiros de implementação acelerem a entrega de personalizações ou atualizações, sem comprometer o desempenho ou a segurança.
+
+Este site de documentação descreve especificamente os recursos e as funções do Cloud Manager disponíveis para clientes do Adobe Managed Services (AMS). A documentação sobre os recursos e as funções do Cloud Manager para AEM como clientes do Cloud Service pode ser encontrada em [Implementação de aplicativos para AEM como Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=en).
 
 Com o uso do [!UICONTROL Cloud Manager]portal de autoatendimento do cliente, as **empresas** podem realizar/potencializar o seguinte:
 
