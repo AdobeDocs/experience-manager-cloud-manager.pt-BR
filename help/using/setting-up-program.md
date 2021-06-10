@@ -3,20 +3,14 @@ title: Configurar o programa
 seo-title: Configurar o programa
 description: Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do programa.
 seo-description: 'Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do Adobe AEM Cloud Manager. Isso envolve definir a descrição do programa e os KPIs que serão usados para testes de desempenho. '
-uuid: 9ecf8743-1f5a-4744-86af-e2256567642f
-contentOwner: jsyal
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: getting-started
-discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
-feature: Getting Started
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+feature: Introdução
+exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
+source-git-commit: a65c413e9ffa96f950cf1c59771b45ce0f810bc0
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '728'
 ht-degree: 2%
 
 ---
-
 
 # Configurar o programa {#setup-your-program}
 
@@ -25,11 +19,8 @@ Após a integração, o proprietário da empresa precisará concluir uma configu
 Os KPIs definidos servem como uma linha de base para o teste de desempenho, que é transmitido cada vez que o pipeline é executado.
 
 >[!NOTE]
->
 >Os KPIs definidos são medidos em testes executados no ambiente **stage**. Normalmente, esses KPIs são reduzidos para se adequarem aos recursos do ambiente de preparo.
->
 >Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em sua produção **Environment** e ter quatro servidores de dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto (supondo que seu ambiente de estágio consista em apenas um único par de dispatcher/servidor de publicação).
->
 >Além disso, muitos usuários terão uma Rede de entrega de conteúdo (CDN), como Akamai ou CloudFront em frente ao ambiente de produção. Como [!UICONTROL Cloud Manager] testa diretamente o ambiente de preparo, o KPI deve refletir somente o tráfego esperado para passar pelo CDN, ou seja, o cache está faltando. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
 
 ## Usando [!UICONTROL Cloud Manager] para configurar o programa {#using-cloud-manager-to-setup-your-program}
@@ -78,17 +69,13 @@ Durante a configuração do programa, os KPIs específicos dos ativos são espec
 1. Em **Provisionamento**, você pode visualizar ou editar a configuração de provisionamento para ambientes de produção e não relacionados à produção em seu programa. Você verá **Autoscale está em**, se o autodimensionamento tiver sido ativado para o programa.
 
    >[!NOTE]
-   >
-   >* O recurso de dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas do cliente.
-   >* O dimensionamento sob demanda não está disponível para esta versão de [!UICONTROL Cloud Manager].
-
+   >O recurso de dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas do cliente.
 
    ![](assets/Setup_Program-Provisioning.png)
 
 1. Clique em **Save** para concluir o assistente de configuração.
 
    >[!NOTE]
-   >
    >Você sempre poderá editar o programa depois que o programa inicial já tiver sido configurado. Siga as etapas abaixo para obter mais detalhes.
 
 ## Editar um programa
@@ -99,14 +86,26 @@ Durante a configuração do programa, os KPIs específicos dos ativos são espec
 
 1. Selecione a solução e clique em **Edit** para atualizar ou modificar o programa, conforme mostrado na figura abaixo.
 
-   ![](assets/SetUpProgram6.png)
+   ![](assets/set-up-program/edit-program1.png)
 
 1. A tela **Editar Programa** é exibida e permite que você atualize ou modifique seu programa.
 
-   ![](assets/Editing_Program-screen3.png)
+   Você pode atualizar o nome e a descrição do programa na guia **General**.
+
+   ![](assets/set-up-program/edit-program-general.png)
+
+   Navegue até a guia **KPI** para atualizar as informações no AEM Sites e no Assets.
+
+   ![](assets/set-up-program/edit-program-kpi.png)
+
+   Além disso, você pode navegar até a guia **Provisioning** para editar a configuração de provisionamento para ambientes de produção e não-produção em seu programa.
+
+   ![](assets/set-up-program/edit-program-provision.png)
+
+1. Clique em **Atualizar** para salvar suas edições.
 
 ## Próximas etapas {#the-next-steps}
 
-Se você já tiver configurado o **Pipeline**, a próxima execução levará em conta as configurações atualizadas. Se ainda não tiver configurado o pipeline, siga as etapas para configurar seu pipeline primeiro.
+Se você já tiver configurado o pipeline, a próxima execução levará em conta as configurações atualizadas. Se ainda não tiver configurado o pipeline, siga as etapas para configurar seu pipeline primeiro.
 
 Consulte [Configurar o pipeline de CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html) para configurar o pipeline.
