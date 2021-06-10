@@ -10,9 +10,9 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: Regras de qualidade do código
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
-source-wordcount: '3654'
+source-wordcount: '3652'
 ht-degree: 4%
 
 ---
@@ -187,32 +187,6 @@ public void orDoThis() {
   }
  
   in.close();
-}
-```
-
-### As APIs de produto anotadas com @ProviderType não devem ser implementadas ou estendidas por clientes {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
-
-**Chave**: CQBP-84, CQBP-84-dependências
-
-**Tipo**: Bug
-
-**Gravidade**: Crítico
-
-**Desde**: Versão 2018.7.0
-
-A API do AEM contém interfaces e classes do Java que devem ser usadas, mas não implementadas, apenas pelo código personalizado. Por exemplo, a interface *com.day.cq.wcm.api.Page* foi projetada para ser implementada ***somente pelo AEM***.
-
-Quando novos métodos são adicionados a essas interfaces, esses métodos adicionais não afetam o código existente que usa essas interfaces e, como resultado, a adição de novos métodos a essas interfaces é considerada compatível com versões anteriores. No entanto, se o código personalizado ***implementa*** uma dessas interfaces, ele apresenta um risco de compatibilidade com versões anteriores para o cliente.
-
-As interfaces (e classes) que só devem ser implementadas por AEM são anotadas com *org.osgi.annotation.versioning.ProviderType* (ou, em alguns casos, uma anotação herdada semelhante *Qute.bnd.annotation.ProviderType*). Esta regra identifica os casos em que tal interface é implementada (ou em que uma classe é estendida) pelo código personalizado.
-
-#### Código não compatível {#non-compliant-code-3}
-
-```java
-import com.day.cq.wcm.api.Page;
-
-public class DontDoThis implements Page {
-// implementation here
 }
 ```
 
@@ -597,6 +571,32 @@ Encontre abaixo as verificações OakPAL executadas pelo Cloud Manager.
 >[!NOTE]
 >
 >OakPAL é uma estrutura desenvolvida por um Parceiro AEM (e vencedor de 2019 AEM Rockstar North America) que valida pacotes de conteúdo usando um repositório Oak independente.
+
+### As APIs de produto anotadas com @ProviderType não devem ser implementadas ou estendidas por clientes {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+
+**Chave**: CQBP-84
+
+**Tipo**: Bug
+
+**Gravidade**: Crítico
+
+**Desde**: Versão 2018.7.0
+
+A API do AEM contém interfaces e classes do Java que devem ser usadas, mas não implementadas, apenas pelo código personalizado. Por exemplo, a interface *com.day.cq.wcm.api.Page* foi projetada para ser implementada ***somente pelo AEM***.
+
+Quando novos métodos são adicionados a essas interfaces, esses métodos adicionais não afetam o código existente que usa essas interfaces e, como resultado, a adição de novos métodos a essas interfaces é considerada compatível com versões anteriores. No entanto, se o código personalizado ***implementa*** uma dessas interfaces, ele apresenta um risco de compatibilidade com versões anteriores para o cliente.
+
+As interfaces (e classes) que só devem ser implementadas por AEM são anotadas com *org.osgi.annotation.versioning.ProviderType* (ou, em alguns casos, uma anotação herdada semelhante *Qute.bnd.annotation.ProviderType*). Esta regra identifica os casos em que tal interface é implementada (ou em que uma classe é estendida) pelo código personalizado.
+
+#### Código não compatível {#non-compliant-code-3}
+
+```java
+import com.day.cq.wcm.api.Page;
+
+public class DontDoThis implements Page {
+// implementation here
+}
+```
 
 ### Os pacotes de clientes não devem criar ou modificar nós em /libs {#oakpal-customer-package}
 
