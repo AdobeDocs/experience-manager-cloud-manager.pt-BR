@@ -1,45 +1,49 @@
 ---
-title: Notas da versão 2021.5.0
-description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.5.0
+title: Notas da versão 2021.6.0
+description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.6.0
 feature: Informações da versão
-source-git-commit: 3f17f252d89a1753c9cb121461b048f619d28415
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '277'
+ht-degree: 5%
 
 ---
 
-# Notas da versão 2021.5.0 {#release-notes-for}
+# Notas da versão 2021.6.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2021.5.0.
+A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2021.6.0.
 
 >[!NOTE]
 >Consulte [Notas de versão atuais](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) para ver as notas de versão mais recentes do Cloud Manager no AEM como um Cloud Service.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2021.5.0 é 6 de maio de 2021.
+A data de lançamento da versão 2021.6.0 é 10 de junho de 2021.
 [!UICONTROL Cloud Manager]
-A próxima versão está planejada para 10 de junho de 2021.
+A próxima versão está planejada para 15 de julho de 2021.
 
 ## Novidades {#whats-new}
 
-* A regra de qualidade PackageOverlaps agora detecta casos em que o mesmo pacote foi implantado várias vezes, ou seja, em vários locais incorporados, no mesmo conjunto de pacotes implantado.
+* Os testes de ativos e sites agora serão executados em paralelo (quando aplicável), reduzindo assim o tempo total de execução do pipeline. Esse recurso será ativado para clientes nas próximas semanas.
 
-* O endpoint do repositório na API pública agora inclui o URL do Git.
+* As Dependências de Maven baixadas durante a etapa de build agora serão armazenadas em cache entre as execuções de pipeline. Esse recurso será ativado para clientes nas próximas semanas.
 
-* No fluxo de trabalho Editar programa, o usuário só poderá definir valores KPI não decimais.
+* O nome da ramificação padrão usado durante a criação do projeto e no comando push padrão por meio do gerenciamento de workflows git foi alterado para `main`.
 
-* Falhas intermitentes encontradas ao enviar o código para o Adobe Git foram resolvidas.
+* A experiência de edição de programa na interface do usuário foi atualizada.
 
-* A experiência Editar programa foi atualizada.
+* A regra de qualidade `ImmutableMutableMixCheck` foi atualizada para classificar os nós `/oak:index` como imutáveis.
+
+* As regras de qualidade `CQBP-84` e `CQBP-84--dependencies` foram consolidadas em uma única regra.
+
+* Em algumas situações, a falha no cálculo da métrica Testes ignorados causaria falha nas execuções do pipeline.
 
 ## Correções de erros {#bug-fixes}
 
-* Em vez de remover variáveis &quot;excluídas&quot;, a API de variáveis de pipelines somente as marcaria com o status &quot;EXCLUÍDO&quot;.
+* Definições de nó JCR contendo uma nova linha após o nome do elemento raiz não foram analisadas corretamente.
 
-* Alguns problemas de qualidade do tipo Código Smell estavam afetando incorretamente a Classificação de confiabilidade.
+* A API de repositórios de lista não filtra repositórios excluídos.
 
-* Quando uma execução de pipeline era iniciada entre meia-noite e 1h UTC, a versão de artefato gerada pelo Cloud Manager não tinha garantia de ser maior do que uma versão criada no dia anterior.
+* Uma mensagem de erro incorreta era exibida quando um valor inválido era fornecido para a etapa de programação.
 
-* Determinados clientes do Adobe Managed Services (AMS) não conseguiram criar novos projetos no Console do desenvolvedor do Adobe I/O usando a API do Cloud Manager.
+* Em alguns casos quando a execução do pipeline atingiu a etapa de implantação na produção e o usuário interrompe a execução, a mensagem de status da implantação na interface do usuário não refletia corretamente o que estava realmente acontecendo.
