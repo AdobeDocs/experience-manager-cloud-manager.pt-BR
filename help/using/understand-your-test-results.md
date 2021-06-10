@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: Pipeline de CI-CD, resultados de teste
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
 source-wordcount: '2722'
 ht-degree: 4%
@@ -53,7 +53,7 @@ Esta etapa avalia a qualidade do código de seu aplicativo. É o objetivo princi
 Em Teste de qualidade do código, o código-fonte é digitalizado para garantir que atenda a determinados critérios de qualidade. Atualmente, isso é implementado por uma combinação de SonarQube, exame de nível de pacote de conteúdo usando OakPAL e validação do dispatcher usando a Ferramenta de Otimização do Dispatcher. Há mais de 100 regras que combinam regras Java genéricas e regras específicas de AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas AEM engenharia e são chamadas de [Regras de qualidade de código personalizadas](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->Você pode baixar a lista completa de regras [aqui](/help/using/assets/CodeQuality-rules-AMS.xlsx).
+>Você pode baixar a lista completa de regras [aqui](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx).
 
 Os resultados desta etapa são fornecidos como *Rating*. A tabela abaixo resume as classificações para vários critérios de teste:
 
