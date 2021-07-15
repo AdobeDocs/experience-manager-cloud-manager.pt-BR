@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: Pipeline de CI-CD
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
+source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1308'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Antes de começar a implantar seu código, você deve definir as configurações
 >
 >Você pode alterar as configurações do pipeline após a configuração inicial.
 
-### Configuração das configurações de pipeline de [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
+### Definição das configurações de pipeline de [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
 
 Depois de configurar seu programa usando a interface [!UICONTROL Cloud Manager], você estará pronto para configurar seu pipeline.
 
@@ -183,22 +183,23 @@ Na tela inicial, esses pipelines são listados em um novo cartão:
 
 1. Acesse o bloco **Pipelines de não produção** na tela inicial do Cloud Manager.
 
-   ![](assets/Non-Production-Pipeline.png)
+   ![](/help/using/assets/non-prod-add.png)
 
-1. Clicando no botão Adicionar para especificar o Nome do pipeline, o Tipo de pipeline e a Ramificação do Git.
+1. Clique no botão **Add** para especificar o Nome do pipeline, o Tipo de pipeline e a Ramificação Git.
 
    Além disso, também é possível configurar o Acionador de implantação e o Comportamento de falha importante nas Opções de pipeline.
 
    ![](assets/non-prod-pipe.png)
 
-1. Clique em **Save** e o pipeline é mostrado no cartão na tela inicial com três ações:
+1. Clique em **Save** e o pipeline é mostrado no cartão na tela inicial com cinco ações:
 
    * **Editar**  - permite editar as configurações de pipeline
-   * **Detail**  - exibe a última execução do pipeline (se houver um)
+   * **Detalhes**  - exibe a última execução do pipeline (se houver um)
    * **Build**  - navega até a página de execução, da qual o pipeline pode ser executado
+   * **Acessar informações do acordo de recompra**  - permite que o usuário obtenha as informações necessárias para acessar o repositório Git do Cloud Manager
+   * **Saiba mais**  - navegue para entender o recurso de documentação do pipeline de CI/CD.
 
-   ![](assets/Non-prod-2.png)
-
+      ![](assets/prod-one.png)
    >[!NOTE]
    >
    >Enquanto o pipeline está em execução, a etapa atual é exibida e somente a ação **Details** está disponível.
