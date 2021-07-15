@@ -3,20 +3,20 @@ title: Compreensão do ambiente de criação
 description: Siga esta página para saber mais sobre ambientes
 feature: Ambientes
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 0a5556729e64c9e8736d13b357db001dd57bc03a
+source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
 
-# Compreender o ambiente de criação {#build-environment-details}
+# Compreensão do ambiente de criação {#build-environment-details}
 
 O Cloud Manager cria e testa seu código usando um ambiente de criação especializado. Esse ambiente tem os seguintes atributos:
 
 * O ambiente de build é baseado em Linux, derivado do Ubuntu 18.04.
 * O Apache Maven 3.6.0 está instalado.
-* As versões do Java instaladas são Oracle JDK 8u202 e 11.0.2.
+* As versões do Java instaladas são Oracle JDK 8u202, Azul Zulu 8u292, Oracle JDK 11.0.2 e Azul Zulu 11.0.11.
 * Há alguns pacotes de sistema adicionais instalados que são necessários:
 
    * bzip2
@@ -47,40 +47,62 @@ Consulte [Adobe Public Maven Repository](https://repo.adobe.com/) para obter mai
 >* [Permissões de API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md)
 
 
-## Uso do Java 11 {#using-java-11}
+## Uso de uma versão específica do Java {#using-java-version}
 
-O Cloud Manager agora é compatível com a criação de projetos de clientes com o Java 8 e o Java 11. Por padrão, os projetos são criados usando o Java 8. Os clientes que pretendem usar o Java 11 em seus projetos podem fazer isso usando o [Apache Maven Toolchain Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/).
+Por padrão, os projetos são criados pelo processo de build do Cloud Manager usando o JDK do Oracle 8. Os clientes que desejam usar um JDK alternativo têm duas opções: As cadeias de ferramentas Maven e a seleção de uma versão alternativa do JDK para todo o processo de execução Maven.
 
-Para fazer isso, no arquivo pom.xml, adicione uma entrada `<plugin>` que tenha a seguinte aparência:
+### Cadeias de ferramentas Maven {#maven-toolchains}
+
+O [Plugin Maven Toolchain](https://maven.apache.org/plugins/maven-toolchains-plugin/) permite que os projetos selecionem um JDK específico (ou *toolchain*) a ser usado no contexto de plug-ins Maven com reconhecimento de cadeias de ferramentas. Isso é feito no arquivo `pom.xml` do projeto, especificando um fornecedor e o valor da versão. Uma seção de amostra no arquivo `pom.xml` é:
 
 ```xml
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-toolchains-plugin</artifactId>
-            <version>1.1</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>toolchain</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <toolchains>
-                    <jdk>
-                        <version>11</version>
-                        <vendor>oracle</vendor>
-                    </jdk>
-                </toolchains>
-            </configuration>
-        </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-toolchains-plugin</artifactId>
+    <version>1.1</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>toolchain</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <toolchains>
+            <jdk>
+                <version>11</version>
+                <vendor>oracle</vendor>
+            </jdk>
+        </toolchains>
+    </configuration>
+</plugin>
 ```
 
->[!NOTE]
->Os valores `vendor` suportados são `oracle` e `sun` e os valores `version` suportados são `1.8`, `1.11` e `11`.
+Isso fará com que todos os plug-ins Maven com reconhecimento de cadeias de ferramentas usem o Oracle JDK, versão 11.
+
+Ao usar esse método, o próprio Maven ainda é executado usando o JDK padrão (Oracle 8). Portanto, verificar ou aplicar a versão do Java por meio de plug-ins como o [Plugin Apache Maven Enforcement](https://maven.apache.org/enforcer/maven-enforcer-plugin/) não funciona e esses plug-ins não devem ser usados.
+
+As combinações de fornecedor/versão disponíveis no momento são:
+
+* oracle 1.8
+* oracle 1.11
+* oracle 11
+* sol 1,8
+* sol 1,11
+* sol 11
+* azul 1.8
+* azul 1.11
+* azul 8
+
+### Versão alternativa do JDK de execução do Maven {#alternate-maven}
+
+Também é possível selecionar o Azul 8 ou o Azul 11 como JDK para toda a execução do Maven. Diferentemente das opções de cadeias de ferramentas, isso altera o JDK usado para todos os plug-ins, a menos que a configuração de cadeias de ferramentas também esteja definida, caso em que a configuração de cadeias de ferramentas ainda será aplicada para plug-ins Maven com reconhecimento de cadeias de ferramentas. Como resultado, verificar e aplicar a versão do Java usando o [Plugin Apache Maven Enforcement](https://maven.apache.org/enforcer/maven-enforcer-plugin/) funcionará.
+
+Para fazer isso, crie um arquivo chamado `.cloudmanager/java-version` na ramificação do repositório Git usada pelo pipeline. Esse arquivo pode ter o conteúdo 11 ou 8. Qualquer outro valor é ignorado. Se 11 for especificado, Azul 11 será usado. Se 8 for especificado, Azul 8 será usado.
 
 >[!NOTE]
->A build do projeto do Cloud Manager ainda está usando o Java 8 para chamar o Maven, portanto, verificar ou impor a versão do Java configurada no plug-in da cadeia de ferramentas por meio de plug-ins como o [Plugin Apache Maven enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) não funciona e esses plug-ins não devem ser usados.
+>Em uma versão futura do Cloud Manager, atualmente estimada para outubro de 2021, o JDK padrão será alterado e o padrão será Azul 11. Os projetos que não são compatíveis com o Java 11 devem criar esse arquivo com o conteúdo 8 o mais rápido possível para garantir que não sejam afetados por esse switch.
+
 
 ## Variáveis de ambiente {#environment-variables}
 
@@ -135,7 +157,7 @@ Quando usada dentro de um arquivo `Maven pom.xml`, normalmente é útil mapear e
 ```
 
 
-## Instalando pacotes de sistema adicionais {#installing-additional-system-packages}
+## Instalação de pacotes de sistema adicionais {#installing-additional-system-packages}
 
 Algumas builds exigem pacotes de sistema adicionais para serem instalados para funcionarem completamente. Por exemplo, uma build pode invocar um script Python ou ruby e, como resultado, precisa ter um interpretador de idioma adequado instalado. Isso pode ser feito chamando o [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) para chamar a APT. Essa execução geralmente deve ser encapsulada em um perfil Maven específico do Cloud Manager. Por exemplo, para instalar o python:
 
