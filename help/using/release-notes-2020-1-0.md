@@ -3,9 +3,9 @@ title: Notas da versão 2020.1.0
 seo-title: Notas de versão do AEM Cloud Manager para 2020.1.0
 description: Siga esta página para obter informações sobre o Cloud Manager Versão 2020.1.0
 seo-description: Siga esta página para obter informações sobre o AEM Cloud Manager Versão 2020.1.0
-feature: Release Information
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Informações da versão
+exl-id: 105e526f-b3c6-49d2-bb4d-d19a5afad6cc
+source-git-commit: f4b0957ce2dda55ad9b0d7a736263bece54d2139
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 9%
@@ -22,7 +22,7 @@ A Data de lançamento da versão 2020.1.0 é 16 de janeiro de 2020.[!UICONTROL C
 
 ## Novidades {#whats-new}
 
-* As credenciais do Git agora podem ser obtidas na interface do usuário do Cloud Manager. Consulte [Acesso ao Git](/help/using/accessing-git.md) para obter mais detalhes.
+* As credenciais do Git agora podem ser obtidas na interface do usuário do Cloud Manager. Consulte [Acesso ao Git](accessing-repos.md) para obter mais detalhes.
 * A experiência de logon e a estrutura do URL foram alteradas como parte de uma iniciativa de todo o Adobe. Marcadores antigos serão redirecionados para os novos URLs.
 
 
