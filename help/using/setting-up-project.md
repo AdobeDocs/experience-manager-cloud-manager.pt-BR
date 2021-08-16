@@ -3,15 +3,14 @@ title: Configuração do projeto
 description: Siga esta página para saber como configurar um projeto
 feature: Introdução, Programas de produção
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-translation-type: tm+mt
-source-git-commit: cf19c7dfd593810779c03c51e08081954f8fc11e
+source-git-commit: 2a253abb98fa096f9f1c07bac94804849fad2ebb
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '884'
 ht-degree: 8%
 
 ---
 
-# Configurar seu projeto {#setting-up-your-project}
+# Configurar o projeto {#setting-up-your-project}
 
 ## Modificando Detalhes de Configuração do Projeto {#modifying-project-setup-details}
 
@@ -109,7 +108,7 @@ E se você quiser gerar uma mensagem simples somente quando a build for executad
 ## Suporte a Repositório Maven protegido por senha {#password-protected-maven-repositories}
 
 >[!NOTE]
->Os artefatos de um repositório Maven protegido por senha devem ser usados com muito cuidado, pois o código implantado por meio desse mecanismo atualmente não é executado pelos Portas de qualidade do Cloud Manager. Por conseguinte, só deve ser utilizado em casos raros e para código não vinculado à AEM. É recomendável também implantar as fontes Java, bem como todo o código-fonte do projeto junto com o binário.
+>Os artefatos de um repositório Maven protegido por senha devem ser usados com muito cuidado, pois o código implantado por meio desse mecanismo atualmente não é executado por todas as regras de qualidade implementadas nos Portos de qualidade do Cloud Manager. Por conseguinte, só deve ser utilizado em casos raros e para código não vinculado à AEM. É recomendável também implantar as fontes Java, bem como todo o código-fonte do projeto junto com o binário.
 
 Para usar um repositório Maven protegido por senha do Cloud Manager, especifique a senha (e, opcionalmente, o nome de usuário) como um segredo [Variável de pipeline](/help/using/build-environment-details.md#pipeline-variables) e, em seguida, faça referência a esse segredo dentro de um arquivo chamado `.cloudmanager/maven/settings.xml` no repositório Git. Esse arquivo segue o esquema [Arquivo de configurações Maven](https://maven.apache.org/settings.html). Quando o processo de build do Cloud Manager for iniciado, o elemento `<servers>` nesse arquivo será mesclado ao arquivo `settings.xml` padrão fornecido pelo Cloud Manager. As IDs de servidor que começam com `adobe` e `cloud-manager` são consideradas reservadas e não devem ser usadas por servidores personalizados. As IDs de servidor **que não** correspondem a um desses prefixos ou a ID padrão `central` nunca serão espelhadas pelo Cloud Manager. Com esse arquivo no lugar, a ID do servidor seria referenciada de dentro de um elemento `<repository>` e/ou `<pluginRepository>` dentro do arquivo `pom.xml`. Geralmente, esses elementos `<repository>` e/ou `<pluginRepository>` ficariam contidos em um [perfil específico do Cloud Manager](#activating-maven-profiles-in-cloud-manager), embora isso não seja estritamente necessário.
 
@@ -199,7 +198,7 @@ Configure o maven-source-plugin no seu projeto:
         </plugin>
 ```
 
-### Implantando Fontes de Projeto {#deploying-project-sources}
+### Implantar fontes de projeto {#deploying-project-sources}
 
 É uma boa prática implantar toda a fonte do projeto junto com o binário em um repositório Maven, o que permite reconstruir o artefato exato.
 
