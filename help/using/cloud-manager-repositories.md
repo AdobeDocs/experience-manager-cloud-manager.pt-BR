@@ -1,9 +1,10 @@
 ---
 title: Repositórios do Cloud Manager
 description: Repositórios do Cloud Manager
-source-git-commit: 7bda34be143d2d7587e61c09dab642f3419dfad9
+exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
+source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -51,7 +52,7 @@ Os submódulos Git podem ser usados para mesclar o conteúdo de várias ramifica
 $ git submodule update --init
 ```
 
-Isso verificará cada submódulo no diretório apropriado. Essa técnica é uma alternativa em potencial a https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html para organizações que estão confortáveis com o uso de submódulos git e não desejam gerenciar um processo de mesclagem externo.
+Isso verificará cada submódulo no diretório apropriado. Essa técnica é uma alternativa potencial para [trabalhar com repositórios Git de várias origens](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html) para organizações que estão confortáveis em usar submódulos git e não desejam gerenciar um processo de mesclagem externo.
 
 Por exemplo, digamos que existam três repositórios, cada um contendo uma única ramificação chamada main . No repositório &quot;primário&quot;, ou seja, o configurado nos pipelines, a ramificação principal tem um arquivo pom.xml declarando os projetos contidos nos outros dois repositórios:
 
@@ -101,4 +102,3 @@ Ao usar submódulos git, lembre-se dos seguintes itens:
 * O URL do Git deve estar exatamente na sintaxe descrita acima. Por motivos de segurança, não incorpore credenciais nesses URLs.
 * Somente os submódulos na raiz da ramificação são suportados.
 * As referências de submódulos Git são armazenadas para confirmações Git específicas. Como resultado, quando alterações no repositório do submódulo são feitas, a confirmação referenciada precisa ser atualizada, por exemplo, usando `git submodule update --remote` .
-
