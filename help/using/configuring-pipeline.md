@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
+source-git-commit: e748383fb627ac6ecf69f1b6e313bb5710fbf444
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1379'
 ht-degree: 1%
 
 ---
@@ -215,13 +215,14 @@ Siga as etapas abaixo para editar o pipeline de não produção configurado:
 
 1. Selecione o pipeline de não produção e clique em **...**. Clique em **Editar**, conforme mostrado na figura abaixo.
 
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit1.png)
 
-1. A caixa de diálogo **Editar pipeline de produção** é exibida.
+1. A caixa de diálogo **Editar pipeline de produção** é exibida e permite atualizar o **Nome do pipeline**, **Repositório**, **Ramificação Git**, **Acionador de implantação** e **Comportamento de falha de métricas importantes**.
 
-   1. A guia **Configuration** permite atualizar o **Pipeline Name**, **Deployment Trigger** e **Important Metrics Failure Behavior**.
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit2.png)
 
-      >[!NOTE]
-      >Consulte [Adicionar e gerenciar repositórios](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
+   >[!NOTE]
+   >Consulte [Adicionar e gerenciar repositórios](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
 
 1. Clique em **Atualizar** depois de concluir a edição do pipeline de não produção.
