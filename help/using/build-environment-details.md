@@ -1,11 +1,11 @@
 ---
 title: Compreensão do ambiente de criação
 description: Siga esta página para saber mais sobre ambientes
-feature: Ambientes
+feature: Environments
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
+source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,7 @@ O Cloud Manager cria e testa seu código usando um ambiente de criação especia
 * O ambiente de build é baseado em Linux, derivado do Ubuntu 18.04.
 * O Apache Maven 3.6.0 está instalado.
 * As versões do Java instaladas são Oracle JDK 8u202, Azul Zulu 8u292, Oracle JDK 11.0.2 e Azul Zulu 11.0.11.
+* Por padrão, a variável de ambiente JAVA_HOME é definida como `/usr/lib/jvm/jdk1.8.0_202` que contém o Oracle JDK 8u202. Consulte a seção [Alternate Maven Execution JDK Version](#alternate-maven) para obter mais detalhes.
 * Há alguns pacotes de sistema adicionais instalados que são necessários:
 
    * bzip2
@@ -80,7 +81,7 @@ O [Plugin Maven Toolchain](https://maven.apache.org/plugins/maven-toolchains-plu
 
 Isso fará com que todos os plug-ins Maven com reconhecimento de cadeias de ferramentas usem o Oracle JDK, versão 11.
 
-Ao usar esse método, o próprio Maven ainda é executado usando o JDK padrão (Oracle 8). Portanto, verificar ou aplicar a versão do Java por meio de plug-ins como o [Plugin Apache Maven Enforcement](https://maven.apache.org/enforcer/maven-enforcer-plugin/) não funciona e esses plug-ins não devem ser usados.
+Ao usar esse método, o próprio Maven ainda é executado usando o JDK padrão (Oracle 8) e a variável de ambiente `JAVA_HOME` não é alterada. Portanto, verificar ou aplicar a versão do Java por meio de plug-ins como o [Plugin Apache Maven Enforcement](https://maven.apache.org/enforcer/maven-enforcer-plugin/) não funciona e esses plug-ins não devem ser usados.
 
 As combinações de fornecedor/versão disponíveis no momento são:
 
@@ -98,11 +99,7 @@ As combinações de fornecedor/versão disponíveis no momento são:
 
 Também é possível selecionar o Azul 8 ou o Azul 11 como JDK para toda a execução do Maven. Diferentemente das opções de cadeias de ferramentas, isso altera o JDK usado para todos os plug-ins, a menos que a configuração de cadeias de ferramentas também esteja definida, caso em que a configuração de cadeias de ferramentas ainda será aplicada para plug-ins Maven com reconhecimento de cadeias de ferramentas. Como resultado, verificar e aplicar a versão do Java usando o [Plugin Apache Maven Enforcement](https://maven.apache.org/enforcer/maven-enforcer-plugin/) funcionará.
 
-Para fazer isso, crie um arquivo chamado `.cloudmanager/java-version` na ramificação do repositório Git usada pelo pipeline. Esse arquivo pode ter o conteúdo 11 ou 8. Qualquer outro valor é ignorado. Se 11 for especificado, Azul 11 será usado. Se 8 for especificado, Azul 8 será usado.
-
->[!NOTE]
->Em uma versão futura do Cloud Manager, atualmente estimada para outubro de 2021, o JDK padrão será alterado e o padrão será Azul 11. Os projetos que não são compatíveis com o Java 11 devem criar esse arquivo com o conteúdo 8 o mais rápido possível para garantir que não sejam afetados por esse switch.
-
+Para fazer isso, crie um arquivo chamado `.cloudmanager/java-version` na ramificação do repositório Git usada pelo pipeline. Esse arquivo pode ter o conteúdo 11 ou 8. Qualquer outro valor é ignorado. Se 11 for especificado, Azul 11 será usado e a variável de ambiente JAVA_HOME será definida como `/usr/lib/jvm/jdk-11.0.11`. Se 8 for especificado, o Azul 8 será usado e a variável de ambiente JAVA_HOME será definida como `/usr/lib/jvm/jdk-8.0.292`.
 
 ## Variáveis de ambiente {#environment-variables}
 

@@ -1,18 +1,18 @@
 ---
 title: Implantar o código
-seo-title: Implantar o código
+seo-title: Deploy your Code
 description: Fornece uma visão geral sobre o processo de implantação no Cloud Manager
-seo-description: Saiba como implantar seu código depois de configurar o pipeline (repositório, ambiente e ambiente de teste)
+seo-description: Learn how to deploy your code once you have configured your pipeline (repository, environment, and testing environment)
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Implantação do código
+feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1220'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 ## Implantação do código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Para saber mais sobre a implantação do código para o Cloud Manager no AEM as a Cloud Service, consulte [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
+>Para saber mais sobre a implantação do código para o Cloud Manager em AEM as a Cloud Service, consulte [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
 
 Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
@@ -150,7 +150,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
    >[!NOTE]
    >É possível ignorar as alterações do Balanceador de Carga nas implantações de desenvolvimento e estágio, ou seja, desanexar e anexar etapas em pipelines não relacionados à produção, para ambientes do desenvolvedor e no pipeline de produção, para ambientes de preparo.
 
-### Implantação para Fase de Produção {#deployment-production-phase}
+### Implantação para fase de produção {#deployment-production-phase}
 
 O processo de implantação das topologias de produção é um pouco diferente para minimizar o impacto para AEM visitantes do Site.
 
@@ -164,3 +164,32 @@ As implantações de produção geralmente seguem as mesmas etapas descritas aci
 1. Implante AEM pacotes para publish2 e o pacote do dispatcher para o dispatcher2 em paralelo, liberar o cache do dispatcher.
 1. Coloque o dispatcher2 de volta no balanceador de carga.
 Esse processo continua até que a implantação tenha atingido todos os editores e dispatchers na topologia.
+
+## Modo de Execução do Pipeline de Emergência {#emergency-pipeline}
+
+Em situações críticas, os clientes do Adobe Managed Services podem precisar implantar alterações de código em seus ambientes de preparo e produção sem esperar que um ciclo de teste completo do Cloud Manager seja executado.
+
+Para lidar com essas situações, o pipeline de produção do Cloud Manager pode ser executado em um modo *emergência*. Quando este modo é utilizado, as etapas dos testes de segurança e desempenho não são executadas; todas as outras etapas, incluindo qualquer etapa de aprovação configurada, são executadas como no modo de execução normal do pipeline.
+
+>[!NOTE]
+>O recurso Modo de execução do pipeline de emergência é ativado de acordo com o programa pelos engenheiros de sucesso do cliente.
+
+### Usando o Modo de Execução do Pipeline de Emergência {#using-emergency-pipeline}
+
+Ao iniciar a execução de um pipeline de produção, se esse recurso tiver sido ativado, é possível iniciar a execução no modo normal ou de emergência na caixa de diálogo, conforme mostrado na figura abaixo.
+
+![](assets/execution-emergency1.png)
+
+Além disso, ao visualizar a página de detalhes da execução do pipeline para uma execução em modo de emergência, a navegação estrutural na parte superior da tela mostra um indicador de que o modo de emergência foi usado para essa execução específica.
+
+![](assets/execution-emergency2.png)
+
+
+A criação de uma execução de pipeline nesse modo de emergência também pode ser feita por meio da API do Cloud Manager ou da CLI. Para iniciar uma execução no Modo de emergência, envie uma solicitação PUT para o endpoint de execução do pipeline com o parâmetro de consulta `?pipelineExecutionMode=EMERGENCY` ou, ao usar a CLI:
+
+```
+$ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
+```
+
+>[!IMPORTANT]
+>O uso do sinalizador `--emergency` pode exigir atualização para a versão mais recente `aio-cli-plugin-cloudmanager`.
