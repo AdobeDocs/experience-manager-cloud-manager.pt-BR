@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: bdbee51ff0a61c2a72ff7ae3a742e2dd817c671a
+source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1491'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,9 @@ Siga estas etapas para configurar o comportamento e as preferências do pipeline
       * **Aprovar após a** Implantação do Estágio funciona de forma semelhante à aprovação antes da implantação de produção, mas ocorre imediatamente após a etapa de implantação do estágio, ou seja, antes que qualquer teste seja feito, em comparação com a aprovação antes da implantação de produção, que é feita após a conclusão de todos os testes.
 
       * **Ignorar Balanceador de Carga**
-   1. Selecione **Configurações do Dispatcher** para Preparo.
+   1. Selecione **Configurações do Dispatcher** para Preparo. Insira o caminho, selecione a ação de **Type** e clique em **Adicionar caminho**. Você pode especificar até 100 caminhos por ambiente.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
    1. Selecione **Opções de Implantação** para Produção. Agora você define os parâmetros que controlam a implantação de produção. As três opções disponíveis são as seguintes:
 
@@ -114,7 +116,9 @@ Siga estas etapas para configurar o comportamento e as preferências do pipeline
          >Se a opção **Scheduled** estiver selecionada, você poderá agendar a implantação de produção para o pipeline **depois de** a implantação do palco (e **Use GoLive Approval**, se isso tiver sido ativado) para aguardar a definição de um agendamento. O usuário também pode optar por executar a implantação de produção imediatamente.
          >
          >Consulte [Implante o Código](deploying-code.md) para definir o agendamento de implantação ou executar a produção imediatamente.
-   1. Configure as **Configurações do Dispatcher** para Produção.
+   1. Configure as **Configurações do Dispatcher** para Produção. Insira o caminho, selecione a ação de **Type** e clique em **Adicionar caminho**. Você pode especificar até 100 caminhos por ambiente.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
 
       Como um Gerenciador de implantação, você tem a oportunidade de configurar um conjunto de caminhos de conteúdo que serão **invalidados** ou **liberados** do cache do Dispatcher AEM para instâncias de publicação, enquanto configura ou edita o pipeline.
 
