@@ -1,27 +1,27 @@
 ---
 title: Configurar o pipeline de CI/CD
-seo-title: Configurar o pipeline de CI/CD
+seo-title: Configure your CI/CD Pipeline
 description: Siga esta página para configurar suas configurações de pipeline no Cloud Manager.
-seo-description: 'Antes de começar a implantar seu código, você deve definir suas configurações de pipeline no AEM Cloud Manager. '
+seo-description: Before you start to deploy your code, you must configure your pipeline settings from the AEM Cloud Manager.
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-feature: Pipeline de CI-CD
+feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
+source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 2%
+source-wordcount: '1378'
+ht-degree: 1%
 
 ---
 
 # Configurar o pipeline de CI/CD {#configure-your-ci-cd-pipeline}
 
 >[!NOTE]
->Para saber como configurar o pipeline de CI/CD para o Cloud Manager no AEM como um Cloud Service, consulte [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager).
+>Para saber como configurar o pipeline de CI/CD para o Cloud Manager AEM as a Cloud Service, consulte [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager).
 
 A página a seguir explica como configurar o **Pipeline**. Para analisar mais informações conceituais sobre como o pipeline funciona, consulte a [Visão geral do pipeline de CI/CD](ci-cd-pipeline.md).
 
@@ -133,7 +133,7 @@ Como um Gerenciador de implantação, você tem a oportunidade de configurar um 
 
 Você pode configurar um conjunto separado de caminhos para a implantação de Preparo e Produção. Se configuradas, essas ações de cache serão executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão AEM do Dispatcher - a invalidação executa uma invalidação de cache, de modo semelhante a quando o conteúdo é ativado do autor para publicação; flush executa uma exclusão de cache.
 
-Em geral, o uso da ação de invalidação é preferível, mas pode haver casos em que a liberação é necessária, especialmente ao usar AEM bibliotecas de clientes HTML.
+Em geral, o uso da ação de invalidação é preferível, mas pode haver casos em que a liberação é necessária, especialmente ao usar AEM bibliotecas de clientes do HTML.
 
 >[!NOTE]
 >
@@ -179,30 +179,53 @@ CI/CD Os pipelines de não produção são divididos em duas categorias, pipelin
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
+### Adicionar um pipeline de não produção {#add-non-production-pipeline}
+
 Na tela inicial, esses pipelines são listados em um novo cartão:
 
-1. Acesse o bloco **Pipelines de não produção** na tela inicial do Cloud Manager.
+1. Acesse o cartão **Pipelines** da tela inicial do Cloud Manager. Clique em **+Adicionar** e selecione **Adicionar pipeline de não produção**.
 
-   ![](/help/using/assets/non-prod-add.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
-1. Clique no botão **Add** para especificar o Nome do pipeline, o Tipo de pipeline e a Ramificação Git.
+1. **A caixa de diálogo Adicionar**  pipeline de não produção é exibida. Selecione o tipo de pipeline que deseja criar, seja **Pipeline de Qualidade de Código** ou **Pipeline de Implantação**.
 
-   Além disso, também é possível configurar o Acionador de implantação e o Comportamento de falha importante nas Opções de pipeline.
+   Além disso, você também pode configurar **Acionador de implantação** e **Comportamento de falha importante** em **Opções de implantação**. Clique em **Continuar**.
 
-   ![](assets/non-prod-pipe.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
-1. Clique em **Save** e o pipeline é mostrado no cartão na tela inicial com cinco ações:
 
-   * **Editar**  - permite editar as configurações de pipeline
-   * **Detalhes**  - exibe a última execução do pipeline (se houver um)
-   * **Build**  - navega até a página de execução, da qual o pipeline pode ser executado
-   * **Acessar informações do acordo de recompra**  - permite que o usuário obtenha as informações necessárias para acessar o repositório Git do Cloud Manager
+1. O pipeline de não produção recém-criado agora é exibido no cartão **Pipelines**.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add4.png)
+
+
+   O pipeline é mostrado no cartão na tela inicial com três ações, conforme mostrado abaixo:
+
+   * **Adicionar**  - permite adicionar um novo pipeline.
+   * **Acessar informações do acordo de recompra**  - permite que o usuário obtenha as informações necessárias para acessar o repositório Git do Cloud Manager.
    * **Saiba mais**  - navegue para entender o recurso de documentação do pipeline de CI/CD.
 
-      ![](assets/prod-one.png)
-   >[!NOTE]
-   >
-   >Enquanto o pipeline está em execução, a etapa atual é exibida e somente a ação **Details** está disponível.
+### Edição de um pipeline de não produção {#editing-nonprod-pipeline}
+
+Você pode editar as configurações de pipeline no cartão **Pipelines** da página **Visão geral do programa**.
+
+Siga as etapas abaixo para editar o pipeline de não produção configurado:
+
+1. Navegue até o cartão **Pipelines** da página **Visão geral do programa**.
+
+1. Selecione o pipeline de não produção e clique em **...**. Clique em **Editar**, conforme mostrado na figura abaixo.
+
+
+1. A caixa de diálogo **Editar pipeline de produção** é exibida.
+
+   1. A guia **Configuration** permite atualizar o **Pipeline Name**, **Deployment Trigger** e **Important Metrics Failure Behavior**.
+
+      >[!NOTE]
+      >Consulte [Adicionar e gerenciar repositórios](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
+
+
+1. Clique em **Atualizar** depois de concluir a edição do pipeline de não produção.
+
 
 ## Próximas etapas {#the-next-steps}
 
