@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
+source-git-commit: 9509f83f3cecbeaa81543e3c1f8ec33028009e6a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 1%
@@ -25,14 +25,6 @@ ht-degree: 1%
 
 A página a seguir explica como configurar o **Pipeline**. Para analisar mais informações conceituais sobre como o pipeline funciona, consulte a [Visão geral do pipeline de CI/CD](ci-cd-pipeline.md).
 
-## Tutorial em vídeo {#video-tutorial-one}
-
-### Configuração do pipeline no Cloud Manager {#config-pipeline-video}
-
-A configuração do pipeline de produção de CI/CD define o acionador que iniciará o pipeline, parâmetros que controlam a implantação de produção e parâmetros de teste de desempenho.
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 
 ## Como entender o fluxo {#understanding-the-flow}
 
@@ -43,6 +35,14 @@ O Gerenciador de implantação é responsável pela configuração do pipeline. 
 * definindo o acionador que iniciará o pipeline.
 * definição dos parâmetros que controlam a implantação de produção.
 * configuração dos parâmetros de teste de desempenho.
+
+## Tutorial em vídeo {#video-tutorial-one}
+
+### Configuração do pipeline no Cloud Manager {#config-pipeline-video}
+
+A configuração do pipeline de produção de CI/CD define o acionador que iniciará o pipeline, parâmetros que controlam a implantação de produção e parâmetros de teste de desempenho.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 ## Configuração do pipeline {#setting-up-the-pipeline}
 
@@ -56,7 +56,7 @@ Antes de começar a implantar seu código, você deve definir as configurações
 >
 >Você pode alterar as configurações do pipeline após a configuração inicial.
 
-## Adicionar um novo pipeline de produção da placa de pipeline {#adding-production-pipeline}
+### Adicionar um novo pipeline de produção da placa de pipeline {#adding-production-pipeline}
 
 Depois de configurar seu programa e ter pelo menos um ambiente usando a interface [!UICONTROL Cloud Manager], você estará pronto para adicionar um pipeline de produção.
 
