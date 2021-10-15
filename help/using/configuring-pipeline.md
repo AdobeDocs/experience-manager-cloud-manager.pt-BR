@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
+source-git-commit: 973fec504cd5f35435b10e3d1d28f3ba20ff4ab9
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -158,29 +158,19 @@ Siga as etapas abaixo para editar o pipeline configurado:
 
 1. Clique em **...** no cartão **Pipelines** e clique em **Editar**, conforme mostrado na figura abaixo.
 
+   ![](/help/using/assets/configure-pipelines/edit-prod1.png)
 
 1. A caixa de diálogo **Editar pipeline de produção** é exibida.
 
-   1. A guia **Configuration** permite atualizar o **Pipeline Name**, **Deployment Trigger** e **Important Metrics Failure Behavior**.
+   1. A guia **Configuração** permite atualizar o **Nome do pipeline**, **Repositório**, **Ramificação Git**, **Acionador de implantação**, **Comportamento de falha de métricas importantes** , **Opções de Implantação** e **Configurações do Dispatcher**.
 
       >[!NOTE]
       >Consulte [Adicionar e gerenciar repositórios](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
 
-   1. A guia **Source** fornece uma opção para marcar ou desmarcar **Pause antes de implantar nas opções Production** e **Scheduled** em **Production Deployment Options**.
-
-
-   1. A opção **Auditoria de experiência** permite atualizar ou adicionar novas páginas.
-
+   1. A guia **Teste de preparo** fornece uma opção para selecionar novamente suas opções de **Entrega de conteúdo de sites/Peso de carga distribuído** e **Distribuição de teste de desempenho de ativos**.
 
 1. Clique em **Atualizar** depois de concluir a edição do pipeline.
-
-1. Clique em **Configurar pipeline** para configurar seu pipeline.
-
-   ![](assets/Setup-Pipeline.png)
-
-
-
 
 ## Pipelines somente para não-produção e qualidade de código
 
