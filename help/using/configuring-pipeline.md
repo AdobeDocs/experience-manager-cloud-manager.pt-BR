@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
+source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1834'
 ht-degree: 1%
 
 ---
@@ -199,6 +199,9 @@ Você pode excluir o pipeline de produção do cartão Pipelines:
 
    ![](/help/using/assets/configure-pipelines/prod-delete.png)
 
+   >[!NOTE]
+   >Um usuário na função Deployment Manager agora pode excluir o pipeline de Produção de maneira automatizada por meio da opção **Delete** do cartão Pipeline.
+
 ## Pipelines somente para não-produção e qualidade de código
 
 Além do pipeline principal que é implantado na fase e na produção, os clientes podem configurar pipelines adicionais, conhecidos como **Non-Production Pipelines**. Esses pipelines sempre executam as etapas de criação e qualidade do código. Como opção, também podem implantar no ambiente do Adobe Managed Services.
@@ -269,6 +272,28 @@ Siga as etapas abaixo para editar o pipeline de não produção configurado:
 
 
 1. Clique em **Atualizar** depois de concluir a edição do pipeline de não produção.
+
+### Ações adicionais do pipeline de não produção {#additional-nonprod-actions}
+
+#### Execução de um pipeline de não produção {#run-nonprod}
+
+Você pode executar o pipeline de produção no cartão Pipelines :
+
+1. Navegue até o cartão **Pipelines** da página **Visão geral do programa**.
+
+1. Clique em **...** no cartão **Pipelines** e clique em **Executar**, conforme mostrado na figura abaixo.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-run1.png)
+
+#### Excluindo um pipeline de não produção {#delete-nonprod}
+
+Você pode excluir o pipeline de produção do cartão Pipelines:
+
+1. Navegue até o cartão **Pipelines** da página **Visão geral do programa**.
+
+1. Clique em **...** no cartão **Pipelines** e clique em **Delete**, conforme mostrado na figura abaixo.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-delete.png)
 
 
 ## Próximas etapas {#the-next-steps}
