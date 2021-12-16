@@ -1,23 +1,21 @@
 ---
 title: Notas da versão 2021.4.0
 description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.4.0
-feature: Informações da versão
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+feature: Release Information
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '183'
+ht-degree: 6%
 
 ---
 
 # Notas da versão 2021.4.0 {#release-notes-for}
 
-A seção a seguir descreve as Notas de versão gerais para [!UICONTROL Cloud Manager] Versão 2021.4.0.
+A seção a seguir descreve as Notas de versão gerais de [!UICONTROL Cloud Manager] Versão 2021.4.0.
 
 ## Data de lançamento {#release-date}
 
-A Data de lançamento da versão 2021.4.0 é 8 de abril de 2021.[!UICONTROL Cloud Manager]
+A data de lançamento para [!UICONTROL Cloud Manager] A versão 2021.4.0 é 8 de abril de 2021.
 
 ## Novidades {#whats-new}
 
@@ -25,7 +23,7 @@ A Data de lançamento da versão 2021.4.0 é 8 de abril de 2021.[!UICONTROL Clou
 
 * O botão Gerenciar Git é exibido no cartão Pipelines, mesmo quando nenhum pipeline foi configurado.
 
-* Durante a etapa de implantação da página de execução do pipeline, o usuário poderá ver as etapas de implantação concluídas e futuras, além da etapa atual na interface do usuário para o estado *Em andamento*.
+* Durante a etapa de implantação da página de execução do pipeline, o usuário poderá ver as etapas de implantação concluídas e futuras, além da etapa atual na interface do usuário para *Em Andamento* estado.
 
 * A versão do arquétipo de projeto AEM usado pelo Cloud Manager foi atualizada para a versão 27.
 
@@ -35,8 +33,8 @@ A Data de lançamento da versão 2021.4.0 é 8 de abril de 2021.[!UICONTROL Clou
 
 ## Correções de erros {#bug-fixes}
 
-* Erros raros e transitórios que podem ocorrer na etapa *Teste de ativos* no pipeline de produção.
+* Erros raros e transitórios que podem ocorrer em *Teste de ativos* no pipeline de produção.
 
 * Uma barra à direita no pipeline de produção Load Test estava causando uma falha 404.
 
-* A verificação `Runmode` estava produzindo falsos positivos em nós que não eram pastas.
+* O `Runmode` check estava produzindo falsos positivos em nós que não eram pastas.

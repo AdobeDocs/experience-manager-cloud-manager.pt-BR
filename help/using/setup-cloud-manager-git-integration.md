@@ -1,21 +1,20 @@
 ---
 title: Integração do Git com o Adobe Cloud Manager
 description: Uma série de vídeo que analisa a configuração e integração de um repositório Git gerenciado pelo cliente (no local) com o Adobe Cloud Manager.
-seo-title: Integração do Git com o Adobe Cloud Manager
-seo-description: Uma série de vídeo que analisa a configuração e integração de um repositório Git gerenciado pelo cliente (no local) com o Adobe Cloud Manager.
+seo-title: Git Integration with Adobe Cloud Manager
+seo-description: A video series that walks through the set up and integration of a customer-managed (on-premise) git repository with Adobe Cloud Manager.
 feature: Git Repositories
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
+source-git-commit: 0bc3e775ef2432cdb8d3bd5470953c07c6628148
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 5%
+source-wordcount: '370'
+ht-degree: 4%
 
 ---
 
-
 # Integração do Git com o Adobe Cloud Manager
 
-O Adobe Cloud Manager vem provisionado com um único repositório Git usado para implantar código usando os pipelines de CI/CD do Cloud Manager. Os clientes podem usar o repositório Git do Cloud Manager imediatamente. Os clientes também têm a opção de integrar um repositório Git no local ou **gerenciado pelo cliente** com o Cloud Manager.
+O Adobe Cloud Manager vem provisionado com um único repositório Git usado para implantar código usando os pipelines de CI/CD do Cloud Manager. Os clientes podem usar o repositório Git do Cloud Manager imediatamente. Os clientes também têm a opção de integrar um **gerenciado pelo cliente** repositório Git com o Cloud Manager.
 
 ## Visão geral da integração do Git
 
@@ -29,7 +28,7 @@ Esta série de vídeos explora vários casos de uso quando se trata de integrar 
 * [Implantação de produção](#production-deployment)
 * [Sincronização das tags de versão](#sync-tags)
 
-Para obter uma visão geral completa, consulte o [Guia do Usuário do Cloud Manager](https://docs.adobe.com/content/help/pt-BR/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html). A série de vídeos assume um conhecimento básico do gerenciamento de git e do controle de origem. Consulte os [recursos adicionais abaixo](#additional-resources) para obter mais detalhes sobre o git.
+Para obter uma visão geral completa, consulte o [Guia do usuário do Cloud Manager.](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=pt-BR) A série de vídeos assume um conhecimento básico do gerenciamento de git e do controle de origem. Consulte a [recursos adicionais abaixo](#additional-resources) para obter mais detalhes sobre git.
 
 >[!NOTE]
 >
@@ -43,11 +42,11 @@ Primeiras etapas para sincronizar um repositório Git gerenciado pelo cliente co
 
 ## Estratégia básica de ramificação {#branching-strategy}
 
-Defina uma estratégia básica de ramificação para aproveitar os [pipelines de produção e não produção do Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html).
+Defina uma estratégia básica de ramificação para aproveitar os [Condutas de produção e de não produção.](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
-## Desenvolvimento de Ramificação de Recursos {#feature-development}
+## Desenvolvimento de ramificação de recursos {#feature-development}
 
 Use uma ramificação de recursos para isolar alterações de código em um repositório Git gerenciado pelo cliente e sincronizar com o repositório Git do Cloud Manager, a fim de usar um pipeline de não produção para testes de qualidade e validação de código.
 
@@ -59,15 +58,15 @@ Prepare o código para uma versão de produção em um repositório Git gerencia
 
 >[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12)
 
-## Sincronizando tags de versão {#sync-tags}
+## Sincronização das tags de versão {#sync-tags}
 
-Sincronize as tags de versão de um repositório Git do Cloud Manager em um repositório Git gerenciado pelo cliente para fornecer visibilidade sobre qual código foi implantado em ambientes de preparo e produção.
+Sincronize tags de versão de um repositório Git do Cloud Manager em um repositório Git gerenciado pelo cliente para fornecer visibilidade sobre qual código foi implantado em ambientes de preparo e produção.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12)
 
 ## Recursos adicionais {#additional-resources}
 
-* [Documentação do Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Documentação do Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [Recursos do GitHub](https://try.github.io)
 * [Atlassiano Git Tutorials](https://www.atlassian.com/git/tutorials/what-is-version-control)
 * [Folha de características do Git](https://education.github.com/git-cheat-sheet-education.pdf)
