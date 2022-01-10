@@ -2,9 +2,10 @@
 title: Notas da versão 2021.12.0
 description: Estas são as notas de versão do Cloud Manager versão 2021.12.0.
 feature: Release Information
-source-git-commit: 910def6d82c09e0220a50a3cb34a61f2c7284cb9
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: 61f2d1e0882b752d1a1d5e62f9c028aa71941efe
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '265'
 ht-degree: 3%
 
 ---
@@ -30,6 +31,7 @@ A data de lançamento de [!UICONTROL Cloud Manager] a versão 2021.12.0 é 16 de
 * Um usuário com a função Deployment Manager agora pode iniciar o assistente de criação de Projeto/Ramificação para um repositório sem ramificações no menu de ação na página Repositórios.
 * O Gerenciador de implantação, que está no fluxo de trabalho de adicionar ou editar pipeline, agora é informado sobre como criar uma ramificação ou projeto se o repositório selecionado não tiver ramificações.
 * Na janela Editar pipeline de produção, quando houver mais de um ambiente de estágio para produção, uma lista suspensa para seleção de ambiente estará disponível.
+* A versão do AEM Project Archetype usada pelo Cloud Manager foi atualizada para a versão 32.
 
 ## Correções de erros {#bug-fixes}
 
