@@ -1,20 +1,19 @@
 ---
 title: Pipeline de CI/CD
-seo-title: Pipeline de CI/CD
+seo-title: CI/CD Pipeline
 description: Visão geral do pipeline de CI/CD, que lida com implantações para preparo e produção no Cloud Manager
-seo-description: Siga esta seção para saber mais sobre o pipeline de CI/CD, que lida com implantações para preparo e produção no Cloud Manager
+seo-description: Follow this section to learn about the CI/CD pipeline, which handles deployments to stage and production in Cloud Manager
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 feature: CI-CD Pipeline
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '533'
 ht-degree: 1%
 
 ---
-
 
 # Pipeline de CI/CD {#ci-cd-pipeline}
 
@@ -41,13 +40,13 @@ A tabela a seguir detalha o que está acontecendo durante cada etapa do processo
 | 5. Artefato(s) de versão armazenado(s) | Os artefatos de versão são armazenados para uso posterior nas etapas de implantação. |
 | 6. Implantação automática de artefatos no AMS AEM Estágio | O artefato de versão é implantado no ambiente de preparo. |
 | 7. Acionar testes automatizados | [!UICONTROL Cloud Manager] executa os testes de desempenho e segurança no artefato. |
-| 8. Implantação do acionador de produção | Após a conclusão dos testes automatizados, [!UICONTROL Cloud Manager] inicia a implantação para produção. |
+| 8. Implantação do acionador de produção | Após a conclusão dos testes automatizados [!UICONTROL Cloud Manager] inicia a implantação para produção. |
 | 9. [!UICONTROL Cloud Manager] obtém Artefatos para Implantar | [!UICONTROL Cloud Manager] extrai os artefatos de versão armazenados. |
 | 10. Aplique artefatos à produção | Os artefatos da versão são implantados no ambiente Produção. |
 
 ### Como configurar um pipeline de CI/CD {#how-to-setup-a-ci-cd-pipeline}
 
-Para saber mais sobre a configuração de pipeline, consulte [configurando pipeline](configuring-pipeline.md).
+Para saber mais sobre a configuração de pipeline, consulte os documentos [Configuração de pipeline de produção](configuring-production-pipelines.md) e [Configuração de pipeline de não produção.](configuring-non-production-pipelines.md)
 
 ## Portas de qualidade {#quality-gates}
 
@@ -59,14 +58,14 @@ O pipeline de CI/CD fornece portas de qualidade ou critérios de aceitação, qu
 
 Para cada uma dessas portas, há três níveis de problemas identificados:
 
-* **Crítico**  - problemas identificados pela porta que causam uma falha imediata do pipeline.
-* **Importante**  - problemas identificados pela porta que fazem com que o pipeline entre em um estado pausado. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso o pipeline continue, ou pode aceitar os problemas, caso o pipeline pare com uma falha.
-* **Informações**  - questões identificadas pela porta que são fornecidas apenas para fins informativos e não têm impacto na execução do pipeline.
+* **Crítico** - problemas identificados pela porta que causem uma falha imediata do gasoduto.
+* **Importante** - problemas identificados pela porta que fazem com que o pipeline entre em pausa. Um gerente de implantação, gerente de projeto ou proprietário de negócios pode substituir os problemas, caso o pipeline continue, ou pode aceitar os problemas, caso o pipeline pare com uma falha.
+* **Informações** - questões identificadas pela porta, que são fornecidas exclusivamente para fins informativos e não têm impacto na execução do pipeline.
 
 Este é um exemplo de uma verificação de código com problemas identificados para o código:
 
 ![](assets/quality-gate-failed.png)
 
-### Como configurar portas {#how-to-setup-gates}
+### Como configurar portões {#how-to-setup-gates}
 
-Consulte **[Configuração de portões](configuring-pipeline.md)** para obter detalhes sobre a configuração do código, da qualidade e das portas de desempenho.
+Consulte o documento [Configuração de pipeline de produção](configuring-production-pipelines.md) para obter detalhes sobre como configurar seu código, qualidade e portões de desempenho.

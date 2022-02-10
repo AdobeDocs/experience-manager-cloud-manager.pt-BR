@@ -2,11 +2,10 @@
 title: Notas da versão 2021.11.0
 description: Siga esta página para obter informações sobre o Cloud Manager Versão 2021.11.0
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6852df51d4b9b4947f1d5ce0b5a284bef94d0589
+source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 3%
+ht-degree: 75%
 
 ---
 
@@ -24,15 +23,15 @@ A próxima versão está planejada para 16 de dezembro de 2021.
 
 ## Novidades {#whats-new}
 
-* A ID de confirmação de Git agora será exibida nos detalhes de execução do pipeline, facilitando o rastreamento do código que foi criado.
+* A Git Commit ID agora será exibida nos detalhes de execução do pipeline, facilitando o rastreamento do código que foi criado.
 
-* O `x-request-id` o cabeçalho de resposta agora está visível no Reprodução da API em [www.adobe.io](https://www.adobe.io/). Esse cabeçalho é útil ao enviar problemas de atendimento ao cliente para solução de problemas.
+* O cabeçalho de resposta `x-request-id` agora está visível na API Playground em [www.adobe.io](https://www.adobe.io/). Esse cabeçalho é útil ao enviar problemas de atendimento ao cliente para solução de problemas.
 
 * Como usuário, vejo que o pipeline card com zero pipelines me fornece a orientação apropriada.
 
-* Uma nova Página de atividade agora está disponível, onde atividades como pipeline e execuções de código podem ser visualizadas junto com seus detalhes associados. Com o tempo, as atividades listadas nesta página se expanderão no escopo junto com os detalhes fornecidos.
+* Uma nova Página de atividade agora está disponível, em que atividades como pipeline e execuções de código podem ser visualizadas junto a seus detalhes associados. Com o tempo, as atividades listadas nesta página se expandirão em escopo junto com os detalhes fornecidos.
 
-* Uma nova página Pipelines com uma oferta de status on-hover para facilitar a visualização do resumo dos detalhes está disponível. As execuções de pipeline podem ser visualizadas junto com seus detalhes associados.
+* Uma nova página Pipelines, com um popover de status ao passar o mouse para facilitar a visualização do resumo dos detalhes, está disponível. As execuções de pipeline podem ser visualizadas junto com seus detalhes associados.
 
 * A API Editar pipeline agora oferece suporte à configuração da invalidação do dispatcher e aos caminhos de liberação.
 
@@ -40,18 +39,18 @@ A próxima versão está planejada para 16 de dezembro de 2021.
 
 * Uma otimização no processo de varredura do OakPal foi introduzida para pacotes grandes.
 
-* O arquivo CSV do problema de qualidade agora contém o carimbo de data e hora de cada problema de qualidade.
+* O arquivo CSV de problemas de qualidade agora contém o carimbo de data e hora de cada problema de qualidade.
 
 * O botão Gerenciar na página Ambientes não estará mais visível na interface do usuário.
 
 ## Correções de erros {#bug-fixes}
 
-* Certas configurações de build não ortodoxas resultaram no armazenamento de arquivos desnecessários no cache de artefatos Maven do pipeline que resultaram em I/O de rede irrelevante ao iniciar e parar o contêiner de compilação.
+* Certas configurações de build não ortodoxas resultaram no armazenamento de arquivos desnecessários no cache de artefatos do Maven no pipeline, o que resultou em I/O de rede irrelevantes ao iniciar e parar o contêiner de compilação.
 
 * A API do PATCH de pipeline falha se a fase de implantação não existir.
 
-* O `ClientlibProxyResourceCheck` a regra de qualidade gerava problemas de falso positivo quando havia bibliotecas de clientes com caminhos de base comuns.
+* A regra de qualidade `ClientlibProxyResourceCheck` gerava problemas de falso positivo quando havia bibliotecas de clientes com caminhos de base comuns.
 
-* Mensagem de erro quando o número máximo de repositórios foi atingido não especificou o motivo do erro.
+* A mensagem de erro quando o número máximo de repositórios era atingido não especificava o motivo do erro.
 
-* Em casos raros, os pipelines estavam falhando devido ao tratamento inadequado de tentativas de determinados códigos de resposta.
+* Em casos raros, os pipelines estavam falhando devido ao manuseio de novas tentativas inadequado de determinados códigos de resposta.

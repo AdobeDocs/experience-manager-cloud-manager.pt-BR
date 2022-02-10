@@ -1,14 +1,14 @@
 ---
-title: Configurar o programa
-seo-title: Configurar o programa
+title: Configurar seu programa
+seo-title: Set Up Your Program
 description: Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do programa.
-seo-description: 'Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do Adobe AEM Cloud Manager. Isso envolve definir a descrição do programa e os KPIs que serão usados para testes de desempenho. '
-feature: Introdução
+seo-description: After onboarding, the business owner will need to do some initial setup of Adobe AEM Cloud Manager. This involves setting the program description and defining the KPIs which will be used for performance testing.
+feature: Getting Started
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 71a6f2709efb9c4c3831deaa1ce89d93e30b775c
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 2%
+source-wordcount: '687'
+ht-degree: 1%
 
 ---
 
@@ -19,15 +19,15 @@ Após a integração, o proprietário da empresa precisará concluir uma configu
 Os KPIs definidos servem como uma linha de base para o teste de desempenho, que é transmitido cada vez que o pipeline é executado.
 
 >[!NOTE]
->Os KPIs definidos são medidos em testes executados no ambiente **stage**. Normalmente, esses KPIs são reduzidos para se adequarem aos recursos do ambiente de preparo.
->Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em sua produção **Environment** e ter quatro servidores de dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto (supondo que seu ambiente de estágio consista em apenas um único par de dispatcher/servidor de publicação).
->Além disso, muitos usuários terão uma Rede de entrega de conteúdo (CDN), como Akamai ou CloudFront em frente ao ambiente de produção. Como [!UICONTROL Cloud Manager] testa diretamente o ambiente de preparo, o KPI deve refletir somente o tráfego esperado para passar pelo CDN, ou seja, o cache está faltando. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
+>Os KPIs definidos são medidos em testes executados no **estágio** ambiente. Normalmente, esses KPIs são reduzidos para se adequarem aos recursos do ambiente de preparo.
+>Por exemplo, um usuário espera uma média de 1000 exibições de página por minuto em sua produção **Ambiente** e ter quatro servidores de dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto (supondo que seu ambiente de preparo consista em apenas um único par de dispatcher/servidor de publicação).
+>Além disso, muitos usuários terão uma Rede de entrega de conteúdo (CDN), como Akamai ou CloudFront em frente ao ambiente de produção. Since [!UICONTROL Cloud Manager] Testa diretamente o ambiente de preparo, o KPI deve refletir apenas o tráfego esperado para passar pelo CDN, ou seja, o cache não é utilizado. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
 
 ## Usando [!UICONTROL Cloud Manager] para configurar o programa {#using-cloud-manager-to-setup-your-program}
 
 Siga as etapas abaixo para configurar o programa e definir KPIs:
 
-1. Clique em **Programa de Configuração** para iniciar o processo de configuração em [!UICONTROL Cloud Manager].
+1. Clique em **Programa de configuração** para iniciar o processo de configuração em [!UICONTROL Cloud Manager].
 
    ![image1](assets/set-up-program/setup1.png)
 
@@ -37,11 +37,11 @@ Siga as etapas abaixo para configurar o programa e definir KPIs:
    ![image1](assets/set-up-program/setup2.png)
 
 
-1. A tela **Programa de instalação** exibe as Informações de Editar programa.
+1. O **Programa de configuração** exibe Editar informações do programa.
 
-1. Você verá três opções como **Geral**, **KPI** e **Provisionamento**.
+1. Você verá três opções como **Geral**, **KPI** e **Provisionamento** guia .
 
-1. Na guia **General**, carregue uma miniatura no programa. Você também pode adicionar uma descrição relevante ao seu programa.
+1. Em **Geral** carregue uma miniatura em seu programa. Você também pode adicionar uma descrição relevante ao seu programa.
 
    ![](assets/Setup_Program-General.png)
 
@@ -66,37 +66,37 @@ Durante a configuração do programa, os KPIs específicos dos ativos são espec
 
    ![](assets/Setup_Program-KPIs.png)
 
-1. Em **Provisionamento**, você pode visualizar ou editar a configuração de provisionamento para ambientes de produção e não relacionados à produção em seu programa. Você verá **Autoscale está em**, se o autodimensionamento tiver sido ativado para o programa.
+1. Em **Provisionamento**, você pode exibir ou editar a configuração de provisionamento para ambientes de produção e não relacionados à produção em seu programa. Você verá **A Dimensionamento Automático está ativada**, se o dimensionamento automático tiver sido ativado para o programa.
 
    >[!NOTE]
    >O recurso de dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas do cliente.
 
    ![](assets/Setup_Program-Provisioning.png)
 
-1. Clique em **Save** para concluir o assistente de configuração.
+1. Clique em **Salvar** para concluir o assistente de configuração.
 
    >[!NOTE]
    >Você sempre poderá editar o programa depois que o programa inicial já tiver sido configurado. Siga as etapas abaixo para obter mais detalhes.
 
 ## Editar um programa {#editing-program}
 
-1. Navegue até o programa na tela inicial do **Cloud Manager**.
+1. Navegue até o programa a partir do **Cloud Manager** tela inicial.
 
-1. Clique em **Editar programa** para atualizar ou modificar seu programa a partir da página **Visão geral**, conforme mostrado na figura abaixo.
+1. Clique em **Editar programa** para atualizar ou modificar seu programa do **Visão geral** conforme mostrado na figura abaixo.
 
    ![](assets/set-up-program/edit-program1.png)
 
-1. A tela **Editar Programa** é exibida e permite que você atualize ou modifique seu programa.
+1. O **Editar programa** exibições de tela que permitem atualizar ou modificar o programa.
 
-   Você pode atualizar a descrição do programa na guia **General**.
+   Você pode atualizar a descrição do programa no **Geral** guia .
 
    ![](assets/set-up-program/edit-program-general.png)
 
-   Navegue até a guia **KPI** para atualizar as informações no AEM Sites e no Assets.
+   Navegar para **KPI** para atualizar informações sobre AEM Sites e Assets.
 
    ![](assets/set-up-program/edit-program-kpi.png)
 
-   Além disso, você pode navegar até a guia **Provisioning** para editar a configuração de provisionamento para ambientes de produção e não-produção em seu programa.
+   Além disso, você pode navegar para **Provisionamento** para editar a configuração de provisionamento para ambientes de produção e não-produção em seu programa.
 
    ![](assets/set-up-program/edit-program-provision.png)
 
@@ -106,4 +106,4 @@ Durante a configuração do programa, os KPIs específicos dos ativos são espec
 
 Se você já tiver configurado o pipeline, a próxima execução levará em conta as configurações atualizadas. Se ainda não tiver configurado o pipeline, siga as etapas para configurar seu pipeline primeiro.
 
-Consulte [Configurar o pipeline de CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html) para configurar o pipeline.
+Consulte os documentos [Configuração de pipeline de produção](configuring-production-pipelines.md) e [Configuração de pipeline de não produção](configuring-non-production-pipelines.md) para configurar o pipeline.

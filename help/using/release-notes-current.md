@@ -1,18 +1,18 @@
 ---
-title: Notas da versão 2022.01.0
-description: Estas são as notas de versão do Cloud Manager versão 2022.01.0.
+title: Notas da versão 2022.2.0
+description: Estas são as notas de versão do Cloud Manager versão 2022.2.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ebbbbdca2bfd834bc3dc0ff06ffb318df42713ee
+source-git-commit: ae4cc3e8056e6ac317628e997271b4b01c7251c3
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '131'
 ht-degree: 6%
 
 ---
 
-# Notas de versão do Cloud Manager versão 2021.12.0 {#release-notes}
+# Notas de versão do Cloud Manager versão 2022.2.0 {#release-notes}
 
-A seção a seguir descreve as notas de versão gerais de [!UICONTROL Cloud Manager] versão 2022.01.0.
+A seção a seguir descreve as notas de versão gerais de [!UICONTROL Cloud Manager] versão 2022.2.0.
 
 >[!NOTE]
 >
@@ -20,14 +20,13 @@ A seção a seguir descreve as notas de versão gerais de [!UICONTROL Cloud Mana
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.01.0 é 20 de janeiro de 2022. A próxima versão está planejada para 10 de fevereiro de 2022.
+A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.2.0 é 10 de fevereiro de 2022. A próxima versão está prevista para 10 de março de 2022.
 
 ## Novidades {#whats-new}
 
-* O Cloud Manager [evite reconstruir a base de código quando detecta que a mesma confirmação de git é usada](/help/using/setting-up-project.md#build-artifact-reuse) em várias execuções completas de pipeline de pilha.
-* Após gerar uma senha git, a data de expiração será exibida.
+* Uma experiência atualizada de página de aterrissagem do Cloud Manager oferece navegação aprimorada, fácil alternância entre exibições de grade/blocos e pop-ups para resumo rápido do programa.
 
 ## Correções de erros {#bug-fixes}
 
-* Ocorrências pouco frequentes de falhas de pipeline falso positivo foram endereçadas.
-* Para programas com apenas um repositório, a tela de execução do pipeline agora exibirá o nome do repositório.
+* As execuções de reversão agora são diferenciadas corretamente das execuções completas de pipeline de pilha.
+* As senhas antigas do repositório Git agora são sempre invalidadas quando uma nova senha é gerada.
