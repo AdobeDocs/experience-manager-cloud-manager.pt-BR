@@ -1,17 +1,18 @@
 ---
-title: Notas da versão 2022.01.0
-description: Estas são as notas de versão do Cloud Manager versão 2022.01.0.
+title: Notas de versão 2022.1.0
+description: Estas são as notas de versão do Cloud Manager versão 2022.1.0.
 feature: Release Information
-source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
+exl-id: 9cc40326-cb8e-415f-b2ad-937d42189ee3
+source-git-commit: 797731ff0f9a499fe359d2e4e6044877fdcac702
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 6%
+ht-degree: 24%
 
 ---
 
-# Notas de versão do Cloud Manager versão 2021.12.0 {#release-notes}
+# Notas de versão do Cloud Manager versão 2022.1.0 {#release-notes}
 
-A seção a seguir descreve as notas de versão gerais de [!UICONTROL Cloud Manager] versão 2022.01.0.
+A seção a seguir descreve as notas de versão gerais de [!UICONTROL Cloud Manager] versão 2022.1.0.
 
 >[!NOTE]
 >
@@ -19,12 +20,12 @@ A seção a seguir descreve as notas de versão gerais de [!UICONTROL Cloud Mana
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.01.0 é 20 de janeiro de 2022. A próxima versão está planejada para 10 de fevereiro de 2022.
+A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.1.0 é 20 de janeiro de 2022. A próxima versão está planejada para 10 de fevereiro de 2022.
 
 ## Novidades {#whats-new}
 
 * O Cloud Manager [evite reconstruir a base de código quando detecta que a mesma confirmação de git é usada](/help/using/setting-up-project.md#build-artifact-reuse) em várias execuções completas de pipeline de pilha.
-* Após gerar uma senha git, a data de expiração será exibida.
+* Após gerar uma senha Git, a data de expiração será exibida.
 
 ## Correções de erros {#bug-fixes}
 
