@@ -2,13 +2,13 @@
 title: Notas da versão para 2022.2.0
 description: Estas são as notas de versão do Cloud Manager versão 2022.2.0.
 feature: Release Information
-source-git-commit: 845724c9dec08c043aa305a5c9591d315995cbe7
+exl-id: c13ee200-197e-4855-a08c-99d36b471bb6
+source-git-commit: d074bc1af7e681377ec5b961db23f0bde5d1aaca
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '139'
 ht-degree: 6%
 
 ---
-
 
 # Notas de versão do Cloud Manager versão 2022.2.0 {#release-notes}
 
@@ -24,7 +24,10 @@ A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.2.0 é 10 de 
 
 ## Novidades {#whats-new}
 
-* Uma experiência atualizada de página de aterrissagem do Cloud Manager oferece navegação aprimorada, fácil alternância entre exibições de grade/blocos e pop-ups para resumo rápido do programa.
+Veja as novidades da versão de fevereiro:
+
+* (Somente Cloud Service) O acesso ao registro do Ambiente de AEM pode ser feito usando a função Desenvolvedor.
+* Agora você pode desativar a métrica crítica de confiabilidade_classificação.
 
 ## Correções de erros {#bug-fixes}
 
