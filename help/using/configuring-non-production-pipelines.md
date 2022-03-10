@@ -1,13 +1,13 @@
 ---
 title: Configuração de pipeline de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
-source-git-commit: 205113735cc743e11e140b1161413002844f5b79
+exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
+source-git-commit: 154b95e1b43717097b9ae9076a15792517dd613d
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
-
 
 # Configuração de pipeline de não produção {#configuring-non-production-pipelines}
 
@@ -71,7 +71,7 @@ Depois de configurar seu programa e ter pelo menos um ambiente usando a interfac
 
       * **Manual** - Use essa opção para iniciar manualmente o pipeline.
       * **Nas alterações no Git** - Essas opções iniciam o pipeline sempre que as confirmações forem adicionadas à ramificação git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
-   1. Em **Comportamento de falhas importantes da métrica**, defina o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade.
+   1. Para pipelines de implantação, em **Comportamento de falhas importantes da métrica**, defina o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade.
 
       * **Perguntar sempre** - Esta é a configuração padrão e requer intervenção manual em qualquer falha importante.
       * **Falhar imediatamente** - Se selecionado, o pipeline será cancelado sempre que ocorrer uma falha importante. Isso é basicamente emular um usuário que rejeita manualmente cada falha.
