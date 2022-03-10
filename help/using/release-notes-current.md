@@ -3,10 +3,10 @@ title: Notas da versão para 2022.3.0
 description: Estas são as notas de versão do Cloud Manager versão 2022.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0d14adda454889eebbb0a875978ceeaa5ee4f7ea
+source-git-commit: 79b2729814af483844d095ed8d6db6cead2ceaf7
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 4%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
@@ -26,13 +26,14 @@ A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.3.0 é 10 de 
 ## Novidades {#what-is-new}
 
 * (Somente Cloud Service) O acesso ao registro do Ambiente de AEM pode ser feito usando a função Desenvolvedor.
-* O [`reliability_rating` métrica crítica](understand-your-test-results.md) foi desativado.
+* (AMS): As solicitações HTTP de saída dos testes de ativos agora vêm de um intervalo IP fixo.
 
 
 ## Correções de erros {#bug-fixes}
 
-* [O **Ignorar alterações no Balanceador de Carga** opção](configuring-production-pipelines.md#adding-production-pipeline) pode ser desativado corretamente.
-* [O **Ignorar alterações no Balanceador de Carga** opção](configuring-production-pipelines.md#adding-production-pipeline) agora é exibido para o workflow editar pipeline de implantação .
-* Um subconjunto de repositórios git criados manualmente tinha valores de nome incorretos que afetavam [o recurso de reuso do artefato de compilação.](setting-up-project.md#build-artifact-reuse) Os nomes desses repositórios foram alterados e os usuários verão o nome corrigido na API/interface do usuário do Cloud Manager.
-* [Ao adicionar ou editar um pipeline de qualidade de código,](configuring-non-production-pipelines.md) as opções para lidar com falhas de métrica não são mais exibidas.
-* Configurações inesperadas de variável de pipeline não causam mais erros na etapa de build.
+* (Somente AMS) A variável **Ignorar alterações no Balanceador de Carga** não foi possível desabilitar a opção.
+* (AMS) O **Ignorar alterações no Balanceador de Carga** não foi exibida na Implantação de desenvolvedores do AMS **Editar fluxo de trabalho do pipeline**.
+* Um subconjunto de repositórios git criados manualmente tinha um valor de nome incorreto que impedia a efetivação do recurso de reuso de artefato de compilação. Os nomes desses repositórios foram alterados e os usuários verão o nome corrigido na API/interface do usuário do Cloud Manager.
+* Os artefatos de construção provenientes de gasodutos que não são de produção foram reutilizados de forma imprópria em gasodutos de produção em pilha completa.
+* Ao adicionar ou editar um pipeline de qualidade de código, as opções para lidar com falhas de métrica não são mais exibidas.
+* Algumas configurações inesperadas de variável de pipeline podem causar na etapa de build.
