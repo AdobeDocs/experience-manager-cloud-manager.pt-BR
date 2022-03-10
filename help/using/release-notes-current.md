@@ -3,10 +3,10 @@ title: Notas da versão para 2022.3.0
 description: Estas são as notas de versão do Cloud Manager versão 2022.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 7611667d8c617d501f9b69cbc7c854c195a5ebbe
+source-git-commit: 4a5ddf3144ec50f1a7a4ac367b5c99bc9b486752
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '210'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.3.0 é 10 de 
 ## Correções de erros {#bug-fixes}
 
 * O **Ignorar alterações no Balanceador de Carga** não foi possível desabilitar a opção.
-*Os **Ignorar alterações no Balanceador de Carga** não foi exibida na Implantação de desenvolvedores do AMS **Editar fluxo de trabalho do pipeline**.
+* O **Ignorar alterações no Balanceador de Carga** não foi exibida na Implantação de desenvolvedores do AMS **Editar fluxo de trabalho do pipeline**.
 * Um subconjunto de repositórios git criados manualmente tinha um valor de nome incorreto que impedia a efetivação do recurso de reuso de artefato de compilação. Os nomes desses repositórios foram alterados e os usuários verão o nome corrigido na API/interface do usuário do Cloud Manager.
 * Os artefatos de construção provenientes de gasodutos que não são de produção foram reutilizados de forma imprópria em gasodutos de produção em pilha completa.
 * Ao adicionar ou editar um pipeline de qualidade de código, as opções para lidar com falhas de métrica não são mais exibidas.
