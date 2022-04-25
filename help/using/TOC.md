@@ -8,10 +8,10 @@ user-guide-description: Saiba como usar os Adobe Managed Services para gerenciar
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: f1d359921a11ab8a6117a15cd5eb72362bbb8360
+source-git-commit: 5dd9471e1044ce0dcc6a03099256d182b1776f02
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 90%
+source-wordcount: '312'
+ht-degree: 91%
 
 ---
 
@@ -65,9 +65,10 @@ ht-degree: 90%
    + [Avaliação](evaluation.md)
 + Notas de versão {#release-notes}
    + [Notas de versão atuais](release-notes-current.md)
-   + [Notas da versão 2022.3.0](release-notes-2022-3-0.md)
-   + [Notas da versão 2022.2.0](release-notes-2022-2-0.md)
-   + [Notas da versão 2022.1.0](release-notes-2022-1-0.md)
+   + [Notas da versão para 2022.4.0](release-notes-2022-4-0.md)
+   + [Notas da versão para 2022.3.0](release-notes-2022-3-0.md)
+   + [Notas da versão para 2022.2.0](release-notes-2022-2-0.md)
+   + [Notas da versão para 2022.1.0](release-notes-2022-1-0.md)
    + [Notas de versão para 2021.12.0](release-notes-2021-12-0.md)
    + [Notas da versão para 2021.11.0](release-notes-2021-11-0.md)
    + [Notas da versão para 2021.10.0](release-notes-2021-10-0.md)
@@ -90,21 +91,21 @@ ht-degree: 90%
    + [Notas da versão para 2020.4.0](release-notes-2020-4-0.md)
    + [Notas da versão para 2020.3.0](release-notes-2020-3-0.md)
    + [Notas da versão para 2020.2.0](release-notes-2020-2-0.md)
-   + [Notas da versão 2020.1.0](release-notes-2020-1-0.md)
-   + [Notas da versão 2019.12.0](release-notes-2019-12-0.md)
-   + [Notas da versão 2019.11.0](release-notes-2019-11-0.md)
-   + [Notas da versão 2019.10.0](release-notes-2019-10-0.md)
-   + [Notas da versão 2019.9.0](release-notes-2019-9-0.md)
-   + [Notas da versão 2019.8.0](release-notes-2019-8-0.md)
-   + [Notas da versão 2019.7.0](release-notes-2019-7-0.md)
-   + [Notas da versão 2019.6.0](release-notes-2019-6-0.md)
-   + [Notas da versão 2019.5.0](release-notes-2019-5-0.md)
-   + [Notas da versão 2019.4.0](release-notes-2019-4-0.md)
-   + [Notas da versão 2019.3.0](release-notes-2019-3-0.md)
-   + [Notas da versão 2019.2.0](release-notes-2019-2-0.md)
-   + [Notas da versão 2019.1.0](release-notes-2019-1-0.md)
-   + [Notas da versão 2018.9.0](release-notes-2018-9-0.md)
-   + [Notas da versão 2018.8.0](release-notes-2018-8-0.md)
-   + [Notas da versão 2018.7.0](release-notes-2018-7-0.md)
-   + [Notas da versão 2018.6.0](release-notes-2018-6-0.md)
-   + [Notas da versão 2018.5.0](release-notes-2018-5-0.md)
+   + [Notas da versão para 2020.1.0](release-notes-2020-1-0.md)
+   + [Notas da versão para 2019.12.0](release-notes-2019-12-0.md)
+   + [Notas da versão para 2019.11.0](release-notes-2019-11-0.md)
+   + [Notas da versão para 2019.10.0](release-notes-2019-10-0.md)
+   + [Notas da versão para 2019.9.0](release-notes-2019-9-0.md)
+   + [Notas da versão para 2019.8.0](release-notes-2019-8-0.md)
+   + [Notas da versão para 2019.7.0](release-notes-2019-7-0.md)
+   + [Notas da versão para 2019.6.0](release-notes-2019-6-0.md)
+   + [Notas da versão para 2019.5.0](release-notes-2019-5-0.md)
+   + [Notas da versão para 2019.4.0](release-notes-2019-4-0.md)
+   + [Notas da versão para 2019.3.0](release-notes-2019-3-0.md)
+   + [Notas da versão para 2019.2.0](release-notes-2019-2-0.md)
+   + [Notas da versão para 2019.1.0](release-notes-2019-1-0.md)
+   + [Notas da versão para 2018.9.0](release-notes-2018-9-0.md)
+   + [Notas da versão para 2018.8.0](release-notes-2018-8-0.md)
+   + [Notas da versão para 2018.7.0](release-notes-2018-7-0.md)
+   + [Notas da versão para 2018.6.0](release-notes-2018-6-0.md)
+   + [Notas da versão para 2018.5.0](release-notes-2018-5-0.md)

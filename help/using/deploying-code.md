@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
+source-git-commit: 0ba7c49b3550666030249562219b2d0dc51f4ae1
 workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 ## Implantação do código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Para saber mais sobre a implantação do código para o Cloud Manager em AEM as a Cloud Service, consulte [aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
+>Para saber mais sobre a implantação do código para o Cloud Manager no AEM as a Cloud Service, consulte [here](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
 
 Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
@@ -30,7 +30,7 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
 
    ![](assets/Deploy1.png)
 
-1. A tela **Pipeline Execution** é exibida.
+1. O **Execução de pipeline** será exibida.
 
    Clique em **Criar** para iniciar o processo.
 
@@ -64,11 +64,11 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
 
    ![](assets/Stage_Testing1.png)
 
-   A **Implantação de produção** envolve as seguintes etapas:
+   O **Implantação de produção** envolve as seguintes etapas:
 
-   * **Pedido de aprovação**  (se estiver habilitado)
-   * **Agendar implantação de produção**  (se ativada)
-   * **Suporte CSE**  (se ativado)
+   * **Pedido de aprovação** (se estiver habilitado)
+   * **Agendar implantação de produção** (se estiver habilitado)
+   * **Suporte CSE** (se estiver habilitado)
    * **Implantar na produção**
 
    ![](assets/Prod_Deployment1.png)
@@ -78,7 +78,7 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
    >O **Agendar implantação de produção** está ativado ao configurar o pipeline.
    >
    >
-   >Usando essa opção, você pode agendar a implantação de produção ou clicar em **Now** para executar a implantação de produção imediatamente.
+   >Com essa opção, você pode agendar a implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
    >
    >
    >A data e a hora programadas são especificadas em termos de fuso horário do usuário.
@@ -90,7 +90,7 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
 
    Depois de confirmar o agendamento da implantação, a implantação do código é concluída.
 
-   A tela a seguir é exibida quando a opção **Now** é selecionada na etapa acima.
+   A tela a seguir é exibida quando **Agora** é selecionada na etapa acima.
 
    ![](assets/Production_Deployment2.png)
 
@@ -100,12 +100,12 @@ As etapas a seguir atingirão o tempo limite se forem deixadas aguardando o feed
 
 | Etapa | Tempo limite |
 |--- |--- |
-| Teste de qualidade do código | 7 dias |
-| Teste de segurança | 7 dias |
-| Teste de desempenho | 7 dias |
-| Pedido de aprovação | 7 dias |
-| Agendar implantação de produção | 7 dias |
-| Suporte CSE | 7 dias |
+| Teste de qualidade do código | 14 dias |
+| Teste de segurança | 14 dias |
+| Teste de desempenho | 14 dias |
+| Pedido de aprovação | 14 dias |
+| Agendar implantação de produção | 14 dias |
+| Suporte CSE | 14 dias |
 
 ## Processo de implantação {#deployment-process}
 
@@ -138,7 +138,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
 
    1. O backup das configurações atuais é feito e copiado para um local temporário
    1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte Gerenciar suas configurações do Dispatcher para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
-   1. O artefato é extraído para o diretório `httpd`.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório Git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do AMS Dispatcher e não podem ser alterados.
+   1. O artefato é extraído para o `httpd` diretório.  Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório Git serão ignoradas no momento da implantação.  Esses arquivos são fundamentais para a estrutura do AMS Dispatcher e não podem ser alterados.
    1. O Apache executa um teste de configuração. Se nenhum erro for encontrado, o serviço será recarregado. Se ocorrer um erro, as configurações serão restauradas a partir do backup, o serviço será recarregado e o erro será relatado ao Cloud Manager.
    1. Cada caminho especificado na configuração do pipeline é invalidado ou liberado do cache do dispatcher.
 
@@ -169,7 +169,7 @@ Esse processo continua até que a implantação tenha atingido todos os editores
 
 Em situações críticas, os clientes do Adobe Managed Services podem precisar implantar alterações de código em seus ambientes de preparo e produção sem esperar que um ciclo de teste completo do Cloud Manager seja executado.
 
-Para lidar com essas situações, o pipeline de produção do Cloud Manager pode ser executado em um modo *emergência*. Quando este modo é utilizado, as etapas dos testes de segurança e desempenho não são executadas; todas as outras etapas, incluindo qualquer etapa de aprovação configurada, são executadas como no modo de execução normal do pipeline.
+Para lidar com essas situações, o pipeline de produção do Cloud Manager pode ser executado em um *emergência* modo. Quando este modo é utilizado, as etapas dos testes de segurança e desempenho não são executadas; todas as outras etapas, incluindo qualquer etapa de aprovação configurada, são executadas como no modo de execução normal do pipeline.
 
 >[!NOTE]
 >O recurso Modo de execução do pipeline de emergência é ativado de acordo com o programa pelos engenheiros de sucesso do cliente.
@@ -192,4 +192,4 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
 >[!IMPORTANT]
->O uso do sinalizador `--emergency` pode exigir atualização para a versão mais recente `aio-cli-plugin-cloudmanager`.
+>Usando `--emergency` O sinalizador pode exigir atualização para o mais recente `aio-cli-plugin-cloudmanager` versão.
