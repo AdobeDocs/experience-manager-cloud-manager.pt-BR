@@ -2,7 +2,7 @@
 title: Repositórios do Cloud Manager
 description: Repositórios do Cloud Manager
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
+source-git-commit: 280d760766cf445e609b865f827c01b4ab1db69c
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Os repositórios criados e disponíveis no Cloud Manager podem ser visualizados 
 
 Siga as etapas abaixo para visualizar e gerenciar repositórios no Cloud Manager:
 
-1. Na página **Visão geral do programa**, clique na guia **Repositórios** e navegue até a página **Repositórios**.
+1. No **Visão geral do programa** clique em **Repositórios** e navegue até a guia **Repositórios** página.
 
 1. Clique em **Adicionar Repositório** para iniciar o assistente.
 
@@ -27,7 +27,7 @@ Siga as etapas abaixo para visualizar e gerenciar repositórios no Cloud Manager
    ![](assets/create-repo2.png)
 
 
-1. Insira o nome e a descrição conforme solicitado e clique em **Save**.
+1. Insira o nome e a descrição conforme solicitado e clique em **Salvar**.
 
    ![](assets/repo-1.png)
 
@@ -38,7 +38,7 @@ Siga as etapas abaixo para visualizar e gerenciar repositórios no Cloud Manager
    >[!NOTE]
    >Os repositórios criados no Cloud Manager também estarão disponíveis para você selecionar durante as etapas de adição ou edição do pipeline.
 
-1. Você pode selecionar o repositório e clicar nas opções de menu na extremidade direita da tabela para **Copiar URL do Repositório**, **Exibir e atualizar** ou **Excluir** seu repositório, conforme mostrado na figura abaixo.
+1. Você pode selecionar o repositório e clicar nas opções de menu na extremidade direita da tabela para **Copiar URL do repositório**, **Exibir e atualizar** ou **Excluir** seu repositório, conforme mostrado na figura abaixo.
 
    ![](assets/create-repo3.png)
 
@@ -46,13 +46,13 @@ Siga as etapas abaixo para visualizar e gerenciar repositórios no Cloud Manager
 
 ## Suporte ao Submódulo Git {#git-submodule-support}
 
-Os submódulos Git podem ser usados para mesclar o conteúdo de várias ramificações entre repositórios Git no momento da criação. Quando o processo de build do Cloud Manager é executado, depois que o repositório configurado para o pipeline é clonado e a ramificação configurada é desmarcada, se a ramificação contiver um arquivo `.gitmodules` no diretório raiz, o comando será executado.
+Os submódulos Git podem ser usados para mesclar o conteúdo de várias ramificações entre repositórios Git no momento da criação. Quando o processo de build do Cloud Manager é executado, depois que o repositório configurado para o pipeline é clonado e a ramificação configurada é desmarcada, se a ramificação contiver um `.gitmodules` no diretório raiz, o comando é executado.
 
 ```
 $ git submodule update --init
 ```
 
-Isso verificará cada submódulo no diretório apropriado. Essa técnica é uma alternativa potencial para [trabalhar com repositórios Git de várias origens](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html) para organizações que estão confortáveis em usar submódulos git e não desejam gerenciar um processo de mesclagem externo.
+Isso verificará cada submódulo no diretório apropriado. Essa técnica é uma alternativa potencial para [trabalhar com vários repositórios Git de origem](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html) para organizações confortáveis com o uso de submódulos git e que não desejam gerenciar um processo de mesclagem externo.
 
 Por exemplo, digamos que existam três repositórios, cada um contendo uma única ramificação chamada main . No repositório &quot;primário&quot;, ou seja, o configurado nos pipelines, a ramificação principal tem um arquivo pom.xml declarando os projetos contidos nos outros dois repositórios:
 
@@ -82,7 +82,7 @@ $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/proje
 $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/projectB/ project-b
 ```
 
-Isso resulta em um arquivo `.gitmodules` com a seguinte aparência:
+Isso resulta em uma `.gitmodules` arquivo com esta aparência:
 
 ```
 [submodule "project-a"]
@@ -95,7 +95,7 @@ Isso resulta em um arquivo `.gitmodules` com a seguinte aparência:
     branch = main
 ```
 
-Mais informações sobre submódulos git podem ser encontradas no [Manual de referência Git](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+Mais informações sobre os submódulos git podem ser encontradas na seção [Manual de referência do Git](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 Ao usar submódulos git, lembre-se dos seguintes itens:
 
