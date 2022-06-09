@@ -1,19 +1,19 @@
 ---
-title: Notas da versão para 2022.5.0
-description: Estas são as notas de versão do Cloud Manager versão 2022.5.0.
+title: Notas da versão para 2022.6.0
+description: Estas são as notas de versão do Cloud Manager versão 2022.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dc28bbacfe86a68f416a525d386a2d8d1c1b0190
+source-git-commit: 844aa7c697c793af05766048ef4263a1bba87c94
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '132'
 ht-degree: 6%
 
 ---
 
 
-# Notas de versão do Cloud Manager versão 2022.5.0 {#release-notes}
+# Notas de versão do Cloud Manager versão 2022.6.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2022.5.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2022.6.0.
 
 >[!NOTE]
 >
@@ -21,15 +21,12 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.5.0 é 5 de maio de 2022. A próxima versão está planejada para 9 de junho de 2022.
+A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.6.0 é 9 de junho de 2022. A próxima versão está prevista para 30 de junho de 2022.
 
 ## Novidades {#what-is-new}
 
-* A execução do pipeline agora exibirá erros de nível superior da interface do usuário na tela de execução.
-* Configuração padrão atualizada para incluir pausa na configuração B/G.
-* Reexecute a Etapa de implantação de produção por meio da interface do usuário do Cloud Manager.
+* Um novo cartão de boas-vindas na página de aterrissagem do Cloud Manager fornece aos usuários acesso rápido a tutoriais de integração e métricas de progresso relacionadas ao locatário.
+   * Esse recurso será implementado em uma abordagem em fases na semana seguinte à versão 2022.06.0.
+* [Os artefatos da build agora podem ser reutilizados](/help/using/setting-up-project.md#build-artifact-reuse) ao usar o espelhamento de git.
 
 ## Correções de erros {#bug-fixes}
-
-* Resultado do teste de desempenho enganoso com erro de tempo limite 504.
-* Algumas execuções estavam travadas no contexto do acionador de confirmação e do cancelamento da etapa de aprovação.
