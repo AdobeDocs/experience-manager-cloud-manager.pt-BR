@@ -3,10 +3,10 @@ title: Notas da versão para 2022.6.0
 description: Estas são as notas de versão do Cloud Manager versão 2022.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 844aa7c697c793af05766048ef4263a1bba87c94
+source-git-commit: 6dce1f48b66c6970c3ba025031f0adcbd01195dd
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 6%
+source-wordcount: '179'
+ht-degree: 3%
 
 ---
 
@@ -29,4 +29,8 @@ A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.6.0 é 9 de j
    * Esse recurso será implementado em uma abordagem em fases na semana seguinte à versão 2022.06.0.
 * [Os artefatos da build agora podem ser reutilizados](/help/using/setting-up-project.md#build-artifact-reuse) ao usar o espelhamento de git.
 
-## Correções de erros {#bug-fixes}
+## Alterações na API {#api-changes}
+
+* O [`List Programs`](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getPrograms) A API foi substituída e [`List Programs for Tenant`](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getProgramsForTenant) deve ser usada em vez disso.
+   * `List Programs` continua a funcionar, mas seu uso gerará mensagens de aviso em logs.
+   * Ele não será mais suportado após três meses.

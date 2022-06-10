@@ -5,9 +5,9 @@ description: Consulte as Perguntas frequentes do Cloud Manager para obter alguma
 seo-description: Follow this page to get answers on Cloud Manager FAQs
 feature: Getting Started
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
+source-git-commit: 6dce1f48b66c6970c3ba025031f0adcbd01195dd
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,13 @@ AEM build do Cloud Manager falha ao tentar alternar a build do Java 8 para o 11.
 
 * Para builds do Cloud Manager, o plug-in maven enforcer falha com erro `"[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion"`. Esse é um problema conhecido porque o Cloud Manager usa uma versão diferente do Java para executar o comando maven versus o código de compilação. Por enquanto, omita `requireJavaVersion` das configurações maven-enforcer-plugin.
 
-## Nossa implantação ficou paralisada porque a verificação de qualidade do código falhou. Existe uma maneira de ignorar esta verificação? {#deployment-stuck}
+## Nossa implantação está paralisada porque a verificação de qualidade do código falhou. Existe uma maneira de ignorar esta verificação? {#deployment-stuck}
 
-Todas as falhas de qualidade do código exceto para *Classificação de segurança* são métricas não críticas, portanto, podem ser ignoradas ao expandir os itens na interface do usuário de resultados.
+Sim. Todas as falhas de qualidade de código, exceto *Classificação de segurança* são métricas não críticas, portanto, podem ser ignoradas como parte de um pipeline de implantação expandindo os itens na interface do usuário de resultados.
 
-Um usuário com [Gerenciador de implantação, Gerenciador de projeto ou Proprietário comercial](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=en#requirements) pode substituir os problemas, caso o pipeline continue ou possa aceitar os problemas, caso o pipeline pare com uma falha.  Consulte [Portas de três níveis ao executar um pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use) para obter mais detalhes.
+Um usuário com [Gerenciador de implantação, Gerenciador de projeto ou Proprietário comercial](/help/using/setting-up-users-and-roles.md#role-definitions) pode substituir os problemas, caso o pipeline continue ou possa aceitar os problemas, caso o pipeline pare com uma falha.
+
+Veja os documentos [Portas de três níveis ao executar um pipeline](/help/using/understand-your-test-results.md#three-tier-gates-while-running-a-pipeline) e [Configuração de pipeline de não produção](/help/using/configuring-non-production-pipelines.md#understanding-the-flow) para obter mais detalhes.
 
 ## As implantações do Cloud Manager falham na etapa de teste de desempenho nos ambientes do Adobe Managed Services. Como depurar isso para passar as métricas críticas? {#debug-critical-metrics}
 
