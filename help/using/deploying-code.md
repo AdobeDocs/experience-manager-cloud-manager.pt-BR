@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
+source-git-commit: 4c86446127c8cd66f964b192f3602f02fd2ddf8e
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 ## Implantação do código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->To learn about deploying code for Cloud Manager in AEM as a Cloud Service, see [here](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
+>Para saber mais sobre a implantação do código para o Cloud Manager no AEM as a Cloud Service, consulte [here](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
 
 Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente de teste), você estará pronto para implantar seu código.
 
@@ -57,16 +57,16 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
 
    ![](assets/Stage_Deployment1.png)
 
-   The **Stage Testing**, involves the following steps:
+   O **Teste de preparo** envolve as seguintes etapas:
 
-   * Security Testing: This step evaluates the security impact of your application code on the AEM environment. Consulte [Entender os resultados de teste](understand-your-test-results.md) para obter detalhes sobre o processo de teste.
+   * Teste de segurança: Esta etapa avalia o impacto na segurança do código de seu aplicativo no ambiente de AEM. Consulte [Entender os resultados de teste](understand-your-test-results.md) para obter detalhes sobre o processo de teste.
    * Teste de desempenho: Esta etapa avalia o desempenho do código do aplicativo. Consulte [Entender os resultados de teste](understand-your-test-results.md) para obter detalhes sobre o processo de teste.
 
    ![](assets/Stage_Testing1.png)
 
    O **Implantação de produção** envolve as seguintes etapas:
 
-   * **Application for Approval** (if enabled)
+   * **Pedido de aprovação** (se estiver habilitado)
    * **Agendar implantação de produção** (se estiver habilitado)
    * **Suporte CSE** (se estiver habilitado)
    * **Implantar na produção**
@@ -78,7 +78,7 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
    >O **Agendar implantação de produção** está ativado ao configurar o pipeline.
    >
    >
-   >Using this option, you can either schedule your production deployment or click **Now** to execute the production deployment immediately.
+   >Com essa opção, você pode agendar a implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
    >
    >
    >A data e a hora programadas são especificadas em termos de fuso horário do usuário.
@@ -96,7 +96,7 @@ Depois de configurar o Pipeline de produção (repositório, ambiente e ambiente
 
 ## Tempos limite {#timeouts}
 
-The following steps will timeout if left waiting for user feedback:
+As etapas a seguir atingirão o tempo limite se forem deixadas aguardando o feedback do usuário:
 
 | Etapa | Tempo limite |
 |--- |--- |
@@ -104,14 +104,14 @@ The following steps will timeout if left waiting for user feedback:
 | Teste de segurança | 14 dias |
 | Teste de desempenho | 14 dias |
 | Pedido de aprovação | 14 dias |
-| Schedule Production Deployment | 14 dias |
-| CSE Support | 14 dias |
+| Agendar implantação de produção | 14 dias |
+| Suporte CSE | 14 dias |
 
 ## Processo de implantação {#deployment-process}
 
 A seção a seguir descreve como os pacotes de AEM e dispatcher são implantados na fase de estágio e na fase de produção.
 
-Cloud Manager uploads all target/*.zip files produced by the build process to a storage location.  Esses artefatos são recuperados desse local durante as fases de implantação do pipeline.
+O Cloud Manager carrega todos os arquivos target/*.zip produzidos pelo processo de compilação em um local de armazenamento.  Esses artefatos são recuperados desse local durante as fases de implantação do pipeline.
 
 Quando o Cloud Manager é implantado em topologias que não são de produção, o objetivo é concluir a implantação o mais rápido possível e, portanto, os artefatos são implantados em todos os nós simultaneamente da seguinte maneira:
 
@@ -157,13 +157,13 @@ O processo de implantação das topologias de produção é um pouco diferente p
 As implantações de produção geralmente seguem as mesmas etapas descritas acima, mas de maneira contínua:
 
 1. Implantar pacotes de AEM para o autor.
-1. Detach dispatcher1 from the load balancer.
+1. Desanexar dispatcher1 do balanceador de carga.
 1. Implante pacotes de AEM para publish1 e o pacote do dispatcher para dispatcher1 em paralelo, liberar o cache do dispatcher.
 1. Coloque o dispatcher1 de volta no balanceador de carga.
 1. Depois que o dispatcher1 estiver novamente em serviço, desconecte o dispatcher2 do balanceador de carga.
 1. Implante AEM pacotes para publish2 e o pacote do dispatcher para o dispatcher2 em paralelo, liberar o cache do dispatcher.
-1. Put dispatcher2 back into the load balancer.
-This process continues until the deployment has reached all publishers and dispatchers in the topology.
+1. Coloque o dispatcher2 de volta no balanceador de carga.
+Esse processo continua até que a implantação tenha atingido todos os editores e dispatchers na topologia.
 
 ## Modo de Execução do Pipeline de Emergência {#emergency-pipeline}
 
@@ -172,19 +172,19 @@ Em situações críticas, os clientes do Adobe Managed Services podem precisar i
 Para lidar com essas situações, o pipeline de produção do Cloud Manager pode ser executado em um *emergência* modo. Quando este modo é utilizado, as etapas dos testes de segurança e desempenho não são executadas; todas as outras etapas, incluindo qualquer etapa de aprovação configurada, são executadas como no modo de execução normal do pipeline.
 
 >[!NOTE]
->Emergency Pipeline Execution Mode capability is activated on a program basis by the Customer Success Engineers.
+>O recurso Modo de execução do pipeline de emergência é ativado de acordo com o programa pelos engenheiros de sucesso do cliente.
 
-### Using Emergency Pipeline Execution Mode {#using-emergency-pipeline}
+### Usando o Modo de Execução do Pipeline de Emergência {#using-emergency-pipeline}
 
 Ao iniciar a execução de um pipeline de produção, se esse recurso tiver sido ativado, é possível iniciar a execução no modo normal ou de emergência na caixa de diálogo, conforme mostrado na figura abaixo.
 
 ![](assets/execution-emergency1.png)
 
-Additionally, viewing the pipeline execution details page for an execution run in emergency mode, the breadcrumbs at the top of the screen shows an indicator that emergency mode was used for this particular execution.
+Além disso, ao visualizar a página de detalhes da execução do pipeline para uma execução em modo de emergência, a navegação estrutural na parte superior da tela mostra um indicador de que o modo de emergência foi usado para essa execução específica.
 
 ![](assets/execution-emergency2.png)
 
-Creating a pipeline execution in this emergency mode can also be done through the Cloud Manager API or CLI. To start an execution in Emergency Mode, submit a PUT request to the pipeline&#39;s execution endpoint with the query parameter `?pipelineExecutionMode=EMERGENCY` or, when using the CLI:
+A criação de uma execução de pipeline nesse modo de emergência também pode ser feita por meio da API do Cloud Manager ou da CLI. Para iniciar uma execução no Modo de emergência, envie uma solicitação PUT para o endpoint de execução do pipeline com o parâmetro de consulta `?pipelineExecutionMode=EMERGENCY` ou, ao usar a CLI:
 
 ```
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
@@ -195,10 +195,10 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 ## Reexecutar uma implantação de produção {#Reexecute-Deployment}
 
-Re-execution of the production deployment step is supported for executions where the production deploy step has completed. O tipo de conclusão não é importante - a implantação pode ser bem-sucedida (somente para programas AMS), cancelada ou malsucedida. That said, the primary use case is expected to be cases where the production deployment step failed for transient reasons. A reexecução cria uma nova execução usando o mesmo pipeline. Essa nova execução consiste em três etapas:
+A reexecução da etapa de implantação de produção é compatível com execuções em que a etapa de implantação de produção foi concluída. O tipo de conclusão não é importante - a implantação pode ser bem-sucedida (somente para programas AMS), cancelada ou malsucedida. Dito isso, espera-se que o principal caso de uso seja os casos em que a etapa de implantação de produção falhou por motivos transitórios. A reexecução cria uma nova execução usando o mesmo pipeline. Essa nova execução consiste em três etapas:
 
-1. The validate step – this is essentially the same validation that occurs during a normal pipeline execution.
-1. The build step – in the context of a re-execution, the build step is copying artifacts, not actually executing a new build process.
+1. A etapa de validação - é essencialmente a mesma validação que ocorre durante uma execução normal do pipeline.
+1. A etapa de build - no contexto de uma reexecução, a etapa de build é a cópia de artefatos, não executando um novo processo de build.
 1. A etapa de implantação de produção - usa a mesma configuração e as mesmas opções da etapa de implantação de produção em uma execução normal de pipeline.
 
 A etapa de build pode ser rotulada de forma um pouco diferente na interface do usuário para refletir que está copiando artefatos, não reconstruindo.
@@ -209,7 +209,7 @@ Limitações:
 
 * A reexecução da etapa de implantação de produção só estará disponível na última execução.
 * A reexecução não está disponível para execuções de reversão.
-* If the last execution is a rollback execution, re-execution is not possible.
+* Se a última execução for uma execução de rollback, a reexecução não será possível.
 * Se a última execução for uma execução de atualização por push, a reexecução não será possível.
 * Se a última execução falhar em qualquer ponto antes da etapa de implantação de produção, a reexecução não será possível.
 
@@ -217,11 +217,11 @@ Limitações:
 
 ### Identificação de uma execução de nova execução
 
-Para identificar se uma execução é uma execução reexecutada, o campo trigger pode ser examinado. Its value will be *RE_EXECUTE*.
+Para identificar se uma execução é uma execução reexecutada, o campo trigger pode ser examinado. Seu valor será *RE_EXECUTE*.
 
-### Triggering a new execution
+### Acionamento de uma nova execução
 
-Para acionar uma reexecução, uma solicitação de PUT precisa ser feita ao HAL Link &lt;(<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> no estado da etapa de implantação de produção. If this link is present, the execution can be restarted from that step. If it is absent, the execution cannot be restarted from that step. Na versão inicial, esse link só estará presente na etapa de implantação de produção, mas versões futuras poderão oferecer suporte para iniciar o pipeline a partir de outras etapas. Exemplo:
+Para acionar uma reexecução, uma solicitação de PUT precisa ser feita no HAL Link ```http://ns.adobe.com/adobecloud/rel/pipeline/reExecute``` no estado da etapa de implantação de produção. Se esse link estiver presente, a execução poderá ser reiniciada a partir dessa etapa. Se estiver ausente, a execução não poderá ser reiniciada dessa etapa. Na versão inicial, esse link só estará presente na etapa de implantação de produção, mas versões futuras poderão oferecer suporte para iniciar o pipeline a partir de outras etapas. Exemplo:
 
 ```Javascript
  {

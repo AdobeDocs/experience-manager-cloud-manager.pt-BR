@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: Code Quality Rules
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 834508109e34eb1e052abac482e981735c72d43d
+source-git-commit: d4c92a36ca3af123730d68fedf1dbf7ee819c66b
 workflow-type: tm+mt
-source-wordcount: '3611'
+source-wordcount: '3609'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Esta página descreve as regras de qualidade do código personalizado executadas
 
 >[!NOTE]
 >
->Para saber mais sobre as regras de qualidade do código personalizado do Cloud Manager em AEM as a Cloud Service, consulte [para esta documentação.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
+>Para saber mais sobre as regras de qualidade do código personalizado do Cloud Manager em AEM as a Cloud Service, consulte [para esta documentação](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
 
 >[!NOTE]
 >
@@ -651,7 +651,7 @@ AEM Os componentes que têm uma caixa de diálogo da interface clássica devem s
 * Um componente com uma caixa de diálogo de design da interface clássica (ou seja, um `design_dialog` nó ) deve ter uma caixa de diálogo de design da interface do usuário de toque correspondente (ou seja, um `cq:design_dialog` nó filho).
 * Um componente com uma caixa de diálogo da interface clássica e uma caixa de diálogo de design da interface clássica deve ter uma caixa de diálogo da interface do usuário de toque correspondente e uma caixa de diálogo de design da interface de toque correspondente.
 
-A documentação das Ferramentas de Modernização do AEM fornece detalhes e ferramentas para converter componentes da interface clássica para a interface do usuário de toque. Consulte [A documentação das Ferramentas de Modernização do AEM ](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) para obter mais detalhes.
+A documentação das Ferramentas de Modernização do AEM fornece detalhes e ferramentas para converter componentes da interface clássica para a interface do usuário de toque. Consulte [A documentação das Ferramentas de Modernização do AEM ](https://opensource.adobe.com/aem-modernize-tools/) para obter mais detalhes.
 
 ### Os pacotes não devem misturar conteúdo mutável e imutável {#oakpal-packages-immutable}
 

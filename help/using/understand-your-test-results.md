@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 2179314120911cac8a0dd99a8b57974751959871
+source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
 workflow-type: tm+mt
-source-wordcount: '2897'
+source-wordcount: '2896'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Estes dados são comunicados utilizando um sistema de classificação em três n
 
 >[!NOTE]
 >
->Para saber mais sobre os testes compatíveis com o Cloud Manager para AEM as a Cloud Service, consulte [AEM documentação as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
+>Para saber mais sobre os testes compatíveis com o Cloud Manager para AEM as a Cloud Service, consulte [AEM documentação as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
 
 
 ## Classificações de três níveis  {#three-tier-gates-while-running-a-pipeline}
@@ -76,7 +76,7 @@ Os resultados dos testes de qualidade do código são fornecidos como **classifi
 
 >[!NOTE]
 >
->Consulte [Definições de métrica da SonarQube](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) para obter informações mais detalhadas.
+>Consulte [Definições de métrica da SonarQube](https://docs.sonarqube.org/latest/user-guide/metric-definitions/) para obter informações mais detalhadas.
 
 >[!NOTE]
 >
@@ -309,3 +309,4 @@ Um caso especial pode ocorrer quando o pacote de conteúdo &quot;todos&quot; con
 >
 >* Essa otimização não afeta os pacotes implantados no AEM.
 >* Como a correspondência entre os pacotes de conteúdo incorporados e os pacotes de conteúdo ignorado se baseia em nomes de arquivo, essa otimização não pode ser executada se vários pacotes de conteúdo ignorados tiverem exatamente o mesmo nome de arquivo ou se o nome do arquivo for alterado durante a incorporação.
+
