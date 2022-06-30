@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
+source-git-commit: fefb267793e5e1dc6f604a753e89cce2bf2620dd
 workflow-type: tm+mt
-source-wordcount: '2896'
+source-wordcount: '2917'
 ht-degree: 3%
 
 ---
@@ -160,7 +160,12 @@ O número de usuários ou contêineres virtuais gerados pelo Cloud Manager é de
 
 #### Crawler {#crawler}
 
-Antes do início do período de teste de 30 minutos, o Cloud Manager rastreará o ambiente de preparo usando um conjunto de um ou mais URLs de propagação configurados pelo engenheiro de sucesso do cliente. A partir desses URLs, o HTML de cada página é inspecionado e os links são percorridos de uma maneira ampla. Esse processo de rastreamento é limitado a no máximo 5000 páginas. As solicitações do crawler têm um tempo limite fixo de 10 segundos.
+Antes do início do período de teste de 30 minutos, o Cloud Manager rastreará o ambiente de preparo usando um conjunto de um ou mais URLs de propagação configurados pelo engenheiro de sucesso do cliente. A partir desses URLs, o HTML de cada página é inspecionado e os links são percorridos de uma maneira ampla.
+
+* Por padrão, esse processo de rastreamento é limitado a no máximo 5000 páginas.
+* O número máximo de páginas a serem testadas pode ser substituído pela configuração da variável [variável de ambiente](build-environment-details.md#environment-variables) `MAX_PAGES`.
+   * Os valores permitidos são `2000` - `7000`.
+* As solicitações do crawler têm um tempo limite fixo de 10 segundos.
 
 #### Conjuntos de páginas para teste {#page-sets}
 
