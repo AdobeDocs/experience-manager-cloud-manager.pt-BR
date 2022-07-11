@@ -1,16 +1,16 @@
 ---
-title: Gerenciamento de pipeline
+title: Gerenciar pipelines
 description: Saiba como gerenciar seus pipelines existentes, incluindo edição, execução e exclusão.
-index: true
-source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
+exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
+source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 0%
+source-wordcount: '517'
+ht-degree: 3%
 
 ---
 
 
-# Gerenciamento de pipeline {#managing-pipelines}
+# Gerenciar pipelines {#managing-pipelines}
 
 Saiba como gerenciar seus pipelines existentes, incluindo edição, execução e exclusão.
 
@@ -18,7 +18,7 @@ Saiba como gerenciar seus pipelines existentes, incluindo edição, execução e
 
 O **Pipelines** no cartão **Visão geral do programa** no Cloud Manager fornece uma visão geral de todos os seus pipelines e seu status atual.
 
-![Cartão de pipeline no Cloud Manager](/help/using/assets/configure-pipelines/pipelines-card.png)
+![Cartão de pipeline no Cloud Manager](/help/assets/configure-pipelines/pipelines-card.png)
 
 Ao clicar no botão de reticências ao lado de cada pipeline, você pode realizar as seguintes ações.
 
@@ -29,8 +29,8 @@ Ao clicar no botão de reticências ao lado de cada pipeline, você pode realiza
 
 Na parte inferior da lista de pipelines, você tem opções gerais.
 
-* **Adicionar** - Para [adicionar um novo pipeline de produção](configuring-production-pipelines.md) ou [adicionar novo pipeline de não produção](configuring-non-production-pipelines.md)
-* **Mostrar tudo** - Leva o usuário para a **Pipelines** para exibir todos os pipelines em uma tabela mais detalhada.
+* **Adicionar** - Para [adicionar um novo pipeline de produção](/help/using/production-pipelines.md) ou [adicionar novo pipeline de não produção](/help/using/non-production-pipelines.md)
+* **Mostrar tudo** - Leva o usuário para a **Pipelines** para exibir todos os pipelines em uma tabela mais detalhada
 * **Acessar informações do repositório** - Exibe as informações necessárias para acessar o repositório Git do Cloud Manager
 * **Saiba mais** - Navega até os recursos de documentação do pipeline de CI/CD.
 
@@ -55,8 +55,8 @@ Dependendo do tipo de pipeline, talvez seja possível cancelar a execução clic
 1. O **Editar pipeline de produção** ou **Editar pipeline de não produção** é exibida, permitindo editar os mesmos detalhes inseridos ao criar o pipeline.
 
    * Consulte as páginas a seguir para obter detalhes sobre todos os campos e opções de configuração disponíveis para pipelines.
-      * [Configuração de pipeline de produção](configuring-production-pipelines.md)
-      * [Configuração de pipeline de não produção](configuring-non-production-pipelines.md)
+      * [Configuração de pipeline de produção](/help/using/production-pipelines.md)
+      * [Configuração de pipeline de não produção](/help/using/non-production-pipelines.md)
 
 1. Clique em **Atualizar** depois de concluir a edição do pipeline.
 
@@ -82,9 +82,9 @@ Dependendo do tipo de pipeline, talvez seja possível cancelar a execução clic
 
 1. Você é levado à página de detalhes do pipeline em execução.
 
-![Detalhes do pipeline](/help/using/assets/configure-pipelines/pipeline-running-details.png)
+![Detalhes do pipeline](/help/assets/configure-pipelines/pipeline-running-details.png)
 
-Desse ponto, você pode ver o status das várias etapas do pipeline e recuperar registros de criação para fins de diagnóstico. Consulte o documento [Implantação do código](deploying-code.md) para obter mais informações.
+Desse ponto, você pode ver o status das várias etapas do pipeline e recuperar registros de criação para fins de diagnóstico. Consulte o documento [Implantação do código](/help/using/code-deployment.md) para obter mais informações.
 
 >[!NOTE]
 >

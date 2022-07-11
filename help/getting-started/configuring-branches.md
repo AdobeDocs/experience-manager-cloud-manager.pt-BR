@@ -1,0 +1,81 @@
+---
+title: Configuração de Ramificações
+description: Saiba como configurar sua primeira ramificação no git e como ela é usada pelo pipeline de CI/CD para implantar seu código de aplicativo.
+exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
+source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 0%
+
+---
+
+
+# Configuração de Ramificações {#configuring-branches}
+
+Saiba como configurar sua primeira ramificação no git e como ela é usada pelo pipeline de CI/CD para implantar seu código de aplicativo.
+
+## Configurando sua primeira ramificação no Git {#setting-up-your-first-branch-in-git}
+
+Um único repositório Git inicialmente vazio [está provisionado](/help/requirements/environment-provisioning.md) para cada programa integrado no Cloud Manager. Esse repositório pode conter quantas ramificações seu processo de desenvolvimento necessitar, mas deve haver pelo menos uma ramificação usada pelo pipeline de CI/CD para implantar o código do aplicativo no estágio e na produção. A prática recomendada é usar `main` como o nome desta ramificação. Convenientemente, esse é o comportamento padrão dos clientes git ao configurar novos projetos.
+
+Por exemplo, ao configurar um novo projeto, você executará um conjunto de comandos semelhantes aos seguintes.
+
+```shell
+$ git init
+Initialized empty Git repository in /Users/myname/workspace/new-project/.git/
+... steps which add Maven build files and source code ...
+$ git add pom.xml core/pom.xml core/src ui.apps/pom.xml ui.apps/src
+$ git commit -m "initial commit"
+ 19 files changed, 777 insertions(+)
+ create mode 100644 core/pom.xml
+ create mode 100644 pom.xml
+ create mode 100644 ui.apps/pom.xml
+ create mode 100644 ui.apps/src/main/content/META-INF/vault/config.xml
+ create mode 100644 ui.apps/src/main/content/META-INF/vault/definition/.content.xml
+ create mode 100644 ui.apps/src/main/content/META-INF/vault/filter.xml
+ create mode 100644 ui.apps/src/main/content/META-INF/vault/nodetypes.cnd
+ create mode 100644 ui.apps/src/main/content/META-INF/vault/properties.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/apps/my-aem-project/install/.vltignore
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/.content.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/.content.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/.content.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/wcm/.content.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/wcm/policies/.content.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/wcm/policies/_rep_policy.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/wcm/template-types/.content.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/wcm/template-types/_rep_policy.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/wcm/templates/.content.xml
+ create mode 100644 ui.apps/src/main/content/jcr_root/conf/my-aem-project/settings/wcm/templates/_rep_policy.xml
+```
+
+>[!NOTE]
+>
+>Não é um requisito para usar o cliente da linha de comando. Há uma variedade de clientes git gráficos disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente seja compatível com git usando HTTPS, ele deve ser compatível com [!UICONTROL Cloud Manager].
+
+## Empurrando Sua Primeira Ramificação {#pushing-your-first-branch}
+
+Depois de confirmar pelo menos uma revisão, é possível adicionar a variável [!UICONTROL Cloud Manager] repositório como um repositório remoto e, em seguida, envie seus compromissos para ele.
+
+```shell
+$ git remote add adobe <url>
+$ git push adobe master
+Counting objects: 36, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (36/36), 7.31 KiB | 1.83 MiB/s, done.
+Total 36 (delta 6), reused 0 (delta 0)
+To <url>
+ * [new branch]      main -> main
+```
+
+>[!NOTE]
+>
+>O URL específico, juntamente com suas credenciais, será fornecido a você pelo departamento de engenharia de sucesso do cliente durante o período de [!UICONTROL Cloud Manager] integração.
+
+## Ramificações adicionais {#additional-branches}
+
+Um único `main` Essa ramificação poderá ser suficiente para projetos muito simples, mas, na maioria dos casos, será necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que as atividades diárias de desenvolvimento são executadas em uma ramificação chamada `develop` e a ramificação de desenvolvimento é mesclada à `main` ramificação quando for hora de uma implantação.
+
+>[!TIP]
+>
+>Para ver comandos git comuns, consulte o [Folha de características do Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
