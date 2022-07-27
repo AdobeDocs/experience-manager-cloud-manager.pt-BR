@@ -2,10 +2,10 @@
 title: Introdução ao Cloud Manager para AMS
 description: Comece aqui para conhecer o Cloud Manager for Adobe Managed Services (AMS) e como ele permite que as organizações autogerenciem o Adobe Experience Manager na nuvem.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
+source-git-commit: 22d40a1f07f56ee7a7dddb4897e4079f1e346674
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 14%
+source-wordcount: '1292'
+ht-degree: 10%
 
 ---
 
@@ -29,7 +29,7 @@ Comece aqui para conhecer o Cloud Manager for Adobe Manage Services (AMS) e como
 >
 >Esta documentação descreve especificamente os recursos e as funções do Cloud Manager para Adobe Managed Services (AMS).
 >
->A documentação equivalente para AEM as a Cloud Service pode ser encontrada no [AEM documentação as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html)
+>A documentação equivalente para AEM as a Cloud Service pode ser encontrada no [AEM documentação as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html)
 
 Com o Cloud Manager, sua equipe de desenvolvimento se beneficia dos seguintes recursos:
 
@@ -39,7 +39,7 @@ Com o Cloud Manager, sua equipe de desenvolvimento se beneficia dos seguintes re
 
 * Conectividade de API para complementar processos DevOps existentes
 
-* Dimensionamento automático que detecta de forma inteligente a necessidade de maior capacidade e traz automaticamente outros segmentos de dispatcher/publicação online
+* Dimensionamento automático que detecta de forma inteligente a necessidade de maior capacidade e traz automaticamente outros segmentos do Dispatcher/Publicação online
 
 Esta imagem ilustra o fluxo do processo CI/CD usado em [!UICONTROL Cloud Manager]:
 
@@ -75,14 +75,59 @@ Independentemente do acionador de implantação, as verificações de qualidade 
 
 Para saber mais sobre a implantação das verificações de código e qualidade, consulte o documento [Implantação do código.](/help/using/code-deployment.md)
 
+## Recursos opcionais no Cloud Manager {#optional-features-in-cloud-manager}
+
+O Cloud Manager oferece recursos adicionais e avançados que podem ser benéficos para o seu projeto, dependendo da configuração e das necessidades específicas do ambiente. Se esses recursos forem de seu interesse, entre em contato com o engenheiro de sucesso do cliente (CSE) ou representante do Adobe para discutir mais sobre isso.
+
 ### Dimensionamento automático {#autoscaling}
 
-quando o ambiente de produção estiver sujeito a uma carga excepcionalmente elevada, [!UICONTROL Cloud Manager] O detecta a necessidade de capacidade adicional e automaticamente adiciona capacidade adicional online usando seu recurso de dimensionamento automático.
+Quando o ambiente de produção estiver sujeito a uma carga excepcionalmente alta, [!UICONTROL Cloud Manager] O detecta a necessidade de capacidade adicional e automaticamente adiciona capacidade adicional online usando seu recurso de dimensionamento automático.
 
-Nesse caso, [!UICONTROL Cloud Manager] O aciona automaticamente o processo de provisionamento de dimensionamento automático, envia uma notificação do evento de dimensionamento automático e oferece capacidade adicional online em minutos. A capacidade adicional é provisionada no ambiente de produção, nas mesmas regiões e corresponde às mesmas especificações do sistema que os nós de dispatcher/publicação em execução.
+Nesse caso, [!UICONTROL Cloud Manager] O aciona automaticamente o processo de provisionamento de dimensionamento automático, envia uma notificação do evento de dimensionamento automático e oferece capacidade adicional online em minutos. A capacidade adicional é provisionada no ambiente de produção, nas mesmas regiões e corresponde às mesmas especificações do sistema que os nós do Dispatcher/publicação em execução.
 
-O recurso de dimensionamento automático se aplica somente ao nível de dispatcher/publicação e é executado usando um método de dimensionamento horizontal, com no mínimo um segmento adicional de um par de dispatcher/publicação até no máximo dez segmentos. Qualquer capacidade adicional fornecida será dimensionada manualmente em um período de dez dias úteis, conforme determinado pelo CSE (Customer Success Engineer, Engenheiro especializado na fidelização de clientes).
+O recurso de dimensionamento automático se aplica somente à camada do Dispatcher/publicação e é executado usando um método de dimensionamento horizontal, com no mínimo um segmento adicional de um par do Dispatcher/publicação até no máximo dez segmentos. Qualquer capacidade adicional fornecida será dimensionada manualmente em um período de dez dias úteis, conforme determinado pelo CSE (Customer Success Engineer, Engenheiro especializado na fidelização de clientes).
 
 >[!NOTE]
 >
->Os clientes interessados em explorar se o dimensionamento automático é adequado para seu aplicativo devem entrar em contato com o representante do CSE ou do Adobe.
+>Se você estiver interessado em explorar se o dimensionamento automático é adequado para seu aplicativo, entre em contato com seu representante de CSE ou Adobe.
+
+### Implantações azul/verde {#blue-green}
+
+A implantação azul/verde é uma técnica que reduz o tempo de inatividade e o risco ao executar dois ambientes de produção idênticos chamados azul e verde.
+
+A qualquer momento, apenas um dos ambientes está ao vivo, com o ambiente ativo servindo todo o tráfego de produção. Em geral, azul é o ambiente atualmente em funcionamento e verde está ocioso.
+
+* A implantação azul/verde é um complemento dos pipelines CI/CD do Cloud Manager, no qual um segundo conjunto de instâncias de publicação e Dispatcher (verde) é criado e usado para implantações. As instâncias verdes são anexadas ao balanceador de carga de produção e as instâncias antigas (azul) são removidas e finalizadas.
+* Essa implementação de azul/verde trata as instâncias como transitórias e cada iteração de um pipeline azul/verde criará um novo conjunto de servidores de publicação e Dispatcher.
+* Um balanceador de carga verde será criado como parte da configuração. Esse balanceador de carga nunca mudará e é para o que você deve apontar seu URL verde ou &quot;teste&quot;.
+* Durante uma implantação azul/verde, uma réplica exata dos níveis existentes de publicação/Dispatcher será criada (conforme lida no TDL).
+
+#### Fluxo de implantação azul/verde {#flow}
+
+Quando a implantação azul/verde está ativada, o fluxo de implantação é diferente do fluxo de implantação do Cloud Service padrão.
+
+| Etapa | Implantação azul/verde | Implantação padrão |
+|---|---|---|
+| 1 | Implantação para autor | Implantação para autor |
+| 2 | Pausar para teste | - |
+| 3 | A infraestrutura verde é criada | - |
+| 4 | Implantação para níveis verdes de publicação/Dispatcher | Implantação para editor |
+| 5 | Pausar para teste (até 24 horas) | - |
+| 6 | A infraestrutura verde é adicionada ao balanceador de carga de produção | - |
+| 7 | A infraestrutura azul é removida do balanceador de carga de produção- |
+| 8 | A infraestrutura azul é encerrada automaticamente | - |
+
+#### Implementação de azul/verde {#implementing}
+
+Todos os usuários do AMS que usam o Cloud Manager para implantações de produção estão qualificados para usar a implantação azul/verde. No entanto, o uso da implantação azul/verde requer a validação adicional de seus ambientes e a configuração por um Adobe CSE.
+
+Se você estiver interessado em implantação azul/verde, considere os seguintes requisitos e limitações e entre em contato com seu CSE.
+
+#### Requisitos e limitações {#limitations}
+
+* Azul/verde está disponível somente para pares de publicação/Dispatcher.
+* Visualizar pares do Dispatcher/publicar não fazem parte de implantações azuis/verdes.
+* Cada par Dispatcher/publish é idêntico a qualquer outro par Dispatcher/publish.
+* Azul/verde está disponível somente no ambiente de produção.
+* Azul/verde está disponível no AWS e no Azure.
+* Azul/verde não está disponível somente para clientes do Assets.
