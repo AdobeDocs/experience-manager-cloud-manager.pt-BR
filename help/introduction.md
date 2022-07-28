@@ -2,9 +2,9 @@
 title: Introdução ao Cloud Manager para AMS
 description: Comece aqui para conhecer o Cloud Manager for Adobe Managed Services (AMS) e como ele permite que as organizações autogerenciem o Adobe Experience Manager na nuvem.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 22d40a1f07f56ee7a7dddb4897e4079f1e346674
+source-git-commit: 14e35882765783b234ca35da14257279af5130a0
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1287'
 ht-degree: 10%
 
 ---
@@ -100,7 +100,7 @@ A qualquer momento, apenas um dos ambientes está ao vivo, com o ambiente ativo 
 * A implantação azul/verde é um complemento dos pipelines CI/CD do Cloud Manager, no qual um segundo conjunto de instâncias de publicação e Dispatcher (verde) é criado e usado para implantações. As instâncias verdes são anexadas ao balanceador de carga de produção e as instâncias antigas (azul) são removidas e finalizadas.
 * Essa implementação de azul/verde trata as instâncias como transitórias e cada iteração de um pipeline azul/verde criará um novo conjunto de servidores de publicação e Dispatcher.
 * Um balanceador de carga verde será criado como parte da configuração. Esse balanceador de carga nunca mudará e é para o que você deve apontar seu URL verde ou &quot;teste&quot;.
-* Durante uma implantação azul/verde, uma réplica exata dos níveis existentes de publicação/Dispatcher será criada (conforme lida no TDL).
+* Durante uma implantação azul/verde, uma réplica exata dos níveis existentes de publicação/Dispatcher será criada.
 
 #### Fluxo de implantação azul/verde {#flow}
 
@@ -111,7 +111,7 @@ Quando a implantação azul/verde está ativada, o fluxo de implantação é dif
 | 1 | Implantação para autor | Implantação para autor |
 | 2 | Pausar para teste | - |
 | 3 | A infraestrutura verde é criada | - |
-| 4 | Implantação para níveis verdes de publicação/Dispatcher | Implantação para editor |
+| 4 | Implantação para níveis verdes de publicação/dispatcher | Implantação para editor |
 | 5 | Pausar para teste (até 24 horas) | - |
 | 6 | A infraestrutura verde é adicionada ao balanceador de carga de produção | - |
 | 7 | A infraestrutura azul é removida do balanceador de carga de produção- |
