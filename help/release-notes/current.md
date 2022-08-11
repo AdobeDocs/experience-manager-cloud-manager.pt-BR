@@ -1,19 +1,19 @@
 ---
-title: Notas da versão 2022.7.0
-description: Estas são as notas de versão do Cloud Manager versão 2022.7.0.
+title: Notas da versão 2022.8.0
+description: Estas são as notas de versão do Cloud Manager versão 2022.8.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 6%
+source-wordcount: '150'
+ht-degree: 11%
 
 ---
 
 
-# Notas de versão do Cloud Manager versão 2022.7.0 {#release-notes}
+# Notas de versão do Cloud Manager versão 2022.8.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2022.7.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2022.8.0.
 
 >[!NOTE]
 >
@@ -21,13 +21,14 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.7.0 é 30 de junho de 2022. A próxima versão está planejada para 11 de agosto de 2022.
+A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.8.0 é 11 de agosto de 2022. A próxima versão está planejada para 9 de setembro de 2022.
 
 ## Novidades {#what-is-new}
 
-* Os usuários do Cloud Manager agora podem acessar tutoriais em vídeo úteis a partir da página de aterrissagem **Welcome** a qualquer momento.
-* O número máximo de páginas a testar [agora pode ser substituído pela configuração da variável `MAX_PAGES` variável de ambiente.](/help/using/code-quality-testing.md#crawler)
+* Em determinados cenários, um mecanismo de tentativa silenciosa ajudará a garantir que o pipeline de implantação não resulte em um estado de erro.
+* [O Arquétipo de Projeto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=pt_BR) incluído no Cloud Manager foi atualizado para a versão 37.
 
 ## Correções de erros {#bug-fixes}
 
-* Correção de um problema em que, após a aprovação de um pipeline de front-end, nenhuma chamada era feita para executar a etapa de implantação.
+* Alguns casos de falhas raras de criação de repositório foram tornados mais resilientes.
+* Ocorrências raras de erros de configuração de organização de VSTS agora são reduzidas devido a tentativas introduzidas.
