@@ -2,10 +2,10 @@
 title: Primeiro logon
 description: Siga esta página se tiver configurado suas configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 43d05eed9c2e7c4cf6c3becdbc3e4522428722b7
+source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 3%
+source-wordcount: '255'
+ht-degree: 2%
 
 ---
 
@@ -39,3 +39,7 @@ Prossiga para o documento [Configuração do programa](/help/getting-started/pro
 ## Atividade do Cloud Manager {#activity}
 
 O Cloud Manager fornece uma visualização consolidada da atividade de um programa, listando todas as execuções de pipeline de CI/CD, tanto de produção quanto de não produção, permitindo visibilidade sobre a atividade anterior e atual.
+
+>[!NOTE]
+>
+>Por padrão, um usuário com acesso a um ambiente de AEM também terá a função Usuário do Cloud Manager . Essa função em si mesma é insuficiente para dar ao usuário acesso à visualização dos detalhes do programa. Esse usuário com apenas a função de usuário do Cloud Manager pode navegar pelas opções de menu do programa até o URL do autor do ambiente de AEM (se existirem ambientes). Esses usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.
