@@ -2,9 +2,9 @@
 title: Notificações
 description: Saiba como o Cloud Manager notifica você sobre eventos importantes.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 22efb00c7e3ffee8829073dbb498f05a9114807d
+source-git-commit: 804b537bbd61105a92b42960d44ecedabfb13099
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '563'
 ht-degree: 1%
 
 ---
@@ -26,26 +26,72 @@ As notificações são exibidas em uma barra lateral no [!UICONTROL Cloud Manage
 
 O ícone de sino no cabeçalho está danificado quando você tem novas notificações.
 
-![Ícone Notificações](/help/assets/image2018-7-12_11-52-40.png)
+![Ícone Notificações](/help/assets/notifications-bell-badged.png)
 
-Clique no ícone de sino para abrir a barra lateral e exibir as notificações. A barra lateral lista as notificações mais recentes.
+Clique no ícone de sino para abrir a barra lateral e exibir as notificações. O **Notificações** na barra lateral, lista as notificações mais recentes, como confirmações de implantação. As notificações se referem aos seus ambientes.
 
-![Barra lateral de notificações](/help/assets/screen_shot_2018-07-20at91406pm.png)
+![Barra lateral de notificações](/help/assets/notifications-activities.png)
 
-Clique em uma notificação e, em seguida, clique em **Exibir detalhes** para acessar a página de detalhes de execução do pipeline.
+O **Anúncios** inclui anúncios de produto do Adobe. Os anúncios dizem respeito ao produto.
 
-![Exibir detalhes](/help/assets/screen_shot_2018-08-14at43503pm.png)
+![Barra lateral de notificações](/help/assets/notificaitons-announcements.png)
 
-## Notificações por email {#email-notifications}
+Clique em uma notificação ou anúncio para exibir seus detalhes. As notificações vinculadas a atividades como implantações de pipeline levam você aos detalhes dessa atividade, como a janela de execução do pipeline.
 
-Por padrão, as notificações estão disponíveis na interface do usuário da Web em todo o Adobe [!UICONTROL Experience Cloud] soluções. Os usuários individuais também podem optar pelo envio dessas notificações por email.
+Clique no botão **Exibir tudo** na parte inferior do painel para exibir todos os anúncios na caixa de entrada.
 
-Clique no ícone de engrenagem na parte inferior da barra lateral de notificações.
+Clique no botão **Marcar tudo como lido** na parte inferior do painel para marcar todas as notificações não lidas como lidas e limpar o símbolo do ícone de sino.
 
-![Ícone Configurações de notificação](/help/assets/image2018-7-12_12-8-19.png)
+## Configuração de notificação {#configuration}
 
-Isso levará o usuário ao **Preferências de notificações** tela no Adobe [!UICONTROL Experience Cloud].
+Você pode personalizar o modo como recebe as notificações e quais elas recebem.
 
-Os usuários podem ativar as notificações por email e (opcionalmente) selecionar os tipos de notificações que desejam receber por email. Você também pode especificar receber suas notificações como um resumo diário ou semanal do Adobe [!UICONTROL Experience Cloud], conforme mostrado abaixo:
+Clique no ícone de engrenagem na parte superior da barra lateral de notificações.
 
-![Configurações de notificação](/help/assets/image2018-7-12_12-10-51.png)
+![Ícone Configurações de notificação](/help/assets/notifications-configuration.png)
+
+Isso abre o **preferências de Experience Cloud** , onde é possível definir suas assinaturas de notificação e como você recebe suas notificações.
+
+### Assinaturas {#subscriptions}
+
+As assinaturas definem para quais produtos você recebe notificações e quais notificações.
+
+![Assinaturas de notificação](/help/assets/notifications-subscriptions.png)
+
+Por padrão, você receberá todas as notificações para todos os produtos. Clique em **Personalizar** ao lado de um produto para definir os tipos de notificações que você recebe para esse produto.
+
+![Personalização de assinatura de notificação](/help/assets/notifications-subscriptions-customize.png)
+
+### Prioridade {#priority}
+
+Os alertas de prioridade serão marcados com um **ALTO** e pode ser configurado para ser recebido exclusivamente como alertas. No **Prioridade** , você pode definir quais categorias se qualificam como notificações de prioridade.
+
+![Prioridade de notificação](/help/assets/notifications-priority.png)
+
+Use o menu suspenso para adicionar à lista de categorias qualificadas como prioridade. Clique no X ao lado dos nomes das categorias para removê-los.
+
+### Alertas {#alerts}
+
+Os alertas são exibidos no canto superior direito da janela por alguns segundos. Use o **Alertas** para definir para quais notificações você recebe alertas.
+
+![Alertas de notificação](/help/assets/notifications-alerts.png)
+
+Você pode definir o comportamento dos alertas.
+
+* **Mostrar alertas para** - Define os tipos de notificações que acionam alertas
+* **Os alertas devem ficar na tela até que eu os descarte** - Controla se os alertas devem persistir, a menos que você os ignore ativamente
+* **Duração** - Define quanto tempo o alerta deve permanecer na tela, caso não tenha escolhido que eles devem permanecer na tela.
+
+## Emails {#emails}
+
+As notificações estão disponíveis na interface do usuário da Web em todo o Adobe [!UICONTROL Experience Cloud] soluções. Também é possível optar por enviar essas notificações por email no **Emails** seção.
+
+![Emails de notificação](/help/assets/notifications-emails.png)
+
+Por padrão, nenhum email é enviado. Você pode optar por receber emails como:
+
+* Instantaneamente
+* Diariamente
+* Semanalmente
+
+When **Notificações instantâneas** for escolhida, os emails serão enviados imediatamente para cada notificação. Para **Resumo diário** e **Resumo semanal** você pode escolher quando seu resumo diário é enviado e em que dia e quando seu resumo semanal é enviado.
