@@ -3,9 +3,9 @@ title: Segurança e privacidade
 description: Saiba mais sobre a segurança e a privacidade de seu código e ativos de artefato no Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: d7751757c1d3bda3d60406a1d39cb41c61f5c863
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '189'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
@@ -16,22 +16,22 @@ Saiba mais sobre a segurança e a privacidade de seu código e ativos de artefat
 
 ## Funções e permissões {#roles}
 
-[!UICONTROL Cloud Manager] O tem funções pré-configuradas com permissões apropriadas.
+O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apropriadas.
 
-Para saber mais sobre as possíveis funções que você pode atribuir nas permissões de Admin Console e função de usuário, consulte o documento [Permissões baseadas em funções.](/help/requirements/role-based-permissions.md)
+Para saber mais sobre as possíveis funções que você pode atribuir no Admin Console e as permissões de função de usuário, consulte o documento [Permissões baseadas em funções.](/help/requirements/role-based-permissions.md)
 
-## Isolamento de Recurso {#resource-isolation}
+## Isolamento de recurso {#resource-isolation}
 
-[!UICONTROL Cloud Manager] Os clientes precisam de suas credenciais IMS para se autenticar como todas as permissões vinculadas ao [!UICONTROL Cloud Manager] estão vinculadas às suas organizações IMS. Durante o processo de integração, a equipe de provisionamento garante que o isolamento de recursos seja aplicado em [!UICONTROL Cloud Manager].
+Os clientes do [!UICONTROL Cloud Manager] precisam das credenciais IMS para se autenticar porque todas as permissões vinculadas ao [!UICONTROL Cloud Manager] estão vinculadas às suas organizações IMS. Durante o processo de integração, a equipe de provisionamento garante que o isolamento de recursos seja aplicado no [!UICONTROL Cloud Manager].
 
 ## Segurança de dados {#data-security}
 
-Entrada de código [!UICONTROL Cloud Manager] está criptografada em trânsito. Os binários criados pelo Cloud Manager também são criptografados em trânsito e criptografados quando armazenados.
+O código no [!UICONTROL Cloud Manager] é criptografado em trânsito. Os binários criados pelo Cloud Manager também são criptografados em trânsito e quando armazenados.
 
-Cada cliente recebe seu próprio repositório Git e o código é seguro e não é compartilhado com outras organizações.
+Cada cliente recebe seu próprio repositório Git. O código é seguro e não é compartilhado com outras organizações.
 
 ## Privacidade de dados {#data-privacy}
 
-[!UICONTROL Cloud Manager] adere aos princípios de privacidade definidos pelo Adobe. Os desenvolvedores enviam o código com segurança para repositórios Git por HTTPS.
+O [!UICONTROL Cloud Manager] segue os princípios de privacidade definidos pela Adobe. Os desenvolvedores enviam o código com segurança para repositórios Git por HTTPS.
 
-[!UICONTROL Cloud Manager]A interface do usuário do é criada sobre serviços que estão em conformidade com uma estrutura de controle Adobe comum que. [!UICONTROL Cloud Manager]A interface do usuário do usa serviços seguros de vários provedores de nuvem.
+A interface do [!UICONTROL Cloud Manager] é criada com base em serviços que estão em conformidade com uma estrutura de controle comum da Adobe. A interface do [!UICONTROL Cloud Manager] usa serviços seguros de vários provedores de nuvem.
