@@ -1,22 +1,22 @@
 ---
-title: Configuração de Ramificações
-description: Saiba como configurar sua primeira ramificação no git e como ela é usada pelo pipeline de CI/CD para implantar seu código de aplicativo.
+title: Configuração de ramificações
+description: Saiba como configurar sua primeira ramificação no Git e como ela é usada pelo pipeline CI/CD para implantar seu código de aplicativo.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
 source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '323'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Configuração de Ramificações {#configuring-branches}
+# Configuração de ramificações {#configuring-branches}
 
-Saiba como configurar sua primeira ramificação no git e como ela é usada pelo pipeline de CI/CD para implantar seu código de aplicativo.
+Saiba como configurar sua primeira ramificação no Git e como ela é usada pelo pipeline CI/CD para implantar seu código de aplicativo.
 
-## Configurando sua primeira ramificação no Git {#setting-up-your-first-branch-in-git}
+## Configuração da primeira ramificação no Git {#setting-up-your-first-branch-in-git}
 
-Um único repositório Git inicialmente vazio [está provisionado](/help/requirements/environment-provisioning.md) para cada programa integrado no Cloud Manager. Esse repositório pode conter quantas ramificações seu processo de desenvolvimento necessitar, mas deve haver pelo menos uma ramificação usada pelo pipeline de CI/CD para implantar o código do aplicativo no estágio e na produção. A prática recomendada é usar `main` como o nome desta ramificação. Convenientemente, esse é o comportamento padrão dos clientes git ao configurar novos projetos.
+Um único repositório Git, inicialmente vazio, [está provisionado](/help/requirements/environment-provisioning.md) para cada programa integrado no Cloud Manager. Esse repositório pode conter quantas ramificações seu processo de desenvolvimento necessitar, mas deve haver pelo menos uma ramificação usada pelo pipeline CI/CD para implantar o código do aplicativo no preparo e na produção. A prática recomendada é usar `main` como o nome desta ramificação. De forma conveniente, esse é o comportamento padrão dos clientes do Git ao configurar novos projetos.
 
 Por exemplo, ao configurar um novo projeto, você executará um conjunto de comandos semelhantes aos seguintes.
 
@@ -50,11 +50,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Não é um requisito para usar o cliente da linha de comando. Há uma variedade de clientes git gráficos disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente seja compatível com git usando HTTPS, ele deve ser compatível com [!UICONTROL Cloud Manager].
+>Isso não é um requisito para usar o cliente da linha de comando. Há uma variedade de clientes gráficos do Git disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente seja compatível com o uso de HTTPS do Git, ele deve ser compatível com o [!UICONTROL Cloud Manager].
 
-## Empurrando Sua Primeira Ramificação {#pushing-your-first-branch}
+## Envio da primeira ramificação {#pushing-your-first-branch}
 
-Depois de confirmar pelo menos uma revisão, é possível adicionar a variável [!UICONTROL Cloud Manager] repositório como um repositório remoto e, em seguida, envie seus compromissos para ele.
+Depois de confirmar pelo menos uma revisão, é possível adicionar o repositório do [!UICONTROL Cloud Manager] como remoto e, em seguida, enviar seus confirmações para ele.
 
 ```shell
 $ git remote add adobe <url>
@@ -70,12 +70,12 @@ To <url>
 
 >[!NOTE]
 >
->O URL específico, juntamente com suas credenciais, será fornecido a você pelo departamento de engenharia de sucesso do cliente durante o período de [!UICONTROL Cloud Manager] integração.
+>O URL específico, juntamente com suas credenciais, será fornecido a você pelo engenheiro de sucesso do cliente durante o período de integração do [!UICONTROL Cloud Manager].
 
 ## Ramificações adicionais {#additional-branches}
 
-Um único `main` Essa ramificação poderá ser suficiente para projetos muito simples, mas, na maioria dos casos, será necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que as atividades diárias de desenvolvimento são executadas em uma ramificação chamada `develop` e a ramificação de desenvolvimento é mesclada à `main` ramificação quando for hora de uma implantação.
+Uma única ramificação `main` pode ser suficiente para projetos muito simples, mas, na maioria dos casos, é necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que as atividades diárias de desenvolvimento são executadas em uma ramificação chamada `develop`, e a ramificação de desenvolvimento é mesclada à ramificação `main` no momento de uma implantação.
 
 >[!TIP]
 >
->Para ver comandos git comuns, consulte o [Folha de características do Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
+>Para ver comandos comuns do Git, consulte a [Folha de características do Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
