@@ -69,8 +69,8 @@ Depois de configurar seu programa e ter pelo menos um ambiente que utiliza a int
    1. Para pipelines de implantação, em **Comportamento de falhas de métricas importantes**, defina o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade.
 
       * **Pergunte sempre** - é a configuração padrão e requer intervenção manual em qualquer falha importante.
-      * **Falha imediata** - se essa opção for selecionada, o pipeline será cancelado sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que rejeita manualmente cada falha.
-      * **Continuar imediatamente** - se essa opção for selecionada, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.
+      * **Falha imediata** - Se selecionada, o pipeline será cancelado sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que rejeita manualmente cada falha.
+      * **Continuar imediatamente** - Se essa opção for selecionada, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.
 
 
 1. Clique em **Salvar** para salvar o pipeline.
