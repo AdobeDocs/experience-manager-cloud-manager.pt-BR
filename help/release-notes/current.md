@@ -1,23 +1,23 @@
 ---
 title: Notas da versão 2022.10.0
-description: Estas são as notas de versão do Cloud Manager versão 2022.10.0.
+description: Estas são as notas de versão do Cloud Manager 2022.10.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 69c1c8a1136c037a5eea635a75f2d4d187f2ac4d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '120'
+ht-degree: 63%
 
 ---
 
 
-# Notas de versão do Cloud Manager versão 2022.10.0 {#release-notes}
+# Notas de versão do Cloud Manager 2022.10.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2022.10.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2022.10.0.
 
 >[!NOTE]
 >
->Para obter as notas de versão mais recentes do Cloud Manager AEM as a Cloud Service, consulte [Cloud Manager nas notas de versão atuais AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
+>Para obter as notas de versão mais recentes do Cloud Manager no AEM as a Cloud Service, consulte [Notas de versão atuais do Cloud Manager no AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html?lang=pt-BR)
 
 ## Data de lançamento {#release-date}
 

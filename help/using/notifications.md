@@ -5,7 +5,7 @@ exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 1%
+ht-degree: 23%
 
 ---
 
@@ -16,17 +16,17 @@ Saiba como o Cloud Manager notifica você sobre eventos importantes.
 
 ## Notificações no Cloud Manager {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] envia notificações quando um pipeline de produção é iniciado e concluído (com êxito ou sem êxito), no início de uma implantação de produção, bem como quando a variável **Aprovação ao vivo** e **Programado** as etapas são atingidas. Essas notificações são enviadas por meio da variável [!UICONTROL Experience Cloud] sistema de notificação.
+O [!UICONTROL Cloud Manager] envia notificações quando um pipeline de produção é iniciado e concluído (com sucesso ou não). Ele realiza esse envio no início de uma implantação de produção, bem como quando as etapas **Aprovação da ativação** e **Programado** são atingidas. Essas notificações são enviadas por meio do sistema de notificação da [!UICONTROL Experience Cloud].
 
 >[!NOTE]
 >
->A aprovação e as notificações agendadas são enviadas apenas aos usuários no **Proprietário da empresa**, **Gerenciador de programas** e **Gerenciador de implantação** funções.
+>A aprovação e as notificações programadas são enviadas apenas aos usuários nas funções de **Proprietário da empresa**, **Gerente de programa** e **Gerente de implantação**.
 
-As notificações são exibidas em uma barra lateral no [!UICONTROL Cloud Manager] e através do Adobe [!UICONTROL Experience Cloud].
+As notificações são exibidas em uma barra lateral no [!UICONTROL Cloud Manager] e em toda a Adobe [!UICONTROL Experience Cloud].
 
-O ícone de sino no cabeçalho está danificado quando você tem novas notificações.
+O ícone de sino no cabeçalho é destacado quando você tem novas notificações.
 
-![Ícone Notificações](/help/assets/notifications-bell-badged.png)
+![Ícone de notificações](/help/assets/notifications-bell-badged.png)
 
 Clique no ícone de sino para abrir a barra lateral e exibir as notificações. O **Notificações** na barra lateral, lista as notificações mais recentes, como confirmações de implantação. As notificações se referem aos seus ambientes.
 

@@ -1,40 +1,40 @@
 ---
 title: Primeiro logon
-description: Siga esta página se tiver configurado suas configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
+description: Siga esta página se tiver definindo as configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 2%
+ht-degree: 70%
 
 ---
 
 
 # Primeiro logon {#first-time-login}
 
-Depois de configurar a configuração geral para [!UICONTROL Cloud Manager], você está pronto para usá-lo.
+Após definir a configuração geral do [!UICONTROL Cloud Manager], você está pronto para usá-lo.
 
 >[!NOTE]
 >
->Dependendo das funções atribuídas em [!UICONTROL Cloud Manager] e o estado do aplicativo, as telas que você vê podem variar das ilustrações.
+>Dependendo das funções atribuídas no [!UICONTROL Cloud Manager] e o estado do aplicativo, as telas que você vê podem ser diferentes das ilustrações.
 
-## Efetuar logon pela primeira vez {#logging-in-for-the-first-time}
+## Fazer logon pela primeira vez {#logging-in-for-the-first-time}
 
 1. Faça logon no Adobe [!UICONTROL Experience Cloud] e você verá a lista de programas.
 
 1. Selecione o programa.
 
-1. No cartão do programa, selecione o botão de reticências e **Cloud Manager** para navegar até o **Visão geral** página.
+1. No cartão do programa, selecione o botão de reticências e **Cloud Manager** para navegar até a página **Visão geral** do Cloud Manager.
 
    ![Opção do Cloud Manager](/help/assets/navigate-cm1.png)
 
-1. O Cloud Manager é aberto na **Visão geral** página.
+1. O Cloud Manager abre na página **Visão geral**.
 
-   ![Página Visão geral do Cloud Manager](/help/assets/FirstLogin1.png)
+   ![Página de visão geral do Cloud Manager](/help/assets/FirstLogin1.png)
 
-1. Clique em **Programa de configuração** para configurar a descrição do programa e definir os KPIs (indicadores-chave de desempenho).
+1. Clique em **Configurar programa** para configurar a descrição do programa e definir os KPIs (indicadores-chave de desempenho).
 
-Prossiga para o documento [Configuração do programa](/help/getting-started/program-setup.md) para as próximas etapas da configuração do programa.
+Prossiga para o documento [Configuração do programa](/help/getting-started/program-setup.md) para ver as próximas etapas da configuração do programa.
 
 ## Atividade do Cloud Manager {#activity}
 
