@@ -82,7 +82,7 @@ public class DoThis implements Runnable {
 
 * **Chave**: CQRules:CWE-134
 * **Tipo**: Vulnerabilidade
-* **Gravidade**: Máxima
+* **Gravidade**: Alta
 * **Desde**: Versão 2018.4.0
 
 Usar uma string de formato de uma fonte externa (como um parâmetro de solicitação ou conteúdo gerado pelo usuário) pode expor um aplicativo a ataques de negação de serviço. Há circunstâncias em que uma string de formato pode ser controlada externamente, mas isso só é permitido a partir de fontes confiáveis.
@@ -280,7 +280,7 @@ public void orDoThis() throws MyCustomException {
 
 * **Chave**: CQRules:CQBP-44---ConsecutivelyLogAndThrow
 * **Tipo**: Code Smell
-* **Gravidade**: Baixa
+* **Gravidade**: Menor
 * **Desde**: Versão 2018.4.0
 
 Outro padrão comum a ser evitado é registrar uma mensagem e imediatamente lançar uma exceção. Isso geralmente indica que a mensagem de exceção acabará duplicada nos arquivos de log.
@@ -334,7 +334,7 @@ public void doGet() throws Exception {
 
 * **Chave**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
 * **Tipo**: Code Smell
-* **Gravidade**: Baixa
+* **Gravidade**: Menor
 * **Desde**: Versão 2018.4.0
 
 Como prática recomendada, as mensagens de log devem fornecer informações contextuais sobre onde ocorreu uma exceção no aplicativo. Embora o contexto também possa ser determinado por meio do uso de rastreamentos de pilha, em geral a mensagem de log será mais fácil de ler e entender. Como resultado, ao registrar uma exceção, não é recomendado usar a mensagem da exceção como a mensagem de log. A mensagem de exceção conterá o que deu errado, enquanto a mensagem de log deve ser usada para informar a um leitor de log o que o aplicativo estava fazendo quando a exceção aconteceu. A mensagem de exceção ainda será registrada. Ao especificar sua própria mensagem, os registros serão mais fáceis de entender.
@@ -367,7 +367,7 @@ public void doThis() {
 
 * **Chave**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
 * **Tipo**: Code Smell
-* **Gravidade**: Baixa
+* **Gravidade**: Menor
 * **Desde**: Versão 2018.4.0
 
 Como o nome sugere, as exceções de Java devem sempre ser usadas em circunstâncias excepcionais. Como resultado, quando uma exceção é capturada, é importante garantir que as mensagens de log sejam registradas no nível apropriado: AVISO ou ERRO. Isso garante que essas mensagens sejam exibidas corretamente nos logs.
@@ -400,7 +400,7 @@ public void doThis() {
 
 * **Chave**: CQRules:CQBP-44---ExceptionPrintStackTrace
 * **Tipo**: Code Smell
-* **Gravidade**: Baixa
+* **Gravidade**: Menor
 * **Desde**: Versão 2018.4.0
 
 O contexto é essencial ao entender as mensagens de log. Usar `Exception.printStackTrace()` faz com que somente o rastreamento de pilha seja enviado para o fluxo de erro padrão, perdendo todo o contexto. Além disso, em um aplicativo multithread como o AEM, se várias exceções forem impressas usando esse método em paralelo, seus rastreamentos de pilha podem se sobrepor, gerando bastante confusão. As exceções devem ser registradas somente por meio da estrutura de registro.
@@ -433,7 +433,7 @@ public void doThis() {
 
 * **Chave**: CQRules:CQBP-44—LogLevelConsolePrinters
 * **Tipo**: Code Smell
-* **Gravidade**: Baixa
+* **Gravidade**: Menor
 * **Desde**: Versão 2018.4.0
 
 O logon no AEM sempre deve ser feito por meio da estrutura de log, SLF4J. A saída diretamente para a saída padrão ou fluxos de erro padrão perde as informações estruturais e contextuais fornecidas pela estrutura de registro e pode, em alguns casos, causar problemas de desempenho.
@@ -466,7 +466,7 @@ public void doThis() {
 
 * **Chave**: CQRules:CQBP-71
 * **Tipo**: Code Smell
-* **Gravidade**: Baixa
+* **Gravidade**: Menor
 * **Desde**: Versão 2018.4.0
 
 Em geral, caminhos que começam com `/libs` e `/apps` não devem ser codificados, pois os caminhos a que se referem são armazenados com mais frequência como caminhos relativos ao caminho de pesquisa do Sling (que está definido como `/libs,/apps` por padrão). O uso do caminho absoluto pode apresentar defeitos sutis que só apareceriam posteriormente no ciclo de vida do projeto.
@@ -813,7 +813,7 @@ O AEM Cloud Service proíbe definições de índice de pesquisa personalizada (o
 * **Gravidade**: Menor
 * **Desde**: Versão 2021.2.0
 
-O AEM Cloud Service proíbe definições de índice de pesquisa personalizadas (ou seja, nós do tipo `oak:QueryIndexDefinition`) de conter uma propriedade chamada `reindex`. A indexação usando essa propriedade deve ser atualizada antes da migração para o AEM Cloud Service. Consulte a [Documentação de pesquisa e indexação de conteúdo](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=pt-BR#how-to-use) para obter mais informações.
+O AEM Cloud Service proíbe definições de índice de pesquisa personalizada (ou seja, nós do tipo `oak:QueryIndexDefinition`) de conter uma propriedade chamada `reindex`. A indexação usando essa propriedade deve ser atualizada antes da migração para o AEM Cloud Service. Consulte a [Documentação de pesquisa e indexação de conteúdo](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=pt-BR#how-to-use) para obter mais informações.
 
 ## Ferramenta de otimização do Dispatcher {#dispatcher-optimization-tool-rules}
 
