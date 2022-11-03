@@ -1,19 +1,19 @@
 ---
-title: Notas da versão 2022.10.0
-description: Estas são as notas de versão do Cloud Manager 2022.10.0.
+title: Notas da versão 2022.11.0
+description: Estas são as notas de versão do Cloud Manager 2022.11.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 69c1c8a1136c037a5eea635a75f2d4d187f2ac4d
+source-git-commit: 2defbdbee0221540f66f7d824ccf1bd33179c9d9
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 63%
+source-wordcount: '132'
+ht-degree: 45%
 
 ---
 
 
-# Notas de versão do Cloud Manager 2022.10.0 {#release-notes}
+# Notas de versão do Cloud Manager 2022.11.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2022.10.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2022.11.0.
 
 >[!NOTE]
 >
@@ -21,12 +21,12 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2022.10
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.10.0 é 6 de outubro de 2022. A próxima versão está planejada para 3 de novembro de 2022.
+A data de lançamento de [!UICONTROL Cloud Manager] a versão 2022.11.0 é 3 de novembro de 2022. A próxima versão está planejada para 29 de novembro de 2022.
 
 ## Novidades {#what-is-new}
 
-* A versão do [Arquétipo de projeto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=pt-BR) usado pelo Cloud Manager foi atualizado para a versão 39.
+* Quando um ambiente associado a um pipeline tem um status que não permite a execução do pipeline, a ação de execução é desativada com uma dica de ferramenta explicativa.
 
 ## Correções de erros {#bug-fixes}
 
-* A confiabilidade do teste de desempenho do Assets foi aprimorada com a adição de novas tentativas em determinadas condições.
+* O feedback durante o pipeline de produção de edição foi aprimorado para capturar ocorrências pouco frequentes de um ou mais ambientes ausentes.
