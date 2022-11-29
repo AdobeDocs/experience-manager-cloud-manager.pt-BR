@@ -2,10 +2,10 @@
 title: Configuração de pipelines de produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
-workflow-type: ht
-source-wordcount: '1296'
-ht-degree: 100%
+source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
+workflow-type: tm+mt
+source-wordcount: '1302'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ Saiba como usar o Cloud Manager para criar e configurar pipelines de produção 
 
 ## Visão geral {#overview}
 
-Você pode criar dois tipos diferentes de pipelines usando o bloco **Configurações de pipeline** no [!UICONTROL Cloud Manager].
+Usar o **Configurações de pipeline** bloco em [!UICONTROL Cloud Manager] você pode criar dois tipos diferentes de pipelines.
 
 * **Pipelines de produção** - Um pipeline de produção é composto por uma série de etapas orquestradas que têm o objetivo de levar o código fonte do seu repositório Git até a produção.
 * **Pipelines de não produção** - Um pipeline de não produção é utilizado principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
@@ -41,7 +41,7 @@ Este vídeo fornece uma visão geral do processo de criação de pipeline, que �
 
 ## Adicionar um novo pipeline de produção {#adding-production-pipeline}
 
-Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu programa e definir pelo menos um ambiente, você estará pronto para adicionar um pipeline de produção.
+Depois de usar a variável [!UICONTROL Cloud Manager] Para configurar seu programa e ter pelo menos um ambiente, você está pronto para adicionar um pipeline de produção.
 
 1. Faça logon no Cloud Manager, em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), e selecione a organização e o programa apropriados.
 
@@ -75,9 +75,9 @@ Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu pro
             * **Sobre alterações do Git** - Essas opções iniciam o pipeline de CI/CD sempre que as confirmações são adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
          * **Comportamento de falhas de métricas importantes** - Durante a configuração ou edição do pipeline, o Gerenciador de implantação tem a opção de definir o comportamento do pipeline quando uma falha importante é encontrada em qualquer uma das portas de qualidade. As opções disponíveis são:
 
-            * **Pergunte sempre** - Essa é a configuração padrão e requer uma intervenção manual em todas as falhas importantes.
-            * **Falha imediata** - Se selecionada, o pipeline será cancelado sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que rejeita manualmente cada falha.
-            * **Continuar imediatamente** - Se essa opção for selecionada, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.
+            * **Sempre perguntar** - Essa é a configuração padrão e requer intervenção manual em qualquer falha importante.
+            * **Falhar imediatamente** - Se selecionado, o pipeline será cancelado sempre que ocorrer uma falha importante. É como emular um usuário que rejeita manualmente cada falha.
+            * **Continuar imediatamente** - Se selecionado, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.
 
          ![Acionador de implantação](/help/assets/configure-pipelines/add-prod3.png)
 
@@ -93,8 +93,9 @@ Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu pro
 
             1. Em **CAMINHO**, forneça um caminho de conteúdo.
             1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.
-            * **Limpar** - Executa uma invalidação de cache, semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
-            * **Invalidar** - Executa uma exclusão de cache.
+
+               * **Liberar** - Execute uma exclusão de cache.
+               * **Invalidar** - Execute uma invalidação de cache, de modo semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
             1. Clique em **Adicionar caminho** para adicionar o caminho especificado. É possível adicionar até 100 caminhos por ambiente.
 
          ![Configuração do Dispatcher](/help/assets/configure-pipelines/dispatcher-stage.png)
@@ -107,7 +108,7 @@ Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu pro
 
          * **Opções de implantação** - Você pode definir os parâmetros que controlam a implantação de produção.
 
-            * **Usar aprovação GoLive** - Uma implantação deve ser aprovada manualmente por um usuário com a função **Proprietário da empresa**, **Gerente de projetos** ou **Gerente de implantação**, por meio da interface do [!UICONTROL Cloud Manager].
+            * **Usar Aprovação Ao Vivo** - Uma implantação deve ser aprovada manualmente por um usuário com a variável **Proprietário da empresa**, **Gerenciador de projetos** ou **Gerenciador de implantação** função por meio da [!UICONTROL Cloud Manager] IU.
             * **Programado** - Essa opção interrompe o pipeline antes da implantação de produção para permitir que ele seja programado. Se essa opção estiver selecionada, o pipeline será interrompido após a implantação no ambiente de preparo e solicitará que o usuário execute a ação.
                * **Agora** - Essa opção realiza a implantação na produção imediatamente, concluindo efetivamente o pipeline.
                * **Data** - Essa opção permite que o usuário programe o horário em que a implantação deverá ser concluída.
@@ -125,7 +126,6 @@ Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu pro
             ![Opções de implantação de produção](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
          * **Configuração do Dispatcher** - Define a configuração do Dispatcher para o ambiente de produção. As opções são as mesmas do ambiente de preparo.
-
 
 
 
