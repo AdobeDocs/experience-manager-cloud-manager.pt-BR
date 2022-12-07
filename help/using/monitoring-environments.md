@@ -4,7 +4,7 @@ description: Saiba como monitorar seus ambientes no Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 5907ca6337d33c26ff19a14bfeb358cd9f7b935d
 workflow-type: ht
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 100%
 
 ---
@@ -16,7 +16,7 @@ Saiba como monitorar seus ambientes no Cloud Manager.
 
 ## Limites de métrica {#thresholds}
 
-O monitoramento do sistema no [!UICONTROL Cloud Manager] é feito observando as instâncias individuais em um ambiente e rastreando diversas métricas de cada instância. Cada métrica tem dois limites definidos: um limite de aviso e um limite crítico.
+O monitoramento do sistema no [!UICONTROL Cloud Manager] é feito observando as instâncias individuais em um ambiente e rastreando as diversas métricas de cada instância. Cada métrica tem dois limites definidos: um limite de aviso e um limite crítico.
 
 Se uma métrica ultrapassar seu limite crítico, ela será considerada em estado crítico. Se uma métrica ultrapassar seu limite de aviso (mas estiver abaixo do limite crítico), ela será considerada em estado de aviso. Os limites são definidos pelo Adobe Managed Services e podem ser visualizados no [!UICONTROL Cloud Manager]. Na maioria dos casos, os limites são consistentes entre os clientes, mas há casos em que o Adobe Managed Services modificará os limites para atender às necessidades específicas do cliente. Dúvidas sobre os limites devem ser direcionadas ao seu engenheiro de sucesso do cliente (CSE).
 
@@ -33,7 +33,7 @@ Siga estas etapas para acessar o monitoramento do sistema.
    ![Configurações](/help/assets/first-timea1.png)
 
 
-Como alternativa, é possível navegar até a página de destino **Monitoramento de sistema** por meio do item do menu de navegação global **Relatórios**, no [!UICONTROL Cloud Manager].
+Como alternativa, é possível navegar até a página de destino do **Monitoramento de sistema**, por meio do item do menu de navegação global **Relatórios**, no [!UICONTROL Cloud Manager].
 
 ## Visão geral do monitoramento do sistema {#system-monitoring-overview}
 
