@@ -5,7 +5,7 @@ exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
 workflow-type: tm+mt
 source-wordcount: '1302'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
@@ -16,9 +16,9 @@ Saiba como usar o Cloud Manager para criar e configurar pipelines de produção 
 
 ## Visão geral {#overview}
 
-Usar o **Configurações de pipeline** bloco em [!UICONTROL Cloud Manager] você pode criar dois tipos diferentes de pipelines.
+Você pode criar dois tipos diferentes de pipelines usando o bloco **Configurações de pipeline** no [!UICONTROL Cloud Manager].
 
-* **Pipelines de produção** - Um pipeline de produção é composto por uma série de etapas orquestradas que têm o objetivo de levar o código fonte do seu repositório Git até a produção.
+* **Pipelines de produção** - Um pipeline de produção é composto por uma série de etapas orquestradas que têm o objetivo de levar o código-fonte do seu repositório Git até a produção.
 * **Pipelines de não produção** - Um pipeline de não produção é utilizado principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
 
 Este documento é voltado para pipelines de produção. Para obter detalhes sobre como configurar pipelines de não produção, consulte o documento [Configuração de pipelines de não produção.](/help/using/non-production-pipelines.md)
@@ -41,7 +41,7 @@ Este vídeo fornece uma visão geral do processo de criação de pipeline, que �
 
 ## Adicionar um novo pipeline de produção {#adding-production-pipeline}
 
-Depois de usar a variável [!UICONTROL Cloud Manager] Para configurar seu programa e ter pelo menos um ambiente, você está pronto para adicionar um pipeline de produção.
+Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu programa e definir pelo menos um ambiente, você estará pronto para adicionar um pipeline de produção.
 
 1. Faça logon no Cloud Manager, em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), e selecione a organização e o programa apropriados.
 
@@ -53,7 +53,7 @@ Depois de usar a variável [!UICONTROL Cloud Manager] Para configurar seu progra
 
    1. Forneça um nome descritivo para o pipeline no campo **Nome do pipeline**.
 
-   1. Na seção **Código fonte**, você define de onde o pipeline recuperará o código que será processado.
+   1. Na seção **Código-fonte**, você define de onde o pipeline recuperará o código que será processado.
 
       * **Repositório** - Essa opção define de qual repositório Git o pipeline deve recuperar o código.
       >[!TIP]
@@ -69,7 +69,7 @@ Depois de usar a variável [!UICONTROL Cloud Manager] Para configurar seu progra
 
       1. Na seção **PREPARO**, é possível definir como o pipeline é implantado em seu ambiente de preparo.
 
-         * **Acionador da implantação** - Você tem as seguintes opções para definir os acionadores de implantação que iniciam o pipeline.
+         * **Acionador de implantação** - Você tem as seguintes opções para definir os acionadores de implantação que iniciam o pipeline.
 
             * **Manual** - Use essa opção para iniciar manualmente o pipeline usando a interface do Cloud Manager.
             * **Sobre alterações do Git** - Essas opções iniciam o pipeline de CI/CD sempre que as confirmações são adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
@@ -108,7 +108,7 @@ Depois de usar a variável [!UICONTROL Cloud Manager] Para configurar seu progra
 
          * **Opções de implantação** - Você pode definir os parâmetros que controlam a implantação de produção.
 
-            * **Usar Aprovação Ao Vivo** - Uma implantação deve ser aprovada manualmente por um usuário com a variável **Proprietário da empresa**, **Gerenciador de projetos** ou **Gerenciador de implantação** função por meio da [!UICONTROL Cloud Manager] IU.
+            * **Usar aprovação GoLive** - Uma implantação deve ser aprovada manualmente por um usuário com a função **Proprietário da empresa**, **Gerente de projetos** ou **Gerente de implantação**, por meio da interface do [!UICONTROL Cloud Manager].
             * **Programado** - Essa opção interrompe o pipeline antes da implantação de produção para permitir que ele seja programado. Se essa opção estiver selecionada, o pipeline será interrompido após a implantação no ambiente de preparo e solicitará que o usuário execute a ação.
                * **Agora** - Essa opção realiza a implantação na produção imediatamente, concluindo efetivamente o pipeline.
                * **Data** - Essa opção permite que o usuário programe o horário em que a implantação deverá ser concluída.
@@ -158,7 +158,7 @@ Depois de usar a variável [!UICONTROL Cloud Manager] Para configurar seu progra
       * Defina seus próprios ativos personalizados fazendo upload deles.
 
          1. **FORMATO** - Escolha se o ativo personalizado é um PDF de uma imagem.
-         1. **NOME DO ARQUIVO** - Use o botão do navegador de arquivos para selecionar uma imagem de sua máquina local.
+         1. **NOME DE ARQUIVO** - Use o botão do navegador de arquivos para selecionar uma imagem de sua máquina local.
          1. **Adicionar arquivo de teste** - Clique para fazer upload do ativo selecionado.
 
       ![Distribuição de testes de ativos](/help/assets/configure-pipelines/add-prod6.png)
