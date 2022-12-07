@@ -4,7 +4,7 @@ description: Saiba como configurar sua primeira ramificação no Git e como ela 
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
 source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
 workflow-type: ht
-source-wordcount: '323'
+source-wordcount: '329'
 ht-degree: 100%
 
 ---
@@ -50,11 +50,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Isso não é um requisito para usar o cliente da linha de comando. Há uma variedade de clientes gráficos do Git disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente seja compatível com o uso de HTTPS do Git, ele deve ser compatível com o [!UICONTROL Cloud Manager].
+>Isso não é um requisito para usar o cliente da linha de comando. Há uma variedade de clientes gráficos do Git disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo do cliente seja compatível com a utilização de HTTPS do Git, ele deve ser compatível com o [!UICONTROL Cloud Manager].
 
 ## Envio da primeira ramificação {#pushing-your-first-branch}
 
-Depois de confirmar pelo menos uma revisão, é possível adicionar o repositório do [!UICONTROL Cloud Manager] como remoto e, em seguida, enviar seus confirmações para ele.
+Depois de confirmar pelo menos uma revisão, é possível adicionar o repositório do [!UICONTROL Cloud Manager] como remoto e, em seguida, enviar suas confirmações para ele.
 
 ```shell
 $ git remote add adobe <url>
@@ -70,7 +70,7 @@ To <url>
 
 >[!NOTE]
 >
->O URL específico, juntamente com suas credenciais, será fornecido a você pelo engenheiro de sucesso do cliente durante o período de integração do [!UICONTROL Cloud Manager].
+>O URL específico, junto às suas credenciais, será fornecido a você pelo engenheiro de sucesso do cliente durante o período de integração do [!UICONTROL Cloud Manager].
 
 ## Ramificações adicionais {#additional-branches}
 
