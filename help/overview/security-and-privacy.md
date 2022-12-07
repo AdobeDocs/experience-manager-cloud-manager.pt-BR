@@ -4,7 +4,7 @@ description: Saiba mais sobre a segurança e a privacidade de seu código e ativ
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: d7751757c1d3bda3d60406a1d39cb41c61f5c863
 workflow-type: ht
-source-wordcount: '189'
+source-wordcount: '205'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ Para saber mais sobre as possíveis funções que você pode atribuir no Admin C
 
 ## Isolamento de recurso {#resource-isolation}
 
-Os clientes do [!UICONTROL Cloud Manager] precisam das credenciais IMS para se autenticar porque todas as permissões vinculadas ao [!UICONTROL Cloud Manager] estão vinculadas às suas organizações IMS. Durante o processo de integração, a equipe de provisionamento garante que o isolamento de recursos seja aplicado no [!UICONTROL Cloud Manager].
+Os clientes do [!UICONTROL Cloud Manager] precisam das credenciais IMS para se autenticarem, uma vez que todas as permissões vinculadas ao [!UICONTROL Cloud Manager] estão vinculadas às suas organizações IMS. Durante o processo de integração, a equipe de provisionamento garante que o isolamento de recursos seja aplicado no [!UICONTROL Cloud Manager].
 
 ## Segurança de dados {#data-security}
 
