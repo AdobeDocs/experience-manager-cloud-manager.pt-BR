@@ -4,7 +4,7 @@ description: Após a integração, o proprietário da empresa precisará fazer u
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
 workflow-type: ht
-source-wordcount: '581'
+source-wordcount: '585'
 ht-degree: 100%
 
 ---
@@ -88,7 +88,7 @@ Por exemplo, um usuário que espera uma média de 1000 exibições de página po
 
 O teste de desempenho do ativo é feito fazendo o upload de ativos repetidamente durante um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo, bem como de várias métricas no nível do sistema.
 
-Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Como [!UICONTROL Cloud Manager] testa diretamente o ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN, ou seja, o cache não é utilizado. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
+Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Visto que o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN, ou seja, o cache não é utilizado. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
 
 ## Visão geral do vídeo {#video}
 
