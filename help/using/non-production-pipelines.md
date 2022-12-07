@@ -4,7 +4,7 @@ description: Saiba como usar o Cloud Manager para criar e configurar pipelines d
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 567a16a032bf80451b5e8ba4e3d842cb617a615f
 workflow-type: ht
-source-wordcount: '598'
+source-wordcount: '600'
 ht-degree: 100%
 
 ---
@@ -62,7 +62,7 @@ Depois de configurar seu programa e ter pelo menos um ambiente que utiliza a int
 
 1. Defina suas opções de implantação.
 
-   1. Em **Acionador da implantação**, defina qual evento ativa o pipeline.
+   1. Em **Acionador de implantação**, defina qual evento ativa o pipeline.
 
       * **Manual** - use essa opção para iniciar manualmente o pipeline.
       * **Sobre alterações do Git** - essas opções iniciam o pipeline sempre que as confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
