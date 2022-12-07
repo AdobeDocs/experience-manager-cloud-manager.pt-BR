@@ -4,7 +4,7 @@ description: Saiba mais sobre as permissões pré-configuradas com base em funç
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
 workflow-type: ht
-source-wordcount: '539'
+source-wordcount: '565'
 ht-degree: 100%
 
 ---
@@ -16,20 +16,20 @@ O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apr
 
 ## Funções de usuário {#user-roles}
 
-O gerenciamento de funções do [!UICONTROL Cloud Manager] é feito usando o [Admin Console.](https://helpx.adobe.com/br/enterprise/using/admin-console.html) Qualquer usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de produto do Adobe Managed Services. Associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] no Admin Console.
+O gerenciamento de funções do [!UICONTROL Cloud Manager] é feito usando o [Admin Console.](https://helpx.adobe.com/br/enterprise/using/admin-console.html) Qualquer usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de produto do Adobe Managed Services. Aa associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] no Admin Console.
 
 Para saber mais sobre como configurar suas funções, consulte o documento [Configuração de usuários e funções.](/help/requirements/users-and-roles.md)
 
 Esta tabela lista as funções que podem ser atribuídas no Admin Console.
 
-| [!UICONTROL Cloud Manager] Função | Descrição |
+| Função no [!UICONTROL Cloud Manager] | Descrição |
 |---|---|
-| Proprietário da empresa | Esse é o usuário principal que conclui a configuração inicial do [!UICONTROL Cloud Manager] e é responsável por definir KPIs, aprovar implantações de produção e substituir falhas importantes de 3 níveis quando necessário. |
-| Gerenciador de programas | Esse usuário usa o [!UICONTROL Cloud Manager] para executar a configuração da equipe, revisar o status, exibir KPIs e aprovar falhas importantes de três níveis, quando necessário. |
-| Gerenciador de implantação | Este usuário gerencia as operações de implantação usando o [!UICONTROL Cloud Manager] para executar implantações de preparo e produção, pode aprovar falhas importantes de 3 níveis quando necessário e tem acesso ao repositório Git. |
+| Proprietário da empresa | Esse é o usuário principal que conclui a configuração inicial do [!UICONTROL Cloud Manager] e é responsável por definir KPIs, aprovar implantações de produção e substituir falhas importantes de nível 3 quando necessário. |
+| Gerenciador de programas | Esse usuário usa o [!UICONTROL Cloud Manager] para executar a configuração da equipe, revisar o status, exibir KPIs e aprovar falhas importantes de nível 3, quando necessário. |
+| Gerenciador de implantação | Este usuário gerencia as operações de implantação usando o [!UICONTROL Cloud Manager] para executar implantações de estágio e produção, pode aprovar falhas importantes de nível 3 quando necessário, com acesso ao repositório Git. |
 | Desenvolvedor | Esse usuário desenvolve e testa o código de aplicativo personalizado, usa principalmente o [!UICONTROL Cloud Manager] para exibir o status da implantação e tem acesso de confirmação ao repositório git. |
-| Engenheiro de sucesso do cliente | Esse usuário geralmente oferece suporte ao sucesso do cliente para clientes do AMS e interage com o [!UICONTROL Cloud Manager] para executar implantações que exigem a supervisão do CSE (Engenheiro de sucesso do cliente). |
-| Autor de conteúdo | Esse usuário geralmente não interage com o [!UICONTROL Cloud Manager], mas pode usar o alternador de programa do [!UICONTROL Cloud Manager] (tendo navegado do [!UICONTROL Experience Cloud]) para acessar o Adobe Experience Manager (AEM). |
+| Engenheiro de sucesso do cliente | Esse usuário geralmente oferece suporte ao sucesso do cliente para clientes do AMS e interage com o [!UICONTROL Cloud Manager] com o propósito de executar implantações que exigem a supervisão do CSE (Engenheiro de sucesso do cliente). |
+| Autor de conteúdo | Esse usuário geralmente não interage com o [!UICONTROL Cloud Manager], mas pode usar o programa para alternar do [!UICONTROL Cloud Manager] (tendo navegado pela [!UICONTROL Experience Cloud]) para acessar o Adobe Experience Manager (AEM). |
 
 ## Permissões de usuário {#user-permissions}
 
