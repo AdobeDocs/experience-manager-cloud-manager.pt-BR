@@ -4,7 +4,7 @@ description: Saiba como o teste de qualidade de código de pipelines funciona e 
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
 workflow-type: ht
-source-wordcount: '2863'
+source-wordcount: '2867'
 ht-degree: 100%
 
 ---
@@ -69,7 +69,7 @@ Os resultados do teste de qualidade do código são fornecidos em forma de class
 
 >[!NOTE]
 >
->Para saber mais sobre as regras de qualidade do código personalizado executadas pelo [!UICONTROL Cloud Manager], consulte o documento [Regras de qualidade do código personalizado.](custom-code-quality-rules.md)
+>Para saber mais sobre as regras de qualidade do código personalizado adotadas pelo [!UICONTROL Cloud Manager], consulte o documento [Regras de qualidade do código personalizado.](custom-code-quality-rules.md)
 
 ### Lidar com falsos positivos {#dealing-with-false-positives}
 
