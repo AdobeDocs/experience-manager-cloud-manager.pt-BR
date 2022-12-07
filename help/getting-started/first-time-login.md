@@ -3,9 +3,9 @@ title: Primeiro logon
 description: Siga esta página se tiver definindo as configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
-workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 70%
+workflow-type: ht
+source-wordcount: '261'
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Após definir a configuração geral do [!UICONTROL Cloud Manager], você está 
 
 ## Fazer logon pela primeira vez {#logging-in-for-the-first-time}
 
-1. Faça logon no Adobe [!UICONTROL Experience Cloud] e você verá a lista de programas.
+1. Faça logon na Adobe [!UICONTROL Experience Cloud] e você verá a lista de programas.
 
 1. Selecione o programa.
 
@@ -42,4 +42,4 @@ O Cloud Manager fornece uma visualização consolidada da atividade de um progra
 
 >[!NOTE]
 >
->Por padrão, um usuário com acesso a um ambiente de AEM também terá a função Usuário do Cloud Manager . Essa função em si mesma é insuficiente para dar ao usuário acesso à visualização dos detalhes do programa. Esse usuário com apenas a função de usuário do Cloud Manager pode navegar pelas opções de menu do programa até o URL do autor do ambiente de AEM (se existirem ambientes). Esses usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.
+>Por padrão, um usuário com acesso a um ambiente do AEM também terá a função de Usuário do Cloud Manager. Esta função por si só é insuficiente para conceder ao usuário acesso à visualização de detalhes do programa. Esse usuário, com apenas a função de usuário do Cloud Manager, pode navegar pelas opções de menu do programa até o URL do autor do ambiente do AEM (se existirem ambientes). Esses usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.
