@@ -4,7 +4,7 @@ description: Como qualquer ferramenta avançada, o Cloud Manager contém muitos 
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
 source-git-commit: 73e322cf93dc7709b7581860974079c8d94034ba
 workflow-type: ht
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ Um exemplo é o fictício [aplicativo de estilo de vida WKND.](https://experienc
 
 ## Artefato {#artifact}
 
-Um artefato é uma unidade implantável e é o resultado de um processo de criação que transforma o código fonte em uma única unidade. Por exemplo, um arquivo .zip que contém o código fonte.
+Um artefato é uma unidade implantável e é o resultado de um processo de criação que transforma o código-fonte em uma única unidade. Por exemplo, um arquivo .zip que contém o código-fonte.
 
 ## Repositório de artefatos {#artifact-repository}
 
@@ -58,7 +58,7 @@ Um programa é um conjunto de ambientes que aceitam um agrupamento lógico de in
 
 ## Solução {#solution}
 
-Trata-se de uma das soluções da Adobe [!UICONTROL Experience Cloud]. Por exemplo, Adobe Experience Manager, Adobe Target ou Adobe Analytics.
+Uma solução é uma das soluções da Adobe [!UICONTROL Experience Cloud]. Por exemplo, Adobe Experience Manager, Adobe Target ou Adobe Analytics.
 
 ## Etapa {#step}
 
