@@ -5,7 +5,7 @@ exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
 workflow-type: tm+mt
 source-wordcount: '1302'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -94,8 +94,8 @@ Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu pro
             1. Em **CAMINHO**, forneça um caminho de conteúdo.
             1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.
 
-               * **Liberar** - Execute uma exclusão de cache.
-               * **Invalidar** - Execute uma invalidação de cache, de modo semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
+               * **Limpeza** - Executa uma exclusão do cache.
+               * **Invalidar** - Executa uma invalidação de cache, semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
             1. Clique em **Adicionar caminho** para adicionar o caminho especificado. É possível adicionar até 100 caminhos por ambiente.
 
          ![Configuração do Dispatcher](/help/assets/configure-pipelines/dispatcher-stage.png)
