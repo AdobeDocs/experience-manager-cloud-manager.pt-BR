@@ -2,10 +2,10 @@
 title: O ambiente de criação
 description: Saiba mais sobre o ambiente de criação especializado no qual os usuários do Cloud Manager criam e testam seus códigos.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
-workflow-type: ht
-source-wordcount: '1044'
-ht-degree: 100%
+source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
+workflow-type: tm+mt
+source-wordcount: '1139'
+ht-degree: 91%
 
 ---
 
@@ -51,7 +51,7 @@ Os ambientes de criação do Cloud Manager têm os seguintes atributos.
 
 ## Uso de uma versão específica do Java {#using-java-version}
 
-Por padrão, os projetos são gerados pelo processo de criação do Cloud Manager usando o JDK do Oracle 8. Os clientes que desejam usar um JDK alternativo têm duas opções.
+Por padrão, os projetos são criados pelo processo de compilação do Cloud Manager usando o Oracle 8 JDK. Os clientes que desejam usar um JDK alternativo têm duas opções.
 
 * [Maven Toolchains](#maven-toolchains)
 * [Selecionar uma versão alternativa do JDK para todo o processo de execução do Maven](#alternate-maven)
@@ -104,7 +104,7 @@ As combinações de fornecedor/versão disponíveis no momento são:
 
 ### Versão alternativa do JDK de execução do Maven {#alternate-maven}
 
-Também é possível selecionar o Oracle 8 ou Oracle 11 como o JDK para toda a execução do Maven. Diferentemente das opções de conjuntos de ferramentas, isso altera o JDK usado para todos os plug-ins, a menos que a configuração de conjuntos de ferramentas também esteja definida. Nesse caso, a configuração de conjuntos de ferramentas ainda será aplicada para plug-ins do Maven com reconhecimento de conjuntos de ferramentas. Como resultado, verificar e impor a versão do Java usando o [plug-in Enforcer do Apache Maven](https://maven.apache.org/enforcer/maven-enforcer-plugin/) funcionará.
+Também é possível selecionar o Oracle 8 ou Oracle 11 como o JDK para toda a execução do Maven. Diferentemente das opções de conjuntos de ferramentas, isso altera o JDK usado para todos os plug-ins, a menos que a configuração de conjuntos de ferramentas também esteja definida. Nesse caso, a configuração de conjuntos de ferramentas ainda será aplicada para plug-ins do Maven com reconhecimento de conjuntos de ferramentas. Como resultado, a verificação e a implementação da versão do Java usando o [Plug-in executor Apache Maven](https://maven.apache.org/enforcer/maven-enforcer-plugin/) funcionarão.
 
 Para fazer isso, crie um arquivo chamado `.cloudmanager/java-version` na ramificação do repositório Git usada pelo pipeline. Esse arquivo pode ter o conteúdo `11` ou `8`. Qualquer outro valor é ignorado. Se `11` for especificado, o Oracle 11 será usado e a variável de ambiente `JAVA_HOME` será definida como `/usr/lib/jvm/jdk-11.0.2`. Se `8` for especificado, o Oracle 8 será usado e a variável de ambiente `JAVA_HOME` será definida como `/usr/lib/jvm/jdk1.8.0_202`.
 
@@ -122,11 +122,33 @@ Para ser compatível com isso, o Cloud Manager adiciona variáveis de ambiente p
 |---|---|
 | `CM_BUILD` | Sempre definida como `true` |
 | `BRANCH` | A ramificação configurada para a execução |
-| `CM_PIPELINE_ID` | O identificador de pipeline numérico |
+| `CM_PIPELINE_ID` | O identificador numérico do pipeline |
 | `CM_PIPELINE_NAME` | O nome do pipeline |
 | `CM_PROGRAM_ID` | O identificador numérico do programa |
 | `CM_PROGRAM_NAME` | O nome do programa |
 | `ARTIFACTS_VERSION` | Para um pipeline de preparo ou produção, a versão sintética gerada pelo Cloud Manager |
+
+### Disponibilidade da variável de ambiente padrão {#availability}
+
+As variáveis de ambiente padrão podem ser usadas em vários lugares.
+
+#### Autor, visualização e publicação {#author-preview-publish}
+
+As variáveis e os segredos comuns do ambiente podem ser usados nos ambientes de criação, visualização e publicação.
+
+#### Dispatcher {#dispatcher}
+
+Somente variáveis de ambiente normais podem ser usadas no dispatcher. Segredos não podem ser usados.
+
+No entanto, as variáveis de ambiente não podem ser usadas em `IfDefine` diretivas.
+
+>[!TIP]
+>
+>Você deve validar o uso das variáveis de ambiente com a variável [dispatcher localmente](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) antes da implantação.
+
+#### Configurações do OSGi {#osgi}
+
+Tanto as variáveis de ambiente normais quanto os segredos podem ser usados em configurações do OSGi.
 
 ### Variáveis de pipeline {#pipeline-variables}
 
@@ -230,4 +252,4 @@ Essa mesma técnica pode ser usada para instalar pacotes específicos de linguag
 
 >[!NOTE]
 >
->Instalar um pacote de sistema dessa maneira não o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se precisar de um pacote de sistema instalado no ambiente do AEM, entre em contato com o representante da Adobe.
+>Instalar um pacote de sistema dessa maneira não o instala no ambiente de tempo de execução usado para executar o Adobe Experience Manager. Se a instalação de um pacote de sistema no ambiente AEM for necessária, entre em contato com o representante da Adobe.
