@@ -2,9 +2,9 @@
 title: O ambiente de criação
 description: Saiba mais sobre o ambiente de criação especializado no qual os usuários do Cloud Manager criam e testam seus códigos.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
+source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1152'
 ht-degree: 91%
 
 ---
@@ -138,7 +138,7 @@ As variáveis e os segredos comuns do ambiente podem ser usados nos ambientes de
 
 #### Dispatcher {#dispatcher}
 
-Somente variáveis de ambiente normais podem ser usadas no dispatcher. Segredos não podem ser usados.
+Somente variáveis de ambiente normais podem ser usadas com [o dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=pt-BR) Segredos não podem ser usados.
 
 No entanto, as variáveis de ambiente não podem ser usadas em `IfDefine` diretivas.
 
@@ -148,7 +148,7 @@ No entanto, as variáveis de ambiente não podem ser usadas em `IfDefine` direti
 
 #### Configurações do OSGi {#osgi}
 
-Tanto as variáveis de ambiente normais quanto os segredos podem ser usados em configurações do OSGi.
+Tanto as variáveis de ambiente comuns quanto os segredos podem ser usados em [Configurações OSGi.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=pt_BR)
 
 ### Variáveis de pipeline {#pipeline-variables}
 
