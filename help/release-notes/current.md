@@ -1,19 +1,19 @@
 ---
-title: Notas da versão 2022.12.0
-description: Estas são as notas de versão do Cloud Manager 2022.12.0.
+title: Notas da versão 2023.1.0
+description: Estas são as notas de versão do Cloud Manager 2023.1.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
+source-git-commit: 3e4937fc262016cef5c5c692c06244f411b28c0f
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 100%
+source-wordcount: '125'
+ht-degree: 61%
 
 ---
 
 
-# Notas de versão do Cloud Manager 2022.12.0 {#release-notes}
+# Notas de versão do Cloud Manager 2023.1.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2022.12.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão 2023.1.0.
 
 >[!NOTE]
 >
@@ -21,10 +21,12 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] versão
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] versão 2022.12.0 é 29 de novembro de 2022. A próxima versão está planejada para 19 de janeiro de 2023.
+A data de lançamento de [!UICONTROL Cloud Manager] a versão 2023.1.0 é 19 de janeiro de 2023. A próxima versão está planejada para 16 de fevereiro de 2023.
 
 ## Novidades {#what-is-new}
 
-* O dimensionamento automático de várias regiões agora está disponível. Podem aplicar-se certas restrições.
-   * Essa alteração será implementada em fases nas quatro a seis semanas seguintes à versão 2022.12.0.
-* Melhorias na disponibilidade e confiabilidade dos [pipelines do Cloud Manager](/help/overview/ci-cd-pipelines.md) foram feitas.
+* Os aprimoramentos de usabilidade foram ao atualizar estilos de cursor que distinguem entre onde os usuários podem realizar ações e o ponteiro padrão.
+
+## Correções de erros {#bug-fixes}
+
+* O Cloud Manager impedirá que duas execuções de pipeline sejam iniciadas ao mesmo tempo (ou quase ao mesmo tempo), evitando falhas de pipeline.
