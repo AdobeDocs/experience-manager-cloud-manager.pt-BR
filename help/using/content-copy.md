@@ -1,10 +1,10 @@
 ---
 title: A ferramenta Cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção de AEM para ambientes inferiores para fins de teste.
-source-git-commit: e32e51f7d10e753b7ecb2a63adb36d1b6c90fcc1
+source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 8%
+source-wordcount: '1017'
+ht-degree: 7%
 
 ---
 
@@ -33,12 +33,7 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
 ## Permissões {#permissions}
 
-Para usar a ferramenta de cópia de conteúdo, determinadas permissões são necessárias nos ambientes de origem e de destino.
-
-| Recurso de cópia de conteúdo | No AEM Administrador Group? | Na Função do Gerenciador de Implantação? |
-|---|---|---|
-| Criar e modificar [conjuntos de conteúdo](#create-content-set) | Sim | Não |
-| Inicie ou cancele o [processo de cópia de conteúdo](#copy-content) | Sim | Sim |
+Para usar a ferramenta de cópia de conteúdo, o usuário deve ser atribuído ao **Gerenciador de implantação** nos ambientes de origem e de destino.
 
 ## Criar um conjunto de conteúdo {#create-content-set}
 
