@@ -4,8 +4,8 @@ description: Saiba mais sobre o ambiente de criação especializado no qual os u
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 91%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -140,11 +140,11 @@ As variáveis e os segredos comuns do ambiente podem ser usados nos ambientes de
 
 Somente variáveis de ambiente normais podem ser usadas com [o dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=pt-BR) Segredos não podem ser usados.
 
-No entanto, as variáveis de ambiente não podem ser usadas em `IfDefine` diretivas.
+No entanto, as variáveis de ambiente não podem ser usadas em diretivas `IfDefine`.
 
 >[!TIP]
 >
->Você deve validar o uso das variáveis de ambiente com a variável [dispatcher localmente](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) antes da implantação.
+>Você deve validar o uso das variáveis de ambiente com o [dispatcher localmente](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=pt-BR) antes da implantação.
 
 #### Configurações do OSGi {#osgi}
 
