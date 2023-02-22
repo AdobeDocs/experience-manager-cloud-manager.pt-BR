@@ -4,7 +4,7 @@ description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os
 source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
 ## Permissões {#permissions}
 
-Para usar a ferramenta de cópia de conteúdo, o usuário deve ser atribuído ao **Gerenciador de implantação** nos ambientes de origem e de destino.
+Para usar a ferramenta de cópia de conteúdo, o usuário deve ser atribuído à função de **Gerenciador de implantação** nos ambientes de origem e de destino.
 
 ## Criação de um conjunto de conteúdo {#create-content-set}
 
