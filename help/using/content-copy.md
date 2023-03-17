@@ -1,10 +1,10 @@
 ---
 title: A ferramenta de cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção do AEM para ambientes inferiores para fins de teste.
-source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
+source-git-commit: 7ab5bdea2b388f3e9e199a6d32a1a80977eba35b
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 100%
+source-wordcount: '1074'
+ht-degree: 93%
 
 ---
 
@@ -81,6 +81,11 @@ Antes que qualquer conteúdo possa ser copiado, um conjunto de conteúdo deve se
 
 O conjunto de conteúdo agora pode ser usado para copiar conteúdo entre ambientes.
 
+>[!NOTE]
+>
+>Você pode adicionar até 50 caminhos em um conjunto de conteúdo.
+>Não há limitação de caminhos excluídos.
+
 ## Editar um conjunto de conteúdo {#edit-content-set}
 
 Para esse processo, as etapas são semelhantes às da criação de conteúdo. Porém, em vez de tocar ou clicar em **Adicionar conjunto de conteúdo**, selecione um conjunto existente no console e clique em **Editar** no menu de reticências.
@@ -99,7 +104,7 @@ Depois que um conjunto de conteúdo é criado, você pode usá-lo para copiar co
 
 1. Acesse a página **Conjuntos de conteúdo** na tela **Ambientes**.
 
-1. Selecione um conjunto de conteúdo no console e clique em **Copiar conteúdo** no menu de reticências.
+1. Selecione um conjunto de conteúdo no console e selecione **Copiar conteúdo** no menu reticências.
 
    ![Cópia de conteúdo](/help/assets/copy-content.png)
 
@@ -112,6 +117,8 @@ Depois que um conjunto de conteúdo é criado, você pode usá-lo para copiar co
 
 
 1. Na caixa de diálogo **Copiar conteúdo**, especifique a origem e o destino da sua ação de cópia de conteúdo.
+
+1. Você pode optar por excluir ou manter os caminhos excluídos no ambiente de destino. Selecionar caixa de seleção `Do not delete exclude paths from destination` se desejar manter os caminhos de exclusão especificados no conjunto de conteúdo. Se a caixa de seleção estiver desmarcada, os caminhos de exclusão serão excluídos no ambiente de destino.
 
    ![Copiar conteúdo](/help/assets/copying-content.png)
 
@@ -150,7 +157,7 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 * Não é possível copiar conteúdo entre programas.
 * Não é possível executar operações de cópia de conteúdo simultâneas no mesmo ambiente.
 * A cópia de conteúdo não pode ser executada se houver uma operação ativa em execução no ambiente de destino ou de origem, como um pipeline de CI/CD.
-* É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação de caminhos excluídos.
+* É possível especificar até cinquenta caminhos por conjunto de conteúdo. Não há limitação de caminhos excluídos.
 * A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento, pois ela não pode rastrear os conteúdos movidos ou excluídos da origem.
 * A ferramenta de cópia de conteúdo não tem nenhum recurso de controle de versão e não pode detectar automaticamente o conteúdo modificado ou recém-criado no ambiente de origem de um conjunto de conteúdo desde a última operação de cópia de conteúdo.
    * Se você quiser atualizar o seu ambiente de destino somente com as alterações de conteúdo realizadas desde a última operação de cópia, será necessário criar um conjunto de conteúdo. Nesse conjunto, especifique os caminhos da instância de origem onde foram feitas alterações desde a última operação de cópia de conteúdo.
