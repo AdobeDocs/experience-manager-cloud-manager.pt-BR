@@ -2,10 +2,10 @@
 title: Repositórios do Cloud Manager
 description: Saiba como acessar, criar e editar repositórios para seus programas do Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
-source-wordcount: '666'
-ht-degree: 100%
+source-git-commit: 63cbcf8724a840efa67b8fafc4c321e04a5d70d9
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 80%
 
 ---
 
@@ -81,13 +81,23 @@ Siga estas etapas para editar e visualizar repositórios no Cloud Manager:
 
 1. Na página **Visão geral do programa**, clique na guia **Repositórios** e navegue até a página **Repositórios**. Aqui é possível visualizar os detalhes dos repositórios existentes.
 
-1. Selecione o repositório e clique no botão de reticências na extremidade direita da tabela para **Copiar o URL do repositório**, **Exibir e atualizar** ou **Excluir** o repositório.
+1. Selecione o repositório e clique no botão de reticências na extremidade direita da tabela para **Copiar URL do repositório** ou **Exibir e atualizar** seu repositório.
 
 ![Editar repositório](/help/assets/create-repo3.png)
 
-## Compatibilidade com o submódulo do Git {#git-submodule-support}
+## Excluindo Repositórios {#delete-repos}
 
-Os submódulos do Git podem ser usados para mesclar o conteúdo de várias ramificações entre repositórios Git no momento da criação.
+Para excluir um repositório, siga as mesmas etapas [para exibir e editar repositórios](#edit-repos) mas no **Repositórios** seleção de página **Excluir** no botão de reticências do repositório a ser excluído.
+
+Observe que, quando um repositório é excluído no Cloud Manager, ele é marcado como excluído e não é mais acessível ao usuário, mas é mantido no sistema para fins de recuperação.
+
+Se tentar criar um novo repositório depois de excluir um repositório com o mesmo nome, você receberá a mensagem de erro &quot;Ocorreu um erro ao tentar criar o repositório. Entre em contato com o Suporte CSE ou Adobe.&quot;
+
+Se você receber esta mensagem de erro, entre em contato com o Suporte do Adobe para que eles possam ajudar a renomear o repositório excluído ou escolher um nome diferente para seu novo repositório.
+
+## Suporte a submódulos Git {#git-submodule-support}
+
+Os submódulos Git podem ser usados para mesclar o conteúdo de várias ramificações entre repositórios Git no momento da compilação.
 
 Quando o processo de criação do Cloud Manager é executado, depois que o repositório configurado para o pipeline é clonado e a ramificação configurada é verificada, se a ramificação contiver um arquivo `.gitmodules` no diretório raiz, o comando é executado.
 
