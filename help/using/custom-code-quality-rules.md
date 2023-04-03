@@ -3,7 +3,7 @@ title: Regras de qualidade do código personalizado
 description: Saiba mais sobre as regras de qualidade de código personalizado executadas pelo Cloud Manager como parte do teste de qualidade de código, com base nas práticas recomendadas da engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: ef87e13eb81faf5605cdd16c6fd46d5f7b3233a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3531'
 ht-degree: 100%
 
