@@ -1,12 +1,12 @@
 ---
-title: Notas da versão 2023.3.0
+title: Notas de versão 2023.3.0
 description: Estas são as notas de versão do Cloud Manager 2023.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ A data de lançamento da versão 2023.3.0 do [!UICONTROL Cloud Manager] é 16 de
 
 ## Correções de erros {#bug-fixes}
 
-* O bloco de comércio no **Saiba mais** Agora, a guia do Cloud Manager navega o usuário para a página correta.
+* O bloco de comércio na guia **Saiba mais** do Cloud Manager agora direciona o usuário para a página correta.
