@@ -1,19 +1,19 @@
 ---
-title: Notas de versão 2023.3.0
-description: Estas são as notas de versão do Cloud Manager 2023.3.0.
+title: Notas de versão 2023.4.0
+description: Estas são as notas de versão do Cloud Manager 2023.4.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
-workflow-type: ht
-source-wordcount: '102'
-ht-degree: 100%
+source-git-commit: 0ea63c0c8a4fa216ac3d70db1fb12add7f036495
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 79%
 
 ---
 
 
-# Notas de versão do Cloud Manager 2023.3.0 {#release-notes}
+# Notas de versão do Cloud Manager 2023.4.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.3.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.4.0.
 
 >[!NOTE]
 >
@@ -21,8 +21,12 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.3.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2023.3.0 do [!UICONTROL Cloud Manager] é 16 de março de 2023. A próxima versão está planejada para 13 de abril de 2023.
+A data de lançamento da versão 2023.4.0 do [!UICONTROL Cloud Manager] é 13 de abril de 2023. A próxima versão está planejada para 11 de maio de 2023.
+
+## Novidades {#what-is-new}
+
+* [O Arquétipo de Projeto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=pt-BR) O foi atualizado para a versão 41.
 
 ## Correções de erros {#bug-fixes}
 
-* O bloco de comércio na guia **Saiba mais** do Cloud Manager agora direciona o usuário para a página correta.
+* Os dispatchers azuis não estão mais anexados ao ELB verde se a variável [implantação azul/verde](/help/introduction.md#blue-green) falha.
