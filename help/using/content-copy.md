@@ -5,7 +5,7 @@ exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 7ef29a244688de82537da0b879fbf397900427c0
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -33,7 +33,7 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
    >[!NOTE]
    >
-   >Somente topologias baseadas em armazenamento de dados de arquivo são suportadas.
+   >Somente topologias baseadas em armazenamento de dados em arquivo são suportadas.
 
 ## Permissões {#permissions}
 
