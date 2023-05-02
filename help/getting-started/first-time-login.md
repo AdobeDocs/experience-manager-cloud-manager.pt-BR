@@ -3,9 +3,9 @@ title: Primeiro logon
 description: Siga esta página se tiver definindo as configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: 413edd167b5eda51c207113aaa00a92c808fb09f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ Após definir a configuração geral do [!UICONTROL Cloud Manager], você está 
 
    ![Console do Cloud Manager](/help/assets/cloud-manager-console.png)
 
-1. No cartão do programa, selecione o botão de reticências e **Visão geral do programa** para navegar até o **Visão geral** página.
+1. No cartão do programa, selecione o botão de reticências, clique em **Visão geral do programa** e navegue até a página **Visão geral** do Cloud Manager.
 
    ![Opção do Cloud Manager](/help/assets/program-overview-option.png)
 
