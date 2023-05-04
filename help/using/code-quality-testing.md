@@ -1,9 +1,9 @@
 ---
 title: Teste de qualidade do código
-description: Saiba como o teste de qualidade de código de pipelines funciona e como ele pode melhorar a qualidade de suas implantações.
+description: Saiba como funciona o teste de qualidade do código dos pipelines e como ele pode melhorar a qualidade das suas implantações.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
+source-git-commit: 8c3b59ab9e00d6ee3b90b9255d025d9e19b3b89a
+workflow-type: tm+mt
 source-wordcount: '2867'
 ht-degree: 100%
 
@@ -52,15 +52,15 @@ Há mais de 100 regras que combinam regras do Java genéricas e regras específi
 
 Os resultados do teste de qualidade do código são fornecidos em forma de classificação, conforme resumido neste quadro.
 
-| Nome | Definição | Categoria | Limite de falhas |
+| Nome | Definição | Categoria | Limite de falha |
 |--- |--- |--- |--- |
 | Classificação de segurança | A = Sem vulnerabilidades<br/>B = Pelo menos 1 vulnerabilidade secundária<br/>C = Pelo menos 1 vulnerabilidade principal<br/>D = Pelo menos 1 vulnerabilidade crítica<br/>E = Pelo menos 1 vulnerabilidade bloqueadora | Crítico | &lt; B |
 | Classificação da confiabilidade | A = Sem erros<br/>B = Pelo menos 1 erro secundário <br/>C = Pelo menos 1 erro primário<br/>D = Pelo menos 1 erro crítico<br/>E = Pelo menos 1 erro bloqueador | Importante | &lt; C |
-| Classificação da capacidade de manutenção | Definido pelo custo de remediação pendente para code smells como uma porcentagem do tempo que já passou para o aplicativo<br/><ul><li>A = &lt;=5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = >50%</li></ul> | Importante | &lt; A |
-| Cobertura | Definida por uma combinação de cobertura de linha de teste unitário e cobertura da condição utilizando a fórmula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = Condições que foram avaliadas como `true` pelo menos uma vez durante a execução dos testes unitários</li><li>`CF` = Condições que foram avaliadas como `false` pelo menos uma vez durante a execução dos testes unitários</li><li>`LC` = Linhas cobertas = lines_to_cover - uncovered_lines</li><li>`B` = número total de condições</li><li>`EL` = número total de linhas executáveis (lines_to_cover)</li></ul> | Importante | &lt; 50% |
-| Testes unitários ignorados | Número de testes de unidade ignorados | Informações | > 1 |
-| Problemas em aberto | Tipos de problemas gerais - vulnerabilidades, erros e code smells | Informações | > 0 |
-| Linhas duplicadas | Definido como o número de linhas envolvidas em blocos duplicados. Um bloco de código é considerado duplicado nas seguintes condições.<br>Projetos não Java:<ul><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem estar distribuídos em pelo menos: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras linguagens</li></ul>Projetos Java:<ul></li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>As diferenças no recuo, bem como nos literais de string são ignoradas ao detectar duplicadas. | Informações | > 1% |
+| Classificação da capacidade de manutenção | Definido pelo custo de remediação pendente de code smells como uma porcentagem do tempo já dispendido no aplicativo<br/><ul><li>A = &lt;=5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = >50%</li></ul> | Importante | &lt; A |
+| Abrangência | Definida por uma combinação de abrangências da linha de teste unitária e da condição utilizando a fórmula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = Condições que foram avaliadas como `true` pelo menos uma vez durante a execução dos testes da unidade</li><li>`CF` = Condições que foram avaliadas como `false` pelo menos uma vez durante a execução dos testes da unidade</li><li>`LC` = Linhas abrangidas = lines_to_cover - uncovered_lines</li><li>`B` = número total de condições</li><li>`EL` = número total de linhas executáveis (lines_to_cover)</li></ul> | Importante | &lt; 50% |
+| Testes de unidade ignorados | Número de testes de unidade ignorados | Informações | > 1 |
+| Problemas em aberto | Tipos de problemas gerais - Vulnerabilidades, Erros e Code Smells | Informações | > 0 |
+| Linhas duplicadas | Definido como o número de linhas envolvidas em blocos duplicados. Um bloco de código é considerado duplicado nas condições a seguir.<br>Projetos não Java:<ul><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem estar distribuídos por pelo menos: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras linguagens</li></ul>Projetos Java:<ul></li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>As diferenças de recuo, bem como nos literais de string são ignoradas ao detectar duplicidades. | Informações | > 1% |
 | Compatibilidade do Cloud Service | Número de problemas de compatibilidade do Cloud Service identificados | Informações | > 0 |
 
 >[!NOTE]
@@ -71,20 +71,20 @@ Os resultados do teste de qualidade do código são fornecidos em forma de class
 >
 >Para saber mais sobre as regras de qualidade do código personalizado adotadas pelo [!UICONTROL Cloud Manager], consulte o documento [Regras de qualidade do código personalizado.](custom-code-quality-rules.md)
 
-### Lidar com falsos positivos {#dealing-with-false-positives}
+### Como lidar com falsos positivos {#dealing-with-false-positives}
 
 O processo de verificação da qualidade não é perfeito e, por vezes, identifica incorretamente questões que não são realmente problemáticas. Isso é chamado de falso positivo.
 
-Nesses casos, o código-fonte pode ser anotado com a anotação Java padrão `@SuppressWarnings`, especificando a ID da regra como o atributo de anotação. Por exemplo, um falso positivo comum é que a regra do SonarQube para detectar senhas fixas no código pode ser agressiva sobre como uma senha fixa no código é identificada.
+Nesses casos, o código-fonte pode ser anotado com a anotação Java padrão `@SuppressWarnings`, especificando a ID da regra como o atributo de anotação. Por exemplo, um falso positivo comum é que a regra do SonarQube para detectar senhas codificadas pode ser rígida quanto à forma como uma senha codificada é identificada.
 
-O código a seguir é bastante comum em um projeto do AEM, que tem código para se conectar a algum serviço externo.
+O código a seguir é bastante comum em um projeto AEM, que tem código para se conectar a serviços externos.
 
 ```java
 @Property(label = "Service Password")
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-O SonarQube levantará uma vulnerabilidade do bloqueador. Mas, depois de revisar o código, você percebe que isso não é uma vulnerabilidade e pode anotar o código com a ID de regra apropriada.
+O SonarQube identificará uma vulnerabilidade de bloqueador. Porém, depois de revisar o código, você reconhece que isso não é uma vulnerabilidade e pode anotar o código com a ID de regra apropriada.
 
 ```java
 @SuppressWarnings("squid:S2068")
@@ -92,7 +92,7 @@ O SonarQube levantará uma vulnerabilidade do bloqueador. Mas, depois de revisar
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-No entanto, se o código fosse na verdade este:
+No entanto, se o código fosse este:
 
 ```java
 @Property(label = "Service Password", value = "mysecretpassword")
@@ -152,7 +152,7 @@ O número de usuários ou contêineres virtuais gerados pelo Cloud Manager é de
 Antes do início do período de teste de 30 minutos, o Cloud Manager rastreará o ambiente de preparo usando um conjunto de um ou mais URLs de propagação configurados pelo engenheiro de sucesso do cliente. A partir desses URLs, o HTML de cada página é inspecionado e os links são percorridos de uma maneira ampla.
 
 * Por padrão, esse processo de rastreamento é limitado a no máximo 5.000 páginas.
-* O número máximo de páginas a serem testadas pode ser substituído pela configuração da [variável de ambiente](/help/getting-started/build-environment.md#environment-variables) `MAX_PAGES`.
+* O número máximo de páginas a serem testadas pode ser substituído pela configuração da [variável de ambiente](/help/getting-started/build-environment.md#environment-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES`.
    * Os valores permitidos são `2000` - `7000`.
 * As solicitações do crawler têm um tempo limite fixo de 10 segundos.
 
@@ -280,20 +280,20 @@ Essa funcionalidade está disponível para as seguintes métricas.
 
 ## Otimização da verificação do pacote de conteúdo {#content-package-scanning-optimization}
 
-Como parte do processo de análise de qualidade, o Cloud Manager realiza a análise dos pacotes de conteúdo produzidos pelo build do Maven. O Cloud Manager oferece otimizações para acelerar esse processo, que são eficazes quando determinadas restrições de empacotamento são observadas. Mais importante é a otimização executada para projetos que geram um único pacote de conteúdo, geralmente chamado de pacote “all”, que contém vários outros pacotes de conteúdo produzidos pela build, que são marcados como ignorados. Quando o Cloud Manager detecta esse cenário, em vez de descompactar o pacote “all”, os pacotes de conteúdo individuais são verificados diretamente e classificados com base nas dependências. Por exemplo, considere a seguinte saída de build.
+Como parte do processo de análise de qualidade, o Cloud Manager realiza a análise dos pacotes de conteúdo produzidos pela compilação Maven. O Cloud Manager oferece otimizações para acelerar esse processo, que são eficazes quando determinadas restrições de empacotamento são observadas. Mais importante é a otimização executada para projetos que geram um único pacote de conteúdo, geralmente chamado de pacote “tudo”, que contém vários outros pacotes de conteúdo produzidos pela compilação, que são marcados como ignorados. Quando o Cloud Manager detecta esse cenário, em vez de descompactar o pacote “all”, os pacotes de conteúdo individuais são diretamente verificados e classificados com base nas dependências. Por exemplo, considere a saída de compilação a seguir.
 
-* `all/myco-all-1.0.0-SNAPSHOT.zip` (pacote de conteúdo)
-* `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (pacote de conteúdo ignorados)
-* `ui.content/myco-ui.content-1.0.0-SNAPSHOT.zip` (pacote de conteúdo ignorados)
+* `all/myco-all-1.0.0-SNAPSHOT.zip` (content-package)
+* `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (skipped-content-package)
+* `ui.content/myco-ui.content-1.0.0-SNAPSHOT.zip` (skipped-content-package)
 
 Se os únicos itens dentro de `myco-all-1.0.0-SNAPSHOT.zip` são os dois pacotes de conteúdo ignorados, então os dois pacotes incorporados serão verificados no lugar do pacote de conteúdo “all”.
 
 Para projetos que produzem dezenas de pacotes incorporados, essa otimização economiza mais de 10 minutos por execução de pipeline.
 
-Um caso especial pode ocorrer quando o pacote de conteúdo “all” contiver uma combinação de pacotes de conteúdo ignorados e pacotes OSGi. Por exemplo, se o `myco-all-1.0.0-SNAPSHOT.zip` continha os dois pacotes incorporados mencionados anteriormente, bem como um ou mais pacotes OSGi, então um novo pacote de conteúdo mínimo é construído apenas com os pacotes OSGi. Este pacote é sempre chamado de `cloudmanager-synthetic-jar-package` e os pacotes contidos são colocados em `/apps/cloudmanager-synthetic-installer/install`.
+Um caso especial pode ocorrer quando o pacote de conteúdo “all” contiver uma combinação de pacotes de conteúdo ignorados e pacotes OSGi. Por exemplo, se `myco-all-1.0.0-SNAPSHOT.zip` continha os dois pacotes incorporados mencionados anteriormente, bem como um ou mais pacotes OSGi, então um novo pacote de conteúdo mínimo é construído apenas com os pacotes OSGi. Esse pacote é sempre nomeado `cloudmanager-synthetic-jar-package` e os pacotes contidos são colocados em `/apps/cloudmanager-synthetic-installer/install`.
 
 >[!NOTE]
 >
 >* Essa otimização não afeta os pacotes implantados no AEM.
->* Como a correspondência entre os pacotes de conteúdo incorporados e os pacotes de conteúdo ignorados se baseia em nomes de arquivo, essa otimização não pode ser executada se vários pacotes de conteúdo ignorados tiverem exatamente o mesmo nome de arquivo ou se o nome do arquivo for alterado durante a incorporação.
+>* Como a correspondência entre os pacotes de conteúdo incorporados e os pacotes de conteúdo ignorados se baseia em nomes de arquivo, essa otimização não pode ser executada se vários pacotes de conteúdo ignorados tiverem exatamente o mesmo nome de arquivo ou se o nome de arquivo for alterado durante a incorporação.
 
