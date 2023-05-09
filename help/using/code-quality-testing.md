@@ -2,10 +2,10 @@
 title: Teste de qualidade do código
 description: Saiba como funciona o teste de qualidade do código dos pipelines e como ele pode melhorar a qualidade das suas implantações.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 8c3b59ab9e00d6ee3b90b9255d025d9e19b3b89a
-workflow-type: ht
+source-git-commit: 38cf86a5effa201afdc8e00d8f33582fc06214d7
+workflow-type: tm+mt
 source-wordcount: '2867'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -152,7 +152,7 @@ O número de usuários ou contêineres virtuais gerados pelo Cloud Manager é de
 Antes do início do período de teste de 30 minutos, o Cloud Manager rastreará o ambiente de preparo usando um conjunto de um ou mais URLs de propagação configurados pelo engenheiro de sucesso do cliente. A partir desses URLs, o HTML de cada página é inspecionado e os links são percorridos de uma maneira ampla.
 
 * Por padrão, esse processo de rastreamento é limitado a no máximo 5.000 páginas.
-* O número máximo de páginas a serem testadas pode ser substituído pela configuração da [variável de ambiente](/help/getting-started/build-environment.md#environment-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES`.
+* O número máximo de páginas a serem testadas pode ser substituído pela configuração da variável [variável de pipeline](/help/getting-started/build-environment.md#pipeline-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES`.
    * Os valores permitidos são `2000` - `7000`.
 * As solicitações do crawler têm um tempo limite fixo de 10 segundos.
 
