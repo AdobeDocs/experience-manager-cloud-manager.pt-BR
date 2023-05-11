@@ -2,10 +2,10 @@
 title: A ferramenta de cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção do AEM para ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 7ef29a244688de82537da0b879fbf397900427c0
-workflow-type: ht
-source-wordcount: '1083'
-ht-degree: 100%
+source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
+workflow-type: tm+mt
+source-wordcount: '1123'
+ht-degree: 95%
 
 ---
 
@@ -31,9 +31,9 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 * Se o conteúdo tiver sido modificado no ambiente de destino, ele será substituído pelo conteúdo da origem se os caminhos forem os mesmos.
 * Se os caminhos forem diferentes, o conteúdo da origem será mesclado ao conteúdo do destino.
 
-   >[!NOTE]
-   >
-   >Somente topologias baseadas em armazenamento de dados em arquivo são suportadas.
+>[!NOTE]
+>
+>Entre em contato com o CSE (Customer Success Engineer, engenheiro de sucesso do cliente) para ativar esse recurso.
 
 ## Permissões {#permissions}
 
@@ -158,7 +158,8 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 
 * Uma cópia de conteúdo não pode ser executada de um ambiente inferior para um superior.
 * A cópia de conteúdo só pode ser executada no mesmo nível (ou seja, de autor para autor ou publicação para publicação).
-* Não é possível copiar conteúdo entre programas.
+* Não é possível copiar conteúdo entre programas e entre regiões.
+* A cópia de conteúdo para a topologia baseada no armazenamento de dados em nuvem só pode ser executada quando o ambiente de origem e destino estiverem no mesmo provedor de nuvem.
 * Não é possível executar operações de cópia de conteúdo simultâneas no mesmo ambiente.
 * A cópia de conteúdo não pode ser executada se houver uma operação ativa em execução no ambiente de destino ou de origem, como um pipeline de CI/CD.
 * É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação de caminhos excluídos.
@@ -166,3 +167,4 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 * A ferramenta de cópia de conteúdo não tem nenhum recurso de controle de versão e não pode detectar automaticamente o conteúdo modificado ou recém-criado no ambiente de origem de um conjunto de conteúdo desde a última operação de cópia de conteúdo.
    * Se você quiser atualizar o seu ambiente de destino somente com as alterações de conteúdo realizadas desde a última operação de cópia, será necessário criar um conjunto de conteúdo. Nesse conjunto, especifique os caminhos da instância de origem onde foram feitas alterações desde a última operação de cópia de conteúdo.
 * As informações da versão não são incluídas em uma cópia de conteúdo.
+* Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
