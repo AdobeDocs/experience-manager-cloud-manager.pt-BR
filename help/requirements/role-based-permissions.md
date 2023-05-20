@@ -3,7 +3,7 @@ title: Permissões com base em função
 description: Saiba mais sobre as permissões pré-configuradas com base em funções do Cloud Manager para gerenciar o acesso aos recursos da nuvem.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 100%
 
@@ -36,7 +36,7 @@ Esta tabela lista as funções que podem ser atribuídas no Admin Console.
 Cada uma das funções tem permissões pré-configuradas associadas específicas. Esta tabela lista as permissões disponíveis e as funções que podem executá-las.
 
 
-| Permissão | Descrição | Proprietário da empresa | Gerenciador de implantação | Gerenciador de programas | Desenvolvedor | CSE |
+| Permissão | Descrição | Proprietário da empresa | Gerente de implantação | Gerente de programas | Desenvolvedor | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Aplicativo de leitura | KPIs do programa de leitura | x | x | x | x | x |
 | Aplicativo de gravação | Configuração ou edição do programa | x |  |  |  |  |
@@ -48,7 +48,7 @@ Cada uma das funções tem permissões pré-configuradas associadas específicas
 | Aprovação da execução da implantação para produção | Fornecer aprovação em tempo real | x | x | x |  |  |
 | Implantação do cronograma de execução para produção | Programar implantação de produção | x | x | x |  | x |
 | Implantação de Execução para Produção | Implantar aplicativo para produção quando pausado para supervisão do CSE |  |  |  |  | x |
-| Cancelamento da execução | Cancelar execução atual |  |  | x |  |  |
+| Cancelamento de execuções | Cancelar a execução atual |  |  | x |  |  |
 | Falhas na porta de qualidade de substituição de execução | Aprovar falhas importantes na porta de qualidade | x | x | x |  |  |
 | Criação de pipeline | Configurar/editar pipeline |  | x |  |  |  |
 | Leitura do pipeline | Ver detalhes do pipeline | x | x | x | x | x |
@@ -57,6 +57,6 @@ Cada uma das funções tem permissões pré-configuradas associadas específicas
 | Implementação gerenciada de modificação de pipeline | Permite a edição da opção de supervisão do CSE |  | x |  |  |  |
 | Exclusão de pipeline | Permite a exclusão do pipeline |  | x |  |  |  |
 | Leitura da etapa | Ver os resultados das métricas de qualidade da etapa | x | x | x | x | x |
-| Gerar token de acesso pessoal | Git de acesso |  | x |  | x |  |
+| Gerar token de acesso pessoal | Acesso ao Git |  | x |  | x |  |
 
 Para saber mais sobre como configurar seus usuários, consulte o documento [Configuração de usuários e funções.](/help/requirements/users-and-roles.md)

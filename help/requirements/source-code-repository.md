@@ -3,7 +3,7 @@ title: Repositório de código-fonte
 description: Saiba mais sobre o repositório Git provisionado para cada programa que você tem no Cloud Manager.
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 100%
 

@@ -3,7 +3,7 @@ title: Assistente de atualização do produto
 description: Saiba como o Assistente de atualização do produto simplifica o processo completo de atualização do AEM no Cloud Manager.
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
 source-git-commit: bbee49987e2f80825f5f7f5caf29c841e2b00dfb
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 100%
 

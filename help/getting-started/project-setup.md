@@ -3,7 +3,7 @@ title: Configuração do projeto
 description: Saiba como configurar seu projeto para gerenciá-lo e implantá-lo com o Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1432'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ Os projetos AEM existentes precisam seguir algumas regras básicas para serem mo
 * Deve haver um arquivo `pom.xml` na raiz do repositório Git.
    * Esse arquivo `pom.xml` pode se referir a quantos submódulos (que, por sua vez, podem ter outros módulos derivados) forem necessários.
    * Você pode adicionar referências a repositórios de artefatos Maven adicionais em seu arquivos `pom.xml`.
-   * O acesso a [repositórios de artefatos protegidos por senha](#password-protected-maven-repositories) é permitido quando configurado. No entanto, o acesso a repositórios de artefatos protegidos pela rede não é permitido.
+   * O acesso a [repositórios de artefatos protegidos por senha](#password-protected-maven-repositories) é suportado quando configurado. No entanto, o acesso a repositórios de artefatos protegidos pela rede não é permitido.
 * Pacotes de conteúdo implantáveis são descobertos pela varredura de arquivos de pacote de conteúdo (.zip) contidos em um diretório chamado `target`.
    * Qualquer número de submódulos pode produzir pacotes de conteúdo.
 * Os artefatos do Dispatcher que podem ser implantados são descobertos ao verificar arquivos `zip` que continham subdiretórios de `target` nomeados como `conf` e `conf.d`.
@@ -275,15 +275,15 @@ Com o `content-package-maven-plugin`, o processo é semelhante:
 
 ## Reutilização de artefato de build {#build-artifact-reuse}
 
-Em muitos casos, o mesmo código é implantado em vários ambientes do AEM. Quando possível, o Cloud Manager evitará reconstruir a base de código quando detectar que a mesma confirmação do Git é usada em várias execuções de pipeline de pilha completa.
+Em muitos casos, um mesmo código é implantado em vários ambientes do AEM. Sempre que possível, o Cloud Manager evitará reconstruir a base de código quando detectar que a mesma Git Commit é usada em várias execuções de pipeline de pilha completa.
 
-Quando uma execução é iniciada, a confirmação HEAD atual do pipeline da ramificação é extraída. O hash de confirmação é visível na interface e por meio da API. Quando a etapa de criação é concluída com sucesso, os artefatos resultantes são armazenados com base nesse hash de confirmação e podem ser reutilizados em execuções de pipeline subsequentes.
+Quando uma execução é iniciada, a confirmação HEAD atual para o pipeline de ramificação é extraída. O hash de confirmação fica visível na interface do usuário e por meio da API. Quando a etapa de compilação for concluída com sucesso, os artefatos resultantes serão armazenados com base nesse hash de confirmação e poderão ser reutilizados em execuções de pipeline subsequentes.
 
-Os pacotes são reutilizados em pipelines se estiverem no mesmo programa. Ao procurar pacotes que possam ser reutilizados, o AEM ignora ramificações e reutiliza artefatos entre ramificações.
+Os pacotes serão reutilizados nos pipelines, se estiverem no mesmo programa. Ao procurar pacotes que possam ser reutilizados, o AEM ignora ramificações e reutiliza artefatos entre ramificações.
 
-Quando ocorre uma reutilização, as etapas de criação e qualidade do código são efetivamente substituídas pelos resultados da execução original. O arquivo de log da etapa de criação listará os artefatos e as informações de execução que foram usadas originalmente para criá-los.
+Quando ocorre uma reutilização, as etapas de compilação e qualidade do código são efetivamente substituídas pelos resultados da execução original. O arquivo de log da etapa de compilação listará os artefatos e as informações de execução que foram usadas originalmente para criá-los.
 
-Veja a seguir um exemplo desse resultado de log.
+Veja a seguir um exemplo do log gerado.
 
 ```shell
 The following build artifacts were reused from the prior execution 4 of pipeline 1 which used commit f6ac5e6943ba8bce8804086241ba28bd94909aef:
@@ -316,18 +316,18 @@ Considere que seu programa tem duas ramificações:
 
 Ambas as ramificações têm a mesma ID de confirmação.
 
-1. Um pipeline de desenvolvimento cria e executa `foo`.
-1. Posteriormente, um pipeline de produção cria e executa `bar`.
+1. Um pipeline de desenvolvimento compila e executa `foo`.
+1. Posteriormente, um pipeline de produção compila e executa `bar`.
 
-Nesse caso, o artefato de `foo` será reutilizado para o pipeline de produção desde que o mesmo hash de confirmação seja identificado.
+Nesse caso, o artefato de `foo` será reutilizado para o pipeline de produção, desde que o mesmo hash de confirmação tenha sido identificado.
 
-### Opção de desativação {#opting-out}
+### Recusa {#opting-out}
 
-Se desejar, o comportamento de reutilização pode ser desativado para pipelines específicos definindo a variável de pipeline `CM_DISABLE_BUILD_REUSE` como `true`. Se essa variável for definida, o hash de confirmação ainda será extraído e os artefatos resultantes serão armazenados para uso posterior, mas os artefatos armazenados anteriormente não serão reutilizados. Para entender esse comportamento, considere o seguinte cenário.
+Se desejado, o comportamento de reutilização pode ser desativado para pipelines específicos, definindo a variável de pipeline `CM_DISABLE_BUILD_REUSE` como `true`. Se essa variável for definida, o hash de confirmação ainda será extraído e os artefatos resultantes serão armazenados para uso posterior, mas todos os artefatos armazenados anteriormente não serão reutilizados. Para entender esse comportamento, considere o cenário a seguir.
 
 1. Um novo pipeline é criado.
 1. O pipeline é executado (execução nº 1) e a confirmação HEAD atual é `becdddb`. A execução é bem-sucedida e os artefatos resultantes são armazenados.
-1. A variável `CM_DISABLE_BUILD_REUSE` é definida.
+1. A variável `CM_DISABLE_BUILD_REUSE` está definida.
 1. O pipeline é executado novamente sem alterar o código. Embora haja artefatos armazenados associados a `becdddb`, eles não serão reutilizados devido à variável `CM_DISABLE_BUILD_REUSE`.
 1. O código é alterado e o pipeline é executado. A confirmação HEAD agora é `f6ac5e6`. A execução é bem-sucedida e os artefatos resultantes são armazenados.
 1. A variável `CM_DISABLE_BUILD_REUSE` é excluída.
@@ -335,10 +335,10 @@ Se desejar, o comportamento de reutilização pode ser desativado para pipelines
 
 ### Avisos {#caveats}
 
-* Os artefatos da build não são reutilizados em diferentes programas, independentemente de o hash de confirmação ser idêntico.
+* Os artefatos de compilação não são reutilizados em diferentes programas, independentemente de o hash de confirmação ser idêntico.
 * Os artefatos de build são reutilizados no mesmo programa mesmo se a ramificação e/ou o pipeline for diferente.
 * [O manuseio de versão do Maven](/help/managing-code/maven-project-version.md) substitui a versão do projeto somente em pipelines de produção. Portanto, se a mesma confirmação for usada em uma execução de implantação de desenvolvimento e em uma execução de pipeline de produção e o pipeline de implantação de desenvolvimento for executado primeiro, as versões serão implantadas no estágio e na produção sem serem alteradas. No entanto, uma tag ainda será criada nesse caso.
-* Se a recuperação dos artefatos armazenados não for bem-sucedida, a etapa de criação será executada como se nenhum artefato tivesse sido armazenado.
+* Se a recuperação dos artefatos armazenados não for bem-sucedida, a etapa de compilação será executada como se nenhum artefato tivesse sido armazenado.
 * Variáveis de pipeline diferentes de `CM_DISABLE_BUILD_REUSE` não são consideradas quando o Cloud Manager decide reutilizar artefatos de build criados anteriormente.
 
 ## Desenvolver seu código com base nas práticas recomendadas {#develop-your-code-based-on-best-practices}

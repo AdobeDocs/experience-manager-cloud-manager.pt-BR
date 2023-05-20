@@ -3,7 +3,7 @@ title: Notificações
 description: Saiba como o Cloud Manager notifica você sobre eventos importantes.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 100%
 
@@ -32,33 +32,33 @@ Clique no ícone de sino para abrir a barra lateral e exibir as notificações. 
 
 ![Barra lateral de notificações](/help/assets/notifications-activities.png)
 
-A guia **Anúncios** inclui anúncios de produto da Adobe. Os anúncios se referem ao produto.
+A guia **Avisos** inclui avisos de produto da Adobe. Os avisos dizem respeito ao produto.
 
 ![Barra lateral de notificações](/help/assets/notificaitons-announcements.png)
 
-Clique em uma notificação ou anúncio para visualizar seus detalhes. As notificações vinculadas a atividades como implantações de pipeline levam você aos detalhes dessa atividade, como a janela de execução do pipeline.
+Clique em uma notificação ou anúncio para exibir os detalhes. As notificações vinculadas a atividades como implantações de pipeline levam você aos detalhes dessa atividade, como a janela de execução do pipeline.
 
-Clique na opção **Exibir tudo** na parte inferior do painel para exibir todos os anúncios na caixa de entrada.
+Clique na opção **Exibir tudo** na parte inferior do painel para exibir todos os avisos na caixa de entrada.
 
-Clique na opção **Marcar tudo como lido** na parte inferior do painel para marcar todas as notificações não lidas como lidas e remover o ícone de sino.
+Clique na opção **Marcar tudo como lido** na parte inferior do painel para marcar todas as notificações não lidas como lidas e limpar o símbolo do ícone de sino.
 
 ## Configuração de notificação {#configuration}
 
-É possível personalizar como e quais notificações você recebe.
+Você pode personalizar como recebe notificações e quais notificações recebe.
 
-Clique no ícone de engrenagem na parte superior da barra lateral de notificações.
+Clique no ícone de engrenagem na parte inferior da barra lateral de notificações.
 
 ![Ícone Configurações de notificação](/help/assets/notifications-configuration.png)
 
-Esse ícone abre a janela **Preferências da Experience Cloud**, onde é possível definir as assinaturas de notificação e como você recebe as notificações.
+Isso abre a janela **Preferências da Experience Cloud**, onde é possível definir suas assinaturas de notificação e como você recebe as notificações.
 
 ### Assinaturas {#subscriptions}
 
-As assinaturas definem para quais produtos você recebe notificações e quais são essas notificações.
+As assinaturas definem para quais produtos você recebe notificações e quais notificações.
 
 ![Assinaturas de notificação](/help/assets/notifications-subscriptions.png)
 
-Por padrão, você receberá todas as notificações de todos os produtos. Clique em **Personalizar** ao lado de um produto para definir os tipos de notificações que você recebe desse produto.
+Por padrão, você receberá todas as notificações para todos os produtos. Clique em **Personalizar** ao lado de um produto para definir os tipos de notificações que você recebe para esse produto.
 
 ![Personalização de assinatura de notificação](/help/assets/notifications-subscriptions-customize.png)
 
@@ -68,7 +68,7 @@ Os alertas de prioridade serão marcados com uma tag **ALTA** e podem ser config
 
 ![Prioridade de notificação](/help/assets/notifications-priority.png)
 
-Use o menu suspenso para adicionar à lista de categorias qualificadas como prioridade. Clique no X ao lado dos nomes das categorias para removê-los.
+Use o menu suspenso para adicionar à lista de categorias que se qualificam como prioridade. Clique no X ao lado dos nomes das categorias para removê-las.
 
 ### Alertas {#alerts}
 
@@ -79,12 +79,12 @@ Os alertas são exibidos no canto superior direito da janela por alguns segundos
 Você pode definir o comportamento dos alertas.
 
 * **Mostrar alertas para** - Define os tipos de notificações que acionam alertas
-* **Os alertas devem permanecer na tela até eu descartá-los** - Controla se os alertas devem permanecer até você decidir removê-los
-* **Duração** - Define por quanto tempo o alerta deve permanecer na tela caso você tenha escolhido que eles não devem permanecer.
+* **Os alertas devem ficar na tela até que eu os descarte** - Controla se os alertas devem persistir, a menos que você os ignore ativamente
+* **Duração** - Define quanto tempo o alerta deve permanecer na tela caso você não tenha escolhido que eles fiquem na tela.
 
 ### Emails {#emails}
 
-As notificações estão disponíveis na interface da Web em todas as soluções da Adobe [!UICONTROL Experience Cloud]. Também é possível optar por enviar essas notificações por email na seção **Emails**.
+As notificações estão disponíveis na interface da web em todas as soluções da Adobe [!UICONTROL Experience Cloud]. Também é possível optar por enviar essas notificações por email na seção **Emails**.
 
 ![Emails de notificação](/help/assets/notifications-emails.png)
 
@@ -94,4 +94,4 @@ Por padrão, nenhum email é enviado. Você pode optar por receber emails:
 * Diariamente
 * Semanalmente
 
-Quando a opção **Notificações instantâneas** for escolhida, os emails serão enviados imediatamente para cada notificação. No caso do **Publicação diária** e **Publicação semanal**, você pode escolher quando o resumo diário é enviado e em que dia e quando o resumo semanal é enviado.
+Quando a opção **Notificações instantâneas** for escolhida, os emails serão enviados imediatamente para cada notificação. Para as opções **Resumo diário** e **Resumo semanal**, você pode escolher quando o resumo diário é enviado e em que dia e quando o resumo semanal é enviado.

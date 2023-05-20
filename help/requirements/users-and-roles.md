@@ -3,7 +3,7 @@ title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários e funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 source-git-commit: dd96d773ea3e6b9c45886fe41b28d3dd70cb8a61
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 100%
 
@@ -51,7 +51,7 @@ O Admin Console é um local central para gerenciar seus direitos da Adobe em tod
 Para fornecer as permissões de função apropriadas aos usuários do [!UICONTROL Cloud Manager], um administrador na organização do cliente deve criar novos perfis de produto no contexto do produto do [!UICONTROL AEM Managed Services] correspondente a cada uma das quatro funções do [!UICONTROL Cloud Manager]:
 
 * Proprietário da empresa
-* Gerenciador de implantação
+* Gerente de implantação
 * Desenvolvedor
 * Gerenciador de programas
 

@@ -3,7 +3,7 @@ title: Pipelines de CI/CD
 description: Saiba mais sobre os pipelines de CI/CD e como eles lidam com implantações em ambientes de preparo e produção no Cloud Manager.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 100%
 

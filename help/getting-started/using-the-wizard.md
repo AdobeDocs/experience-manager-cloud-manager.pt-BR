@@ -3,7 +3,7 @@ title: Usando o assistente para novo projeto
 description: Siga esta página para saber como usar o assistente para criar um projeto de aplicativo do AEM
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
 source-git-commit: cb791a4f148ba394687b5e824b75fe1386d83c18
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 100%
 

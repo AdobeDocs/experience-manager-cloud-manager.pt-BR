@@ -3,7 +3,7 @@ title: Trabalhar com vários repositórios Git
 description: Em vez de trabalhar diretamente com o repositório Git do Cloud Manager, saiba como trabalhar com seu próprio repositório Git ou vários repositórios Git.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
 source-git-commit: da9dff997a277c207e2c48207217cb30325f3c0d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 100%
 
@@ -54,7 +54,7 @@ Siga as etapas abaixo para adicionar uma nova (terceira) fonte ou repositório:
 
 1. Adicione uma nova ação do GitHub ao novo repositório, o que envia as alterações desse repositório para o repositório Git do Cloud Manager.
 1. Execute essa ação pelo menos uma vez para garantir que o código do projeto esteja no repositório Git do Cloud Manager.
-1. Adicione uma referência ao novo diretório na raiz Maven `pom.xml` no repositório Git do Cloud Manager.
+1. Adicione uma referência ao novo diretório no `pom.xml` do Maven raiz no repositório Git do Cloud Manager.
 
 ## Exemplo de ação do GitHub {#sample-github-action}
 

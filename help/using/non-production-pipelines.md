@@ -3,7 +3,7 @@ title: Configuração de pipelines de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 567a16a032bf80451b5e8ba4e3d842cb617a615f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 100%
 
@@ -24,7 +24,7 @@ Este documento se concentra em pipelines de não produção. Para obter detalhes
 
 Existem dois tipos de pipelines de não produção:
 
-* **Pipelines de qualidade do código** - executam verificações de qualidade de código em uma ramificação do Git e executam as etapas de criação e qualidade de código.
+* **Pipelines de qualidade do código** - Esses executam verificações de qualidade do código em uma ramificação Git e executam as etapas de qualidade do código e compilação.
 * **Pipelines de implantação** - além de executar as etapas de criação e qualidade do código, como os pipelines de qualidade de código, esses pipelines implantam o código em um ambiente de não produção.
 
 >[!NOTE]
@@ -69,8 +69,8 @@ Depois de configurar seu programa e ter pelo menos um ambiente que utiliza a int
    1. Para pipelines de implantação, em **Comportamento de falhas de métricas importantes**, defina o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade.
 
       * **Pergunte sempre** - é a configuração padrão e requer intervenção manual em qualquer falha importante.
-      * **Falha imediata** - Se selecionada, o pipeline será cancelado sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que rejeita manualmente cada falha.
-      * **Continuar imediatamente** - Se essa opção for selecionada, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.
+      * **Falhar imediatamente** - Se selecionado, o pipeline será cancelado sempre que ocorrer uma falha importante. É como emular um usuário que rejeita manualmente cada falha.
+      * **Continuar imediatamente** - Se selecionado, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.
 
 
 1. Clique em **Salvar** para salvar o pipeline.

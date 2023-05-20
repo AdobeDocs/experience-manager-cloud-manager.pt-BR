@@ -3,7 +3,7 @@ title: Integração do Git com o Adobe Cloud Manager
 description: Esta série de vídeos aborda a configuração e a integração de um repositório Git gerenciado pelo cliente (no local) com o Adobe Cloud Manager.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
 source-git-commit: 91e909273bf2b21d7f6413731923011915079e45
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ Esta série de vídeos explora vários casos de uso relacionados à integração
 * [Sincronização inicial](#initial-sync)
 * [Estratégia básica de ramificação](#branching-strategy)
 * [Desenvolvimento de ramificação de recursos](#feature-development)
-* [Implantação de produção](#production-deployment)
+* [Implantação em produção](#production-deployment)
 * [Sincronização das tags de versão](#sync-tags)
 
 Esta série de vídeos presume um conhecimento básico do gerenciamento de Git e do controle de origem. Consulte os [recursos adicionais abaixo](#additional-resources) para obter mais detalhes sobre Git.
@@ -46,7 +46,7 @@ Defina uma estratégia básica de ramificação para aproveitar a [produção](/
 
 ## Desenvolvimento de ramificação de recursos {#feature-development}
 
-Use uma ramificação de recursos para isolar alterações de código em um repositório Git gerenciado pelo cliente e sincronizar com o repositório Git do Cloud Manager, com o objetivo de usar um pipeline de não produção para testes de qualidade e validação de código.
+Use uma ramificação de recursos para isolar alterações de código em um repositório Git gerenciado pelo cliente e sincronizar com o repositório Git do Cloud Manager, a fim de usar um pipeline de não produção para testes de qualidade e validação de código.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12)
 
@@ -66,5 +66,5 @@ Sincronize as tags de versão de um repositório Git do Cloud Manager em um repo
 
 * [Introdução ao Cloud Manager](/help/introduction.md)
 * [Recursos do GitHub](https://try.github.io)
-* [Tutoriais Atlassian sobre o Git](https://www.atlassian.com/git/tutorials/what-is-version-control)
-* [Folha de características do Git](https://education.github.com/git-cheat-sheet-education.pdf)
+* [Tutoriais sobre Git da Atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)
+* [Folha de referências do Git](https://education.github.com/git-cheat-sheet-education.pdf)

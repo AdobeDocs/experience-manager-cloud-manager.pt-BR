@@ -33,7 +33,7 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
 >[!NOTE]
 >
->Entre em contato com o CSE (Customer Success Engineer, engenheiro de sucesso do cliente) para ativar esse recurso.
+>Entre em contato com o engenheiro de sucesso do cliente (CSE) para ativar esse recurso.
 
 ## Permissões {#permissions}
 
@@ -158,8 +158,8 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 
 * Uma cópia de conteúdo não pode ser executada de um ambiente inferior para um superior.
 * A cópia de conteúdo só pode ser executada no mesmo nível (ou seja, de autor para autor ou publicação para publicação).
-* Não é possível copiar conteúdo entre programas e entre regiões.
-* A cópia de conteúdo para a topologia baseada no armazenamento de dados em nuvem só pode ser executada quando o ambiente de origem e destino estiverem no mesmo provedor de nuvem.
+* Não é possível fazer cópia de conteúdo entre programas e regiões.
+* A cópia de conteúdo para a topologia baseada no armazenamento de dados em nuvem só pode ser executada quando os ambientes de origem e de destino estão no mesmo provedor de nuvem.
 * Não é possível executar operações de cópia de conteúdo simultâneas no mesmo ambiente.
 * A cópia de conteúdo não pode ser executada se houver uma operação ativa em execução no ambiente de destino ou de origem, como um pipeline de CI/CD.
 * É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação de caminhos excluídos.

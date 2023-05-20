@@ -3,7 +3,7 @@ title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1609'
 ht-degree: 100%
 
@@ -80,7 +80,7 @@ Quando a implantação for concluída, o código estará em seu ambiente de dest
 
 ## Tempos limite {#timeouts}
 
-As etapas a seguir atingirão o tempo limite se estiverem aguardando o feedback do usuário:
+As seguintes etapas atingirão o tempo limite se forem deixadas aguardando o feedback do usuário:
 
 | Etapa | Tempo limite |
 |--- |--- |
@@ -88,8 +88,8 @@ As etapas a seguir atingirão o tempo limite se estiverem aguardando o feedback 
 | Teste de segurança | 14 dias |
 | Teste de desempenho | 14 dias |
 | Pedido de aprovação | 14 dias |
-| Programar implantação de produção | 14 dias |
-| Suporte do CSE | 14 dias |
+| Agendar implantação em produção | 14 dias |
+| Suporte CSE | 14 dias |
 
 ## Detalhes do processo de implantação {#deployment-process}
 

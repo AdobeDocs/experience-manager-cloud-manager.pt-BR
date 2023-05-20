@@ -3,7 +3,7 @@ title: O ambiente de criação
 description: Saiba mais sobre o ambiente de criação especializado no qual os usuários do Cloud Manager criam e testam seus códigos.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 100%
 
@@ -138,17 +138,17 @@ As variáveis e os segredos comuns do ambiente podem ser usados nos ambientes de
 
 #### Dispatcher {#dispatcher}
 
-Somente variáveis de ambiente normais podem ser usadas com [o Dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=pt-BR) Segredos não podem ser usados.
+Somente variáveis de ambiente comuns podem ser usadas com o [Dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=pt-BR) Segredos não podem ser usados.
 
 No entanto, as variáveis de ambiente não podem ser usadas em diretivas `IfDefine`.
 
 >[!TIP]
 >
->Você deve validar o uso das variáveis de ambiente com o [dispatcher localmente](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=pt-BR) antes da implantação.
+>Você deve validar o uso das variáveis de ambiente com o [Dispatcher localmente](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=pt-BR) antes da implantação.
 
 #### Configurações do OSGi {#osgi}
 
-Tanto as variáveis de ambiente normais quanto os segredos podem ser usados nas [configurações do OSGi.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=pt-BR)
+As variáveis e os segredos comuns do ambiente podem ser usados nas [configurações do OSGi.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=pt-BR)
 
 ### Variáveis de pipeline {#pipeline-variables}
 
