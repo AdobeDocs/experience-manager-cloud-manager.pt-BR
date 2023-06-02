@@ -1,0 +1,127 @@
+---
+product: Adobe Experience Manager
+sub-product: Cloud Manager
+user-guide-title: Documentação do Cloud Manager
+breadcrumb-title: Documentação do Cloud Manager para AEM 6.x
+user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmente o Adobe Experience Manager para AMS na nuvem.
+feature-set: Experience Manager Cloud Manager, Experience Manager
+role: Admin
+source-git-commit: 11d378f12cb02e6c23990d85838bd57dddd7f295
+workflow-type: ht
+source-wordcount: '0'
+ht-degree: 100%
+
+---
+
+
+# Documentação do Cloud Manager {#content}
+
++ [Cloud Manager para AMS](/help/introduction.md)
++ Visão geral {#overview}
+   + [Principais conceitos](/help/overview/key-concepts.md)
+   + [Jornada do usuário](/help/overview/user-journey.md)
+   + [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md)
+   + [Segurança e privacidade](/help/overview/security-and-privacy.md)
+   + [Recursos de ajuda](/help/overview/help-resources.md)
+   + [Perguntas frequentes sobre o Cloud Manager](/help/overview/faqs.md)
++ O que é obrigatório {#requirements}
+   + [Direitos de acesso](/help/requirements/access-rights.md)
+   + [Repositório de código-fonte](/help/requirements/source-code-repository.md)
+   + [Permissões com base em função](/help/requirements/role-based-permissions.md)
+   + [Configurar usuários e funções](/help/requirements/users-and-roles.md)
+   + [Provisionamento de ambiente](/help/requirements/environment-provisioning.md)
++ Introdução {#getting-started}
+   + [Primeiro logon](/help/getting-started/first-time-login.md)
+   + [Configuração do programa](/help/getting-started/program-setup.md)
+   + Criação de projeto do AEM {#project-creation}
+      + [Uso do Assistente](/help/getting-started/using-the-wizard.md)
+      + [Configuração do projeto](/help/getting-started/project-setup.md)
+      + [O ambiente de criação](/help/getting-started/build-environment.md)
+   + [Configuração de ramificações](/help/getting-started/configuring-branches.md)
+   + [Configurações do Dispatcher](/help/getting-started/dispatcher-configurations.md)
++ Usar {#using}
+   + Pipelines de CI/CD {#pipelines}
+      + [Configuração de pipelines de produção](/help/using/production-pipelines.md)
+      + [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md)
+      + [Gerenciar pipelines](/help/using/managing-pipelines.md)
+   + [Implantação do código](/help/using/code-deployment.md)
+   + [Teste de qualidade do código](/help/using/code-quality-testing.md)
+   + [Gerenciamento de ambientes](/help/using/managing-environments.md)
+   + [Monitoramento de ambientes](/help/using/monitoring-environments.md)
+   + [API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
+   + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
+   + [Notificações](/help/using/notifications.md)
+   + [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md)
+   + [Cópia de conteúdo](/help/using/content-copy.md)
++ Gerenciamento do código {#managing-code}
+   + [Manuseio da versão do projeto Maven](/help/managing-code/maven-project-version.md)
+   + [Repositórios](/help/managing-code/repositories.md)
+   + [Integração com o Git](/help/managing-code/git-integration.md)
+   + [Trabalhar com vários repositórios Git](/help/managing-code/multiple-git-repos.md)
++ Assistente de atualização do produto {#product-update-wizard}
+   + [Visão geral](/help/product-update-wizard/overview.md)
+   + [Avaliação](/help/product-update-wizard/evaluation.md)
++ Notas de versão {#release-notes}
+   + [Notas de versão atuais](/help/release-notes/current.md)
+   + 2023 {#2023}
+      + [Notas da versão 2023.4.0](/help/release-notes/2023/2023-4-0.md)
+      + [Notas da versão 2023.3.0](/help/release-notes/2023/2023-3-0.md)
+      + [Notas de versão 2023.2.0](/help/release-notes/2023/2023-2-0.md)
+      + [Notas de versão 2023.1.0](/help/release-notes/2023/2023-1-0.md)
+   + 2022 {#2022}
+      + [Notas da versão 2022.12.0](/help/release-notes/2022/2022-12-0.md)
+      + [Notas da versão 2022.11.0](/help/release-notes/2022/2022-11-0.md)
+      + [Notas da versão 2022.10.0](/help/release-notes/2022/2022-10-0.md)
+      + [Notas da versão 2022.9.0](/help/release-notes/2022/2022-9-0.md)
+      + [Notas da versão 2022.8.0](/help/release-notes/2022/2022-8-0.md)
+      + [Notas da versão 2022.7.0](/help/release-notes/2022/2022-7-0.md)
+      + [Notas da versão 2022.6.0](/help/release-notes/2022/2022-6-0.md)
+      + [Notas da versão 2022.5.0](/help/release-notes/2022/2022-5-0.md)
+      + [Notas da versão 2022.4.0](/help/release-notes/2022/2022-4-0.md)
+      + [Notas da versão 2022.3.0](/help/release-notes/2022/2022-3-0.md)
+      + [Notas da versão 2022.2.0](/help/release-notes/2022/2022-2-0.md)
+      + [Notas da versão 2022.1.0](/help/release-notes/2022/2022-1-0.md)
+   + 2021 {#2021}
+      + [Notas de versão 2021.12.0](/help/release-notes/2021/2021-12-0.md)
+      + [Notas da versão 2021.11.0](/help/release-notes/2021/2021-11-0.md)
+      + [Notas da versão 2021.10.0](/help/release-notes/2021/2021-10-0.md)
+      + [Notas da versão 2021.9.0](/help/release-notes/2021/2021-9-0.md)
+      + [Notas da versão 2021.8.0](/help/release-notes/2021/2021-8-0.md)
+      + [Notas da versão 2021.7.0](/help/release-notes/2021/2021-7-0.md)
+      + [Notas da versão 2021.6.0](/help/release-notes/2021/2021-6-0.md)
+      + [Notas da versão 2021.5.0](/help/release-notes/2021/2021-5-0.md)
+      + [Notas da versão 2021.4.0](/help/release-notes/2021/2021-4-0.md)
+      + [Notas da versão 2021.3.0](/help/release-notes/2021/2021-3-0.md)
+      + [Notas da versão 2021.2.0](/help/release-notes/2021/2021-2-0.md)
+   + 2020 {#2020}
+      + [Notas da versão 2020.12.0](/help/release-notes/2020/2020-12-0.md)
+      + [Notas da versão 2020.11.0](/help/release-notes/2020/2020-11-0.md)
+      + [Notas da versão 2020.10.0](/help/release-notes/2020/2020-10-0.md)
+      + [Notas da versão 2020.9.0](/help/release-notes/2020/2020-9-0.md)
+      + [Notas da versão 2020.8.0](/help/release-notes/2020/2020-8-0.md)
+      + [Notas da versão 2020.7.0](/help/release-notes/2020/2020-7-0.md)
+      + [Notas da versão 2020.6.0](/help/release-notes/2020/2020-6-0.md)
+      + [Notas da versão 2020.5.0](/help/release-notes/2020/2020-5-0.md)
+      + [Notas da versão 2020.4.0](/help/release-notes/2020/2020-4-0.md)
+      + [Notas da versão 2020.3.0](/help/release-notes/2020/2020-3-0.md)
+      + [Notas da versão 2020.2.0](/help/release-notes/2020/2020-2-0.md)
+      + [Notas da versão 2020.1.0](/help/release-notes/2020/2020-1-0.md)
+   + 2019 {#2019}
+      + [Notas da versão 2019.12.0](/help/release-notes/2019/2019-12-0.md)
+      + [Notas da versão 2019.11.0](/help/release-notes/2019/2019-11-0.md)
+      + [Notas da versão 2019.10.0](/help/release-notes/2019/2019-10-0.md)
+      + [Notas da versão 2019.9.0](/help/release-notes/2019/2019-9-0.md)
+      + [Notas da versão 2019.8.0](/help/release-notes/2019/2019-8-0.md)
+      + [Notas da versão 2019.7.0](/help/release-notes/2019/2019-7-0.md)
+      + [Notas da versão 2019.6.0](/help/release-notes/2019/2019-6-0.md)
+      + [Notas da versão 2019.5.0](/help/release-notes/2019/2019-5-0.md)
+      + [Notas da versão 2019.4.0](/help/release-notes/2019/2019-4-0.md)
+      + [Notas da versão 2019.3.0](/help/release-notes/2019/2019-3-0.md)
+      + [Notas da versão 2019.2.0](/help/release-notes/2019/2019-2-0.md)
+      + [Notas da versão 2019.1.0](/help/release-notes/2019/2019-1-0.md)
+   + 2018 {#2018}
+      + [Notas da versão 2018.9.0](/help/release-notes/2018/2018-9-0.md)
+      + [Notas da versão 2018.8.0](/help/release-notes/2018/2018-8-0.md)
+      + [Notas da versão 2018.7.0](/help/release-notes/2018/2018-7-0.md)
+      + [Notas da versão 2018.6.0](/help/release-notes/2018/2018-6-0.md)
+      + [Notas da versão 2018.5.0](/help/release-notes/2018/2018-5-0.md)
