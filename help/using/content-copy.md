@@ -2,9 +2,9 @@
 title: A ferramenta de cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção do AEM para ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
+source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1090'
 ht-degree: 95%
 
 ---
@@ -33,7 +33,7 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
 >[!NOTE]
 >
->Entre em contato com o engenheiro de sucesso do cliente (CSE) para ativar esse recurso.
+>Entre em contato com o engenheiro de sucesso do cliente (CSE) para habilitar esse recurso.
 
 ## Permissões {#permissions}
 
@@ -119,7 +119,6 @@ Depois que um conjunto de conteúdo é criado, você pode usá-lo para copiar co
    >* O usuário não tiver as permissões apropriadas.
    >* O ambiente tiver um pipeline em execução ou uma operação de cópia de conteúdo em andamento.
 
-
 1. Na caixa de diálogo **Copiar conteúdo**, especifique a origem e o destino da sua ação de cópia de conteúdo.
 
 1. Você pode optar por excluir ou manter os caminhos de exclusão no ambiente de destino. Selecione a caixa de seleção `Do not delete exclude paths from destination` se desejar manter os caminhos de exclusão especificados no conjunto de conteúdo. Se a caixa de seleção estiver desmarcada, os caminhos de exclusão serão excluídos no ambiente de destino.
@@ -158,13 +157,12 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 
 * Uma cópia de conteúdo não pode ser executada de um ambiente inferior para um superior.
 * A cópia de conteúdo só pode ser executada no mesmo nível (ou seja, de autor para autor ou publicação para publicação).
-* Não é possível fazer cópia de conteúdo entre programas e regiões.
-* A cópia de conteúdo para a topologia baseada no armazenamento de dados em nuvem só pode ser executada quando os ambientes de origem e de destino estão no mesmo provedor de nuvem.
+* Não é possível copiar conteúdo entre programas e entre regiões.
+* A cópia de conteúdo para uma topologia baseada no armazenamento de dados em nuvem só pode ser executada quando os ambientes de origem e destino estiverem no mesmo provedor de nuvem.
 * Não é possível executar operações de cópia de conteúdo simultâneas no mesmo ambiente.
 * A cópia de conteúdo não pode ser executada se houver uma operação ativa em execução no ambiente de destino ou de origem, como um pipeline de CI/CD.
 * É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação de caminhos excluídos.
 * A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento, pois ela não pode rastrear os conteúdos movidos ou excluídos da origem.
-* A ferramenta de cópia de conteúdo não tem nenhum recurso de controle de versão e não pode detectar automaticamente o conteúdo modificado ou recém-criado no ambiente de origem de um conjunto de conteúdo desde a última operação de cópia de conteúdo.
-   * Se você quiser atualizar o seu ambiente de destino somente com as alterações de conteúdo realizadas desde a última operação de cópia, será necessário criar um conjunto de conteúdo. Nesse conjunto, especifique os caminhos da instância de origem onde foram feitas alterações desde a última operação de cópia de conteúdo.
-* As informações da versão não são incluídas em uma cópia de conteúdo.
 * Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
+* A ferramenta de cópia de conteúdo copia ativos juntamente com metadados relacionados à mídia dinâmica do ambiente superior para o ambiente inferior selecionado.
+   * Os ativos copiados precisam ser reprocessados usando o [Fluxo de trabalho dos ativos do processo DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) no ambiente inferior para usar a respectiva configuração do dynamic media.
