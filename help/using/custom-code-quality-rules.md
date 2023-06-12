@@ -5,7 +5,7 @@ exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
 workflow-type: tm+mt
 source-wordcount: '3566'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Saiba mais sobre as regras de qualidade do código personalizado executadas pelo
 
 >[!NOTE]
 >
->As regras completas da SonarQube não estão disponíveis para download devido a informações proprietárias do Adobe. Você pode baixar a lista completa de regras [usando este link.](/help/assets/CodeQuality-rules-latest-AMS.xlsx) Continue lendo este documento para obter descrições e exemplos das regras.
+>As regras completas do SonarQube não estão disponíveis para download devido às informações proprietárias da Adobe. Você pode baixar a lista completa de regras [usando este link.](/help/assets/CodeQuality-rules-latest-AMS.xlsx) Continue a ler este documento para obter descrições e exemplos das regras.
 
 ## Regras do SonarQube {#sonarqube-rules}
 
