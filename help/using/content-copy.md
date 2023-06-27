@@ -1,21 +1,22 @@
 ---
 title: A ferramenta de cópia de conteúdo
-description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção do AEM para ambientes inferiores para fins de teste.
+description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção do AEM 6.x hospedados no AMS para ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
+source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
 workflow-type: tm+mt
-source-wordcount: '1090'
-ht-degree: 95%
+source-wordcount: '1096'
+ht-degree: 88%
 
 ---
 
+
 # A ferramenta de cópia de conteúdo {#content-copy}
 
-A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção do AEM para ambientes inferiores para fins de teste.
+A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção do AEM 6.x hospedados no AMS para ambientes inferiores para fins de teste.
 
 ## Introdução {#introduction}
 
-Os dados atuais e reais são valiosos para fins de teste, validação e aceitação do usuário. A ferramenta de cópia de conteúdo permite copiar o conteúdo do ambiente de produção do AEM para um ambiente de preparo ou de desenvolvimento para a realização desses testes.
+Os dados atuais e reais são valiosos para fins de teste, validação e aceitação do usuário. A ferramenta de cópia de conteúdo permite copiar o conteúdo do ambiente de produção do AEM 6.x hospedado no AMS para um ambiente de preparo ou desenvolvimento para esse teste.
 
 O conteúdo a ser copiado é definido por um conjunto de conteúdo. Um conjunto de conteúdo consiste em uma lista de caminhos JCR que contêm o conteúdo mutável a ser copiado de um ambiente de origem para um ambiente de destino dentro do mesmo programa do Cloud Manager. Os seguintes caminhos são permitidos em um conjunto de conteúdo.
 
