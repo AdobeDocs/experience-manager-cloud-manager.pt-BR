@@ -5,7 +5,7 @@ exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
 workflow-type: tm+mt
 source-wordcount: '1096'
-ht-degree: 88%
+ht-degree: 92%
 
 ---
 
@@ -166,4 +166,4 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 * A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento, pois ela não pode rastrear os conteúdos movidos ou excluídos da origem.
 * Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
 * A ferramenta de cópia de conteúdo copia ativos juntamente com metadados relacionados à mídia dinâmica do ambiente superior para o ambiente inferior selecionado.
-   * Os ativos copiados precisam ser reprocessados usando o [Fluxo de trabalho dos ativos do processo DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) no ambiente inferior para usar a respectiva configuração do dynamic media.
+   * Os ativos copiados precisam ser reprocessados usando o [Fluxo de trabalho dos ativos do processo DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=pt-BR) no ambiente inferior para usar a respectiva configuração de mídia dinâmica.
