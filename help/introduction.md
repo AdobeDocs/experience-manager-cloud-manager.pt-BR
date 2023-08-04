@@ -3,9 +3,9 @@ title: Introdução ao Cloud Manager para AMS
 description: Comece aqui para conhecer o Cloud Manager para Adobe Managed Services (AMS) e como ele permite que as organizações gerenciem manualmente o Adobe Experience Manager na nuvem.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1322'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -115,7 +115,7 @@ Quando a implantação azul/verde está ativada, o fluxo de implantação é dif
 | 5 | Pausar para teste (até 24 horas) | - |
 | 6 | A infraestrutura verde é adicionada ao balanceador de carga de produção | - |
 | 7 | A infraestrutura azul é removida do balanceador de carga de produção- |
-| 8 | Pausar para aprovação final (até 24 horas) | - |
+| 8 | Pausar para saída final (até 24 horas) | - |
 | 9 | A infraestrutura azul é encerrada automaticamente | - |
 | 10 | Pipeline completo | - |
 
