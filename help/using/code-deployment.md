@@ -2,10 +2,10 @@
 title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: b85bd1bdf38360885bf2777d75bf7aa97c6da7ee
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 100%
+source-wordcount: '1655'
+ht-degree: 84%
 
 ---
 
@@ -56,7 +56,7 @@ A etapa **Teste de preparo** inclui as seguintes ações:
 * **Teste de segurança**: esta etapa avalia o impacto sobre a segurança do código no ambiente do AEM. Consulte o documento [Como entender os resultados do teste](/help/using/code-quality-testing.md) para obter detalhes sobre o processo de teste.
    * **Teste de desempenho**: esta etapa avalia o desempenho do código. Consulte [Como entender os resultados do teste](/help/using/code-quality-testing.md) para obter detalhes sobre o processo de teste.
 
-   ![Teste de preparo](/help/assets/Stage_Testing1.png)
+  ![Teste de preparo](/help/assets/Stage_Testing1.png)
 
 ### Etapa de implantação de produção {#production-deployment}
 
@@ -68,7 +68,7 @@ A etapa **Implantação de produção** inclui as seguintes ações:
 * **Programar implantação de produção**
    * Essa opção é ativada ao configurar o pipeline.
    * A data e a hora programadas são especificadas no fuso horário do usuário.
-      ![Programar implantação](/help/assets/Production_Deployment1.png)
+     ![Programar implantação](/help/assets/Production_Deployment1.png)
 * **Suporte do CSE** (se estiver habilitado)
 * **Implantar para produção**
 
@@ -111,6 +111,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
 1. Cada artefato do AEM é implantado em toda instância do AEM por meio de APIs de gerenciamento de pacotes, com as dependências de pacote determinando a ordem da implantação.
 
    * Para saber mais sobre como você pode usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório, consulte o documento [Gerenciador de pacotes.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=pt-BR)
+
    >[!NOTE]
    >
    >Todos os artefatos do AEM são implantados tanto para o autor quanto para os editores. Os modos de execução devem ser usados quando configurações específicas de nó são necessárias. Para saber mais sobre como os modos de execução permitem ajustar a instância do AEM para uma finalidade específica, consulte a [seção Modos de execução do documento Implantação no AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=pt-BR#runmodes)
@@ -175,33 +176,43 @@ A execução de um pipeline no modo de emergência também pode ser feita por me
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
-## Reexecute uma implantação de produção {#re-execute-deployment}
+## Reexecução de uma implantação em produção {#reexecute-deployment}
 
-Reexecutar a etapa de implantação de produção é uma opção disponibilizada para execuções em que a etapa de implantação de produção foi concluída. O tipo de conclusão não é importante. A implantação pode ser bem-sucedida (somente para programas do AMS), cancelada ou malsucedida. O principal caso de uso é quando a etapa de implantação de produção falha devido a problemas temporários. A reexecução cria uma nova execução usando o mesmo pipeline. Essa nova execução consiste em três etapas:
+Em casos raros, as etapas de implantação de produção podem falhar por motivos transitórios. Nesses casos, a reexecução da etapa de implantação de produção é compatível desde que a etapa de implantação de produção tenha sido concluída, independentemente do tipo de conclusão (por exemplo, bem-sucedida, cancelada ou malsucedida). A reexecução cria uma nova execução usando o mesmo pipeline que consiste em três etapas.
 
 1. **A etapa de validação** - É basicamente a mesma validação que ocorre durante uma execução normal do pipeline.
 1. **A etapa de criação** - No contexto de uma reexecução, a etapa de criação copia artefatos e não executa realmente um novo processo de criação.
-1. **A etapa de implantação de produção** - Usa as mesmas configurações e opções que a etapa de implantação de produção em uma execução normal de pipeline.
+1. **A etapa de implantação de produção** - Usa as mesmas configurações e opções que a etapa de implantação em produção em uma execução normal de pipeline.
 
-A etapa de criação pode ser rotulada de forma diferente na interface para mostrar que está copiando artefatos, não os reconstruindo.
+Nessas circunstâncias, quando uma reexecução for possível, a página de status do pipeline de produção fornecerá a **Reexecutar** opção ao lado da usual **Baixar log de compilação** opção.
 
-![Reexecução](/help/assets/Re-deploy.png)
+![A opção Reexecutar na janela de visão geral do pipeline](/help/assets/re-execute.png)
+
+>[!NOTE]
+>
+>Em uma reexecução, a etapa de criação é rotulada na interface para refletir que está copiando artefatos, não os reconstruindo.
 
 ### Limitações           {#limitations}
 
 * A reexecução da etapa de implantação de produção só está disponível para a última execução.
 * A reexecução não está disponível para execuções de reversão ou de atualização por push.
-* Se a última execução falhar em qualquer ponto antes da etapa de implantação de produção, a reexecução não será possível.
+* Se a última execução falhar em qualquer ponto antes da etapa de implantação em produção, não será possível iniciar uma reexecução.
 
-### Identificação de uma reexecução {#identifying}
 
-Para identificar se uma execução é uma reexecução, o campo `trigger` deve ser analisado. Seu valor será `RE_EXECUTE`.
+### API de reexecução {#reexecute-api}
 
-### Acionar uma reexecução {#triggering}
+Além de estar disponível na interface do usuário do, você pode usar [a API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) para acionar reexecuções, bem como identificar execuções que foram acionadas como reexecuções.
 
-Para acionar uma reexecução, uma solicitação `PUT` precisa ser feita para o link HAL `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` no estado da etapa de implantação de produção. Se esse link estiver presente, a execução poderá ser reiniciada a partir dessa etapa. Se estiver ausente, a execução não poderá ser reiniciada a partir dessa etapa. Esse link só estará presente na etapa de implantação de produção
+#### Acionar uma reexecução {#triggering}
 
-```Javascript
+Para acionar uma reexecução, uma solicitação `PUT` precisa ser feita para o link HAL `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` no estado da etapa de implantação de produção.
+
+* Se esse link estiver presente, a execução poderá ser reiniciada dessa etapa.
+* Se estiver ausente, a execução não poderá ser reiniciada a partir dessa etapa.
+
+Esse link só está disponível para a etapa de implantação em produção.
+
+```javascript
  {
   "_links": {
     "http://ns.adobe.com/adobecloud/rel/pipeline/logs": {
@@ -236,6 +247,10 @@ Para acionar uma reexecução, uma solicitação `PUT` precisa ser feita para o 
   "status": "FINISHED"
 ```
 
-A sintaxe do valor `href` do link HAL não deve ser usada como ponto de referência. O valor real deve sempre ser lido do link HAL e não gerado.
+A sintaxe do link HAL `href` é apenas um exemplo e o valor real deve sempre ser lido do link HAL e não gerado.
 
 O envio de uma solicitação `PUT` para esse ponto de acesso resultará em uma resposta `201` se for bem-sucedido, e o corpo da resposta será a representação da nova execução. É semelhante a iniciar uma execução normal por meio da API.
+
+#### Identificação de uma reexecução {#identifying}
+
+As execuções reexecutadas podem ser identificadas pelo valor `RE_EXECUTE` no `trigger` campo.

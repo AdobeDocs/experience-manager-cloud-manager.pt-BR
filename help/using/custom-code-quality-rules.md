@@ -2,9 +2,9 @@
 title: Regras de qualidade do código personalizado
 description: Saiba mais sobre as regras de qualidade de código personalizado executadas pelo Cloud Manager como parte do teste de qualidade de código, com base nas práticas recomendadas da engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
+source-git-commit: f930f12b5f50dd96a1677ff7a56cf0e92a400556
 workflow-type: tm+mt
-source-wordcount: '3566'
+source-wordcount: '3377'
 ht-degree: 100%
 
 ---
@@ -648,22 +648,7 @@ Os componentes do AEM que têm uma caixa de diálogo com interface clássica dev
 
 A documentação das Ferramentas de modernização do AEM fornece detalhes e ferramentas para converter componentes da interface clássica para a interface de toque. Consulte [a documentação das Ferramentas de modernização do AEM](https://opensource.adobe.com/aem-modernize-tools/) para obter mais detalhes.
 
-### Os pacotes não devem misturar conteúdo mutável e imutável {#oakpal-packages-immutable}
-
-* **Chave**: ImmutableMutableMixedPackage
-* **Tipo**: Compatibilidade entre Smell/Cloud Service
-* **Severidade**: Baixa
-* **Desde**: Versão 2020.5.0
-
-Para serem compatíveis com o modelo de implantação do Cloud Service, os pacotes de conteúdo individuais devem incluir conteúdo para as áreas imutáveis do repositório (ou seja, `/apps` e `/libs`) ou para a área mutável (ou seja, tudo que não está em `/apps` ou em `/libs`), mas não ambas. Por exemplo, um pacote que inclui `/apps/myco/components/text and /etc/clientlibs/myco` não é compatível com a Cloud Service e causará a criação de um relatório de problemas.
-
-Consulte a [Documentação da Estrutura de projetos do AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=pt-BR) para obter mais detalhes.
-
->[!NOTE]
->
->A regra [Os pacotes de clientes não devem criar ou modificar nós em /libs](#oakpal-customer-package) sempre se aplica.
-
-### Os agentes de replicação reversa não devem ser usados {#oakpal-reverse-replication}
+### Agentes de replicação reversa não devem ser usados {#oakpal-reverse-replication}
 
 * **Chave**: ReverseReplication
 * **Tipo**: Compatibilidade entre Smell/Cloud Service
@@ -737,15 +722,6 @@ A migração de modelos estáticos para editáveis pode ser amplamente automatiz
 Os componentes fundamentais herdados (ou seja, os componentes em `/libs/foundation`) foram descontinuados para várias versões do AEM em favor dos [Componentes principais.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=pt-BR) O uso dos componentes fundamentais herdados como a base para componentes personalizados, seja por sobreposição ou herança, não é recomendado e deve ser convertido no componente principal correspondente.
 
 Essa conversão pode ser facilitada pelas [Ferramentas de modernização do AEM.](https://opensource.adobe.com/aem-modernize-tools/)
-
-### Somente nomes e ordenações de modos de execução compatíveis devem ser usados {#oakpal-supported-runmodes}
-
-* **Chave**: SupportedRunmode
-* **Tipo**: Code Smell
-* **Severidade**: Baixa
-* **Desde**: Versão 2021.2.0
-
-O AEM Cloud Service utiliza uma política de nomeação rigorosa para nomes de modo de execução e uma ordenação estrita para eles. A lista de modos de execução compatíveis pode ser encontrada na [Documentação de implantação no AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=pt-BR#runmodes), e qualquer desvio em relação a isso será identificado como um problema.
 
 ### Os nós de definição do índice de pesquisa personalizado devem ser nós secundários diretos de /oak:index {#oakpal-custom-search}
 
