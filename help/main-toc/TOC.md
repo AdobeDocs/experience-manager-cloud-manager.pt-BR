@@ -7,9 +7,9 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 26c4c945e18f21b812f65dbabc14a4e8ab9f6b43
+source-git-commit: a3e926fa13d54da1322f3a5219519fae07ddb273
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '345'
 ht-degree: 100%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 100%
 + Notas de versão {#release-notes}
    + [Notas de versão atuais](/help/release-notes/current.md)
    + 2023 {#2023}
+      + [Notas da versão 2023.8.0](/help/release-notes/2023/2023-8-0.md)
       + [Notas da versão 2023.7.0](/help/release-notes/2023/2023-7-0.md)
       + [Notas de versão para 2023.6.0](/help/release-notes/2023/2023-6-0.md)
       + [Notas da versão 2023.5.0](/help/release-notes/2023/2023-5-0.md)
