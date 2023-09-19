@@ -2,10 +2,10 @@
 title: Notas da versão 2023.9.0
 description: Estas são as notas de versão do Cloud Manager 2023.9.0.
 feature: Release Information
-source-git-commit: a3e926fa13d54da1322f3a5219519fae07ddb273
+source-git-commit: f15a4b739150ee40b6dc48de0fbc20859093c79c
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 52%
+source-wordcount: '145'
+ht-degree: 57%
 
 ---
 
@@ -22,12 +22,8 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.9.
 
 A data de lançamento do [!UICONTROL Cloud Manager] versão 2023.9.0 é 14 de setembro de 2023. A próxima versão está planejada para 5 de outubro de 2023.
 
-## Novidades {#what-is-new}
-
-* Esta versão consiste em correções de erros somente para o Cloud Manager.
-
 ## Correções de erros {#bug-fixes}
 
-* Quando um programa é excluído, qualquer pipeline associado em execução também é excluído, garantindo que o pipeline não seja designado incorretamente como status de falha.
-* Ocasionalmente, quando todas as etapas de uma execução de pipeline são &#39;concluídas&#39;, o status do pipeline é visto como &quot;em execução&quot;, fazendo parecer que está em um estado travado. Agora é visto como &#39;Concluído&#39;.
-* Para ramificações de repositório geradas usando o arquétipo do gerador de código, ocorre falha no pipeline de CI/CD.
+* Quando um programa é excluído, qualquer pipeline associado em execução agora também é excluído.
+* Correção de um erro ocasional em que todas as etapas de execução de um pipeline eram marcadas como concluídas, mas o status do pipeline ainda estava em execução, dando a impressão de um estado travado.
+* Um erro foi corrigido quando os pipelines de CI/CD falhavam para ramificações de repositório geradas pelo arquétipo.
