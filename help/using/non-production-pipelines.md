@@ -2,9 +2,9 @@
 title: Configuração de pipelines de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 567a16a032bf80451b5e8ba4e3d842cb617a615f
+source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '716'
 ht-degree: 100%
 
 ---
@@ -30,12 +30,6 @@ Existem dois tipos de pipelines de não produção:
 >[!NOTE]
 >
 >Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída. Consulte o documento [Repositórios do Cloud Manager](/help/managing-code/repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
-
-## Tutorial em vídeo {#video-tutorial}
-
-Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
-
->[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 ## Adicionar um pipeline de não produção {#add-non-production-pipeline}
 
@@ -66,15 +60,30 @@ Depois de configurar seu programa e ter pelo menos um ambiente que utiliza a int
 
       * **Manual** - use essa opção para iniciar manualmente o pipeline.
       * **Sobre alterações do Git** - essas opções iniciam o pipeline sempre que as confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
+
    1. Para pipelines de implantação, em **Comportamento de falhas de métricas importantes**, defina o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade.
 
       * **Pergunte sempre** - é a configuração padrão e requer intervenção manual em qualquer falha importante.
       * **Falhar imediatamente** - Se selecionado, o pipeline será cancelado sempre que ocorrer uma falha importante. É como emular um usuário que rejeita manualmente cada falha.
-      * **Continuar imediatamente** - Se selecionado, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.
+      * **Continuar imediatamente** - Se selecionado, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É como emular um usuário que aprova manualmente cada falha.
 
+   1. **Configuração do Dispatcher** - O **Gerenciador de implantação** pode configurar um conjunto de caminhos de conteúdo que serão invalidados ou removidos do cache do Dispatcher do AEM quando um pipeline for executado. Essas ações de cache serão executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar:
+
+      1. Em **CAMINHO**, forneça um caminho de conteúdo.
+      1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.
+
+         * **Limpeza** - Executa uma exclusão do cache.
+         * **Invalidar** - Executa uma invalidação de cache, semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
+      1. Clique em **Adicionar caminho** para adicionar o caminho especificado. É possível adicionar até 100 caminhos por ambiente.
 
 1. Clique em **Salvar** para salvar o pipeline.
 
 ## Próximas etapas {#the-next-steps}
 
 Depois de configurar o pipeline, é necessário implantar o código. Consulte o documento [Implantação do código](/help/using/code-deployment.md) para obter mais detalhes.
+
+## Tutorial em vídeo {#video-tutorial}
+
+Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)

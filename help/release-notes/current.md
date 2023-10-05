@@ -1,18 +1,19 @@
 ---
-title: Notas da versão 2023.9.0
-description: Estas são as notas de versão do Cloud Manager 2023.9.0.
+title: Notas da versão 2023.10.0
+description: Estas são as notas de versão do Cloud Manager 2023.10.0.
 feature: Release Information
-source-git-commit: f15a4b739150ee40b6dc48de0fbc20859093c79c
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: a5a304541409bc1775090eef2a669e1e0bcf005e
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 57%
+source-wordcount: '189'
+ht-degree: 58%
 
 ---
 
 
-# Notas de versão do Cloud Manager 2023.9.0 {#release-notes}
+# Notas de versão do Cloud Manager 2023.10.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.9.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.10.0.
 
 >[!NOTE]
 >
@@ -20,10 +21,13 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.9.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] versão 2023.9.0 é 14 de setembro de 2023. A próxima versão está planejada para 5 de outubro de 2023.
+A data de lançamento da versão 2023.10.0 do [!UICONTROL Cloud Manager] é 5 de outubro de 2023. A próxima versão está planejada para 2 de novembro de 2023.
 
-## Correções de erros {#bug-fixes}
+## Novidades {#what-is-new}
 
-* Quando um programa é excluído, qualquer pipeline associado em execução agora também é excluído.
-* Correção de um erro ocasional em que todas as etapas de execução de um pipeline eram marcadas como concluídas, mas o status do pipeline ainda estava em execução, dando a impressão de um estado travado.
-* Um erro foi corrigido quando os pipelines de CI/CD falhavam para ramificações de repositório geradas pelo arquétipo.
+* A variável **Gerente de implantação** pode [configure um conjunto de caminhos de conteúdo que serão invalidados ou removidos do cache do Dispatcher do AEM quando um pipeline de não produção for executado.](/help/using/non-production-pipelines.md)
+   * Essas ações de cache serão executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo.
+   * Essas configurações usam o comportamento padrão do Dispatcher do AEM.
+* Com a versão de outubro de 2023 do Cloud Manager, as versões do Java estão sendo atualizadas por meio de uma implantação em fases.
+   * As versões do Java estão sendo atualizadas para o Oracle JDK 8u371 e o Oracle JDK 11.0.20.
+   * [Consulte a supervisão do OpenJDK](https://openjdk.org/groups/vulnerability/advisories/) para obter detalhes sobre a segurança e correções de erros nessas atualizações do JDK.
