@@ -4,9 +4,9 @@ description: Estas são as notas de versão do Cloud Manager 2023.10.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 851364e74864c28b3bcd9285dfbe06ddb530eb10
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '226'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ A data de lançamento da versão 2023.10.0 do [!UICONTROL Cloud Manager] é 5 de
 
 ## Novidades {#what-is-new}
 
-* A variável **Gerente de implantação** pode [configure um conjunto de caminhos de conteúdo que serão invalidados ou removidos do cache do Dispatcher do AEM quando um pipeline de não produção for executado.](/help/using/non-production-pipelines.md)
+* A função **Gerenciador de implantação** pode [configurar um conjunto de caminhos de conteúdo que serão invalidados ou removidos do cache do Dispatcher do AEM quando um pipeline for executado.](/help/using/non-production-pipelines.md)
    * Essas ações de cache serão executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo.
    * Essas configurações usam o comportamento padrão do Dispatcher do AEM.
 * Com a versão de outubro de 2023 do Cloud Manager, as versões do Java estão sendo atualizadas por meio de uma implantação em fases.
