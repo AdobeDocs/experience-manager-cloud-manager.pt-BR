@@ -2,7 +2,7 @@
 title: O ambiente de criação
 description: Saiba mais sobre o ambiente de criação especializado no qual os usuários do Cloud Manager criam e testam seus códigos.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
+source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 100%
@@ -19,9 +19,11 @@ Saiba mais sobre o ambiente de criação especializado no qual os usuários do C
 Os ambientes de criação do Cloud Manager têm os seguintes atributos.
 
 * O ambiente de criação é baseado em Linux, com a tecnologia do Ubuntu 18.04.
-* O Apache Maven 3.6.0 está instalado.
-* As versões do Java instaladas são: Oracle JDK 8u202 e Oracle JDK 11.0.2.
-* Por padrão, a variável de ambiente `JAVA_HOME` está definida como `/usr/lib/jvm/jdk1.8.0_202`, que contém o Oracle JDK 8u202. Consulte a seção [Versão alternativa do JDK de execução do Maven](#alternate-maven) para obter mais detalhes.
+* O Apache Maven 3.8.8 está instalado.
+* As versões do Java instaladas são Oracle JDK 8u371 e Oracle JDK 11.0.20.
+   * `/usr/lib/jvm/jdk1.8.0_371`
+   * `/usr/lib/jvm/jdk-11.0.20`
+* Por padrão, a variável de ambiente `JAVA_HOME` está definida como `/usr/lib/jvm/jdk1.8.0_371`, que contém o Oracle JDK 8u371. Consulte a seção [Versão alternativa do JDK de execução do Maven](#alternate-maven) para obter mais detalhes.
 * Há alguns pacotes de sistema adicionais instalados que são necessários.
    * `bzip2`
    * `unzip`
@@ -47,7 +49,6 @@ Os ambientes de criação do Cloud Manager têm os seguintes atributos.
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [Criar uma integração de API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [Permissões de API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-
 
 ## Uso de uma versão específica do Java {#using-java-version}
 
