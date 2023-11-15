@@ -3,10 +3,10 @@ title: Notas da versão 2023.11.0
 description: Estas são as notas de versão do Cloud Manager 2023.11.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: c7803c75bcfcc967877808214704c5746015481d
+source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 21%
+source-wordcount: '386'
+ht-degree: 19%
 
 ---
 
@@ -28,8 +28,10 @@ A data de lançamento do [!UICONTROL Cloud Manager] versão 2023.11.0 é 14 de n
 * [A página de detalhes de execução do pipeline](/help/using/managing-pipelines.md#view-details) Agora, o mostrará todas as etapas em uma execução de pipeline com as que ainda não foram iniciadas esmaecidas.
 * Em ambos **[Atividade](/help/using/managing-pipelines.md#activity)** e **[Pipelines](/help/using/managing-pipelines.md#pipelines)** páginas, um resumo da execução do pipeline agora está disponível ao clicar em um pipeline com um status de execução.
 * Um novo **Duração** A seção foi adicionada à seção [página de detalhes do pipeline](/help/using/managing-pipelines.md#view-details) que inclui a duração média da etapa do pipeline com base na tendência histórica desse programa.
-* Na página de execução do pipeline, as etapas concluídas agora exibem a duração
+* No [página de execução do pipeline,](/help/using/managing-pipelines.md#activity-window) as etapas concluídas agora exibem a duração
 * O Cloud Manager [ferramenta de cópia de conteúdo](/help/using/content-copy.md) O permite que os usuários copiem conteúdo mutável sob demanda de seus ambientes de produção AEM 6.x hospedados no AMS para ambientes inferiores para fins de teste.
+* Execuções que [reutilizar artefatos de build](/help/getting-started/project-setup.md#build-artifact-reuse) Agora, o mostrará o link para a execução que criou esses artefatos inicialmente.
+* A opção para selecionar **Falhas de métricas importantes** agora pode ser configurado para [pipelines de qualidade de código](/help/using/non-production-pipelines.md) também.
 
 ## Programa de adoção antecipada {#early-adoption}
 
