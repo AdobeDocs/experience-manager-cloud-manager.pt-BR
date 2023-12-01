@@ -3,9 +3,9 @@ title: Permissões personalizadas
 description: Saiba como criar novos perfis de permissão personalizados com permissões configuráveis e restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
 source-git-commit: 4ff8d66356b510600019daad78470ca5dd1c57d4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1489'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -129,11 +129,11 @@ As seguintes permissões estão disponíveis para criar perfis personalizados.
 | Ignorar e rejeitar falhas de métrica importantes | Permitir que usuários ignorem ou rejeitem falhas de métrica importantes |
 | Programação de implantações de produção | Permitir que usuários programem uma etapa de implantação de produção |
 | Acesso às informações do repositório | Permitir que usuários acessem as informações do repositório e gerem a senha de acesso |
-| Criação de repositório | Permitir que os usuários criem novos repositórios Git |
-| Exclusão de repositório | Permitir que os usuários excluam repositórios Git |
-| Edição de repositório | Permitir que os usuários editem repositórios Git |
-| Gerar código do repositório | Permitir que os usuários gerem projetos a partir do arquétipo |
-| Gerenciamento de cópia de conteúdo | Permitir que os usuários gerenciem operações de cópia de conteúdo |
+| Criar repositório | Permitir que usuários criem novos repositórios Git |
+| Exclusão de repositório | Permitir que usuários excluam repositórios Git |
+| Edição de repositório | Permitir que usuários editem repositórios Git |
+| Geração de códigos do repositório | Permitir que usuários gerem projetos a partir do arquétipo |
+| Gerenciamento de cópias de conteúdo | Permitir que usuários gerenciem operações de cópia do conteúdo |
 
 ### Permissões no nível da organização {#organization-level}
 
