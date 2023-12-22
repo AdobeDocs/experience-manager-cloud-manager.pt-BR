@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
 workflow-type: tm+mt
 source-wordcount: '305'
-ht-degree: 63%
+ht-degree: 70%
 
 ---
 
@@ -21,7 +21,7 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2023.12
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] A versão 2023.12.0 é 14 de dezembro de 2023. A próxima versão está planejada para 18 de janeiro de 2024.
+A data de lançamento do [!UICONTROL Cloud Manager] versão 2023.12.0 é 14 de dezembro de 2023. A próxima versão está planejada para 18 de janeiro de 2024.
 
 ## Novidades {#what-is-new}
 
