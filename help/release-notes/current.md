@@ -4,9 +4,9 @@ description: Estas são as notas de versão do Cloud Manager 2023.12.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '305'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -26,14 +26,14 @@ A data de lançamento do [!UICONTROL Cloud Manager] versão 2023.12.0 é 14 de d
 ## Novidades {#what-is-new}
 
 * As [permissões personalizadas do Cloud Manager](/help/using/custom-permissions.md) permitem criar novos perfis com permissões configuráveis para restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
-* As implantações de atualizações no [ambiente de compilação](/help/getting-started/build-environment.md) que foram [anunciado e iniciado com a versão de outubro do Cloud Manager](/help/release-notes/2023/2023-10-0.md) foram concluídas.
-   * O suporte para o Nó 18 foi adicionado para [pipelines de front-end e pilha completa.](/help/overview/ci-cd-pipelines.md)
+* As implantações de atualizações no [ambiente de compilação](/help/getting-started/build-environment.md), [anunciadas e iniciadas com a versão de outubro do Cloud Manager](/help/release-notes/2023/2023-10-0.md), foram concluídas.
+   * Foi adicionado suporte para Node 18 em [pipelines de front-end e pilha completa.](/help/overview/ci-cd-pipelines.md)
    * A versão secundária do Java 8 foi atualizada para `jdk1.8.0_371`.
    * A versão secundária do Java 11 foi atualizada para `jdk-11.0.20`.
    * O Maven foi atualizado para a versão 3.8.8
-      * O Maven agora desativa todos os inseguros `http://*` espelhos por padrão.
-      * [Adobe recomenda](/help/getting-started/build-environment.md#https-maven) Os usuários do atualizam os repositórios Maven para usar HTTPS em vez de HTTP.
-* A imagem base do container de build foi atualizada para Ubuntu 22.04.
+      * O Maven agora desabilita por padrão todas as páginas espelho inseguras de `http://*`.
+      * A [Adobe recomenda](/help/getting-started/build-environment.md#https-maven) atualizar os repositórios Maven para usar HTTPS em vez de HTTP.
+* A imagem base do container de compilação foi atualizada para o Ubuntu 22.04.
 
 ## Programa de adoção antecipada {#early-adoption}
 
