@@ -4,9 +4,9 @@ description: Estas são as notas de versão do Cloud Manager 2024.1.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: b235e398b42e9da3dd2efacdc0ef38b6803bd213
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '243'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.1.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] A versão 2024.1.0 é 17 de janeiro de 2024. A próxima versão está planejada para 16 de fevereiro de 2024.
+A data de lançamento da versão 2024.1.0 do [!UICONTROL Cloud Manager] é 17 de janeiro de 2024. A próxima versão está planejada para 16 de fevereiro de 2024.
 
 ## Programa de adoção antecipada {#early-adoption}
 
@@ -35,5 +35,5 @@ Se tiver interesse em testar esse novo recurso e compartilhar seu feedback, envi
 
 ## Correções de erros {#bug-fixes}
 
-* Um erro foi corrigido para alguns casos de canto em que os downloads falhavam devido a como o aplicativo de teste interpreta os dados, fazendo com que a porcentagem total de erros falhasse no teste.
-* Quando uma etapa de criação termina com o status `FAILED` devido a uma `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR`, agora ele é descrito corretamente como um erro devido a conflitos de mesclagem com a ramificação de destino.
+* Um erro foi corrigido para alguns casos isolados cujos downloads estavam falhando devido à forma do aplicativo de teste de interpretar os dados, fazendo com que a porcentagem total de erros falhasse no teste.
+* Quando uma etapa de criação termina com o status `FAILED` devido a um `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR`, ela agora será descrita corretamente como um erro devido a conflitos de mesclagem com a ramificação de destino.
