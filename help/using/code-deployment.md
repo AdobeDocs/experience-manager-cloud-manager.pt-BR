@@ -3,9 +3,9 @@ title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 70e68f8af17b0acf644176c2ed3afaf8fc219063
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1650'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -87,7 +87,7 @@ As seguintes etapas atingirão o tempo limite se forem deixadas aguardando o fee
 | Teste de qualidade do código | 7 dias |
 | Teste de segurança | 7 dias |
 | Teste de desempenho | 7 dias |
-| Pedido de aprovação (fase) | 7 dias |
+| Pedido de aprovação (preparo) | 7 dias |
 | Pedido de aprovação (produção) | 14 dias |
 | Agendar implantação em produção | 14 dias |
 | Implantação de produção gerenciada | 14 dias |
