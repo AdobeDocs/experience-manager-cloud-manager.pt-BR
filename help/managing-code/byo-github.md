@@ -3,10 +3,10 @@ title: Trabalhe com os seus repositórios do GitHub no Cloud Manager
 description: Saiba como configurar o Cloud Manager para trabalhar com os seus repositórios do GitHub.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 3bb59686a3c25e47e5c747bb8d5f626055e54a06
+source-git-commit: b5907179d3de329e8b86546bb8aa99608a5b351a
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 100%
+source-wordcount: '767'
+ht-degree: 98%
 
 ---
 
@@ -18,6 +18,10 @@ Ao configurar o Cloud Manager para trabalhar com os seus repositórios do GitHub
 >[!NOTE]
 >
 >Este recurso só está disponível por meio do [programa de adoção antecipada.](/help/release-notes/current.md#early-adoption)
+
+>[!NOTE]
+>
+>Esse recurso é exclusivo do GitHub público. O suporte para GitHub auto-hospedado não está disponível.
 
 ## Configuração {#configuration}
 
