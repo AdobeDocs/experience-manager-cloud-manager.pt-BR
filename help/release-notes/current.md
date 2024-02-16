@@ -3,7 +3,7 @@ title: Notas da versão 2024.2.0
 description: Estas são as notas de versão do Cloud Manager 2024.2.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 524471a87217c15dae96c3e6aee57426b43dcccb
+source-git-commit: cc87246503ab63d6dd60c691f15fc4759fcf6939
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 61%
@@ -21,7 +21,7 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.2.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] A versão 2024.2.0 é 16 de fevereiro de 2024. A próxima versão está planejada para 16 de março de 2024.
+A data de lançamento do [!UICONTROL Cloud Manager] A versão 2024.2.0 é 15 de fevereiro de 2024. A próxima versão está planejada para 16 de março de 2024.
 
 ## Novidades {#what-is-new}
 
@@ -41,3 +41,4 @@ Se tiver interesse em testar esse novo recurso e compartilhar seu feedback, envi
 ## Correções de erros {#bug-fixes}
 
 * O JDK dos contêineres de build foi atualizado para uma versão que resolve [JDK-8313765.](https://bugs.openjdk.org/browse/JDK-8313765)
+§
