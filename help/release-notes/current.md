@@ -4,9 +4,9 @@ description: Estas são as notas de versão do Cloud Manager 2024.2.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: cc87246503ab63d6dd60c691f15fc4759fcf6939
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '299'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
@@ -17,16 +17,16 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.2.
 
 >[!NOTE]
 >
->Para obter as notas de versão mais recentes do Cloud Manager no AEM as a Cloud Service, consulte [Notas de versão atuais do Cloud Manager no AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html?lang=pt-BR)
+>Para obter as notas de versão mais recentes do Cloud Manager no AEM as a Cloud Service, consulte [Notas de versão atuais do Cloud Manager no AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] A versão 2024.2.0 é 15 de fevereiro de 2024. A próxima versão está planejada para 16 de março de 2024.
+A data de lançamento da versão 2024.2.0 do [!UICONTROL Cloud Manager] é 15 de fevereiro de 2024. A próxima versão está planejada para 16 de março de 2024.
 
 ## Novidades {#what-is-new}
 
-* Como parte da [implantação,](/help/using/code-deployment.md) o cache do Dispatcher foi liberado no **Anexar Dispatcher** etapa. Para permitir que você teste as alterações em cada nó antes de anexá-lo ao balanceador de carga do aplicativo, após implantar o código em um determinado editor, agora é possível testar as alterações diretamente do Dispatcher associado antes de anexar esse Dispatcher ao balanceador de carga.
-* [O ambiente de criação](/help/getting-started/build-environment.md) foi atualizado para Maven versão 3.9.4 e versões do JDK jdk-11.0.22 e jdk1.8.0_401.
+* Como parte da [implantação,](/help/using/code-deployment.md) o cache do Dispatcher foi liberado na etapa **Anexar Dispatcher**. Para visualizar as alterações em cada nó antes de anexá-lo ao balanceador de carga do aplicativo, agora é possível testar essas alterações diretamente no Dispatcher associado após implantar o código em um determinado editor, e antes de anexar esse Dispatcher ao balanceador de carga.
+* [O ambiente de criação](/help/getting-started/build-environment.md) foi atualizado para a versão 3.9.4 do Maven e as versões jdk-11.0.22 e jdk1.8.0_401 do JDK.
 
 ## Programa de adoção antecipada {#early-adoption}
 
@@ -40,5 +40,5 @@ Se tiver interesse em testar esse novo recurso e compartilhar seu feedback, envi
 
 ## Correções de erros {#bug-fixes}
 
-* O JDK dos contêineres de build foi atualizado para uma versão que resolve [JDK-8313765.](https://bugs.openjdk.org/browse/JDK-8313765)
+* O JDK dos containers de build foi atualizado para uma versão que resolve o problema [JDK-8313765.](https://bugs.openjdk.org/browse/JDK-8313765)
 §
