@@ -2,10 +2,10 @@
 title: Permissões com base em função
 description: Saiba mais sobre as permissões pré-configuradas com base em funções do Cloud Manager para gerenciar o acesso aos recursos da nuvem.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
+source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 100%
+source-wordcount: '602'
+ht-degree: 93%
 
 ---
 
@@ -13,6 +13,12 @@ ht-degree: 100%
 # Permissões baseadas em função {#role-based-permissions}
 
 O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apropriadas. Por exemplo, um desenvolvedor desenvolve código e tem permissão para enviar o código para o repositório Git. Um proprietário de empresa tem permissões diferentes que permitem definir os KPIs (indicadores-chave de desempenho) e aprovar implantações.
+
+>[!NOTE]
+>
+>Esta documentação descreve as permissões com base em funções do Cloud Manager para Adobe Managed Services (AMS).
+>
+>A documentação equivalente para o AEM as a Cloud Service pode ser encontrada no documento [Introdução ao Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions) na documentação as a Cloud Service do AEM.
 
 ## Funções de usuário {#user-roles}
 
