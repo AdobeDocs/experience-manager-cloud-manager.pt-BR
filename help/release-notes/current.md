@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 22730ba281f7c1c4720158a3a813c56b815a0af1
 workflow-type: tm+mt
 source-wordcount: '268'
-ht-degree: 68%
+ht-degree: 93%
 
 ---
 
@@ -17,11 +17,11 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.3.
 
 >[!NOTE]
 >
->Para obter as notas de versão mais recentes do Cloud Manager no AEM as a Cloud Service, consulte [Notas de versão atuais do Cloud Manager no AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
+>Para obter as notas de versão mais recentes do Cloud Manager no AEM as a Cloud Service, consulte [Notas de versão atuais do Cloud Manager no AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html?lang=pt-BR)
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] A versão 2024.3.0 é 14 de março de 2024. A próxima versão está planejada para 11 de abril de 2024.
+A data de lançamento da versão 2024.3.0 do [!UICONTROL Cloud Manager] é 14 de março de 2024. A próxima versão está planejada para 11 de abril de 2024.
 
 ## Novidades {#what-is-new}
 
