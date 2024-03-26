@@ -4,9 +4,9 @@ description: Estas são as notas de versão do Cloud Manager 2024.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 22730ba281f7c1c4720158a3a813c56b815a0af1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '268'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ A data de lançamento da versão 2024.3.0 do [!UICONTROL Cloud Manager] é 14 de
 
 ## Novidades {#what-is-new}
 
-* Detalhes que incluem informações de IP/DNS (FQDN) de servidores verdes agora são exibidos na interface do Cloud Manager.
+* Detalhes com informações de IP/DNS (FQDN) dos servidores verdes agora são exibidos na interface do Cloud Manager.
 
 ## Programa de adoção antecipada {#early-adoption}
 
