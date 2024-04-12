@@ -3,9 +3,9 @@ title: Permissões personalizadas
 description: Saiba como criar novos perfis de permissão personalizados com permissões configuráveis e restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
 source-git-commit: 4a784f1594be4831be1c1c4aecb41b4f1b3b8be2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1474'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -15,14 +15,14 @@ Saiba como criar novos perfis de permissão personalizados com permissões confi
 
 ## Introdução {#introduction}
 
-O Cloud Manager tem um conjunto de funções predefinidas que controlam o acesso a vários recursos do Cloud Manager:
+O Cloud Manager possui um conjunto de funções predefinidas que controlam o acesso a vários de seus recursos:
 
 * Proprietário da empresa
 * Gerenciador de programas
 * Gerenciador de implantação
 * Desenvolvedor
 
-As permissões personalizadas permitem que os usuários criem novos perfis de permissão personalizados com permissões configuráveis para restringir o acesso de usuários do Cloud Managers a programas, pipelines e ambientes.
+As permissões personalizadas permitem que usuários criem novos perfis com permissões configuráveis para restringir o acesso de usuários do Cloud Manager a programas, pipelines e ambientes.
 
 >[!TIP]
 >
@@ -44,7 +44,7 @@ Esta seção detalhará essas etapas. Talvez seja útil consultar as sessões [T
 
 ### Crie um novo perfil de produto {#create}
 
-Você deve primeiro criar um novo perfil de produto antes de atribuir permissões personalizadas.
+Você deve primeiro criar um novo perfil de produto, ao qual poderá atribuir permissões personalizadas.
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)
 
@@ -79,10 +79,10 @@ Agora que você tem um novo perfil de produto, é possível atribuir permissões
 
 1. Toque ou clique no link **Editar** de uma permissão para editá-la.
 
-1. A variável **Editar permissões** é aberta.
+1. A janela **Editar permissões** é aberta.
    * A permissão selecionada na etapa anterior é selecionada na coluna à esquerda.
    * Os itens de permissão disponíveis para atribuição estão na coluna do meio rotulada **Itens de permissão disponíveis**.
-   * Os itens de permissão atribuídos estão na coluna direita identificada **Itens de permissão incluídos**.
+   * Os itens de permissões atribuídos estão na coluna à direita rotulada **Itens de permissão incluídos**.
 
    ![Editar itens de permissão](/help/assets/edit-permission-items.png)
 
@@ -90,7 +90,7 @@ Agora que você tem um novo perfil de produto, é possível atribuir permissões
 
    * Toque ou clique no ícone `i` próximo ao item de permissão para obter mais informações.
 
-1. Toque ou clique em **Adicionar tudo** na parte superior da coluna **Permissões disponíveis** para adicionar todas as permissões. Da mesma forma, toque ou clique **Remover tudo** para remover todas as permissões selecionadas anteriormente.
+1. Toque ou clique em **Adicionar tudo** na parte superior da coluna **Permissões disponíveis** para adicionar todas as permissões. Da mesma forma, toque ou clique em **Remover tudo** para remover todas as permissões selecionadas anteriormente.
 
 1. Toque ou clique em **Salvar** quando terminar de definir os itens de permissão para o novo perfil de produto.
 
@@ -121,14 +121,14 @@ As seguintes permissões estão disponíveis para criar perfis personalizados.
 | Edição de pipeline | Permitir que usuários editem pipelines |
 | Aprovar e rejeitar implantações de produção | Permitir que usuários aprovem ou rejeitem uma etapa de implantação de produção |
 | Cancelamento de execuções de pipeline | Permitir que usuários cancelem execuções de pipeline |
-| Iniciar execuções de pipeline | Permitir que os usuários iniciem novas execuções de pipeline |
+| Iniciar execuções de pipeline | Permitir que usuários iniciem novas execuções de pipeline |
 | Ignorar e rejeitar falhas de métrica importantes | Permitir que usuários ignorem ou rejeitem falhas de métrica importantes |
 | Programação de implantações de produção | Permitir que usuários programem uma etapa de implantação de produção |
 | Acesso às informações do repositório | Permitir que usuários acessem as informações do repositório e gerem a senha de acesso |
 | Criar repositório | Permitir que usuários criem novos repositórios Git |
 | Exclusão de repositório | Permitir que usuários excluam repositórios Git |
 | Edição de repositório | Permitir que usuários editem repositórios Git |
-| Geração de códigos do repositório | Permitir que os usuários gerem projetos a partir do arquétipo |
+| Geração de códigos do repositório | Permitir que usuários gerem projetos a partir do arquétipo |
 | Gerenciamento de cópias de conteúdo | Permitir que usuários gerenciem operações de cópia do conteúdo |
 
 ### Permissões no nível da organização {#organization-level}
@@ -148,7 +148,7 @@ Os termos a seguir são usados na criação e no gerenciamento de permissões pe
 | Termo | Descrição |
 |---|---|
 | Permissões predefinidas | Funções predefinidas como **Proprietário da empresa**, **Gerente de implantação** etc. para controlar vários recursos do Cloud Manager. Para obter detalhes sobre funções predefinidas, consulte o documento [Permissões baseadas em função.](/help/requirements/role-based-permissions.md) |
-| Permissões personalizadas | Recursos do Cloud Manager que permitem aos usuários criar perfis de permissão para definir funções para controlar os recursos compatíveis do Cloud Manager |
+| Permissões personalizadas | Recursos do Cloud Manager que permitem que usuários criem perfis de permissão para definir funções de controle de recursos compatíveis do Cloud Manager |
 | Perfil de permissão | Criado no Admin Console para gerenciar permissões configuráveis que serão aplicáveis a usuários que fazem parte do perfil de permissão |
 | Permissão configurável | Permissões do Cloud Manager que podem ser configuradas no perfil de permissão |
 | Item de permissão | Um recurso do programa, ambiente ou pipeline no qual uma permissão pode ser aplicada |
@@ -187,7 +187,7 @@ Os perfis de produto padrão e as funções do Cloud Manager continuarão funcio
 
 ### Posso editar os perfis de permissão predefinidos?
 
-Não, os perfis padrão não são editáveis. Não é possível adicionar ou remover permissões do perfil de permissão padrão. Você só pode adicionar ou remover usuários de perfis predefinidos.
+Não, os perfis padrão não são editáveis. Não é possível adicionar ou remover permissões do perfil de permissões padrão. Você só pode adicionar ou remover usuários de perfis predefinidos.
 
 ### Devo excluir os perfis de permissão predefinidos, já que os perfis personalizados estão disponíveis?
 
