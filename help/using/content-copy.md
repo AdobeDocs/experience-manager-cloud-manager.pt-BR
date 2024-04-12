@@ -2,9 +2,9 @@
 title: A ferramenta de cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite copiar conteúdo mutável sob demanda de seus ambientes de produção do AEM 6.x hospedado no AMS para os ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: c7803c75bcfcc967877808214704c5746015481d
+source-git-commit: 655111cdf7327e92e03ac7eedd9eedd87cd4b2f1
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1120'
 ht-degree: 100%
 
 ---
@@ -25,6 +25,7 @@ O conteúdo a ser copiado é definido por um conjunto de conteúdo. Um conjunto 
 /conf/**
 /etc/**
 /var/workflow/models/**
+/var/commerce/**
 ```
 
 Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
