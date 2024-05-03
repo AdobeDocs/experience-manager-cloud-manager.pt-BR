@@ -2,10 +2,10 @@
 title: Permissões com base em função
 description: Saiba mais sobre as permissões pré-configuradas com base em funções do Cloud Manager para gerenciar o acesso aos recursos da nuvem.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
-workflow-type: ht
-source-wordcount: '602'
-ht-degree: 100%
+source-git-commit: 1c0c3a751ba2023fc2c2dd5d0d54f914373ad95b
+workflow-type: tm+mt
+source-wordcount: '620'
+ht-degree: 97%
 
 ---
 
@@ -66,3 +66,7 @@ Cada uma das funções tem permissões pré-configuradas associadas específicas
 | Gerar token de acesso pessoal | Acesso ao Git |  | x |  | x |  |
 
 Para saber mais sobre como configurar seus usuários, consulte o documento [Configuração de usuários e funções.](/help/requirements/users-and-roles.md)
+
+>[!TIP]
+>
+>Perfis de permissão personalizados com permissões configuráveis também estão disponíveis. Consulte o documento [Permissões personalizadas](/help/using/custom-permissions.md) para obter mais detalhes.
