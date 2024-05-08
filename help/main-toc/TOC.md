@@ -7,9 +7,9 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 664f43f8ec92da01af16721d9c847e0b03eb4e96
-workflow-type: ht
-source-wordcount: '498'
+source-git-commit: fbbc8b7aee04d1c153aeac87cc086883c0c6b980
+workflow-type: tm+mt
+source-wordcount: '499'
 ht-degree: 100%
 
 ---
@@ -34,6 +34,7 @@ ht-degree: 100%
    + [Provisionamento de ambiente](/help/requirements/environment-provisioning.md)
 + Introdução {#getting-started}
    + [Primeiro logon](/help/getting-started/first-time-login.md)
+   + [Navegação](/help/getting-started/navigation.md)
    + [Configuração do programa](/help/getting-started/program-setup.md)
    + Criação de projeto do AEM {#project-creation}
       + [Uso do Assistente](/help/getting-started/using-the-wizard.md)

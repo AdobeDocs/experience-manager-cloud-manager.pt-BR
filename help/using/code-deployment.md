@@ -2,9 +2,9 @@
 title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 70e68f8af17b0acf644176c2ed3afaf8fc219063
-workflow-type: ht
-source-wordcount: '1650'
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+workflow-type: tm+mt
+source-wordcount: '1648'
 ht-degree: 100%
 
 ---
@@ -55,8 +55,6 @@ A etapa **Teste de preparo** inclui as seguintes ações:
 
 * **Teste de segurança**: esta etapa avalia o impacto sobre a segurança do código no ambiente do AEM. Consulte o documento [Como entender os resultados do teste](/help/using/code-quality-testing.md) para obter detalhes sobre o processo de teste.
    * **Teste de desempenho**: esta etapa avalia o desempenho do código. Consulte [Como entender os resultados do teste](/help/using/code-quality-testing.md) para obter detalhes sobre o processo de teste.
-
-  ![Teste de preparo](/help/assets/Stage_Testing1.png)
 
 ### Etapa de implantação de produção {#production-deployment}
 

@@ -2,10 +2,10 @@
 title: Primeiro logon
 description: Siga esta página se tiver definindo as configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 413edd167b5eda51c207113aaa00a92c808fb09f
+source-git-commit: 1417d3bfa5a844641e0942d1fe1bd7bf84e41997
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 100%
+source-wordcount: '297'
+ht-degree: 75%
 
 ---
 
@@ -24,21 +24,23 @@ Após definir a configuração geral do [!UICONTROL Cloud Manager], você está 
 
    ![Console do Cloud Manager](/help/assets/cloud-manager-console.png)
 
-1. No cartão do programa, selecione o botão de reticências, clique em **Visão geral do programa** e navegue até a página **Visão geral** do Cloud Manager.
-
-   ![Opção do Cloud Manager](/help/assets/program-overview-option.png)
+1. Toque ou clique no cartão do programa para navegar até o site do Cloud Manager **Visão geral** página.
 
 1. O Cloud Manager abre na página **Visão geral**.
 
-   ![Página de visão geral do Cloud Manager](/help/assets/FirstLogin1.png)
+   ![Página de visão geral do Cloud Manager](/help/assets/program-overview-page.png)
 
-1. Clique em **Configurar programa** para configurar a descrição do programa e definir os KPIs (indicadores-chave de desempenho).
+1. Se o programa ainda não estiver configurado, toque ou clique em **Configurar programa** no [frase de chamariz](/help/getting-started/navigation.md#cta) para configurar a descrição do programa e definir os KPIs (indicadores-chave de desempenho). Se seu programa já estiver configurado, o CTA poderá oferecer próximas etapas adicionais.
 
 Prossiga para o documento [Configuração do programa](/help/getting-started/program-setup.md) para ver as próximas etapas da configuração do programa.
 
 ## Atividade do Cloud Manager {#activity}
 
 O Cloud Manager fornece uma visualização consolidada da atividade de um programa, listando todas as execuções de pipeline de CI/CD, tanto de produção quanto de não produção, permitindo visibilidade sobre a atividade anterior e atual.
+
+>[!TIP]
+>
+>Para obter detalhes sobre como usar a interface do Cloud Manager, consulte o documento [Navegação na interface do Cloud Manager.](/help/getting-started/navigation.md)
 
 >[!NOTE]
 >

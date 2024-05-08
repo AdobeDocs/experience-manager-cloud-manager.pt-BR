@@ -2,10 +2,10 @@
 title: Monitoramento de ambientes
 description: Saiba como monitorar seus ambientes no Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 5907ca6337d33c26ff19a14bfeb358cd9f7b935d
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 100%
+source-wordcount: '928'
+ht-degree: 89%
 
 ---
 
@@ -24,20 +24,17 @@ Se uma métrica ultrapassar seu limite crítico, ela será considerada em estado
 
 Siga estas etapas para acessar o monitoramento do sistema.
 
-1. Faça logon na página de destino **Managed Services - Programas**.
+1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selecione a organização e o programa apropriado.
 
-   ![Programas do Managed Services](/help/assets/ProgramLanding.png)
-
-1. Clique no quarto ícone no cartão do programa.
+1. Toque ou clique no botão de reticências do programa que deseja monitorar e selecione a **Mostrar monitoramento** opção.
 
    ![Configurações](/help/assets/first-timea1.png)
 
-
-Como alternativa, é possível navegar até a página de destino do **Monitoramento de sistema**, por meio do item do menu de navegação global **Relatórios**, no [!UICONTROL Cloud Manager].
+A variável **Relatórios** A página é aberta para mostrar informações de monitoramento do sistema.
 
 ## Visão geral do monitoramento do sistema {#system-monitoring-overview}
 
-A página de visão geral do Monitoramento do sistema lista os ambientes monitorados no programa e produz relatórios sobre sua integridade de alto nível em quatro categorias separadas:
+A variável **Monitoramento do sistema** seção do **Relatórios** A página lista os ambientes monitorados no programa e relata sua integridade de alto nível em quatro categorias separadas:
 
 * Host
 * Armazenamento
@@ -54,13 +51,11 @@ O status em cada categoria é um resumo de métricas individuais. Se alguma mét
 
 ## Detalhes do monitoramento do sistema {#system-monitoring-detail}
 
-Para exibir os detalhes de métricas específicas, é possível clicar em uma das categorias na navegação à esquerda ou clicar em um dos indicadores de categoria para uma instância específica. Cada página de detalhes mostra uma série de gráficos para as métricas contidas nessa categoria. É possível exibir as métricas de todas as instâncias em um ambiente ou para uma instância específica. Você pode alternar entre o ambiente e as instâncias usando as caixas suspensas no canto superior direito.
+Para exibir os detalhes de métricas específicas, toque ou clique em uma das colunas de categoria de uma instância específica ou no título da categoria na navegação à esquerda. Cada página de detalhes mostra uma série de gráficos para as métricas contidas nessa categoria. É possível exibir as métricas de todas as instâncias em um ambiente ou para uma instância específica. Você pode alternar entre o ambiente e as instâncias usando as caixas suspensas no canto superior direito.
 
 ![Selecionar ambiente](/help/assets/System_Monitoring1.png)
 
 A navegação à esquerda mostrará as métricas disponíveis da categoria selecionada para as quais há dados para o ambiente e as instâncias selecionadas no momento.
-
-![Métricas de monitoramento](/help/assets/System_Monitoring2.png)
 
 Um gráfico individual mostrará o status e um gráfico dos dados ao longo do tempo, juntamente com os limites. Se várias instâncias forem exibidas, os dados de cada instância estarão em uma série separada.
 
@@ -103,9 +98,9 @@ Por exemplo, se você clicar na série de limites de aviso, apenas o limite crí
 
 ## Relatórios de SLA {#sla-reporting}
 
-Os clientes podem ver o desempenho de seu ambiente de produção do AEM em relação ao contrato de nível de serviço (SLA). Isso está disponível por meio de um submenu na tela **Relatórios**.
+Você pode ver o desempenho de seu ambiente de produção de AEM em relação ao contrato de nível de serviço (SLA).
 
-O gráfico a seguir mostra o nível mensal de SLA para 2018.
+O gráfico a seguir mostra o nível mensal de SLA para 2019.
 
 ![Gráfico SLA de 2018](/help/assets/SLA-Reports-one.png)
 

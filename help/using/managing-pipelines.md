@@ -2,10 +2,10 @@
 title: Gerenciar pipelines
 description: Saiba como gerenciar os pipelines existentes, incluindo edição, execução e exclusão.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 28ab641ec85335d8330aeb465c07bf0264218fe4
-workflow-type: ht
-source-wordcount: '807'
-ht-degree: 100%
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+workflow-type: tm+mt
+source-wordcount: '800'
+ht-degree: 96%
 
 ---
 
@@ -44,7 +44,7 @@ A janela **Pipelines** mostra uma lista completa de todos os pipelines do progra
 
 1. Aqui você pode ver uma lista de todos os pipelines do programa, bem como iniciar e parar a execução do pipeline, assim como no **cartão do pipeline**.
 
-Se um pipeline estiver em execução, passar o mouse sobre a coluna **Status** revelará detalhes da execução.
+Tocar ou clicar no `i` ícone revela detalhes sobre a última execução ou a execução atual do pipeline.
 
 ![Detalhes da execução do pipeline](/help/assets/configure-pipelines/pipeline-status.png)
 
@@ -60,7 +60,7 @@ A janela **Atividades** mostra uma lista completa de todas as execuções de pip
 
 1. Aqui você pode ver uma lista de todas as execuções de pipeline do programa, incluindo as execuções atuais e históricas.
 
-Se um pipeline estiver em execução, passar o mouse sobre a coluna **Status** revelará detalhes da execução.
+Tocar ou clicar no `i` ícone revela detalhes sobre a execução do pipeline selecionado.
 
 ![Detalhes da execução do pipeline](/help/assets/configure-pipelines/pipeline-activity.png)
 

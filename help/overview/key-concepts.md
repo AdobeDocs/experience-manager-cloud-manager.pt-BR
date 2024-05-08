@@ -2,10 +2,10 @@
 title: Principais conceitos
 description: Como qualquer ferramenta avançada, o Cloud Manager contém muitos conceitos e termos. Este documento resume alguns dos mais importantes para se começar a usar o Cloud Manager.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: 73e322cf93dc7709b7581860974079c8d94034ba
+source-git-commit: 67621fb2dbb0c32371b2ffc16ec45f47daf04e05
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 100%
+source-wordcount: '413'
+ht-degree: 91%
 
 ---
 
@@ -16,7 +16,7 @@ Como qualquer ferramenta avançada, o Cloud Manager contém muitos conceitos e t
 
 ## Aplicativo {#application}
 
-Um aplicativo é um conjunto de personalizações e configurações criadas por um cliente para adaptar a [solução](#solution) subjacente (como o AEM Sites ou AEM Assets) aos seus casos de uso e necessidades específicas. Um aplicativo é uma unidade lógica que pode ser composta por vários [artefatos.](#artifact)
+Um aplicativo é um conjunto de personalizações e configurações criadas por um cliente para adaptar o [solução](#solution) (como AEM Sites ou AEM Assets) para seus casos de uso e necessidades específicas. Um aplicativo é uma unidade lógica que pode ser composta por vários [artefatos.](#artifact)
 
 Um exemplo é o fictício [aplicativo de estilo de vida WKND.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=pt-BR)
 
