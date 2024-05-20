@@ -3,9 +3,9 @@ title: Monitoramento de ambientes
 description: Saiba como monitorar seus ambientes no Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '928'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -26,15 +26,15 @@ Siga estas etapas para acessar o monitoramento do sistema.
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selecione a organização e o programa apropriado.
 
-1. Toque ou clique no botão de reticências do programa que deseja monitorar e selecione a **Mostrar monitoramento** opção.
+1. Toque ou clique no botão de reticências do programa que deseja monitorar e selecione a opção **Mostrar monitoramento**.
 
    ![Configurações](/help/assets/first-timea1.png)
 
-A variável **Relatórios** A página é aberta para mostrar informações de monitoramento do sistema.
+A página **Relatórios** abre para mostrar informações de monitoramento do sistema.
 
 ## Visão geral do monitoramento do sistema {#system-monitoring-overview}
 
-A variável **Monitoramento do sistema** seção do **Relatórios** A página lista os ambientes monitorados no programa e relata sua integridade de alto nível em quatro categorias separadas:
+A seção **Monitoramento do sistema** da página **Relatórios** lista os ambientes monitorados no programa e relata sua integridade de alto nível em quatro categorias distintas:
 
 * Host
 * Armazenamento
@@ -98,7 +98,7 @@ Por exemplo, se você clicar na série de limites de aviso, apenas o limite crí
 
 ## Relatórios de SLA {#sla-reporting}
 
-Você pode ver o desempenho de seu ambiente de produção de AEM em relação ao contrato de nível de serviço (SLA).
+É possível ver o desempenho do ambiente de produção do AEM em relação ao contrato de nível de serviço (SLA).
 
 O gráfico a seguir mostra o nível mensal de SLA para 2019.
 

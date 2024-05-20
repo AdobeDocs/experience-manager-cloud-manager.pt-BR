@@ -3,9 +3,9 @@ title: Gerenciamento de ambientes
 description: Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -37,9 +37,9 @@ O status é o estado de energia acumulado nos nós do ambiente na seguinte ordem
 
 ## Gerenciamento de ambientes {#managing-environments-with-cloud-manager}
 
-No **Ambientes** lado a lado, toque ou clique na linha de qualquer ambiente para exibir a **Ambientes** tela.
+No bloco **Ambientes**, toque ou clique na linha de qualquer ambiente para exibir a tela **Ambientes**.
 
-A variável **Ambientes** A tela exibe cada ambiente de produção e de preparo no programa. O nome do ambiente é visto acima de cada cartão. O cartão inclui uma tabela de nós no ambiente, juntamente com o tamanho da CPU, o armazenamento, a região e o status.
+A tela **Ambientes** exibe cada ambiente de produção e preparo do seu programa. O nome do ambiente é visto acima de cada cartão. O cartão inclui uma tabela de nós no ambiente, juntamente com o tamanho da CPU, o armazenamento, a região e o status.
 
 >[!NOTE]
 >

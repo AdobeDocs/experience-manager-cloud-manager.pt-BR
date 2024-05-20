@@ -3,9 +3,9 @@ title: Repositórios do Cloud Manager
 description: Saiba como acessar, criar e editar repositórios para seus programas do Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 1d4ab9704fdb743b097e24be335fbf069d1e78bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '762'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Para acessar seu repositório, use o botão **Acessar informações do repositó
 
    ![Botão Acessar informações do repositório](/help/assets/access-repo1.png)
 
-1. Toque ou clique no **Acessar informações do repositório** botão para abrir uma caixa de diálogo que apresenta:
+1. Toque ou clique no botão **Acessar informações do repositório** para abrir uma caixa de diálogo que apresenta:
 
    * O URL para o repositório Git
    * Nome de usuário
