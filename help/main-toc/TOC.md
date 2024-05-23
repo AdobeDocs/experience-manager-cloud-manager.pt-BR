@@ -8,9 +8,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '509'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 99%
    + Pipelines de CI/CD {#pipelines}
       + [Configuração de pipelines de produção](/help/using/production-pipelines.md)
       + [Configurar pipelines de não produção](/help/using/non-production-pipelines.md)
-      + [Pipelines de preparo e produção apenas](/help/using/stage-prod-only.md)
+      + [Pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md)
       + [Gerenciar pipelines](/help/using/managing-pipelines.md)
    + [Implantação do código](/help/using/code-deployment.md)
    + [Teste de qualidade do código](/help/using/code-quality-testing.md)
