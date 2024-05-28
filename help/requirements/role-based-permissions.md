@@ -2,10 +2,10 @@
 title: Permissões com base em função
 description: Saiba mais sobre as permissões pré-configuradas com base em funções do Cloud Manager para gerenciar o acesso aos recursos da nuvem.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 1c0c3a751ba2023fc2c2dd5d0d54f914373ad95b
-workflow-type: ht
+source-git-commit: fc1bc626dc18d25ce8c5bbae71396b234b5676db
+workflow-type: tm+mt
 source-wordcount: '620'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -35,7 +35,7 @@ Esta tabela lista as funções que podem ser atribuídas no Admin Console.
 | Gerenciador de implantação | Este usuário gerencia as operações de implantação usando o [!UICONTROL Cloud Manager] para executar implantações de estágio e produção, pode aprovar falhas importantes de nível 3 quando necessário, com acesso ao repositório Git. |
 | Desenvolvedor | Esse usuário desenvolve e testa o código de aplicativo personalizado, usa principalmente o [!UICONTROL Cloud Manager] para exibir o status da implantação e tem acesso de confirmação ao repositório git. |
 | Engenheiro de sucesso do cliente | Esse usuário geralmente oferece suporte ao sucesso do cliente para clientes do AMS e interage com o [!UICONTROL Cloud Manager] com o propósito de executar implantações que exigem a supervisão do CSE (Engenheiro de sucesso do cliente). |
-| Autor de conteúdo | Esse usuário geralmente não interage com o [!UICONTROL Cloud Manager], mas pode usar o programa para alternar do [!UICONTROL Cloud Manager] (tendo navegado pela [!UICONTROL Experience Cloud]) para acessar o Adobe Experience Manager (AEM). |
+| Autor de conteúdo | Esse usuário geralmente não interage com o Cloud Manager, mas pode usar o alternador de programa do Cloud Manager (tendo navegado do Experience Cloud) para acessar o Adobe Experience Manager (AEM). |
 
 ## Permissões de usuário {#user-permissions}
 
