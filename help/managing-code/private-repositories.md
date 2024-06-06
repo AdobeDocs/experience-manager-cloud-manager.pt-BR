@@ -3,10 +3,10 @@ title: Adição de repositórios privados no Cloud Manager
 description: Saiba como configurar o Cloud Manager para funcionar com seus próprios repositórios GitHub privados.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: dcb48f6914ff48c6905da40609ca99fe529d9fe3
+source-git-commit: 84a6d8b7a44af124eb227999ad1cbd1fe14ab7ee
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 80%
+source-wordcount: '884'
+ht-degree: 68%
 
 ---
 
@@ -122,10 +122,12 @@ Repositórios privados validados podem ser associados a [pipelines de pilha comp
 
 ## Limitações {#limitations}
 
-Lembre-se das seguintes limitações ao usar os seus repositórios do GitHub com o Cloud Manager.
+Certas limitações se aplicam ao uso de repositórios privados com o Cloud Manager.
 
-* Não é possível usar os repositórios do GitHub como a fonte de repositório direta dos pipelines que você gerencia.
-   * Essa funcionalidade está planejada.
-* Não é possível pausar a validação da solicitação de “pull” usando a verificação do GitHub no Cloud Manager.
-   * Se o repositório do GitHub for validado no Cloud Manager, o Cloud Manager sempre tentará validar as solicitações de “pull” criadas para esse repositório.
-Se o aplicativo GitHub da Adobe for removido de sua organização do GitHub, o recurso de validação de solicitações de “pull” será removido de todos os repositórios.
+* Não é possível usar repositórios privados como a fonte direta do repositório para os pipelines que você gerencia.
+* Não é possível pausar a validação da solicitação de pull usando a verificação do GitHub no Cloud Manager.
+   * Se o repositório GitHub for validado no Cloud Manager, o Cloud Manager sempre tentará validar as solicitações de pull criadas para esse repositório.
+* Se o aplicativo GitHub da Adobe for removido de sua organização do GitHub, o recurso de validação de solicitações de “pull” será removido de todos os repositórios.
+* Nenhuma tag do Git será criada e enviada ao usar repositórios privados em pipelines de pilha completa de produção.
+* Os pipelines que usam repositórios privados e o acionador de build ao confirmar não são iniciados automaticamente quando uma nova confirmação é enviada para a ramificação selecionada.
+* [Funcionalidade de reutilização de artefato](/help/getting-started/project-setup.md#build-artifact-reuse) não se aplica a repositórios privados.
