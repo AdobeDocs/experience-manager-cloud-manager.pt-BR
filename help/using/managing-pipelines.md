@@ -2,10 +2,10 @@
 title: Gerenciar pipelines
 description: Saiba como gerenciar os pipelines existentes, incluindo edição, execução e exclusão.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: ht
-source-wordcount: '800'
-ht-degree: 100%
+source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
+workflow-type: tm+mt
+source-wordcount: '901'
+ht-degree: 88%
 
 ---
 
@@ -96,6 +96,10 @@ Dependendo do tipo de pipeline, talvez seja possível cancelar a execução clic
 >
 >Não é possível editar um pipeline em execução.
 
+>[!NOTE]
+>
+>Os pipelines de camada da Web e configuração não são compatíveis com repositórios privados. Consulte o documento [Adição de repositórios privados no Cloud Manager](/help/managing-code/private-repositories.md) para obter detalhes e a lista completa de limitações.
+
 ## Exclusão de pipelines {#deleting-pipelines}
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriado.
@@ -127,6 +131,15 @@ Quando uma etapa do pipeline é concluída, um resumo é apresentado.
 Toque ou clique no link **Exibir detalhes** para revelar a seção **Duração**. Isso inclui a duração média do pipeline com base na tendência histórica desse programa.
 
 ![Duração](/help/assets/configure-pipelines/duration.png)
+
+Se o pipeline contivesse uma **Varredura de código** etapa, que gerou problemas, toque ou clique no botão **Detalhes de download** botão para exibir uma lista de [testes de qualidade do código](/help/using/code-quality-testing.md) que não passou.
+
+![Problemas de qualidade do código](assets/managing-pipelines-code-quality-issues.png)
+
+A **Local do Arquivo de Projeto** está disponível no arquivo CSV para indicar o local do código incorreto. Essa coluna é o caminho relativo do projeto, enquanto a variável **Local do arquivo** é gerada por Maven.
+
+![Detalhes do problema de verificação do código do projeto](assets/managing-pipelines-code-quality-details.png)
+
 
 >[!NOTE]
 >

@@ -7,10 +7,10 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
-workflow-type: ht
-source-wordcount: '509'
-ht-degree: 100%
+source-git-commit: 3beee350dda077c16975ea628bd4c7b80d7d9160
+workflow-type: tm+mt
+source-wordcount: '530'
+ht-degree: 96%
 
 ---
 
@@ -58,17 +58,23 @@ ht-degree: 100%
    + [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md)
    + [Cópia de conteúdo](/help/using/content-copy.md)
 + Gerenciamento do código {#managing-code}
+   + [Gerenciamento de repositórios no Cloud Manager](/help/managing-code/managing-repositories.md)
+   + [Informações de acesso do repositório](/help/managing-code/accessing-repositories.md)
+   + [Adição de repositórios Adobe](/help/managing-code/adobe-repositories.md)
+   + [Adição de repositórios privados](/help/managing-code/private-repositories.md)
+   + [Suporte a submódulos Git](/help/managing-code/git-submodules.md)
+   + [Configuração de verificação do GitHub](/help/managing-code/github-check-config.md)
+   + [Anotações de verificação do GitHub](/help/managing-code/github-annotations.md)
    + [Manuseio da versão do projeto Maven](/help/managing-code/maven-project-version.md)
-   + [Repositórios](/help/managing-code/repositories.md)
    + [Integração com o Git](/help/managing-code/git-integration.md)
    + [Trabalhar com vários repositórios Git](/help/managing-code/multiple-git-repos.md)
-   + [Trabalhe com os seus repositórios do GitHub](/help/managing-code/byo-github.md)
 + Assistente de atualização do produto {#product-update-wizard}
    + [Visão geral](/help/product-update-wizard/overview.md)
    + [Avaliação](/help/product-update-wizard/evaluation.md)
 + Notas de versão {#release-notes}
    + [Notas de versão atuais](/help/release-notes/current.md)
    + 2024 {#2024}
+      + [Notas da versão 2024.5.0](/help/release-notes/2024/2024-5-0.md)
       + [Notas da versão 2024.4.0](/help/release-notes/2024/2024-4-0.md)
       + [Notas da versão 2024.3.0](/help/release-notes/2024/2024-3-0.md)
       + [Notas da versão 2024.2.0](/help/release-notes/2024/2024-2-0.md)

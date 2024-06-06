@@ -2,8 +2,8 @@
 title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
-workflow-type: ht
+source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 100%
 
@@ -168,7 +168,7 @@ Cada programa tem muitas opções e dados associados. Esses dados são coletados
 * Visão geral: a visão geral do programa conforme descrito no documento atual
 * [Atividade](/help/using/managing-pipelines.md#activity): o histórico de execuções de pipeline do programa
 * [Pipelines](/help/using/managing-pipelines.md#pipelines): todos os pipelines configurados para o programa
-* [Repositórios](/help/managing-code/repositories.md): todos os repositórios configurados para o programa
+* [Repositórios](/help/managing-code/managing-repositories.md): todos os repositórios configurados para o programa
 * [Relatórios](/help/using/monitoring-environments.md#system-monitoring-overview): métricas, como dados de SLA
 * [Ambientes](/help/using/managing-environments.md): todos os ambientes configurados para o programa
 * [Conjuntos de conteúdo](/help/using/content-copy.md): conjuntos de conteúdo criados para fins de cópia
