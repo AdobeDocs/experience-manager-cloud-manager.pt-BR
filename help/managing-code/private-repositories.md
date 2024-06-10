@@ -3,10 +3,10 @@ title: Adição de repositórios privados no Cloud Manager
 description: Saiba como configurar o Cloud Manager para funcionar com seus próprios repositórios GitHub privados.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 84a6d8b7a44af124eb227999ad1cbd1fe14ab7ee
+source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 68%
+source-wordcount: '868'
+ht-degree: 70%
 
 ---
 
@@ -124,7 +124,6 @@ Repositórios privados validados podem ser associados a [pipelines de pilha comp
 
 Certas limitações se aplicam ao uso de repositórios privados com o Cloud Manager.
 
-* Não é possível usar repositórios privados como a fonte direta do repositório para os pipelines que você gerencia.
 * Não é possível pausar a validação da solicitação de pull usando a verificação do GitHub no Cloud Manager.
    * Se o repositório GitHub for validado no Cloud Manager, o Cloud Manager sempre tentará validar as solicitações de pull criadas para esse repositório.
 * Se o aplicativo GitHub da Adobe for removido de sua organização do GitHub, o recurso de validação de solicitações de “pull” será removido de todos os repositórios.

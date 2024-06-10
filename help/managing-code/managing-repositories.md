@@ -2,10 +2,10 @@
 title: Gerenciamento de repositórios no Cloud Manager
 description: Saiba como criar, exibir e editar repositórios Git no Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: b15ef71ae24f51811798d2d25c8f75320e21c01f
+source-git-commit: 73add7bee892769d1b3864e3238aff26bf96162d
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 27%
+source-wordcount: '660'
+ht-degree: 25%
 
 ---
 
@@ -38,7 +38,7 @@ A variável **Repositórios** fornece detalhes sobre os repositórios:
 
 * O tipo de repositório
    * **Adobe** indica repositórios gerenciados por Adobe
-   * **Privado** indica repositórios GitHub que você gerencia
+   * **GitHub** indica repositórios GitHub privados que você gerencia
 * Quando foi criado
 * Pipelines associados ao repositório
 
@@ -76,6 +76,13 @@ Ao visualizar os repositórios no **Repositórios** você pode visualizar os det
 A variável **Informações do repositório** é aberta com os detalhes. Para obter mais informações sobre o acesso às informações do repositório, consulte o documento [Acessando informações do repositório.](accessing-repositories.md)
 
 ## Verificar ramificações {#check-branches}
+
+A variável **Verificar ramificações/Criar projeto** A ação executa duas funções dependendo do estado do repositório.
+
+* Se o repositório for recém-criado, a ação criará um projeto de amostra com base em [o arquétipo do projeto AEM.](https://experienceleague.adobe.com/br/docs/experience-manager-core-components/using/developing/archetype/overview)
+* Se o repositório já tiver criado o projeto de amostra, ele verificará o estado do repositório e suas ramificações e retornará se o projeto de amostra já existir.
+
+![Verificar ação de ramificações](assets/check-branches.png)
 
 ## Copiar URL de repositório {#copy-url}
 
