@@ -1,23 +1,23 @@
 ---
 title: Adição de repositórios privados no Cloud Manager
-description: Saiba como configurar o Cloud Manager para funcionar com seus próprios repositórios GitHub privados.
+description: Saiba como configurar o Cloud Manager para trabalhar com os seus repositórios do GitHub.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 70%
+ht-degree: 88%
 
 ---
 
 
 # Adição de repositórios privados no Cloud Manager {#private-repositories}
 
-Saiba como configurar o Cloud Manager para funcionar com seus próprios repositórios GitHub privados.
+Saiba como configurar o Cloud Manager para trabalhar com os seus repositórios do GitHub.
 
 ## Visão geral {#overview}
 
-Ao configurar o Cloud Manager para funcionar com seus próprios repositórios GitHub privados, você pode validar seu código diretamente no repositório GitHub por meio do Cloud Manager, eliminando a necessidade de sincronizar consistentemente seu código com o repositório Adobe.
+Ao configurar o Cloud Manager para funcionar com seus próprios repositórios privados do GitHub, você pode validar seu código diretamente no repositório GitHub por meio do Cloud Manager, eliminando a necessidade de sincronizar consistentemente seu código com o repositório da Adobe.
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ Após a validação do repositório do GitHub no Cloud Manager, a integração �
 
    ![Verificações do GitHub](/help/assets/repositories/github-checks.png)
 
-1. Para cada solicitação de “pull”, um [pipeline de qualidade de código de pilha completa](/help/using/managing-pipelines.md) será criado automaticamente. Esse pipeline é iniciado a cada atualização de solicitação de “pull”.
+1. Para cada solicitação de “pull”, um [pipeline de qualidade de código de pilha completa](/help/using/managing-pipelines.md) será criado automaticamente. Esse pipeline é iniciado a cada atualização de solicitação de pull.
 
 1. A verificação do GitHub permanece em estado de execução até que as verificações de qualidade do código sejam concluídas. Os resultados de qualidade do código serão propagados para a verificação do GitHub.
 
@@ -110,7 +110,7 @@ Quando a solicitação de “pull” é fechada ou mesclada, o pipeline de quali
 
 >[!TIP]
 >
->Você pode controlar os pipelines criados automaticamente para validar cada solicitação de pull para um repositório privado. Consulte o documento [Verificação de configuração do GitHub para repositórios privados](github-check-config.md) para obter mais informações.
+>Você pode controlar os pipelines criados automaticamente para validar cada solicitação de pull para um repositório privado. Consulte o documento [Configuração de verificação do GitHub para repositórios privados](github-check-config.md) para obter mais informações.
 
 ## Associação de repositórios privados a pipelines {#pipelines}
 
@@ -118,7 +118,7 @@ Repositórios privados validados podem ser associados a [pipelines de pilha comp
 
 >[!NOTE]
 >
->Os pipelines de camada da Web e configuração não são compatíveis com repositórios privados.
+>Os pipelines de nível da Web e de configuração não são compatíveis com repositórios privados.
 
 ## Limitações {#limitations}
 
