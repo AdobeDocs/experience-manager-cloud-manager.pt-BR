@@ -3,7 +3,7 @@ title: Configuração de pipelines de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '716'
 ht-degree: 100%
 

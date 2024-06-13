@@ -3,9 +3,9 @@ title: Gerenciar pipelines
 description: Saiba como gerenciar os pipelines existentes, incluindo edição, execução e exclusão.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '901'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -98,7 +98,7 @@ Dependendo do tipo de pipeline, talvez seja possível cancelar a execução clic
 
 >[!NOTE]
 >
->Os pipelines de camada da Web e configuração não são compatíveis com repositórios privados. Consulte o documento [Adição de repositórios privados no Cloud Manager](/help/managing-code/private-repositories.md) para obter detalhes e a lista completa de limitações.
+>Os pipelines de nível da Web e de configuração não são compatíveis com repositórios privados. Consulte o documento [Adição de repositórios privados no Cloud Manager](/help/managing-code/private-repositories.md) para obter detalhes e a lista completa de limitações.
 
 ## Exclusão de pipelines {#deleting-pipelines}
 
@@ -132,11 +132,11 @@ Toque ou clique no link **Exibir detalhes** para revelar a seção **Duração**
 
 ![Duração](/help/assets/configure-pipelines/duration.png)
 
-Se o pipeline contivesse uma **Varredura de código** etapa, que gerou problemas, toque ou clique no botão **Detalhes de download** botão para exibir uma lista de [testes de qualidade do código](/help/using/code-quality-testing.md) que não passou.
+Se o pipeline tiver uma etapa de **Varredura de código** que gerou problemas, toque ou clique no botão **Detalhes de download** para exibir uma lista de [testes de qualidade do código](/help/using/code-quality-testing.md) não aprovados.
 
 ![Problemas de qualidade do código](assets/managing-pipelines-code-quality-issues.png)
 
-A **Local do Arquivo de Projeto** está disponível no arquivo CSV para indicar o local do código incorreto. Essa coluna é o caminho relativo do projeto, enquanto a variável **Local do arquivo** é gerada por Maven.
+Uma coluna **Localização do arquivo do projeto** está disponível no arquivo CSV para indicar a localização do código incorreto. Essa coluna é o caminho relativo do projeto, enquanto a coluna **Localização do arquivo** é gerada pelo Maven.
 
 ![Detalhes do problema de verificação do código do projeto](assets/managing-pipelines-code-quality-details.png)
 

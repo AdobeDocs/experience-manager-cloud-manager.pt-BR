@@ -4,9 +4,9 @@ description: Estas são as notas de versão do Cloud Manager 2024.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: a41ea35cb685d4e88e016bc887eb2465963747e1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '291'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
@@ -21,16 +21,16 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.6.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] A versão 2024.6.0 é 6 de junho de 2024. A próxima versão está planejada para 11 de julho de 2024.
+A data de lançamento do [!UICONTROL Cloud Manager] versão 2024.6.0 é 6 de junho de 2024. A próxima versão está planejada para 11 de julho de 2024.
 
 ## Novidades {#what-is-new}
 
 * Agora você pode [usar seus próprios repositórios GitHub](/help/managing-code/private-repositories.md) como fontes para pipelines de pilha completa e de front-end.
-   * Além disso, você pode aproveitar os repositórios GitHub com o [submódulos Git,](/help/managing-code/git-submodules.md) fornecendo controle aprimorado sobre os pipelines gerados automaticamente usados para validação de solicitação de pull e permitindo definir comportamentos para métricas cruciais durante a fase de verificação de código.
-   * [Você também tem a escolha](/help/managing-code/github-check-config.md) para preservar o histórico de relatórios no GitHub, nomeie o pipeline e defina variáveis de pipeline para atender às suas necessidades.
+   * Além disso, é possível aproveitar os repositórios GitHub com [submódulos Git,](/help/managing-code/git-submodules.md) fornecendo um controle aprimorado sobre os pipelines gerados automaticamente usados para validação de solicitação de pull e permitindo definir comportamentos para métricas cruciais durante a fase de verificação de código.
+   * [Você também tem a opção](/help/managing-code/github-check-config.md) de preservar o histórico do relatório no GitHub, nomear o pipeline e definir variáveis de pipeline para atender às suas necessidades.
 * Novas regras do OakPal foram adicionadas à [Verificação de qualidade de código do Cloud Manager.](/help/using/custom-code-quality-rules.md#oakpal-ui-content-package)
-   * Cada nova regra adicionada a partir de junho de 2024 é uma alteração ininterrupta.
-   * Você é solicitado a resolver isso o mais rápido possível, pois essas novas regras causarão falhas nos pipelines a partir da versão de agosto de 2024 do Cloud Manager.
+   * Todas as nova regras adicionadas até junho de 2024 são alterações secundárias.
+   * Recomendamos que você resolva isso o mais rápido possível, pois essas novas regras causarão falhas nos pipelines a partir da versão de agosto de 2024 do Cloud Manager.
 
 ## Programa de adoção antecipada {#early-adoption}
 

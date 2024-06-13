@@ -8,9 +8,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: 3beee350dda077c16975ea628bd4c7b80d7d9160
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '530'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -59,13 +59,13 @@ ht-degree: 96%
    + [Cópia de conteúdo](/help/using/content-copy.md)
 + Gerenciamento do código {#managing-code}
    + [Gerenciamento de repositórios no Cloud Manager](/help/managing-code/managing-repositories.md)
-   + [Informações de acesso do repositório](/help/managing-code/accessing-repositories.md)
-   + [Adição de repositórios Adobe](/help/managing-code/adobe-repositories.md)
+   + [Informações de acesso do repositório ](/help/managing-code/accessing-repositories.md)
+   + [Adição de repositórios da Adobe](/help/managing-code/adobe-repositories.md)
    + [Adição de repositórios privados](/help/managing-code/private-repositories.md)
-   + [Suporte a submódulos Git](/help/managing-code/git-submodules.md)
+   + [Suporte ao submódulo Git](/help/managing-code/git-submodules.md)
    + [Configuração de verificação do GitHub](/help/managing-code/github-check-config.md)
    + [Anotações de verificação do GitHub](/help/managing-code/github-annotations.md)
-   + [Manuseio da versão do projeto Maven](/help/managing-code/maven-project-version.md)
+   + [Manuseio da versão do projeto do Maven](/help/managing-code/maven-project-version.md)
    + [Integração com o Git](/help/managing-code/git-integration.md)
    + [Trabalhar com vários repositórios Git](/help/managing-code/multiple-git-repos.md)
 + Assistente de atualização do produto {#product-update-wizard}
