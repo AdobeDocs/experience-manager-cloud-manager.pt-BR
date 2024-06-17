@@ -3,9 +3,9 @@ title: Gerenciamento de repositórios no Cloud Manager
 description: Saiba como criar, exibir e editar repositórios Git no Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 73add7bee892769d1b3864e3238aff26bf96162d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '660'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ A janela **Repositórios** fornece detalhes sobre os repositórios:
 
 * O tipo de repositório
    * **Adobe** indica repositórios gerenciados pela Adobe
-   * **GitHub** indica repositórios GitHub privados que você gerencia
+   * **GitHub** indica repositórios privados do GitHub que você gerencia
 * Quando foi criado
 * Pipelines associados ao repositório
 
@@ -77,12 +77,12 @@ A janela **Informações do repositório** é aberta com os detalhes. Para obter
 
 ## Verificar ramificações {#check-branches}
 
-A variável **Verificar ramificações/Criar projeto** A ação executa duas funções dependendo do estado do repositório.
+A ação **Verificar ramificações/Criar projeto** executa duas funções dependendo do estado do repositório.
 
-* Se o repositório for recém-criado, a ação criará um projeto de amostra com base em [o arquétipo do projeto AEM.](https://experienceleague.adobe.com/br/docs/experience-manager-core-components/using/developing/archetype/overview)
-* Se o repositório já tiver criado o projeto de amostra, ele verificará o estado do repositório e suas ramificações e retornará se o projeto de amostra já existir.
+* Se o repositório for recém-criado, a ação criará um projeto de amostra com base no [arquétipo do projeto do AEM.](https://experienceleague.adobe.com/pt-br/docs/experience-manager-core-components/using/developing/archetype/overview)
+* Se o repositório já tiver criado o projeto de amostra, ele verifica o estado do repositório e de suas ramificações e informa se o projeto de amostra já existe.
 
-![Verificar ação de ramificações](assets/check-branches.png)
+![Verificar a ação de ramificações](assets/check-branches.png)
 
 ## Copiar URL de repositório {#copy-url}
 

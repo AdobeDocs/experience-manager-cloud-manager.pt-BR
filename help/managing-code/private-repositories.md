@@ -4,9 +4,9 @@ description: Saiba como configurar o Cloud Manager para trabalhar com os seus re
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '868'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -125,8 +125,8 @@ Repositórios privados validados podem ser associados a [pipelines de pilha comp
 Certas limitações se aplicam ao uso de repositórios privados com o Cloud Manager.
 
 * Não é possível pausar a validação da solicitação de pull usando a verificação do GitHub no Cloud Manager.
-   * Se o repositório GitHub for validado no Cloud Manager, o Cloud Manager sempre tentará validar as solicitações de pull criadas para esse repositório.
+   * Se o repositório do GitHub for validado no Cloud Manager, o Cloud Manager sempre tentará validar as solicitações de pull criadas para esse repositório.
 * Se o aplicativo GitHub da Adobe for removido de sua organização do GitHub, o recurso de validação de solicitações de “pull” será removido de todos os repositórios.
 * Nenhuma tag do Git será criada e enviada ao usar repositórios privados em pipelines de pilha completa de produção.
 * Os pipelines que usam repositórios privados e o acionador de build ao confirmar não são iniciados automaticamente quando uma nova confirmação é enviada para a ramificação selecionada.
-* [Funcionalidade de reutilização de artefato](/help/getting-started/project-setup.md#build-artifact-reuse) não se aplica a repositórios privados.
+* A [Funcionalidade de reutilização de artefato](/help/getting-started/project-setup.md#build-artifact-reuse) não se aplica a repositórios privados.

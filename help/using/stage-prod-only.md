@@ -3,9 +3,9 @@ title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: c238caa22fdd71ae6aefd098331b626b9b951a0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '891'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Os pipelines somente de preparo e somente de produção oferecem soluções para
 * Os **Pipelines de implantação somente de produção** implantam somente em um ambiente de produção com a opção de selecionar uma execução concluída e validada com sucesso no preparo e implantar seus artefatos na produção.
    * Os pipelines somente de produção reutilizarão os artefatos das implantações de preparo, ignorando a fase de compilação.
 
-Os pipelines somente de preparo e somente de produção não serão executados enquanto um pipeline de produção de pilha completa estiver em execução e vice-versa. Se tanto o pipeline de produção de apenas preparo quanto o de pilha completa tiverem o **Sobre alterações do Git** acionador configurado e apontando para a mesma ramificação e repositório, somente o pipeline somente de preparo é iniciado automaticamente. Os pipelines somente de produção não foram iniciados **Sobre alterações do Git** já que não estão diretamente vinculados a um repositório.
+Os pipelines somente de preparo e somente de produção não serão executados enquanto um pipeline de produção de pilha completa estiver em execução e vice-versa. Se o pipeline de produção somente de preparo e o pipeline de pilha completa tiverem o acionador **Em alterações do Git** configurado e estiverem apontando para a mesma ramificação e repositório, apenas o pipeline somente de preparo será iniciado automaticamente. Os pipelines somente de produção não são iniciados **Em alterações do Git** já que não estão diretamente vinculados a um repositório.
 
 Esses pipelines dedicados oferecem mais flexibilidade, mas observe os seguintes detalhes de operação e recomendações.
 
