@@ -3,10 +3,10 @@ title: Adição de repositórios privados no Cloud Manager
 description: Saiba como configurar o Cloud Manager para trabalhar com os seus repositórios do GitHub.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
-workflow-type: ht
-source-wordcount: '868'
-ht-degree: 100%
+source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+workflow-type: tm+mt
+source-wordcount: '855'
+ht-degree: 98%
 
 ---
 
@@ -114,11 +114,7 @@ Quando a solicitação de “pull” é fechada ou mesclada, o pipeline de quali
 
 ## Associação de repositórios privados a pipelines {#pipelines}
 
-Repositórios privados validados podem ser associados a [pipelines de pilha completa e front-end.](/help/overview/ci-cd-pipelines.md)
-
->[!NOTE]
->
->Os pipelines de nível da Web e de configuração não são compatíveis com repositórios privados.
+Repositórios privados validados podem ser associados a [pipelines de pilha completa.](/help/overview/ci-cd-pipelines.md)
 
 ## Limitações {#limitations}
 

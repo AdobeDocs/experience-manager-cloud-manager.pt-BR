@@ -2,9 +2,9 @@
 title: Gerenciar pipelines
 description: Saiba como gerenciar os pipelines existentes, incluindo edição, execução e exclusão.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
-workflow-type: ht
-source-wordcount: '901'
+source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+workflow-type: tm+mt
+source-wordcount: '872'
 ht-degree: 100%
 
 ---
@@ -95,10 +95,6 @@ Dependendo do tipo de pipeline, talvez seja possível cancelar a execução clic
 >[!NOTE]
 >
 >Não é possível editar um pipeline em execução.
-
->[!NOTE]
->
->Os pipelines de nível da Web e de configuração não são compatíveis com repositórios privados. Consulte o documento [Adição de repositórios privados no Cloud Manager](/help/managing-code/private-repositories.md) para obter detalhes e a lista completa de limitações.
 
 ## Exclusão de pipelines {#deleting-pipelines}
 
