@@ -4,9 +4,9 @@ description: Saiba como configurar o Cloud Manager para trabalhar com os seus re
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '855'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
