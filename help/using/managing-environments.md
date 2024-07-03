@@ -2,10 +2,10 @@
 title: Gerenciamento de ambientes
 description: Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: ht
-source-wordcount: '264'
-ht-degree: 100%
+source-git-commit: 116a930eea08b2bb9d288ec153519699754e0374
+workflow-type: tm+mt
+source-wordcount: '277'
+ht-degree: 95%
 
 ---
 
@@ -51,6 +51,10 @@ A tela **Ambientes** exibe cada ambiente de produção e preparo do seu progra
 * Amarelo - Indisponível
 
 ![Guia Ambientes](/help/assets/Environments-tab.png)
+
+>[!NOTE]
+>
+>Detalhes do ambiente, como nome, não podem ser alterados depois de provisionados.
 
 >[!NOTE]
 >
