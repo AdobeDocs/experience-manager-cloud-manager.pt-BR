@@ -3,7 +3,7 @@ title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: c238caa22fdd71ae6aefd098331b626b9b951a0f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 100%
 

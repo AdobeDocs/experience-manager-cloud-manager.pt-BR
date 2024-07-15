@@ -4,7 +4,7 @@ description: Saiba como funciona o teste de qualidade do código dos pipelines e
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 38cf86a5effa201afdc8e00d8f33582fc06214d7
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2848'
 ht-degree: 100%
 
 ---
@@ -296,4 +296,3 @@ Um caso especial pode ocorrer quando o pacote de conteúdo “all” contiver um
 >
 >* Essa otimização não afeta os pacotes implantados no AEM.
 >* Como a correspondência entre os pacotes de conteúdo incorporados e os pacotes de conteúdo ignorados se baseia em nomes de arquivo, essa otimização não pode ser executada se vários pacotes de conteúdo ignorados tiverem exatamente o mesmo nome de arquivo ou se o nome de arquivo for alterado durante a incorporação.
-

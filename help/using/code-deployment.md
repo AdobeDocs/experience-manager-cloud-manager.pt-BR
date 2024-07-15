@@ -3,7 +3,7 @@ title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 100%
 

@@ -1,13 +1,13 @@
 ---
 title: Suporte ao submódulo Git
 description: Aprenda como você pode usar submódulos Git para mesclar o conteúdo de várias ramificações em repositórios Git no momento da criação.
-source-git-commit: aa30c0024e422c96f0dfbaa2804e75143faf14dc
-workflow-type: ht
+exl-id: f946d7e7-114a-4e33-bb82-2625d37bba2f
+source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 100%
 
 ---
-
 
 # Suporte ao submódulo Git para repositórios da Adobe {#git-submodule-support}
 

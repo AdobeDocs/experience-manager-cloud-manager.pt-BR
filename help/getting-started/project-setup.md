@@ -4,7 +4,7 @@ description: Saiba como configurar seu projeto para gerenciá-lo e implantá-lo 
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1428'
 ht-degree: 100%
 
 ---

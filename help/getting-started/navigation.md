@@ -3,7 +3,7 @@ title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 100%
 

@@ -3,7 +3,7 @@ title: Configuração de pipelines de produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1302'
 ht-degree: 100%
 

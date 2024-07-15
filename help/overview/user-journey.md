@@ -4,8 +4,8 @@ description: Este documento descreve os diferentes cenários de integração e e
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 100%
+source-wordcount: '539'
+ht-degree: 97%
 
 ---
 
@@ -34,7 +34,7 @@ Como novo cliente, você será integrado ao [!UICONTROL Cloud Manager] como part
 
 Como parte do processo de integração, você receberá um email de boas-vindas que inclui:
 
-* O URL para acessar o [!UICONTROL Cloud Manager]
+* A URL para acessar o [!UICONTROL Cloud Manager]
 * Instruções para fazer logon na [!UICONTROL Experience Cloud]
 * Instruções de uso do Admin Console para gerenciar usuários e suas respectivas permissões para que eles possam acessar o [!UICONTROL Cloud Manager] se necessário.
 
@@ -48,7 +48,7 @@ Seu projeto do AEM existente também precisará estar em conformidade com as mel
 
 Para obter informações adicionais sobre os benefícios de atualizar para o AEM 6.5, consulte o documento [Atualização para o AEM 6.5.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=pt-BR)
 
-## Acessar o [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
+## Acessando o [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
 Você terá acesso ao [!UICONTROL Cloud Manager] e seus ambientes do AEM simplesmente fazendo logon na página de destino da [!UICONTROL Experience Cloud] usando suas credenciais do Adobe Identity Management e selecionando o AEM na interface do alternador de soluções.
 

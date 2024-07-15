@@ -4,8 +4,8 @@ description: Após a integração, o proprietário da empresa precisará fazer u
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 100%
+source-wordcount: '586'
+ht-degree: 99%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 Após a integração, o proprietário da empresa conclui a configuração inicial do programa, incluindo a definição da descrição do programa e a definição dos indicadores-chave de desempenho (KPIs), que são usados para testes de desempenho.
 
-## Configuração do programa com [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
+## Instalação do Programa com [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
 Siga estas etapas para configurar o programa e definir KPIs.
 
