@@ -3,10 +3,10 @@ title: Notas da versão 2024.7.0
 description: Estas são as notas de versão do Cloud Manager 2024.7.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: d536cd96d135e48039f94fd01142a63305b6eeae
+source-git-commit: 87c603a89b99f6984828280cba2041da8c72e839
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 61%
+source-wordcount: '238'
+ht-degree: 59%
 
 ---
 
@@ -28,6 +28,8 @@ A data de lançamento da versão 2024.7.0 do [!UICONTROL Cloud Manager] é 18 de
 * O [pipeline de produção](/help/using/production-pipelines.md#adding-production-pipeline) e o [pipeline de não produção](/help/using/non-production-pipelines.md#adding-non-production-pipeline) acionam **Sobre Alterações do Git** para iniciar o pipeline em uma confirmação agora estão disponíveis para [repositórios privados.](/help/managing-code/private-repositories.md)
 * Um pipeline de pré-produção só pode ser acionado manualmente e não pode ser configurado como **Em Alterações do Git**.
 * Para pipelines somente de produção, a lista de execuções promovíveis inclui aquelas que têm a versão do artefato maior que a versão do artefato implantada no ambiente de produção.
+* [O Arquétipo de Projeto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=pt-BR) foi atualizado para a [versão 49.](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49)
+
 
 ## Programa de adoção antecipada {#early-adoption}
 
