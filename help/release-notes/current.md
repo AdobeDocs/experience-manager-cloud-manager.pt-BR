@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 87c603a89b99f6984828280cba2041da8c72e839
 workflow-type: tm+mt
 source-wordcount: '238'
-ht-degree: 59%
+ht-degree: 95%
 
 ---
 
@@ -21,12 +21,12 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.7.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento da versão 2024.7.0 do [!UICONTROL Cloud Manager] é 18 de julho de 2024. A próxima versão está planejada para 8 de agosto de 2024.
+A data de lançamento da versão 2024.7.0 do [!UICONTROL Cloud Manager] é 18 de julho de 2024. A próxima versão está planejada para 8 de agosto de 2024.
 
 ## Novidades {#what-is-new}
 
-* O [pipeline de produção](/help/using/production-pipelines.md#adding-production-pipeline) e o [pipeline de não produção](/help/using/non-production-pipelines.md#adding-non-production-pipeline) acionam **Sobre Alterações do Git** para iniciar o pipeline em uma confirmação agora estão disponíveis para [repositórios privados.](/help/managing-code/private-repositories.md)
-* Um pipeline de pré-produção só pode ser acionado manualmente e não pode ser configurado como **Em Alterações do Git**.
+* O acionador **Sobre alterações do Git** do [pipeline de produção](/help/using/production-pipelines.md#adding-production-pipeline) e do [pipeline de não produção](/help/using/non-production-pipelines.md#adding-non-production-pipeline) para iniciar o pipeline em uma confirmação agora estão disponíveis para [repositórios privados.](/help/managing-code/private-repositories.md)
+* Um pipeline de pré-produção só pode ser acionado manualmente e não pode ser configurado como **Sobre alterações do Git**.
 * Para pipelines somente de produção, a lista de execuções promovíveis inclui aquelas que têm a versão do artefato maior que a versão do artefato implantada no ambiente de produção.
 * [O Arquétipo de Projeto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=pt-BR) foi atualizado para a [versão 49.](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49)
 
