@@ -3,9 +3,9 @@ title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 source-git-commit: d4d9a9f38c5a969f276140dca98731c670547a3d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1439'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -28,13 +28,13 @@ Ao fazer logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudm
 O console Meus programas fornece uma visão geral de todos os programas aos quais você tem acesso na organização selecionada. Ele é composto por várias partes.
 
 1. [Barras de ferramentas](#toolbars-my-programs-toolbars) para seleção de organização, alertas e configurações da conta
-1. Guias que permitem alternar a exibição atual dos programas.
-   * Modo de exibição **Página Inicial** (padrão) que seleciona o modo de exibição **Meus Programas** com uma visão geral de todos os programas
-   * **Licença** que acessa o Painel de Licenças. O painel de licenças se aplica somente aos programas do AEM as a Cloud Service, não aos programas do AMS.
-      * Para determinar o tipo de serviço que seu programa tem (AMS ou AEMaaCS), consulte a [seção Cartões de programa](#program-cards) deste documento.
-   * Observe que o padrão das guias é fechado e pode ser revelado usando o menu de hambúrguer no [cabeçalho do Cloud Manager.](#cloud-manager-header)
-1. [Frases de chamariz e Estatísticas](#cta-statistics) para obter uma visão geral de sua atividade recente
-1. [**Meus Programas** seção](#my-programs-section) com uma visão geral de todos os seus programas
+1. Guias que permitem alternar a exibição atual dos seus programas.
+   * Exibição da **Página Inicial** (padrão) que seleciona a exibição de **Meus programas** com uma visão geral de todos os programas
+   * **Licença** que acessa o painel de licenças. O painel de licenças aplica-se somente aos programas do AEM as a Cloud Service, não aos programas do AMS.
+      * Para determinar o tipo de serviço do seu programa (AMS ou AEMaaCS), consulte a [seção de cartões de programa](#program-cards) deste documento.
+   * Observe que as guias ficam fechadas por padrão e podem ser reveladas por meio do menu de opções no [cabeçalho do Cloud Manager.](#cloud-manager-header)
+1. [Chamadas para ação e estatísticas](#cta-statistics) que fornecem uma visão geral das atividades recentes
+1. Seção [**Meus programas**](#my-programs-section) que fornece uma visão geral de todos os seus programas
 1. [Links rápidos](#quick-links) para acessar facilmente os recursos relacionados
 
 >[!TIP]
@@ -51,9 +51,9 @@ A primeira é o cabeçalho do Cloud Manager, que permanece fixo ao navegar pelo 
 
 ![O cabeçalho da Experience Cloud](assets/experience-cloud-header.png)
 
-1. O menu de hambúrguer que dá acesso a guias que podem levá-lo a partes específicas de um programa individual ou alternar entre o Painel de Licenças e o console **[Meus Programas](#my-programs-console)**, dependendo do contexto.
-   * O painel de licenças se aplica somente aos programas do AEM as a Cloud Service, não aos programas do AMS.
-   * Para determinar o tipo de serviço que seu programa tem (AMS ou AEMaaCS), consulte a [seção Cartões de programa](#program-cards) deste documento.
+1. O menu de opções que dá acesso às guias que podem levar a partes específicas de um programa individual ou alternar entre o painel de licenças e o console **[Meus programas](#my-programs-console)**, dependendo do contexto.
+   * O painel de licenças aplica-se somente aos programas do AEM as a Cloud Service, não aos programas do AMS.
+   * Para determinar o tipo de serviço do seu programa (AMS ou AEMaaCS), consulte a [seção de cartões de programa](#program-cards) deste documento.
 1. O botão Cloud Manager leva de volta ao console Meus programas, independentemente de onde você estiver no Cloud Manager.
 1. Toque ou clique no botão Feedback para enviar feedback à Adobe sobre o Cloud Manager.
 1. O seletor de organização exibe a organização que você está utilizando no momento (neste exemplo, Foundation Internal). Toque ou clique para alternar para outra organização se a Adobe ID estiver associada a mais do que uma.
@@ -73,9 +73,9 @@ A barra de ferramentas do programa fornece links para alternar entre programas e
    * Observe que a jornada de integração foi projetada para o AEM as a Cloud Service e não para o Cloud Service para AMS, apesar de muitos conceitos serem os mesmos.
 1. O botão de ação oferece ações adequadas ao contexto, como a criação de um novo programa.
 
-### Frases de chamariz e estatísticas {#cta-statistics}
+### Chamadas para ação e estatísticas {#cta-statistics}
 
-A seção de frase de chamariz e estatísticas fornece dados agregados para sua organização, por exemplo, se você tiver configurado seus programas com êxito, as estatísticas de suas atividades nos últimos 90 dias poderão ser exibidas, incluindo:
+A seção de chamadas para ação e estatísticas fornece dados agregados para a sua organização. Por exemplo, se você tiver configurado os seus programas com êxito, será possível ver as estatísticas das suas atividades nos últimos 90 dias, incluindo:
 
 * Número de [implantações](/help/using/code-deployment.md)
 * Número de [problemas de qualidade de código](/help/using/code-quality-testing.md) identificados
@@ -83,9 +83,9 @@ A seção de frase de chamariz e estatísticas fornece dados agregados para sua 
 
 Ou se você estiver apenas começando a configurar a organização, encontrará dicas sobre as próximas etapas ou recursos de documentação.
 
-### Seção Meus Programas {#my-programs-section}
+### Seção “Meus programas” {#my-programs-section}
 
-O conteúdo principal do console Meus Programas é a seção **Meus Programas**, que lista seus programas como cartões individuais. Toque ou clique em um cartão para acessar a página **Visão geral do programa** e obter detalhes sobre ele.
+O conteúdo principal do console “Meus programas” é a seção **Meus programas**, que lista os seus programas como cartões individuais. Toque ou clique em um cartão para acessar a página **Visão geral do programa** e obter detalhes sobre ele.
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ Cada programa é representado por um cartão (ou linha em uma tabela), o qual fo
 * Nome do programa
 * Tipo de serviço:
    * **Experience Manager** para programas do AMS
-   * **Experience Manager Cloud** para [programas AEM as a Cloud Service](https://experienceleague.adobe.com/br/docs/experience-manager-cloud-service/content/implementing/home)
+   * **Experience Manager Cloud** para [programas do AEM as a Cloud Service](https://experienceleague.adobe.com/br/docs/experience-manager-cloud-service/content/implementing/home)
 * Status
 * Soluções configuradas
 * Data de criação
@@ -137,7 +137,7 @@ A seção de links rápidos fornece acesso aos recursos relacionados usados com 
 
 ## Janela Visão geral do programa {#program-overview}
 
-Após selecionar um programa no console [**Meus Programas**,](#my-programs-console) você será direcionado para a Visão Geral do Programa.
+Depois de selecionar um programa no console [**Meus programas**,](#my-programs-console) haverá um redirecionamento para a visão geral do programa.
 
 ![Visão geral do programa](assets/program-overview.png)
 
