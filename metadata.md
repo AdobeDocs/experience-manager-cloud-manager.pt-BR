@@ -4,9 +4,9 @@ type: Documentation
 cloud: Experience Cloud
 git-repo: https://github.com/AdobeDocs/experience-manager-cloud-manager.pt-BR
 recommendations: noDisplay
-source-git-commit: f35a777176522d412267f481622c8cd3d2592764
+source-git-commit: 2a25b0482800d4c5428a5595c9699dceed327043
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '112'
 ht-degree: 100%
 
 ---
@@ -23,5 +23,5 @@ O arquivo metadata.md inclui metadados de nível de repositório que passam para
 | solution-icon | Exibe o ícone da solução ao lado do título da solução. Ainda não implementado |
 | getting-started-url | Link para a página de introdução |
 | tutorials-url | Link para tutoriais em vídeo — tutoriais de ajuda ou tutoriais de KT |
-| mini-toc-levels | Calcula o número de níveis de cabeçalho exibidos no painel direito. O padrão é 2 |
+| mini-toc-levels | Determina o número de níveis de cabeçalho exibidos no painel direito. O padrão é 2 |
 | git-repo | Especifica o local do repositório principal para uso interno |
