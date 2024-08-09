@@ -2,10 +2,10 @@
 title: A ferramenta de cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite copiar conteúdo mutável sob demanda de seus ambientes de produção do AEM 6.x hospedado no AMS para os ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 655111cdf7327e92e03ac7eedd9eedd87cd4b2f1
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1120'
-ht-degree: 100%
+source-wordcount: '1096'
+ht-degree: 87%
 
 ---
 
@@ -47,39 +47,39 @@ Antes que qualquer conteúdo possa ser copiado, um conjunto de conteúdo deve se
 
 1. Acesse a página **Conjuntos de conteúdo** na tela **Ambientes**.
 
-1. Toque ou clique no botão **Adicionar conjunto de conteúdo** na parte superior direita da tela.
+1. Clique no botão **Adicionar conjunto de conteúdo** na parte superior direita da tela.
 
    ![Conjuntos de conteúdo](/help/assets/content-sets.png)
 
-1. Na guia **Detalhes** do assistente, forneça um nome e uma descrição para o conjunto de conteúdo e toque ou clique em **Continuar**.
+1. Na guia **Detalhes** do assistente, forneça um nome e uma descrição para o conjunto de conteúdo e clique em **Continuar**.
 
    ![Detalhes do conjunto de conteúdo](/help/assets/add-content-set-details.png)
 
 1. Na guia **Caminhos de conteúdo** do assistente, especifique os caminhos do conteúdo mutável a ser incluído no conjunto de conteúdo.
 
    1. Insira o caminho no campo **Adicionar caminho de inclusão**.
-   1. Toque ou clique no botão **Adicionar caminho** para adicionar o caminho ao conjunto de conteúdo.
-   1. Toque ou clique no botão **Adicionar caminho** novamente, se necessário.
+   1. Clique no botão **Adicionar caminho** para adicionar o caminho ao conjunto de conteúdo.
+   1. Clique no botão **Adicionar caminho** novamente, conforme necessário.
 
    ![Adicionar caminhos ao conjunto de conteúdo](/help/assets/add-content-set-paths.png)
 
 1. Se você precisar refinar ou restringir o conjunto de conteúdo, os subcaminhos poderão ser excluídos.
 
-   1. Na lista de caminhos incluídos, toque ou clique no ícone **Adicionar subcaminhos de exclusão** ao lado do caminho que deve ser restringido.
+   1. Na lista de caminhos incluídos, clique no ícone **Adicionar/excluir subcaminhos** ao lado do caminho que você precisa restringir.
    1. Insira o subcaminho a ser excluído abaixo do caminho selecionado.
-   1. Toque ou clique em **Excluir caminho**.
-   1. Toque ou clique em **Adicionar subcaminhos de exclusão** novamente para adicionar caminhos adicionais a serem excluídos, se necessário.
+   1. Clique em **Excluir Caminho**.
+   1. Clique em **Adicionar subcaminhos de exclusão** novamente para adicionar outros caminhos a serem excluídos conforme necessário.
 
    ![Excluir caminhos](/help/assets/add-content-set-paths-excluded.png)
 
 1. Você pode modificar os caminhos especificados, se necessário.
 
-   1. Toque ou clique no X ao lado dos subcaminhos excluídos para apagá-los.
-   1. Toque ou clique no botão de reticências ao lado dos caminhos para revelar as opções **Editar** e **Excluir**.
+   1. Clique no X ao lado dos subcaminhos excluídos para excluí-los.
+   1. Clique no botão de reticências ao lado dos caminhos para revelar as opções **Editar** e **Excluir**.
 
    ![Editar lista de caminhos](/help/assets/add-content-set-excluded-paths.png)
 
-1. Toque ou clique em **Criar** para criar o conjunto de conteúdo.
+1. Clique em **Criar** para criar o conjunto de conteúdo.
 
 O conjunto de conteúdo agora pode ser usado para copiar conteúdo entre ambientes.
 
@@ -90,7 +90,7 @@ O conjunto de conteúdo agora pode ser usado para copiar conteúdo entre ambient
 
 ## Editar um conjunto de conteúdo {#edit-content-set}
 
-Para esse processo, as etapas são semelhantes às da criação de conteúdo. Porém, em vez de tocar ou clicar em **Adicionar conjunto de conteúdo**, selecione um conjunto existente no console e clique em **Editar** no menu de reticências.
+Para esse processo, as etapas são semelhantes às da criação de conteúdo. Em vez de clicar em **Adicionar conjunto de conteúdo**, selecione um conjunto existente no console e selecione **Editar** no menu de reticências.
 
 ![Editar conjunto de conteúdo](/help/assets/edit-content-set.png)
 
@@ -125,7 +125,7 @@ Depois que um conjunto de conteúdo é criado, você pode usá-lo para copiar co
 
    ![Copiar conteúdo](/help/assets/copying-content.png)
 
-1. Toque ou clique em **Copiar**.
+1. Clique em **Copiar**.
 
 O processo de cópia será iniciado. O status do processo de cópia é exibido no console do conjunto de conteúdo selecionado.
 

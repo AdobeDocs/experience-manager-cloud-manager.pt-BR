@@ -2,10 +2,10 @@
 title: Configuração do programa
 description: Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 99%
+source-wordcount: '584'
+ht-degree: 91%
 
 ---
 
@@ -70,7 +70,7 @@ Seu programa será criado. Pode levar vários minutos para que os recursos sejam
 
 Observe que as alterações são salvas imediatamente no Cloud Manager, mas não serão refletidas em seus ambientes até a próxima execução do pipeline.
 
-Se você ainda não criou um pipeline, consulte os documentos [Configuração de pipelines de produção](/help/using/production-pipelines.md) e [Configuração de pipelines de não produção.](/help/using/non-production-pipelines.md)
+Se você ainda não criou um pipeline, consulte os documentos [Configurando pipelines de produção](/help/using/production-pipelines.md) e [Configurando pipelines de não produção](/help/using/non-production-pipelines.md).
 
 ## Alternância entre programas {#swithing-programs}
 
@@ -86,7 +86,7 @@ Os KPIs de sites são medidos em testes executados no ambiente de preparo. Norma
 
 Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em seu ambiente de produção e tem quatro servidores de Dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto. Isso pressupõe que o ambiente de preparo consiste em apenas um único par de servidores de Dispatcher/publicação.
 
-O teste de desempenho do ativo é feito fazendo o upload de ativos repetidamente durante um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo, bem como de várias métricas no nível do sistema.
+O teste de desempenho do Assets é feito fazendo o upload de ativos repetidamente durante um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo e de várias métricas no nível do sistema.
 
 Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Visto que o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN, ou seja, o cache não é utilizado. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
 

@@ -2,10 +2,10 @@
 title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: d4d9a9f38c5a969f276140dca98731c670547a3d
-workflow-type: ht
-source-wordcount: '1439'
-ht-degree: 100%
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+workflow-type: tm+mt
+source-wordcount: '1410'
+ht-degree: 80%
 
 ---
 
@@ -31,15 +31,15 @@ O console Meus programas fornece uma visão geral de todos os programas aos quai
 1. Guias que permitem alternar a exibição atual dos seus programas.
    * Exibição da **Página Inicial** (padrão) que seleciona a exibição de **Meus programas** com uma visão geral de todos os programas
    * **Licença** que acessa o painel de licenças. O painel de licenças aplica-se somente aos programas do AEM as a Cloud Service, não aos programas do AMS.
-      * Para determinar o tipo de serviço do seu programa (AMS ou AEMaaCS), consulte a [seção de cartões de programa](#program-cards) deste documento.
-   * Observe que as guias ficam fechadas por padrão e podem ser reveladas por meio do menu de opções no [cabeçalho do Cloud Manager.](#cloud-manager-header)
+      * Para determinar o tipo de serviço que seu programa tem (AMS ou AEMaaCS), consulte a [seção Cartões de programa](#program-cards) deste documento.
+   * Observe que o padrão das guias é fechado e pode ser revelado usando o menu de hambúrguer no [cabeçalho do Cloud Manager](#cloud-manager-header).
 1. [Chamadas para ação e estatísticas](#cta-statistics) que fornecem uma visão geral das atividades recentes
 1. Seção [**Meus programas**](#my-programs-section) que fornece uma visão geral de todos os seus programas
 1. [Links rápidos](#quick-links) para acessar facilmente os recursos relacionados
 
 >[!TIP]
 >
->Consulte o documento [Programas e tipos de programas](/help/getting-started/program-setup.md) para obter mais detalhes sobre esse assunto.
+>Consulte [Programas e Tipos de Programas](/help/getting-started/program-setup.md) para obter detalhes sobre programas.
 
 ### Barras de ferramentas {#my-programs-toolbars}
 
@@ -53,13 +53,13 @@ A primeira é o cabeçalho do Cloud Manager, que permanece fixo ao navegar pelo 
 
 1. O menu de opções que dá acesso às guias que podem levar a partes específicas de um programa individual ou alternar entre o painel de licenças e o console **[Meus programas](#my-programs-console)**, dependendo do contexto.
    * O painel de licenças aplica-se somente aos programas do AEM as a Cloud Service, não aos programas do AMS.
-   * Para determinar o tipo de serviço do seu programa (AMS ou AEMaaCS), consulte a [seção de cartões de programa](#program-cards) deste documento.
+   * Para determinar o tipo de serviço que seu programa tem (AMS ou AEMaaCS), consulte a [seção Cartões de programa](#program-cards) deste documento.
 1. O botão Cloud Manager leva de volta ao console Meus programas, independentemente de onde você estiver no Cloud Manager.
-1. Toque ou clique no botão Feedback para enviar feedback à Adobe sobre o Cloud Manager.
-1. O seletor de organização exibe a organização que você está utilizando no momento (neste exemplo, Foundation Internal). Toque ou clique para alternar para outra organização se a Adobe ID estiver associada a mais do que uma.
-1. Tocar ou clicar no alternador de soluções permite acessar rapidamente as outras soluções da Experience Cloud.
+1. Clique no botão Feedback para fornecer feedback ao Adobe sobre o Cloud Manager.
+1. O seletor de organização exibe a organização que você está utilizando no momento (neste exemplo, Foundation Internal). Clique em para alternar para outra organização se sua Adobe ID estiver associada a várias.
+1. Clicar no alternador de soluções permite que você vá rapidamente para outras soluções Experience Cloud.
 1. O ícone de ajuda fornece acesso rápido aos recursos de aprendizagem e suporte.
-1. O ícone de notificações exibe o número de [notificações incompletas atribuídas atualmente.](/help/using/notifications.md)
+1. O ícone de notificações está marcado com o número de [notificações](/help/using/notifications.md) incompletas atribuídas atualmente
 1. Clique no ícone que representa seu usuário para acessar as configurações de usuário. Se você não tiver uma imagem de usuário configurada, um ícone será atribuído aleatoriamente.
 
 #### Barra de ferramentas do programa {#program-toolbar}
@@ -85,7 +85,7 @@ Ou se você estiver apenas começando a configurar a organização, encontrará 
 
 ### Seção “Meus programas” {#my-programs-section}
 
-O conteúdo principal do console “Meus programas” é a seção **Meus programas**, que lista os seus programas como cartões individuais. Toque ou clique em um cartão para acessar a página **Visão geral do programa** e obter detalhes sobre ele.
+O conteúdo principal do console “Meus programas” é a seção **Meus programas**, que lista os seus programas como cartões individuais. Clique em um cartão para acessar a página **Visão geral do programa** do programa para obter detalhes sobre o programa.
 
 >[!NOTE]
 >
@@ -137,13 +137,13 @@ A seção de links rápidos fornece acesso aos recursos relacionados usados com 
 
 ## Janela Visão geral do programa {#program-overview}
 
-Depois de selecionar um programa no console [**Meus programas**,](#my-programs-console) haverá um redirecionamento para a visão geral do programa.
+Depois de selecionar um programa no console [**Meus Programas**](#my-programs-console), você será direcionado para a Visão Geral do Programa.
 
 ![Visão geral do programa](assets/program-overview.png)
 
 A visão geral do programa fornece acesso a todos os detalhes de um programa do Cloud Manager. Assim como o console Meus programas, essa seção é composta de várias partes.
 
-1. [Barras de ferramentas](#program-overview-toolbar) que permitem voltar rapidamente ao console Meus programas e navegar pelo programa
+1. [Barras de ferramentas](#program-overview-toolbar) para voltar rapidamente ao console Meus Programas e navegar pelo programa
 1. [Guias](#program-tabs) para alternar entre diferentes aspectos do programa
 1. Uma [frase de chamariz](#cta) baseada nas últimas ações do programa
 1. Uma [visão geral dos ambientes](#environments) do programa
@@ -152,7 +152,7 @@ A visão geral do programa fornece acesso a todos os detalhes de um programa do 
 
 ### Barras de ferramentas {#program-overview-toolbar}
 
-As barras de ferramentas da visão geral do programa são muito semelhantes às do [console Meus programas.](#my-programs-toolbars) Somente as diferenças são ilustradas aqui.
+As barras de ferramentas para a visão geral do programa são muito semelhantes às do [console Meus Programas](#my-programs-toolbars). Somente as diferenças são ilustradas aqui.
 
 #### Cabeçalho do Cloud Manager {#cloud-manager-header-2}
 
@@ -160,7 +160,7 @@ O cabeçalho do Cloud Manager tem um menu de opções que abre automaticamente p
 
 ![Menu de opções do Cloud Manager](assets/cloud-manager-hamburger.png)
 
-Toque ou clique no ícone do menu de opções para ocultar as guias.
+Clique no ícone de menu de hambúrguer para ocultar as guias.
 
 #### Barra de ferramentas do programa {#program-toolbar-2}
 
@@ -190,7 +190,7 @@ Use o menu de opções no [cabeçalho do Cloud Manager](#cloud-manager-header-2)
 
 ### Frase de chamariz {#cta}
 
-A seção da frase de chamariz fornece informações úteis de acordo com o status do programa. No caso de um novo programa, é possível ver as próximas etapas, bem como um lembrete de uma data de ativação, [definida durante a criação do programa.](/help/getting-started/program-setup.md)
+A seção da frase de chamariz fornece informações úteis de acordo com o status do programa. Para um novo programa, você pode ver as próximas etapas oferecidas e um lembrete de uma data de ativação, [definida durante a criação do programa](/help/getting-started/program-setup.md).
 
 No caso de um programa em tempo real, é possível ver o status da última implantação e links para obter detalhes e iniciar uma nova implantação.
 
@@ -198,19 +198,19 @@ No caso de um programa em tempo real, é possível ver o status da última impla
 
 ### Cartão Ambientes {#environments}
 
-O cartão **Ambientes** fornece uma visão geral de seus ambientes, bem como links para ações rápidas.
+O cartão **Ambientes** fornece uma visão geral de seus ambientes e links para ações rápidas.
 
 O cartão **Ambientes** lista apenas três ambientes. Clique em **Mostrar tudo** para ver todos os ambientes do programa.
 
-Consulte o documento [Gerenciamento de ambientes](/help/using/managing-environments.md) para obter detalhes sobre como gerenciar os ambientes.
+Consulte [Gerenciamento de ambientes](/help/using/managing-environments.md) para obter detalhes sobre como gerenciar os ambientes.
 
 ### Cartão Pipelines {#pipelines}
 
-O cartão **Pipelines** fornece uma visão geral dos pipelines, bem como links para ações rápidas.
+O cartão **Pipelines** fornece uma visão geral dos seus pipelines e links para ações rápidas.
 
 O cartão **Pipelines** lista apenas três pipelines. Clique em **Mostrar tudo** para ver todos os pipelines do programa.
 
-Consulte o documento [Gerenciamento de pipelines](/help/using/managing-pipelines.md) para obter detalhes sobre como gerenciar seus pipelines.
+Consulte [Gerenciamento de pipelines](/help/using/managing-pipelines.md) para obter detalhes sobre como gerenciar seus pipelines.
 
 ### Recursos úteis {#useful-resources}
 

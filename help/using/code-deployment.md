@@ -2,10 +2,10 @@
 title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 100%
+source-wordcount: '1637'
+ht-degree: 94%
 
 ---
 
@@ -109,16 +109,16 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
 
 1. Cada artefato do AEM é implantado em toda instância do AEM por meio de APIs de gerenciamento de pacotes, com as dependências de pacote determinando a ordem da implantação.
 
-   * Para saber mais sobre como você pode usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório, consulte o documento [Gerenciador de pacotes.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=pt-BR)
+   * Para saber mais sobre como você pode usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório, consulte [Gerenciador de Pacotes](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=pt-BR).
 
    >[!NOTE]
    >
-   >Todos os artefatos do AEM são implantados tanto para o autor quanto para os editores. Os modos de execução devem ser usados quando configurações específicas de nó são necessárias. Para saber mais sobre como os modos de execução permitem ajustar a instância do AEM para uma finalidade específica, consulte a [seção Modos de execução do documento Implantação no AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=pt-BR#runmodes)
+   >Todos os artefatos do AEM são implantados tanto para o autor quanto para os editores. Os modos de execução devem ser usados quando configurações específicas de nó são necessárias. Para saber mais sobre como os modos de execução permitem ajustar a instância do AEM para uma finalidade específica, consulte a seção [Modos de Execução do documento Implantação no AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=pt-BR#runmodes).
 
 1. O artefato do Dispatcher é implantado em cada Dispatcher da seguinte maneira:
 
    1. O backup das configurações atuais é feito e copiado para um local temporário.
-   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte o documento [Configurações do Dispatcher](/help/getting-started/dispatcher-configurations.md) para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
+   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte [Configurações do Dispatcher](/help/getting-started/dispatcher-configurations.md) para obter mais detalhes. Isso limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
    1. O artefato é extraído para o diretório `httpd`. Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório Git serão ignoradas no momento da implantação. Esses arquivos são fundamentais para a estrutura do Dispatcher do AMS e não podem ser alterados.
    1. O Apache executa um teste de configuração. Se nenhum erro for encontrado, o serviço é reiniciado. Se ocorrer um erro, as configurações são restauradas a partir do backup, o serviço é reiniciado e o erro é relatado ao Cloud Manager.
    1. Cada caminho especificado na configuração do pipeline é invalidado ou removido do cache do Dispatcher.
@@ -200,7 +200,7 @@ Nessas circunstâncias, quando uma reexecução for possível, a página de stat
 
 ### API de reexecução {#reexecute-api}
 
-Além de estar disponível na interface, você pode usar [a API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) para acionar reexecuções, bem como identificar execuções que foram acionadas como reexecuções.
+Além de estar disponível na interface do usuário, você pode usar a [API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) para acionar reexecuções e identificar as execuções que foram acionadas como reexecuções.
 
 #### Acionar uma reexecução {#triggering}
 

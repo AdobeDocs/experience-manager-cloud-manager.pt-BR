@@ -2,10 +2,10 @@
 title: Provisionamento de ambiente
 description: Saiba como os seus ambientes são provisionados como parte do processo de integração do Cloud Manager.
 exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
-source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 100%
+source-wordcount: '312'
+ht-degree: 91%
 
 ---
 
@@ -20,7 +20,7 @@ Durante o processo de integração, todos os ambientes de nuvem do AEM que você
 
 ## Email de boas-vindas {#welcome-email}
 
-Após a conclusão do processo de provisionamento do ambiente, o administrador do cliente designado recebe um email de boas-vindas com a confirmação de que recebeu acesso à Adobe [!UICONTROL Experience Cloud]. O email de boas-vindas contém informações detalhadas sobre como começar a usar os serviços da [!UICONTROL Experience Cloud], ambientes da nuvem do [!UICONTROL AEM Managed Services], bem como o portal de autoatendimento do [!UICONTROL Cloud Manager]. Além disso, o email contém informações importantes, como as informações de contato do engenheiro de sucesso do cliente (CSE), onde buscar recursos de suporte, fóruns, perguntas frequentes e muito mais. Na lista de recursos fornecida no email, você também receberá detalhes sobre como acessar o [!UICONTROL Cloud Manager] nos seus ambientes da nuvem do AEM.
+Após a conclusão do processo de provisionamento do ambiente, o administrador do cliente designado recebe um email de boas-vindas com a confirmação de que recebeu acesso à Adobe [!UICONTROL Experience Cloud]. O email de boas-vindas contém informações detalhadas sobre como começar a usar os serviços do [!UICONTROL Experience Cloud], ambientes de nuvem do [!UICONTROL AEM Managed Services] e o portal de autoatendimento do [!UICONTROL Cloud Manager]. Além disso, o email contém informações importantes, como as informações de contato do engenheiro de sucesso do cliente (CSE), onde buscar recursos de suporte, fóruns, perguntas frequentes e muito mais. Na lista de recursos fornecida no email, você também receberá detalhes sobre como acessar o [!UICONTROL Cloud Manager] nos seus ambientes da nuvem do AEM.
 
 ## Próximas etapas {#next-steps}
 

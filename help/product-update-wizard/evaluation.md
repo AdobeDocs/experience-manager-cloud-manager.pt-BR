@@ -3,10 +3,10 @@ title: Fase de avaliação
 seo-title: Evaluation Phase
 description: Saiba como a fase de avaliação do Assistente de atualização de produto avalia a complexidade da atualização com o detector de padrão.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: ce2145da3b9e605e8a41bac28df520f14e255557
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 100%
+source-wordcount: '285'
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ O relatório atua como uma avaliação do esforço de desenvolvimento que está 
 
 >[!NOTE]
 >
->Para saber mais sobre o detector de padrões, consulte o documento [Avaliação da complexidade da atualização com o Detector de padrões.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=pt-BR)
+>Para saber mais sobre o detector de padrões, consulte [Avaliação da Complexidade da Atualização com o Detector de Padrões](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=pt-BR).
 
 ## Execução da avaliação {#running}
 
@@ -33,7 +33,7 @@ O detector de padrões pode ser executado em qualquer ambiente. No entanto, para
 
 Siga estas etapas para gerar o relatório de avaliação.
 
-1. Inicie o assistente conforme descrito no documento [Assistente de atualização do produto.](/help/product-update-wizard/overview.md)
+1. Inicie o assistente conforme descrito no documento [Assistente de Atualização de Produto](/help/product-update-wizard/overview.md).
 
 1. Clique em **[!UICONTROL Executar avaliação]**.
 

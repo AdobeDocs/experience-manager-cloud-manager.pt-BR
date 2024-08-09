@@ -2,10 +2,10 @@
 title: Perguntas frequentes sobre o Cloud Manager
 description: Este documento fornece respostas às perguntas mais frequentes sobre o Cloud Manager para clientes do AMS.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 6be659e02df0657ec7d3dbce8c18c44a327a36f4
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 100%
+source-wordcount: '746'
+ht-degree: 93%
 
 ---
 
@@ -18,20 +18,20 @@ Este documento fornece respostas às perguntas mais frequentes sobre o Cloud Man
 
 Sim. Será necessário adicionar o `maven-toolchains-plugin` com as configurações corretas para o Java 11.
 
-* Esse processo está documentado [aqui.](/help/getting-started/using-the-wizard.md)
-* Para ver um exemplo, consulte o [código do projeto de exemplo WKND.](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)
+* Este processo está documentado [aqui](/help/getting-started/using-the-wizard.md).
+* Para ver um exemplo, consulte o [código do projeto de amostra wknd](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
-## Minha build falha com um erro sobre o maven-scr-plugin após mudar do Java 8 para o Java 11. O que posso fazer? {#maven-src-plugin}
+## Minha compilação falha com um erro sobre maven-scr-plugin após alternar do Java 8 para o Java 11. O que posso fazer? {#maven-src-plugin}
 
-A compilação do AEM Cloud Manager pode falhar ao tentar alternar a compilação do Java 8 para o 11. Se você encontrar o seguinte erro, será necessário remover o `maven-scr-plugin` e converter todas as anotações OSGi em anotações OSGi R6.
+A compilação do AEM Cloud Manager pode falhar ao tentar alternar a compilação do Java 8 para o 11. Se você encontrar o erro a seguir, será necessário remover `maven-scr-plugin` e converter todas as anotações OSGi para anotações OSGi R6.
 
 ```text
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
 ```
 
-Para obter instruções sobre como remover este plug-in, [clique aqui.](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/)
+Para obter instruções sobre como remover este plug-in, [veja aqui](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
-## Minha build falha com um erro sobre RequireJavaVersion após mudar do Java 8 para o Java 11. O que posso fazer? {#requirejavaversion}
+## Minha compilação falha com um erro sobre RequireJavaVersion após alternar do Java 8 para o Java 11. O que posso fazer? {#requirejavaversion}
 
 Para builds do Cloud Manager, o `maven-enforcer-plugin` pode falhar com esse erro
 
@@ -60,9 +60,9 @@ Não há resposta única para esta questão. Mas estes são alguns pontos import
    * Carregamentos de página que excedem `20` segundos são marcados como erros `504`.
 * Se o site exigir autenticação do usuário, consulte o documento [Entender os resultados de teste](/help/using/code-quality-testing.md#authenticated-performance-testing) para configurar o teste para autenticar em seu site.
 
-Consulte o documento [Entender os resultados de teste](/help/using/code-quality-testing.md) para obter mais informações sobre as verificações de qualidade.
+Consulte [Entendendo os resultados de teste](/help/using/code-quality-testing.md) para obter mais informações sobre verificações de qualidade.
 
-## Posso usar o instantâneo para a versão do projeto Maven? {#snapshot}
+## Posso usar o SNAPSHOT para a versão do projeto Maven? {#snapshot}
 
 Sim. Para implantações de desenvolvedores, os arquivos `pom.xml` da ramificação Git devem conter `-SNAPSHOT` no final do valor `<version>`.
 
@@ -70,13 +70,13 @@ Isso permite que a implantação subsequente ainda seja instalada, mesmo que a v
 
 Você também pode definir a versão como `-SNAPSHOT` para compilações ou implantações de preparo ou de produção. O Cloud Manager define automaticamente um número de versão adequado e cria uma tag para você no Git. Essa tag pode ser consultada posteriormente, se necessário.
 
-Mais detalhes sobre o manuseio de versão estão [documentados aqui.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling.html?lang=pt-BR)
+Mais detalhes sobre o manuseio de versão estão [documentados aqui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling.html?lang=pt-BR).
 
 ## Como funciona o controle de versão de pacotes para implantações de preparo e produção? {#staging-production}
 
-Em implantações de preparo e produção, uma versão automática é gerada, [conforme documentado aqui.](/help/managing-code/maven-project-version.md)
+Em implantações de preparo e produção, uma versão automática é gerada [conforme documentado aqui](/help/managing-code/maven-project-version.md).
 
-Para um controle de versão personalizado em implantações de preparo e produção, defina uma versão maven adequada em três partes, como `1.0.0`. Aumente a versão sempre que implantar na produção.
+Para o controle de versão personalizado em implantações de preparo e produção, defina uma versão maven adequada com três partes como `1.0.0`. Aumente a versão sempre que implantar na produção.
 
 O Cloud Manager adicionará automaticamente a versão às compilações de preparo e produção e criará uma ramificação Git. Nenhuma configuração adicional é necessária. Se você não definir uma versão maven conforme descrito anteriormente, a implantação ainda terá sucesso e uma versão será definida automaticamente.
 

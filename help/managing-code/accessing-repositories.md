@@ -2,10 +2,10 @@
 title: Informações de acesso do repositório
 description: Saiba como acessar e gerenciar o repositório Git gerenciado pela Adobe usando o gerenciamento de conta Git por autoatendimento do Cloud Manager.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
-source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 100%
+source-wordcount: '394'
+ht-degree: 82%
 
 ---
 
@@ -23,7 +23,7 @@ O Cloud Manager facilita a recuperação de informações de acesso ao repositó
 
    ![Botão Acessar informações do repositório no cartão Ambientes](assets/pipelines-card.png)
 
-1. Toque ou clique no botão **Acessar informações do repositório** para abrir a caixa de diálogo **Informações do repositório** e visualizar:
+1. Clique no botão **Acessar Informações do Repositório** para abrir a caixa de diálogo e a exibição **Informações do Repositório**:
 
    * O nome de usuário do Git.
    * A senha do git.
@@ -32,9 +32,9 @@ O Cloud Manager facilita a recuperação de informações de acesso ao repositó
 
    ![Janela de informações do repositório](assets/access-repo-info.png)
 
-1. Para acessar a senha, uma nova senha deve ser gerada. Para fazer isso, toque ou clique no botão **Gerar senha**.
+1. Para acessar a senha, uma nova senha deve ser gerada. Para fazer isso, clique no botão **Gerar senha**.
 
-1. Confirme a geração da senha na caixa de diálogo **Tem certeza...** tocando ou clicando em **Gerar senha**.
+1. Confirme a geração de senha na caixa de diálogo **Tem certeza...** clicando em **Gerar senha**.
 
    ![Confirmar geração de senha](assets/confirm-password-generation.png)
 
@@ -55,10 +55,10 @@ Usando essas credenciais, o usuário pode clonar uma cópia local do repositóri
 
 ## Acesso a informações do repositório na janela Repositórios {#repositories-window}
 
-Um botão **Acessar informações do repositório** também está disponível na barra de ferramentas da janela [**Repositórios**.O ](managing-repositories.md) exibe as mesmas informações sobre o acesso a repositórios gerenciados pela Adobe.
+Um botão **Acessar informações do repositório** também está disponível na barra de ferramentas da janela [**Repositórios**](managing-repositories.md). Ele exibe as mesmas informações sobre o acesso a repositórios gerenciados por Adobe.
 
 ## Revogação de uma senha de acesso {#revoke-password}
 
-Você pode revogar uma senha de acesso a qualquer momento. Para fazer isso, [crie um tíquete de suporte para esta solicitação.](https://experienceleague.adobe.com/pt-br?support-solution=Experience+Manager&amp;support-tab=home#support)
+Você pode revogar uma senha de acesso a qualquer momento. Para fazer isso, [crie um tíquete de suporte para esta solicitação](https://experienceleague.adobe.com/pt-br?support-solution=Experience+Manager&amp;support-tab=home#support).
 
 O tíquete será tratado com alta prioridade e deverá ser revogado dentro de um dia.

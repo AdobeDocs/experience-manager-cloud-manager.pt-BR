@@ -2,10 +2,10 @@
 title: Configuração do projeto
 description: Saiba como configurar seu projeto para gerenciá-lo e implantá-lo com o Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1428'
-ht-degree: 100%
+source-wordcount: '1426'
+ht-degree: 98%
 
 ---
 
@@ -110,7 +110,7 @@ E se você quiser gerar uma mensagem simples somente quando a build for executad
 
 ## Suporte ao repositório Maven protegido por senha {#password-protected-maven-repositories}
 
-Os artefatos de um repositório Maven protegido por senha devem ser usados com muito cuidado, pois o código implantado por meio desse mecanismo não é executado por todas as regras de qualidade implementadas nas portas de qualidade do Cloud Manager. É recomendável também implantar as fontes Java, bem como todo o código-fonte do projeto junto com o binário.
+Os artefatos de um repositório Maven protegido por senha devem ser usados com muito cuidado, pois o código implantado por meio desse mecanismo não é executado por todas as regras de qualidade implementadas nas portas de qualidade do Cloud Manager. É aconselhável implantar também as fonte Java e todo o código-fonte do projeto junto com o binário.
 
 >[!TIP]
 >
@@ -343,4 +343,4 @@ Se desejado, o comportamento de reutilização pode ser desativado para pipeline
 
 ## Desenvolver seu código com base nas práticas recomendadas {#develop-your-code-based-on-best-practices}
 
-As equipes de engenharia e consultoria da Adobe desenvolveram um [conjunto abrangente de práticas recomendadas para desenvolvedores do AEM.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=pt-BR)
+As equipes de engenharia e consultoria da Adobe desenvolveram um [conjunto abrangente de práticas recomendadas para desenvolvedores do AEM](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=pt-BR).

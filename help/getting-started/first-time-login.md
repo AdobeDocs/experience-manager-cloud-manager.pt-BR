@@ -2,10 +2,10 @@
 title: Primeiro logon
 description: Siga esta página se tiver definindo as configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 1417d3bfa5a844641e0942d1fe1bd7bf84e41997
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 100%
+source-wordcount: '293'
+ht-degree: 75%
 
 ---
 
@@ -24,15 +24,15 @@ Após definir a configuração geral do [!UICONTROL Cloud Manager], você está 
 
    ![Console do Cloud Manager](/help/assets/cloud-manager-console.png)
 
-1. Toque ou clique no cartão do programa para navegar até a página **Visão geral** do Cloud Manager.
+1. Clique no cartão do programa para navegar até a página **Visão geral** da Cloud Manager.
 
 1. O Cloud Manager abre na página **Visão geral**.
 
    ![Página de visão geral do Cloud Manager](/help/assets/program-overview-page.png)
 
-1. Se o programa ainda não estiver configurado, toque ou clique em **Configurar programa** na [frase de chamariz](/help/getting-started/navigation.md#cta) para configurar a descrição do programa e definir os KPIs (indicadores principais de desempenho). Se o programa já estiver configurado, a CTA poderá apresentar etapas adicionais.
+1. Se o seu programa ainda não estiver configurado, clique em **Configurar programa** na [frase de chamariz](/help/getting-started/navigation.md#cta) para configurar a descrição do programa e definir os KPIs (indicadores-chave de desempenho). Se o programa já estiver configurado, a CTA poderá apresentar etapas adicionais.
 
-Prossiga para o documento [Configuração do programa](/help/getting-started/program-setup.md) para ver as próximas etapas da configuração do programa.
+Você pode continuar com o documento [Configuração do programa](/help/getting-started/program-setup.md) para ver as próximas etapas da configuração do programa.
 
 ## Atividade do Cloud Manager {#activity}
 
@@ -40,7 +40,7 @@ O Cloud Manager fornece uma visualização consolidada da atividade de um progra
 
 >[!TIP]
 >
->Para obter detalhes sobre como usar a interface do Cloud Manager, consulte o documento [Navegar pela interface do Cloud Manager.](/help/getting-started/navigation.md)
+>Para obter detalhes sobre como usar a interface do usuário do Cloud Manager, consulte o documento [Navegação na interface do usuário do Cloud Manager](/help/getting-started/navigation.md).
 
 >[!NOTE]
 >

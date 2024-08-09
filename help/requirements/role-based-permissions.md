@@ -2,10 +2,10 @@
 title: Permissões com base em função
 description: Saiba mais sobre as permissões pré-configuradas com base em funções do Cloud Manager para gerenciar o acesso aos recursos da nuvem.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: fc1bc626dc18d25ce8c5bbae71396b234b5676db
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 100%
+source-wordcount: '617'
+ht-degree: 88%
 
 ---
 
@@ -22,9 +22,9 @@ O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apr
 
 ## Funções de usuário {#user-roles}
 
-O gerenciamento de funções do [!UICONTROL Cloud Manager] é feito usando o [Admin Console.](https://helpx.adobe.com/br/enterprise/using/admin-console.html) Qualquer usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de produto do Adobe Managed Services. Aa associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] no Admin Console.
+O gerenciamento de funções para [!UICONTROL Cloud Manager] é feito usando o [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html). Qualquer usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de Produto do Adobe Managed Services. Aa associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] no Admin Console.
 
-Para saber mais sobre como configurar suas funções, consulte o documento [Configuração de usuários e funções.](/help/requirements/users-and-roles.md)
+Para saber mais sobre como configurar suas funções, consulte o documento [Configuração de usuários e funções](/help/requirements/users-and-roles.md).
 
 Esta tabela lista as funções que podem ser atribuídas no Admin Console.
 
@@ -65,8 +65,8 @@ Cada uma das funções tem permissões pré-configuradas associadas específicas
 | Leitura da etapa | Ver os resultados das métricas de qualidade da etapa | x | x | x | x | x |
 | Gerar token de acesso pessoal | Acesso ao Git |  | x |  | x |  |
 
-Para saber mais sobre como configurar seus usuários, consulte o documento [Configuração de usuários e funções.](/help/requirements/users-and-roles.md)
+Para saber mais sobre como configurar seus usuários, consulte o documento [Configuração de usuários e funções](/help/requirements/users-and-roles.md).
 
 >[!TIP]
 >
->Perfis de permissões personalizadas com permissões configuráveis também estão disponíveis. Consulte o documento [Permissões personalizadas](/help/using/custom-permissions.md) para mais detalhes.
+>Perfis de permissões personalizadas com permissões configuráveis também estão disponíveis. Consulte [Permissões personalizadas](/help/using/custom-permissions.md) para obter mais detalhes.

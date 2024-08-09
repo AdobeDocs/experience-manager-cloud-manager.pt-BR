@@ -2,10 +2,10 @@
 title: Integração do Git com o Adobe Cloud Manager
 description: Esta série de vídeos aborda a configuração e a integração de um repositório Git gerenciado pelo cliente (no local) com o Adobe Cloud Manager.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
-source-git-commit: 91e909273bf2b21d7f6413731923011915079e45
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 100%
+source-wordcount: '337'
+ht-degree: 91%
 
 ---
 
@@ -30,7 +30,7 @@ Esta série de vídeos presume um conhecimento básico do gerenciamento de Git e
 
 As etapas e convenções de nomenclatura descritas nesta série de vídeos representam algumas práticas recomendadas para trabalhar com um repositório Git gerenciado pelo cliente e o Cloud Manager. Espera-se que as convenções e os fluxos de trabalho descritos sejam adaptados a equipes de desenvolvimento individuais.
 
-Para obter uma visão geral completa do Cloud Manager, consulte o documento [Introdução ao Cloud Manager.](/help/introduction.md)
+Para obter uma visão geral completa do Cloud Manager, consulte [Introdução ao Cloud Manager](/help/introduction.md).
 
 ## Sincronização inicial {#initial-sync}
 
@@ -40,7 +40,7 @@ Primeiras etapas para sincronizar um repositório Git gerenciado pelo cliente co
 
 ## Estratégia básica de ramificação {#branching-strategy}
 
-Defina uma estratégia básica de ramificação para aproveitar a [produção](/help/using/production-pipelines.md) e os [pipelines não produtivos](/help/using/non-production-pipelines.md) do Cloud Manager.
+Defina uma estratégia básica de ramificação para aproveitar a [produção](/help/using/production-pipelines.md) e os [pipelines de não produção](/help/using/non-production-pipelines.md) da Cloud Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 

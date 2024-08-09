@@ -2,10 +2,10 @@
 title: Repositório de código-fonte
 description: Saiba mais sobre o repositório Git provisionado para cada programa que você tem no Cloud Manager.
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 100%
+source-wordcount: '261'
+ht-degree: 83%
 
 ---
 
@@ -20,9 +20,9 @@ Sua assinatura do [!UICONTROL AEM Managed Services] inclui um repositório de c�
 
 Como prática recomendada, você sempre deve usar o repositório Git do Cloud Manager, que fica vazio sem ramificações configuradas ou projetos de amostra. Para usar o repositório Git do Cloud Manager, você receberá um token de acesso privado que permitirá usar qualquer cliente Git para criar ramificações, armazenar e recuperar seu código, listar o histórico de confirmação etc.
 
-Para obter mais informações sobre como configurar ramificações no git, consulte [Configurar ramificações de versão.](/help/getting-started/configuring-branches.md)
+Para obter mais informações sobre como configurar ramificações no Git, consulte [Configurando ramificações de versão](/help/getting-started/configuring-branches.md).
 
-Para obter mais informações sobre como usar o repositório Git do Cloud Manager com o pipeline de CI/CD, consulte os documentos [Configurar pipeline de produção](/help/using/production-pipelines.md) e [Configurar pipeline de não produção](/help/using/non-production-pipelines.md) para saber mais.
+Para obter mais informações sobre como usar o repositório Git do Cloud Manager com o pipeline de CI/CD, consulte [Configurar pipelines de produção](/help/using/production-pipelines.md) e [Configurar pipelines de não produção](/help/using/non-production-pipelines.md) para saber mais.
 
 ## Repositório no local {#on-premise-repository}
 

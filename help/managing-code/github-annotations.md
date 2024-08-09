@@ -2,10 +2,10 @@
 title: Anotações de verificação do GitHub
 description: Aprenda como o GitHub verifica PRs anotados para seus repositórios privados para fornecer um feedback útil.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
-source-git-commit: 210d40a5e12b40fd84efc461c6a1c48559120837
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 100%
+source-wordcount: '251'
+ht-degree: 86%
 
 ---
 
@@ -40,4 +40,4 @@ Os resultados da [qualidade do código](/help/using/code-quality-testing.md) tam
 
 ![Exemplo de anotações](assets/github-check-annotations-code-quality-2.png)
 
-Também é possível visualizar os problemas no formato CSV. Isto pode ser recuperado ao [exibir os detalhes da execução do pipeline no Cloud Manager.](/help/using/managing-pipelines.md)
+Também é possível visualizar os problemas no formato CSV. Isso pode ser recuperado por [exibir os detalhes da execução do pipeline no Cloud Manager](/help/using/managing-pipelines.md).

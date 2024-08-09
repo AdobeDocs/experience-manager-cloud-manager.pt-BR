@@ -2,10 +2,10 @@
 title: Pipelines de CI/CD
 description: Saiba mais sobre os pipelines de CI/CD e como eles lidam com implantações em ambientes de preparo e produção no Cloud Manager.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -41,7 +41,7 @@ Este diagrama ilustra o que acontece quando uma versão é acionada no [!UICONTR
 
 ### Como configurar um pipeline de CI/CD {#how-to-setup-a-ci-cd-pipeline}
 
-Para saber mais sobre a configuração de pipelines, consulte os documentos [Configuração de pipelines de produção](/help/using/production-pipelines.md) e [Configuração de pipelines de não produção.](/help/using/non-production-pipelines.md)
+Para saber mais sobre a configuração de pipelines, consulte os documentos [Configuração de pipelines de produção](/help/using/production-pipelines.md) e [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md).
 
 ## Portas de qualidade {#quality-gates}
 

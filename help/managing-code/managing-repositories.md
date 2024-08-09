@@ -2,10 +2,10 @@
 title: Gerenciamento de repositórios no Cloud Manager
 description: Saiba como criar, exibir e editar repositórios Git no Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 73add7bee892769d1b3864e3238aff26bf96162d
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 100%
+source-wordcount: '648'
+ht-degree: 79%
 
 ---
 
@@ -22,7 +22,7 @@ Você pode optar por criar repositórios adicionais gerenciados pela Adobe e tam
 
 Os repositórios criados no Cloud Manager também estarão disponíveis para seleção ao adicionar ou editar pipelines. Consulte [Pipelines de CI-CD](/help/overview/ci-cd-pipelines.md) para saber mais.
 
-Há um único repositório principal ou uma ramificação para um determinado pipeline. Com o [suporte ao submódulo git,](git-submodules.md) muitas ramificações secundárias podem ser incluídas no momento da compilação.
+Há um único repositório principal ou uma ramificação para um determinado pipeline. Com o [suporte ao submódulo Git](git-submodules.md), várias ramificações secundárias podem ser incluídas no momento da compilação.
 
 ## Janela Repositórios {#repositories-window}
 
@@ -53,11 +53,11 @@ Você pode selecionar o repositório na janela e clicar no botão de reticência
 
 ## Adicionar repositórios {#adding-repositories}
 
-Toque ou clique no botão **Adicionar repositório** na janela **Repositórios** para iniciar o assistente **Adicionar repositório**.
+Clique no botão **Adicionar repositório** na janela **Repositórios** para iniciar o assistente **Adicionar repositório**.
 
 ![Assistente Adicionar repositório](assets/add-repository-wizard.png)
 
-O Cloud Manager oferece suporte a repositórios gerenciados pela Adobe (**Repositório da Adobe**), bem como seus próprios repositórios autogerenciados (**Repositório privado**). Os campos obrigatórios diferem dependendo do tipo de repositório que você escolher adicionar. Consulte os documentos a seguir para obter mais detalhes.
+A Cloud Manager oferece suporte a repositórios gerenciados pelo Adobe (**Adobe Repository**) e a seus próprios repositórios gerenciados automaticamente (**Private Repository**). Os campos obrigatórios diferem dependendo do tipo de repositório que você escolher adicionar. Consulte os documentos a seguir para obter mais detalhes.
 
 * [Adição de repositórios da Adobe no Cloud Manager](adobe-repositories.md)
 * [Adição de repositórios privados no Cloud Manager](private-repositories.md)
@@ -69,17 +69,17 @@ O Cloud Manager oferece suporte a repositórios gerenciados pela Adobe (**Reposi
 
 ## Acessar informações do repositório {#repo-info}
 
-Ao visualizar os repositórios na janela **Repositórios**, você pode visualizar os detalhes sobre como acessar os repositórios gerenciados pela Adobe de forma programática tocando ou clicando no botão **Acessar informações do repositório** na barra de ferramentas.
+Ao visualizar os repositórios na janela **Repositórios**, você pode visualizar os detalhes sobre como acessar os repositórios gerenciados por Adobe de forma programática clicando no botão **Acessar informações do repositório** na barra de ferramentas.
 
 ![Informações do repositório](assets/access-repo-info.png)
 
-A janela **Informações do repositório** é aberta com os detalhes. Para obter mais informações sobre o acesso às informações do repositório, consulte o documento [Acessar informações do repositório.](accessing-repositories.md)
+A janela **Informações do repositório** é aberta com os detalhes. Para obter mais informações sobre como acessar informações do repositório, consulte [Acessando Informações do Repositório](accessing-repositories.md).
 
 ## Verificar ramificações {#check-branches}
 
 A ação **Verificar ramificações/Criar projeto** executa duas funções dependendo do estado do repositório.
 
-* Se o repositório for recém-criado, a ação criará um projeto de amostra com base no [arquétipo do projeto do AEM.](https://experienceleague.adobe.com/pt-br/docs/experience-manager-core-components/using/developing/archetype/overview)
+* Se o repositório for recém-criado, a ação criará um projeto de amostra com base no [arquétipo de projeto AEM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-core-components/using/developing/archetype/overview).
 * Se o repositório já tiver criado o projeto de amostra, ele verifica o estado do repositório e de suas ramificações e informa se o projeto de amostra já existe.
 
 ![Verificar a ação de ramificações](assets/check-branches.png)
@@ -90,7 +90,7 @@ A ação **Copiar URL do repositório** copia o URL do repositório selecionado 
 
 ## Exibir e atualizar {#view-update}
 
-A ação **Exibir e atualizar** abre a caixa de diálogo **Atualizar repositório**. Ao usá-la, você pode ver o **Nome** e a **Visualização do URL do repositório** e atualizar a **Descrição** do repositório.
+A ação **Exibir e atualizar** abre a caixa de diálogo **Atualizar repositório**. Com ele, você pode exibir o **Nome** e a **visualização da URL do repositório** e atualizar a **Descrição** do repositório.
 
 ![Exibir e atualizar informações do repositório](assets/update-repository.png)
 
@@ -102,6 +102,6 @@ A ação **Excluir** remove o repositório do seu projeto. Um repositório não 
 
 Observe que, quando um repositório é excluído no Cloud Manager, ele é marcado como excluído e não é mais acessível ao usuário, mas é mantido no sistema para fins de recuperação.
 
-Se você tentar criar um novo repositório após excluir um repositório com o mesmo nome, você receberá a mensagem de erro `An error has occurred while trying to create repository. Please contact your CSE or Adobe Support.`
+Se você tentar criar um novo repositório após excluir um repositório com o mesmo nome, você receberá a mensagem de erro `An error has occurred while trying to create repository. Contact your CSE or Adobe Support.`
 
-Se você receber esta mensagem, entre em contato com o Suporte da Adobe para que o suporte possa ajudar a renomear o repositório excluído ou escolha um nome diferente para seu novo repositório.
+Se você receber essa mensagem de erro, entre em contato com o Suporte do Adobe para que eles possam ajudar a renomear o repositório excluído ou escolher um nome diferente para o novo repositório.

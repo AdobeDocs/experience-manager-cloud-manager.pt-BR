@@ -2,16 +2,16 @@
 title: Configuração de pipelines de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 100%
+source-wordcount: '710'
+ht-degree: 94%
 
 ---
 
 # Configuração de pipelines de não produção {#configuring-non-production-pipelines}
 
-Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código. Se desejar ter uma visão geral mais conceitual de como os pipelines funcionam no Cloud Manager, consulte o documento [Pipelines de CI/CD.](/help/overview/ci-cd-pipelines.md)
+Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código. Se desejar ter uma visão geral mais conceitual de como os pipelines funcionam no Cloud Manager, consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md).
 
 ## Visão geral {#overview}
 
@@ -20,7 +20,7 @@ Ao usar o bloco **Pipelines** no [!UICONTROL Cloud Manager], o **Gerenciador de 
 * **Pipelines de produção** - um pipeline de produção é concebido para fins específicos e é constituído por uma série de etapas orquestradas, com o objetivo de levar o código-fonte até à produção.
 * **Pipelines de não produção** - um pipeline não relacionado à produção serve principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
 
-Este documento se concentra em pipelines de não produção. Para obter detalhes sobre como configurar pipelines de produção, consulte o documento [Configuração de pipelines de produção.](/help/using/production-pipelines.md)
+Este documento se concentra em pipelines de não produção. Para obter detalhes sobre como configurar pipelines de produção, consulte o documento [Configuração de pipelines de produção](/help/using/production-pipelines.md).
 
 Existem dois tipos de pipelines de não produção:
 
@@ -80,7 +80,7 @@ Depois de configurar seu programa e ter pelo menos um ambiente que utiliza a int
 
 ## Próximas etapas {#the-next-steps}
 
-Depois de configurar o pipeline, é necessário implantar o código. Consulte o documento [Implantação do código](/help/using/code-deployment.md) para obter mais detalhes.
+Depois de configurar o pipeline, é necessário implantar o código. Consulte [Implantação do código](/help/using/code-deployment.md) para obter mais detalhes.
 
 ## Tutorial em vídeo {#video-tutorial}
 

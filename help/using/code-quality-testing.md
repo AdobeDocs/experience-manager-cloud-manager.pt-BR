@@ -2,10 +2,10 @@
 title: Teste de qualidade do código
 description: Saiba como funciona o teste de qualidade do código dos pipelines e como ele pode melhorar a qualidade das suas implantações.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: fadcf560f08bf16d0d18172c620a450d0cb06225
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '2778'
-ht-degree: 61%
+source-wordcount: '2763'
+ht-degree: 57%
 
 ---
 
@@ -46,11 +46,11 @@ O teste de qualidade do código verifica o código-fonte para garantir que atend
 
 O software o implementa usando uma combinação de análise SonarQube, exame em nível de pacote de conteúdo com OakPAL e validação do Dispatcher com a Ferramenta de otimização da Dispatcher.
 
-Há mais de 100 regras que combinam regras do Java genéricas e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas da equipe de engenharia do AEM e são chamadas de [Regras de qualidade do código personalizado.](/help/using/custom-code-quality-rules.md)
+Há mais de 100 regras que combinam regras do Java genéricas e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas da Engenharia de AEM e são chamadas de [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md).
 
 >[!TIP]
 >
->Você pode baixar a lista completa de regras [usando este link.](/help/assets/CodeQuality-rules-latest-AMS.xlsx)
+>Você pode baixar a lista completa de regras [usando este link](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
 
 Os resultados do teste de qualidade do código são fornecidos em forma de classificação, conforme resumido neste quadro.
 
@@ -62,7 +62,7 @@ Os resultados do teste de qualidade do código são fornecidos em forma de class
 | Abrangência | Definida por uma combinação de abrangências da linha de teste unitária e da condição utilizando a fórmula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = Condições que foram avaliadas como `true` pelo menos uma vez durante a execução dos testes da unidade</li><li>`CF` = Condições que foram avaliadas como `false` pelo menos uma vez durante a execução dos testes da unidade</li><li>`LC` = Linhas abrangidas = lines_to_cover - uncovered_lines</li><li>`B` = número total de condições</li><li>`EL` = número total de linhas executáveis (lines_to_cover)</li></ul> | Importante | &lt; 50% |
 | Testes de unidade ignorados | Número de testes de unidade ignorados | Informações | > 1 |
 | Problemas em aberto | Tipos de problemas gerais - Vulnerabilidades, Erros e Code Smells | Informações | > 0 |
-| Linhas duplicadas | Definido como o número de linhas envolvidas em blocos duplicados. Um bloco de código é considerado duplicado nas condições a seguir.<br>Projetos não Java:<ul><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem estar distribuídos por pelo menos: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras linguagens</li></ul>Projetos Java:<ul></li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>As diferenças de recuo, bem como nos literais de string são ignoradas ao detectar duplicidades. | Informações | > 1% |
+| Linhas duplicadas | Definido como o número de linhas envolvidas em blocos duplicados. Um bloco de código é considerado duplicado nas condições a seguir.<br>Projetos não Java:<ul><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem estar distribuídos por pelo menos: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras linguagens</li></ul>Projetos Java:<ul></li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>As diferenças no recuo, bem como nos literais de string são ignoradas ao detectar duplicadas. | Informações | > 1% |
 | Compatibilidade do Cloud Service | Número de problemas de compatibilidade do Cloud Service identificados | Informações | > 0 |
 
 >[!NOTE]
@@ -71,7 +71,7 @@ Os resultados do teste de qualidade do código são fornecidos em forma de class
 
 >[!NOTE]
 >
->Para saber mais sobre as regras de qualidade do código personalizado adotadas pelo [!UICONTROL Cloud Manager], consulte o documento [Regras de qualidade do código personalizado.](custom-code-quality-rules.md)
+>Para saber mais sobre as regras de qualidade do código personalizado executadas pelo [!UICONTROL Cloud Manager], consulte [Regras de Qualidade do Código Personalizado](custom-code-quality-rules.md).
 
 ### Como lidar com falsos positivos {#dealing-with-false-positives}
 
@@ -172,7 +172,7 @@ Três conjuntos de páginas selecionam as páginas. O Cloud Manager usa os logs 
 
 ##### Distribuição de tráfego em conjuntos de páginas selecionados {#distribution-of-traffic}
 
-Você pode escolher entre um e três conjuntos na guia **Teste** da sua [configuração de pipeline.](/help/using/production-pipelines.md) A distribuição do tráfego é baseada no número de conjuntos selecionados. Ou seja, se todos os três forem selecionados, 33% do total de exibições de página serão colocadas em cada conjunto. Se dois forem selecionados, 50% serão direcionadas a cada conjunto. Se um for selecionado, 100% do tráfego será direcionado para esse conjunto.
+Você pode escolher entre um e três conjuntos na guia **Testes** da sua [configuração de pipeline](/help/using/production-pipelines.md). A distribuição do tráfego é baseada no número de conjuntos selecionados. Ou seja, se todos os três forem selecionados, 33% do total de exibições de página serão colocadas em cada conjunto. Se dois forem selecionados, 50% serão direcionadas a cada conjunto. Se um for selecionado, 100% do tráfego será direcionado para esse conjunto.
 
 Consideremos este exemplo.
 
@@ -188,7 +188,7 @@ Durante o período de teste de 30 minutos:
 
 #### Testes e relatórios {#testing-reporting}
 
-O Cloud Manager executa testes de desempenho para programas do AEM Sites, solicitando páginas como um usuário não autenticado por padrão no servidor de publicação de preparo por um período de teste de 30 minutos. Ele mede as métricas geradas pelo usuário virtual (tempo de resposta, taxa de erro, exibições por minuto e assim por diante) para cada página, bem como várias métricas no nível do sistema (CPU, memória, dados de rede) para todas as instâncias.
+O Cloud Manager executa testes de desempenho para programas do AEM Sites, solicitando páginas como um usuário não autenticado por padrão no servidor de publicação de preparo por um período de teste de 30 minutos. Ele mede as métricas geradas pelo usuário virtual (tempo de resposta, taxa de erro, exibições por minuto e assim por diante) para cada página e várias métricas no nível do sistema (CPU, memória, dados de rede) para todas as instâncias.
 
 A tabela a seguir resume a matriz de teste de desempenho usando o sistema de marcação em três níveis.
 
@@ -204,7 +204,7 @@ A tabela a seguir resume a matriz de teste de desempenho usando o sistema de mar
 | Utilização da largura de banda da rede | Importante | >= 90% |
 | Solicitações por minuto | Informações | >= 6000 |
 
-Consulte a seção [Teste de desempenho autenticado](#authenticated-performance-testing) para obter mais detalhes sobre como usar a autenticação básica para testes de desempenho do Sites e do Assets.
+Consulte [Teste de Desempenho Autenticado](#authenticated-performance-testing) para obter mais detalhes sobre como usar a autenticação básica para testes de desempenho do Sites e do Assets.
 
 >[!NOTE]
 >
@@ -250,7 +250,7 @@ Por exemplo, se uma divisão 70/30 for usada e houver 10 ativos carregados por m
 
 #### Testes e relatórios {#testing-and-reporting}
 
-O Cloud Manager cria uma pasta na instância do autor usando o nome de usuário e a senha usados na configuração do CSE. Os ativos são carregados na pasta usando uma biblioteca de código aberto. Os testes executados pela etapa de teste do Assets são gravados usando uma [biblioteca de código aberto.](https://github.com/adobe/toughday2) Os tempos de processamento de cada ativo e de várias métricas no nível do sistema são medidos durante o teste de 30 minutos. Esse recurso pode carregar imagens e documentos PDF.
+O Cloud Manager cria uma pasta na instância do autor usando o nome de usuário e a senha usados na configuração do CSE. Os ativos são carregados na pasta usando uma biblioteca de código aberto. Os testes executados pela etapa de teste do Assets são gravados usando uma [biblioteca de código aberto](https://github.com/adobe/toughday2). Os tempos de processamento de cada ativo e de várias métricas no nível do sistema são medidos durante o teste de 30 minutos. Esse recurso pode carregar imagens e documentos PDF.
 
 >[!TIP]
 >

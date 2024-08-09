@@ -2,10 +2,10 @@
 title: Usando o assistente para novo projeto
 description: Siga esta página para saber como usar o assistente para criar um projeto de aplicativo do AEM
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: cb791a4f148ba394687b5e824b75fe1386d83c18
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 100%
+source-wordcount: '325'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ Siga estas etapas para criar um projeto do AEM usando o assistente.
 
 1. Faça logon no Cloud Manager, em [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com), e selecione a organização apropriada.
 
-1. Se ainda não tiver feito, [crie seu programa.](program-setup.md) Depois que o programa for criado, o Cloud Manager reconhecerá que os repositórios ainda não estão configurados e um cartão de chamada para ação especial será exibido na tela **Visão geral**.
+1. Caso ainda não o tenha feito, [crie seu programa](program-setup.md). Quando o programa for criado, a Cloud Manager reconhece que os repositórios ainda não estão configurados e um cartão de chamada para ação especial é exibido na tela **Visão geral**.
 
    ![Criar CTA de projeto](/help/assets/image2018-10-3_14-29-44.png)
 

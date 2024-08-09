@@ -2,9 +2,9 @@
 title: Trabalhar com vários repositórios Git
 description: Em vez de trabalhar diretamente com o repositório Git do Cloud Manager, saiba como trabalhar com seu próprio repositório Git ou vários repositórios Git.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
-source-git-commit: da9dff997a277c207e2c48207217cb30325f3c0d
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '752'
 ht-degree: 100%
 
 ---
@@ -115,7 +115,7 @@ jobs:
           git -C main push
 ```
 
-Como mostrado acima, usar uma ação do GitHub é uma opção muito flexível. Qualquer mapeamento entre ramificações dos repositórios Git pode ser executado, bem como qualquer mapeamento dos projetos Git separados no layout de diretório do projeto principal.
+Como mostrado acima, usar uma ação do GitHub é uma opção muito flexível. É possível executar qualquer mapeamento entre ramificações de repositórios Git, bem como qualquer mapeamento de projetos Git separados no layout de diretório do projeto principal.
 
 >[!NOTE]
 >
@@ -181,7 +181,7 @@ git commit -F ../commit.txt
 git push
 ```
 
-Como mostrado acima, usar um processo do Jenkins é uma opção muito flexível. Qualquer mapeamento entre ramificações dos repositórios Git pode ser executado, bem como qualquer mapeamento dos projetos Git separados no layout de diretório do projeto principal.
+Como mostrado acima, usar um processo do Jenkins é uma opção muito flexível. É possível executar qualquer mapeamento entre ramificações de repositórios Git, bem como qualquer mapeamento de projetos Git separados no layout de diretório do projeto principal.
 
 >[!NOTE]
 >

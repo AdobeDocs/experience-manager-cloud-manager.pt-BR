@@ -2,10 +2,10 @@
 title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários e funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: dd96d773ea3e6b9c45886fe41b28d3dd70cb8a61
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 100%
+source-wordcount: '769'
+ht-degree: 84%
 
 ---
 
@@ -46,7 +46,7 @@ Essa tabela resume as funções.
 
 As funções do [!UICONTROL Cloud Manager] são gerenciadas no Admin Console. Associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager].
 
-O Admin Console é um local central para gerenciar seus direitos da Adobe em toda a organização. Para saber mais sobre o Adobe Admin Console, consulte a documentação do [Admin Console.](https://helpx.adobe.com/br/enterprise/using/admin-console.html)
+O Admin Console é um local central para gerenciar seus direitos da Adobe em toda a organização. Para saber mais sobre o Adobe Admin Console, consulte a documentação do [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
 
 Para fornecer as permissões de função apropriadas aos usuários do [!UICONTROL Cloud Manager], um administrador na organização do cliente deve criar novos perfis de produto no contexto do produto do [!UICONTROL AEM Managed Services] correspondente a cada uma das quatro funções do [!UICONTROL Cloud Manager]:
 
@@ -57,7 +57,7 @@ Para fornecer as permissões de função apropriadas aos usuários do [!UICONTRO
 
 Você pode criar ou adicionar usuários/grupos a esses perfis de produtos com o Admin Console.
 
-1. Faça logon no Admin Console em [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
+1. Faça logon no Admin Console em [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
 1. Clique na guia **Visão geral** e clique no produto que você deseja modificar no cartão **Produtos e serviços**. Se não estiver listado lá, use a guia **Produtos** para localizar o produto e clique nele.
 
@@ -93,7 +93,7 @@ Você pode criar ou adicionar usuários/grupos a esses perfis de produtos com o 
 
 Depois de criar perfis de produto, você pode atribuir usuários ou grupos de usuários a eles.
 
-1. Faça logon no Admin Console em [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
+1. Faça logon no Admin Console em [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
 1. No Admin Console, escolha a guia **Usuários**.
 

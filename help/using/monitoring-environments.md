@@ -2,10 +2,10 @@
 title: Monitoramento de ambientes
 description: Saiba como monitorar seus ambientes no Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 100%
+source-wordcount: '922'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ Siga estas etapas para acessar o monitoramento do sistema.
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selecione a organização e o programa apropriado.
 
-1. Toque ou clique no botão de reticências do programa que deseja monitorar e selecione a opção **Mostrar monitoramento**.
+1. Clique no botão de reticências do programa que deseja monitorar e selecione a opção **Mostrar monitoramento**.
 
    ![Configurações](/help/assets/first-timea1.png)
 
@@ -51,7 +51,7 @@ O status em cada categoria é um resumo de métricas individuais. Se alguma mét
 
 ## Detalhes do monitoramento do sistema {#system-monitoring-detail}
 
-Para exibir os detalhes de métricas específicas, toque ou clique em uma das colunas de categoria de uma instância específica ou no título da categoria na navegação à esquerda. Cada página de detalhes mostra uma série de gráficos para as métricas contidas nessa categoria. É possível exibir as métricas de todas as instâncias em um ambiente ou para uma instância específica. Você pode alternar entre o ambiente e as instâncias usando as caixas suspensas no canto superior direito.
+Para exibir os detalhes de métricas específicas, clique em uma das colunas de categoria de uma instância específica ou no título da categoria no painel de navegação esquerdo. Cada página de detalhes mostra uma série de gráficos para as métricas contidas nessa categoria. É possível exibir as métricas de todas as instâncias em um ambiente ou para uma instância específica. Você pode alternar entre o ambiente e as instâncias usando as caixas suspensas no canto superior direito.
 
 ![Selecionar ambiente](/help/assets/System_Monitoring1.png)
 
