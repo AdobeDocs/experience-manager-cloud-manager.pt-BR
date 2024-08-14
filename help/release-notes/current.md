@@ -1,19 +1,18 @@
 ---
-title: Notas da versão 2024.7.0
-description: Saiba mais sobre as notas de versão do Cloud Manager 2024.7.0.
+title: Notas de versão do Cloud Manager 2024.8.0
+description: Saiba mais sobre as notas de versão do Cloud Manager 2024.8.0.
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 34f15aff7478a6a0884f88f534a7dff996a8570e
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 4%
+source-wordcount: '265'
+ht-degree: 3%
 
 ---
 
 
-# Notas de versão do Cloud Manager 2024.7.0 {#release-notes}
+# Notas de versão do Cloud Manager 2024.8.0 {#release-notes}
 
-Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.7.0.
+Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.8.0.
 
 >[!NOTE]
 >
@@ -21,21 +20,29 @@ Esta página documenta as notas de versão do [!UICONTROL Cloud Manager] 2024.7.
 
 ## Data de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] 2024.7.0 é 18 de julho de 2024. A próxima versão está planejada para 13 de agosto de 2024.
+A data de lançamento do [!UICONTROL Cloud Manager] 2024.8.0 é 13 de agosto de 2024. A próxima versão está planejada para 14 de setembro de 2024.
 
 ## Novidades {#what-is-new}
 
-* O [pipeline de produção](/help/using/production-pipelines.md#adding-production-pipeline) e o [pipeline de não produção](/help/using/non-production-pipelines.md#adding-non-production-pipeline) acionam **Alterações no Git** para iniciar o pipeline em uma confirmação agora estão disponíveis para [repositórios privados](/help/managing-code/private-repositories.md).
-* Um pipeline de pré-produção só pode ser acionado manualmente e não pode ser configurado como **Em Alterações do Git**.
-* Para pipelines somente de produção, a lista de execuções promovíveis inclui execuções com uma versão de artefato maior que a versão de artefato implantada no ambiente de produção.
-* [O Arquétipo de Projeto AEM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-core-components/using/developing/archetype/overview) foi atualizado para a [versão 49](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49).
+* Para pipelines somente de preparo e somente de produção (disponíveis como parte do [programa de adoção antecipada](#staging-production-only-pipelines)), agora você pode executá-los no [modo de emergência](/help/using/stage-prod-only.md#emergency-mode), ignorando o teste de preparo.
 
 ## Programa de adoção antecipada {#early-adoption}
 
-Fazer parte do programa de adoção antecipada da Cloud Manager e testar alguns recursos futuros
+Faça parte do programa de adoção antecipada do Adobe e tenha a chance de testar alguns recursos futuros.
 
-### Pipelines somente de preparo e somente de produção {#staging-production-only-pipelines}
+### Pipelines somente de preparo e somente produção {#staging-production-only-pipelines}
 
-O suporte para [pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md) foi introduzido, permitindo dividir os pipelines de implantação de produção de pilha completa em implantações menores e especializadas.
+A Adobe está animada em anunciar a introdução do suporte para [pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md). Esse novo recurso permite dividir os pipelines de implantação de produção de pilha completa em implantações menores e mais especializadas.
 
-Se você estiver interessado em testar este novo recurso e compartilhar seus comentários, envie um email para `Grp-cloudmanager_splitpipelines@adobe.com` por meio de seu endereço de email associado à sua Adobe ID.
+Se você quiser testar este recurso e fornecer feedback, envie um email para `Grp-cloudmanager_splitpipelines@adobe.com` usando o endereço de email associado à sua Adobe ID.
+
+## Correções de erros
+
+* Um problema raro foi corrigido em que as etapas do pipeline eram executadas após a exclusão do pipeline.
+* A reexecução do pipeline agora funciona na primeira tentativa, corrigindo um problema raro em que uma nova execução tinha que ser iniciada várias vezes.
+* As etapas de implantação agendadas para pipelines de pilha completa agora respeitam a data agendada selecionada e não revertem para **Agora**.
+* Os status das tarefas de conteúdo de cópia com falha agora são refletidos corretamente e não mostram mais um status `In Progress` incorretamente em raras circunstâncias.
+
+## Problemas conhecidos {#known-issues}
+
+{{content-copy-known-issues}}

@@ -2,10 +2,10 @@
 title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 70b7994435f7f0f587c134fab1fb66c6576386d9
+source-git-commit: 77eb1c824ba766e43dfd8e2b0f6f6edc71f043e5
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 37%
+source-wordcount: '943'
+ht-degree: 31%
 
 ---
 
@@ -83,9 +83,19 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 
 ## Executar pipelines somente de produção e somente de preparo {#running}
 
-Os pipelines somente de produção e somente de preparo são executados da mesma forma que [todos os outros pipelines são executados](/help/using/managing-pipelines.md#running-pipelines). Consulte essa documentação para obter detalhes.
+Os pipelines somente de produção e somente de preparo são executados basicamente da mesma forma que [todos os outros pipelines são executados.](/help/using/managing-pipelines.md#running-pipelines) Consulte essa documentação para obter detalhes. No entanto, há dois novos recursos desses pipelines.
 
-Além disso, uma execução de pipeline somente de produção pode ser acionada diretamente dos detalhes de execução de um pipeline somente de preparo.
+* Os pipelines somente de preparo e somente de produção oferecem um novo [modo de emergência](#emergency-mode) para permitir que o teste seja ignorado.
+* A execução do pipeline somente de produção pode ser acionada diretamente dos detalhes de execução de um [pipeline somente de preparo.](#stage-only-run)
+
+### Modo de emergência {#emergency-mode}
+
+Sempre que você iniciar pipelines online somente de produção e de preparo, será solicitado que confirme o início, bem como como como ele será iniciado.
+
+* **Modo Normal** é uma execução padrão e inclui etapas de teste de preparo.
+* **Modo de emergência** ignora etapas de teste de estágio.
+
+![Modo de emergência](/help/assets/configure-pipelines/emergency-mode.png)
 
 ### Pipelines somente de preparo {#stage-only-run}
 
@@ -93,7 +103,9 @@ Um pipeline somente de preparo é executado quase da mesma maneira que os pipeli
 
 ![Execução de pipeline somente de preparo](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-O botão **Promover build** só será exibido se você estiver na última execução de pipeline somente de preparo bem-sucedida. Depois de clicado, ele solicita que você confirme a execução do pipeline somente de produção ou crie um pipeline somente de produção, se um ainda não existir.
+Clicar em **Promover compilação** solicita que você confirme a execução do pipeline somente de estágio relacionado normalmente ou no [modo de emergência.](#emergency-mode)
+
+Se não existir um pipeline somente de produção, você será solicitado a criar um.
 
 ### Pipelines somente de produção {#prod-only-run}
 

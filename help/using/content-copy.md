@@ -2,10 +2,10 @@
 title: A ferramenta de cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção AEM 6.x hospedados no AMS para ambientes mais baixos para testes.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 2563c58431e58d2fc5917a2ad88835bbdd4224f2
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 36%
+source-wordcount: '1150'
+ht-degree: 42%
 
 ---
 
@@ -119,7 +119,8 @@ Depois que um conjunto de conteúdo é criado, você pode usá-lo para copiar co
    >* O usuário não tiver as permissões apropriadas.
    >* O ambiente tiver um pipeline em execução ou uma operação de cópia de conteúdo em andamento.
 
-1. Na caixa de diálogo **Copiar conteúdo**, especifique a origem e o destino da sua ação de cópia de conteúdo.
+1. Na caixa de diálogo **Copiar conteúdo**, especifique os ambientes de origem e destino para sua ação de cópia de conteúdo.
+   * As regiões do ambiente de destino devem ser iguais ou um subconjunto das regiões do ambiente de origem.
 
 1. Você pode optar por excluir ou manter os caminhos de exclusão no ambiente de destino. Marque a caixa de seleção `Do not delete exclude paths from destination` para reter `exclude paths` especificados no conjunto de conteúdo. Se a caixa de seleção estiver desmarcada, os caminhos de exclusão serão excluídos no ambiente de destino.
 
@@ -164,8 +165,15 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 * Não é possível executar operações simultâneas de cópia de conteúdo no mesmo ambiente.
 * A cópia do conteúdo não pode ser executada se houver alguma operação ativa em execução no ambiente de destino ou de origem, como um pipeline de CI/CD.
 * É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação de caminhos excluídos.
-* A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou de espelhamento porque não pode rastrear conteúdo movido ou excluído na origem.
-* Não é possível pausar ou cancelar uma cópia de conteúdo após seu início.
-* A ferramenta de cópia de conteúdo transfere ativos e metadados Dynamic Media do ambiente superior para o ambiente inferior selecionado. Os ativos copiados precisam ser reprocessados usando o [fluxo de trabalho do DAM process assets](https://experienceleague.adobe.com/br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a respectiva configuração do Dynamic Media.
-
+* A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento, pois ela não pode rastrear os conteúdos movidos ou excluídos da origem.
+* Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
+* A ferramenta de cópia de conteúdo copia ativos juntamente com metadados relacionados à mídia dinâmica do ambiente superior para o ambiente inferior selecionado.
+   * Os ativos copiados precisam ser reprocessados usando o [Fluxo de trabalho dos ativos do processo DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=pt-BR) no ambiente inferior para usar a respectiva configuração de mídia dinâmica.
+* O processo de cópia de conteúdo será substancialmente mais rápido quando o histórico de versão não for copiado.
+* [Não há suporte para configurações do Dynamic Media com ativos maiores que 2 GB habilitados](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb).
 * Quando o histórico de versões não é copiado, o processo de cópia de conteúdo é substancialmente mais rápido.
+* As regiões do ambiente de destino devem ser iguais ou um subconjunto das regiões do ambiente de origem.
+
+## Problemas conhecidos {#known-issues}
+
+{{content-copy-known-issues}}
