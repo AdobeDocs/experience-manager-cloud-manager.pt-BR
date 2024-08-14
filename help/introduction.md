@@ -2,34 +2,34 @@
 title: Introdução ao Cloud Manager para AMS
 description: Comece aqui para conhecer o Cloud Manager para Adobe Managed Services (AMS) e como ele permite que as organizações gerenciem manualmente o Adobe Experience Manager na nuvem.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
 workflow-type: tm+mt
-source-wordcount: '1295'
-ht-degree: 88%
+source-wordcount: '1259'
+ht-degree: 56%
 
 ---
 
 
 # Introdução ao [!UICONTROL Cloud Manager] para AMS {#introduction-to-cloud-manager}
 
-Comece aqui para conhecer o Cloud Manager para Adobe Manage Services (AMS) e como ele permite que as organizações gerenciem manualmente o Adobe Experience Manager na nuvem.
+Comece aqui para conhecer o Cloud Manager para AMS (Adobe Managed Services) e como ele permite que as organizações gerenciem manualmente o Adobe Experience Manager na nuvem.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
 >title="Introdução ao Cloud Manager para AMS"
 >abstract="Permite que as organizações gerenciem manualmente o Adobe Experience Manager na nuvem. Inclui uma estrutura de integração contínua e entrega contínua (CI/CD) que permite que as equipes de TI e os parceiros de implementação acelerem a entrega de personalizações ou atualizações, sem comprometer o desempenho ou a segurança."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=pt-BR#cloud-manager" text="Criar programas"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=pt-BR#cloud-manager" text="Criar ambientes"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/cloud-manager/programs#cloud-manager" text="Criar programas"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/cloud-manager/environments#cloud-manager" text="Criar ambientes"
 
 ## Introdução {#introduction}
 
-O [!UICONTROL Cloud Manager] para Adobe Experience Manager oferece aos desenvolvedores a capacidade de criar experiências de cliente impactantes por meio de fluxos de trabalho simplificados, com base nas práticas recomendadas do Adobe Experience Manager. Os pipelines de CI/CD otimizados para o Adobe Experience Manager permitem mesclar facilmente os fluxos de trabalho de desenvolvimento com uma simples verificação de seu código, que pode então movimentar-se até estar pronto para produção. Durante a fase de criação, suas atualizações de código personalizadas são testadas minuciosamente em relação às práticas recomendadas para fornecer aplicativos confiáveis aos seus clientes. O Cloud Manager usa uma abordagem de API aberta e permite que você se integre aos seus sistemas sem interromper os processos e as ferramentas existentes.
+O [!UICONTROL Cloud Manager] para Adobe Experience Manager oferece aos desenvolvedores a capacidade de criar experiências de cliente impactantes por meio de fluxos de trabalho simplificados, com base nas práticas recomendadas do Adobe Experience Manager. Os pipelines de CI/CD otimizados para o Adobe Experience Manager permitem mesclar fluxos de trabalho de desenvolvimento com facilidade, basta verificar seu código, que pode então movimentar-se até estar pronto para produção. Durante a fase de criação, suas atualizações de código personalizadas são testadas minuciosamente em relação às práticas recomendadas para fornecer aplicativos confiáveis aos seus clientes. O Cloud Manager usa uma abordagem de API aberta e permite que você se integre aos seus sistemas sem interromper os processos e as ferramentas existentes.
 
 >[!NOTE]
 >
 >Esta documentação descreve especificamente os recursos e as funções do Cloud Manager para Adobe Managed Services (AMS).
 >
->A documentação equivalente para o AEM as a Cloud Service pode ser encontrada na [documentação do AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html?lang=pt-BR).
+>A documentação equivalente para o AEM as a Cloud Service pode ser encontrada na [documentação do AEM as a Cloud Service](https://experienceleague.adobe.com/br/docs/experience-manager-cloud-service/content/implementing/home).
 
 Com o Cloud Manager, sua equipe de desenvolvimento se beneficia dos seguintes recursos:
 
@@ -51,11 +51,11 @@ Veja a seguir em mais detalhes uma seleção dos principais recursos do Cloud Ma
 
 ### Interface de autoatendimento {#self-service-interface}
 
-A interface (UI) do [!UICONTROL Cloud Manager] permite acessar e gerenciar facilmente o ambiente de nuvem e o pipeline de CI/CD dos aplicativos do Adobe Experience Manager.
+A interface de usuário (UI) do [!UICONTROL Cloud Manager] permite que você acesse e gerencie facilmente o ambiente de nuvem e o pipeline de CI/CD dos seus aplicativos da Adobe Experience Manager.
 
-Os clientes definem os KPIs (Key Performance Indicators, Indicadores-chave de desempenho) específicos do aplicativo (como o pico de visualizações de página por minuto e o tempo de resposta esperado para o carregamento de uma página) que formam a base para medir uma implantação bem-sucedida. As funções e permissões de diferentes membros da equipe podem ser facilmente definidas. Embora a nova interface de autoatendimento coloque o controle em suas mãos, ela também oferece links para as práticas recomendadas e acesso a especialistas da Adobe que podem fornecer orientações oportunas, conforme necessário.
+Você define indicadores-chave de desempenho (KPIs) específicos do aplicativo, como pico de exibições de página por minuto ou tempo de resposta esperado de carregamento de página. Esses KPIs servem como base para medir o sucesso da implantação. As funções e permissões de diferentes membros da equipe podem ser facilmente definidas. A interface de autoatendimento oferece controle total. Ela também fornece links para recursos de práticas recomendadas e acesso a especialistas do Adobe para obter orientação quando necessário.
 
-Para explorar e começar a usar a interface do [!UICONTROL Cloud Manager], consulte o documento [Primeiro logon](/help/getting-started/first-time-login.md).
+Para explorar e começar a usar a interface do [!UICONTROL Cloud Manager], consulte [Primeiro logon](/help/getting-started/first-time-login.md).
 
 ### Pipeline de CI/CD {#ci-cd-pipeline}
 
@@ -63,7 +63,7 @@ Um dos principais recursos do [!UICONTROL Cloud Manager] é a capacidade de util
 
 Por meio da interface do [!UICONTROL Cloud Manager], é possível configurar e iniciar o pipeline de CI/CD. Como parte desse pipeline, uma varredura de código completa é executada para garantir que somente aplicativos de alta qualidade passem para o ambiente de produção.
 
-Para saber mais sobre como configurar o pipeline na interface do usuário do [!UICONTROL Cloud Manager], consulte os documentos [Configurando Pipelines de Produção](/help/using/production-pipelines.md) e [Configurando Pipelines de Não Produção](/help/using/non-production-pipelines.md).
+Para saber mais sobre como configurar o pipeline na interface do usuário do [!UICONTROL Cloud Manager], consulte [Configurando Pipelines de Produção](/help/using/production-pipelines.md) e [Configurando Pipelines de Não Produção](/help/using/non-production-pipelines.md).
 
 ### Modos de implantação flexíveis {#flexible-deployment-modes}
 
@@ -71,21 +71,21 @@ O [!UICONTROL Cloud Manager] oferece modos de implantação flexíveis e configu
 
 Com um modo de acionamento automático, o código é implantado automaticamente em um ambiente com base em eventos específicos, como a confirmação de código. Você também pode programar implantações de código durante períodos de tempo especificados, mesmo fora do horário comercial.
 
-Independentemente do acionador de implantação, verificações de qualidade são realizadas como parte da execução do pipeline de CI/CD, sempre que uma implantação é acionada. As verificações de qualidade incluem inspeções de código, testes de segurança e de desempenho. Todas elas são prontas para uso e não exigem nenhum esforço da sua parte ou dos seus parceiros.
+Independentemente do acionador de implantação, verificações de qualidade são realizadas como parte da execução do pipeline de CI/CD, sempre que uma implantação é acionada. As verificações de qualidade incluem inspeção de código, teste de segurança e teste de desempenho, sendo todos fornecidos prontos para uso, sem nenhum esforço da sua parte ou dos seus parceiros.
 
-Para saber mais sobre a implantação das verificações de código e qualidade, consulte o documento [Implantando Código](/help/using/code-deployment.md).
+Para saber mais sobre a implantação das verificações de código e qualidade, consulte [Implantação de código](/help/using/code-deployment.md).
 
 ## Recursos opcionais no Cloud Manager {#optional-features-in-cloud-manager}
 
-O Cloud Manager oferece recursos adicionais e avançados que podem trazer benefícios para seu projeto, dependendo da configuração e das necessidades específicas do ambiente. Se esses recursos forem de seu interesse, entre em contato com o engenheiro de sucesso do cliente (CSE) ou representante da Adobe para saber mais detalhes.
+O Cloud Manager oferece recursos adicionais e avançados, que podem ser benéficos para o seu projeto, dependendo da configuração e das necessidades específicas do ambiente. Se esses recursos forem de seu interesse, entre em contato com o engenheiro de sucesso do cliente (CSE) ou representante da Adobe para saber mais detalhes.
 
 ### Dimensionamento automático {#autoscaling}
 
 Quando o ambiente de produção é sujeito a uma carga excepcionalmente alta, o [!UICONTROL Cloud Manager] detecta a necessidade de capacidade adicional e a ativa automaticamente usando seu recurso de dimensionamento automático.
 
-Durante um evento desse tipo, o [!UICONTROL Cloud Manager] aciona automaticamente o processo de provisionamento de dimensionamento automático, envia uma notificação do evento de dimensionamento automático e ativa a capacidade adicional em uma questão de minutos. A capacidade adicional será provisionada no ambiente de produção, na(s) mesma(s) região(ões), e corresponderá às mesmas especificações do sistema que os nós do(a) Dispatcher/publicação em execução.
+Durante um evento desse tipo, o [!UICONTROL Cloud Manager] aciona automaticamente o processo de provisionamento de dimensionamento automático, envia uma notificação do evento de dimensionamento automático e ativa a capacidade adicional em uma questão de minutos. A capacidade adicional é provisionada no ambiente de produção, nas mesmas regiões, e corresponde às mesmas especificações do sistema que os nós do Dispatcher/publicação em execução.
 
-O recurso de dimensionamento automático se aplica somente à camada do(a) Dispatcher/publicação e será executado usando um método de dimensionamento horizontal, com no mínimo um segmento adicional de um par do(a) Dispatcher/publicação e até no máximo dez segmentos. Qualquer capacidade adicional fornecida será dimensionada manualmente em um período de dez dias úteis, conforme determinado pelo CSE (Customer Success Engineer, engenheiro especializado na fidelização de clientes).
+O recurso de dimensionamento automático se aplica à camada do Dispatcher/publicação, usando dimensionamento horizontal para adicionar de um a dez segmentos de pares do Dispatcher/publicação. Qualquer capacidade adicional fornecida é dimensionada manualmente em um período de dez dias úteis, conforme determinado pelo Adobe CSE (Customer Success Engineer, Engenheiro especializado na fidelização de clientes).
 
 >[!NOTE]
 >
@@ -97,10 +97,10 @@ A implantação azul/verde é uma técnica que reduz o tempo de inatividade e o 
 
 A qualquer momento, apenas um dos ambientes está ativo, com o ambiente ativo atendendo todo o tráfego de produção. Em geral, azul será o ambiente ativo no momento e o verde estará ocioso.
 
-* A implantação azul/verde é um complemento dos pipelines de CI/CD do Cloud Manager, no qual um segundo conjunto de instâncias de publicação e Dispatcher (verde) é criado e usado para implantações. As instâncias verdes são anexadas ao balanceador de carga de produção e as instâncias antigas (azul) são removidas e finalizadas.
-* Essa implementação de azul/verde trata as instâncias como transitórias e cada iteração de um pipeline azul/verde criará um novo conjunto de servidores de publicação e do Dispatcher.
-* Um balanceador de carga verde será criado como parte da configuração. Este balanceador de carga nunca mudará e é para o que você deve apontar seu URL verde ou de &quot;teste&quot;.
-* Durante uma implantação azul/verde, uma réplica exata dos níveis existentes de publicação/Dispatcher será criada.
+* A implantação azul/verde é um complemento dos pipelines de CI/CD do Cloud Manager, no qual um segundo conjunto de instâncias de publicação e Dispatcher (verde) é criado e usado para implantações. As instâncias verdes são anexadas ao balanceador de carga de produção e as instâncias antigas (azul) são removidas e encerradas.
+* Essa implementação de azul/verde trata as instâncias como transitórias e cada iteração de um pipeline azul/verde cria um novo conjunto de servidores de publicação e do Dispatcher.
+* Um balanceador de carga verde é criado como parte da configuração. Esse balanceador de carga nunca muda e é para o que você deve apontar seu URL verde ou de &quot;teste&quot;.
+* Durante uma implantação azul/verde, uma réplica exata dos níveis existentes do Dispatcher/publicação é criada.
 
 #### Fluxo de implantação azul/verde {#flow}
 
@@ -127,9 +127,9 @@ Se você estiver interessado na implantação azul/verde, considere os seguintes
 
 #### Requisitos e limitações {#limitations}
 
-* Azul/verde está disponível somente para pares de publicação/Dispatcher.
+* Azul/verde está disponível somente para pares Dispatcher/editor.
 * Visualizar pares do Dispatcher/publicação não faz parte de implantações azuis/verdes.
-* Cada par do Dispatcher/publicação é idêntico a qualquer outro par do Dispatcher/publicação.
+* Cada par de Dispatcher/publicação é idêntico a qualquer outro par de Dispatcher/editor.
 * Azul/verde está disponível somente no ambiente de produção.
 * Azul/verde está disponível no AWS e Azure.
-* Azul/verde não está disponível somente para clientes do Assets.
+* Azul/verde não está disponível somente para clientes Assets.

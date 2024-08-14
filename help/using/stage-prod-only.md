@@ -2,10 +2,10 @@
 title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 77eb1c824ba766e43dfd8e2b0f6f6edc71f043e5
+source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 31%
+source-wordcount: '932'
+ht-degree: 27%
 
 ---
 
@@ -65,32 +65,36 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 
 ### Pipelines somente de preparo {#stage-only}
 
-1. Depois de selecionar a opção **Adicionar pipeline de não produção**, a caixa de diálogo **Adicionar pipeline de não produção** é aberta.
-1. Para criar um pipeline somente de preparo, selecione o ambiente de preparo no campo **Ambientes de implantação elegíveis** para o seu pipeline. Complete os campos restantes e clique em **Continuar**.
+1. Após selecionar a opção **Adicionar pipeline de não produção**, a caixa de diálogo **Adicionar pipeline de não produção** é aberta.
+1. Para criar um pipeline somente de preparo, selecione o ambiente de preparo no campo **Ambientes de implantação qualificados** para seu pipeline.
+1. Preencha os campos restantes.
+1. Clique em **Continuar**.
 
    ![Criação de um pipeline somente de preparo](/help/assets/configure-pipelines/stage-only.png)
 
-1. Na guia **Teste de Preparo**, você pode definir o teste que deve ser executado no ambiente de preparo. Clique em **Salvar** para salvar o novo pipeline.
+1. Na guia **Teste de Preparo**, defina o teste a ser executado no ambiente de preparo.
+1. Clique em **Salvar**.
 
    ![Parâmetros de teste para um pipeline somente de preparo](/help/assets/configure-pipelines/stage-only-test.png)
 
 ### Pipelines somente de produção {#prod-only}
 
-1. Depois de selecionar a opção **Adicionar pipeline somente de produção**, a caixa de diálogo **Adicionar pipeline somente de produção** é aberta.
-1. Forneça um **Nome do pipeline**. As opções e funcionalidades restantes da caixa de diálogo funcionam da mesma forma que as opções encontradas na caixa de diálogo de criação de pipeline acoplado padrão. Clique em **Salvar** para salvar o pipeline.
+1. Após selecionar a opção **Adicionar pipeline somente de produção**, a caixa de diálogo **Adicionar pipeline somente de produção** é aberta.
+1. No campo **Nome do pipeline**, digite o nome desejado. As opções e funcionalidades restantes da caixa de diálogo funcionam da mesma forma que as opções encontradas na caixa de diálogo de criação de pipeline acoplado padrão.
+1. No canto inferior direito da caixa de diálogo, clique em **Salvar**.
 
    ![Criação de um pipeline somente de produção](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
 ## Executar pipelines somente de produção e somente de preparo {#running}
 
-Os pipelines somente de produção e somente de preparo são executados basicamente da mesma forma que [todos os outros pipelines são executados.](/help/using/managing-pipelines.md#running-pipelines) Consulte essa documentação para obter detalhes. No entanto, há dois novos recursos desses pipelines.
+Os pipelines somente de produção e somente de preparo são executados quase da mesma forma que [todos os outros pipelines são executados](/help/using/managing-pipelines.md#running-pipelines). Consulte essa documentação para obter detalhes. No entanto, há dois novos recursos desses pipelines.
 
-* Os pipelines somente de preparo e somente de produção oferecem um novo [modo de emergência](#emergency-mode) para permitir que o teste seja ignorado.
-* A execução do pipeline somente de produção pode ser acionada diretamente dos detalhes de execução de um [pipeline somente de preparo.](#stage-only-run)
+* Os pipelines somente de preparo e somente de produção oferecem um novo [modo de emergência](#emergency-mode) para ignorar o teste.
+* A execução do pipeline somente de produção pode ser acionada diretamente dos detalhes de execução de um [pipeline somente de preparo](#stage-only-run).
 
 ### Modo de emergência {#emergency-mode}
 
-Sempre que você iniciar pipelines online somente de produção e de preparo, será solicitado que confirme o início, bem como como como ele será iniciado.
+Ao iniciar pipelines online somente de produção e de preparo, você será solicitado a confirmar o início e como ele é iniciado.
 
 * **Modo Normal** é uma execução padrão e inclui etapas de teste de preparo.
 * **Modo de emergência** ignora etapas de teste de estágio.
@@ -103,12 +107,12 @@ Um pipeline somente de preparo é executado quase da mesma maneira que os pipeli
 
 ![Execução de pipeline somente de preparo](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Clicar em **Promover compilação** solicita que você confirme a execução do pipeline somente de estágio relacionado normalmente ou no [modo de emergência.](#emergency-mode)
+Clicar em **Promover compilação** solicita que você confirme a execução do pipeline somente de estágio relacionado normalmente ou no [modo de emergência](#emergency-mode).
 
 Se não existir um pipeline somente de produção, você será solicitado a criar um.
 
 ### Pipelines somente de produção {#prod-only-run}
 
-Para pipelines somente de produção, é importante identificar os artefatos de origem que devem ser implantados na produção. Esses detalhes podem ser encontrados na etapa **Preparação de artefato**. É possível navegar até essas execuções para obter mais detalhes e logs.
+Para pipelines somente de produção, identifique os artefatos de origem que deseja implantar na produção. Esses detalhes são encontrados na etapa **Preparação de Artefato**. Você pode navegar até essas execuções para obter mais detalhes e logs.
 
 ![Detalhes do artefato](/help/assets/configure-pipelines/prod-only-pipeline-run.png)
