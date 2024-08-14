@@ -1,15 +1,15 @@
 ---
-title: Configuração de pipelines de não produção
+title: Configurar pipelines de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 94%
+source-wordcount: '709'
+ht-degree: 91%
 
 ---
 
-# Configuração de pipelines de não produção {#configuring-non-production-pipelines}
+# Configurar pipelines de não produção {#configuring-non-production-pipelines}
 
 Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código. Se desejar ter uma visão geral mais conceitual de como os pipelines funcionam no Cloud Manager, consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md).
 
@@ -33,7 +33,7 @@ Existem dois tipos de pipelines de não produção:
 
 ## Adicionar um pipeline de não produção {#add-non-production-pipeline}
 
-Depois de configurar seu programa e ter pelo menos um ambiente que utiliza a interface do Cloud Manager, você estará pronto para adicionar um pipeline de não produção seguindo essas etapas.
+Depois de configurar seu programa e ter pelo menos um ambiente usando a interface do usuário do Cloud Manager, você estará pronto para adicionar um pipeline de não produção seguindo essas etapas.
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selecione a organização e o programa apropriados.
 

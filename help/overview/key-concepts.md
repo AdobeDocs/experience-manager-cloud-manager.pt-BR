@@ -2,10 +2,10 @@
 title: Principais conceitos
 description: Como qualquer ferramenta avançada, o Cloud Manager contém muitos conceitos e termos. Este documento resume alguns dos mais importantes para se começar a usar o Cloud Manager.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 70%
+source-wordcount: '414'
+ht-degree: 49%
 
 ---
 
@@ -16,9 +16,9 @@ Como qualquer ferramenta avançada, o Cloud Manager contém muitos conceitos e t
 
 ## Aplicativo {#application}
 
-Um aplicativo é o conjunto de personalizações e configurações criadas por um(a) cliente para adaptar a [solução](#solution) subjacente (como AEM Sites ou AEM Assets) para seus casos de uso e necessidades específicas. Um aplicativo é uma unidade lógica que pode ser composta por vários [artefatos](#artifact).
+Um aplicativo é um conjunto de personalizações e configurações criadas por um cliente para adaptar a [solução](#solution) subjacente (como AEM Sites ou AEM Assets) aos seus casos de uso e necessidades específicas. Um aplicativo é uma unidade lógica que pode ser composta por vários [artefatos](#artifact).
 
-Um exemplo é o fictício [aplicativo de estilo de vida WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=pt-BR).
+Um exemplo é o fictício [aplicativo de estilo de vida WKND](https://experienceleague.adobe.com/pt-br/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview).
 
 ## Artefato {#artifact}
 
@@ -30,7 +30,7 @@ Um repositório de artefatos é um local onde [artefatos](#artifact) específico
 
 ## Ambiente {#environment}
 
-Um ambiente é um cluster único de máquinas virtuais em um [programa](#program). Para AEM, ele é composto por uma instância de criação (opcionalmente com uma instância de criação adicional em espera), zero ou mais instâncias de publicação, uma ou mais instâncias do Dispatcher e um balanceador de carga.
+Um ambiente é um cluster único de máquinas virtuais em um [programa](#program). Para o AEM, esse ambiente é composto por uma instância de criação (opcionalmente com uma instância de criação adicional em espera), zero ou mais instâncias de publicação, uma ou mais instâncias do Dispatcher e um balanceador de carga.
 
 ## Repositório Git {#git-repository}
 
@@ -46,7 +46,7 @@ Uma organização é uma construção da Adobe que representa um cliente corpora
 
 ## Pipeline {#pipeline}
 
-Um pipeline é um conjunto de etapas de implantação que são executadas em sequência.
+Um pipeline é um conjunto de etapas de implantação que são executadas ou &quot;executadas&quot; em sequência.
 
 ## Produto {#product}
 

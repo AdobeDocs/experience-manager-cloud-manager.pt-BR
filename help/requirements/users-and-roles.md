@@ -2,10 +2,10 @@
 title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários e funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 84%
+source-wordcount: '768'
+ht-degree: 81%
 
 ---
 
@@ -42,7 +42,7 @@ Essa tabela resume as funções.
 >
 >A persona de desenvolvedor no Admin Console não está relacionada à função de desenvolvedor do [!UICONTROL Cloud Manager].
 
-## Uso do Admin Console para criar um perfil {#using-admin-console-to-create-a-profile}
+## Utilização do Admin Console para criar um perfil {#using-admin-console-to-create-a-profile}
 
 As funções do [!UICONTROL Cloud Manager] são gerenciadas no Admin Console. Associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager].
 

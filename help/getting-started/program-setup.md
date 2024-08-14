@@ -2,10 +2,10 @@
 title: Configuração do programa
 description: Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 91%
+source-wordcount: '582'
+ht-degree: 86%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 91%
 
 Após a integração, o proprietário da empresa conclui a configuração inicial do programa, incluindo a definição da descrição do programa e a definição dos indicadores-chave de desempenho (KPIs), que são usados para testes de desempenho.
 
-## Instalação do Programa com [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
+## Configuração do programa com [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
 Siga estas etapas para configurar o programa e definir KPIs.
 
@@ -50,7 +50,7 @@ Siga estas etapas para configurar o programa e definir KPIs.
 
 Seu programa será criado. Pode levar vários minutos para que os recursos sejam provisionados antes que o programa esteja pronto para uso.
 
-## Edição de um programa {#editing-program}
+## Editar um programa {#editing-program}
 
 É possível editar programas depois que eles forem configurados. Siga estas etapas para editar um programa.
 
@@ -58,7 +58,7 @@ Seu programa será criado. Pode levar vários minutos para que os recursos sejam
 
 1. Navegue até o programa na tela inicial do Cloud Manager.
 
-1. Clique em **Editar programa** para atualizar ou modificar seu programa a partir da página **Visão geral**.
+1. Clique em **Editar programa** para atualizar ou modificar seu programa na página **Visão geral**.
 
    ![Opção Editar programa](/help/assets/set-up-program/edit-program1.png)
 
@@ -66,13 +66,13 @@ Seu programa será criado. Pode levar vários minutos para que os recursos sejam
 
    ![Caixa de diálogo Editar programa](/help/assets/set-up-program/edit-program-general.png)
 
-1. Clique em **Atualizar** para salvar as alterações.
+1. Clique em **Atualizar** para salvar suas alterações.
 
 Observe que as alterações são salvas imediatamente no Cloud Manager, mas não serão refletidas em seus ambientes até a próxima execução do pipeline.
 
 Se você ainda não criou um pipeline, consulte os documentos [Configurando pipelines de produção](/help/using/production-pipelines.md) e [Configurando pipelines de não produção](/help/using/non-production-pipelines.md).
 
-## Alternância entre programas {#swithing-programs}
+## Alternar entre programas {#swithing-programs}
 
 Ao trabalhar em um programa, é possível mudar rapidamente para outro programa sem voltar à página de visão geral do Cloud Manager.
 

@@ -2,10 +2,10 @@
 title: Notificações
 description: Saiba como o Cloud Manager notifica você sobre eventos importantes.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 94%
+source-wordcount: '564'
+ht-degree: 79%
 
 ---
 
@@ -36,17 +36,17 @@ A guia **Avisos** inclui avisos de produto da Adobe. Os avisos dizem respeito ao
 
 ![Barra lateral de notificações](/help/assets/notificaitons-announcements.png)
 
-Clique em uma notificação ou anúncio para exibir os detalhes. As notificações vinculadas a atividades como implantações de pipeline levam você aos detalhes dessa atividade, como a janela de execução do pipeline.
+Clique em uma notificação ou anúncio para exibir seus detalhes. As notificações vinculadas a atividades como implantações de pipeline levam você aos detalhes dessa atividade, como a janela de execução do pipeline.
 
 Clique na opção **Exibir tudo** na parte inferior do painel para exibir todos os avisos na caixa de entrada.
 
-Clique na opção **Marcar tudo como lido** na parte inferior do painel para marcar todas as notificações não lidas como lidas e limpar o símbolo do ícone de sino.
+Clique na opção **Marcar tudo como lido** na parte inferior do painel para marcar todas as notificações não lidas como lidas e remover o símbolo do ícone de sino.
 
 ## Configuração de notificação {#configuration}
 
 Você pode personalizar como recebe notificações e quais notificações recebe.
 
-Clique no ícone de engrenagem na parte inferior da barra lateral de notificações.
+Clique no ícone de engrenagem na parte superior da barra lateral de notificações.
 
 ![Ícone Configurações de notificação](/help/assets/notifications-configuration.png)
 

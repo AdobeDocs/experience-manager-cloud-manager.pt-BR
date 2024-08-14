@@ -2,10 +2,10 @@
 title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
 source-wordcount: '878'
-ht-degree: 81%
+ht-degree: 72%
 
 ---
 
@@ -21,7 +21,7 @@ Saiba como dividir implantações de preparo e produção usando pipelines dedic
 
 Os ambientes de preparo e produção são totalmente combinados. Por padrão, as implantações para eles estão vinculadas a um único pipeline. É um pipeline de implantação inserido nos ambientes de preparo e produção desse programa. Embora esse acoplamento seja normalmente adequado, há certos casos de uso em que há desvantagens:
 
-* Se quiser implantar somente em preparo, você só poderá fazer isso rejeitando a etapa **Promover para produção** no pipeline. No entanto, a execução será marcada como cancelada.
+* Se você quiser implantar somente em preparo, só poderá fazer isso rejeitando a etapa **Promover para Produção** do pipeline. No entanto, a execução será marcada como cancelada.
 * Se você quiser implantar o código mais recente em um ambiente de preparo para produção, será necessário reimplantar todo o pipeline, incluindo a implantação de preparo, mesmo que nenhum código tenha sido alterado lá.
 * Como os ambientes não podem ser atualizados durante as implantações, se você quiser pausar e testar o ambiente de preparo por vários dias antes de promover para produção, não será possível atualizar o ambiente de produção. Isso torna tarefas não dependentes, como a atualização de [variáveis de ambiente](/help/getting-started/build-environment.md#environment-variables), impossíveis.
 
@@ -81,7 +81,7 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 
    ![Criação de um pipeline somente de produção](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
-## Execução de pipelines somente de produção e somente de preparo {#running}
+## Executar pipelines somente de produção e somente de preparo {#running}
 
 Os pipelines somente de produção e somente de preparo são executados da mesma forma que [todos os outros pipelines são executados](/help/using/managing-pipelines.md#running-pipelines). Consulte essa documentação para obter detalhes.
 

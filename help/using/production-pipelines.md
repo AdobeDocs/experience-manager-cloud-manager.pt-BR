@@ -1,16 +1,16 @@
 ---
-title: Configuração de pipelines de produção
+title: Configurar pipelines de produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 91%
+source-wordcount: '1285'
+ht-degree: 87%
 
 ---
 
 
-# Configuração de pipelines de produção {#configuring-production-pipelines}
+# Configurar pipelines de produção {#configuring-production-pipelines}
 
 Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código. se desejar ter uma visão geral mais conceitual de como os pipelines funcionam no Cloud Manager, consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md).
 
@@ -33,7 +33,7 @@ O **Gerenciador de implantação** é responsável pela configuração do pipeli
 >
 >Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída.
 
-## Adição de um novo pipeline de produção {#adding-production-pipeline}
+## Adicionar um novo pipeline de produção {#adding-production-pipeline}
 
 Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu programa e definir pelo menos um ambiente, você estará pronto para adicionar um pipeline de produção.
 
@@ -124,7 +124,7 @@ Depois de usar a interface do [!UICONTROL Cloud Manager] para configurar seu pro
 
          * **Configuração do Dispatcher** - Define a configuração do Dispatcher para o ambiente de produção. As opções são as mesmas do ambiente de preparo.
 
-1. Clique em **Continuar** para avançar para a guia **Teste de preparo**, onde é possível configurar o teste de desempenho do AEM Sites e do AEM Assets, dependendo das licenças de produto que você possui.
+1. Clique em **Continuar** para avançar para a guia **Teste de Preparo**, onde é possível configurar o Teste de Desempenho do AEM Sites e do AEM Assets, dependendo das licenças de produto que você possui.
 
    >[!TIP]
    >

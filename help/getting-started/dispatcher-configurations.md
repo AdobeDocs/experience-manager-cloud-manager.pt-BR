@@ -2,10 +2,10 @@
 title: Configurações do Dispatcher
 description: Saiba como implantar arquivos de configuração do Dispatcher usando o Cloud Manager.
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 100%
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ Projetos gerados pelo Cloud Manager usando o [assistente de criação de projeto
 
 Após a implantação em uma instância do Dispatcher, o conteúdo desses diretórios na instância do Dispatcher é substituído por aqueles no repositório Git. Como os arquivos de configuração do servidor da Web e do Dispatcher geralmente exigem informações específicas do ambiente para que esse recurso seja usado corretamente, primeiro você precisará trabalhar com os engenheiros de sucesso do cliente (CSE) para definir essas variáveis de ambiente em `/etc/sysconfig/httpd`.
 
-## Configuração do Dispatcher para clientes do Managed Services existentes {#steps-for-configuring-dispatcher}
+## Configuração do Dispatcher para clientes de serviços gerenciados existentes {#steps-for-configuring-dispatcher}
 
 Siga estas etapas abaixo para concluir a configuração inicial do Dispatcher.
 
