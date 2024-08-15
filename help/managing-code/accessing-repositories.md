@@ -2,47 +2,45 @@
 title: Informações de acesso do repositório
 description: Saiba como acessar e gerenciar o repositório Git gerenciado pela Adobe usando o gerenciamento de conta Git por autoatendimento do Cloud Manager.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 82%
+source-wordcount: '361'
+ht-degree: 37%
 
 ---
 
-# Informações de acesso do repositório  {#accessing-repos}
+# Informações de acesso do repositório {#accessing-repos}
 
-Saiba como acessar e gerenciar o repositório Git gerenciado pela Adobe usando o gerenciamento de conta Git por autoatendimento do Cloud Manager.
+Saiba como acessar e gerenciar repositórios Git gerenciados pelo Adobe usando o gerenciamento de conta Git por autoatendimento no Cloud Manager.
 
 ## Acessar informações do repositório na página Visão geral {#overview-page}
 
-O Cloud Manager facilita a recuperação de informações de acesso ao repositório para repositórios gerenciados pela Adobe usando o botão **Acessar informações do repositório** disponível em destaque no cartão do pipeline.
-
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
-1. Navegue até o cartão **Pipelines** na página **Visão geral do programa**.
+1. Navegue até o cartão **Pipelines** a partir da página **Visão geral do programa**.
 
    ![Botão Acessar informações do repositório no cartão Ambientes](assets/pipelines-card.png)
 
-1. Clique no botão **Acessar Informações do Repositório** para abrir a caixa de diálogo e a exibição **Informações do Repositório**:
+1. Clique em **Acessar informações do repositório**. Na caixa de diálogo **Informações do Repositório para...**, você pode exibir o seguinte:
 
    * O nome de usuário do Git.
-   * A senha do git.
-   * A URL do repositório Git do Cloud Manager.
-   * Comandos git pré-construídos para adicionar rapidamente um controle remoto ao seu repositório git e enviar código.
+   * A senha do Git.
+   * O URL para o repositório Git do Cloud Manager.
+   * Comandos Git pré-criados para adicionar um remoto rapidamente ao repositório Git e enviar o código.
 
    ![Janela de informações do repositório](assets/access-repo-info.png)
 
-1. Para acessar a senha, uma nova senha deve ser gerada. Para fazer isso, clique no botão **Gerar senha**.
+1. Para acessar a senha, uma nova senha deve ser gerada. Clique em **`Generate password`**.
 
-1. Confirme a geração de senha na caixa de diálogo **Tem certeza...** clicando em **Gerar senha**.
+1. Na caixa de diálogo **Tem certeza...**, confirme a geração de senha clicando em **Gerar senha**.
 
    ![Confirmar geração de senha](assets/confirm-password-generation.png)
 
-1. A senha é gerada e fica visível para cópia no campo **Senha**.
+1. No campo **Senha**, a senha é gerada. Clique no ícone de copiar para a área de transferência.
 
-   * Gerar uma senha invalidará a senha anterior.
-   * O Cloud Manager não salvará a senha. É sua responsabilidade guardar esta senha com segurança.
-   * Como o Cloud Manager não salva a senha, se você a perder, deverá gerar uma nova senha.
+   * Gerar uma senha invalida a senha anterior.
+   * O Cloud Manager não salva sua senha de acesso. Certifique-se de salvar esta senha com segurança.
+   * Se você perder a senha, deverá gerar uma nova.
 
    ![Exemplo de senha gerada](assets/generated-password.png)
 
@@ -50,15 +48,15 @@ Usando essas credenciais, o usuário pode clonar uma cópia local do repositóri
 
 >[!NOTE]
 >
->* A opção **Acessar informações do repositório** está visível para usuários com funções de **Desenvolvedor** ou **Gerente de implantação**.
+>* A opção **Acessar Informações do Repositório** está visível para usuários com a função de **Desenvolvedor** ou a função de **Gerente de Implantação**, ou ambas.
 >* O botão **Acessar informações do repositório** exibe apenas as informações de acesso ao repositório para repositórios gerenciados pela Adobe. O acesso a informações sobre [repositórios privados](private-repositories.md) não está disponível no Cloud Manager.
 
-## Acesso a informações do repositório na janela Repositórios {#repositories-window}
+## Acessar informações do repositório na janela Repositórios {#repositories-window}
 
-Um botão **Acessar informações do repositório** também está disponível na barra de ferramentas da janela [**Repositórios**](managing-repositories.md). Ele exibe as mesmas informações sobre o acesso a repositórios gerenciados por Adobe.
+O botão **Acessar Informações do Repositório** também está disponível na barra de ferramentas da janela [**Repositórios**](managing-repositories.md). Ele exibe as mesmas informações sobre o acesso a repositórios gerenciados por Adobe.
 
-## Revogação de uma senha de acesso {#revoke-password}
+## Revogar uma senha de acesso {#revoke-password}
 
-Você pode revogar uma senha de acesso a qualquer momento. Para fazer isso, [crie um tíquete de suporte para esta solicitação](https://experienceleague.adobe.com/pt-br?support-solution=Experience+Manager&amp;support-tab=home#support).
+Você pode revogar uma senha de acesso a qualquer momento. [Crie um tíquete de suporte para essa solicitação](https://experienceleague.adobe.com/pt-br?support-solution=Experience+Manager&amp;support-tab=home#support).
 
-O tíquete será tratado com alta prioridade e deverá ser revogado dentro de um dia.
+O ticket é tratado com alta prioridade e normalmente é revogado dentro de um dia.

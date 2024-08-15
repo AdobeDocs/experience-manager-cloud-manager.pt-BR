@@ -2,10 +2,10 @@
 title: Introdução ao Cloud Manager para AMS
 description: Comece aqui para conhecer o Cloud Manager para Adobe Managed Services (AMS) e como ele permite que as organizações gerenciem manualmente o Adobe Experience Manager na nuvem.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
+source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 56%
+source-wordcount: '1256'
+ht-degree: 48%
 
 ---
 
@@ -39,11 +39,9 @@ Com o Cloud Manager, sua equipe de desenvolvimento se beneficia dos seguintes re
 
 * Conectividade de API para complementar processos DevOps existentes.
 
-* Dimensionamento automático que detecta de forma inteligente a necessidade de maior capacidade e ativa automaticamente outros segmentos do Dispatcher e de publicação.
+* Dimensionamento automático que detecta de forma inteligente a necessidade de maior capacidade e ativa automaticamente outros segmentos do Dispatcher/publicação.
 
-Essa imagem ilustra o fluxo do processo de CI/CD usado no [!UICONTROL Cloud Manager]:
-
-![Fluxo de CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png)
+![Fluxo de CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png)O fluxo do processo de CI/CD usado no [!UICONTROL Cloud Manager].
 
 ## Principais recursos no [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
