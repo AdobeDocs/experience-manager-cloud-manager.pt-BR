@@ -2,10 +2,10 @@
 title: Configurações do Dispatcher
 description: Saiba como implantar arquivos de configuração do Dispatcher usando o Cloud Manager.
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 91%
+source-wordcount: '575'
+ht-degree: 48%
 
 ---
 
@@ -16,13 +16,13 @@ Saiba como implantar arquivos de configuração do Dispatcher usando o Cloud Man
 
 ## Implantação de configurações do Dispatcher com o Cloud Manager {#deploying-dispatcher-configurations}
 
-O Cloud Manager é capaz de implantar arquivos de configuração do servidor da Web e do Dispatcher, contanto que eles estejam armazenados no repositório Git ao lado de pacotes de conteúdo normais do AEM.
+O Cloud Manager é capaz de implantar arquivos de configuração do servidor da Web e do Dispatcher, supondo que eles estejam armazenados no repositório Git ao lado de pacotes de conteúdo normais do AEM.
 
-Para aproveitar esse recurso, o build do Maven deve produzir um arquivo .zip que contenha pelo menos dois diretórios: `conf` e `conf.d`. Esse arquivo .zip pode ser produzido usando o `maven-assembly-plugin`.
+Para aproveitar esse recurso, a compilação Maven deve produzir um arquivo .zip, que contenha pelo menos dois diretórios: `conf` e `conf.d`. Esse arquivo .zip pode ser produzido usando o `maven-assembly-plugin`.
 
-Projetos gerados pelo Cloud Manager usando o [assistente de criação de projeto](/help/getting-started/using-the-wizard.md) integrado têm a estrutura correta do projeto Maven criada automaticamente. Esse é o caminho recomendado se você for novo no Adobe Managed Services (AMS).
+Projetos gerados pelo Cloud Manager usando o [assistente de criação de projeto](/help/getting-started/using-the-wizard.md) integrado têm a estrutura correta do projeto Maven criada automaticamente. Esse caminho é recomendado se você for novo no Adobe Managed Services (AMS).
 
-Após a implantação em uma instância do Dispatcher, o conteúdo desses diretórios na instância do Dispatcher é substituído por aqueles no repositório Git. Como os arquivos de configuração do servidor da Web e do Dispatcher geralmente exigem informações específicas do ambiente para que esse recurso seja usado corretamente, primeiro você precisará trabalhar com os engenheiros de sucesso do cliente (CSE) para definir essas variáveis de ambiente em `/etc/sysconfig/httpd`.
+Quando você implanta em uma instância do Dispatcher, os diretórios na instância são substituídos por esses diretórios do repositório Git. Como os arquivos de configuração do servidor Web e do Dispatcher geralmente exigem detalhes específicos do ambiente, você deve colaborar com os engenheiros de sucesso do cliente (CSE) para definir as variáveis de ambiente apropriadas no `/etc/sysconfig/httpd` antes de usar esse recurso corretamente.
 
 ## Configuração do Dispatcher para clientes de serviços gerenciados existentes {#steps-for-configuring-dispatcher}
 
@@ -38,7 +38,7 @@ Siga estas etapas abaixo para concluir a configuração inicial do Dispatcher.
 
 >[!NOTE]
 >
->A migração das configurações do Dispatcher e do servidor da Web para o repositório Git pode ser feita durante a integração do Cloud Manager, mas também pode ser realizada posteriormente.
+>A migração das configurações do Dispatcher e do servidor da Web para o repositório Git pode ser feita durante a integração do Cloud Manager, mas também pode ser feita posteriormente.
 
 ### Exemplo {#example}
 
@@ -48,7 +48,7 @@ A estrutura de arquivos e diretórios específica pode variar de acordo com as e
 
    Você pode usar qualquer nome aqui, mas o nome do diretório criado nesta etapa deve ser o mesmo que o nome usado na etapa 6.
 
-1. Esse subdiretório conterá um módulo Maven que cria o arquivo .zip do Dispatcher usando o plug-in Maven Assembly. Para iniciar, no diretório `dispatcher`, crie um arquivo `pom.xml` com este conteúdo, alterando a referência `parent`, o `artifactId` e o `name` conforme necessário.
+1. Esse subdiretório contém um módulo Maven que cria o arquivo .zip do Dispatcher usando o plug-in Maven Assembly. No diretório `dispatcher`, crie um arquivo `pom.xml` com este conteúdo, alterando a referência de `parent`, `artifactId` e `name` conforme necessário.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -113,7 +113,7 @@ A estrutura de arquivos e diretórios específica pode variar de acordo com as e
    </assembly>
    ```
 
-1. Crie um subdiretório chamado `src` (conforme referenciado no descritor do Assembly acima, na linha 11) dentro do subdiretório do Dispatcher para armazenar as configurações reais do Apache e do Dispatcher. Dentro deste diretório `src`, crie diretórios chamados `conf`, `conf.d`, `conf.dispatcher.d` e `conf.modules.d`.
+1. Crie um subdiretório chamado `src` (conforme referenciado no descritor do assembly acima, na linha 11) dentro do subdiretório do Dispatcher para armazenar as configurações reais do Apache e do Dispatcher. Dentro deste diretório `src`, crie diretórios chamados `conf`, `conf.d`, `conf.dispatcher.d` e `conf.modules.d`.
 
 1. Preencha os diretórios `conf`, `conf.d`, `conf.dispatcher.d` e `conf.modules.d` com seus arquivos de configuração. Por exemplo, a configuração padrão consiste nesses arquivos e links simbólicos.
 
@@ -190,9 +190,9 @@ A estrutura de arquivos e diretórios específica pode variar de acordo com as e
            └── 02-dispatcher.conf
    ```
 
-1. Por fim, no arquivo `pom.xml`, na raiz do seu projeto, adicione um elemento `<module>` para incluir o módulo do Dispatcher.
+1. Finalmente, no arquivo `pom.xml`, na raiz do seu projeto, adicione um elemento `<module>` para incluir o módulo Dispatcher.
 
-   Por exemplo, se a lista de módulos existente for
+   Por exemplo, se sua lista de módulos existente for a seguinte:
 
    ```xml
        <modules>
@@ -202,7 +202,7 @@ A estrutura de arquivos e diretórios específica pode variar de acordo com as e
        </modules>
    ```
 
-   Você deve alterá-la para
+   Altere para o seguinte:
 
    ```xml
        <modules>

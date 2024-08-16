@@ -2,10 +2,10 @@
 title: Configurar pipelines de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 91%
+source-wordcount: '685'
+ht-degree: 55%
 
 ---
 
@@ -24,12 +24,12 @@ Este documento se concentra em pipelines de não produção. Para obter detalhes
 
 Existem dois tipos de pipelines de não produção:
 
-* **Pipelines de qualidade do código** - Esses executam verificações de qualidade do código em uma ramificação Git e executam as etapas de qualidade do código e compilação.
-* **Pipelines de implantação** - além de executar as etapas de criação e qualidade do código, como os pipelines de qualidade de código, esses pipelines implantam o código em um ambiente de não produção.
+* **Pipelines de qualidade do código** - Eles executam verificações de qualidade do código em uma ramificação Git e executam as etapas de qualidade do código e compilação.
+* **Pipelines de implantação** - Junto com a execução das etapas de compilação e qualidade do código, como os pipelines de qualidade do código, esses pipelines também implantam o código em um ambiente de não produção.
 
 >[!NOTE]
 >
->Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída. Consulte o documento [Repositórios do Cloud Manager](/help/managing-code/managing-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
+>Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída. Consulte [Repositórios do Cloud Manager](/help/managing-code/managing-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
 ## Adicionar um pipeline de não produção {#add-non-production-pipeline}
 
@@ -51,36 +51,37 @@ Depois de configurar seu programa e ter pelo menos um ambiente usando a interfac
 
 1. Forneça o repositório onde o pipeline deve recuperar o código.
 
-   * **Repositório** - essas opções definem a partir de qual repositório Git o pipeline deve recuperar o código.
-   * **Ramificação Git** - essa opção define de qual ramificação o pipeline selecionado deve recuperar o código.
+   * **Repositório** - Define de qual repositório Git o pipeline deve recuperar o código.
+   * **Ramificação Git** - Define de qual ramificação no Git o pipeline selecionado deve recuperar o código.
 
 1. Defina suas opções de implantação.
 
    1. Em **Acionador de implantação**, defina qual evento ativa o pipeline.
 
-      * **Manual** - use essa opção para iniciar manualmente o pipeline.
-      * **Sobre alterações do Git** - essas opções iniciam o pipeline sempre que as confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
+      * **Manual** - Permite iniciar manualmente o pipeline.
+      * **Sobre Alterações do Git** - Inicia o pipeline quando confirmações são adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
 
    1. Para pipelines de implantação, em **Comportamento de falhas de métricas importantes**, defina o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade.
 
-      * **Pergunte sempre** - é a configuração padrão e requer intervenção manual em qualquer falha importante.
-      * **Falhar imediatamente** - Se selecionado, o pipeline será cancelado sempre que ocorrer uma falha importante. É como emular um usuário que rejeita manualmente cada falha.
-      * **Continuar imediatamente** - Se selecionado, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É como emular um usuário que aprova manualmente cada falha.
+      * **Pergunte sempre** - A configuração padrão e requer intervenção manual em todas as falhas importantes.
+      * **Falha imediata** - O pipeline é cancelado sempre que ocorre uma falha importante. É como emular um usuário que rejeita manualmente cada falha.
+      * **Continuar imediatamente** - O pipeline continua automaticamente sempre que ocorre uma falha importante. É como emular um usuário que aprova manualmente cada falha.
 
-   1. **Configuração do Dispatcher** - O **Gerenciador de implantação** pode configurar um conjunto de caminhos de conteúdo que serão invalidados ou removidos do cache do Dispatcher do AEM quando um pipeline for executado. Essas ações de cache serão executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar:
+   1. **Configuração do Dispatcher** - O **Gerenciador de Implantação** pode configurar um conjunto de caminhos de conteúdo que são invalidados ou removidos do cache do AEM Dispatcher quando um pipeline é executado. Essas ações de cache são executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar:
 
       1. Em **CAMINHO**, forneça um caminho de conteúdo.
       1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.
 
          * **Limpeza** - Executa uma exclusão do cache.
          * **Invalidar** - Executa uma invalidação de cache, semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
+
       1. Clique em **Adicionar caminho** para adicionar o caminho especificado. É possível adicionar até 100 caminhos por ambiente.
 
-1. Clique em **Salvar** para salvar o pipeline.
+1. Clique em **Salvar**.
 
 ## Próximas etapas {#the-next-steps}
 
-Depois de configurar o pipeline, é necessário implantar o código. Consulte [Implantação do código](/help/using/code-deployment.md) para obter mais detalhes.
+Depois de configurar o pipeline, você pode implantar seu código. Consulte [Implantação do código](/help/using/code-deployment.md) para obter mais detalhes.
 
 ## Tutorial em vídeo {#video-tutorial}
 
