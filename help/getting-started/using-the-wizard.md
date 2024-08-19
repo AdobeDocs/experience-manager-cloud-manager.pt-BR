@@ -1,44 +1,44 @@
 ---
-title: Usando o assistente para novo projeto
+title: Usar o assistente para novo projeto
 description: Siga esta página para saber como usar o assistente para criar um projeto de aplicativo do AEM
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 89%
+source-wordcount: '321'
+ht-degree: 33%
 
 ---
 
 
-# Usando o assistente para novo projeto {#using-the-wizard}
+# Usar o assistente para Novo projeto {#using-the-wizard}
 
-Quando estiver integrado ao Cloud Manager como um novo cliente, você receberá um repositório Git vazio. Para ajudar você a começar, o Cloud Manager oferece um assistente para criar um projeto do AEM mínimo com base no [Arquétipo de projeto do AEM](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) como ponto de partida.
+Quando você foi integrado ao Cloud Manager como um novo cliente, recebeu um repositório Git vazio. Para ajudar você a começar, o Cloud Manager oferece um assistente para criar um projeto do AEM mínimo com base no [Arquétipo de projeto do AEM](https://github.com/adobe/aem-project-archetype) como ponto de partida.
 
 Siga estas etapas para criar um projeto do AEM usando o assistente.
 
 1. Faça logon no Cloud Manager, em [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com), e selecione a organização apropriada.
 
-1. Caso ainda não o tenha feito, [crie seu programa](program-setup.md). Quando o programa for criado, a Cloud Manager reconhece que os repositórios ainda não estão configurados e um cartão de chamada para ação especial é exibido na tela **Visão geral**.
+1. Caso ainda não o tenha feito, [crie seu programa](program-setup.md). Quando o programa é criado, o Cloud Manager detecta que os repositórios ainda não estão configurados. Um cartão de chamada para ação especial é exibido na tela **Visão geral**.
 
    ![Criar CTA de projeto](/help/assets/image2018-10-3_14-29-44.png)
 
 1. Clique em **Criar** para iniciar o assistente e fornecer valores importantes.
 
-   * **Título** - Este é o título do projeto e, por padrão, é definido como o nome do programa.
-   * **Nome da nova ramificação** - Essa é a ramificação inicial dos repositórios Git e, por padrão, será `main`.
+   * **Título** - O título do projeto. Por padrão, é definido como o nome do programa.
+   * **Nome da nova ramificação** - A ramificação inicial dos repositórios Git. Por padrão, é `main`.
 
    ![Valores do projeto](/help/assets/screen_shot_2018-10-08at55825am.png)
 
-1. A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior. Em sua forma expandida, a caixa de diálogo mostra todos os parâmetros de configuração do arquétipo de projeto do AEM. Esses parâmetros têm valores padrão que são gerados com base no **Título** que você já forneceu e não requerem modificação. Eles são explicados aqui para seu conhecimento.
+1. A caixa de diálogo tem uma gaveta que pode ser aberta clicando na alça em direção à parte inferior. Em sua forma expandida, a caixa de diálogo mostra todos os parâmetros de configuração do arquétipo de projeto AEM. Esses parâmetros têm valores padrão que são gerados com base no **Título** que você já forneceu e não requerem modificação. Eles são explicados aqui para seu conhecimento.
 
    ![Parâmetros detalhados do arquétipo](/help/assets/screen_shot_2018-10-08at60032am.png)
 
 1. Clique em **Criar** para criar o projeto inicial usando o arquétipo e confirmar na ramificação Git nomeada.
 
-Agora você tem um projeto básico! Agora você pode configurar seus pipelines.
+Agora você tem um projeto básico. É hora de configurar seus pipelines.
 
 ## Clientes existentes ou em migração {#existing-migrating}
 
-Se você for um cliente atual do Adobe Managed Services (AMS) ou um cliente local do AEM que está migrando para ele, provavelmente já terá o código do projeto no Git ou em outro sistema de controle de versões.
+Se você for um cliente atual do Adobe Managed Services (AMS) ou um cliente do AEM local que está migrando para o, provavelmente já terá o código do projeto no Git ou em outro sistema de controle de versão.
 
-Nesses casos, você importará seu projeto para o repositório Git do Cloud Manager.
+Nesses casos, você pode importar o projeto para o repositório Git do Cloud Manager.

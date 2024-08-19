@@ -1,18 +1,18 @@
 ---
 title: Configuração do programa
-description: Após a integração, o proprietário da empresa precisará fazer uma configuração inicial do programa.
+description: Após a integração, o proprietário da empresa deve fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 86%
+source-wordcount: '567'
+ht-degree: 53%
 
 ---
 
 
 # Configuração do programa {#program-setup}
 
-Após a integração, o proprietário da empresa conclui a configuração inicial do programa, incluindo a definição da descrição do programa e a definição dos indicadores-chave de desempenho (KPIs), que são usados para testes de desempenho.
+Após a integração, o proprietário da empresa configura o programa adicionando uma descrição e definindo indicadores-chave de desempenho (KPIs). Esses KPIs são usados para testes de desempenho.
 
 ## Configuração do programa com [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
@@ -24,7 +24,7 @@ Siga estas etapas para configurar o programa e definir KPIs.
 
    ![Configurar programa](/help/assets/set-up-program/setup1.png)
 
-1. Na caixa de diálogo **Configurar programa** você pode inserir informações do programa em três guias:
+1. Na caixa de diálogo **Configurar Programa**, você pode inserir informações do programa em três guias:
 
    * **Geral**
    * **KPI**
@@ -34,21 +34,21 @@ Siga estas etapas para configurar o programa e definir KPIs.
 
    ![Guia Geral](/help/assets/Setup_Program-General.png)
 
-1. Na guia **KPI**, defina seus KPIs. Neste exemplo, KPIs separados são definidos para o **AEM Sites** e para o **AEM Assets**. Você poderá especificar os KPIs para os produtos que licenciou.
+1. Na guia **KPI**, defina seus KPIs. Neste exemplo, KPIs separados são definidos para o **AEM Sites** e para o **AEM Assets**. Especifique os KPIs para os produtos que você licenciou.
 
-   * Consulte a seção [KPIs](#kpis) para obter mais detalhes sobre como os KPIs são medidos no Cloud Manager.
+   Consulte a seção [KPIs](#kpis) para obter mais detalhes sobre como os KPIs são medidos no Cloud Manager.
 
    ![Definição de KPIs](/help/assets/Setup_Program-KPIs.png)
 
 1. Na guia **Provisionamento**, é possível definir as opções de dimensionamento sob demanda para seus ambientes, se o dimensionamento automático estiver habilitado para o seu programa.
 
-   * O dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas de clientes.
+   O dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas de clientes.
 
    ![Opções de provisionamento](/help/assets/Setup_Program-Provisioning.png)
 
-1. Clique em **Salvar** para concluir o assistente de configuração.
+1. Clique em **Salvar**.
 
-Seu programa será criado. Pode levar vários minutos para que os recursos sejam provisionados antes que o programa esteja pronto para uso.
+Seu programa foi criado. Pode levar vários minutos para que os recursos sejam provisionados antes que o programa esteja pronto para uso.
 
 ## Editar um programa {#editing-program}
 
@@ -70,7 +70,7 @@ Seu programa será criado. Pode levar vários minutos para que os recursos sejam
 
 Observe que as alterações são salvas imediatamente no Cloud Manager, mas não serão refletidas em seus ambientes até a próxima execução do pipeline.
 
-Se você ainda não criou um pipeline, consulte os documentos [Configurando pipelines de produção](/help/using/production-pipelines.md) e [Configurando pipelines de não produção](/help/using/non-production-pipelines.md).
+Se você ainda não criou um pipeline, consulte [Configuração de pipelines de produção](/help/using/production-pipelines.md) e [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md).
 
 ## Alternar entre programas {#swithing-programs}
 
@@ -84,11 +84,11 @@ Use a barra de ações para alternar para outro programa, editar o programa atua
 
 Os KPIs de sites são medidos em testes executados no ambiente de preparo. Normalmente, esses KPIs são dimensionados para baixo para se ajustarem aos recursos do ambiente de preparo.
 
-Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em seu ambiente de produção e tem quatro servidores de Dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto. Isso pressupõe que o ambiente de preparo consiste em apenas um único par de servidores de Dispatcher/publicação.
+Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em seu ambiente de produção e tem quatro servidores de publicação/Dispatcher em produção deve dimensionar esse cenário para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores de Dispatcher/publicação.
 
-O teste de desempenho do Assets é feito fazendo o upload de ativos repetidamente durante um período de teste de 30 minutos e medindo o tempo de processamento de cada ativo e de várias métricas no nível do sistema.
+O teste de desempenho do Assets envolve o upload repetido de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e de várias métricas no nível do sistema é medido durante todo o teste.
 
-Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Visto que o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN, ou seja, o cache não é utilizado. Normalmente, esse será um subconjunto relativamente pequeno do tráfego total de produção.
+Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN. Ou seja, o cache não é utilizado. Normalmente, essa experiência é um subconjunto relativamente pequeno do tráfego total de produção.
 
 ## Visão geral do vídeo {#video}
 
