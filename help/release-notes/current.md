@@ -2,9 +2,9 @@
 title: Notas de versão do Cloud Manager 2024.8.0
 description: Saiba mais sobre as notas de versão do Cloud Manager 2024.8.0.
 feature: Release Information
-source-git-commit: dd764bb17127ba0a1e88e85592329cc9ddff42e3
+source-git-commit: 5ced643fabe0a670e456cbea72f9da8196ac774a
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '266'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ A data de lançamento do [!UICONTROL Cloud Manager] 2024.8.0 é 14 de agosto de 
 
 ## Programa de adoção antecipada {#early-adoption}
 
-Faça parte do programa de adoção antecipada do Adobe e tenha a chance de testar alguns recursos futuros.
+Faça parte do programa de adoção antecipada da Cloud Manager e tenha a chance de testar alguns recursos futuros.
 
 ### Pipelines somente de preparo e somente produção {#staging-production-only-pipelines}
 
