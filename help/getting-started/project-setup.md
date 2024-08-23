@@ -2,10 +2,10 @@
 title: Configurar o projeto
 description: Saiba como configurar seu projeto para gerenciá-lo e implantá-lo com o Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1395'
-ht-degree: 54%
+ht-degree: 53%
 
 ---
 
@@ -275,7 +275,7 @@ Com o `content-package-maven-plugin`, é semelhante:
 
 ## Reutilização de artefato de build {#build-artifact-reuse}
 
-Em muitos casos, um mesmo código é implantado em vários ambientes do AEM. Sempre que possível, o Cloud Manager evita reconstruir a base de código quando detecta que o mesmo git commit é usado em várias execuções de pipeline de pilha completa.
+Em muitos casos, um mesmo código é implantado em vários ambientes do AEM. Sempre que possível, o Cloud Manager evita reconstruir a base de código quando detecta que a mesma Git commit é usada em várias execuções de pipeline de pilha completa.
 
 Quando uma execução é iniciada, a confirmação HEAD atual para o pipeline de ramificação é extraída. O hash de confirmação é visível na interface e por meio da API. Quando a etapa de compilação for concluída com sucesso, os artefatos resultantes serão armazenados com base nesse hash de confirmação e poderão ser reutilizados em execuções de pipeline subsequentes.
 

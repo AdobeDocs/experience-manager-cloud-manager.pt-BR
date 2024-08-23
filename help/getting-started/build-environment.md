@@ -2,7 +2,7 @@
 title: O ambiente de criação
 description: Saiba mais sobre o ambiente de criação especializado no qual os usuários do Cloud Manager criam e testam seus códigos.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 53%
@@ -105,9 +105,9 @@ As combinações de fornecedor/versão disponíveis no momento são:
 | Oracle | 1.8 |
 | Oracle | 1.11 |
 | Oracle | 11 |
-| dom | 1.8 |
-| dom | 1.11 |
-| dom | 11 |
+| Dom | 1.8 |
+| Dom | 1.11 |
+| Dom | 11 |
 
 >[!NOTE]
 >

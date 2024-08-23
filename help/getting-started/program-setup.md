@@ -2,10 +2,10 @@
 title: Configuração do programa
 description: Após a integração, o proprietário da empresa deve fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 53%
+source-wordcount: '564'
+ht-degree: 49%
 
 ---
 
@@ -68,7 +68,7 @@ Seu programa foi criado. Pode levar vários minutos para que os recursos sejam p
 
 1. Clique em **Atualizar** para salvar suas alterações.
 
-Observe que as alterações são salvas imediatamente no Cloud Manager, mas não serão refletidas em seus ambientes até a próxima execução do pipeline.
+As alterações são salvas imediatamente no Cloud Manager, mas não são refletidas em seus ambientes até a próxima execução do pipeline.
 
 Se você ainda não criou um pipeline, consulte [Configuração de pipelines de produção](/help/using/production-pipelines.md) e [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md).
 

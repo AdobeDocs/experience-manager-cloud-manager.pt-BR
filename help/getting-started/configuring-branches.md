@@ -2,10 +2,10 @@
 title: Configuração de ramificações
 description: Saiba como configurar sua primeira ramificação no Git e como ela é usada pelo pipeline CI/CD para implantar seu código de aplicativo.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '324'
-ht-degree: 14%
+ht-degree: 4%
 
 ---
 
@@ -50,7 +50,7 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Não é um requisito usar o cliente de linha de comando. Há uma variedade de clientes gráficos do Git disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo do cliente seja compatível com a utilização de HTTPS do Git, ele deve ser compatível com o [!UICONTROL Cloud Manager].
+>Não é um requisito usar o cliente de linha de comando. Há uma variedade de clientes gráficos do Git disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente seja compatível com o uso de HTTPS do Git, ele deve ser compatível com o [!UICONTROL Cloud Manager].
 
 ## Encaminhar a primeira ramificação {#pushing-your-first-branch}
 

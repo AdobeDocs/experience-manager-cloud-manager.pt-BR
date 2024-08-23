@@ -1,16 +1,16 @@
 ---
-title: Gerenciamento de ambientes
+title: Gerenciar ambientes
 description: Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 94%
+source-wordcount: '281'
+ht-degree: 78%
 
 ---
 
 
-# Gerenciamento de ambientes {#managing-environments}
+# Gerenciar ambientes {#managing-environments}
 
 Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 
@@ -22,7 +22,7 @@ Cada um dos ambientes listados exibe seu status associado.
 
 ![Página de visão geral](/help/assets/Manage-Environ-Overview.png)
 
-## Bloco de ambientes {#environments-tile}
+## Bloco Ambientes {#environments-tile}
 
 O bloco **Ambientes** exibe os ambientes de produção e de preparo provisionados no programa junto com o status.
 
@@ -35,7 +35,7 @@ O status é o estado de energia acumulado nos nós do ambiente na seguinte ordem
 
 ![Bloco de ambientes](/help/assets/Environments-card-new.png)
 
-## Gerenciamento de ambientes {#managing-environments-with-cloud-manager}
+## Gerenciar ambientes {#managing-environments-with-cloud-manager}
 
 No bloco **Ambientes**, clique na linha de qualquer ambiente para exibir a tela **Ambientes**.
 
@@ -54,14 +54,14 @@ A tela **Ambientes** exibe cada ambiente de produção e preparo do seu progra
 
 >[!NOTE]
 >
->Detalhes do ambiente, como nome, não podem ser alterados depois de provisionados.
+>Detalhes do ambiente, como um nome, não podem ser alterados depois de provisionados.
 
 >[!NOTE]
 >
->Se você precisar de seus registros de ambiente, é possível solicitá-los ao seu engenheiro de sucesso do cliente.
+>Se você precisar de seus registros de ambiente, eles poderão ser solicitados por meio do seu engenheiro de sucesso do cliente.
 
 ## Tutorial em vídeo {#video-tutorial}
 
 Este vídeo fornece uma visão geral dos ambientes do Cloud Manager que são compostos por instâncias de criação, publicação e Dispatcher do AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/) (3 minutos, 1 segundo)

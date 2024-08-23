@@ -2,7 +2,7 @@
 title: Permissões com base em função
 description: Saiba mais sobre as permissões pré-configuradas com base em funções do Cloud Manager para gerenciar o acesso aos recursos da nuvem.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 51%
@@ -62,7 +62,7 @@ Cada uma das funções tem permissões específicas pré-configuradas associadas
 | Implementação gerenciada de modificação de pipeline | Permite a edição da opção de supervisão do CSE | | x | | | |
 | Exclusão de pipeline | Permite a exclusão do pipeline | | x | | | |
 | Leitura da etapa | Ver os resultados das métricas de qualidade da etapa | x | x | x | x | x |
-| Gerar token de acesso pessoal | Acesso ao Git | | x | | x | |
+| Gerar token de acesso pessoal | Acessar Git | | x | | x | |
 
 Para saber mais sobre como configurar seus usuários, consulte [Configurando Usuários e Funções](/help/requirements/users-and-roles.md).
 

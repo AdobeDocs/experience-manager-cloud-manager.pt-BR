@@ -2,18 +2,18 @@
 title: Recursos de ajuda
 description: Saiba mais sobre os recursos disponíveis para ajudá-lo a usar o Cloud Manager.
 exl-id: 6a4573a6-d9f0-41bc-8ce2-289ba9cc9f47
-source-git-commit: dcdb9aca03a905e875fbf8f805d7a7ae7b5b594b
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 100%
+source-wordcount: '79'
+ht-degree: 18%
 
 ---
 
 
 # Recursos de ajuda {#help-resources}
 
-Primeiro entre em contato com o [!UICONTROL Engenheiro de sucesso do cliente do Adobe Managed Services] (CSE) para o suporte relacionado ao [!UICONTROL Cloud Manager]. Seu CSE avisará se ele pode ajudá-lo com seu problema ou se você precisará criar um tíquete de suporte no Atendimento ao cliente da Adobe.
+Entre em contato com o seu engenheiro de sucesso do cliente (CSE) do Adobe Managed Services para obter assistência com o [!UICONTROL Cloud Manager]. Eles podem informar se o problema pode ser resolvido ou se você precisa enviar um tíquete de suporte ao Atendimento ao cliente do Adobe.
 
-Você pode acessar o [Suporte corporativo](https://experienceleague.adobe.com/?support-tab=home&amp;lang=pt-BR#support) para criar tíquetes de suporte.
+Acesse o [Suporte da Empresa](https://experienceleague.adobe.com/?support-tab=home&amp;lang=pt-BR#support) para criar tíquetes de suporte.
 
-Consulte o documento [Acessar o portal de suporte do AEM](https://helpx.adobe.com/br/enterprise/using/support-and-expert-services.html) para obter mais informações sobre como criar tíquetes de suporte no Atendimento ao cliente da Adobe.
+Consulte [Acessando o Portal de Suporte do AEM](https://helpx.adobe.com/br/enterprise/using/support-and-expert-services.html) para obter mais informações sobre como criar tíquetes de suporte no Adobe Customer Care.

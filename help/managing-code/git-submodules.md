@@ -2,10 +2,10 @@
 title: Suporte ao submódulo Git
 description: Saiba como você pode usar os submódulos do Git para mesclar o conteúdo de várias ramificações entre repositórios Git no momento da criação.
 exl-id: f946d7e7-114a-4e33-bb82-2625d37bba2f
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 28%
+ht-degree: 20%
 
 ---
 
@@ -66,9 +66,9 @@ Consulte o [Manual de referência do Git](https://git-scm.com/book/en/v2/Git-Too
 
 ## Limitações {#limitations}
 
-Ao usar submódulos do Git, esteja ciente do seguinte:
+Ao usar submódulos Git, esteja ciente do seguinte:
 
-* O URL do Git deve seguir exatamente a sintaxe descrita acima.
+* A URL do Git deve seguir exatamente a sintaxe descrita acima.
 * Por motivos de segurança, não incorpore credenciais nesses URLs.
 * Somente os submódulos na raiz da ramificação são permitidos.
 * As referências do submódulo Git são armazenadas em confirmações Git específicas. Como resultado, quando alterações no repositório do submódulo são feitas, a confirmação referenciada precisa ser atualizada. Por exemplo, usando `git submodule update --remote`.
@@ -87,8 +87,8 @@ No entanto, após configurar o arquivo `pom.xml` e executar os comandos `git sub
 
 ### Limitações e recomendações {#limitations-recommendations-private-repos}
 
-Ao usar submódulos git com repositórios privados, esteja ciente das limitações a seguir.
+Ao usar submódulos do Git com repositórios privados, esteja ciente das limitações a seguir.
 
-* Os URLs do Git para os submódulos podem estar no formato HTTPS ou SSH, mas devem estar vinculados a um repositório Github.com. A adição de um submódulo do repositório de Adobe a um repositório agregador GitHub ou vice-versa não funciona.
+* Os URLs Git dos submódulos podem estar no formato HTTPS ou SSH, mas devem estar vinculados a um repositório Github.com. A adição de um submódulo do repositório de Adobe a um repositório agregador GitHub ou vice-versa não funciona.
 * Os submódulos do GitHub devem estar acessíveis ao aplicativo Adobe GitHub.
-* [As limitações do uso de submódulos git com repositórios gerenciados pela Adobe](#limitations-recommendations) também se aplicam.
+* [As limitações do uso de submódulos Git com repositórios gerenciados por Adobe](#limitations-recommendations) também se aplicam.

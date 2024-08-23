@@ -2,10 +2,10 @@
 title: Permissões personalizadas
 description: Saiba como criar novos perfis de permissão personalizados com permissões configuráveis e restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 47%
+ht-degree: 46%
 
 ---
 
@@ -123,8 +123,8 @@ As seguintes permissões estão disponíveis para criar perfis personalizados.
 | Ignorar e rejeitar falhas de métrica importantes | Permitir que usuários ignorem ou rejeitem falhas de métrica importantes |
 | Programação de implantações de produção | Permitir que usuários programem uma etapa de implantação de produção |
 | Acesso às informações do repositório | Permitir que os usuários acessem as informações do repositório e gerem uma senha de acesso |
-| Criar repositório | Permitir que usuários criem novos repositórios Git |
-| Exclusão de repositório | Permitir que usuários excluam repositórios Git |
+| Criar repositório | Permitir que os usuários criem novos repositórios Git |
+| Exclusão de repositório | Permitir que os usuários excluam repositórios Git |
 | Edição de repositório | Permitir que os usuários editem repositórios Git |
 | Geração de códigos do repositório | Permitir que usuários gerem projetos a partir do arquétipo |
 | Gerenciamento de cópias de conteúdo | Permitir que usuários gerenciem operações de cópia do conteúdo |

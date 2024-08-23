@@ -2,10 +2,10 @@
 title: Notificações
 description: Saiba como o Cloud Manager notifica você sobre eventos importantes.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 79%
+source-wordcount: '561'
+ht-degree: 67%
 
 ---
 
@@ -16,7 +16,7 @@ Saiba como o Cloud Manager notifica você sobre eventos importantes.
 
 ## Notificações no Cloud Manager {#cloud-manager-notifications}
 
-O [!UICONTROL Cloud Manager] envia notificações quando um pipeline de produção é iniciado e concluído (com êxito ou sem êxito). Ele realiza esse envio no início de uma implantação de produção e quando as etapas **Aprovação de Ativação** e **Programado** são atingidas. Essas notificações são enviadas por meio do sistema de notificações da [!UICONTROL Experience Cloud].
+O [!UICONTROL Cloud Manager] envia notificações quando um pipeline de produção é iniciado e concluído (com êxito ou sem êxito), no início de uma implantação de produção. E, quando as etapas de **Aprovação da ativação** e **Agendado** forem atingidas. Essas notificações são enviadas por meio do sistema de notificações da [!UICONTROL Experience Cloud].
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Clique no ícone de engrenagem na parte superior da barra lateral de notificaç�
 
 ![Ícone Configurações de notificação](/help/assets/notifications-configuration.png)
 
-Isso abre a janela **Preferências da Experience Cloud**, onde é possível definir suas assinaturas de notificação e como você recebe as notificações.
+A janela **preferências de Experience Cloud** é aberta, onde você pode definir suas assinaturas de notificação e como recebe suas notificações.
 
 ### Assinaturas {#subscriptions}
 
@@ -58,17 +58,17 @@ As assinaturas definem para quais produtos você recebe notificações e quais n
 
 ![Assinaturas de notificação](/help/assets/notifications-subscriptions.png)
 
-Por padrão, você receberá todas as notificações para todos os produtos. Clique em **Personalizar** ao lado de um produto para definir os tipos de notificações que você recebe para esse produto.
+Por padrão, você recebe todas as notificações de todos os produtos. Clique em **Personalizar** ao lado de um produto para definir os tipos de notificações que você recebe para esse produto.
 
 ![Personalização de assinatura de notificação](/help/assets/notifications-subscriptions-customize.png)
 
 ### Prioridade {#priority}
 
-Os alertas de prioridade serão marcados com uma tag **ALTA** e podem ser configurados para serem recebidos exclusivamente como alertas. Na seção **Prioridade**, você pode definir quais categorias se qualificam como notificações de prioridade.
+Os alertas de prioridade estão marcados com uma marca **HIGH**. Você pode configurá-los para serem recebidos exclusivamente como alertas. Na seção **Prioridade**, você pode definir quais categorias se qualificam como notificações de prioridade.
 
 ![Prioridade de notificação](/help/assets/notifications-priority.png)
 
-Use o menu suspenso para adicionar à lista de categorias que se qualificam como prioridade. Clique no X ao lado dos nomes das categorias para removê-las.
+Use o menu suspenso para adicionar à lista de categorias que se qualificam como prioridade. Clique em `X` ao lado dos nomes das categorias para removê-las.
 
 ### Alertas {#alerts}
 
@@ -94,4 +94,4 @@ Por padrão, nenhum email é enviado. Você pode optar por receber emails:
 * Diariamente
 * Semanalmente
 
-Quando a opção **Notificações instantâneas** for escolhida, os emails serão enviados imediatamente para cada notificação. Para as opções **Resumo diário** e **Resumo semanal**, você pode escolher quando o resumo diário é enviado e em que dia e quando o resumo semanal é enviado.
+Quando as **Notificações instantâneas** são escolhidas, os emails são enviados imediatamente para cada notificação. Para as opções **Resumo diário** e **Resumo semanal**, você pode escolher quando o resumo diário é enviado e em que dia e quando o resumo semanal é enviado.

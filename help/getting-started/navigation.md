@@ -2,19 +2,19 @@
 title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1435'
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
 
-# Navegar pela interface do Cloud Manager {#navigation}
+# Navegar na interface do Cloud Manager {#navigation}
 
 Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
 
-A interface do Cloud Manager é composta principalmente por duas interfaces gráficas:
+A interface do usuário do Cloud Manager é composta principalmente por duas interfaces gráficas:
 
 * [O console Meus Programas](#my-programs-console) é onde você pode exibir e gerenciar todos os seus programas.
 * [A janela Visão Geral do Programa](#program-overview) é o local onde você pode ver os detalhes e gerenciar um programa individual.

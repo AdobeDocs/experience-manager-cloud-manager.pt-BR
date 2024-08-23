@@ -2,7 +2,7 @@
 title: Configurações do Dispatcher
 description: Saiba como implantar arquivos de configuração do Dispatcher usando o Cloud Manager.
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 48%
@@ -14,7 +14,7 @@ ht-degree: 48%
 
 Saiba como implantar arquivos de configuração do Dispatcher usando o Cloud Manager
 
-## Implantação de configurações do Dispatcher com o Cloud Manager {#deploying-dispatcher-configurations}
+## Implantar configurações do Dispatcher com o Cloud Manager {#deploying-dispatcher-configurations}
 
 O Cloud Manager é capaz de implantar arquivos de configuração do servidor da Web e do Dispatcher, supondo que eles estejam armazenados no repositório Git ao lado de pacotes de conteúdo normais do AEM.
 

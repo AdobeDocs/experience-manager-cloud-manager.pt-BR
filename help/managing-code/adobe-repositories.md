@@ -2,18 +2,18 @@
 title: Adição de repositórios da Adobe no Cloud Manager
 description: Saiba como criar repositórios gerenciados pela Adobe no Cloud Manager.
 exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 79%
+ht-degree: 72%
 
 ---
 
-# Adição de repositórios da Adobe no Cloud Manager {#adobe-repositories}
+# Adicionar repositórios Adobe no Cloud Manager {#adobe-repositories}
 
 Saiba como criar repositórios gerenciados pela Adobe no Cloud Manager.
 
-## Adição de um repositório gerenciado pela Adobe {#add-adobe-repository}
+## Adicionar um repositório gerenciado por Adobe {#add-adobe-repository}
 
 A janela **Repositórios** facilita a adição de outros repositórios gerenciados pela Adobe para o seu programa.
 

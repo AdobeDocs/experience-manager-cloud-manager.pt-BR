@@ -2,19 +2,19 @@
 title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: a7dc30ed31e87ab486f0b279b70c850a33a903eb
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1637'
-ht-degree: 54%
+ht-degree: 51%
 
 ---
 
 
-# Implantação do código {#code-deployment}
+# Implantação de código {#code-deployment}
 
 Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
 
-## Implantação de código com o Cloud Manager {#deploying-code-with-cloud-manager}
+## Implantar código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
 Depois de configurar o pipeline de produção, incluindo o repositório e os ambientes necessários, você estará pronto para implantar seu código.
 
@@ -133,7 +133,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
    >
    >Você pode ignorar as alterações do balanceador de carga em implantações de desenvolvimento e preparo. Ou seja, para ambientes de desenvolvimento, desconecte e conecte etapas em pipelines de não produção e para ambientes de preparo, o pipeline de produção.
 
-### Implantação para a fase de produção {#deployment-production-phase}
+### Implantação na fase de produção {#deployment-production-phase}
 
 O processo de implantação nas topologias de produção é um pouco diferente para minimizar o impacto para visitantes do site AEM.
 
@@ -147,7 +147,7 @@ As implantações de produção geralmente seguem as mesmas etapas descritas aci
 1. Implante pacotes AEM para publish2 e o pacote do Dispatcher para dispatcher2 em paralelo e, em seguida, limpe o cache do Dispatcher.
 1. Coloque dispatcher2 de volta no balanceador de carga.
 
-Esse processo continua até que a implantação tenha atingido todos os editores e Dispatchers na topologia.
+Esse processo continua até que a implantação tenha atingido todos os editores e dispatchers na topologia.
 
 ## Modo de execução do pipeline de emergência {#emergency-pipeline}
 
@@ -159,7 +159,7 @@ Para lidar com essas situações, o pipeline de produção do Cloud Manager pode
 >
 >O recurso de modo de execução de pipeline de emergência é ativado programa a programa. A ativação é feita pelos engenheiros de sucesso do cliente.
 
-### Utilização do modo de execução do pipeline de emergência {#using-emergency-pipeline}
+### Usar modo de execução de pipeline de emergência {#using-emergency-pipeline}
 
 Ao iniciar a execução de um pipeline de produção, você pode escolher entre o modo normal ou de emergência em uma caixa de diálogo. Essa opção está disponível se o recurso de modo de execução de pipeline de emergência estiver ativado para o programa. Essa opção fica disponível após a ativação do recurso.
 
@@ -175,7 +175,7 @@ A execução de um pipeline no modo de emergência também pode ser feita por me
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
-## Reexecutar uma implantação de produção {#reexecute-deployment}
+## Reexecução de uma implantação de produção {#reexecute-deployment}
 
 Em casos raros, as etapas de implantação de produção podem falhar por motivos transitórios. Nesses casos, é possível executar novamente a etapa de implantação em produção, desde que ela tenha sido concluída, independentemente de ter sido bem-sucedida, cancelada ou malsucedida. A reexecução é suportada usando o mesmo pipeline que consiste nas três etapas a seguir:
 
@@ -250,6 +250,6 @@ A sintaxe do valor `href` do link HAL é apenas um exemplo e o valor real deve s
 
 O envio de uma solicitação `PUT` para este ponto de extremidade resultará em uma resposta `201` se bem-sucedido. O corpo da resposta é a representação da nova execução. Essa funcionalidade é semelhante a iniciar uma execução regular por meio da API.
 
-#### Identificação de uma reexecução {#identifying}
+#### Identificar uma execução reexecutada {#identifying}
 
 O sistema identifica execuções reexecutadas pelo valor `RE_EXECUTE` no campo de gatilho.

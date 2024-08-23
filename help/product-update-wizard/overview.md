@@ -2,10 +2,10 @@
 title: Assistente de atualização do produto
 description: Saiba como o Assistente de atualização do produto simplifica o processo completo de atualização do AEM no Cloud Manager.
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 82%
+source-wordcount: '208'
+ht-degree: 38%
 
 ---
 
@@ -22,19 +22,19 @@ O assistente inclui cinco fases que o orientam durante uma atualização de prod
 * Validação
 * Conclusão
 
-## Uso do Assistente {#using}
+## Uso do assistente {#using}
 
 Os clientes integrados ao Cloud Manager e qualificados a atualizar para o AEM 6.5 podem utilizar o Assistente de atualização do produto. Entre em contato com o seu engenheiro de sucesso do cliente (CSE) para obter mais detalhes.
 
-1. Você receberá uma notificação por push por meio do Cloud Manager informando que o AEM 6.5 está disponível para o seu programa.
+1. Você recebe uma notificação por push por meio do Cloud Manager informando que o AEM 6.5 está disponível para o seu programa.
 
-1. Um cartão de **[!UICONTROL Atualização do AEM 6.5]** é exibido na tela de visão geral do [!UICONTROL Cloud Manager]. Este cartão permite verificar em qual fase do processo de atualização você está atualmente e informa você sobre a próxima etapa a ser realizada.
+1. Um cartão de **[!UICONTROL Atualização do AEM 6.5]** é exibido na tela de visão geral do [!UICONTROL Cloud Manager]. Este cartão ajuda a controlar em qual fase do processo de atualização você está atualmente e informa você sobre a próxima etapa a ser realizada.
 
    ![Atualizar o cartão do assistente](/help/assets/Start-Update.png)
 
 1. Selecione **[!UICONTROL Iniciar atualização]** para iniciar o assistente.
 
-1. O assistente exibe a primeira fase do processo de **[!UICONTROL atualização do AEM 6.5]**.
+1. O assistente exibe a primeira fase do processo de **[!UICONTROL Atualização de AEM 6.5]**.
 
-Para saber mais sobre a primeira fase do assistente, consulte o documento [Fase de Avaliação](/help/product-update-wizard/evaluation.md).
+Para saber mais sobre a primeira fase do assistente, consulte [Fase de Avaliação](/help/product-update-wizard/evaluation.md).
 

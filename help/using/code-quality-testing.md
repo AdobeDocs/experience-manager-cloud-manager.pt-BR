@@ -2,10 +2,10 @@
 title: Teste de qualidade do código
 description: Saiba como funciona o teste de qualidade do código dos pipelines e como ele pode melhorar a qualidade das suas implantações.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '2763'
-ht-degree: 94%
+source-wordcount: '2764'
+ht-degree: 90%
 
 ---
 
@@ -170,7 +170,7 @@ Três conjuntos de páginas selecionam as páginas. O Cloud Manager usa os logs 
 
 * **Novas páginas**: testa novas páginas que podem ter sido implantadas apenas no ambiente de preparo e não na produção, mas que precisam ser testadas.
 
-##### Distribuição de tráfego em conjuntos de páginas selecionados {#distribution-of-traffic}
+##### Distribuição de tráfego nos conjuntos de páginas selecionados {#distribution-of-traffic}
 
 Você pode escolher entre um e três conjuntos na guia **Testes** da sua [configuração de pipeline](/help/using/production-pipelines.md). A distribuição do tráfego é baseada no número de conjuntos selecionados. Ou seja, se todos os três forem selecionados, 33% do total de visualizações de página serão colocados em cada conjunto. Se dois forem selecionados, 50% serão direcionadas a cada conjunto. Se um for selecionado, 100% do tráfego será direcionado para esse conjunto.
 
@@ -186,7 +186,7 @@ Durante o período de teste de 30 minutos:
 * Cada uma das 25 páginas no conjunto de páginas ativas populares é acessada 120 vezes: `((200 * 0.5) / 25) * 30 = 120`
 * Cada uma das 3.000 páginas no conjunto de novas páginas é acessada uma vez: `((200 * 0.5) / 3000) * 30 = 1`
 
-#### Testes e relatórios {#testing-reporting}
+#### Teste e relatório {#testing-reporting}
 
 O Cloud Manager executa testes de desempenho para programas do AEM Sites, solicitando páginas como um usuário não autenticado por padrão no servidor de publicação de preparo por um período de teste de 30 minutos. Ele mede as métricas geradas pelo usuário virtual (tempo de resposta, taxa de erro, exibições por minuto e assim por diante) para cada página e várias métricas no nível do sistema (CPU, memória, dados de rede) para todas as instâncias.
 
@@ -204,7 +204,7 @@ A tabela a seguir resume a matriz de teste de desempenho usando o sistema de mar
 | Utilização da largura de banda da rede | Importante | >= 90% |
 | Solicitações por minuto | Informações | >= 6000 |
 
-Consulte [Teste de Desempenho Autenticado](#authenticated-performance-testing) para obter mais detalhes sobre como usar a autenticação básica para testes de desempenho do Sites e do Assets.
+Consulte [Teste de desempenho autenticado](#authenticated-performance-testing) para obter mais detalhes sobre como usar a autenticação básica para testes de desempenho do Sites e do Assets.
 
 >[!NOTE]
 >
@@ -224,41 +224,41 @@ Para definir essas variáveis usando a CLI do Cloud Manager, execute:
 $ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
 ```
 
-Consulte a documentação [Correção das variáveis do pipeline do usuário](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables) para saber como usar a API.
+Consulte [Documentação de correção das variáveis do pipeline de usuário](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables) para saber como usar a API.
 
 ### AEM Assets {#aem-assets}
 
 O Cloud Manager executa testes de desempenho para programas do AEM Assets fazendo upload de ativos repetidamente por 30 minutos.
 
-#### Requisitos de integração {#onboarding-requirement}
+#### Requisito de integração {#onboarding-requirement}
 
 Para testes de desempenho de ativos, o(a) engenheiro(a) de sucesso do cliente (CSE) cria um usuário e uma senha do `cloudmanager` durante a integração do autor no ambiente de preparo. As etapas do teste de desempenho exigem um usuário chamado `cloudmanager` e a senha associada configurada pelo(a) CSE.
 
 Esse método deve permanecer na instância de criação com as permissões inalteradas. Alterá-las ou removê-las pode causar falha nos testes de desempenho de ativos.
 
-#### Imagens e ativos para teste {#assets-for-testing}
+#### Imagens e Assets para teste {#assets-for-testing}
 
 Os clientes podem fazer upload de seus próprios ativos para testes. Este processo pode ser feito na tela **Configuração do pipeline** ou **Editar**. Formatos de imagem comuns, como JPEG, PNG, GIF e BMP são compatíveis, assim como arquivos do Photoshop, Illustrator e Postscript.
 
 Se nenhuma imagem for carregada, o Cloud Manager usará uma imagem padrão e documentos de PDF para testes.
 
-#### Distribuição de ativos para teste {#distribution-of-assets}
+#### Distribuição do Assets para teste {#distribution-of-assets}
 
 A distribuição de quantos ativos de cada tipo são carregados por minuto é definida na tela **Configuração de pipeline** ou **Editar**.
 
 Por exemplo, ao utilizar uma divisão 70/30 e carregar 10 ativos por minuto, 7 imagens e 3 documentos serão carregados por minuto.
 
-#### Testes e relatórios {#testing-and-reporting}
+#### Teste e relatório {#testing-and-reporting}
 
 O Cloud Manager criará uma pasta na instância de criação usando o nome de usuário e a senha configurados pelo(a) CSE. Os ativos são carregados na pasta usando uma biblioteca de código aberto. Os testes executados pela etapa de teste do Assets são gravados usando uma [biblioteca de código aberto](https://github.com/adobe/toughday2). Os tempos de processamento de cada ativo e de várias métricas no nível do sistema são medidos durante o teste de 30 minutos. Esse recurso pode carregar imagens e documentos PDF.
 
 >[!TIP]
 >
->Consulte [Configurar pipelines de produção](/help/using/production-pipelines.md) para saber mais. Consulte [Configuração do programa](/help/getting-started/program-setup.md) para saber como configurar seu programa e definir os KPIs.
+>Consulte [Configurar pipelines de produção](/help/using/production-pipelines.md) para saber mais. Consulte [Configuração do programa](/help/getting-started/program-setup.md) para saber como configurar seu programa e definir os KPIs.
 
-### Gráficos de resultados dos testes de desempenho {#performance-testing-results-graphs}
+### Gráficos de resultados do teste de desempenho {#performance-testing-results-graphs}
 
-Várias métricas estão disponíveis na **Caixa de diálogo Teste de desempenho**
+Várias métricas estão disponíveis na **caixa de diálogo Teste de Desempenho**.
 
 ![Lista de métricas](/help/assets/understand_test-results-screen1.png)
 
@@ -284,7 +284,7 @@ Essa funcionalidade está disponível para as seguintes métricas.
 * **Tempo de resposta do percentil 95** - um gráfico do tempo de resposta do percentil 95 por minuto durante o período de teste
    * Um arquivo CSV que lista páginas cujo tempo de resposta do percentil 95 excedeu o KPI definido
 
-## Otimização da verificação do pacote de conteúdo {#content-package-scanning-optimization}
+## Otimização da digitalização do pacote de conteúdo {#content-package-scanning-optimization}
 
 Como parte do processo de análise de qualidade, o Cloud Manager realiza a análise dos pacotes de conteúdo produzidos pela compilação Maven. O Cloud Manager oferece otimizações para acelerar esse processo, que são eficazes quando determinadas restrições de pacote são obedecidas. 
 

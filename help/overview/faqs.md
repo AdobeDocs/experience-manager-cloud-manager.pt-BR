@@ -2,10 +2,10 @@
 title: Perguntas frequentes sobre o Cloud Manager
 description: Saiba mais sobre as respostas às perguntas mais frequentes sobre o Cloud Manager para clientes do AMS.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '748'
-ht-degree: 57%
+ht-degree: 50%
 
 ---
 
@@ -62,7 +62,7 @@ Consulte [Entendendo os resultados de teste](/help/using/code-quality-testing.md
 
 ## Posso usar o SNAPSHOT para a versão do projeto Maven? {#snapshot}
 
-Sim. Para implantações de desenvolvedores, os arquivos `pom.xml` da ramificação Git devem conter `-SNAPSHOT` no final do valor `<version>`.
+Sim. Para implantações de desenvolvedores, os arquivos da ramificação Git `pom.xml` devem conter `-SNAPSHOT` no final do valor `<version>`.
 
 Isso permite que as implantações subsequentes ainda sejam instaladas quando a versão não for alterada. Em implantações de desenvolvedores, nenhuma versão automática é adicionada ou gerada para a compilação maven.
 
@@ -76,11 +76,11 @@ Em implantações de preparo e produção, uma versão automática é gerada [co
 
 Para o controle de versão personalizado em implantações de preparo e produção, defina uma versão maven adequada com três partes como `1.0.0`. Aumente a versão sempre que implantar na produção.
 
-O Cloud Manager adicionará automaticamente a versão às compilações de preparo e produção e criará uma ramificação Git. Nenhuma configuração adicional é necessária. Se você não definir uma versão do Maven conforme descrito anteriormente, a implantação ainda será bem-sucedida e uma versão será definida automaticamente.
+O Cloud Manager adiciona automaticamente sua versão às compilações de preparo e produção e cria uma ramificação Git. Nenhuma configuração adicional é necessária. Se você não definir uma versão do Maven conforme descrito anteriormente, a implantação ainda será bem-sucedida e uma versão será definida automaticamente.
 
 ## Minha compilação maven falha para implantações do Cloud Manager, mas é criada localmente sem erros. O que há de errado? {#maven-build-fail}
 
-Consulte esse [recurso do Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) para obter mais detalhes.
+Consulte este [recurso do Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) para obter mais detalhes.
 
 ## Não consigo definir uma variável usando um comando aio. O que posso fazer? {#set-variable}
 

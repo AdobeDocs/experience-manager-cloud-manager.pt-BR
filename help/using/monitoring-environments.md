@@ -2,10 +2,10 @@
 title: Monitorar ambientes
 description: Saiba como monitorar seus ambientes no Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 34%
+source-wordcount: '910'
+ht-degree: 32%
 
 ---
 
@@ -60,7 +60,7 @@ Para exibir os detalhes de métricas específicas, clique em uma das colunas de 
 
 A navegação à esquerda mostra as métricas disponíveis da categoria selecionada para as quais há dados para o ambiente e as instâncias selecionadas no momento.
 
-Um gráfico individual mostrará o status e um gráfico dos dados ao longo do tempo, juntamente com os limites. Se várias instâncias forem exibidas, os dados de cada instância estarão em uma série separada.
+Um gráfico individual mostra o status e um gráfico dos dados ao longo do tempo, juntamente com os limites. Se várias instâncias forem exibidas, os dados de cada instância estarão em uma série separada.
 
 ![Gráfico de métricas](/help/assets/Monitoring_Graphs1.png)
 
