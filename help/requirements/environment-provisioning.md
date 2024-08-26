@@ -5,7 +5,7 @@ exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: 4c977cdfbef438fdabd90ee104d98887f2467b49
 workflow-type: tm+mt
 source-wordcount: '297'
-ht-degree: 27%
+ht-degree: 36%
 
 ---
 
@@ -20,7 +20,7 @@ Durante o processo de integração, o Adobe provisiona automaticamente todos os 
 
 ## Email de boas-vindas {#welcome-email}
 
-Após a conclusão do processo de provisionamento do ambiente, o administrador do cliente designado recebe um email de boas-vindas com a confirmação de que recebeu acesso ao Adobe [!UICONTROL Experience Cloud]. O email de boas-vindas contém informações detalhadas sobre como começar a usar os serviços do [!UICONTROL Experience Cloud], ambientes de nuvem do [!UICONTROL AEM Managed Services] e o portal de autoatendimento do [!UICONTROL Cloud Manager]. Além disso, o email contém informações importantes, como as informações de contato do engenheiro de sucesso do cliente (CSE), onde buscar recursos de suporte, fóruns, perguntas frequentes e muito mais. Na lista de recursos fornecida no email, você também receberá detalhes sobre como acessar o [!UICONTROL Cloud Manager] nos seus ambientes de nuvem de AEM.
+Após a conclusão do processo de provisionamento do ambiente, o administrador do cliente designado recebe um email de boas-vindas com a confirmação de que recebeu acesso ao Adobe [!UICONTROL Experience Cloud]. O email de boas-vindas contém informações detalhadas sobre como começar a usar os serviços da [!UICONTROL Experience Cloud], ambientes da nuvem do [!UICONTROL AEM Managed Services] e o portal de autoatendimento do [!UICONTROL Cloud Manager]. Além disso, o email contém informações importantes, como as informações de contato do engenheiro de sucesso do cliente (CSE), onde buscar recursos de suporte, fóruns, perguntas frequentes e muito mais. Na lista de recursos fornecida no email, você também receberá detalhes sobre como acessar o [!UICONTROL Cloud Manager] nos seus ambientes de nuvem de AEM.
 
 ## Próximas etapas {#next-steps}
 

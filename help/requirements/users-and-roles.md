@@ -5,7 +5,7 @@ exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '758'
-ht-degree: 50%
+ht-degree: 65%
 
 ---
 
@@ -25,7 +25,7 @@ Atualmente, o [!UICONTROL Cloud Manager] define quatro funções de usuário, qu
 >
 >Para usar o [!UICONTROL Cloud Manager], você deve ter uma Adobe ID e um Contexto de produto do Adobe Managed Services.
 
-## Definições de função {#role-definitions}
+## Definições de funções {#role-definitions}
 
 A tabela a seguir resume as funções no Cloud Manager.
 
@@ -46,7 +46,7 @@ A tabela a seguir resume as funções no Cloud Manager.
 
 As funções do [!UICONTROL Cloud Manager] são gerenciadas no Admin Console. Associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager].
 
-O Admin Console é um local central para gerenciar seus direitos da Adobe em toda a organização. Para saber mais sobre a Adobe Admin Console, consulte [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
+O Admin Console é um local central para gerenciar direitos da Adobe em toda a organização. Para saber mais sobre a Adobe Admin Console, consulte [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
 
 AEM Um administrador deve criar novos perfis de produto no Contexto de Produto do [!UICONTROL Managed Services] para atribuir permissões com base em função para usuários do [!UICONTROL Cloud Manager], correspondentes a cada uma das quatro funções do [!UICONTROL Cloud Manager].
 
@@ -99,20 +99,20 @@ Depois de criar perfis de produto, você pode atribuir usuários ou grupos de us
 
    ![Guia Usuários](/help/assets/admin-console-users.png)
 
-1. Clique em **Usuários** no painel de navegação esquerdo e, em seguida, clique em um usuário para modificá-lo.
+1. Clique em **Usuários**, no painel de navegação esquerdo, e, em seguida, clique em um usuário para modificá-lo.
 
-1. Clique no botão de reticências na seção **Produtos** e selecione **Editar**.
+1. Clique no botão de reticências, na seção **Produtos** e selecione **Editar**.
 
    ![Editar usuário](/help/assets/admin-console-edit-user.png)
 
-1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique no botão de adição e selecione os perfis a serem atribuídos ao usuário.
+1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique no botão de mais e selecione os perfis a serem atribuídos ao usuário.
 
-   * Se o usuário já estiver atribuído às funções, o botão de adição será um botão de edição (um lápis), mas funcionará da mesma maneira.
+   * Se o usuário já tiver sido atribuído às funções, o botão de mais será um botão de edição (um lápis), mas funcionará da mesma maneira.
 
    ![Editar produtos e grupos de usuários](/help/assets/admin-console-edit-products-and-user-groups.png)
 
 1. Clique em **Salvar** para salvar os perfis para o usuário.
 
-Repita as mesmas etapas para atribuir perfis a grupos de usuários, mas selecione **Grupos de usuários** no painel de navegação esquerdo da guia **Usuários**. Clique em um grupo de usuários, selecione a guia **Perfis de produto atribuídos** e clique em **Atribuir perfil de produto** para atribuir perfis.
+Repita as mesmas etapas para atribuir perfis a grupos de usuários, mas selecione **Grupos de usuários** no painel de navegação esquerdo da guia **Usuários**. Clique em um grupo de usuários, selecione a guia **Perfis de produtos atribuídos** e clique em **Atribuir perfil de produto** para atribuir perfis.
 
 ![Atribuir perfis ao grupo](/help/assets/admin-console-edit-user-groups.png)

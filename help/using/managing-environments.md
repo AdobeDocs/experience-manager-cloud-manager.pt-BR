@@ -5,7 +5,7 @@ exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 78%
+ht-degree: 84%
 
 ---
 
@@ -37,7 +37,7 @@ O status é o estado de energia acumulado nos nós do ambiente na seguinte ordem
 
 ## Gerenciar ambientes {#managing-environments-with-cloud-manager}
 
-No bloco **Ambientes**, clique na linha de qualquer ambiente para exibir a tela **Ambientes**.
+No bloco **Ambientes**, clique na linha de qualquer ambiente para exibir a tela **Ambientes**.
 
 A tela **Ambientes** exibe cada ambiente de produção e preparo do seu programa. O nome do ambiente é visto acima de cada cartão. O cartão inclui uma tabela de nós no ambiente, juntamente com o tamanho da CPU, o armazenamento, a região e o status.
 

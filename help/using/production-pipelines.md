@@ -5,14 +5,14 @@ exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1247'
-ht-degree: 46%
+ht-degree: 57%
 
 ---
 
 
 # Configurar pipelines de produção {#configuring-production-pipelines}
 
-Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código. Se desejar ter uma visão geral mais conceitual de como os pipelines funcionam no Cloud Manager, consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md).
+Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código. Se desejar começar com uma visão geral mais conceitual de como funcionam os pipelines no Cloud Manager, consulte [Pipelines de CI/CD.](/help/overview/ci-cd-pipelines.md)
 
 ## Visão geral {#overview}
 
@@ -21,7 +21,7 @@ Você pode criar dois tipos diferentes de pipelines usando o bloco **Configuraç
 * **Pipelines de produção** - Um pipeline de produção é composto por uma série de etapas orquestradas que têm o objetivo de levar o código-fonte do seu repositório Git até a produção.
 * **Pipelines de não produção** - Um pipeline de não produção é utilizado principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
 
-Este documento é voltado para pipelines de produção. Para obter detalhes sobre como configurar pipelines de não produção, consulte o documento [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md).
+Este documento é voltado para pipelines de produção. Para obter detalhes sobre como configurar pipelines de não produção, consulte o documento [Configuração de pipelines de não produção.](/help/using/non-production-pipelines.md)
 
 O **Gerenciador de implantação** é responsável pela configuração do pipeline. A configuração do pipeline consiste em:
 
@@ -126,11 +126,11 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
 
          * **Configuração do Dispatcher** - Defina a configuração do Dispatcher para seu ambiente de produção. As opções são as mesmas do ambiente de preparo.
 
-1. Clique em **Continuar** para avançar para a guia **Teste de Preparo**, onde é possível configurar o Teste de Desempenho do AEM Sites e do AEM Assets, dependendo das licenças de produto que você possui.
+1. Clique em **Continuar** para avançar até a guia **Teste de preparo**, onde é possível configurar o teste de desempenho do AEM Sites e do AEM Assets, dependendo das licenças de produto que você possui.
 
    >[!TIP]
    >
-   >Consulte [Teste de Qualidade do Código](/help/using/code-quality-testing.md#performance-testing) para obter mais detalhes sobre as opções disponíveis na guia **Teste de Preparo**.
+   >Consulte [Teste de qualidade do código](/help/using/code-quality-testing.md#performance-testing) para obter mais detalhes sobre as opções disponíveis na guia **Teste de preparo**.
 
    1. Na seção **Entrega de conteúdo de sites/Peso de carga distribuído**, configure o Teste de desempenho do site com base na ponderação de solicitações de página entre três conjuntos de páginas. Você pode ativar ou desativar os conjuntos de páginas conforme necessário.
 
@@ -140,7 +140,7 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
 
       ![Peso de carregamento dos sites](/help/assets/configure-pipelines/add-prod5.png)
 
-   1. Na seção **Distribuição de testes de desempenho do Assets**, você define a distribuição de testes de imagens e PDF e seus próprios ativos de teste.
+   1. Na seção **Distribuição de teste de desempenho de ativos**, você define a distribuição de teste de imagens e PDFs, bem como de seus próprios ativos de teste.
 
       * **Imagens** - Use o controle deslizante para ajustar a divisão do teste entre imagens e PDFs.
       * **PDF** - Use o controle deslizante para ajustar a divisão do teste entre imagens e PDFs.
@@ -157,7 +157,7 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
 
 ## Próximas etapas {#the-next-steps}
 
-Depois de configurar o pipeline, você implanta seu código. Consulte [Implantação do código](/help/using/code-deployment.md) para obter mais detalhes.
+Depois de configurar o pipeline, você implanta seu código. Consulte [Implantação de código](/help/using/code-deployment.md) para obter mais detalhes.
 
 ## Tutorial em vídeo {#video-tutorial-one}
 

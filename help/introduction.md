@@ -5,7 +5,7 @@ exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 48%
+ht-degree: 55%
 
 ---
 
@@ -75,7 +75,7 @@ Para saber mais sobre a implantação das verificações de código e qualidade,
 
 ## Recursos opcionais no Cloud Manager {#optional-features-in-cloud-manager}
 
-O Cloud Manager oferece recursos adicionais e avançados, que podem ser benéficos para o seu projeto, dependendo da configuração e das necessidades específicas do ambiente. Se esses recursos forem de seu interesse, entre em contato com o engenheiro de sucesso do cliente (CSE) ou representante da Adobe para saber mais detalhes.
+O Cloud Manager oferece recursos adicionais e avançados, que podem ser benéficos para o seu projeto, dependendo da configuração e das necessidades específicas do ambiente. Se esses recursos forem do seu interesse, entre em contato com o engenheiro de sucesso do cliente (CSE) ou representante da Adobe para mais detalhes.
 
 ### Dimensionamento automático {#autoscaling}
 
@@ -87,7 +87,7 @@ O recurso de dimensionamento automático se aplica à camada do Dispatcher/publi
 
 >[!NOTE]
 >
->Se você estiver interessado em explorar se o dimensionamento automático é apropriado para seu aplicativo, entre em contato com seu CSE ou representante da Adobe.
+>Se você tiver interesse em experimentar se o dimensionamento automático é adequado para o seu aplicativo, entre em contato com o seu CSE ou representante da Adobe.
 
 ### Implantações azul/verde {#blue-green}
 
@@ -121,7 +121,7 @@ Quando a implantação azul/verde está ativada, o fluxo de implantação é dif
 
 Todos os usuários do AMS que usam o Cloud Manager para implantações de produção estão qualificados para usar a implantação azul/verde. No entanto, o uso da implantação azul/verde requer a validação adicional de seus ambientes e a configuração por um Adobe CSE.
 
-Se você estiver interessado na implantação azul/verde, considere os seguintes requisitos e limitações e entre em contato com seu CSE.
+Se você tiver interesse na implantação azul/verde, considere os requisitos e limitações a seguir e entre em contato com o seu CSE.
 
 #### Requisitos e limitações {#limitations}
 
@@ -129,5 +129,5 @@ Se você estiver interessado na implantação azul/verde, considere os seguintes
 * Visualizar pares do Dispatcher/publicação não faz parte de implantações azuis/verdes.
 * Cada par de Dispatcher/publicação é idêntico a qualquer outro par de Dispatcher/editor.
 * Azul/verde está disponível somente no ambiente de produção.
-* Azul/verde está disponível no AWS e Azure.
+* Azul/verde está disponível no AWS e no Azure.
 * Azul/verde não está disponível somente para clientes Assets.

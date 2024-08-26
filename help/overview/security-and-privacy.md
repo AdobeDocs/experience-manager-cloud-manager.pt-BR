@@ -5,7 +5,7 @@ exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 60%
+ht-degree: 70%
 
 ---
 
@@ -18,7 +18,7 @@ Saiba mais sobre a segurança e a privacidade de seu código e ativos de artefat
 
 O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apropriadas.
 
-Para saber mais sobre as possíveis funções que você pode atribuir no Admin Console e as permissões de função de usuário, consulte [Permissões baseadas em funções](/help/requirements/role-based-permissions.md).
+Para saber mais sobre as possíveis funções que você pode atribuir no Admin Console e as permissões da função de usuário, consulte o documento [Permissões baseadas em funções](/help/requirements/role-based-permissions.md).
 
 ## Isolamento de recursos {#resource-isolation}
 

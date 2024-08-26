@@ -5,7 +5,7 @@ exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '2764'
-ht-degree: 90%
+ht-degree: 96%
 
 ---
 
@@ -46,11 +46,11 @@ O teste de qualidade do código verifica o código-fonte para garantir que atend
 
 O software implementa isso usando uma combinação de análise SonarQube, exame em nível de pacote de conteúdo com OakPAL e validação do Dispatcher com a ferramenta de otimização do Dispatcher.
 
-Há mais de 100 regras, compostas por uma combinação de regras Java genéricas e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas da Engenharia de AEM e são chamadas de [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md).
+Há mais de 100 regras, compostas por uma combinação de regras Java genéricas e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas da equipe de engenharia do AEM e são chamadas de [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md).
 
 >[!TIP]
 >
->Você pode baixar a lista completa de regras [usando este link](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+>Você pode baixar a lista completa de regras [por meio deste link](/help/assets/CodeQuality-rules-latest-AMS.xlsx). 
 
 Os resultados do teste de qualidade do código são fornecidos em forma de classificação, conforme resumido neste quadro.
 
@@ -71,7 +71,7 @@ Os resultados do teste de qualidade do código são fornecidos em forma de class
 
 >[!NOTE]
 >
->Para saber mais sobre as regras de qualidade do código personalizado executadas pelo [!UICONTROL Cloud Manager], consulte [Regras de Qualidade do Código Personalizado](custom-code-quality-rules.md).
+>Para saber mais sobre as regras de qualidade do código personalizado executadas pelo [!UICONTROL Cloud Manager], consulte [Regras de qualidade do código personalizado](custom-code-quality-rules.md).
 
 ### Como lidar com falsos positivos {#dealing-with-false-positives}
 
@@ -172,7 +172,7 @@ Três conjuntos de páginas selecionam as páginas. O Cloud Manager usa os logs 
 
 ##### Distribuição de tráfego nos conjuntos de páginas selecionados {#distribution-of-traffic}
 
-Você pode escolher entre um e três conjuntos na guia **Testes** da sua [configuração de pipeline](/help/using/production-pipelines.md). A distribuição do tráfego é baseada no número de conjuntos selecionados. Ou seja, se todos os três forem selecionados, 33% do total de visualizações de página serão colocados em cada conjunto. Se dois forem selecionados, 50% serão direcionadas a cada conjunto. Se um for selecionado, 100% do tráfego será direcionado para esse conjunto.
+Você pode escolher de um a todos os três conjuntos na guia **Testes** da [configuração de pipeline](/help/using/production-pipelines.md). A distribuição do tráfego é baseada na quantidade de conjuntos selecionados. Ou seja, se todos os três forem selecionados, 33% do total de visualizações de página serão colocados em cada conjunto. Se dois forem selecionados, 50% serão direcionadas a cada conjunto. Se um for selecionado, 100% do tráfego será direcionado para esse conjunto.
 
 Consideremos este exemplo.
 
@@ -188,7 +188,7 @@ Durante o período de teste de 30 minutos:
 
 #### Teste e relatório {#testing-reporting}
 
-O Cloud Manager executa testes de desempenho para programas do AEM Sites, solicitando páginas como um usuário não autenticado por padrão no servidor de publicação de preparo por um período de teste de 30 minutos. Ele mede as métricas geradas pelo usuário virtual (tempo de resposta, taxa de erro, exibições por minuto e assim por diante) para cada página e várias métricas no nível do sistema (CPU, memória, dados de rede) para todas as instâncias.
+O Cloud Manager executa testes de desempenho para programas do AEM Sites, solicitando páginas como um usuário não autenticado por padrão no servidor de publicação de preparo por um período de teste de 30 minutos. Isso mede as métricas virtuais geradas pelo usuário (tempo de resposta, taxa de erro, visualizações por minuto e assim por diante) para cada página, bem como várias métricas na camada do sistema (CPU, memória, dados de rede) para todas as instâncias.
 
 A tabela a seguir resume a matriz de teste de desempenho usando o sistema de marcação em três níveis.
 
@@ -250,7 +250,7 @@ Por exemplo, ao utilizar uma divisão 70/30 e carregar 10 ativos por minuto, 7 i
 
 #### Teste e relatório {#testing-and-reporting}
 
-O Cloud Manager criará uma pasta na instância de criação usando o nome de usuário e a senha configurados pelo(a) CSE. Os ativos são carregados na pasta usando uma biblioteca de código aberto. Os testes executados pela etapa de teste do Assets são gravados usando uma [biblioteca de código aberto](https://github.com/adobe/toughday2). Os tempos de processamento de cada ativo e de várias métricas no nível do sistema são medidos durante o teste de 30 minutos. Esse recurso pode carregar imagens e documentos PDF.
+O Cloud Manager criará uma pasta na instância de criação usando o nome de usuário e a senha configurados pelo(a) CSE. Os ativos são carregados na pasta usando uma biblioteca de código aberto. Os testes executados pela etapa de teste dos ativos são gravados usando uma [biblioteca de código aberto](https://github.com/adobe/toughday2). Os tempos de processamento de cada ativo e de várias métricas no nível do sistema são medidos durante o período de 30 minutos do teste. Esse recurso pode carregar imagens e documentos PDF.
 
 >[!TIP]
 >

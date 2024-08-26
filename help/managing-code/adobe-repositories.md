@@ -5,7 +5,7 @@ exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 72%
+ht-degree: 93%
 
 ---
 
@@ -29,8 +29,8 @@ A janela **Repositórios** facilita a adição de outros repositórios gerenciad
 
    ![Caixa de diálogo Adicionar repositório](assets/add-repository-wizard.png)
 
-Quando o assistente for fechado, seu novo repositório será exibido na tabela da janela **Repositórios**. Agora você pode associar um [pipeline de CI/CD](/help/overview/ci-cd-pipelines.md) ou gerenciá-lo na janela [**Repositórios**](managing-repositories.md).
+Quando o assistente for fechado, seu novo repositório será exibido na tabela da janela **Repositórios**. Agora você pode associar um [Pipeline de CI/CD](/help/overview/ci-cd-pipelines.md) ou gerenciá-lo na janela [**Repositórios**.](managing-repositories.md)
 
 >[!TIP]
 >
->Você também pode adicionar repositórios GitHub gerenciados por você mesmo como [repositórios privados](private-repositories.md).
+>Também é possível adicionar repositórios GitHub que você mesmo gerencia como [repositórios privados](private-repositories.md).

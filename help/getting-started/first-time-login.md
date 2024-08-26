@@ -5,7 +5,7 @@ exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 30%
+ht-degree: 55%
 
 ---
 
@@ -24,15 +24,15 @@ Após definir a configuração geral do [!UICONTROL Cloud Manager], você está 
 
    ![Console do Cloud Manager](/help/assets/cloud-manager-console.png)
 
-1. Clique no cartão do programa para navegar até a página **Visão geral** da Cloud Manager.
+1. Clique no cartão do programa para navegar até a página **Visão geral** do Cloud Manager.
 
 1. O Cloud Manager abre na página **Visão geral**.
 
    ![Página de visão geral do Cloud Manager](/help/assets/program-overview-page.png)
 
-1. Se o seu programa ainda não estiver configurado, clique em **Configurar programa** na [frase de chamariz](/help/getting-started/navigation.md#cta) para configurar a descrição do programa e definir os KPIs (indicadores-chave de desempenho). Se o programa já estiver configurado, a CTA poderá apresentar etapas adicionais.
+1. Se o programa ainda não estiver configurado, clique em **Configurar programa** na [chamada para ação](/help/getting-started/navigation.md#cta) para configurar a descrição do programa e definir os indicadores principais de desempenho (KPIs). Se o programa já estiver configurado, a CTA poderá apresentar etapas adicionais.
 
-Você pode continuar com o documento [Configuração do programa](/help/getting-started/program-setup.md) para ver as próximas etapas da configuração do programa.
+Você pode prosseguir para o documento [Configuração do programa](/help/getting-started/program-setup.md) para as próximas etapas de configuração.
 
 ## Atividade do Cloud Manager {#activity}
 
@@ -44,4 +44,4 @@ O Cloud Manager fornece uma exibição consolidada para a atividade de um progra
 
 >[!NOTE]
 >
->Por padrão, um usuário com acesso a um ambiente AEM também tem a função Usuário do Cloud Manager. Esta função é insuficiente para conceder ao usuário acesso à visualização de detalhes do programa. Esse usuário, com apenas a função de Usuário do Cloud Manager, pode navegar pelas opções de menu do programa até o URL do autor do ambiente AEM (se existirem ambientes). Esses usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.
+>Por padrão, um usuário com acesso a um ambiente AEM também tem a função Usuário do Cloud Manager. Esta função é insuficiente para conceder ao usuário acesso à visualização de detalhes do programa. Esse usuário, com apenas a função de Usuário do Cloud Manager, pode navegar pelas opções de menu do programa até o URL do autor do ambiente AEM (se existirem ambientes). Tais usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.

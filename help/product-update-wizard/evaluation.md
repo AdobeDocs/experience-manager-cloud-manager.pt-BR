@@ -6,7 +6,7 @@ exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
 source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 17%
+ht-degree: 31%
 
 ---
 
@@ -33,13 +33,13 @@ O detector de padrões pode ser executado em qualquer ambiente. No entanto, para
 
 **Para executar o relatório de avaliação:**
 
-1. Inicie o assistente conforme descrito no documento [Assistente de Atualização de Produto](/help/product-update-wizard/overview.md).
+1. Inicie o assistente conforme descrito no documento [Assistente de atualização do produto](/help/product-update-wizard/overview.md).
 
-1. Clique em **[!UICONTROL Executar Avaliação]**.
+1. Clique em **[!UICONTROL Executar avaliação]**.
 
    ![Executar avaliação](/help/assets/Run-Evaluation.png)
 
-1. O assistente informa o status da ação. Aviso **Em andamento** ou **concluído**, conforme aplicável, quando o relatório de avaliação estiver sendo gerado.
+1. O assistente informa o status da ação. Você notará os status **Em andamento** ou **Concluído**, conforme for o caso, quando o relatório de avaliação estiver sendo gerado.
 
 1. Depois que o relatório for gerado, você pode clicar em **[!UICONTROL Baixar relatório]** para salvar uma cópia.
 

@@ -5,7 +5,7 @@ exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '748'
-ht-degree: 50%
+ht-degree: 54%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento fornece respostas às perguntas mais frequentes sobre o Cloud Man
 
 Sim. Você precisa adicionar o `maven-toolchains-plugin` com as configurações corretas para o Java 11.
 
-* Este processo está documentado [aqui](/help/getting-started/using-the-wizard.md).
+* Esse processo está documentado [aqui](/help/getting-started/using-the-wizard.md).
 * Para ver um exemplo, consulte o [código do projeto de amostra WKND](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
 ## Minha compilação falha com um erro sobre maven-scr-plugin após alternar do Java 8 para o Java 11. O que posso fazer? {#maven-src-plugin}
@@ -29,7 +29,7 @@ A compilação do AEM Cloud Manager pode falhar ao tentar alternar a compilaçã
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
 ```
 
-Para obter instruções sobre como remover este plug-in, [veja aqui](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+Para obter instruções sobre como remover esse plug-in, consulte [esta](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/) página.
 
 ## Minha compilação falha com um erro sobre RequireJavaVersion após alternar do Java 8 para o Java 11. O que posso fazer? {#requirejavaversion}
 
@@ -72,7 +72,7 @@ Mais detalhes sobre o manuseio de versão estão [documentados aqui](https://exp
 
 ## Como funciona o controle de versão de pacotes para implantações de preparo e produção? {#staging-production}
 
-Em implantações de preparo e produção, uma versão automática é gerada [conforme documentado aqui](/help/managing-code/maven-project-version.md).
+As implantações de preparo e produção geram uma versão automática, [conforme documentado aqui](/help/managing-code/maven-project-version.md).
 
 Para o controle de versão personalizado em implantações de preparo e produção, defina uma versão maven adequada com três partes como `1.0.0`. Aumente a versão sempre que implantar na produção.
 

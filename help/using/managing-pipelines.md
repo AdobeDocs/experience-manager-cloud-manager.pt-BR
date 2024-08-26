@@ -5,7 +5,7 @@ exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
 workflow-type: tm+mt
 source-wordcount: '840'
-ht-degree: 41%
+ht-degree: 60%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 41%
 
 Saiba como gerenciar os pipelines existentes, incluindo edição, execução e exclusão.
 
-## Cartão Pipeline {#pipeline-card}
+## Cartão do pipeline {#pipeline-card}
 
 O cartão **Pipelines** na página **Visão geral do programa** no Cloud Manager fornece uma visão geral de todos os seus pipelines e seu status atual.
 
@@ -34,7 +34,7 @@ Na parte inferior da lista de pipelines, você tem as seguintes opções gerais.
 * **Acessar informações do repositório** - Exibe as informações necessárias para acessar o repositório Git do Cloud Manager.
 * **Saiba mais** - Navega até os recursos de documentação do pipeline de CI/CD.
 
-## Janela Pipelines {#pipelines}
+## Janela de pipelines {#pipelines}
 
 A janela **Pipelines** mostra uma lista completa de todos os pipelines do programa selecionado. Esta lista é útil porque apresenta informações mais abrangentes do que as disponíveis no [cartão Pipelines](#pipeline-card).
 
@@ -42,15 +42,15 @@ A janela **Pipelines** mostra uma lista completa de todos os pipelines do progra
 
 1. Na página **Visão geral do programa**, clique na guia **Pipelines** para alternar para a janela **Pipelines**.
 
-1. Aqui você pode ver uma lista de todos os pipelines para o programa e iniciar e parar a execução do pipeline como faria no **Cartão Pipelines**.
+1. Nessa janela você pode ver uma lista de todos os pipelines do programa, bem como iniciar e parar a execução do pipeline, assim como no **cartão do pipeline**.
 
 Clicar no ícone `i` revela detalhes sobre a última execução ou a execução atual do pipeline.
 
 ![Detalhes da execução do pipeline](/help/assets/configure-pipelines/pipeline-status.png)
 
-Clicar em **Exibir detalhes** leva você aos [detalhes da execução do pipeline](#view-details).
+Clicar em **Exibir detalhes** mostrará os [detalhes da execução do pipeline](#view-details).
 
-## Janela Atividade {#activity}
+## Janela de atividade {#activity}
 
 A janela **Atividades** mostra uma lista completa de todas as execuções de pipeline do programa selecionado.
 
@@ -126,7 +126,7 @@ Clique no link **Exibir detalhes** para revelar a seção **Duração**. Esta se
 
 ![Duração](/help/assets/configure-pipelines/duration.png)
 
-Se seu pipeline continha uma etapa de **Verificação de código**, o que gerou problemas, você pode clicar no botão **Detalhes do download** para exibir uma lista de [testes de qualidade do código](/help/using/code-quality-testing.md) que não foram aprovados.
+Se o pipeline tiver uma etapa de **Varredura de código** que gerou problemas, clique no botão **Detalhes de download** para exibir uma lista de [testes de qualidade do código](/help/using/code-quality-testing.md) não aprovados.
 
 ![Problemas de qualidade do código](assets/managing-pipelines-code-quality-issues.png)
 

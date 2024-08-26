@@ -5,7 +5,7 @@ exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '932'
-ht-degree: 27%
+ht-degree: 42%
 
 ---
 
@@ -15,7 +15,7 @@ Saiba como dividir implantações de preparo e produção usando pipelines dedic
 
 >[!NOTE]
 >
->Este recurso só está disponível para [o programa de adoção antecipada](/help/release-notes/current.md#early-adoption).
+>Este recurso só está disponível por meio do [programa de adoção antecipada](/help/release-notes/current.md#early-adoption).
 
 ## Visão geral {#overview}
 
@@ -46,9 +46,9 @@ Esses pipelines dedicados oferecem mais flexibilidade, mas observe os seguintes 
 
 ## Criação de pipeline {#pipeline-creation}
 
-Os pipelines somente de produção e somente de preparo são criados de maneira semelhante aos [pipelines de produção](/help/using/production-pipelines.md) e [pipelines de não produção](/help/using/non-production-pipelines.md) agrupados padrão. Consulte esses documentos para obter detalhes.
+Os pipelines somente de produção e somente de preparo são criados de maneira semelhante aos [pipelines de produção](/help/using/production-pipelines.md) e [pipelines de não produção](/help/using/non-production-pipelines.md) acoplados padrão. Consulte esses documentos para obter detalhes.
 
-1. Na janela **Pipelines**, clique em **Adicionar pipeline**.
+1. Na janela **Pipelines**, clique em **Adicionar pipeline**.
 
    * Selecione **Adicionar pipeline de não produção** para criar um pipeline somente de preparo.
    * Selecione **Adicionar pipeline somente de produção** para criar um pipeline somente de produção.
@@ -59,9 +59,9 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 >
 >Determinadas opções podem estar esmaecidas se os pipelines correspondentes já existirem.
 >
->* **Adicionar pipeline somente de produção** não estará disponível se um pipeline somente de preparo ainda não existir.
->* **Adicionar pipeline de produção** não estará disponível se um pipeline acoplado padrão já existir.
->* Apenas um pipeline somente de produção e um pipeline somente de preparo são permitidos por programa.
+>* A opção **Adicionar pipeline somente de produção** não estará disponível se não existir um pipeline somente de preparo.
+>* A opção **Adicionar pipeline de produção** não está disponível se já existir um pipeline acoplado padrão.
+>* São permitidos apenas um pipeline somente de produção e um pipeline somente de preparo por programa.
 
 ### Pipelines somente de preparo {#stage-only}
 
@@ -85,7 +85,7 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 
    ![Criação de um pipeline somente de produção](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
-## Executar pipelines somente de produção e somente de preparo {#running}
+## Execução de pipelines somente de produção e somente de preparo {#running}
 
 Os pipelines somente de produção e somente de preparo são executados quase da mesma forma que [todos os outros pipelines são executados](/help/using/managing-pipelines.md#running-pipelines). Consulte essa documentação para obter detalhes. No entanto, há dois novos recursos desses pipelines.
 

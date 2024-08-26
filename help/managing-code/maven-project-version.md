@@ -5,7 +5,7 @@ exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '249'
-ht-degree: 37%
+ht-degree: 43%
 
 ---
 
@@ -18,7 +18,7 @@ Saiba como o Maven lida com o controle de versão de projetos no Cloud Manager.
 
 Para implantações de preparo e produção, o Cloud Manager gera uma versão incremental e exclusiva.
 
-Essa versão é vista na página de detalhes de execução do pipeline e na página de atividades. Quando uma build é executada, o projeto Maven é atualizado para usar esta versão. Uma tag é criada no repositório Git com essa versão como seu nome.
+Essa versão é exibida na página de detalhes de execução de pipeline e na página de atividades. Quando uma build é executada, o projeto Maven é atualizado para usar esta versão. Uma tag é criada no repositório Git com essa versão como seu nome.
 
 Se a versão original do projeto atender a determinados critérios, a versão atualizada do projeto Maven mesclará a versão original do projeto com a versão gerada pelo Cloud Manager. No entanto, a tag sempre usará a versão gerada. Para que essa mesclagem ocorra, a versão original do projeto deve ser formada com exatamente três segmentos de versão, por exemplo, `1.0.0` ou `1.2.3`, mas não `1.0` ou `1`, e a versão original não deve terminar em `-SNAPSHOT`.
 

@@ -5,7 +5,7 @@ exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 51%
+ht-degree: 57%
 
 ---
 
@@ -22,7 +22,7 @@ O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apr
 
 ## Funções do usuário {#user-roles}
 
-O gerenciamento de funções para [!UICONTROL Cloud Manager] é feito usando o [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html). Qualquer usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de Produto do Adobe Managed Services. Aa associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] no Admin Console.
+O gerenciamento de funções do [!UICONTROL Cloud Manager] é feito usando o [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html). Todo usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de produto do Adobe Managed Services. As associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] no Admin Console.
 
 Para saber mais sobre como configurar suas funções, consulte [Configurando usuários e funções](/help/requirements/users-and-roles.md).
 
@@ -68,4 +68,4 @@ Para saber mais sobre como configurar seus usuários, consulte [Configurando Usu
 
 >[!TIP]
 >
->Perfis de permissões personalizadas com permissões configuráveis também estão disponíveis. Consulte [Permissões personalizadas](/help/using/custom-permissions.md) para obter mais detalhes.
+>Também estão disponíveis perfis personalizados com permissões configuráveis. Consulte [Permissões personalizadas](/help/using/custom-permissions.md) para obter mais detalhes.

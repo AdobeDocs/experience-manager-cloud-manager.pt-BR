@@ -5,7 +5,7 @@ exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '561'
-ht-degree: 67%
+ht-degree: 81%
 
 ---
 
@@ -36,15 +36,15 @@ A guia **Avisos** inclui avisos de produto da Adobe. Os avisos dizem respeito ao
 
 ![Barra lateral de notificações](/help/assets/notificaitons-announcements.png)
 
-Clique em uma notificação ou anúncio para exibir seus detalhes. As notificações vinculadas a atividades como implantações de pipeline levam você aos detalhes dessa atividade, como a janela de execução do pipeline.
+Clique em uma notificação ou anúncio para visualizar seus detalhes. As notificações vinculadas a atividades como implantações de pipeline levam você aos detalhes dessa atividade, como a janela de execução do pipeline.
 
 Clique na opção **Exibir tudo** na parte inferior do painel para exibir todos os avisos na caixa de entrada.
 
-Clique na opção **Marcar tudo como lido** na parte inferior do painel para marcar todas as notificações não lidas como lidas e remover o símbolo do ícone de sino.
+Clique na opção **Marcar tudo como lido** na parte inferior do painel para marcar todas as notificações não lidas como lidas e limpar o ícone de sino.
 
 ## Configuração de notificação {#configuration}
 
-Você pode personalizar como recebe notificações e quais notificações recebe.
+É possível personalizar como e quais notificações você recebe.
 
 Clique no ícone de engrenagem na parte superior da barra lateral de notificações.
 

@@ -1,18 +1,18 @@
 ---
 title: Monitorar ambientes
-description: Saiba como monitorar seus ambientes no Cloud Manager.
+description: Saiba como monitorar os seus ambientes no Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 32%
+ht-degree: 44%
 
 ---
 
 
 # Monitorar ambientes {#monitoring-environments}
 
-Saiba como monitorar seus ambientes no Cloud Manager.
+Saiba como monitorar os seus ambientes no Cloud Manager.
 
 ## Limites de métrica {#thresholds}
 
@@ -24,7 +24,7 @@ Se uma métrica ultrapassar seu limite crítico, ela será considerada em estado
 
 O Adobe Managed Services define os limites, que você pode ver no [!UICONTROL Cloud Manager]. Na maioria dos casos, os limites são consistentes entre os clientes, mas há casos em que o Adobe Managed Services edita limites para atender às necessidades específicas do cliente. Encaminhe qualquer dúvida sobre os limites para o seu engenheiro de sucesso do cliente (CSE).
 
-## Monitoramento do sistema de acesso {#accessing-system-monitoring}
+## Acessar monitoramento do sistema {#accessing-system-monitoring}
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selecione a organização e o programa apropriados.
 
@@ -52,9 +52,9 @@ O status em cada categoria é um resumo de métricas individuais. Se alguma mét
 >
 >Por padrão, ao navegar para essa página, as instâncias do ambiente de produção são visíveis, mas outros ambientes também podem ser visualizados.
 
-## Detalhes de monitoramento do sistema {#system-monitoring-detail}
+## Detalhes do monitoramento do sistema {#system-monitoring-detail}
 
-Para exibir os detalhes de métricas específicas, clique em uma das colunas de categoria de uma instância específica ou no título da categoria no painel de navegação esquerdo. Cada página de detalhes mostra uma série de gráficos para as métricas contidas nessa categoria. É possível exibir as métricas de todas as instâncias em um ambiente ou para uma instância específica. Você pode alternar entre o ambiente e as instâncias usando as caixas suspensas no canto superior direito.
+Para exibir os detalhes de métricas específicas, clique em uma das colunas de categoria de uma instância específica ou no título da categoria na navegação à esquerda. Cada página de detalhes mostra uma série de gráficos para as métricas contidas nessa categoria. É possível exibir as métricas de todas as instâncias em um ambiente ou para uma instância específica. Você pode alternar entre o ambiente e as instâncias usando as caixas suspensas no canto superior direito.
 
 ![Selecionar ambiente](/help/assets/System_Monitoring1.png)
 
@@ -67,7 +67,7 @@ Um gráfico individual mostra o status e um gráfico dos dados ao longo do tempo
 As séries individuais podem ser ocultadas em um gráfico clicando nelas na legenda.
 Por exemplo, se você clicar na série de limites de aviso, verá somente o limite crítico.
 
-![Gráfico de modificação](/help/assets/Monitoring_Graphs2.png)
+![Modificação do gráfico](/help/assets/Monitoring_Graphs2.png)
 
 ### Definições de métricas {#metric-definitions}
 
@@ -96,7 +96,7 @@ Por exemplo, se você clicar na série de limites de aviso, verá somente o limi
    * Existem métricas separadas para cada agente de replicação.
 * **Liberação do Dispatcher**: o número de itens atualmente na fila de liberação do Dispatcher
 
-## Relatórios do SLA {#sla-reporting}
+## Relatórios de SLA {#sla-reporting}
 
 É possível ver o desempenho do ambiente de produção do AEM em relação ao contrato de nível de serviço (SLA).
 
@@ -112,17 +112,17 @@ A seção **Análise de Eventos** deste gráfico mostra o conjunto de incidentes
 
 ![Análise de evento](/help/assets/sla-reporting3.png)
 
-## Métricas do SLA {#sla-metrics}
+## Métricas de SLA {#sla-metrics}
 
-* **Contrato de autor**: o SLA definido em seu contrato com o Adobe Managed Services para a camada de autor.
+* **Contrato de autor**: esse é o SLA definido em seu contrato com o Adobe Managed Services para o nível de autor.
 * **SLA do AMS Author**: o tempo de atividade medido no nível de criação de produção, considerando incidentes causados por fornecedores ou por Adobe.
-* **SLA do Autor**: o tempo de atividade total pelo qual o nível de criação ignorou o tempo de inatividade programado, como as janelas de manutenção.
-* **Contrato de usuário final**: o SLA definido em seu contrato com o Adobe Managed Services para o nível de publicação.
+* **SLA do autor**: esse é o tempo de atividade total no nível de autor, com exceção do tempo de inatividade programado, como os períodos de manutenção.
+* **Contrato de usuário final**: esse é o SLA definido em seu contrato com o Adobe Managed Services para o nível de publicação.
 * **SLA do Usuário Final do AMS**: as atualizações medidas do nível de publicação de produção, considerando incidentes causados por fornecedores ou por Adobe.
-* **SLA do Usuário Final**: o tempo de atividade total pelo qual o nível de publicação ignorou o tempo de inatividade programado, como as janelas de manutenção.
+* **SLA de usuário final**: esse é o tempo de atividade total no nível de publicação, com exceção do tempo de inatividade programado, como os períodos de manutenção.
 
 ## Tutorial em vídeo {#video-tutorial}
 
-Este vídeo fornece uma visão geral do uso dos gráficos produzidos pelos relatórios do Cloud Manager para uma visualização nos ambientes do programa.
+Este vídeo fornece uma visão geral do uso dos gráficos produzidos pelos relatórios do Cloud Manager para que você possa visualizar os ambientes do programa.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315/)

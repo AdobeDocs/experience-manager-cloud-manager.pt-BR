@@ -5,7 +5,7 @@ exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 49%
+ht-degree: 55%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 49%
 
 Após a integração, o proprietário da empresa configura o programa adicionando uma descrição e definindo indicadores-chave de desempenho (KPIs). Esses KPIs são usados para testes de desempenho.
 
-## Configuração do programa com [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
+## Configuração do programa com o [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
 Siga estas etapas para configurar o programa e definir KPIs.
 
@@ -58,7 +58,7 @@ Seu programa foi criado. Pode levar vários minutos para que os recursos sejam p
 
 1. Navegue até o programa na tela inicial do Cloud Manager.
 
-1. Clique em **Editar programa** para atualizar ou modificar seu programa na página **Visão geral**.
+1. Clique em **Editar programa** para atualizar ou modificar o seu programa a partir da página **Visão geral**.
 
    ![Opção Editar programa](/help/assets/set-up-program/edit-program1.png)
 
@@ -66,7 +66,7 @@ Seu programa foi criado. Pode levar vários minutos para que os recursos sejam p
 
    ![Caixa de diálogo Editar programa](/help/assets/set-up-program/edit-program-general.png)
 
-1. Clique em **Atualizar** para salvar suas alterações.
+1. Clique em **Atualizar** para salvar as alterações.
 
 As alterações são salvas imediatamente no Cloud Manager, mas não são refletidas em seus ambientes até a próxima execução do pipeline.
 
@@ -90,6 +90,6 @@ O teste de desempenho do Assets envolve o upload repetido de ativos em um perío
 
 Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN. Ou seja, o cache não é utilizado. Normalmente, essa experiência é um subconjunto relativamente pequeno do tráfego total de produção.
 
-## Visão geral do vídeo {#video}
+## Vídeo de visão geral {#video}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/)

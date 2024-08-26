@@ -5,13 +5,13 @@ exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '685'
-ht-degree: 55%
+ht-degree: 64%
 
 ---
 
 # Configurar pipelines de não produção {#configuring-non-production-pipelines}
 
-Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código. Se desejar ter uma visão geral mais conceitual de como os pipelines funcionam no Cloud Manager, consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md).
+Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código. Se desejar começar com uma visão geral mais conceitual de como funcionam os pipelines no Cloud Manager, consulte [Pipelines de CI/CD.](/help/overview/ci-cd-pipelines.md)
 
 ## Visão geral {#overview}
 
@@ -20,7 +20,7 @@ Ao usar o bloco **Pipelines** no [!UICONTROL Cloud Manager], o **Gerenciador de 
 * **Pipelines de produção** - um pipeline de produção é concebido para fins específicos e é constituído por uma série de etapas orquestradas, com o objetivo de levar o código-fonte até à produção.
 * **Pipelines de não produção** - um pipeline não relacionado à produção serve principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
 
-Este documento se concentra em pipelines de não produção. Para obter detalhes sobre como configurar pipelines de produção, consulte o documento [Configuração de pipelines de produção](/help/using/production-pipelines.md).
+Este documento se concentra em pipelines de não produção. Para mais detalhes sobre como configurar pipelines de produção, consulte o documento [Configuração de pipelines de produção](/help/using/production-pipelines.md).
 
 Existem dois tipos de pipelines de não produção:
 
@@ -81,7 +81,7 @@ Depois de configurar seu programa e ter pelo menos um ambiente usando a interfac
 
 ## Próximas etapas {#the-next-steps}
 
-Depois de configurar o pipeline, você pode implantar seu código. Consulte [Implantação do código](/help/using/code-deployment.md) para obter mais detalhes.
+Depois de configurar o pipeline, você pode implantar seu código. Consulte [Implantação de código](/help/using/code-deployment.md) para obter mais detalhes.
 
 ## Tutorial em vídeo {#video-tutorial}
 
