@@ -2,7 +2,7 @@
 title: Gerenciar ambientes
 description: Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
+source-git-commit: 0b7c926120798e2fdb635752192f4ab2e12c1e24
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 86%
@@ -64,4 +64,6 @@ A tela **Ambientes** exibe cada ambiente de produção e preparo do seu progra
 
 Este vídeo fornece uma visão geral dos ambientes do Cloud Manager que são compostos por instâncias de criação, publicação e Dispatcher do AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/) (3 minutos, 1 segundo)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/)
+
+*(3 minutos, 1 segundo)*
