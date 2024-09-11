@@ -1,16 +1,16 @@
 ---
-title: Gerenciar ambientes
+title: Gerenciamento de ambientes
 description: Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 0b7c926120798e2fdb635752192f4ab2e12c1e24
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 86%
+ht-degree: 95%
 
 ---
 
 
-# Gerenciar ambientes {#managing-environments}
+# Gerenciamento de ambientes {#managing-environments}
 
 Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 
@@ -22,7 +22,7 @@ Cada um dos ambientes listados exibe seu status associado.
 
 ![Página de visão geral](/help/assets/Manage-Environ-Overview.png)
 
-## Bloco Ambientes {#environments-tile}
+## Bloco de ambientes {#environments-tile}
 
 O bloco **Ambientes** exibe os ambientes de produção e de preparo provisionados no programa junto com o status.
 
@@ -35,7 +35,7 @@ O status é o estado de energia acumulado nos nós do ambiente na seguinte ordem
 
 ![Bloco de ambientes](/help/assets/Environments-card-new.png)
 
-## Gerenciar ambientes {#managing-environments-with-cloud-manager}
+## Gerenciamento de ambientes {#managing-environments-with-cloud-manager}
 
 No bloco **Ambientes**, clique na linha de qualquer ambiente para exibir a tela **Ambientes**.
 
@@ -54,7 +54,7 @@ A tela **Ambientes** exibe cada ambiente de produção e preparo do seu progra
 
 >[!NOTE]
 >
->Detalhes do ambiente, como um nome, não podem ser alterados depois de provisionados.
+>Detalhes do ambiente, como nome, não podem ser alterados depois de provisionados.
 
 >[!NOTE]
 >

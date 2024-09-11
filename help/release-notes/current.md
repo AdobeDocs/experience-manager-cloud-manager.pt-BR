@@ -5,7 +5,7 @@ feature: Release Information
 source-git-commit: 3671772a1369273d89fde101ba084a6e2f8ce8dc
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 37%
+ht-degree: 80%
 
 ---
 
@@ -30,12 +30,12 @@ A próxima versão está planejada para sexta-feira, 3 de outubro de 2024.
 
 ## Programa de adoção antecipada {#early-adoption}
 
-Faça parte do programa de adoção antecipada da Cloud Manager e tenha a chance de testar alguns recursos futuros.
+Faça parte do programa de adoção antecipada do Cloud Manager e aproveite a oportunidade de testar alguns dos próximos recursos.
 
 
-### Pipelines somente de preparo e somente produção {#staging-production-only-pipelines}
+### Pipelines somente de preparo e somente de produção {#staging-production-only-pipelines}
 
-A Adobe está animada em anunciar a introdução do suporte para [pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md). Esse novo recurso permite dividir os pipelines de implantação de produção de pilha completa em implantações menores e mais especializadas.
+A Adobe tem o prazer de anunciar a introdução do suporte para [pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md). Esse novo recurso permite dividir os pipelines de implantação de produção de pilha completa em implantações menores e mais especializadas.
 
 Se você quiser testar este recurso e fornecer feedback, envie um email para `Grp-cloudmanager_splitpipelines@adobe.com` usando o endereço de email associado à sua Adobe ID.
 

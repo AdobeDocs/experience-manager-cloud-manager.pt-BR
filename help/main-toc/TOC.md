@@ -10,7 +10,7 @@ role: Admin
 source-git-commit: 45bb148f3e4927feb2e07c723e31fe3204a41387
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 99%
    + [Anotações de verificação do GitHub](/help/managing-code/github-annotations.md)
    + [Manuseio da versão do projeto do Maven](/help/managing-code/maven-project-version.md)
    + [Integração com o Git](/help/managing-code/git-integration.md)
-   + [Trabalhar com vários repositórios Git](/help/managing-code/multiple-git-repos.md)
+   + [Trabalho com vários repositórios Git](/help/managing-code/multiple-git-repos.md)
 + Assistente de atualização do produto {#product-update-wizard}
    + [Visão geral](/help/product-update-wizard/overview.md)
    + [Avaliação](/help/product-update-wizard/evaluation.md)
@@ -93,7 +93,7 @@ ht-degree: 99%
       + [Notas da versão 2023.5.0](/help/release-notes/2023/2023-5-0.md)
       + [Notas da versão 2023.4.0](/help/release-notes/2023/2023-4-0.md)
       + [Notas da versão 2023.3.0](/help/release-notes/2023/2023-3-0.md)
-      + [Notas de versão 2023.2.0](/help/release-notes/2023/2023-2-0.md)
+      + [Notas da versão 2023.2.0](/help/release-notes/2023/2023-2-0.md)
       + [Notas de versão 2023.1.0](/help/release-notes/2023/2023-1-0.md)
    + 2022 {#rn-2022}
       + [Notas da versão 2022.12.0](/help/release-notes/2022/2022-12-0.md)
