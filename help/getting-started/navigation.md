@@ -1,20 +1,20 @@
 ---
 title: Navegar pela interface do Cloud Manager
-description: Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
+description: Saiba como a interface do Cloud Manager é organizada e como navegar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1435'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 
-# Navegar na interface do Cloud Manager {#navigation}
+# Navegar pela interface do Cloud Manager {#navigation}
 
-Saiba como a interface do Cloud Manager é organizada e como encontrar e gerenciar seus programas e ambientes.
+Saiba como a interface do Cloud Manager é organizada e como navegar e gerenciar seus programas e ambientes.
 
-A interface do usuário do Cloud Manager é composta principalmente por duas interfaces gráficas:
+A interface do Cloud Manager é composta principalmente por duas interfaces gráficas:
 
 * [O console Meus programas](#my-programs-console), onde é possível exibir e gerenciar todos os programas.
 * [A janela Visão geral do programa](#program-overview), onde é possível ver os detalhes e gerenciar um programa individual.
@@ -114,7 +114,7 @@ Cada cartão ou linha em uma tabela representa um programa e fornece uma visão 
 * Nome do programa
 * Tipo de serviço:
    * **Experience Manager** para programas do AMS
-   * **Experience Manager Cloud** para [programas do AEM as a Cloud Service](https://experienceleague.adobe.com/br/docs/experience-manager-cloud-service/content/implementing/home)
+   * **Experience Manager Cloud** para [programas do AEM as a Cloud Service](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/implementing/home)
 * Status
 * Soluções configuradas
 * Data de criação

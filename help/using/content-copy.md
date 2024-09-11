@@ -3,9 +3,9 @@ title: A ferramenta de cópia de conteúdo
 description: A ferramenta de cópia de conteúdo do Cloud Manager permite copiar conteúdo mutável sob demanda dos ambientes de produção do AEM 6.x hospedado no AMS aos ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1144'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -167,9 +167,9 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 * É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação para os caminhos excluídos.
 * A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento, pois ela não pode rastrear os conteúdos movidos ou excluídos da origem.
 * Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
-* A ferramenta de cópia de conteúdo copia ativos e metadados Dynamic Media do ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração de mídia dinâmica correspondente.
+* A ferramenta de cópia de conteúdo copia ativos e metadados do Dynamic Media do ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração do Dynamic Media correspondente.
 * O processo de cópia de conteúdo é substancialmente mais rápido quando o histórico da versão não é copiado.
-* [Não há suporte para configurações do Dynamic Media com ativos maiores que 2 GB habilitados](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb).
+* Não há suporte para [configurações do Dynamic Media com ativos maiores que 2 GB habilitados](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb).
 * Quando o histórico de versões não é copiado, o processo de cópia de conteúdo é consideravelmente mais rápido.
 * As regiões do ambiente de destino devem ser iguais ou um subconjunto das regiões do ambiente de origem.
 

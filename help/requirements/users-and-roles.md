@@ -1,11 +1,11 @@
 ---
 title: Adicionar usuários e funções
-description: Saiba como usar o Admin Console para adicionar usuários e funções e criar perfis.
+description: Saiba como usar o Admin Console para adicionar usuários, funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '758'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 65%
 
 Vários recursos do [!UICONTROL Cloud Manager] exigem permissões específicas para serem usados. Por exemplo, somente certos usuários têm permissão para definir os KPIs (indicadores-chave de desempenho) para um programa. Essas permissões são logicamente agrupadas em funções.
 
-Atualmente, o [!UICONTROL Cloud Manager] define quatro funções de usuário, que controlam a disponibilidade de recursos específicos:
+Atualmente, o [!UICONTROL Cloud Manager] define quatro funções de usuário que controlam a disponibilidade de recursos específicos:
 
 * Proprietário da empresa
 * Gerenciador de programas
@@ -29,14 +29,14 @@ Atualmente, o [!UICONTROL Cloud Manager] define quatro funções de usuário, qu
 
 A tabela a seguir resume as funções no Cloud Manager.
 
-| Função de [!UICONTROL Cloud Manager] | Descrição |
+| Função no [!UICONTROL Cloud Manager] | Descrição |
 | --- | --- |
-| Proprietário da empresa | Responsável por definir KPIs, aprovar implantações de produção e substituir falhas importantes de nível 3 quando necessário. |
-| Gerenciador de programas | Eles usam o [!UICONTROL Cloud Manager] para executar a configuração da equipe, revisar o status, exibir KPIs e, quando necessário, podem aprovar falhas de nível 3 importantes. |
-| Gerenciador de implantação | Gerencia operações de implantação e usa o [!UICONTROL Cloud Manager] para executar implantações de preparo e produção, editar os pipelines de CI/CD e aprovar falhas críticas de nível 3 quando necessário. Eles também têm acesso ao repositório Git. |
-| Desenvolvedor | Desenvolve e testa o código de aplicativo personalizado e usa principalmente o [!UICONTROL Cloud Manager] para exibir o status da implantação e acessar o repositório Git para confirmações de código. |
-| Engenheiro de sucesso do cliente | O CSE geralmente oferece suporte ao sucesso do cliente para clientes do AMS. Eles interagem com o [!UICONTROL Cloud Manager] com o propósito de executar implantações que exigem supervisão do CSE. |
-| Autor de conteúdo | Eles geralmente não interagem com o [!UICONTROL Cloud Manager], mas podem usar o alternador de programa do [!UICONTROL Cloud Manager] para acessar o AEM. |
+| Proprietário da empresa | Responsável por definir KPIs, aprovar implantações de produção e neutralizar falhas de nível 3 importantes, quando necessário. |
+| Gerenciador de programas | Usa o [!UICONTROL Cloud Manager] para executar a configuração da equipe, revisar os status, visualizar KPIs e, quando necessário, pode aprovar falhas de nível 3 importantes. |
+| Gerenciador de implantação | Gerencia operações de implantação e usa o [!UICONTROL Cloud Manager] para executar implantações de preparo e produção, editar os pipelines de CI/CD e aprovar falhas críticas de nível 3 quando necessário. Também possui acesso ao repositório Git. |
+| Desenvolvedor | Desenvolve e testa o códigos de aplicativos personalizados e usa principalmente o [!UICONTROL Cloud Manager] para visualizar o status de implantações, podendo acessar o repositório Git para confirmações de código. |
+| Engenheiro de sucesso do cliente (CSE) | Geralmente oferece suporte ao sucesso do cliente para clientes do AMS. Eles interagem com o [!UICONTROL Cloud Manager] com o propósito de executar implantações que exigem supervisão do CSE. |
+| Autor de conteúdo | Geralmente não interage com o [!UICONTROL Cloud Manager], mas pode usar o seletor de programa do [!UICONTROL Cloud Manager] para acessar o AEM. |
 
 >[!NOTE]
 >
@@ -46,20 +46,20 @@ A tabela a seguir resume as funções no Cloud Manager.
 
 As funções do [!UICONTROL Cloud Manager] são gerenciadas no Admin Console. Associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager].
 
-O Admin Console é um local central para gerenciar direitos da Adobe em toda a organização. Para saber mais sobre a Adobe Admin Console, consulte [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
+O Admin Console é um local central para gerenciar direitos da Adobe em toda a organização. Para saber mais sobre o Adobe Admin Console, consulte [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
 
-AEM Um administrador deve criar novos perfis de produto no Contexto de Produto do [!UICONTROL Managed Services] para atribuir permissões com base em função para usuários do [!UICONTROL Cloud Manager], correspondentes a cada uma das quatro funções do [!UICONTROL Cloud Manager].
+Um admin deve criar novos perfis de produto no contexto de produto do [!UICONTROL AEM Managed Services] para atribuir permissões com base em função para usuários do [!UICONTROL Cloud Manager], correspondentes a cada uma das quatro funções do [!UICONTROL Cloud Manager].
 
 * Proprietário da empresa
-* Gerente de implantação
+* Gerenciador de implantação
 * Desenvolvedor
 * Gerenciador de programas
 
-Você pode criar ou adicionar usuários ou grupos a esses perfis de produtos com o Admin Console.
+Você pode criar ou adicionar usuários ou grupos a esses perfis de produto com o Admin Console.
 
 1. Faça logon no Admin Console em [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
-1. Clique na guia **Visão geral** e clique no produto que você deseja editar no cartão **Produtos e serviços**. Se não estiver listado lá, use a guia **Produtos** para localizar o produto e clique nele.
+1. Clique na guia **Visão geral** e no produto que deseja editar no cartão **Produtos e serviços**. Se não estiver listado lá, use a guia **Produtos** para localizar o produto e clique nele.
 
    ![Guia de visão geral do Admin Console](/help/assets/admin-console-overview.png)
 

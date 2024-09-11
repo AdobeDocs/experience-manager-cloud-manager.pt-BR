@@ -3,9 +3,9 @@ title: Configurar pipelines de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '685'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
@@ -24,12 +24,12 @@ Este documento se concentra em pipelines de não produção. Para mais detalhes 
 
 Existem dois tipos de pipelines de não produção:
 
-* **Pipelines de qualidade do código** - Eles executam verificações de qualidade do código em uma ramificação Git e executam as etapas de qualidade do código e compilação.
-* **Pipelines de implantação** - Junto com a execução das etapas de compilação e qualidade do código, como os pipelines de qualidade do código, esses pipelines também implantam o código em um ambiente de não produção.
+* **Pipelines de qualidade do código**: executam verificações de qualidade de código em uma ramificação do Git e executam as etapas de qualidade de código e de criação.
+* **Pipelines de implantação**: além de executar as etapas de qualidade de código de criação como os pipelines de qualidade do código, esses pipelines implantam o código em um ambiente de não produção.
 
 >[!NOTE]
 >
->Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída. Consulte [Repositórios do Cloud Manager](/help/managing-code/managing-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
+>Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) esteja concluída. Consulte os  [Repositórios do Cloud Manager](/help/managing-code/managing-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
 ## Adicionar um pipeline de não produção {#add-non-production-pipeline}
 
@@ -51,23 +51,23 @@ Depois de configurar seu programa e ter pelo menos um ambiente usando a interfac
 
 1. Forneça o repositório onde o pipeline deve recuperar o código.
 
-   * **Repositório** - Define de qual repositório Git o pipeline deve recuperar o código.
-   * **Ramificação Git** - Define de qual ramificação no Git o pipeline selecionado deve recuperar o código.
+   * **Repositório**: define de qual repositório Git o pipeline deve recuperar o código.
+   * **Ramificação Git**: define de qual ramificação no Git o pipeline selecionado deve recuperar o código.
 
 1. Defina suas opções de implantação.
 
    1. Em **Acionador de implantação**, defina qual evento ativa o pipeline.
 
-      * **Manual** - Permite iniciar manualmente o pipeline.
-      * **Sobre Alterações do Git** - Inicia o pipeline quando confirmações são adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
+      * **Manual**: permite iniciar manualmente o pipeline.
+      * **Sobre alterações do Git**: inicia o pipeline sempre que confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
 
    1. Para pipelines de implantação, em **Comportamento de falhas de métricas importantes**, defina o comportamento do pipeline quando uma falha importante for encontrada em qualquer uma das portas de qualidade.
 
-      * **Pergunte sempre** - A configuração padrão e requer intervenção manual em todas as falhas importantes.
-      * **Falha imediata** - O pipeline é cancelado sempre que ocorre uma falha importante. É como emular um usuário que rejeita manualmente cada falha.
-      * **Continuar imediatamente** - O pipeline continua automaticamente sempre que ocorre uma falha importante. É como emular um usuário que aprova manualmente cada falha.
+      * **Sempre perguntar**: é a configuração padrão e requer intervenção manual em caso de qualquer falha importante.
+      * **Falhar imediatamente**: o pipeline será cancelado sempre que ocorrer uma falha importante. É como emular um usuário que rejeita manualmente cada falha.
+      * **Continuar imediatamente**: o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É como emular um usuário que aprova manualmente cada falha.
 
-   1. **Configuração do Dispatcher** - O **Gerenciador de Implantação** pode configurar um conjunto de caminhos de conteúdo que são invalidados ou removidos do cache do AEM Dispatcher quando um pipeline é executado. Essas ações de cache são executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar:
+   1. **Configuração do Dispatcher**: o **Gerente de implantação** pode configurar um conjunto de caminhos de conteúdo que serão invalidados ou liberados do cache do Dispatcher do AEM quando um pipeline for executado. Essas ações de cache são realizadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar:
 
       1. Em **CAMINHO**, forneça um caminho de conteúdo.
       1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.

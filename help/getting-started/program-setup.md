@@ -1,18 +1,18 @@
 ---
 title: Configuração do programa
-description: Após a integração, o proprietário da empresa deve fazer uma configuração inicial do programa.
+description: Após a integração, o proprietário da empresa precisa fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '564'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
 
 # Configuração do programa {#program-setup}
 
-Após a integração, o proprietário da empresa configura o programa adicionando uma descrição e definindo indicadores-chave de desempenho (KPIs). Esses KPIs são usados para testes de desempenho.
+Após a integração, o proprietário da empresa configura o programa adicionando uma descrição e definindo indicadores principais de desempenho (KPIs). Esses KPIs são usados para testes de desempenho.
 
 ## Configuração do programa com o [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
@@ -24,7 +24,7 @@ Siga estas etapas para configurar o programa e definir KPIs.
 
    ![Configurar programa](/help/assets/set-up-program/setup1.png)
 
-1. Na caixa de diálogo **Configurar Programa**, você pode inserir informações do programa em três guias:
+1. Na caixa de diálogo **Configurar programa**, você pode inserir informações do programa em três guias:
 
    * **Geral**
    * **KPI**
@@ -34,7 +34,7 @@ Siga estas etapas para configurar o programa e definir KPIs.
 
    ![Guia Geral](/help/assets/Setup_Program-General.png)
 
-1. Na guia **KPI**, defina seus KPIs. Neste exemplo, KPIs separados são definidos para o **AEM Sites** e para o **AEM Assets**. Especifique os KPIs para os produtos que você licenciou.
+1. Na guia **KPI**, defina seus KPIs. Neste exemplo, KPIs separados são definidos para o **AEM Sites** e para o **AEM Assets**. Especifique os KPIs dos produtos que você licenciou.
 
    Consulte a seção [KPIs](#kpis) para obter mais detalhes sobre como os KPIs são medidos no Cloud Manager.
 
@@ -68,9 +68,9 @@ Seu programa foi criado. Pode levar vários minutos para que os recursos sejam p
 
 1. Clique em **Atualizar** para salvar as alterações.
 
-As alterações são salvas imediatamente no Cloud Manager, mas não são refletidas em seus ambientes até a próxima execução do pipeline.
+As alterações são salvas imediatamente no Cloud Manager, mas só serão refletidas em seus ambientes na próxima execução do pipeline.
 
-Se você ainda não criou um pipeline, consulte [Configuração de pipelines de produção](/help/using/production-pipelines.md) e [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md).
+Se você ainda não tiver criado um pipeline, consulte os documentos [Configuração de pipelines de produção](/help/using/production-pipelines.md) e [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md).
 
 ## Alternar entre programas {#swithing-programs}
 
@@ -84,9 +84,9 @@ Use a barra de ações para alternar para outro programa, editar o programa atua
 
 Os KPIs de sites são medidos em testes executados no ambiente de preparo. Normalmente, esses KPIs são dimensionados para baixo para se ajustarem aos recursos do ambiente de preparo.
 
-Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em seu ambiente de produção e tem quatro servidores de publicação/Dispatcher em produção deve dimensionar esse cenário para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores de Dispatcher/publicação.
+Por exemplo, um usuário que espera uma média de 1000 visualizações de página por minuto em seu ambiente de produção e tem quatro servidores de Dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores de Dispatcher/publicação.
 
-O teste de desempenho do Assets envolve o upload repetido de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e de várias métricas no nível do sistema é medido durante todo o teste.
+O teste de desempenho do Assets envolve uploads repetidos de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e várias métricas no nível do sistema são medidos durante o teste. 
 
 Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN. Ou seja, o cache não é utilizado. Normalmente, essa experiência é um subconjunto relativamente pequeno do tráfego total de produção.
 

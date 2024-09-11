@@ -3,9 +3,9 @@ title: Configurar pipelines de produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1247'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -18,24 +18,24 @@ Saiba como usar o Cloud Manager para criar e configurar pipelines de produção 
 
 Você pode criar dois tipos diferentes de pipelines usando o bloco **Configurações de pipeline** no [!UICONTROL Cloud Manager].
 
-* **Pipelines de produção** - Um pipeline de produção é composto por uma série de etapas orquestradas que têm o objetivo de levar o código-fonte do seu repositório Git até a produção.
+* **Pipelines de produção**: um pipeline de produção é um pipeline com propósito específico composto por uma série de etapas orquestradas para levar o código fonte do seu repositório Git até a produção.
 * **Pipelines de não produção** - Um pipeline de não produção é utilizado principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
 
 Este documento é voltado para pipelines de produção. Para obter detalhes sobre como configurar pipelines de não produção, consulte o documento [Configuração de pipelines de não produção.](/help/using/non-production-pipelines.md)
 
 O **Gerenciador de implantação** é responsável pela configuração do pipeline. A configuração do pipeline consiste em:
 
-1. Definir o acionador que inicia o pipeline.
+1. Definição do acionador que iniciará o pipeline.
 1. Definir os parâmetros que controlam a implantação de produção.
 1. Configurar os parâmetros de teste de desempenho.
 
 >[!NOTE]
 >
->Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída.
+>Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída. 
 
 ## Adicionar um novo pipeline de produção {#adding-production-pipeline}
 
-Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para configurar seu programa e definir pelo menos um ambiente, você estará pronto para adicionar um pipeline de produção.
+Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu programa e definir pelo menos um ambiente, você poderá adicionar um pipeline de produção.
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
@@ -49,16 +49,16 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
 
    1. Forneça um nome descritivo para o pipeline no campo **Nome do pipeline**.
 
-   1. Na seção **Código Source**, você define de onde o pipeline recupera o código que ele processa.
+   1. Na seção **Código fonte**, você define de onde o pipeline recuperará o código que processa.
 
-      * **Repositório** - Define qual repositório Git o pipeline deve recuperar o código.
+      * **Repositório**: define de qual repositório Git o pipeline deve recuperar o código.
 
       >[!TIP]
       >
       >Consulte o documento [Configuração do programa](/help/getting-started/program-setup.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
-      * **Ramificação Git** - Define de qual ramificação o pipeline selecionado deve recuperar o código.
-      * **Localização do código** - Define o caminho na ramificação do repositório selecionado a partir do qual o pipeline deve recuperar o código.
+      * **Ramificação Git**: no pipeline selecionado, define de qual ramificação o código deve ser recuperado.
+      * **Localização do código**: define o caminho na ramificação do repositório selecionado do qual o pipeline deve recuperar o código.
 
       ![Definir repositórios para o pipeline](/help/assets/configure-pipelines/add-prod2.png)
 
@@ -68,26 +68,26 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
 
          * **Acionador de implantação** - Você tem as seguintes opções para definir os acionadores de implantação que iniciam o pipeline.
 
-            * **Manual** - Inicie o pipeline manualmente usando a interface do usuário do Cloud Manager.
-            * **Sobre Alterações do Git** - Inicie o pipeline de CI/CD sempre que confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
+            * **Manual**: inicie o pipeline manualmente usando a interface do Cloud Manager.
+            * **Sobre alterações do Git**: inicia o pipeline de CI/CD sempre que confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
 
          * **Comportamento de falhas de métricas importantes** - Durante a configuração ou edição do pipeline, o Gerenciador de implantação tem a opção de definir o comportamento do pipeline quando uma falha importante é encontrada em qualquer uma das portas de qualidade. As opções disponíveis são:
 
-            * **Pergunte sempre** - A configuração padrão e requer intervenção manual em todas as falhas importantes.
-            * **Falha imediata** - O pipeline é cancelado sempre que ocorre uma falha importante. Ele emula um usuário que rejeita manualmente cada falha.
-            * **Continuar imediatamente** - O pipeline continua automaticamente sempre que ocorre uma falha importante. Ele emula um usuário que aprova manualmente cada falha.
+            * **Sempre perguntar**: a configuração padrão e requer intervenção manual em qualquer falha importante.
+            * **Falhar imediatamente**: o pipeline será cancelado sempre que ocorrer uma falha importante. Emula um usuário que rejeita manualmente cada falha.
+            * **Continuar imediatamente**: o pipeline continuará automaticamente sempre que ocorrer uma falha importante. Emula um usuário aprovando manualmente cada falha.
 
          ![Acionador de implantação](/help/assets/configure-pipelines/add-prod3.png)
 
          * **Opções de implantação** - Você pode acelerar determinadas tarefas de implantação.
 
-            * **Aprovar após a implantação de preparo** - Essa aprovação ocorre após a implantação no ambiente de preparo, antes da realização de qualquer teste. Caso contrário, a aprovação ocorre antes da implantação de produção, que é feita após a conclusão de todos os testes.
+            * **Aprovar após a implantação de preparo** - Essa aprovação ocorre após a implantação no ambiente de preparo, antes da realização de qualquer teste. Caso contrário, a aprovação ocorre antes da implantação da produção, que é feita após a conclusão de todos os testes.
 
             * **Ignorar alterações do balanceador de carga** - Não são efetuadas alterações no balanceador de carga.
 
          ![Opções de implantação de preparo](/help/assets/configure-pipelines/add-prod4.png)
 
-         * **Configuração do Dispatcher** - O **Gerenciador de Implantação** pode configurar um conjunto de caminhos de conteúdo que são invalidados ou removidos do cache do AEM Dispatcher quando um pipeline é executado. Essas ações de cache são executadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar, faça o seguinte:
+         * **Configuração do Dispatcher**: a função **Gerenciador de implantação** pode configurar um conjunto de caminhos de conteúdo que serão invalidados ou liberados do cache do Dispatcher do AEM quando um pipeline for executado. Essas ações de cache são realizadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar, faça o seguinte:
 
             1. Em **CAMINHO**, forneça um caminho de conteúdo.
             1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.
@@ -107,24 +107,24 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
 
          * **Opções de implantação** - Você pode definir os parâmetros que controlam a implantação de produção.
 
-            * **Usar aprovação GoLive** - Um usuário com a função de **Proprietário da Empresa**, **Gerente de Projetos** ou **Gerente de Implantação** por meio da interface do usuário do [!UICONTROL Cloud Manager] deve aprovar manualmente uma implantação.
-            * **Agendado** - Interrompe o pipeline antes da implantação de produção para permitir que ele seja agendado. Se essa opção estiver selecionada, o pipeline será interrompido após a implantação no ambiente de preparo e solicitará que o usuário execute a ação.
-               * **`Now`** - Implanta para produção imediatamente, concluindo efetivamente o pipeline.
-               * **Data** - Permite que o usuário programe o horário em que a implantação deverá ser concluída.
-               * **Parar Execução** - Anula a implantação para produção.
+            * **Usar aprovação de ativação**: alguém com a função de **Proprietário da empresa**, **Gerenciador de projetos** ou **Gerenciador de Implantação** por meio da interface do [!UICONTROL Cloud Manager] deve aprovar manualmente uma implantação.
+            * **Agendado**: interrompe o pipeline antes da implantação de produção para permitir o seu agendamento. Se essa opção estiver selecionada, o pipeline será interrompido após a implantação no ambiente de preparo e solicitará que o usuário execute a ação.
+               * **`Now`**: realiza a implantação na produção imediatamente, concluindo efetivamente o pipeline.
+               * **Data**: permite o agendamento do horário em que a implantação deverá ser concluída.
+               * **Parar execução**: interrompe a implantação para a produção.
 
            >[!TIP]
            >
            >Consulte [Implantação do código](/help/using/code-deployment.md) para saber como programar a implantação ou executar o pipeline imediatamente.
 
-            * **Usar a Supervisão do CSE** - Se essa opção for selecionada, um CSE (Engenheiro de Sucesso do Cliente) será contratado para iniciar a implantação real. Ao criar ou editar um pipeline quando essa opção estiver habilitada, a função **Gerente de implantação** terá as seguintes opções.
+            * **Usar a supervisão do CSE**: se essa opção for selecionada, será solicitado o auxílio de um CSE (Engenheiro de sucesso do cliente) para iniciar a implantação. Ao criar ou editar um pipeline quando essa opção estiver habilitada, a função **Gerente de implantação** terá as seguintes opções.
 
-               * **Qualquer CSE** - Permite que qualquer CSE disponível inicie a implantação.
-               * **Meu CSE** - Permite que somente o CSE específico atribuído ao cliente inicie a implantação. Essa opção também se aplica ao CSE designado como substituto se o CSE atribuído não estiver disponível.
+               * **Qualquer CSE**: permite que qualquer CSE disponível inicie a implantação.
+               * **Meu CSE**: permite que somente o CSE específico atribuído ao cliente inicie a implantação. Essa opção também se aplica ao backup do CSE designado se o CSE atribuído não estiver disponível.
 
            ![Opções de implantação de produção](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
-         * **Configuração do Dispatcher** - Defina a configuração do Dispatcher para seu ambiente de produção. As opções são as mesmas do ambiente de preparo.
+         * **Configuração do Dispatcher**: define a configuração do Dispatcher para o ambiente de produção. As opções são as mesmas do ambiente de preparo.
 
 1. Clique em **Continuar** para avançar até a guia **Teste de preparo**, onde é possível configurar o teste de desempenho do AEM Sites e do AEM Assets, dependendo das licenças de produto que você possui.
 
@@ -132,7 +132,7 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
    >
    >Consulte [Teste de qualidade do código](/help/using/code-quality-testing.md#performance-testing) para obter mais detalhes sobre as opções disponíveis na guia **Teste de preparo**.
 
-   1. Na seção **Entrega de conteúdo de sites/Peso de carga distribuído**, configure o Teste de desempenho do site com base na ponderação de solicitações de página entre três conjuntos de páginas. Você pode ativar ou desativar os conjuntos de páginas conforme necessário.
+   1. Na seção **Entrega de conteúdo de sites/Peso de carga distribuído**, configure o teste de desempenho do site com base na ponderação de solicitações de página entre três conjuntos de páginas. Você pode habilitar ou desabilitar os conjuntos de páginas conforme necessário.
 
       * **Páginas populares ativas**
       * **Outras páginas ativas**
@@ -157,7 +157,7 @@ Depois de usar a interface do usuário do [!UICONTROL Cloud Manager] para config
 
 ## Próximas etapas {#the-next-steps}
 
-Depois de configurar o pipeline, você implanta seu código. Consulte [Implantação de código](/help/using/code-deployment.md) para obter mais detalhes.
+Depois de configurar o pipeline, você implantará o código. Consulte [Implantação de código](/help/using/code-deployment.md) para obter mais detalhes.
 
 ## Tutorial em vídeo {#video-tutorial-one}
 

@@ -1,18 +1,18 @@
 ---
 title: Implantação do código
-description: Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
+description: Saiba como implantar seu código e o que acontece no Cloud Manager depois disso.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1637'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 
-# Implantação de código {#code-deployment}
+# Implantação do código {#code-deployment}
 
-Saiba como implantar seu código e o que acontece no Cloud Manager após a implantação.
+Saiba como implantar seu código e o que acontece no Cloud Manager depois disso.
 
 ## Implantar código com o Cloud Manager {#deploying-code-with-cloud-manager}
 
@@ -133,7 +133,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
    >
    >Você pode ignorar as alterações do balanceador de carga em implantações de desenvolvimento e preparo. Ou seja, para ambientes de desenvolvimento, desconecte e conecte etapas em pipelines de não produção e, para ambientes de preparo, o pipeline de produção.
 
-### Implantação na fase de produção {#deployment-production-phase}
+### Implantação para a fase de produção {#deployment-production-phase}
 
 O processo de implantação das topologias de produção é um pouco diferente para minimizar o impacto para visitantes de sites do AEM.
 
@@ -149,7 +149,7 @@ As implantações de produção geralmente seguem as mesmas etapas descritas aci
 
 Esse processo continua até que a implantação tenha atingido todos os editores e dispatchers na topologia.
 
-## Modo de execução do pipeline de emergência {#emergency-pipeline}
+## Modo de execução de pipeline de emergência {#emergency-pipeline}
 
 Em situações críticas, os clientes do Adobe Managed Services podem precisar implantar alterações de código em seus ambientes de preparo e produção imediatamente. Essa capacidade permite que eles ignorem o ciclo completo de testes do Cloud Manager.
 
@@ -159,7 +159,7 @@ Para lidar com essas situações, o pipeline de produção do Cloud Manager pode
 >
 >O recurso de modo de execução de pipeline de emergência é ativado programa por programa. A ativação é feita pelos engenheiros de sucesso do cliente.
 
-### Usar modo de execução de pipeline de emergência {#using-emergency-pipeline}
+### Usar o modo de execução de pipeline de emergência {#using-emergency-pipeline}
 
 Ao iniciar a execução de um pipeline de produção, você pode escolher entre o modo normal e o modo de emergência em uma caixa de diálogo. Essa opção estará disponível se o recurso de modo de execução de pipeline de emergência estiver ativado para o programa. Essa opção fica disponível após a habilitação do recurso.
 
@@ -175,7 +175,7 @@ A execução de um pipeline no modo de emergência também pode ser feita por me
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
-## Reexecução de uma implantação de produção {#reexecute-deployment}
+## Reexecutar uma implantação de produção {#reexecute-deployment}
 
 Em casos raros, as etapas de implantação de produção podem falhar por motivos transitórios. Nesses casos, é possível executar novamente a etapa de implantação em produção, desde que ela tenha sido concluída, independentemente de ter sido bem-sucedida, cancelada ou malsucedida. A reexecução é realizada com o mesmo pipeline, que consiste nas três etapas a seguir:
 
@@ -191,14 +191,14 @@ Nessas circunstâncias, quando uma reexecução for possível, a página de stat
 >
 >Em uma reexecução, a etapa de compilação apresenta informações na interface que indicam que está copiando artefatos, não os recompilando.
 
-### Limitações           {#limitations}
+### Limitações {#limitations}
 
 * A reexecução da etapa de implantação de produção só está disponível para a última execução.
 * A reexecução não está disponível para execuções de reversão ou de atualização por push.
 * Se a última execução falhar em qualquer ponto antes da etapa de implantação em produção, não será possível iniciar uma reexecução.
 
 
-### API de reexecução {#reexecute-api}
+### Reexecutar API {#reexecute-api}
 
 Além de estar disponível na interface, [a API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) pode ser usada para acionar reexecuções e identificar execuções que foram acionadas como reexecuções.
 
@@ -250,6 +250,6 @@ A sintaxe do valor `href` do link HAL é apenas um exemplo e o valor real deve s
 
 O envio de uma solicitação `PUT` a este ponto de acesso resultará em uma resposta `201`, se bem-sucedido. O corpo da resposta é a representação da nova execução. Essa funcionalidade é semelhante a iniciar uma execução normal por meio da API.
 
-#### Identificar uma execução reexecutada {#identifying}
+#### Identificar uma reexecução {#identifying}
 
 O sistema identifica execuções reexecutadas pelo valor `RE_EXECUTE` no campo de acionador.

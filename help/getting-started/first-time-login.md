@@ -3,16 +3,16 @@ title: Primeiro logon
 description: Siga esta página se tiver definindo as configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '293'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
 
 # Primeiro logon {#first-time-login}
 
-Após definir a configuração geral do [!UICONTROL Cloud Manager], você está pronto para usá-lo.
+Após definir a configuração geral do [!UICONTROL Cloud Manager], você estará pronto para usá-lo.
 
 >[!NOTE]
 >
@@ -40,8 +40,8 @@ O Cloud Manager fornece uma exibição consolidada para a atividade de um progra
 
 >[!TIP]
 >
->Para obter detalhes sobre como usar a interface do usuário do Cloud Manager, consulte [Navegação na interface do usuário do Cloud Manager](/help/getting-started/navigation.md).
+>Para obter detalhes sobre como usar a interface do Cloud Manager, consulte [Navegação pela interface do Cloud Manager](/help/getting-started/navigation.md).
 
 >[!NOTE]
 >
->Por padrão, um usuário com acesso a um ambiente AEM também tem a função Usuário do Cloud Manager. Esta função é insuficiente para conceder ao usuário acesso à visualização de detalhes do programa. Esse usuário, com apenas a função de Usuário do Cloud Manager, pode navegar pelas opções de menu do programa até o URL do autor do ambiente AEM (se existirem ambientes). Tais usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.
+>Por padrão, um usuário com acesso a um ambiente do AEM também terá a função de usuário do Cloud Manager. Esta função por si só é insuficiente para conceder ao usuário acesso à visualização dos detalhes do programa. Esse usuário, apenas com a função de usuário do Cloud Manager, pode navegar pelas opções de menu do programa até o URL do autor do ambiente do AEM (se houver ambientes). Tais usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.

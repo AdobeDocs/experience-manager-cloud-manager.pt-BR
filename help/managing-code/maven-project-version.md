@@ -3,14 +3,14 @@ title: Manuseio da versão do projeto Maven
 description: Saiba como o Maven lida com o controle de versão de projetos no Cloud Manager.
 exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '249'
-ht-degree: 43%
+ht-degree: 100%
 
 ---
 
 
-# Manuseio de versão do projeto Maven {#project-version}
+# Manuseio da versão do projeto Maven {#project-version}
 
 Saiba como o Maven lida com o controle de versão de projetos no Cloud Manager.
 
@@ -24,9 +24,9 @@ Se a versão original do projeto atender a determinados critérios, a versão at
 
 >[!NOTE]
 >
->O valor da versão original do projeto deve ser definido estaticamente no elemento `<version>` do arquivo `pom.xml` de nível superior na ramificação do repositório Git.
+>O valor da versão original do projeto deve ser definido estaticamente no elemento `<version>` do arquivo `pom.xml` de nível superior da ramificação no repositório Git.
 
-Se a versão original atender a esses critérios, a versão gerada será anexada à versão original como um novo segmento de versão. A versão gerada também é ligeiramente modificada para incluir a classificação correta e o manuseio de versão. Por exemplo, supondo uma versão gerada de `2019.926.121356.0000020490`:
+Se a versão original atender a esses critérios, a versão gerada será anexada à versão original como um novo segmento de versão. A versão gerada também será ligeiramente modificada para incluir a classificação e o manuseio de versão corretos. Por exemplo, supondo uma versão gerada de `2019.926.121356.0000020490`:
 
 | Versão | Versão em `pom.xml` | Comentar |
 | --- | --- | --- |
