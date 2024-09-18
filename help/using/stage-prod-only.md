@@ -3,9 +3,9 @@ title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '932'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Os ambientes de preparo e produção são totalmente combinados. Por padrão, as
 Os pipelines somente de preparo e somente de produção oferecem soluções para esses casos de uso fornecendo opções de implantação dedicadas.
 
 * **Pipelines de implantação somente de preparo:** implantam somente em um ambiente de preparo e a execução termina quando a implantação e os testes são concluídos. Um pipeline somente de preparo se comporta de forma idêntica ao pipeline de produção de pilha completa acoplado padrão, mas sem as etapas de implantação de produção (aprovação, agendamento, implantação).
-* **Pipelines de Implantação Somente de Produção:** Implanta apenas para produção selecionando a execução de estágio bem-sucedida mais recente. Em seguida, implante seus artefatos na produção. Os pipelines somente de produção reutilizam artefatos da implantação de preparo, ignorando a fase de compilação.
+* **Pipelines de implantação somente de produção:** implanta apenas para produção, selecionando a execução de estágio bem-sucedida mais recente. Em seguida, implante seus artefatos na produção. Os pipelines somente de produção reutilizam artefatos da implantação de preparo, ignorando a fase de compilação.
 
 Os pipelines somente de preparo e somente de produção não são executados enquanto um pipeline de produção de pilha completa está em andamento e vice-versa. Se o pipeline somente de preparo e o pipeline de produção de pilha completa tiverem o acionador **Sobre alterações do Git** configurado e estiverem apontando para a mesma ramificação e repositório, apenas o pipeline somente de preparo será iniciado automaticamente. Os pipelines somente de produção não iniciam **`On Git Changes`** porque não estão diretamente vinculados a um repositório.
 
