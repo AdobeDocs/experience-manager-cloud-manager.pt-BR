@@ -1,15 +1,15 @@
 ---
-title: Configurar pipelines de não produção
+title: Adicionar um pipeline de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '685'
-ht-degree: 100%
+source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 98%
 
 ---
 
-# Configurar pipelines de não produção {#configuring-non-production-pipelines}
+# Adicionar um pipeline de não produção {#configuring-non-production-pipelines}
 
 Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código. Se desejar começar com uma visão geral mais conceitual de como funcionam os pipelines no Cloud Manager, consulte [Pipelines de CI/CD.](/help/overview/ci-cd-pipelines.md)
 
@@ -31,7 +31,7 @@ Existem dois tipos de pipelines de não produção:
 >
 >Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) esteja concluída. Consulte os  [Repositórios do Cloud Manager](/help/managing-code/managing-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
-## Adicionar um pipeline de não produção {#add-non-production-pipeline}
+## Adicionar um novo pipeline de não produção {#add-non-production-pipeline}
 
 Depois de configurar seu programa e ter pelo menos um ambiente usando a interface do usuário do Cloud Manager, você estará pronto para adicionar um pipeline de não produção seguindo essas etapas.
 
