@@ -2,10 +2,10 @@
 title: Notas de versão do Cloud Manager 2024.10.0
 description: Estas são as notas de versão do Cloud Manager 2024.10.0.
 feature: Release Information
-source-git-commit: 94d5f3487408f9d8908bb15221c48ef768390527
+source-git-commit: 74e8f7c0f3896e0e33a02b62c003db322c0d50d8
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 26%
+source-wordcount: '369'
+ht-degree: 27%
 
 ---
 
@@ -48,7 +48,7 @@ O recurso **Traga seu próprio Git** foi expandido para incluir suporte para rep
 
 Consulte [Adicionar repositórios externos no Cloud Manager](/help/managing-code/external-repositories.md).
 
-![Caixa de diálogo Adicionar Repositório](/help/release-notes/assets/repositories-add-release-notes.png)
+![Caixa de diálogo Adicionar repositório](/help/release-notes/assets/repositories-add-release-notes.png)
 
 >[!NOTE]
 >
@@ -67,6 +67,6 @@ Se você quiser testar este recurso e fornecer feedback, envie um email para [Gr
 * text
 -->
 
-## Problemas conhecidos {#known-issues}
+<!-- Known Issues {#known-issues}
 
-{{content-copy-known-issues}}
+ -->
