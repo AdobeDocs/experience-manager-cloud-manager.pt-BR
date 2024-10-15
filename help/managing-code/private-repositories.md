@@ -4,9 +4,9 @@ description: Saiba como configurar o Cloud Manager para trabalhar com os seus re
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 5090d7ee9a6742d71122acda9901d074bc254305
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '818'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -124,7 +124,7 @@ Quando a solicitação de “pull” é fechada ou mesclada, o pipeline de quali
 
 ## Associação de repositórios privados a pipelines {#pipelines}
 
-Repositórios privados validados podem ser associados a [pipelines de pilha completa e front-end](/help/overview/ci-cd-pipelines.md).
+Repositórios privados validados podem ser associados a [pipelines de pilha completa e front-end](/help/overview/ci-cd-pipelines.md).
 
 
 
