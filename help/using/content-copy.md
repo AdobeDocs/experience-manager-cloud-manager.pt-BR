@@ -2,10 +2,10 @@
 title: Cópia de conteúdo para consistência do ambiente
 description: A cópia de conteúdo no Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: e47047c85f9d428e268d147b2e24354026dda0f8
+source-git-commit: 228006b424504306e916014bbe8543dc41ba43b5
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 35%
+source-wordcount: '1312'
+ht-degree: 33%
 
 ---
 
@@ -85,9 +85,7 @@ Antes que qualquer conteúdo possa ser copiado, um conjunto de conteúdo deve se
 
    ![Editar lista de caminhos](/help/assets/add-content-set-excluded-paths.png)
 
-1. Clique em **Criar**.
-
-Agora você pode usar o conjunto de conteúdo para copiar conteúdo entre ambientes.
+1. Clique em **Criar**. Agora você pode usar o conjunto de conteúdo para copiar conteúdo entre ambientes.
 
 ## Editar ou excluir um conjunto de conteúdo {#edit-content-set}
 
@@ -132,21 +130,23 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
    * As regiões em um ambiente de destino devem ser um subconjunto de regiões em um ambiente de origem.
    * Os problemas de compatibilidade são verificados antes de executar uma ação de cópia de conteúdo. Ao selecionar o ambiente **Destino**, o sistema valida automaticamente os ambientes de origem e destino. Se a validação falhar, o processo será interrompido e uma mensagem de erro será exibida na caixa de diálogo que explica o motivo da falha.
 
+     ![Copiar conteúdo](/help/assets/copying-content.png)
+
 1. (Opcional) Siga qualquer um destes procedimentos:
 
-   1. Para *reter* os caminhos excluídos no Ambiente de destino, verifique **`Do not delete exclude paths from destination`**. Essa configuração mantém intactos os caminhos excluídos especificados no conjunto de conteúdo.
-   1. Para *remover* os caminhos excluídos no Ambiente de destino, desmarque **`Do not delete exclude paths from destination`**. Essa configuração exclui os caminhos excluídos especificados no conjunto de conteúdo.
-   1. Para copiar o histórico de versões de caminhos do ambiente de origem para o ambiente de destino, marque **Copiar Versões**.
+   1. Para *reter* os caminhos excluídos no ambiente de destino, verifique **`Do not delete exclude paths from destination`**. Essa configuração mantém intactos os caminhos excluídos especificados no conjunto de conteúdo.
+   1. Para *remover* os caminhos excluídos no ambiente de destino, desmarque **`Do not delete exclude paths from destination`**. Essa configuração exclui os caminhos excluídos especificados no conjunto de conteúdo.
+   1. Para copiar o histórico de versões de caminhos do ambiente de origem para o ambiente de destino, marque **Copiar Versões**. O processo de cópia de conteúdo é substancialmente mais rápido quando o histórico de versões é *não* copiado.
 
-      ![Copiar conteúdo](/help/assets/copying-content.png)
+
 
 1. Clique em **Copiar**. O status do processo de cópia é exibido no console do conjunto de conteúdo selecionado.
 
-## Monitorar o status da atividade de cópia de conteúdo {#copy-activity}
+## Monitorar status da cópia de conteúdo {#copy-activity}
 
 É possível monitorar o status dos processos de cópia na página **Atividade de cópia de conteúdo**.
 
-**Para monitorar o status da atividade de cópia de conteúdo:**
+**Para monitorar o status da Cópia de Conteúdo:**
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
@@ -156,7 +156,7 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 
    ![Atividade de cópia de conteúdo](/help/assets/copy-content-activity.png)
 
-   Um processo de conteúdo de cópia pode ter um dos seguintes status:
+   Um processo de cópia de conteúdo pode ter um dos seguintes status:
 
    | Status | Descrição |
    | --- | --- |
@@ -165,9 +165,7 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
    | Falhou | Falha na operação de cópia de conteúdo. |
 
 
-## Limitações {#limitations}
-
-A Cópia de conteúdo tem as seguintes limitações:
+## Limitações da cópia do conteúdo {#limitations}
 
 * Não é possível executar a cópia de conteúdo de um ambiente inferior para um superior.
 * Só é possível executar a cópia de conteúdo em níveis equivalentes. Ou seja, de autor para autor ou de publicação para publicação.
@@ -175,13 +173,10 @@ A Cópia de conteúdo tem as seguintes limitações:
 * Só é possível executar uma cópia de conteúdo para uma topologia baseada no armazenamento de dados em nuvem quando os ambientes de origem e destino estão no mesmo provedor de nuvem e na mesma região.
 * Não é possível executar operações de cópia de conteúdo simultâneas no mesmo ambiente.
 * Não é possível executar a cópia de conteúdo se houver uma operação ativa em execução no ambiente de destino ou de origem, como um pipeline de CI/CD.
-* É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação para os caminhos excluídos.
 * A cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento porque não pode rastrear conteúdo movido ou excluído na origem.
 * Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
-* A cópia de conteúdo copia ativos e metadados do Dynamic Media de um ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração do Dynamic Media correspondente.
-* O processo de cópia de conteúdo é substancialmente mais rápido quando o histórico da versão não é copiado.
+* A cópia de conteúdo duplica ativos e metadados Dynamic Media do ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração do Dynamic Media correspondente.
 * Não há suporte para [configurações do Dynamic Media com ativos maiores que 2 GB habilitados](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb).
-* Quando o histórico de versões não é copiado, o processo de cópia de conteúdo é consideravelmente mais rápido.
 * As regiões do ambiente de destino devem ser iguais ou um subconjunto das regiões do ambiente de origem.
 
 ## Problemas conhecidos {#known-issues}
