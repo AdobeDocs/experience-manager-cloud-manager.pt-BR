@@ -1,20 +1,20 @@
 ---
 title: A ferramenta de cópia de conteúdo
-description: A ferramenta de cópia de conteúdo do Cloud Manager permite copiar conteúdo mutável sob demanda dos ambientes de produção do AEM 6.x hospedado no AMS aos ambientes inferiores para fins de teste.
+description: A ferramenta de cópia de conteúdo do Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1144'
-ht-degree: 100%
+source-git-commit: de9cfaa07dc9ff4a6d1cb200d14c5e776d27767d
+workflow-type: tm+mt
+source-wordcount: '1363'
+ht-degree: 42%
 
 ---
 
 
 # A ferramenta de cópia de conteúdo {#content-copy}
 
-A ferramenta de cópia de conteúdo do Cloud Manager permite copiar conteúdo mutável sob demanda dos ambientes de produção do AEM 6.x hospedado no AMS aos ambientes inferiores para fins de teste.
+A ferramenta de cópia de conteúdo do Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
 
-## Introdução {#introduction}
+## Sobre a ferramenta Cópia de conteúdo{#introduction}
 
 Os dados atuais e reais são valiosos para fins de teste, validação e aceitação do usuário. A ferramenta de cópia de conteúdo permite copiar conteúdo do ambiente de produção do AEM 6.x hospedado no AMS para ambientes de preparo ou de desenvolvimento. Esse fluxo de trabalho permite realizar vários tipos de teste.
 
@@ -39,124 +39,135 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
 Para usar a ferramenta de cópia de conteúdo, o usuário deve ter a função de **Gerenciador de implantação** nos ambientes de origem e de destino.
 
-## Criação de um conjunto de conteúdo {#create-content-set}
+## Criar um conjunto de conteúdo {#create-content-set}
 
 Antes que qualquer conteúdo possa ser copiado, um conjunto de conteúdo deve ser definido. Depois de definidos, os conjuntos de conteúdo podem ser reutilizados para copiar o conteúdo. Siga estas etapas para criar um conjunto de conteúdo.
 
+**Para criar um conjunto de conteúdo:**
+
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
-1. Na página **Visão geral**, navegue até a tela **Ambientes**.
+1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
-1. Na tela **Ambientes**, navegue até a página **Conjuntos de conteúdo**.
+1. No menu do lado esquerdo, na página **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
 
-1. Próximo ao canto superior direito da tela, clique em **Adicionar conjunto de conteúdo**.
+1. Próximo ao canto superior direito da página, clique em **Adicionar conjunto de conteúdo**.
 
    ![Conjuntos de conteúdo](/help/assets/content-sets.png)
 
-1. Na guia **Detalhes** do assistente, forneça um nome e uma descrição para o conjunto de conteúdo, e clique em **Continuar**.
+1. Na caixa de diálogo **Adicionar Conjunto de Conteúdo**, na guia **Detalhes**, nos campos **Nome** e **Descrição**, digite um nome e uma descrição opcional para o conjunto de conteúdo e clique em **Continuar**.
 
    ![Detalhes do conjunto de conteúdo](/help/assets/add-content-set-details.png)
 
-1. Na guia **Caminhos de conteúdo** do assistente, especifique os caminhos do conteúdo mutável a ser incluído no conjunto de conteúdo.
+1. Na guia **Caminhos de Conteúdo**, no campo de texto **Caminho**, especifique um caminho para o conteúdo que possa ser alterado e seja incluído no conjunto de conteúdo.
 
-   1. Insira o caminho no campo **Adicionar caminho de inclusão**.
-   1. Clique no botão **Adicionar caminho** para adicionar o caminho ao conjunto de conteúdo.
-   1. Clique em **Adicionar caminho** novamente, se necessário.
+   Somente os caminhos que começam com `/content`, `/conf`, `/etc`, `/var/workflow/models` ou `/var/commerce` estão qualificados para inclusão.
+
+1. Clique em **![Ícone de adição de pasta](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) Adicionar caminho** para adicionar (ou incluir) o caminho ao conjunto de conteúdo.
+
+1. (Opcional) Se necessário, adicione caminhos de adição (até 50), conforme necessário, repetindo as duas etapas anteriores. Caso contrário, continue para a próxima etapa.
 
    ![Adicionar caminhos ao conjunto de conteúdo](/help/assets/add-content-set-paths.png)
 
-1. Se você precisar refinar ou restringir o conjunto de conteúdo, os subcaminhos poderão ser excluídos.
+1. (Opcional) Para restringir seu conjunto de conteúdo, você pode especificar subcaminhos dentro de um caminho de conteúdo incluído que deve ser excluído.
 
-   1. Na lista de caminhos inclusos, clique no ícone **Adicionar subcaminhos de exclusão** ao lado do caminho que você precisa restringir.
-   1. Insira o subcaminho a ser excluído a partir do caminho selecionado.
-   1. Clique em **Excluir caminho**.
-   1. Novamente, clique em **Adicionar subcaminhos de exclusão** para adicionar caminhos a serem excluídos, se necessário.
+   1. À direita de um caminho de conteúdo incluído que você deseja restringir, clique em ![Ícone de exclusão de pasta](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg).
+   1. No campo de texto, digite um caminho relativo para o caminho raiz visto na caixa de diálogo.
+   1. Clique em ![Ícone de exclusão de pasta](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg) **Excluir caminho**.
+   1. Se necessário, repita os passos i. a iii. acima para adicionar mais caminhos de exclusão; não há limitação. Caso contrário, continue para a próxima etapa.
 
    ![Excluir caminhos](/help/assets/add-content-set-paths-excluded.png)
 
-1. Você pode modificar os caminhos especificados, se necessário.
+1. (Opcional) Siga qualquer um destes procedimentos:
 
-   1. Clique em `X` ao lado dos subcaminhos excluídos para excluí-los.
-   1. Clique no botão de reticências ao lado dos caminhos para revelar as opções **Editar** e **Excluir**.
+   1. Clique no ícone ![Cruzar tamanho 500](https://spectrum.adobe.com/static/icons/ui_18/CrossSize500.svg) à direita de um subcaminho excluído para excluí-lo.
+   1. Clique no ícone ![Mais](https://spectrum.adobe.com/static/icons/ui_18/More.svg) à direita de um caminho de conteúdo incluído e em **Editar** ou **Excluir**.
 
    ![Editar lista de caminhos](/help/assets/add-content-set-excluded-paths.png)
 
-1. Clique em **Criar** para criar o conjunto de conteúdo.
+1. Clique em **Criar**.
 
-O conjunto de conteúdo agora pode ser usado para copiar conteúdo entre ambientes.
+Agora você pode usar o conjunto de conteúdo para copiar conteúdo entre ambientes.
 
->[!NOTE]
->
->Você pode adicionar até 50 caminhos em um conjunto de conteúdo.
->Não há limitação para os caminhos excluídos.
+## Editar ou excluir um conjunto de conteúdo {#edit-content-set}
 
-## Editar um conjunto de conteúdo {#edit-content-set}
+Ao editar um conjunto de conteúdo, talvez seja necessário expandir os caminhos configurados para revelar os subcaminhos excluídos.
 
-Para esse processo, as etapas são semelhantes às da criação de conteúdo. Porém, em vez de clicar em **Adicionar conjunto de conteúdo**, selecione um conjunto existente no console e clique em **Editar** no menu de reticências.
+**Para editar ou excluir um conjunto de conteúdo:**
+
+1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
+
+1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
+
+1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
+
+1. Na tabela da página **Conjuntos de Conteúdo**, clique no ícone ![Mais](https://spectrum.adobe.com/static/icons/ui_18/More.svg) à direita de um caminho de conteúdo incluído e clique em **Editar** ou **Excluir**.
 
 ![Editar conjunto de conteúdo](/help/assets/edit-content-set.png)
 
-Ao editar seu conjunto de conteúdo, talvez seja necessário expandir os caminhos configurados para revelar os subcaminhos excluídos.
 
 ## Copiar conteúdo {#copy-content}
 
-Depois que um conjunto de conteúdo é criado, você pode usá-lo para copiar conteúdo. Siga estas etapas para copiar conteúdo.
+Após criar um conjunto de conteúdo, você pode usá-lo para copiar o conteúdo.
+
+Um ambiente pode estar indisponível para seleção se qualquer uma das seguintes condições se aplicar:
+
+* O usuário não tem as permissões necessárias.
+* No momento, um pipeline ou uma operação de cópia de conteúdo está em execução no ambiente.
+
+**Para copiar o conteúdo:**
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
-1. Na página **Visão geral**, navegue até a tela **Ambientes**.
+1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
-1. Na tela **Ambientes**, navegue até a página **Conjuntos de conteúdo**.
+1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
 
-1. Selecione um conjunto de conteúdo no console e clique em **Copiar conteúdo** no menu de reticências.
+1. Na tabela da página **Conjuntos de Conteúdo**, à direita de um caminho de conteúdo incluído que você deseja copiar, clique no ícone ![Mais](https://spectrum.adobe.com/static/icons/ui_18/More.svg) e em **Copiar Conteúdo**.
 
    ![Cópia de conteúdo](/help/assets/copy-content.png)
 
-   >[!NOTE]
-   >
-   >Um ambiente pode não ser selecionável se:
-   >
-   >* O usuário não tiver as permissões apropriadas.
-   >* O ambiente tiver um pipeline em execução ou uma operação de cópia de conteúdo em andamento.
+1. Na caixa de diálogo **Copiar conteúdo**, selecione o ambiente **Source** e o ambiente **Destino** para sua ação de cópia de conteúdo.
 
-1. Na caixa de diálogo **Copiar conteúdo**, especifique os ambientes de origem e destino para sua ação de cópia de conteúdo.
-   * As regiões do ambiente de destino devem ser iguais ou um subconjunto das regiões do ambiente de origem.
+   * As regiões em um ambiente de destino devem ser um subconjunto de regiões em um ambiente de origem.
+   * Os problemas de compatibilidade são verificados antes de executar uma ação de cópia de conteúdo. Ao selecionar o ambiente **Destino**, o sistema valida automaticamente os ambientes de origem e destino. Se a validação falhar, o processo será interrompido e uma mensagem de erro será exibida na caixa de diálogo que explica o motivo da falha.
 
-1. Você pode optar por apagar ou manter os caminhos de exclusão no ambiente de destino. Marque a caixa de seleção `Do not delete exclude paths from destination` para reter `exclude paths`, conforme especificado no conjunto de conteúdo. Se a caixa de seleção estiver desmarcada, os caminhos de exclusão serão excluídos no ambiente de destino.
+1. (Opcional) Siga qualquer um destes procedimentos:
 
-1. É possível optar por copiar o histórico de versões dos caminhos que estão sendo copiados do ambiente de origem para o de destino. Marque a caixa de seleção `Copy Versions` se quiser copiar todos os históricos de versões.
+   1. Para *reter* os caminhos excluídos no Ambiente de destino, verifique **`Do not delete exclude paths from destination`**. Essa configuração mantém intactos os caminhos excluídos especificados no conjunto de conteúdo.
+   1. Para *remover* os caminhos excluídos no Ambiente de destino, desmarque **`Do not delete exclude paths from destination`**. Essa configuração exclui os caminhos excluídos especificados no conjunto de conteúdo.
+   1. Para copiar o histórico de versões de caminhos do ambiente de origem para o ambiente de destino, marque **Copiar Versões**.
 
-   ![Copiar conteúdo](/help/assets/copying-content.png)
+      ![Copiar conteúdo](/help/assets/copying-content.png)
 
-1. Clique em **Copiar**.
+1. Clique em **Copiar**. O status do processo de cópia é exibido no console do conjunto de conteúdo selecionado.
 
-O processo de cópia será iniciado. O status do processo de cópia é exibido no console do conjunto de conteúdo selecionado.
-
-## Atividade de cópia de conteúdo {#copy-activity}
+## Monitorar o status da atividade de cópia de conteúdo {#copy-activity}
 
 É possível monitorar o status dos processos de cópia na página **Atividade de cópia de conteúdo**.
 
+**Para monitorar o status da atividade de cópia de conteúdo:**
+
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
-1. Na página **Visão geral**, navegue até a tela **Ambientes**.
+1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
-1. Na tela **Ambientes**, navegue até a página **Atividade de cópia de conteúdo**.
+1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de histórico ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) **Copiar Atividade de Conteúdo**.
 
-![Atividade de cópia de conteúdo](/help/assets/copy-content-activity.png)
+   ![Atividade de cópia de conteúdo](/help/assets/copy-content-activity.png)
 
-### Status da cópia de conteúdo {#statuses}
+   Um processo de conteúdo de cópia pode ter um dos seguintes status:
 
-Depois de começar a copiar o conteúdo, o processo poderá ter um dos status a seguir.
+   | Status | Descrição |
+   | --- | --- |
+   | Em andamento | A operação de cópia de conteúdo está em andamento. |
+   | Concluído | A operação de cópia de conteúdo foi concluída com êxito. |
+   | Falhou | Falha na operação de cópia de conteúdo. |
 
-| Status | Descrição |
-|---|---|
-| Em andamento | A operação de cópia de conteúdo está em andamento |
-| Falhou | A operação de cópia de conteúdo falhou |
-| Concluído | A operação de cópia de conteúdo foi concluída com sucesso |
 
 ## Limitações {#limitations}
 
-A ferramenta de cópia de conteúdo tem as seguintes limitações.
+A ferramenta de cópia de conteúdo tem as seguintes limitações:
 
 * Não é possível executar a cópia de conteúdo de um ambiente inferior para um superior.
 * Só é possível executar a cópia de conteúdo em níveis equivalentes. Ou seja, de autor para autor ou de publicação para publicação.
@@ -167,7 +178,7 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações.
 * É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação para os caminhos excluídos.
 * A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento, pois ela não pode rastrear os conteúdos movidos ou excluídos da origem.
 * Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
-* A ferramenta de cópia de conteúdo copia ativos e metadados do Dynamic Media do ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração do Dynamic Media correspondente.
+* A ferramenta de cópia de conteúdo copia ativos e metadados do Dynamic Media do ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração do Dynamic Media correspondente.
 * O processo de cópia de conteúdo é substancialmente mais rápido quando o histórico da versão não é copiado.
 * Não há suporte para [configurações do Dynamic Media com ativos maiores que 2 GB habilitados](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb).
 * Quando o histórico de versões não é copiado, o processo de cópia de conteúdo é consideravelmente mais rápido.
