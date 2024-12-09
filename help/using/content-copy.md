@@ -1,22 +1,22 @@
 ---
 title: Cópia de conteúdo para consistência do ambiente
-description: A ferramenta de cópia de conteúdo do Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
+description: A cópia de conteúdo no Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 2c96feb62a4db2424430c9c410563a7f61320fd2
+source-git-commit: e47047c85f9d428e268d147b2e24354026dda0f8
 workflow-type: tm+mt
-source-wordcount: '1364'
-ht-degree: 41%
+source-wordcount: '1351'
+ht-degree: 35%
 
 ---
 
 
 # Cópia de conteúdo para consistência do ambiente {#content-copy}
 
-A ferramenta de cópia de conteúdo do Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
+A cópia de conteúdo no Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
 
 ## Sobre a cópia de conteúdo {#introduction}
 
-Os dados atuais e reais são valiosos para fins de teste, validação e aceitação do usuário. A ferramenta de cópia de conteúdo permite copiar conteúdo do ambiente de produção do AEM 6.x hospedado no AMS para ambientes de preparo ou de desenvolvimento. Esse fluxo de trabalho permite realizar vários tipos de teste.
+Os dados atuais e reais são valiosos para fins de teste, validação e aceitação do usuário. A cópia de conteúdo permite copiar o conteúdo do ambiente de produção do AEM 6.x hospedado no AMS para ambientes de preparo ou desenvolvimento. Esse fluxo de trabalho permite realizar vários tipos de teste.
 
 Um conjunto de conteúdo define o conteúdo a ser copiado. Um conjunto de conteúdo inclui uma lista de caminhos JCR com o conteúdo mutável a ser copiado. O conteúdo é movido de um ambiente de origem para um ambiente de destino. Tudo isso é feito no mesmo programa do Cloud Manager.
 
@@ -37,7 +37,7 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
 ## Permissões {#permissions}
 
-Para usar a ferramenta de cópia de conteúdo, o usuário deve ter a função de **Gerenciador de implantação** nos ambientes de origem e de destino.
+Para usar o recurso de Cópia de Conteúdo, o usuário deve ser atribuído à função **Gerente de Implantação** nos ambientes de origem e destino.
 
 ## Criar um conjunto de conteúdo {#create-content-set}
 
@@ -55,7 +55,7 @@ Antes que qualquer conteúdo possa ser copiado, um conjunto de conteúdo deve se
 
    ![Conjuntos de conteúdo](/help/assets/content-sets.png)
 
-1. Na caixa de diálogo **Adicionar Conjunto de Conteúdo**, na guia **Detalhes**, nos campos **Nome** e **Descrição**, digite um nome e uma descrição opcional para o conjunto de conteúdo e clique em **Continuar**.
+1. Na caixa de diálogo **`Add Content Set`**, na guia **Detalhes**, nos campos **Nome** e **Descrição**, digite um nome e uma descrição opcional para o conjunto de conteúdo e clique em **Continuar**.
 
    ![Detalhes do conjunto de conteúdo](/help/assets/add-content-set-details.png)
 
@@ -167,7 +167,7 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 
 ## Limitações {#limitations}
 
-A ferramenta de cópia de conteúdo tem as seguintes limitações:
+A Cópia de conteúdo tem as seguintes limitações:
 
 * Não é possível executar a cópia de conteúdo de um ambiente inferior para um superior.
 * Só é possível executar a cópia de conteúdo em níveis equivalentes. Ou seja, de autor para autor ou de publicação para publicação.
@@ -176,9 +176,9 @@ A ferramenta de cópia de conteúdo tem as seguintes limitações:
 * Não é possível executar operações de cópia de conteúdo simultâneas no mesmo ambiente.
 * Não é possível executar a cópia de conteúdo se houver uma operação ativa em execução no ambiente de destino ou de origem, como um pipeline de CI/CD.
 * É possível especificar até dez caminhos por conjunto de conteúdo. Não há limitação para os caminhos excluídos.
-* A ferramenta de cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento, pois ela não pode rastrear os conteúdos movidos ou excluídos da origem.
+* A cópia de conteúdo não deve ser usada como uma ferramenta de clonagem ou espelhamento porque não pode rastrear conteúdo movido ou excluído na origem.
 * Uma cópia de conteúdo não pode ser pausada ou cancelada depois de iniciada.
-* A ferramenta de cópia de conteúdo copia ativos e metadados do Dynamic Media do ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração do Dynamic Media correspondente.
+* A cópia de conteúdo copia ativos e metadados do Dynamic Media de um ambiente superior para o ambiente inferior selecionado. É necessário reprocessar os ativos copiados com o [fluxo de trabalho de processamento de ativos do DAM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/using/assets-workflow) no ambiente inferior para usar a configuração do Dynamic Media correspondente.
 * O processo de cópia de conteúdo é substancialmente mais rápido quando o histórico da versão não é copiado.
 * Não há suporte para [configurações do Dynamic Media com ativos maiores que 2 GB habilitados](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb).
 * Quando o histórico de versões não é copiado, o processo de cópia de conteúdo é consideravelmente mais rápido.
