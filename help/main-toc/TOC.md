@@ -7,10 +7,10 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: e7e2268f866105970e02d4bc54c46613749e5ac0
+source-git-commit: 2c96feb62a4db2424430c9c410563a7f61320fd2
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 99%
    + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Notificações](/help/using/notifications.md)
    + [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md)
-   + [Cópia de conteúdo](/help/using/content-copy.md)
+   + [Cópia de conteúdo para consistência do ambiente](/help/using/content-copy.md)
 + Gerenciar código {#managing-code}
    + [Gerenciar repositórios no Cloud Manager](/help/managing-code/managing-repositories.md)
    + [Informações de acesso do repositório ](/help/managing-code/accessing-repositories.md)
