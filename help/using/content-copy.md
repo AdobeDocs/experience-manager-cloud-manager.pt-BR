@@ -2,9 +2,9 @@
 title: Cópia de conteúdo para consistência do ambiente
 description: A cópia de conteúdo no Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 228006b424504306e916014bbe8543dc41ba43b5
+source-git-commit: 16cc1aa0ff45126df9100f337b6259a3f248038f
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1321'
 ht-degree: 33%
 
 ---
@@ -35,7 +35,7 @@ Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 * Quando você edita o conteúdo no ambiente de destino, o conteúdo de origem substitui-o, caso os caminhos correspondam.
 * Se os caminhos forem diferentes, o conteúdo da origem será mesclado com o conteúdo do destino.
 
-## Permissões {#permissions}
+### Permissões {#permissions}
 
 Para usar o recurso de Cópia de Conteúdo, o usuário deve ser atribuído à função **Gerente de Implantação** nos ambientes de origem e destino.
 
@@ -142,11 +142,11 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 
 1. Clique em **Copiar**. O status do processo de cópia é exibido no console do conjunto de conteúdo selecionado.
 
-## Monitorar status da cópia de conteúdo {#copy-activity}
+## Verificar o status de uma cópia de conteúdo {#copy-activity}
 
 É possível monitorar o status dos processos de cópia na página **Atividade de cópia de conteúdo**.
 
-**Para monitorar o status da Cópia de Conteúdo:**
+**Para verificar o status de uma cópia de conteúdo:**
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
@@ -179,6 +179,6 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 * Não há suporte para [configurações do Dynamic Media com ativos maiores que 2 GB habilitados](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb).
 * As regiões do ambiente de destino devem ser iguais ou um subconjunto das regiões do ambiente de origem.
 
-## Problemas conhecidos {#known-issues}
+## Problemas conhecidos da Cópia de conteúdo {#known-issues}
 
 {{content-copy-known-issues}}
