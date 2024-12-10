@@ -2,10 +2,10 @@
 title: Regras de qualidade do código personalizado
 description: Descubra as especificidades das regras de qualidade de código personalizado executadas pelo Cloud Manager durante os testes de qualidade. Essas regras são baseadas nas práticas recomendadas pela engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '3482'
-ht-degree: 100%
+source-git-commit: 8811ed130b2c7a37a0c811c308b57acf0872e9c8
+workflow-type: tm+mt
+source-wordcount: '3514'
+ht-degree: 99%
 
 ---
 
@@ -871,6 +871,15 @@ O AEM Cloud Service proíbe a criação de tokenizadores com nomes incorretos em
 * **Desde**: versão 2024.7.0
 
 O AEM Cloud Service proíbe a criação de definições de indexação que contenham propriedades com espaços.
+
+### A configuração das definições de indexação não deve conter a propriedade haystack0 {#oakpal-indexing-haystack0-property}
+
+* **Chave**: HayStackPropertyCheck
+* **Tipo**: melhoria
+* **Severidade**: baixa
+* **Desde**: versão 2024.12.0
+
+O AEM Cloud Service proíbe a criação de definições de indexação que contenham propriedades de haystack.
 
 ## Ferramenta de otimização do Dispatcher {#dispatcher-optimization-tool-rules}
 
