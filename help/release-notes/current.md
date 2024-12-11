@@ -6,11 +6,11 @@ exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
 source-git-commit: e266a4192e2a897f142a6c83ae5766483946320d
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
-# Notas de versão para Cloud Manager 2024.12.0 no Adobe Managed Services {#release-notes}
+# Notas de versão do Cloud Manager 2024.12.0 no Adobe Managed Services {#release-notes}
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release -->
 
@@ -24,7 +24,7 @@ Saiba mais sobre o lançamento do [!UICONTROL Cloud Manager] 2024.12.0 no Adobe 
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-A data de lançamento do [!UICONTROL Cloud Manager] 2024.12.0 é sexta-feira, 5 de dezembro de 2024.
+A data de lançamento do [!UICONTROL Cloud Manager] 2024.12.0 é 5 de dezembro de 2024.
 
 A próxima versão está planejada para sexta-feira, 23 de janeiro de 2025.
 
@@ -42,7 +42,7 @@ Faça parte do programa de adoção antecipada do Cloud Manager e aproveite a op
 
 O recurso **Traga seu próprio Git** foi expandido para incluir suporte para repositórios externos, como GitLab e Bitbucket. Esse novo suporte é uma adição ao suporte já existente para repositórios GitHub privados e empresariais. Ao adicionar esses novos repositórios, também é possível vinculá-los diretamente aos seus pipelines. Você pode hospedar esses repositórios em plataformas de nuvem pública ou em sua infraestrutura ou nuvem privada. Essa integração também elimina a necessidade de sincronização constante do código com o repositório da Adobe e oferece a capacidade de validar solicitações de pull antes de mesclá-las em uma ramificação principal.
 
-Os pipelines que usam repositórios externos (exceto os hospedados pelo GitHub) e o **Acionador de implantação** definidos como **Nas alterações do Git** agora são iniciados automaticamente.
+Os pipelines que usam repositórios externos (exceto os hospedados pelo GitHub) e o **Acionador de implantação** definidos como **Sobre alterações do Git** agora são iniciados automaticamente.
 
 Consulte [Adicionar repositórios externos no Cloud Manager](/help/managing-code/external-repositories.md).
 
