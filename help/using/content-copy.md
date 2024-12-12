@@ -2,7 +2,7 @@
 title: Cópia de conteúdo para consistência do ambiente
 description: A cópia de conteúdo no Cloud Manager Adobe permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção Adobe Experience Manager 6.x hospedados na Managed Services para ambientes inferiores para testes.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 16cc1aa0ff45126df9100f337b6259a3f248038f
+source-git-commit: e3a656605ac59ca1f95985426932fddf2b53b7c9
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 33%
@@ -32,8 +32,9 @@ Os seguintes caminhos são permitidos em um conjunto de conteúdo:
 
 Ao copiar o conteúdo, o ambiente de origem é a fonte de verdade.
 
-* Quando você edita o conteúdo no ambiente de destino, o conteúdo de origem substitui-o, caso os caminhos correspondam.
-* Se os caminhos forem diferentes, o conteúdo da origem será mesclado com o conteúdo do destino.
+Quando você edita o conteúdo no ambiente de destino, o conteúdo de origem substitui-o, caso os caminhos correspondam.
+
+Se os caminhos forem diferentes, o conteúdo da origem será mesclado com o conteúdo do destino.
 
 ### Permissões {#permissions}
 
@@ -103,7 +104,6 @@ Ao editar um conjunto de conteúdo, talvez seja necessário expandir os caminhos
 
 ![Editar conjunto de conteúdo](/help/assets/edit-content-set.png)
 
-
 ## Copiar conteúdo {#copy-content}
 
 Após criar um conjunto de conteúdo, você pode usá-lo para copiar o conteúdo.
@@ -138,8 +138,6 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
    1. Para *remover* os caminhos excluídos no ambiente de destino, desmarque **`Do not delete exclude paths from destination`**. Essa configuração exclui os caminhos excluídos especificados no conjunto de conteúdo.
    1. Para copiar o histórico de versões de caminhos do ambiente de origem para o ambiente de destino, marque **Copiar Versões**. O processo de cópia de conteúdo é substancialmente mais rápido quando o histórico de versões é *não* copiado.
 
-
-
 1. Clique em **Copiar**. O status do processo de cópia é exibido no console do conjunto de conteúdo selecionado.
 
 ## Verificar o status de uma cópia de conteúdo {#copy-activity}
@@ -160,10 +158,9 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 
    | Status | Descrição |
    | --- | --- |
-   | Em andamento | A operação de cópia de conteúdo está em andamento. |
-   | Concluído | A operação de cópia de conteúdo foi concluída com êxito. |
-   | Falhou | Falha na operação de cópia de conteúdo. |
-
+   | Em andamento | O processo de cópia de conteúdo está em andamento. |
+   | Concluído | O processo de cópia de conteúdo foi concluído com êxito. |
+   | Falhou | Falha no processo de cópia de conteúdo. |
 
 ## Limitações da cópia do conteúdo {#limitations}
 
