@@ -3,9 +3,9 @@ title: Cópia de conteúdo para consistência do ambiente
 description: A Cópia de conteúdo no Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção do Adobe Experience Manager 6.x hospedados no Adobe Managed Services para ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: e3a656605ac59ca1f95985426932fddf2b53b7c9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1321'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -159,8 +159,8 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
    | Status | Descrição |
    | --- | --- |
    | Em andamento | O processo de cópia de conteúdo está em andamento. |
-   | Concluída | O processo de cópia de conteúdo foi concluído com êxito. |
-   | Falhou | Falha no processo de cópia de conteúdo. |
+   | Concluído | O processo de cópia de conteúdo foi concluído com sucesso. |
+   | Falhou | O processo de cópia de conteúdo falhou. |
 
 ## Limitações da cópia de conteúdo {#limitations}
 
