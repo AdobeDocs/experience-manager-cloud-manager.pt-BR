@@ -2,10 +2,10 @@
 title: Teste de qualidade do código
 description: Saiba como funciona o teste de qualidade do código dos pipelines e como ele pode melhorar a qualidade das suas implantações.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '2764'
-ht-degree: 100%
+source-git-commit: dcf2a4727b800f4364fcc7d757d281bde2738a55
+workflow-type: tm+mt
+source-wordcount: '2793'
+ht-degree: 98%
 
 ---
 
@@ -48,14 +48,16 @@ O software implementa isso usando uma combinação de análise SonarQube, exame 
 
 Há mais de 100 regras, compostas por uma combinação de regras Java genéricas e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas da equipe de engenharia do AEM e são chamadas de [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md).
 
->[!TIP]
+>[!IMPORTANT]
 >
->Você pode baixar a lista completa de regras [por meio deste link](/help/assets/CodeQuality-rules-latest-AMS.xlsx). 
+>Você pode baixar a lista completa atual de regras [usando este link](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+>
+>A partir de quinta-feira, 13 de fevereiro de 2025 (Cloud Manager 2025.2.0), a Qualidade do código Cloud Manager está usando uma versão atualizada do SonarQube 9.9 e uma lista atualizada de regras que você pode [baixar aqui](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
 
 Os resultados do teste de qualidade do código são fornecidos em forma de classificação, conforme resumido neste quadro.
 
 | Nome | Definição | Categoria | Limite de falha |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | Classificação de segurança | A = Sem vulnerabilidades<br/>B = Pelo menos 1 vulnerabilidade secundária<br/>C = Pelo menos 1 vulnerabilidade principal<br/>D = Pelo menos 1 vulnerabilidade crítica<br/>E = Pelo menos 1 vulnerabilidade bloqueadora | Crítico | &lt; B |
 | Classificação da confiabilidade | A = Sem erros<br/>B = Pelo menos 1 erro secundário <br/>C = Pelo menos 1 erro primário<br/>D = Pelo menos 1 erro crítico<br/>E = Pelo menos 1 erro bloqueador | Importante | &lt; C |
 | Classificação da capacidade de manutenção | Definido pelo custo de remediação pendente de code smells como uma porcentagem do tempo já dispendido no aplicativo<br/><ul><li>A = &lt;=5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = >50%</li></ul> | Importante | &lt; A |
@@ -67,7 +69,7 @@ Os resultados do teste de qualidade do código são fornecidos em forma de class
 
 >[!NOTE]
 >
->Para obter informações mais detalhadas, consulte as [Definições de métrica do SonarQube](https://docs.sonarsource.com/sonarqube/latest/user-guide/code-metrics/metrics-definition/).
+>Para obter informações mais detalhadas, consulte as [Definições de métrica do SonarQube](https://docs.sonarsource.com/sonarqube-server/latest/user-guide/code-metrics/metrics-definition/).
 
 >[!NOTE]
 >
