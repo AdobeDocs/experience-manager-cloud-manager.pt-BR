@@ -1,11 +1,11 @@
 ---
 title: Teste de qualidade do código
-description: Saiba como funciona o teste de qualidade do código dos pipelines e como ele pode melhorar a qualidade das suas implantações.
+description: Saiba como o teste de qualidade de código de pipelines funciona e como ele pode melhorar a qualidade de suas implantações.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: f5e6ac81c6454730850bb7e884d82be48d2f8525
 workflow-type: tm+mt
 source-wordcount: '2793'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -42,21 +42,21 @@ Para cada uma dessas portas, existe uma estrutura em três camadas para os probl
 
 Esta etapa de teste avalia a qualidade do código do aplicativo, que é o objetivo principal de um pipeline apenas para qualidade de código. A execução desse pipeline ocorre imediatamente após a etapa de criação em todos os pipelines de não produção e produção. Para saber mais, acesse [Configuração de pipelines de não produção](/help/using/non-production-pipelines.md).
 
-O teste de qualidade do código verifica o código-fonte para garantir que atenda a determinados critérios de qualidade. 
+O teste de qualidade do código verifica o código-fonte para garantir que atenda a determinados critérios de qualidade.
 
 O software implementa isso usando uma combinação de análise SonarQube, exame em nível de pacote de conteúdo com OakPAL e validação do Dispatcher com a ferramenta de otimização do Dispatcher.
 
 Há mais de 100 regras, compostas por uma combinação de regras Java genéricas e regras específicas do AEM. Algumas das regras específicas do AEM são criadas com base nas práticas recomendadas da equipe de engenharia do AEM e são chamadas de [Regras de qualidade do código personalizado](/help/using/custom-code-quality-rules.md).
 
-Você pode baixar a lista completa atual de regras [usando este link](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+Você pode baixar a lista completa atual de regras [usando este link](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
 
 >[!IMPORTANT]
 >
->A partir de quinta-feira, 13 de fevereiro de 2025 (Cloud Manager 2025.2.0), a Qualidade do código Cloud Manager está usando uma versão atualizada do SonarQube 9.9 e uma lista atualizada de regras que você pode [baixar aqui](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
+>A partir de quinta-feira, 13 de fevereiro de 2025 (Cloud Manager 2025.2.0), a qualidade de código do Cloud Manager usará uma versão atualizada do SonarQube 9.9 e uma lista atualizada de regras que você pode [baixar aqui](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
 
 Os resultados do teste de qualidade do código são fornecidos em forma de classificação, conforme resumido neste quadro.
 
-| Nome | Definição | Categoria | Limite de falha |
+| Nome | Definição | Categoria | Limite de falhas |
 | --- | --- | --- | --- |
 | Classificação de segurança | A = Sem vulnerabilidades<br/>B = Pelo menos 1 vulnerabilidade secundária<br/>C = Pelo menos 1 vulnerabilidade principal<br/>D = Pelo menos 1 vulnerabilidade crítica<br/>E = Pelo menos 1 vulnerabilidade bloqueadora | Crítico | &lt; B |
 | Classificação da confiabilidade | A = Sem erros<br/>B = Pelo menos 1 erro secundário <br/>C = Pelo menos 1 erro primário<br/>D = Pelo menos 1 erro crítico<br/>E = Pelo menos 1 erro bloqueador | Importante | &lt; C |
@@ -288,7 +288,7 @@ Essa funcionalidade está disponível para as seguintes métricas.
 
 ## Otimização da verificação do pacote de conteúdo {#content-package-scanning-optimization}
 
-Como parte do processo de análise de qualidade, o Cloud Manager realiza a análise dos pacotes de conteúdo produzidos pela build Maven. O Cloud Manager oferece otimizações para acelerar esse processo, que são eficazes quando determinadas restrições de pacote são obedecidas. 
+Como parte do processo de análise de qualidade, o Cloud Manager realiza a análise dos pacotes de conteúdo produzidos pela build Maven. O Cloud Manager oferece otimizações para acelerar esse processo, que são eficazes quando determinadas restrições de pacote são obedecidas.
 
 A principal otimização é para projetos que produzem um único pacote “all”, que reúne outros pacotes de conteúdo produzidos pela build, os quais são marcados como ignorados. Quando o Cloud Manager detecta esse cenário, em vez de descompactar o pacote “all”, os pacotes de conteúdo individuais são diretamente verificados e classificados com base nas dependências. Por exemplo, considere a saída de compilação a seguir.
 
