@@ -2,10 +2,10 @@
 title: Cópia de conteúdo para consistência do ambiente
 description: A Cópia de conteúdo no Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção do Adobe Experience Manager 6.x hospedados no Adobe Managed Services para ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: e3a656605ac59ca1f95985426932fddf2b53b7c9
-workflow-type: ht
+source-git-commit: 84b3366481c2efd497583627eac67046452f6c38
+workflow-type: tm+mt
 source-wordcount: '1321'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -64,7 +64,7 @@ Antes que qualquer conteúdo possa ser copiado, um conjunto de conteúdo deve se
 
    Somente os caminhos que começam com `/content`, `/conf`, `/etc`, `/var/workflow/models` ou `/var/commerce` podem ser incluídos.
 
-1. Clique no **![Ícone de adição de pasta](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) Adicionar caminho** para adicionar (ou incluir) o caminho para o conjunto de conteúdo.
+1. Clique em ![Ícone de adição de pasta](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) **Adicionar caminho** para adicionar (ou incluir) o caminho ao conjunto de conteúdo.
 
 1. (Opcional) Se necessário, adicione caminhos de adição (até 50), conforme necessário, repetindo as duas etapas anteriores. Caso contrário, continue para a próxima etapa.
 
