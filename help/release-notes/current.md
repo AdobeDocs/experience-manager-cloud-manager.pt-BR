@@ -2,10 +2,11 @@
 title: Notas de versão do Cloud Manager 2025.1.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.1.0 no Adobe Managed Services.
 feature: Release Information
-source-git-commit: c25508b24f00b8f8cfa7bae3cc4b0d6ecf684db3
+exlid: 669b1f2d8fc68526eb091e0f93f70ab93033d193
+source-git-commit: 434740b5ad2dafd5a6c55d0272cf5effdfa6baac
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 40%
+source-wordcount: '196'
+ht-degree: 39%
 
 ---
 
@@ -29,7 +30,7 @@ A próxima versão está planejada para sexta-feira, 13 de fevereiro de 2025.
 
 ## Novidades {#what-is-new}
 
-**Regras de qualidade do código:** a etapa Qualidade do código Cloud Manager começará a usar o SonarQube Server 9.9 com a versão Cloud Manager 2025.2.0, programada para quinta-feira, 13 de fevereiro de 2025.
+**Regras de qualidade do código - Atualização do cubo do Sonar:** a etapa Qualidade do código do Cloud Manager começará a usar o SonarQube Server 9.9 com a versão Cloud Manager 2025.2.0, agendada para quinta-feira, 13 de fevereiro de 2025.
 
 Para se preparar, as regras atualizadas do SonarQube agora estão disponíveis em [Regras de qualidade do código](/help/using/code-quality-testing.md#code-quality-testing-step).
 
