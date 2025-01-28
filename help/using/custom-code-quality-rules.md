@@ -3,9 +3,9 @@ title: Regras de qualidade do código personalizado
 description: Descubra as especificidades das regras de qualidade de código personalizado executadas pelo Cloud Manager durante os testes de qualidade. Essas regras são baseadas nas práticas recomendadas pela engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 1b7b703f7cba69878bd98aa971844741ebea7dba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3490'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -181,7 +181,7 @@ public void orDoThis() {
 ### Sempre feche os objetos `ResourceResolver` {#resourceresolver-objects-should-always-be-closed}
 
 * **Chave**: CQRules:CQBP-72
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Alta
 * **Desde**: Versão 2018.4.0
 
@@ -223,7 +223,7 @@ public void orDoThis(Session session) throws Exception {
 ### Não use caminhos de servlet do Sling para registrar servlets {#do-not-use-sling-servlet-paths-to-register-servlets}
 
 * **Chave**: CQRules:CQBP-75
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Alta
 * **Desde**: Versão 2018.4.0
 
@@ -243,7 +243,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 ### As exceções capturadas devem ser registradas ou descartadas, mas não ambos {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
 * **Chave**: CQRules:CQBP-44---CatchAndEitherLogOrThrow
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
@@ -311,7 +311,7 @@ public void doThis() throws Exception {
 ### Evite registrar no nível INFO ao manipular solicitações GET ou HEAD {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 * **Chave**: CQRules:CQBP-44---LogInfoInGetOrHeadRequests
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 
 Em geral, o nível de log INFO deve ser usado para demarcar ações importantes e, por padrão, o AEM é configurado para fazer logon no nível INFO ou superior. Os métodos GET e HEAD devem ser operações somente leitura e, portanto, não constituem ações importantes. Registrar no nível INFO em resposta a solicitações GET ou HEAD provavelmente criará um ruído significativo de log, dificultando a identificação de informações úteis em arquivos de log. Ao manipular solicitações GET ou HEAD, o registro deve estar na camada de AVISO ou ERRO, se algo tiver dado errado. Para informações mais detalhadas sobre resolução de problemas, o registro deve estar na camada DEBUG ou TRACE.
@@ -339,7 +339,7 @@ public void doGet() throws Exception {
 ### Não use `Exception.getMessage()` como o primeiro parâmetro de uma instrução de registro  {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
 * **Chave**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
@@ -372,7 +372,7 @@ public void doThis() {
 ### Os logs em blocos de catch devem estar no nível AVISO ou ERRO {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
 * **Chave**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
@@ -405,7 +405,7 @@ public void doThis() {
 ### Não imprimir rastros de pilha no console {#do-not-print-stack-traces-to-the-console}
 
 * **Chave**: CQRules:CQBP-44---ExceptionPrintStackTrace
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
@@ -438,7 +438,7 @@ public void doThis() {
 ### Não envie para a saída padrão ou fluxo de erro padrão {#do-not-output-to-standard-output-or-standard-error}
 
 * **Chave**: CQRules:CQBP-44—LogLevelConsolePrinters
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
@@ -471,7 +471,7 @@ public void doThis() {
 ### Evite caminhos `/apps` e `/libs` codificados {#avoid-hardcoded-apps-and-libs-paths}
 
 * **Chave**: CQRules:CQBP-71
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
@@ -496,7 +496,7 @@ public void doThis(Resource resource) {
 ### Não use o scheduler do Sling {#sonarqube-sling-scheduler}
 
 * **Chave**: CQRules:AMSCORE-554
-* **Tipo**: `Code Smell` / Compatibilidade Cloud Service
+* **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
 * **Severidade**: Baixa
 * **Desde**: Versão 2020.5.0
 
@@ -507,7 +507,7 @@ Consulte a [documentação sobre manuseio de processos e eventos do Apache Sling
 ### Não utilize APIs obsoletas do AEM {#sonarqube-aem-deprecated}
 
 * **Chave**: AMSCORE-553
-* **Tipo**: `Code Smell` / Compatibilidade Cloud Service
+* **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
 * **Severidade**: Baixa
 * **Desde**: Versão 2020.5.0
 
@@ -629,7 +629,7 @@ Semelhante à regra [Pacotes não devem conter configurações OSGi duplicadas](
 ### O modo de criação padrão não deve ser a interface clássica {#oakpal-default-authoring}
 
 * **Chave**: ClassicUIAuthoringMode
-* **Tipo**: `Code Smell` / Compatibilidade Cloud Service
+* **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
 * **Severidade**: Baixa
 * **Desde**: Versão 2020.5.0
 
@@ -638,7 +638,7 @@ A configuração do OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` d
 ### Componentes com caixas de diálogo devem ter caixas de diálogo de interface sensível ao toque {#oakpal-components-dialogs}
 
 * **Chave**: ComponentWithOnlyClassicUIDialog
-* **Tipo**: `Code Smell` / Compatibilidade Cloud Service
+* **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
 * **Severidade**: Baixa
 * **Desde**: Versão 2020.5.0
 
@@ -653,7 +653,7 @@ A documentação das Ferramentas de modernização do AEM fornece detalhes e fer
 ### Não use agentes de replicação reversa {#oakpal-reverse-replication}
 
 * **Chave**: ReverseReplication
-* **Tipo**: `Code Smell` / Compatibilidade Cloud Service
+* **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
 * **Severidade**: Baixa
 * **Desde**: Versão 2020.5.0
 
@@ -695,7 +695,7 @@ As bibliotecas de clientes do AEM podem conter recursos estáticos, como imagens
 ### Uso de processos de fluxo de trabalho incompatíveis com o Cloud Service {#oakpal-usage-cloud-service}
 
 * **Chave**: CloudServiceIncompatibleWorkflowProcess
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Gravidade**: Bloqueador
 * **Desde**: Versão 2021.2.0
 
@@ -706,7 +706,7 @@ Com a mudança para os microsserviços de ativos no processamento de ativos do A
 ### Recomendamos o uso de modelos editáveis em vez de modelos estáticos {#oakpal-static-template}
 
 * **Chave**: StaticTemplateUsage
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell` 
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -717,7 +717,7 @@ A migração de modelos estáticos para editáveis pode ser amplamente automatiz
 ### O uso de componentes básicos herdados não é recomendado {#oakpal-usage-legacy}
 
 * **Chave**: LegacyFoundationComponentUsage
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -728,7 +728,7 @@ Os componentes fundamentais legados (ou seja, os componentes em `/libs/foundatio
 ### Os nós de definição do índice de pesquisa personalizado devem ser nós secundários diretos de `/oak:index` {#oakpal-custom-search}
 
 * **Chave**: OakIndexLocation
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -737,7 +737,7 @@ O AEM Cloud Service exige que as definições de índice de pesquisa personaliza
 ### Os nós de definição do índice de pesquisa personalizada devem ter uma compatVersion de 2 {#oakpal-custom-search-compatVersion}
 
 * **Chave**: IndexCompatVersion
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell` 
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -746,7 +746,7 @@ O AEM Cloud Service exige que as definições de índice de pesquisa personaliza
 ### Os nós descendentes dos nós de definição do índice de pesquisa personalizado devem ser do tipo `nt:unstructured` {#oakpal-descendent-nodes}
 
 * **Chave**: IndexDescendantNodeType
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell` 
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -755,7 +755,7 @@ Problemas difíceis de solucionar podem ocorrer quando um nó de definição de 
 ### Os nós de definição do índice de pesquisa personalizado devem conter um nó secundário denominado `indexRules`, o qual possua nós secundários {#oakpal-custom-search-index}
 
 * **Chave**: IndexRulesNode
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -764,7 +764,7 @@ Um nó de definição do índice de pesquisa personalizado definido corretamente
 ### Os nós de definição do índice de pesquisa personalizado devem seguir as convenções de nomeação {#oakpal-custom-search-definitions}
 
 * **Chave**: IndexName
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell` 
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -773,7 +773,7 @@ O AEM Cloud Service exige que as definições do índice de pesquisa personaliza
 ### Os nós de definição do índice de pesquisa personalizado devem usar o tipo de índice Lucene {#oakpal-index-type-lucene}
 
 * **Chave**: IndexType
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell` 
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -782,7 +782,7 @@ O AEM Cloud Service exige que as definições do índice de pesquisa personaliza
 ### Os nós de definição do índice de pesquisa personalizado não devem conter uma propriedade denominada `seed` {#oakpal-property-name-seed}
 
 * **Chave**: IndexSeedProperty
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -791,7 +791,7 @@ O AEM Cloud Service proíbe definições de índice de pesquisa personalizada (o
 ### Os nós de definição do índice de pesquisa personalizado não devem conter uma propriedade denominada `reindex` {#oakpal-reindex-property}
 
 * **Chave**: IndexReindexProperty
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell` 
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
