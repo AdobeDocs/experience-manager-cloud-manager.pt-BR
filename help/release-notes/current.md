@@ -5,9 +5,9 @@ feature: Release Information
 exlid: 669b1f2d8fc68526eb091e0f93f70ab93033d193
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
 source-git-commit: 51dd060ec9b922ace9ce537cac669c61154284e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '241'
-ht-degree: 26%
+ht-degree: 100%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 26%
 
 Saiba mais sobre o lançamento do [!UICONTROL Cloud Manager] 2025.2.0 no Adobe Managed Services.
 
-Consulte também as [notas de versão atuais do Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/release-notes/home).
+Consulte também as [notas de versão atuais do Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Datas de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] 2025.2.0 é sexta-feira, 13 de fevereiro de 2025.
+A data de lançamento do [!UICONTROL Cloud Manager] 2025.2.0 é quinta-feira, 13 de fevereiro de 2025.
 
-A próxima versão está planejada para sexta-feira, 13 de março de 2025.
+A próxima versão está planejada para quinta-feira, 13 de março de 2025.
 
 ## Novidades {#what-is-new}
 
@@ -31,22 +31,22 @@ A próxima versão está planejada para sexta-feira, 13 de março de 2025.
 
 * **SonarQube atualizado**
 
-  A partir de quinta-feira, 13 de fevereiro de 2025, a etapa de qualidade do código do Cloud Manager agora usa SonarQube 9.9.5.90363.
+  A partir de quinta-feira, 13 de fevereiro de 2025, a etapa de qualidade do código do Cloud Manager passará a usar o SonarQube 9.9.5.90363.
 
-  As regras atualizadas, disponíveis para o AMS em [este link](/help/using/code-quality-testing.md#code-quality-testing-step), determinam as pontuações de segurança e a qualidade do código para os pipelines do Cloud Manager.
+  As regras atualizadas, disponíveis para o AMS [neste link](/help/using/code-quality-testing.md#code-quality-testing-step), determinam as pontuações de segurança e a qualidade do código dos pipelines do Cloud Manager. 
 
-* O SonarQube 9.9 agora é o mecanismo de verificação de qualidade de código padrão para todos os clientes.
+* Agora, o SonarQube 9.9 é o mecanismo padrão de verificação da qualidade do código para todos os clientes.
 
-* **Suporte ao ambiente de compilação do Java 17 e Java 21**
+* **Compatibilidade com o ambiente de criação do Java 17 e do Java 21**
 
-  Agora, os clientes podem, opcionalmente, criar com o Java 17 ou Java 21, beneficiando-se de melhorias de desempenho e novos recursos de linguagem. Consulte [Criar ambiente](/help/getting-started/build-environment.md) para obter as etapas de configuração, incluindo a atualização da descrição do projeto Maven e determinadas versões da biblioteca.
+  Agora, os clientes também podem criar com o Java 17 ou o Java 21, beneficiando-se das melhorias de desempenho e dos novos recursos de linguagem. Consulte [Ambiente de criação](/help/getting-started/build-environment.md) para saber quais são as etapas de configuração, incluindo como atualizar a descrição do seu projeto do Maven e certas versões da biblioteca.
 
   >[!NOTE]
-  >Para ambientes Cloud Service, quando a versão de build é definida como Java 17 ou Java 21, o tempo de execução assume o Java 21 como padrão.
+  >Para ambientes do Cloud Service, quando a versão da criação é definida como Java 17 ou Java 21, o tempo de execução assume o Java 21 como padrão.
 
-* **Validações de Cópia de Conteúdo estendidas**
+* **Validações da cópia do conteúdo estendidas**
 
-  As regras de validação da cópia de conteúdo foram atualizadas. Com esta versão, os usuários não poderão mais acionar uma cópia de conteúdo se houver execuções de pipeline ativas no ambiente de origem ou de destino. Os usuários devem aguardar até que todas as execuções de pipeline em andamento sejam concluídas antes de iniciar uma cópia de conteúdo.
+  As regras de validação da cópia do conteúdo foram atualizadas. Nesta versão, se houver execuções do pipeline ativas no ambiente de origem ou de destino, os usuários não poderão mais acionar uma cópia do conteúdo. Os usuários precisarão aguardar até que todas as execuções do pipeline em andamento sejam concluídas antes de iniciar uma cópia do conteúdo.
 
 <!-- 
 ## Early adoption program {#early-adoption}
