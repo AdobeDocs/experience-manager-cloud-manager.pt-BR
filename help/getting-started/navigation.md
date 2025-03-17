@@ -2,10 +2,10 @@
 title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como navegar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1435'
-ht-degree: 100%
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+workflow-type: tm+mt
+source-wordcount: '1439'
+ht-degree: 96%
 
 ---
 
@@ -52,11 +52,11 @@ O primeiro é o cabeçalho do Cloud Manager. O cabeçalho permanece à medida qu
 
 ![O cabeçalho da Experience Cloud](assets/experience-cloud-header.png)
 
-1. O ícone do menu de opções ao lado esquerdo do cabeçalho é um menu suspenso que fornece acesso a guias para partes específicas de um programa individual. Dependendo do contexto, também permite alternar entre o Painel de licenças e o console **[Meus programas](#my-programs-console)**.
+1. O ícone do menu ![Mostrar, ícone de hambúrguer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) no lado esquerdo do cabeçalho é um menu suspenso que fornece acesso a guias para partes específicas de um programa individual. Dependendo do contexto, também permite alternar entre o Painel de licenças e o console **[Meus programas](#my-programs-console)**.
    * O Painel de licenças aplica-se somente aos programas do AEM as a Cloud Service, não aos programas do AMS.
    * Para verificar o tipo de serviço do seu programa (AMS ou AEMaaCS), consulte a [seção de cartões de programa](#program-cards) deste documento.
 1. O botão Cloud Manager leva de volta ao console Meus programas, independentemente de onde você estiver no Cloud Manager.
-1. Clique no botão Feedback para enviar um feedback à Adobe sobre o Cloud Manager.
+1. Clique em **Feedback** para fornecer feedback à Adobe sobre o Cloud Manager.
 1. O seletor de organização exibe a organização que você está utilizando no momento (neste exemplo, Foundation Internal). Clique para alternar para outra organização se a Adobe ID estiver associada a várias.
 1. Tocar ou clicar no seletor de soluções permite acessar rapidamente as outras soluções da Experience Cloud.
 1. O ícone de ajuda fornece acesso rápido aos recursos de aprendizagem e suporte.
@@ -70,7 +70,7 @@ A barra de ferramentas do programa fornece links para alternar entre programas e
 ![Barra de ferramentas do programa](assets/program-toolbar.png)
 
 1. O seletor de programas abre em uma lista suspensa na qual você pode selecionar outros programas rapidamente ou realizar ações apropriadas ao contexto, como criar um novo programa
-1. O link de introdução fornece acesso à [jornada de integração da documentação](https://experienceleague.adobe.com/br/docs/experience-manager-cloud-service/content/onboarding/journey/overview) para que você possa começar a usar o Cloud Manager.
+1. O link de introdução fornece acesso à [jornada de integração da documentação](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/onboarding/journey/overview) para que você possa começar a usar o Cloud Manager.
 A jornada de integração foi projetada para o Cloud Manager no Adobe Experience Manager as a Cloud Service (AEMaaCS) e não para o Cloud Manager no Adobe Managed Services (AMS). No entanto, muitos conceitos são os mesmos.
 1. O botão de ação oferece ações adequadas ao contexto, como a criação de um novo programa.
 
@@ -123,7 +123,7 @@ O ícone de informações também fornece acesso rápido a informações adicion
 
 ![Informações](assets/information-view.png)
 
-O ícone de reticências fornece acesso a ações adicionais que você pode executar no programa.
+O ícone ![Mais, reticências](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg), fornece acesso a ações adicionais que você pode realizar no programa.
 
 ![Botão de reticências para programas](assets/program-ellipsis.png)
 

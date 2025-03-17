@@ -3,10 +3,10 @@ title: Adição de repositórios privados no Cloud Manager
 description: Saiba como configurar o Cloud Manager para trabalhar com os seus repositórios privados do GitHub.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 5090d7ee9a6742d71122acda9901d074bc254305
-workflow-type: ht
-source-wordcount: '818'
-ht-degree: 100%
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+workflow-type: tm+mt
+source-wordcount: '815'
+ht-degree: 96%
 
 ---
 
@@ -90,8 +90,7 @@ Até a validação, o repositório será listado com um ícone vermelho, indican
 
 Observe que a coluna **Tipo** identifica facilmente os repositórios fornecidos pela Adobe (**Adobe**) e os seus repositórios do GitHub (**GitHub**).
 
-Para retornar ao repositório mais tarde e concluir a validação, vá para a página **Repositórios**. Clique no botão de reticências ao lado do repositório GitHub adicionado e selecione **Validação de propriedade** no menu suspenso.
-
+Para retornar ao repositório mais tarde e concluir a validação, vá para a página **Repositórios**. Clique em ![Mais ícone, reticências](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) ao lado do repositório GitHub adicionado e clique em **Validação de propriedade**.
 
 
 ## Utilização de repositórios privados com o Cloud Manager {#using}

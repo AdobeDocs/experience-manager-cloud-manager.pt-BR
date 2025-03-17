@@ -2,10 +2,10 @@
 title: Monitorar ambientes
 description: Saiba como monitorar os seus ambientes no Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '910'
-ht-degree: 100%
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+workflow-type: tm+mt
+source-wordcount: '911'
+ht-degree: 98%
 
 ---
 
@@ -28,7 +28,7 @@ O Adobe Managed Services define os limites, que você pode ver no [!UICONTROL Cl
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selecione a organização e o programa apropriados.
 
-1. Clique no botão de reticências do programa que deseja monitorar.
+1. Clique no ícone ![Mais, reticências](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) do programa que você deseja monitorar.
 1. No menu, no cabeçalho **Gerenciar**, clique em **Mostrar monitoramento** para abrir a página **Relatórios** que mostra as informações de monitoramento do sistema.
 
    ![Configurações](/help/assets/first-timea1.png)

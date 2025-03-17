@@ -1,21 +1,21 @@
 ---
-title: Pipelines somente de preparo e somente de produção
+title: Pipelines somente de preparo e somente de produção - Primeiros usuários
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
-workflow-type: ht
-source-wordcount: '932'
-ht-degree: 100%
+source-git-commit: 2c6f5692ffa31e02d7338e68063d0c1c03a0c73b
+workflow-type: tm+mt
+source-wordcount: '936'
+ht-degree: 98%
 
 ---
 
-# Pipelines somente de preparo e somente de produção {#stage-prod-only}
+# Pipelines somente de preparo e somente de produção (Primeiros usuários) {#stage-prod-only}
 
 Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 
 >[!NOTE]
 >
->Este recurso só está disponível por meio do [programa de adoção antecipada](/help/release-notes/current.md#early-adoption).
+>Este recurso só está disponível por meio do [programa de adoção antecipada](/help/release-notes/2024/2024-8-0.md).
 
 ## Visão geral {#overview}
 
@@ -116,3 +116,4 @@ Se não existir um pipeline somente de produção, você será solicitado a cria
 Para pipelines somente de produção, identifique os artefatos de origem que deseja implantar na produção. Esses detalhes podem ser encontrados na etapa **Preparação de artefato**. É possível navegar até essas execuções para obter mais detalhes e logs.
 
 ![Detalhes do artefato](/help/assets/configure-pipelines/prod-only-pipeline-run.png)
+

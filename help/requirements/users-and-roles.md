@@ -2,10 +2,10 @@
 title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários, funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '758'
-ht-degree: 100%
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 89%
 
 ---
 
@@ -101,18 +101,18 @@ Depois de criar perfis de produto, você pode atribuir usuários ou grupos de us
 
 1. Clique em **Usuários**, no painel de navegação esquerdo, e, em seguida, clique em um usuário para modificá-lo.
 
-1. Clique no botão de reticências, na seção **Produtos** e selecione **Editar**.
+1. Clique no ícone ![Mais, reticências](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) na seção **Produtos** e clique em **Editar**.
 
    ![Editar usuário](/help/assets/admin-console-edit-user.png)
 
-1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique no botão de mais e selecione os perfis a serem atribuídos ao usuário.
+1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique em ![Ícone Adicionar, sinal de adição](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) e selecione os perfis a serem atribuídos ao usuário.
 
-   * Se o usuário já tiver sido atribuído às funções, o botão de mais será um botão de edição (um lápis), mas funcionará da mesma maneira.
+   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
 
    ![Editar produtos e grupos de usuários](/help/assets/admin-console-edit-products-and-user-groups.png)
 
 1. Clique em **Salvar** para salvar os perfis para o usuário.
 
-Repita as mesmas etapas para atribuir perfis a grupos de usuários, mas selecione **Grupos de usuários** no painel de navegação esquerdo da guia **Usuários**. Clique em um grupo de usuários, selecione a guia **Perfis de produtos atribuídos** e clique em **Atribuir perfil de produto** para atribuir perfis.
+Repita as mesmas etapas para atribuir perfis a grupos de usuários, mas selecione **Grupos de usuários** no painel de navegação esquerdo da guia **Usuários**. Clique em um grupo de usuários e selecione os **Perfis de produto atribuídos**, clique em **Atribuir perfil de produto** para atribuir perfis.
 
 ![Atribuir perfis ao grupo](/help/assets/admin-console-edit-user-groups.png)
