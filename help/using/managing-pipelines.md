@@ -2,10 +2,10 @@
 title: Gerenciar pipelines
 description: Saiba como gerenciar os pipelines, incluindo sua execução, edição e exclusão.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
+source-git-commit: d4a7d9ab72947b97b0dabb2f822ef268e4972685
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 60%
+source-wordcount: '1060'
+ht-degree: 59%
 
 ---
 
@@ -87,7 +87,7 @@ Com o Cloud Manager, é possível executar vários pipelines simultaneamente, me
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 1. No menu do lado esquerdo, clique em ![Ícone do fluxo de trabalho ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines**.
 1. Na tabela na página **Pipeline**, marque as caixas de seleção ao lado dos pipelines que deseja executar.
-Se necessário, clique em ![Ícone de filtro, funil](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filtros** para classificar pipelines por ambiente, tipo de código implantado ou ambos.
+Se necessário, clique em ![Ícone de filtro, funil](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filtros** para classificar pipelines por nome, ambiente ou tipo de código implantado, ou uma combinação dos três.
 1. Ao lado do canto superior direito da página, clique em **Executar selecionados (x)**.
 1. Na caixa de diálogo **Executar pipelines selecionados (x)**, clique em **Executar (x)**.
 
