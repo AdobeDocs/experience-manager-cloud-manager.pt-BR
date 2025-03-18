@@ -1,8 +1,10 @@
 ---
 title: Atualizações de Service Pack para ambientes de desenvolvimento - Adoção antecipada
 description: Saiba como iniciar atualizações de service pack em ambientes de desenvolvimento por meio da interface do usuário do Cloud Manager.
+hide: true
+hidefromtoc: true
 exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
-source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
+source-git-commit: 55b33db1bf80f066b1a66bc87c0abeefa4771871
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 2%
