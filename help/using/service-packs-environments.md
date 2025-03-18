@@ -1,7 +1,8 @@
 ---
 title: Atualizações de Service Pack para ambientes de desenvolvimento - Adoção antecipada
 description: Saiba como iniciar atualizações de service pack em ambientes de desenvolvimento por meio da interface do usuário do Cloud Manager.
-source-git-commit: 8da0e6cb4587bc7dfc79bec415ff3aeef2d12e3e
+exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
+source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 2%
@@ -14,7 +15,7 @@ Saiba como iniciar atualizações de service pack em ambientes de desenvolviment
 
 >[!NOTE]
 >
->Este recurso só está disponível por meio do [programa de adoção antecipada](/help/release-notes/current.md).
+>Este recurso só está disponível por meio do [programa de adoção antecipada](/help/release-notes/current.md#early-adoption).
 
 ## Visão geral {#service-pack-updates-overview}
 
@@ -91,5 +92,3 @@ Quando a instalação for concluída, sua aprovação ou rejeição será necess
 A instalação do service pack foi cancelada e nenhuma alteração foi aplicada.
 
    ![Rejeição do pacote de serviços](/help/using/assets/service-pack-reject.png)
-
-
