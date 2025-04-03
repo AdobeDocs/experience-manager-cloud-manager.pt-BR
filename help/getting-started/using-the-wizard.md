@@ -2,17 +2,17 @@
 title: Uso do Assistente de novo projeto
 description: Acesse esta página para saber como usar o assistente para criar um projeto de aplicativo do AEM.
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: 7bc874a8dd14544c22201ef2c470faab84d31f8b
-workflow-type: ht
-source-wordcount: '321'
-ht-degree: 100%
+source-git-commit: f3617eb50147f5af33282cb0f25ada7dc423d434
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 92%
 
 ---
 
 
-# Uso do Assistente de novo projeto {#using-the-wizard}
+# Usar o assistente de novo projeto {#using-the-wizard}
 
-Quando foi integrado ao Cloud Manager como um novo cliente, você recebeu um repositório Git vazio. Para ajudar você a começar, o Cloud Manager oferece um assistente para criar um projeto do AEM mínimo com base no [Arquétipo de projeto do AEM](https://github.com/adobe/aem-project-archetype) como ponto de partida.
+Quando você se integrou ao Cloud Manager como um novo cliente, recebeu um repositório Git vazio. Para ajudar você a começar, o Cloud Manager oferece um assistente para criar um projeto do AEM mínimo com base no [Arquétipo de projeto do AEM](https://github.com/adobe/aem-project-archetype) como ponto de partida.
 
 Siga estas etapas para criar um projeto do AEM usando o assistente.
 
