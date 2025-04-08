@@ -2,10 +2,10 @@
 title: Regras de qualidade do código personalizado
 description: Descubra as especificidades das regras de qualidade de código personalizado executadas pelo Cloud Manager durante os testes de qualidade. Essas regras são baseadas nas práticas recomendadas pela engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: c50eb54b5603b4370f2d7907a2194477dcc3ba21
-workflow-type: ht
-source-wordcount: '3523'
-ht-degree: 100%
+source-git-commit: 8388edb5510ed4583a7bc703f3781af03d976948
+workflow-type: tm+mt
+source-wordcount: '3644'
+ht-degree: 96%
 
 ---
 
@@ -883,14 +883,33 @@ O AEM Cloud Service proíbe a criação de definições de indexação que conte
 
 O AEM Cloud Service proíbe a criação de definições de indexação que contenham propriedades haystack.
 
-### As definições de indexação não devem conter a propriedade: async-previous {#oakpal-indexing-async-previous-property}
+### As definições de indexação não devem conter a propriedade: async-previous {#oakpal-indexing-unsupported-async-properties}
 
-* **Chave**: IndexAsyncPreviousCheck
+* **Chave**: IndexUnsupportedAsyncPropertiesCheck
 * **Tipo**: melhoria
 * **Severidade**: baixa
-* **Desde**: versão 2025.2.0
+* **Desde**: versão 2025.3.0
 
-O AEM Cloud Service proíbe a criação de definições de indexação que contenham a propriedade async-previous.
+O AEM Cloud Service proíbe a criação de definições de indexação com propriedades assíncronas não compatíveis.
+
+### A configuração das definições de indexação não deve ter a mesma tag em vários índices {#oakpal-indexing-same-tag-multiple-indexes}
+
+* **Chave**: SameTagInMultipleIndexes
+* **Tipo**: melhoria
+* **Severidade**: baixa
+* **Desde**: versão 2025.3.0
+
+O AEM Cloud Service proíbe a criação de definições de indexação que contenham a mesma tag em vários índices.
+
+### A configuração das definições de indexação não deve conter substituição de modo para caminhos proibidos {#oakpal-xml-mode-analysis}
+
+* **Chave**: FilterXmlModeAnalysis
+* **Tipo**: melhoria
+* **Severidade**: Alta
+* **Desde**: versão 2025.4.0
+
+O uso do modo &quot;substituição&quot; no file vault não é permitido para caminhos abaixo de /content; ele não deve ser usado para caminhos abaixo de /etc e /var.
+O modo &quot;substituir&quot; substituirá todo o conteúdo já existente no repositório pelo fornecido no pacote de conteúdo, e os pacotes que acionam essa ação não devem fazer parte dos pacotes implantados pelo Cloud Manager.
 
 ## Ferramenta de otimização do Dispatcher {#dispatcher-optimization-tool-rules}
 
