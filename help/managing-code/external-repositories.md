@@ -2,7 +2,7 @@
 title: Adicionar repositórios externos no Cloud Manager - Adoção antecipada
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: a63d996b283396efa139bf567c40a51e6f46d9bc
+source-git-commit: 5ba12cdfa4a0d790561fd2f3da738bf697133bee
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 27%
@@ -39,7 +39,7 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 
 1. Faça logon no Cloud Manager, em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), e selecione a organização apropriada.
 
-1. No console **Meus Programas**, selecione o programa ao qual deseja vincular um repositório externo.
+1. No console **[Meus Programas](/help/getting-started/navigation.md#my-programs-console)**, selecione o programa ao qual deseja vincular um repositório externo.
 
 1. No menu lateral, em **Programa**, clique em ![Ícone de estrutura de tópicos de pastas](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Repositórios**.
 
@@ -121,7 +121,7 @@ Para todos os outros repositórios externos integrados com um token de acesso, c
 
 1. Faça logon no Cloud Manager, em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), e selecione a organização apropriada.
 
-1. No console **Meus programas**, selecione o programa para o qual deseja configurar um webhook para um repositório Git externo.
+1. No console **[Meus programas](/help/getting-started/navigation.md#my-programs-console)**, selecione o programa para o qual deseja configurar um webhook para um repositório Git externo.
 
 1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para exibir o menu do lado esquerdo.
 
