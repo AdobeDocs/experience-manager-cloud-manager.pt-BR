@@ -1,15 +1,16 @@
 ---
-title: Adicionar repositórios externos no Cloud Manager - Adoção antecipada
+title: Adicionar repositórios externos no Cloud Manager
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
+badge: label="Primeiros usuários" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 5ba12cdfa4a0d790561fd2f3da738bf697133bee
+source-git-commit: b830c30bb6b2b99ef442577325a30de6b9953ec8
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1867'
 ht-degree: 27%
 
 ---
 
-# Adicionar repositórios externos no Cloud Manager - Adotor antecipado {#external-repositories}
+# Adicionar repositórios externos no Cloud Manager {#external-repositories}
 
 Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
 
