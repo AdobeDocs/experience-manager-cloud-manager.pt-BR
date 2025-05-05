@@ -87,4 +87,4 @@ Depois de configurar o pipeline, você pode implantar seu código. Consulte [Imp
 
 Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/)
+>[!VIDEO](https://video.tv.adobe.com/v/327619?captions=por_br)

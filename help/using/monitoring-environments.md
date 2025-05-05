@@ -125,4 +125,4 @@ A seção **Análise de evento** deste gráfico mostra a série de incidentes qu
 
 Este vídeo fornece uma visão geral do uso dos gráficos produzidos pelos relatórios do Cloud Manager para que você possa visualizar os ambientes do programa.
 
->[!VIDEO](https://video.tv.adobe.com/v/26315/)
+>[!VIDEO](https://video.tv.adobe.com/v/34276?captions=por_br)
