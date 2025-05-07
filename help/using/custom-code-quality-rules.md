@@ -2,7 +2,7 @@
 title: Regras de qualidade do código personalizado
 description: Descubra as especificidades das regras de qualidade de código personalizado executadas pelo Cloud Manager durante os testes de qualidade. Essas regras são baseadas nas práticas recomendadas pela engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 8388edb5510ed4583a7bc703f3781af03d976948
+source-git-commit: 54987d6ccd8c31dab677d90b40466c458743f936
 workflow-type: tm+mt
 source-wordcount: '3644'
 ht-degree: 96%
@@ -644,8 +644,8 @@ A configuração do OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` d
 
 Componentes do AEM com uma caixa de diálogo com interface clássica também devem ter uma caixa de diálogo com interface sensível ao toque para um processo de criação ideal e compatível com o modelo de implantação do Cloud Service, que não é compatível com a interface clássica. Essa regra verifica os seguintes cenários:
 
-* Um componente com uma caixa de diálogo da interface do usuário clássica (ou seja, um nó secundário `dialog`) deve ter uma caixa de diálogo da interface do usuário de toque correspondente (ou seja, um nó secundário `cq:dialog`).
-* Um componente com uma caixa de diálogo de design com interface clássica (ou seja, um nó `design_dialog`) deve ter uma caixa de diálogo de design com interface de toque correspondente (ou seja, um nó secundário `cq:design_dialog`).
+* Um componente com uma caixa de diálogo da interface do usuário clássica (ou seja, um nó filho`dialog`) deve ter uma caixa de diálogo da interface do usuário de toque correspondente (ou seja, um nó filho `cq:dialog`).
+* Um componente com uma caixa de diálogo de design com interface clássica (ou seja, um nó `design_dialog`) deve ter uma caixa de diálogo de design com interface de toque correspondente (ou seja, um nó filho `cq:design_dialog`).
 * Um componente com uma caixa de diálogo com interface clássica e uma caixa de diálogo de design com interface clássica deve ter uma caixa de diálogo com interface de toque e uma caixa de diálogo de design com interface de toque correspondentes.
 
 A documentação das Ferramentas de modernização do AEM fornece detalhes e ferramentas para converter componentes da interface clássica para a interface de toque. Consulte [a documentação das ferramentas de modernização do AEM](https://opensource.adobe.com/aem-modernize-tools/) para mais detalhes.
@@ -750,7 +750,7 @@ O AEM Cloud Service exige que as definições de índice de pesquisa personaliza
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
-Problemas difíceis de solucionar podem ocorrer quando um nó de definição de índice de pesquisa personalizada tem nós secundários desordenados. Para evitar esses nós, a Adobe recomenda que todos os nós descendentes de um nó `oak:QueryIndexDefinition` sejam do tipo `nt:unstructured`.
+Problemas difíceis de solucionar podem ocorrer quando um nó de definição de índice de pesquisa personalizada tem nós filhos desordenados. Para evitar esses nós, a Adobe recomenda que todos os nós descendentes de um nó `oak:QueryIndexDefinition` sejam do tipo `nt:unstructured`.
 
 ### Os nós de definição do índice de pesquisa personalizado devem conter um nó secundário denominado `indexRules`, o qual possua nós secundários {#oakpal-custom-search-index}
 
@@ -801,7 +801,7 @@ O AEM Cloud Service proíbe definições de índice de pesquisa personalizada (o
 
 * **Chave**: IndexNotUnderUIContent
 * **Tipo**: melhoria
-* **Severidade**: baixa
+* **Severidade**: Alta
 * **Desde**: versão 2024.6.0
 
 O AEM Cloud Service proíbe que definições de índice de pesquisa personalizadas (nós do tipo `oak:QueryIndexDefinition`) sejam implantadas no pacote de conteúdo da interface.
@@ -814,7 +814,7 @@ O AEM Cloud Service proíbe que definições de índice de pesquisa personalizad
 
 * **Chave**: CustomFulltextIndexesOfTheDamAssetCheck
 * **Tipo**: melhoria
-* **Severidade**: baixa
+* **Severidade**: Alta
 * **Desde**: versão 2024.6.0
 
 O AEM Cloud Service proíbe que definições de índice de texto completo personalizadas do tipo `damAssetLucene` sejam prefixadas com qualquer item diferente de `damAssetLucene`.
@@ -827,7 +827,7 @@ O AEM Cloud Service proíbe que definições de índice de texto completo person
 
 * **Chave**: DuplicateNameProperty
 * **Tipo**: melhoria
-* **Severidade**: baixa
+* **Severidade**: Alta
 * **Desde**: versão 2024.6.0
 
 O AEM Cloud Service proíbe que definições de índice de pesquisa personalizadas (ou seja, nós do tipo `oak:QueryIndexDefinition`) contenham propriedades com o mesmo nome
@@ -840,7 +840,7 @@ O AEM Cloud Service proíbe que definições de índice de pesquisa personalizad
 
 * **Chave**: RestrictIndexCustomization
 * **Tipo**: melhoria
-* **Severidade**: baixa
+* **Severidade**: Alta
 * **Desde**: versão 2024.6.0
 
 O AEM Cloud Service proíbe modificações não autorizadas nos seguintes índices protos para uso:
