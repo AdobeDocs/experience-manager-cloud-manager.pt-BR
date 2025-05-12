@@ -7,10 +7,10 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 4c4ffeb689117620bd810f35d277f5ab20bda8d3
+source-git-commit: ecee095cfdf929e38823ace77f184db3108cab92
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 97%
+source-wordcount: '368'
+ht-degree: 95%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 97%
       + [O ambiente de criação](/help/getting-started/build-environment.md)
    + [Configurar ramificações](/help/getting-started/configuring-branches.md)
    + [Configurações do Dispatcher](/help/getting-started/dispatcher-configurations.md)
-+ Uso {#using}
++ Utilização {#using}
    + Pipelines de CI/CD {#pipelines}
       + [Configurar um pipeline de produção](/help/using/production-pipelines.md)
       + [Configurar um pipeline de não produção](/help/using/non-production-pipelines.md)
@@ -76,6 +76,7 @@ ht-degree: 97%
 + Notas de versão {#release-notes}
    + [Atual](/help/release-notes/current.md)
    + 2025 {#rn-2025}
+      + [2025.4.0](/help/release-notes/2025/2025-4-0.md)
       + [2025.3.0](/help/release-notes/2025/2025-3-0.md)
       + [2025.2.0](/help/release-notes/2025/2025-2-0.md)
       + [2025.1.0](/help/release-notes/2025/2025-1-0.md)
