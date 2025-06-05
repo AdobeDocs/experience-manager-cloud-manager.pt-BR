@@ -1,22 +1,17 @@
 ---
 title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
-badge: label="Primeiros usuários" type="Positive" url="/help/release-notes/current.md#staging-production-only-pipelines"
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: b830c30bb6b2b99ef442577325a30de6b9953ec8
+source-git-commit: 35845e827b0a3fadfe2a55a2171b5e02100cf3eb
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 99%
+source-wordcount: '924'
+ht-degree: 98%
 
 ---
 
-# Pipelines somente de preparo e somente de produção {#stage-prod-only}
+# Dividir pipelines somente de estágio e somente de produção {#stage-prod-only}
 
 Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
-
->[!NOTE]
->
->Este recurso só está disponível por meio do [programa de adoção antecipada](/help/release-notes/current.md#staging-production-only-pipelines).
 
 ## Visão geral {#overview}
 

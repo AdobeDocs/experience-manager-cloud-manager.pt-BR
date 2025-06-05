@@ -7,10 +7,10 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: ecee095cfdf929e38823ace77f184db3108cab92
+source-git-commit: 35845e827b0a3fadfe2a55a2171b5e02100cf3eb
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 95%
+source-wordcount: '373'
+ht-degree: 91%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 95%
    + Pipelines de CI/CD {#pipelines}
       + [Configurar um pipeline de produção](/help/using/production-pipelines.md)
       + [Configurar um pipeline de não produção](/help/using/non-production-pipelines.md)
-      + [Dividir pipelines somente de preparo e somente de produção (usuários iniciais)](/help/using/stage-prod-only.md)
+      + [Pipelines de divisão de preparo e somente produção](/help/using/stage-prod-only.md)
       + [Gerenciar pipelines](/help/using/managing-pipelines.md)
    + [Implantação do código](/help/using/code-deployment.md)
    + [Teste de qualidade do código](/help/using/code-quality-testing.md)
@@ -64,6 +64,7 @@ ht-degree: 95%
    + [Adicionar um repositório da Adobe](/help/managing-code/adobe-repositories.md)
    + [Adicionar um repositório privado](/help/managing-code/private-repositories.md)
    + [Adicionar um repositório externo (usuários iniciais)](/help/managing-code/external-repositories.md)
+   + [Gerenciar tokens de acesso (adotante antecipado)](/help/managing-code/manage-access-tokens.md)
    + [Suporte ao submódulo Git](/help/managing-code/git-submodules.md)
    + [Configuração de verificação do GitHub](/help/managing-code/github-check-config.md)
    + [Anotações de verificação do GitHub](/help/managing-code/github-annotations.md)
@@ -76,6 +77,7 @@ ht-degree: 95%
 + Notas de versão {#release-notes}
    + [Atual](/help/release-notes/current.md)
    + 2025 {#rn-2025}
+      + [2025.5.0](/help/release-notes/2025/2025-5-0.md)
       + [2025.4.0](/help/release-notes/2025/2025-4-0.md)
       + [2025.3.0](/help/release-notes/2025/2025-3-0.md)
       + [2025.2.0](/help/release-notes/2025/2025-2-0.md)

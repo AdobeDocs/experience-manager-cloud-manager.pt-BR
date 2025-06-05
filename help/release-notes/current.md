@@ -1,38 +1,51 @@
 ---
-title: Notas de versão do Cloud Manager 2025.5.0
+title: Notas de versão do Cloud Manager 2025.6.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.5.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 802844e15dc2b610e658e9fac4f0304f0ec878c6
+source-git-commit: 13e6f33e7ef92f4a27ae30c7550351b20d3e86ed
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 89%
+source-wordcount: '560'
+ht-degree: 62%
 
 ---
 
-# Notas de versão do Cloud Manager 2025.5.0 no Adobe Managed Services {#release-notes}
+# Notas de versão do Cloud Manager 2025.6.0 no Adobe Managed Services {#release-notes}
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2025.04.0+Release -->
 
-Saiba mais sobre o lançamento do [!UICONTROL Cloud Manager] 2025.5.0 no Adobe Managed Services.
+Saiba mais sobre o lançamento do [!UICONTROL Cloud Manager] 2025.6.0 no Adobe Managed Services.
 
 Consulte também as [notas de versão atuais do Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Datas de lançamento {#release-date}
 
-A data de lançamento do [!UICONTROL Cloud Manager] 2025.5.0 é sexta-feira, 8 de maio de 2025.
+A data de lançamento do [!UICONTROL Cloud Manager] 2025.6.0 é sexta-feira, 5 de junho de 2025.
 
-Não há novos recursos significativos ou correções de erros na versão de maio do Cloud Manager.
+<!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-A próxima versão está planejada para sexta-feira, 5 de junho de 2025.
+A próxima versão está planejada para sexta-feira, 10 de julho de 2025.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-<!--
-## What's new {#what-is-new}
 
-* 
--->
+## Novidades {#what-is-new}
+
+* **(UI) Pipelines somente para preparo e somente produção**
+
+  O Cloud Manager agora oferece suporte a pipelines somente de preparo e produção. Esse recurso permite dividir as implantações de produção de pilha completa em pipelines menores e específicos de propósito. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
+
+  ![Caixa de diálogo Adicionar pipeline de não produção com o botão de opção Código de pilha completa selecionado e ambiente de preparo selecionado](/help/release-notes/assets/add-non-production-pipeline.png)
+
+  Consulte [Pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md).
+
+* **(UI) Favoritos do pipeline**
+
+  Nesta versão, o Cloud Manager apresenta a capacidade de fixar pipelines favoritos, permitindo que você marque pipelines específicos como favoritos para que eles apareçam no topo da lista na página **Pipelines**. Esse aprimoramento facilita a localização e a execução de pipelines acessados com frequência. <!-- CMGR-68293 -->
+
+  ![Pipelines marcados como favoritos](/help/release-notes/assets/pipeline-favorites.png) *Dois pipelines marcados como favoritos.*
+
+  Consulte [Marcar favoritos do pipeline](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
 ## Programa de adoção antecipada {#early-adoption}
@@ -40,6 +53,16 @@ A próxima versão está planejada para sexta-feira, 5 de junho de 2025.
 Participe do Programa de adoção antecipada da Cloud Manager para obter acesso exclusivo aos recursos futuros antes do lançamento geral.
 
 As seguintes oportunidades de adoção antecipada estão disponíveis atualmente:
+
+
+### Gerenciar tokens de acesso{#access-tokens}
+
+Use o recurso **Gerenciar tokens de acesso** no Cloud Manager para exibir, renomear e excluir tokens de acesso associados a repositórios externos do Bring Your Own Git, como GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
+
+Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
+
+Se tiver interesse em testar esse novo recurso e compartilhar o seu feedback, envie um email para [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) do seu endereço de email associado à sua Adobe ID. Inclua qual plataforma Git deseja usar e se você está em uma estrutura de repositório privado/público ou empresarial.
+
 
 ### Traga seu próprio Git: agora com suporte para GitLab e Bitbucket {#gitlab-bitbucket}
 
@@ -57,18 +80,12 @@ Consulte [Adicionar repositórios externos no Cloud Manager](/help/managing-cod
 
 Se tiver interesse em testar esse novo recurso e compartilhar o seu feedback, envie um email para [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) do seu endereço de email associado à sua Adobe ID. Inclua qual plataforma Git deseja usar e se você está em uma estrutura de repositório privado/público ou empresarial.
 
-### Pipelines somente de preparo e somente de produção {#staging-production-only-pipelines}
 
-A Adobe anuncia a introdução do suporte para [pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md). Esse novo recurso permite dividir os pipelines de implantação de produção de pilha completa em implantações menores e mais especializadas.
+## Correção de erros {#bug-fixes}
 
-Se você quiser testar esse recurso e fornecer feedback, envie um email para [Grp-cloudmanager_splitpipelines@adobe.com](mailto:Grp-cloudmanager_splitpipelines@adobe.com) do seu endereço de email associado à sua Adobe ID.
-
+* Agora, o AEM Cloud Manager mapeia corretamente as falhas de compilação do Maven causadas por erros 409 (conflitos) ao buscar artefatos do cliente para uma falha causada pelo cliente. Essa alteração melhora as mensagens de erro, distinguindo entre erros internos e problemas relacionados à configuração do ambiente do cliente. <!-- CMGR-66673 -->
 
 <!--
-## Bug fixes {#bug-fixes}
-
-* A
-
 Known Issues {#known-issues}
 
 * A -->
