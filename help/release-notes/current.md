@@ -3,9 +3,9 @@ title: Notas de versão do Cloud Manager 2025.6.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.5.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 13e6f33e7ef92f4a27ae30c7550351b20d3e86ed
+source-git-commit: d0acd47ea6011dc5896d20d76ab0fcaa970df6ac
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '558'
 ht-degree: 62%
 
 ---
@@ -31,7 +31,7 @@ A próxima versão está planejada para sexta-feira, 10 de julho de 2025.
 
 ## Novidades {#what-is-new}
 
-* **(UI) Pipelines somente para preparo e somente produção**
+* **Pipelines somente de preparo e somente de produção**
 
   O Cloud Manager agora oferece suporte a pipelines somente de preparo e produção. Esse recurso permite dividir as implantações de produção de pilha completa em pipelines menores e específicos de propósito. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
 
@@ -39,7 +39,7 @@ A próxima versão está planejada para sexta-feira, 10 de julho de 2025.
 
   Consulte [Pipelines somente de preparo e somente de produção](/help/using/stage-prod-only.md).
 
-* **(UI) Favoritos do pipeline**
+* **Favoritos do pipeline**
 
   Nesta versão, o Cloud Manager apresenta a capacidade de fixar pipelines favoritos, permitindo que você marque pipelines específicos como favoritos para que eles apareçam no topo da lista na página **Pipelines**. Esse aprimoramento facilita a localização e a execução de pipelines acessados com frequência. <!-- CMGR-68293 -->
 
