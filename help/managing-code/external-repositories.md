@@ -1,12 +1,12 @@
 ---
 title: Adicionar repositórios externos no Cloud Manager
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
-badge: label="Primeiros usuários" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
+badge: label="Beta privado" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 83ba61364d5a492bd7236d7fcaeabf8cf904627a
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '1871'
-ht-degree: 27%
+ht-degree: 26%
 
 ---
 
@@ -16,7 +16,7 @@ Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager o
 
 >[!NOTE]
 >
->Os recursos descritos neste artigo só estão disponíveis por meio do programa de adoção antecipada. Para obter mais detalhes e se inscrever como participante antecipado, consulte [Traga seu próprio Git](/help/release-notes/current.md#gitlab-bitbucket).
+>Os recursos descritos neste artigo só estão disponíveis por meio do programa beta privado. Para obter mais detalhes e para se inscrever no beta privado, consulte [Traga seu próprio Git](/help/release-notes/current.md#gitlab-bitbucket).
 
 ## Configurar um repositório externo
 
@@ -79,7 +79,7 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 
    >[!NOTE]
    >
-   >O recurso **Adicionar novo token de acesso** está atualmente na fase de Adoção antecipada. Funcionalidades adicionais estão sendo planejadas. Como resultado, as permissões necessárias para tokens de acesso podem mudar. Além disso, a interface de usuário para gerenciamento de tokens pode ser atualizada, possivelmente incluindo recursos como datas de expiração de tokens. E verificações automatizadas para garantir que os tokens vinculados aos repositórios permaneçam válidos.
+   >O recurso **Adicionar novo Token de Acesso** está atualmente na fase beta privada. Funcionalidades adicionais estão sendo planejadas. Como resultado, as permissões necessárias para tokens de acesso podem mudar. Além disso, a interface de usuário para gerenciamento de tokens pode ser atualizada, possivelmente incluindo recursos como datas de expiração de tokens. E verificações automatizadas para garantir que os tokens vinculados aos repositórios permaneçam válidos.
 
 1. Clique em **Validar**.
 

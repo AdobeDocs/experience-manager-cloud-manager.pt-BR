@@ -3,7 +3,7 @@ title: Notas de versão do Cloud Manager 2025.6.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.5.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: d0acd47ea6011dc5896d20d76ab0fcaa970df6ac
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 62%
@@ -33,7 +33,7 @@ A próxima versão está planejada para sexta-feira, 10 de julho de 2025.
 
 * **Pipelines somente de preparo e somente de produção**
 
-  O Cloud Manager agora oferece suporte a pipelines somente de preparo e produção. Esse recurso permite dividir as implantações de produção de pilha completa em pipelines menores e específicos de propósito. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
+  O Cloud Manager agora oferece suporte a pipelines somente de preparo e produção. Esse recurso permite dividir as implantações de produção de pilha completa em pipelines menores e específicos de propósito. <!-- This feature went into GA from Private beta in the June 5, 2025 CM release -->
 
   ![Caixa de diálogo Adicionar pipeline de não produção com o botão de opção Código de pilha completa selecionado e ambiente de preparo selecionado](/help/release-notes/assets/add-non-production-pipeline.png)
 
@@ -48,11 +48,11 @@ A próxima versão está planejada para sexta-feira, 10 de julho de 2025.
   Consulte [Marcar favoritos do pipeline](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
-## Programa de adoção antecipada {#early-adoption}
+## Programa beta privado {#beta-program}
 
-Participe do Programa de adoção antecipada da Cloud Manager para obter acesso exclusivo aos recursos futuros antes do lançamento geral.
+Participe do programa beta privado da Cloud Manager para obter acesso exclusivo aos recursos futuros antes do lançamento geral.
 
-As seguintes oportunidades de adoção antecipada estão disponíveis atualmente:
+As seguintes oportunidades de beta privado estão disponíveis no momento:
 
 
 ### Gerenciar tokens de acesso{#access-tokens}

@@ -1,23 +1,23 @@
 ---
-title: Atualizações de Service Pack para ambientes de desenvolvimento - Adoção antecipada
+title: Atualizações de Service Pack para ambientes de desenvolvimento - beta privado
 description: Saiba como iniciar atualizações de service pack em ambientes de desenvolvimento por meio da interface do usuário do Cloud Manager.
 hide: true
 hidefromtoc: true
 exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
-source-git-commit: 55b33db1bf80f066b1a66bc87c0abeefa4771871
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# Atualizações de service pack em ambientes de desenvolvimento (adotante antecipado) {#stage-prod-only}
+# Atualizações de service pack em ambientes de desenvolvimento (beta privado) {#stage-prod-only}
 
 Saiba como iniciar atualizações de service pack em ambientes de desenvolvimento por meio da interface do usuário do Cloud Manager.
 
 >[!NOTE]
 >
->Este recurso só está disponível por meio do [programa de adoção antecipada](/help/release-notes/current.md#early-adoption).
+>Este recurso só está disponível para [o programa beta privado](/help/release-notes/current.md#beta-program).
 
 ## Visão geral {#service-pack-updates-overview}
 

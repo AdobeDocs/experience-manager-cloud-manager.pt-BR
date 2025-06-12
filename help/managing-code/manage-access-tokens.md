@@ -1,9 +1,9 @@
 ---
 title: Gerenciar tokens de acesso no Cloud Manager
 description: Saiba como visualizar, editar e excluir tokens de acesso usados para Trazer seu próprio Git no Cloud Manager no Adobe Managed Services.
-badge: label="Primeiros usuários" type="Positive" url="/help/release-notes/current.md#access-tokens"
+badge: label="Beta privado" type="Positive" url="/help/release-notes/current.md#access-tokens"
 exl-id: 873aad0b-d7c6-4bc3-a70d-bbfdc1e02193
-source-git-commit: 4d95981d14004bde4931bf59846f9be7e10e3083
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Consulte também [Adicionar repositórios externos no Cloud Manager](/help/manag
 
 >[!NOTE]
 >
->Os recursos descritos neste artigo só estão disponíveis por meio do programa de adoção antecipada. Para obter mais detalhes e se inscrever como um dos primeiros usuários, consulte [Gerenciar tokens de acesso](/help/release-notes/current.md#access-tokens).
+>Os recursos descritos neste artigo só estão disponíveis por meio do programa beta privado. Para obter mais detalhes e para se inscrever no beta privado, consulte [Gerenciar tokens de acesso](/help/release-notes/current.md#access-tokens).
 
 ## Exibir tokens de acesso {#view-access-tokens}
 
