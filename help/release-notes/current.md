@@ -3,10 +3,10 @@ title: Notas de versão do Cloud Manager 2025.6.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.5.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
+source-git-commit: 38d398caf2323b603afd293aa9152308fefd323f
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 62%
+source-wordcount: '560'
+ht-degree: 58%
 
 ---
 
@@ -55,18 +55,9 @@ Participe do programa beta privado da Cloud Manager para obter acesso exclusivo 
 As seguintes oportunidades de beta privado estão disponíveis no momento:
 
 
-### Gerenciar tokens de acesso{#access-tokens}
-
-Use o recurso **Gerenciar tokens de acesso** no Cloud Manager para exibir, renomear e excluir tokens de acesso associados a repositórios externos do Bring Your Own Git, como GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
-
-Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
-
-Se tiver interesse em testar esse novo recurso e compartilhar o seu feedback, envie um email para [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) do seu endereço de email associado à sua Adobe ID. Inclua qual plataforma Git deseja usar e se você está em uma estrutura de repositório privado/público ou empresarial.
-
-
 ### Traga seu próprio Git: agora com suporte para GitLab e Bitbucket {#gitlab-bitbucket}
 
-O recurso **Traga seu próprio Git** foi expandido para incluir suporte para repositórios externos, como GitLab e Bitbucket. Esse novo suporte é uma adição ao suporte já existente para repositórios GitHub privados e empresariais. Ao adicionar esses novos repositórios, também é possível vinculá-los diretamente aos seus pipelines. Você pode hospedar esses repositórios em plataformas de nuvem pública ou em sua infraestrutura ou nuvem privada. Essa integração também elimina a necessidade de sincronização constante do código com o repositório da Adobe e oferece a capacidade de validar solicitações de pull antes de mesclá-las em uma ramificação principal.
+O recurso **Traga seu próprio Git** (BYOG) foi expandido para incluir suporte para repositórios externos, como GitLab e Bitbucket. Esse novo suporte é uma adição ao suporte já existente para repositórios GitHub privados e empresariais. Ao adicionar esses novos repositórios, também é possível vinculá-los diretamente aos seus pipelines. Você pode hospedar esses repositórios em plataformas de nuvem pública ou em sua infraestrutura ou nuvem privada. Essa integração também elimina a necessidade de sincronização constante do código com o repositório da Adobe e oferece a capacidade de validar solicitações de pull antes de mesclá-las em uma ramificação principal.
 
 Os pipelines que usam repositórios externos (exceto os hospedados pelo GitHub) e o **Acionador de implantação** definidos como **Sobre alterações do Git** agora são iniciados automaticamente.
 
@@ -77,6 +68,14 @@ Consulte [Adicionar repositórios externos no Cloud Manager](/help/managing-cod
 >[!NOTE]
 >
 >Atualmente, as verificações de qualidade do código de solicitação de pull prontas para uso são exclusivas de repositórios hospedados no GitHub, mas uma atualização para estender essa funcionalidade a outros fornecedores Git está em andamento.
+
+Se tiver interesse em testar esse novo recurso e compartilhar o seu feedback, envie um email para [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) do seu endereço de email associado à sua Adobe ID. Inclua qual plataforma Git deseja usar e se você está em uma estrutura de repositório privado/público ou empresarial.
+
+#### Gerenciar tokens de acesso{#access-tokens}
+
+Use o recurso **Gerenciar Tokens de Acesso**, juntamente com o BYOG, para exibir, renomear e excluir tokens de acesso associados a repositórios externos do Bring Your Own Git, como GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
+
+Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
 
 Se tiver interesse em testar esse novo recurso e compartilhar o seu feedback, envie um email para [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) do seu endereço de email associado à sua Adobe ID. Inclua qual plataforma Git deseja usar e se você está em uma estrutura de repositório privado/público ou empresarial.
 
