@@ -3,10 +3,10 @@ title: Adicionar repositórios externos no Cloud Manager
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privado" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 3958e36391eaca3450ef765676fcbbd485766318
+source-git-commit: 073f1024891e1a1d4298c5c593df011f5572e820
 workflow-type: tm+mt
-source-wordcount: '2050'
-ht-degree: 23%
+source-wordcount: '2295'
+ht-degree: 29%
 
 ---
 
@@ -51,14 +51,14 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 
 1. Na caixa de diálogo **Adicionar repositório**, selecione **Repositório privado** para vincular um repositório Git externo ao seu programa.
 
-   ![Adicionar repositório próprio](/help/managing-code/assets/repositories-private-repo-type.png)
+   ![Adicionar repositório próprio](/help/managing-code/assets/repository-add-private-dialogbox2.png)
 
 1. Em cada campo respectivo, forneça os seguintes detalhes sobre o repositório:
 
    | Texto | Descrição |
    | --- | --- |
    | **Nome do repositório** | Obrigatório. Um nome expressivo para o novo repositório. |
-   | **URL do repositório** | Obrigatório. O URL do repositório.<br><br>Se você estiver usando um repositório hospedado pelo GitHub, o caminho deverá terminar em `.git`.<br>Por exemplo, *`https://github.com/org-name/repo-name.git`* (o caminho do URL é apenas para fins ilustrativos).<br><br>Se você estiver usando um repositório externo, ele deverá usar o seguinte formato de caminho de URL:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> ou<br>`https://self-hosted-domain/org-name/repo-name.git`<br>e corresponder ao seu fornecedor de Git. |
+   | **URL do repositório** | Obrigatório. O URL do repositório.<br><br>Se você estiver usando um repositório hospedado pelo GitHub, o caminho deverá terminar em `.git`.<br>Por exemplo, *`https://github.com/org-name/repo-name.git`* (o caminho da URL é apenas ilustrativo).<br><br>Se você estiver usando um repositório externo, ele deverá usar o seguinte formato de caminho de URL:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> ou<br>`https://self-hosted-domain/org-name/repo-name.git`<br>e corresponder ao seu fornecedor de Git. |
    | **Selecionar tipo de repositório** | Obrigatório. Selecione o tipo de repositório que você está usando:<ul><li>**GitHub** (GitHub Enterprise e a versão auto-hospedada do GitHub)</li><li>**GitLab** (o `gitlab.com` e a versão auto-hospedada do GitLab) </li><li>**Bitbucket** (somente `bitbucket.org` (versão em nuvem) tem suporte. A versão auto-hospedada do Bitbucket foi descontinuada a partir de 15 de fevereiro de 2024.)</li></ul>Se o caminho do URL do repositório acima incluir o nome do fornecedor do Git, como GitLab ou Bitbucket, o tipo de repositório já estará pré-selecionado. |
    | **Descrição** | Opcional. Uma descrição detalhada do repositório. |
 
@@ -67,20 +67,56 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 1. Na caixa de diálogo **Validação de propriedade de repositório privado**, forneça um token de acesso para validar a propriedade do repositório externo para que você possa acessá-lo.
 
    ![Seleção de um token de acesso para um repositório](/help/managing-code/assets/repositories-exisiting-access-token.png)
-   *Selecionando um token de acesso existente para um repositório Bitbucket.*
+   *Selecionando um token de acesso existente para um repositório Bitbucket (somente para ilustração).*
 
-   | Tipo de token | Descrição |
-   | --- | --- |
-   | **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
-   | **Adicionar novo token de acesso** | **Tipo de repositório: GitHub Enterprise**<br><ul><li> No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo as instruções na [documentação do GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Permissões necessárias para o GitHub Enterprise Personal Access Token (PAT)<br>Essas permissões garantem que o Cloud Manager possa validar solicitações de pull, gerenciar verificações de status de confirmação e acessar detalhes do repositório necessários.<br>Ao gerar o PAT no GitHub Enterprise, verifique se ele inclui as seguintes permissões de repositório:<ul><li>Solicitação de pull (leitura e gravação)<li>Status de confirmação (leitura e gravação)<li>Metadados do repositório (somente leitura)</li></li></ul></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
-   | | **Tipo de repositório: GitLab**<ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo a instrução na [documentação do GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Permissões necessárias para o GitLab Personal Access Token (PAT)<br>Esses escopos permitem que o Cloud Manager acesse dados do repositório e informações do usuário, conforme necessário, para validação e integração com webhook.<br>Ao gerar o PAT no GitLab, certifique-se de que ele inclua os seguintes escopos de token:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
-   | | **Tipo de repositório: Bitbucket**<ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso do repositório usando a [documentação do Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Permissões necessárias para o PAT (token de acesso pessoal) do Bitbucket<br>Essas permissões permitem que o Cloud Manager acesse o conteúdo do repositório, gerencie solicitações de pull e configure ou reaja a eventos de webhook.<br>Ao criar a senha de aplicativo no Bitbucket, verifique se ela inclui as seguintes permissões de senha de aplicativo necessárias:<ul><li>Repositório (somente leitura)<li>Solicitações de pull (leitura e gravação)<li>Webhooks (leitura e gravação)</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
+>[!BEGINTABS]
 
-   Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
+>[!TAB GitHub Enterprise]
 
-   >[!NOTE]
-   >
-   >O recurso **Adicionar novo Token de Acesso** está atualmente na fase beta privada. Funcionalidades adicionais estão sendo planejadas. Como resultado, as permissões necessárias para tokens de acesso podem mudar. Além disso, a interface de usuário para gerenciamento de tokens pode ser atualizada, possivelmente incluindo recursos como datas de expiração de tokens. E verificações automatizadas para garantir que os tokens vinculados aos repositórios permaneçam válidos.
+**GitHub Enterprise**
+
+| Tipo de token | Descrição |
+| --- | --- |
+| **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
+| **Adicionar novo token de acesso** | <ul><li> No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo as instruções na [documentação do GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Permissões necessárias para o GitHub Enterprise Personal Access Token (PAT)<br>Essas permissões garantem que o Cloud Manager possa validar solicitações de pull, gerenciar verificações de status de confirmação e acessar detalhes do repositório necessários.<br>Ao gerar o PAT no GitHub Enterprise, verifique se ele inclui as seguintes permissões de repositório:<ul><li>Solicitação de pull (leitura e gravação)<li>Status de confirmação (leitura e gravação)<li>Metadados do repositório (somente leitura)</li></li></ul></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
+
+Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
+
+>[!NOTE]
+>
+>O recurso **Adicionar novo Token de Acesso** está atualmente na fase beta privada. Funcionalidades adicionais estão sendo planejadas. Como resultado, as permissões necessárias para tokens de acesso podem mudar. Além disso, a interface de usuário para gerenciamento de tokens pode ser atualizada, possivelmente incluindo recursos como datas de expiração de tokens. E verificações automatizadas para garantir que os tokens vinculados aos repositórios permaneçam válidos.
+
+>[!TAB GitLab]
+
+**GitLab**
+
+| Tipo de token | Descrição |
+| --- | --- |
+| **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
+| **Adicionar novo token de acesso** | <ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo a instrução na [documentação do GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Permissões necessárias para o GitLab Personal Access Token (PAT)<br>Esses escopos permitem que o Cloud Manager acesse dados do repositório e informações do usuário, conforme necessário, para validação e integração com webhook.<br>Ao gerar o PAT no GitLab, certifique-se de que ele inclua os seguintes escopos de token:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
+
+Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
+
+>[!NOTE]
+>
+>O recurso **Adicionar novo Token de Acesso** está atualmente na fase beta privada. Funcionalidades adicionais estão sendo planejadas. Como resultado, as permissões necessárias para tokens de acesso podem mudar. Além disso, a interface de usuário para gerenciamento de tokens pode ser atualizada, possivelmente incluindo recursos como datas de expiração de tokens. E verificações automatizadas para garantir que os tokens vinculados aos repositórios permaneçam válidos.
+
+>[!TAB Bitbucket]
+
+**Bitbucket**
+
+| Tipo de token | Descrição |
+| --- | --- |
+| **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
+| **Adicionar novo token de acesso** | <ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso do repositório usando a [documentação do Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Permissões necessárias para o PAT (token de acesso pessoal) do Bitbucket<br>Essas permissões permitem que o Cloud Manager acesse o conteúdo do repositório, gerencie solicitações de pull e configure ou reaja a eventos de webhook.<br>Ao criar a senha de aplicativo no Bitbucket, verifique se ela inclui as seguintes permissões de senha de aplicativo necessárias:<ul><li>Repositório (somente leitura)<li>Solicitações de pull (leitura e gravação)<li>Webhooks (leitura e gravação)</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
+
+Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
+
+>[!NOTE]
+>
+>O recurso **Adicionar novo Token de Acesso** está atualmente na fase beta privada. Funcionalidades adicionais estão sendo planejadas. Como resultado, as permissões necessárias para tokens de acesso podem mudar. Além disso, a interface de usuário para gerenciamento de tokens pode ser atualizada, possivelmente incluindo recursos como datas de expiração de tokens. E verificações automatizadas para garantir que os tokens vinculados aos repositórios permaneçam válidos.
+
+>[!ENDTABS]
 
 1. Clique em **Validar**.
 
@@ -154,7 +190,7 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
 
 >[!TAB GitHub Enterprise]
 
-### GitHub Enterprise
+**GitHub Enterprise**
 
 1. Localize a seção Configurações do **Webhook** da solução.
 1. Cole o URL do Webhook copiado anteriormente no campo de texto do URL.
@@ -171,6 +207,8 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
 
 >[!TAB GitLab]
 
+**GitLab**
+
 1. Localize a seção Configurações do **Webhook** da solução.
 1. Cole o URL do Webhook copiado anteriormente no campo de texto do URL.
    1. Substitua o parâmetro de consulta `api_key` na URL do Webhook pela sua própria chave de API real.
@@ -186,7 +224,7 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
 
 >[!TAB Bitbucket]
 
-### Bitbucket
+**Bitbucket**
 
 1. Localize a seção Configurações do **Webhook** da solução.
 1. Cole o URL do Webhook copiado anteriormente no campo de texto do URL.
@@ -209,42 +247,51 @@ Depois que os webhooks forem configurados corretamente, o Cloud Manager acionar�
 
 Os seguintes comportamentos se aplicam:
 
-* **GitHub Enterprise**
+>[!BEGINTABS]
 
-  Quando a verificação é criada, ela é exibida como a seguinte captura de tela abaixo. A principal diferença em relação a `GitHub.com` é que `GitHub.com` usa uma execução de verificação, enquanto o GitHub Enterprise (usando tokens de acesso pessoal) gera um status de confirmação:
+>[!TAB GitHub Enterprise]
 
-  ![Confirmar status para indicar o processo de validação de PR no GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
+**GitHub Enterprise**
 
-* **Bitbucket**
+Quando a verificação é criada, ela é exibida como a seguinte captura de tela abaixo. A principal diferença em relação a `GitHub.com` é que `GitHub.com` usa uma execução de verificação, enquanto o GitHub Enterprise (usando tokens de acesso pessoal) gera um status de confirmação:
 
-  Quando a validação de qualidade do código estiver em execução:
+![Confirmar status para indicar o processo de validação de PR no GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
 
-  ![Status enquanto a validação de qualidade do código está em execução](/help/managing-code/assets/repository-webhook-bitbucket1.png)
+>[!TAB GitLab]
 
-  Usa o status de confirmação para rastrear o progresso da validação da PR. No caso a seguir, a captura de tela mostra o que acontece quando uma validação de qualidade de código falha devido a um problema do cliente. Um comentário é adicionado com informações detalhadas sobre o erro e uma verificação de confirmação é criada, mostrando a falha (visível à direita):
+**GitLab**
 
-  ![Status de validação da solicitação de pull para Bitbucket](/help/managing-code/assets/repository-webhook-bitbucket2.png)
+As interações do GitLab dependem apenas de comentários. Quando a validação começar, um comentário será adicionado. Quando a validação for concluída (com êxito ou com falha), o comentário inicial será removido e substituído por um novo comentário que conterá os resultados da validação ou os detalhes do erro.
 
-* **GitLab**
+Quando a validação de qualidade do código estiver em execução:
 
-  As interações do GitLab dependem apenas de comentários. Quando a validação começar, um comentário será adicionado. Quando a validação for concluída (com êxito ou com falha), o comentário inicial será removido e substituído por um novo comentário que conterá os resultados da validação ou os detalhes do erro.
+![Quando a validação de qualidade do código estiver em execução](/help/managing-code/assets/repository-webhook-gitlab1.png)
 
-  Quando a validação de qualidade do código estiver em execução:
+Quando a validação da qualidade a frio for concluída:
 
-  ![Quando a validação de qualidade do código estiver em execução](/help/managing-code/assets/repository-webhook-gitlab1.png)
+![Quando a validação da qualidade a frio for concluída](/help/managing-code/assets/repository-webhook-gitlab2.png)
 
-  Quando a validação da qualidade a frio for concluída:
+Quando a validação da qualidade do código falha com um erro:
 
-  ![Quando a validação da qualidade a frio for concluída](/help/managing-code/assets/repository-webhook-gitlab2.png)
+![Quando a validação de qualidade do código falha com um erro](/help/managing-code/assets/repository-webhook-gitlab3.png)
 
-  Quando a validação da qualidade do código falha com um erro:
+Quando a validação da qualidade do código falhar devido a problemas do cliente:
 
-  ![Quando a validação de qualidade do código falha com um erro](/help/managing-code/assets/repository-webhook-gitlab3.png)
+![Quando a validação da qualidade do código falhar devido a problemas do cliente](/help/managing-code/assets/repository-webhook-gitlab4.png)
 
-  Quando a validação da qualidade do código falhar devido a problemas do cliente:
+>[!TAB Bitbucket]
 
-  ![Quando a validação da qualidade do código falhar devido a problemas do cliente](/help/managing-code/assets/repository-webhook-gitlab4.png)
+**Bitbucket**
 
+Quando a validação de qualidade do código estiver em execução:
+
+![Status enquanto a validação de qualidade do código está em execução](/help/managing-code/assets/repository-webhook-bitbucket1.png)
+
+Usa o status de confirmação para rastrear o progresso da validação da PR. No caso a seguir, a captura de tela mostra o que acontece quando uma validação de qualidade de código falha devido a um problema do cliente. Um comentário é adicionado com informações detalhadas sobre o erro e uma verificação de confirmação é criada, mostrando a falha (visível à direita):
+
+![Status de validação da solicitação de pull para Bitbucket](/help/managing-code/assets/repository-webhook-bitbucket2.png)
+
+>[!ENDTABS]
 
 ## Solução de problemas de webhook
 
