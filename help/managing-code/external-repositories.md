@@ -3,9 +3,9 @@ title: Adicionar repositórios externos no Cloud Manager
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privado" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: bacb4b6e79519e4fef4cf01e04154d492cc888e2
+source-git-commit: cd2a71bc83a8ac7173089daea9670d25b68e62ba
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '2003'
 ht-degree: 27%
 
 ---
@@ -75,7 +75,7 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 
 >[!TAB GitHub Enterprise]
 
-| Tipo de token | Descrição |
+| Opção de token de acesso | Descrição |
 | --- | --- |
 | **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
 | **Adicionar novo token de acesso** | <ul><li> No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo as instruções na [documentação do GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Permissões necessárias para o GitHub Enterprise Personal Access Token (PAT)<br>Essas permissões garantem que o Cloud Manager possa validar solicitações de pull, gerenciar verificações de status de confirmação e acessar detalhes do repositório necessários.<br>Ao gerar o PAT no GitHub Enterprise, verifique se ele inclui as seguintes permissões de repositório:<ul><li>Solicitação de pull (leitura e gravação)<li>Status de confirmação (leitura e gravação)<li>Metadados do repositório (somente leitura)</li></li></ul></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
@@ -86,7 +86,7 @@ Consulte também [Gerenciar tokens de acesso](/help/managing-code/manage-access-
 
 >[!TAB GitLab]
 
-| Tipo de token | Descrição |
+| Opção de token de acesso | Descrição |
 | --- | --- |
 | **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
 | **Adicionar novo token de acesso** | <ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo a instrução na [documentação do GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Permissões necessárias para o GitLab Personal Access Token (PAT)<br>Esses escopos permitem que o Cloud Manager acesse dados do repositório e informações do usuário, conforme necessário, para validação e integração com webhook.<br>Ao gerar o PAT no GitLab, certifique-se de que ele inclua os seguintes escopos de token:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
@@ -98,7 +98,7 @@ Consulte também [Gerenciar tokens de acesso](/help/managing-code/manage-access-
 
 >[!TAB Bitbucket]
 
-| Tipo de token | Descrição |
+| Opção de token de acesso | Descrição |
 | --- | --- |
 | **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
 | **Adicionar novo token de acesso** | <ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso do repositório usando a [documentação do Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Permissões necessárias para o PAT (token de acesso pessoal) do Bitbucket<br>Essas permissões permitem que o Cloud Manager acesse o conteúdo do repositório, gerencie solicitações de pull e configure ou reaja a eventos de webhook.<br>Ao criar a senha de aplicativo no Bitbucket, verifique se ela inclui as seguintes permissões de senha de aplicativo necessárias:<ul><li>Repositório (somente leitura)<li>Solicitações de pull (leitura e gravação)<li>Webhooks (leitura e gravação)</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
@@ -188,21 +188,21 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
 
 >[!TAB GitHub Enterprise]
 
-    | Eventos de webhook necessários |
-    | — |
-    | Esses eventos permitem que o Cloud Manager responda à atividade do GitHub, como validação de solicitação de pull, acionadores baseados em push para pipelines ou sincronização de código do Edge Delivery Services.&lt;br>Verifique se o webhook está configurado para acionar os seguintes eventos do webhook necessários:&lt;ul>&lt;li>Solicitações de pull&lt;li>Envios&lt;li>Comentários do problema&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul> |
+| Eventos de webhook necessários |
+| --- |
+| Esses eventos permitem que o Cloud Manager responda à atividade do GitHub, como validação de solicitação de pull, acionadores baseados em push para pipelines ou sincronização de código do Edge Delivery Services.<br>Verifique se o webhook está configurado para disparar os seguintes eventos do webhook necessários:<ul><li>Solicitações de pull<li>Envios por push<li>Comentários do problema</li></li></li></ul></ul></ul> |
 
 >[!TAB GitLab]
 
-    | Eventos de webhook necessários |
-    | — |
-    | Esses eventos de webhook permitem que o Cloud Manager acione pipelines quando o código é enviado por push ou uma solicitação de mesclagem é enviada. Eles também rastreiam comentários relacionados à validação da solicitação de pull (por meio de eventos de observação).&lt;br>Verifique se o webhook está configurado para acionar os seguintes eventos do webhook necessários&lt;ul>&lt;li>Eventos de push&lt;li>Eventos de solicitação de mesclagem&lt;li>Eventos de observação&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul> |
+| Eventos de webhook necessários |
+| --- |
+| Esses eventos de webhook permitem que o Cloud Manager acione pipelines quando o código é enviado por push ou uma solicitação de mesclagem é enviada. Eles também rastreiam comentários relacionados à validação da solicitação de pull (por meio de eventos de observação).<br>Verifique se o webhook está configurado para ser acionado nos seguintes eventos necessários do webhook<ul><li>Eventos de push<li>Mesclar eventos de solicitação<li>Anotar eventos</li></li></li></ul></ul></ul> |
 
 >[!TAB Bitbucket]
 
-    | Eventos de webhook necessários |
-    | — |
-    | Esses eventos garantem que o Cloud Manager possa validar solicitações de pull, responder a envios por código e interagir com comentários para coordenação de pipeline.&lt;br>Verifique se o webhook está configurado para acionar os seguintes eventos necessários do webhook&lt;ul>&lt;li>Solicitação de pull: Criado&lt;li>Solicitação de pull: Solicitações de pull atualizadas&lt;li>Solicitação de pull: Mesclado&lt;li>Solicitação de pull: Comentário&lt;li>Repositório: push&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul> |
+| Eventos de webhook necessários |
+| --- |
+| Esses eventos garantem que o Cloud Manager possa validar solicitações de pull, responder a envios por código e interagir com comentários para coordenação de pipeline.<br>Verifique se o webhook está configurado para ser acionado nos seguintes eventos necessários do webhook<ul><li>Solicitação de pull: criada<li>Solicitação de pull: atualizada<li>Solicitações de pull: mescladas<li>Solicitação de pull: comentário<li>Repositório: push</li></li></li></ul></ul></ul> |
 
 >[!ENDTABS]
 
