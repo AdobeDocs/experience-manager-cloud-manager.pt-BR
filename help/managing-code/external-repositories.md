@@ -3,10 +3,10 @@ title: Adicionar repositórios externos no Cloud Manager
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privado" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: a0836dd24dd3b711c9d1b78f28755e2db98b051c
+source-git-commit: 5bef5a1b8f54a245e1354b1b77c775a06b9b3faa
 workflow-type: tm+mt
-source-wordcount: '2210'
-ht-degree: 16%
+source-wordcount: '2141'
+ht-degree: 25%
 
 ---
 
@@ -64,7 +64,7 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 
 1. Clique em **Salvar** para adicionar o repositório.
 
-1. Na caixa de diálogo **Validação de propriedade de repositório privado**, forneça um token de acesso para validar a propriedade do repositório externo para que você possa acessá-lo.
+1. Na caixa de diálogo **Validação de Propriedade de Repositório Privado**, forneça um token de acesso para validar a propriedade do repositório externo para que você possa acessá-lo e clique em **Validar**.
 
    ![Seleção de um token de acesso para um repositório](/help/managing-code/assets/repositories-exisiting-access-token.png)
    *Selecionando um token de acesso existente para um repositório Bitbucket (somente para ilustração).*
@@ -73,43 +73,37 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 
 >[!TAB GitHub Enterprise]
 
-    | Tipo de token | Descrição |
-    | — | — |
-    | **Usar token de acesso existente** | Se você já tiver fornecido um token de acesso ao repositório para sua organização e tiver acesso a vários repositórios, poderá selecionar um token existente. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
-    | **Adicionar novo token de acesso** |&lt;ul>&lt;li> No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.&lt;li>Crie um token de acesso pessoal seguindo as instruções na [documentação do GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).&lt;li>Permissões necessárias para o PAT (Enterprise Personal Access Token) do GitHub&lt;br>Essas permissões garantem que o Cloud Manager possa validar solicitações de pull, gerenciar verificações de status de confirmação e acessar detalhes do repositório necessários.&lt;br>Ao gerar o PAT no GitHub Enterprise, verifique se ele inclui as seguintes permissões de repositório:&lt;ul>&lt;li>Solicitação de pull (leitura e gravação)&lt;li>Status de confirmação (leitura e gravação)&lt;li>Metadados do repositório (somente leitura)&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;/ul>&lt;ul>&lt;li>&lt;li>No campo **Token de acesso**, cole o token que você acabou de criar. |
-    
-    1. Clique em **Validar**.
-    
-    Após a validação, o repositório externo está pronto para ser usado e vinculado a um pipeline.
-    
-    Consulte também [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
+| Tipo de token | Descrição |
+| --- | --- |
+| **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
+| **Adicionar novo token de acesso** | <ul><li> No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo as instruções na [documentação do GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Permissões necessárias para o GitHub Enterprise Personal Access Token (PAT)<br>Essas permissões garantem que o Cloud Manager possa validar solicitações de pull, gerenciar verificações de status de confirmação e acessar detalhes do repositório necessários.<br>Ao gerar o PAT no GitHub Enterprise, verifique se ele inclui as seguintes permissões de repositório:<ul><li>Solicitação de pull (leitura e gravação)<li>Status de confirmação (leitura e gravação)<li>Metadados do repositório (somente leitura)</li></li></ul></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
+
+Após a validação, o repositório externo estará pronto para ser usado e vinculado a um pipeline.
+
+Consulte também [Gerenciar tokens de acesso](/help/managing-code/manage-access-tokens.md).
 
 >[!TAB GitLab]
 
-    | Tipo de token | Descrição |
-    | — | — |
-    | **Usar token de acesso existente** | Se você já tiver fornecido um token de acesso ao repositório para sua organização e tiver acesso a vários repositórios, poderá selecionar um token existente. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
-    | **Adicionar novo token de acesso** |&lt;ul>&lt;li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.&lt;li>Crie um token de acesso pessoal seguindo as instruções na [documentação do GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).&lt;li>Permissões necessárias para o PAT (Personal Access Token) do GitLab&lt;br>Esses escopos permitem que o Cloud Manager acesse dados do repositório e informações do usuário, conforme necessário, para validação e integração com webhook.&lt;br>Ao gerar o PAT no GitLab, certifique-se de que ele inclua os seguintes escopos de token:&lt;ul>&lt;li>api&lt;li>read_user&lt;/li>&lt;/ul>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;ul>&lt;li>No campo **Token de acesso**, cole o token que você acabou de criar. |
+| Tipo de token | Descrição |
+| --- | --- |
+| **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
+| **Adicionar novo token de acesso** | <ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso pessoal seguindo a instrução na [documentação do GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Permissões necessárias para o GitLab Personal Access Token (PAT)<br>Esses escopos permitem que o Cloud Manager acesse dados do repositório e informações do usuário, conforme necessário, para validação e integração com webhook.<br>Ao gerar o PAT no GitLab, certifique-se de que ele inclua os seguintes escopos de token:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
 
-1. Clique em **Validar**.
+Após a validação, o repositório externo estará pronto para ser usado e vinculado a um pipeline.
 
-   Após a validação, o repositório externo estará pronto para ser usado e vinculado a um pipeline.
-
-   Consulte também [Gerenciar tokens de acesso](/help/managing-code/manage-access-tokens.md).
+Consulte também [Gerenciar tokens de acesso](/help/managing-code/manage-access-tokens.md).
 
 
 >[!TAB Bitbucket]
 
-    | Tipo de token | Descrição |
-    | — | — |
-    | **Usar token de acesso existente** | Se você já tiver fornecido um token de acesso ao repositório para sua organização e tiver acesso a vários repositórios, poderá selecionar um token existente. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
-    | **Adicionar novo token de acesso** |&lt;ul>&lt;li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.&lt;li>Crie um token de acesso do repositório usando a [documentação do Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).&lt;li>Permissões necessárias para o Bitbucket Personal Access Token (PAT)&lt;br>Essas permissões permitem que o Cloud Manager acesse o conteúdo do repositório, gerencie solicitações de pull e configure ou reaja a eventos de webhook.&lt;br>Ao criar a senha de aplicativo no Bitbucket, verifique se ela inclui as seguintes permissões de senha de aplicativo necessárias:&lt;ul>&lt;li>Repositório (somente leitura)&lt;li>Solicitações de pull (leitura e gravação)&lt;li>Webhooks (leitura e gravação)&lt;/li>&lt;/ul>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;/ul>&lt;ul>&lt;li>No campo **Token de acesso**, cole o token que você acabou de criar. |
-    
-    1. Clique em **Validar**.
-    
-    Após a validação, o repositório externo está pronto para ser usado e vinculado a um pipeline.
-    
-    Consulte também [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
+| Tipo de token | Descrição |
+| --- | --- |
+| **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
+| **Adicionar novo token de acesso** | <ul><li>No campo de texto **Nome do token**, digite um nome para o token de acesso que você está criando.<li>Crie um token de acesso do repositório usando a [documentação do Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Permissões necessárias para o PAT (token de acesso pessoal) do Bitbucket<br>Essas permissões permitem que o Cloud Manager acesse o conteúdo do repositório, gerencie solicitações de pull e configure ou reaja a eventos de webhook.<br>Ao criar a senha de aplicativo no Bitbucket, verifique se ela inclui as seguintes permissões de senha de aplicativo necessárias:<ul><li>Repositório (somente leitura)<li>Solicitações de pull (leitura e gravação)<li>Webhooks (leitura e gravação)</li></li></ul></li></li></ul></ul></ul><ul><li>No campo **Token de acesso**, cole o token que acabou de criar. |
+
+Após a validação, o repositório externo estará pronto para ser usado e vinculado a um pipeline.
+
+Consulte também [Gerenciar tokens de acesso](/help/managing-code/manage-access-tokens.md).
 
 >[!ENDTABS]
 
