@@ -3,10 +3,10 @@ title: Adicionar repositórios externos no Cloud Manager
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privado" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 073f1024891e1a1d4298c5c593df011f5572e820
+source-git-commit: 523e8ef1c90bf88aa846e067aa1cca9e6ed5d8ce
 workflow-type: tm+mt
-source-wordcount: '2295'
-ht-degree: 29%
+source-wordcount: '2283'
+ht-degree: 30%
 
 ---
 
@@ -73,8 +73,6 @@ A configuração de um repositório externo no Cloud Manager consiste em três e
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 | Tipo de token | Descrição |
 | --- | --- |
 | **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
@@ -88,8 +86,6 @@ Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.m
 
 >[!TAB GitLab]
 
-**GitLab**
-
 | Tipo de token | Descrição |
 | --- | --- |
 | **Usar token de acesso já existente** | Se você já forneceu um token de acesso ao repositório para sua organização e tem acesso a vários repositórios, você pode selecionar um token. Use a lista suspensa **Nome do token** para escolher o token que deseja aplicar ao repositório. Caso contrário, adicione um novo token de acesso. |
@@ -102,8 +98,6 @@ Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.m
 >O recurso **Adicionar novo Token de Acesso** está atualmente na fase beta privada. Funcionalidades adicionais estão sendo planejadas. Como resultado, as permissões necessárias para tokens de acesso podem mudar. Além disso, a interface de usuário para gerenciamento de tokens pode ser atualizada, possivelmente incluindo recursos como datas de expiração de tokens. E verificações automatizadas para garantir que os tokens vinculados aos repositórios permaneçam válidos.
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 | Tipo de token | Descrição |
 | --- | --- |
@@ -190,8 +184,6 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 1. Localize a seção Configurações do **Webhook** da solução.
 1. Cole o URL do Webhook copiado anteriormente no campo de texto do URL.
    1. Substitua o parâmetro de consulta `api_key` na URL do Webhook pela sua própria chave de API real.
@@ -207,8 +199,6 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
 
 >[!TAB GitLab]
 
-**GitLab**
-
 1. Localize a seção Configurações do **Webhook** da solução.
 1. Cole o URL do Webhook copiado anteriormente no campo de texto do URL.
    1. Substitua o parâmetro de consulta `api_key` na URL do Webhook pela sua própria chave de API real.
@@ -223,8 +213,6 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
    | Esses eventos de webhook permitem que o Cloud Manager acione pipelines quando o código é enviado por push ou uma solicitação de mesclagem é enviada. Eles também rastreiam comentários relacionados à validação da solicitação de pull (por meio de eventos de observação).<br>Verifique se o webhook está configurado para ser acionado nos seguintes eventos necessários do webhook<ul><li>Eventos de push<li>Mesclar eventos de solicitação<li>Anotar eventos</li></li></li></ul></ul></ul> |
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 1. Localize a seção Configurações do **Webhook** da solução.
 1. Cole o URL do Webhook copiado anteriormente no campo de texto do URL.
@@ -251,15 +239,11 @@ Os seguintes comportamentos se aplicam:
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 Quando a verificação é criada, ela é exibida como a seguinte captura de tela abaixo. A principal diferença em relação a `GitHub.com` é que `GitHub.com` usa uma execução de verificação, enquanto o GitHub Enterprise (usando tokens de acesso pessoal) gera um status de confirmação:
 
 ![Confirmar status para indicar o processo de validação de PR no GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
 
 >[!TAB GitLab]
-
-**GitLab**
 
 As interações do GitLab dependem apenas de comentários. Quando a validação começar, um comentário será adicionado. Quando a validação for concluída (com êxito ou com falha), o comentário inicial será removido e substituído por um novo comentário que conterá os resultados da validação ou os detalhes do erro.
 
@@ -280,8 +264,6 @@ Quando a validação da qualidade do código falhar devido a problemas do client
 ![Quando a validação da qualidade do código falhar devido a problemas do cliente](/help/managing-code/assets/repository-webhook-gitlab4.png)
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 Quando a validação de qualidade do código estiver em execução:
 
