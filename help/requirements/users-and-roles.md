@@ -2,10 +2,10 @@
 title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários, funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+source-git-commit: 012359b4ecf872ece036b27b48fededf150493d2
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 89%
+source-wordcount: '872'
+ht-degree: 75%
 
 ---
 
@@ -42,7 +42,7 @@ A tabela a seguir resume as funções no Cloud Manager.
 >
 >A persona de desenvolvedor no Admin Console não está relacionada à função de desenvolvedor do [!UICONTROL Cloud Manager].
 
-## Criar um perfil usando o Admin Console {#using-admin-console-to-create-a-profile}
+## Criar um perfil de produto usando o Admin Console {#using-admin-console-to-create-a-profile}
 
 As funções do [!UICONTROL Cloud Manager] são gerenciadas no Admin Console. Associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager].
 
@@ -55,7 +55,13 @@ Um admin deve criar novos perfis de produto no contexto de produto do [!UICONTRO
 * Desenvolvedor
 * Gerenciador de programas
 
-Você pode criar ou adicionar usuários ou grupos a esses perfis de produto com o Admin Console.
+Crie ou adicione usuários ou grupos a esses perfis de produtos com o Admin Console.
+
+>[!IMPORTANT]
+>
+>Devido a uma limitação atual no Admin Console e no Cloud Manager, os perfis não podem ser salvos com **Nenhuma permissão** selecionada. Tentar fazer isso resulta em um erro de backend. Esse comportamento afeta a criação de perfis do Gerenciador de implantação. Como solução, selecione pelo menos uma permissão ao criar um novo perfil.
+
+**Para criar um perfil de produto usando o Admin Console:**
 
 1. Faça logon no Admin Console em [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
@@ -76,6 +82,10 @@ Você pode criar ou adicionar usuários ou grupos a esses perfis de produto com 
    * **Nome do perfil** - O **Nome do perfil** pode ser qualquer coisa. No entanto, para evitar confusão, é recomendável usar os valores da coluna **Nome de perfil recomendado**.
    * **Nome de exibição** - O **Nome de exibição** deve ser o valor técnico definido pelo [!UICONTROL Cloud Manager] (consulte a tabela a seguir).
    * **Grupo de permissões** - Você pode escolher um grupo de permissões para o perfil (nem sempre está disponível).
+
+     >[!IMPORTANT]
+     >
+     >Devido a uma limitação atual no Admin Console e no Cloud Manager, os perfis não podem ser salvos com **Nenhuma permissão** selecionada. Tentar fazer isso resulta em um erro de backend. Esse comportamento afeta a criação de perfis do Gerenciador de implantação. Como solução, selecione pelo menos uma permissão ao criar um novo perfil.
 
    ![Criação de um novo perfil](/help/assets/screen_shot_2018-05-04at171819.png)
 
