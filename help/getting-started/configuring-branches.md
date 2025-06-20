@@ -2,10 +2,10 @@
 title: Configuração de ramificações
 description: Saiba como configurar sua primeira ramificação no Git e como ela é usada pelo pipeline CI/CD para implantar o código do seu aplicativo.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '324'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 95%
 
 ---
 
@@ -74,7 +74,7 @@ To <url>
 
 ## Ramificações adicionais {#additional-branches}
 
-Uma única ramificação `main` pode ser suficiente para projetos muito simples, mas, na maioria dos casos, é necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que as atividades diárias de desenvolvimento são executadas em uma ramificação chamada `develop`. A ramificação de desenvolvimento é então mesclada à ramificação `main` no momento da implantação.
+Uma única ramificação `main` pode ser suficiente para projetos muito simples, mas, na maioria dos casos, é necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que as atividades diárias de desenvolvimento são executadas em uma ramificação chamada `develop`. A ramificação `develop` é então mesclada à ramificação `main` no momento de uma implantação.
 
 >[!TIP]
 >

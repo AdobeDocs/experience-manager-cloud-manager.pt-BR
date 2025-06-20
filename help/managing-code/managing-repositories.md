@@ -2,10 +2,10 @@
 title: Gerenciar repositórios no Cloud Manager
 description: Saiba como exibir, adicionar e excluir repositórios Git no Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: ee84c682b6bd2b9144b3f75d544dea33a5ad944b
-workflow-type: ht
-source-wordcount: '732'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 97%
 
 ---
 
@@ -73,7 +73,7 @@ A janela **Informações do repositório** é aberta com os detalhes. Para obter
 
 ## Verificar ramificações/Criar projeto {#check-branches}
 
-No **AEM Cloud Manager**, a ação **Verificar ramificações/Criar projeto** atende a duas finalidades, dependendo do estado atual do repositório.
+No **AEM Cloud Manager**, o **Verificar Ramificações/Criar Projeto** serve a duas finalidades, dependendo do estado atual do repositório.
 
 * Se o repositório for criado recentemente, esta ação gerará um projeto de amostra usando [o arquétipo de projeto AEM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-core-components/using/developing/archetype/overview).
 * Se o projeto de amostra já tiver sido criado no repositório, a ação verificará o status do repositório e suas ramificações, fornecendo feedback sobre se o projeto de amostra já existe.

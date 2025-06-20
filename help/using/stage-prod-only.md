@@ -2,16 +2,16 @@
 title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 35845e827b0a3fadfe2a55a2171b5e02100cf3eb
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 98%
+source-wordcount: '917'
+ht-degree: 96%
 
 ---
 
 # Dividir pipelines somente de estágio e somente de produção {#stage-prod-only}
 
-Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
+Você pode dividir implantações de preparo e produção usando pipelines dedicados.
 
 ## Visão geral {#overview}
 
@@ -75,7 +75,7 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 
 ### Pipelines somente de produção {#prod-only}
 
-1. Depois de selecionar a opção **Adicionar pipeline somente de produção**, a caixa de diálogo **Adicionar pipeline somente de produção** é exibida.
+1. Depois de clicar em **Adicionar pipeline somente produção**, sua caixa de diálogo associada será aberta.
 1. No campo **Nome do pipeline**, digite o nome desejado. As opções e funcionalidades restantes da caixa de diálogo funcionam da mesma forma que as da caixa de diálogo de criação de pipeline acoplado padrão. 
 1. No canto inferior direito da caixa de diálogo, clique em **Salvar**.
 

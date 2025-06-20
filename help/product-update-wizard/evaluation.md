@@ -3,25 +3,24 @@ title: Fase de avaliação
 seo-title: Evaluation Phase
 description: Saiba como a fase de avaliação do Assistente de atualização do produto avalia a complexidade da atualização com o detector de padrões.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
-workflow-type: ht
-source-wordcount: '279'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 57%
 
 ---
 
 
 # Fase de avaliação {#evaluation}
 
-A primeira fase do Assistente de atualização do produto é a fase de **[!UICONTROL Avaliação]**, que avalia a complexidade da atualização com o detector de padrões diretamente no assistente. No final desta etapa, você terá acesso a um relatório de avaliação.
+A primeira fase do Assistente de Atualização de Produto é a fase **[!UICONTROL Avaliação]**. Ele executa o detector de padrões no assistente para avaliar a complexidade da atualização. No final desta etapa, é possível exibir o relatório de avaliação.
 
-O relatório gerado permite verificar a elegibilidade para atualização da instância de criação, detectando padrões que:
+O relatório verifica a prontidão da instância do autor para atualização, detectando padrões para o seguinte:
 
-* Quebram determinadas regras relacionadas às áreas afetadas ou substituídas pela atualização.
+* Violações de regras em áreas afetadas ou substituídas pela atualização.
+* Ele usa recursos do AEM 6.x ou APIs que não são compatíveis com versões anteriores e podem ser interrompidas após a atualização.
 
-* Usam ou uma API ou um recurso do AEM 6.x sem retrocompatibilidade com a nova versão do AEM e que possa deixar de funcionar após a atualização.
-
-O relatório atua como uma avaliação do esforço de desenvolvimento que está envolvido na atualização para o Adobe Experience Manager (AEM) 6.5.
+Este relatório ajuda a estimar o esforço de desenvolvimento necessário para atualizar para o Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
 >
@@ -45,4 +44,4 @@ O detector de padrões pode ser executado em qualquer ambiente. No entanto, para
 
    ![Relatório criado](/help/assets/Evaluation-1.png)
 
-A versão atual do Assistente de atualização do produto no Cloud Manager oferece suporte somente à fase de **Avaliação**. As outras quatro fases: **Correção**, **Execução**, **Validação** e **Conclusão** serão disponibilizadas em breve.
+O assistente de Atualização de Produto atual no Cloud Manager oferece suporte somente à fase **Avaliação**. As outras quatro fases: **Correção**, **Execução**, **Validação** e **Conclusão** serão disponibilizadas em breve.

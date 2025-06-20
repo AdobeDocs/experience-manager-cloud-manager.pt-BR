@@ -2,10 +2,10 @@
 title: Permissões com base em função
 description: Saiba mais sobre as permissões pré-configuradas com base em funções do Cloud Manager para gerenciar o acesso aos recursos da nuvem.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 682b142f35bc233bad82b0ddfa69bc0f2d5b5fdb
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 100%
+source-wordcount: '560'
+ht-degree: 99%
 
 ---
 
@@ -43,26 +43,26 @@ Cada uma das funções tem permissões pré-configuradas associadas específicas
 
 | Permissão | Descrição | Proprietário da empresa | Gerenciador de implantação | Gerenciador de programas | Desenvolvedor | CSE |
 | --- | --- | --- | --- | --- | --- | --- |
-| Aplicativo de leitura | KPIs do programa de leitura | x | x | x | x | x |
-| Aplicativo de gravação | Configuração ou edição do programa | x | | | | |
-| Adicionar programa | Adicionar novo programa | x |  |  |  |  |
-| Ambiente de leitura | Ver detalhes do ambiente | x | x | x | x | x |
-| Criar execução | Iniciar pipeline | x | x | x | | |
-| Execução de leitura | Ver status de execução | x | x | x | x | x |
-| Retomar execução | Capacidade de retomar a execução ao pausar | x | x | x | | x |
-| Aprovação da execução da implantação para produção | Fornecer aprovação em tempo real | x | x | x | | |
-| Implantação do cronograma de execução para produção | Programar implantação de produção | x | x | x | | x |
-| Implantação de Execução para Produção | Implantar aplicativo para produção quando pausado para supervisão do CSE |  |  |  |  | x |
-| Cancelamento de execuções | Cancelar a execução atual |  |  | x |  |  |
-| Falhas na porta de qualidade de substituição de execução | Aprovar falhas importantes na porta de qualidade | x | x | x |  |  |
-| Criação de pipeline | Configurar/editar pipeline |  | x |  |  |  |
-| Leitura do pipeline | Ver detalhes do pipeline | x | x | x | x | x |
-| Gravação do pipeline | Configurar/editar pipeline |  | x |  |  |  |
-| Aprovação de modificação de pipeline | Permite editar a opção Proprietário do negócio |  | x |  |  |  |
-| Implementação gerenciada de modificação de pipeline | Permite a edição da opção de supervisão do CSE |  | x |  |  |  |
-| Exclusão de pipeline | Permite a exclusão do pipeline |  | x |  |  |  |
-| Leitura da etapa | Ver os resultados das métricas de qualidade da etapa | x | x | x | x | x |
-| Gerar token de acesso pessoal | Acessar Git |  | x |  | x |  |
+| `Read the Application` | KPIs do programa de leitura | x | x | x | x | x |
+| `Write Application` | Configuração ou edição do programa | x | | | | |
+| `Add Program` | Adicionar novo programa | x |  |  |  |  |
+| `Read Environment` | Ver detalhes do ambiente | x | x | x | x | x |
+| `Create Execution` | Iniciar pipeline | x | x | x | | |
+| `Read Execution` | Ver status de execução | x | x | x | x | x |
+| `Resume Execution` | Capacidade de retomar a execução ao pausar | x | x | x | | x |
+| `Execution Approve Deploy to Production` | Fornecer aprovação em tempo real | x | x | x | | |
+| `Execution Schedule Deploy to Production` | Programar implantação de produção | x | x | x | | x |
+| `Execution Deploy to Production` | Implantar aplicativo para produção quando pausado para supervisão do CSE |  |  |  |  | x |
+| `Execution Cancel` | Cancelar a execução atual |  |  | x |  |  |
+| `Execution Override Quality Gate Failures` | Aprovar falhas importantes na porta de qualidade | x | x | x |  |  |
+| `Pipeline Create` | Configurar/editar pipeline |  | x |  |  |  |
+| `Pipeline Read` | Ver detalhes do pipeline | x | x | x | x | x |
+| `Pipeline Write` | Configurar/editar pipeline |  | x |  |  |  |
+| P`ipeline Modify Approval` | Permite editar a opção Proprietário do negócio |  | x |  |  |  |
+| `Pipeline Modify Managed Deployment` | Permite a edição da opção de supervisão do CSE |  | x |  |  |  |
+| `Pipeline Delete` | Permite a exclusão do pipeline |  | x |  |  |  |
+| `Step Read` | Ver os resultados das métricas de qualidade da etapa | x | x | x | x | x |
+| `Generate Personal Access Token` | Acessar Git |  | x |  | x |  |
 
 <!-- CQDOC-22080 | Download log files  |  |  | x |  | x |  | -->
 

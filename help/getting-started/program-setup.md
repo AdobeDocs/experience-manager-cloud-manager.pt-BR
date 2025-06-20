@@ -2,10 +2,10 @@
 title: Configuração do programa
 description: Após a integração, o proprietário da empresa precisa fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -40,7 +40,7 @@ Siga estas etapas para configurar o programa e definir KPIs.
 
    ![Definição de KPIs](/help/assets/Setup_Program-KPIs.png)
 
-1. Na guia **Provisionamento**, é possível definir as opções de dimensionamento sob demanda para seus ambientes, se o dimensionamento automático estiver habilitado para o seu programa.
+1. Na guia **Provisionamento**, é possível definir as opções de Dimensionamento sob demanda para seus ambientes, se o dimensionamento automático estiver habilitado para o seu programa.
 
    O dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas de clientes.
 
@@ -84,7 +84,7 @@ Use a barra de ações para alternar para outro programa, editar o programa atua
 
 Os KPIs de sites são medidos em testes executados no ambiente de preparo. Normalmente, esses KPIs são dimensionados para baixo para se ajustarem aos recursos do ambiente de preparo.
 
-Por exemplo, um usuário que espera uma média de 1000 visualizações de página por minuto em seu ambiente de produção e tem quatro servidores de Dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores de Dispatcher/publicação.
+Por exemplo, um usuário que espera uma média de 1000 visualizações de página por minuto em seu ambiente de produção e tem quatro servidores de Dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores do Dispatcher/Publish.
 
 O teste de desempenho do Assets envolve uploads repetidos de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e várias métricas no nível do sistema são medidos durante o teste. 
 
@@ -92,4 +92,4 @@ Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront
 
 ## Vídeo de visão geral {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/34268?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)

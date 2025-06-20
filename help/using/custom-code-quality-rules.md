@@ -2,10 +2,10 @@
 title: Regras de qualidade do código personalizado
 description: Descubra as especificidades das regras de qualidade de código personalizado executadas pelo Cloud Manager durante os testes de qualidade. Essas regras são baseadas nas práticas recomendadas pela engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 54987d6ccd8c31dab677d90b40466c458743f936
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '3644'
-ht-degree: 96%
+source-wordcount: '3636'
+ht-degree: 95%
 
 ---
 
@@ -227,7 +227,7 @@ public void orDoThis(Session session) throws Exception {
 * **Severidade**: Alta
 * **Desde**: Versão 2018.4.0
 
-Conforme descrito na [documentação do Sling](https://sling.apache.org/documentation/the-sling-engine/servlets.html), vincular os servlets por caminhos não é recomendado. Os servlets vinculados a caminhos não podem usar os controles de acesso JCR padrão e, como resultado disso, exigem maior rigor de segurança. Em vez de usar servlets vinculados a caminhos, é recomendado criar nós no repositório e registrar os servlets por tipo de recurso.
+Conforme descrito na [Documentação do Sling](https://sling.apache.org/documentation/the-sling-engine/servlets.html), não é recomendado vincular servlets por caminhos. Os servlets vinculados a caminhos não podem usar os controles de acesso JCR padrão e, como resultado disso, exigem maior rigor de segurança. Em vez de usar servlets vinculados a caminhos, é recomendado criar nós no repositório e registrar os servlets por tipo de recurso.
 
 #### Código não compatível  {#non-compliant-code-5}
 
@@ -475,7 +475,7 @@ public void doThis() {
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-Caminhos que começam com `/libs` e `/apps` geralmente não devem ser codificados. Normalmente, esses caminhos são armazenados em relação ao caminho de pesquisa do Sling, que tem como padrão `/libs,/apps`. O uso do caminho absoluto pode gerar defeitos sutis que só aparecerão posteriormente no ciclo de vida do projeto.
+Caminhos que começam com `/libs` e `/apps` geralmente não devem ser codificados. Normalmente, esses caminhos são armazenados em relação ao caminho de pesquisa `Sling`, que tem como padrão `/libs,/apps`. O uso do caminho absoluto pode gerar defeitos sutis que só aparecerão posteriormente no ciclo de vida do projeto.
 
 #### Código não compatível  {#non-compliant-code-13}
 
@@ -500,7 +500,7 @@ public void doThis(Resource resource) {
 * **Severidade**: Baixa
 * **Desde**: Versão 2020.5.0
 
-Não use o Sling Scheduler para tarefas que exigem uma execução garantida. Os processos agendados no Sling têm execução garantida e são mais adequados para ambientes clusterizados e não clusterizados.
+Não use o Sling Scheduler para tarefas que exigem execução garantida. Os processos agendados no Sling têm execução garantida e são mais adequados para ambientes clusterizados e não clusterizados.
 
 Consulte a [documentação sobre manuseio de processos e eventos do Apache Sling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) para saber mais sobre como os processos do Sling são tratados em ambientes clusterizados.
 
@@ -908,8 +908,7 @@ O AEM Cloud Service proíbe a criação de definições de indexação que conte
 * **Severidade**: Alta
 * **Desde**: versão 2025.4.0
 
-O uso do modo &quot;substituição&quot; no file vault não é permitido para caminhos abaixo de /content; ele não deve ser usado para caminhos abaixo de /etc e /var.
-O modo &quot;substituir&quot; substituirá todo o conteúdo já existente no repositório pelo fornecido no pacote de conteúdo, e os pacotes que acionam essa ação não devem fazer parte dos pacotes implantados pelo Cloud Manager.
+O uso do modo &quot;substituição&quot; no cofre de arquivos não é permitido para caminhos abaixo de `/content`; ele não deve ser usado para caminhos abaixo de `/etc` e `/var.`. O modo &quot;substituir&quot; substitui o conteúdo do repositório existente pelo conteúdo que vem do pacote. Os pacotes que acionam essa ação não devem ser incluídos nesses pacotes implantados por meio do Cloud Manager.
 
 ## Ferramenta de otimização do Dispatcher {#dispatcher-optimization-tool-rules}
 

@@ -2,10 +2,10 @@
 title: Permissões personalizadas
 description: Saiba como usar permissões personalizadas para criar novos perfis de permissão personalizados com permissões configuráveis e restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1416'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '1373'
+ht-degree: 98%
 
 ---
 
@@ -111,23 +111,23 @@ Consulte a seção **Adicionar usuários e grupos de usuários a um perfil de pr
 As seguintes permissões estão disponíveis para criar perfis personalizados.
 
 | Permissão | Descrição |
-|---|---|
-| Acesso ao programa | Permitir que usuários acessem programas |
-| Editar programa | Permitir que usuários editem programas |
-| Criação de pipeline | Permitir que usuários criem novos pipelines |
-| Exclusão de pipeline | Permitir que usuários excluam pipelines |
-| Edição de pipeline | Permitir que usuários editem pipelines |
-| Aprovar e rejeitar implantações de produção | Permitir que usuários aprovem ou rejeitem uma etapa de implantação de produção |
-| Cancelamento de execuções de pipeline | Permitir que usuários cancelem execuções de pipeline |
-| Iniciar execuções de pipeline | Permitir que usuários iniciem novas execuções de pipeline |
-| Ignorar e rejeitar falhas de métrica importantes | Permitir que usuários ignorem ou rejeitem falhas de métrica importantes |
-| Programação de implantações de produção | Permitir que usuários programem uma etapa de implantação de produção |
-| Acesso às informações do repositório | Permitir que os usuários acessem as informações do repositório e gerem uma senha de acesso |
-| Criar repositório | Permitir que usuários criem novos repositórios Git |
-| Exclusão de repositório | Permitir que usuários excluam repositórios Git |
-| Edição de repositório | Permitir que os usuários editem repositórios Git |
-| Geração de códigos do repositório | Permitir que usuários gerem projetos a partir do arquétipo |
-| Gerenciamento de cópias de conteúdo | Permitir que usuários gerenciem operações de cópia do conteúdo |
+| --- | --- |
+| `Program Access` | Permitir que usuários acessem programas |
+| `Program Edit` | Permitir que usuários editem programas |
+| `Pipeline Create` | Permitir que usuários criem novos pipelines |
+| `Pipeline Delete` | Permitir que usuários excluam pipelines |
+| `Pipeline Edit` | Permitir que usuários editem pipelines |
+| `Production Deployments Approve/Reject` | Permitir que usuários aprovem ou rejeitem uma etapa de implantação de produção |
+| `Pipeline Executions Cancel` | Permitir que usuários cancelem execuções de pipeline |
+| `Pipeline Executions Start` | Permitir que usuários iniciem novas execuções de pipeline |
+| `Override/Reject Important Metric Failures` | Permitir que usuários ignorem ou rejeitem falhas de métrica importantes |
+| `Production Deployments Schedule` | Permitir que usuários programem uma etapa de implantação de produção |
+| `Repository Info Access` | Permitir que os usuários acessem as informações do repositório e gerem uma senha de acesso |
+| `Repository Create` | Permitir que usuários criem novos repositórios Git |
+| `Repository Delete` | Permitir que usuários excluam repositórios Git |
+| `Repository Edit` | Permitir que os usuários editem repositórios Git |
+| `Repository Code Generate` | Permitir que usuários gerem projetos a partir do arquétipo |
+| `Content Copy Manage` | Permitir que usuários gerenciem operações de cópia do conteúdo |
 
 ### Permissões no nível da organização {#organization-level}
 
@@ -142,7 +142,7 @@ Consulte o documento [Repositório de código-fonte](/help/requirements/source-c
 Os termos a seguir são usados na criação e no gerenciamento de permissões personalizadas e funções predefinidas.
 
 | Termo | Descrição |
-|---|---|
+| --- | --- |
 | Permissões predefinidas | Funções predefinidas, como **Proprietário da empresa**, **Gerente de implantação** etc. para controlar vários recursos do Cloud Manager. Para mais detalhes sobre funções predefinidas, consulte [Permissões baseadas em funções](/help/requirements/role-based-permissions.md). |
 | Permissões personalizadas | Recursos do Cloud Manager que permitem que os usuários criem perfis de permissão para definir funções de controle dos recursos compatíveis do Cloud Manager |
 | Perfil de permissão | Criado no Admin Console para gerenciar permissões configuráveis que são aplicáveis a usuários que fazem parte do perfil de permissão |
@@ -152,11 +152,11 @@ Os termos a seguir são usados na criação e no gerenciamento de permissões pe
 Os itens de permissão referem-se ao escopo de aplicação das permissões. Normalmente, é um dos seguintes.
 
 | Tipo de item de permissão | Exemplo | Descrição |
-|---|---|---|
+| --- | --- | --- |
 | Organização | organização:empresaA | Todos os recursos aplicáveis de uma organização. Um recurso pode ser um programa, ambiente ou pipeline. Se o usuário adicionar uma organização para qualquer permissão, todos os novos recursos dessa organização também possuirão essa permissão. |
-| Programa | Programa A | Todos os recursos aplicáveis de um programa |
-| Ambiente | Programa A : ambiente | Aplicável em um ambiente específico |
-| Pipeline | Programa A : pipeline | Aplicável em um pipeline específico |
+| Programa | Programa A | Todos os recursos aplicáveis de um programa. |
+| Ambiente | Programa A : ambiente | Aplicável em um ambiente específico. |
+| Pipeline | Programa A : pipeline | Aplicável em um pipeline específico. |
 
 ## Limitações {#limitations}
 

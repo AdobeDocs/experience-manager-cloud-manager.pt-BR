@@ -2,10 +2,10 @@
 title: O ambiente de criação
 description: Saiba mais sobre o ambiente de criação especializado no qual os usuários do Cloud Manager criam e testam seus códigos.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1263'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '1262'
+ht-degree: 97%
 
 ---
 
@@ -33,7 +33,7 @@ Os ambientes de criação do Cloud Manager têm os atributos a seguir.
    * `graphicsmagick`
 * É possível instalar outros pacotes no momento da criação, conforme descrito na seção [Instalação de pacotes de sistema adicionais](#installing-additional-system-packages).
 * Cada compilação é criada em um ambiente limpo. O container da build não mantém nenhum estado entre as execuções.
-* O Maven é sempre executado com estes três comandos:
+* O Maven é executado com estes três comandos:
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
@@ -117,7 +117,7 @@ As combinações de fornecedor/versão disponíveis no momento são:
 
 Também é possível selecionar o Oracle 8 ou Oracle 11 como o JDK para toda a execução do Maven. Diferentemente das opções de conjuntos de ferramentas, essa definição altera o JDK usado em todos os plug-ins, a menos que a configuração de conjuntos de ferramentas também esteja definida; neste caso, essa configuração ainda será aplicada aos plug-ins Maven com reconhecimento de conjuntos de ferramentas. Como resultado, a verificação e a implementação da versão do Java usando o [plug-in Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) será bem-sucedida.
 
-Para isso, crie um arquivo chamado `.cloudmanager/java-version` na ramificação do repositório Git usada pelo pipeline. Esse arquivo pode ter o conteúdo `11` ou `8`. Qualquer outro valor é ignorado. Se `11` for especificado, o Oracle 11 será usado e a variável de ambiente `JAVA_HOME` será definida como `/usr/lib/jvm/jdk-11.0.22`. Se `8` for especificado, o Oracle 8 será usado e a variável de ambiente `JAVA_HOME` será definida como `/usr/lib/jvm/jdk1.8.0_401`.
+Para isso, crie um arquivo chamado `.cloudmanager/java-version` na ramificação do repositório Git usada pelo pipeline. Esse arquivo pode ter o conteúdo `11` ou `8`. Qualquer outro valor é ignorado. Se `11` for especificado, o sistema usará o Oracle 11 e definirá a variável de ambiente `JAVA_HOME` como `/usr/lib/jvm/jdk-11.0.22`. Se `8` for especificado, o sistema usará o Oracle 8 e definirá a variável de ambiente `JAVA_HOME` como `/usr/lib/jvm/jdk1.8.0_401`.
 
 ## Variáveis de ambiente {#environment-variables}
 
@@ -149,7 +149,7 @@ As variáveis e os segredos comuns do ambiente podem ser usados nos ambientes de
 
 #### Dispatcher {#dispatcher}
 
-Somente variáveis de ambiente normais podem ser usadas com o [Dispatcher](https://experienceleague.adobe.com/br/docs/experience-manager-dispatcher/using/dispatcher). Não é possível usar segredos.
+Somente variáveis de ambiente normais podem ser usadas com o [Dispatcher](https://experienceleague.adobe.com/pt-br/docs/experience-manager-dispatcher/using/dispatcher). Não é possível usar segredos.
 
 No entanto, as variáveis de ambiente não podem ser usadas em diretivas `IfDefine`.
 

@@ -3,9 +3,9 @@ title: Notas de versão do Cloud Manager 2025.6.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.5.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 38d398caf2323b603afd293aa9152308fefd323f
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '556'
 ht-degree: 58%
 
 ---
@@ -73,7 +73,7 @@ Se tiver interesse em testar esse novo recurso e compartilhar o seu feedback, en
 
 #### Gerenciar tokens de acesso{#access-tokens}
 
-Use o recurso **Gerenciar Tokens de Acesso**, juntamente com o BYOG, para exibir, renomear e excluir tokens de acesso associados a repositórios externos do Bring Your Own Git, como GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
+Use **Gerenciar tokens de acesso** com BYOG para exibir, renomear e excluir tokens de acesso associados a repositórios externos do Bring Your Own Git, como GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
 
 Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
 
