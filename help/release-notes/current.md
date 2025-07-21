@@ -3,9 +3,9 @@ title: Notas de versão do Cloud Manager 2025.7.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.7.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 106caded8056a8a667b6c702b573566f9358f401
+source-git-commit: a1f023b8ecc6fcae97832c5f3fad6bb8ae79ced1
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '528'
 ht-degree: 62%
 
 ---
@@ -48,9 +48,9 @@ A próxima versão está planejada para sexta-feira, 7 de agosto de 2025.
   Consulte [Marcar favoritos do pipeline](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
-## Programa de adoção antecipada {#beta-program}
+## Programas do Alpha/Beta {#beta-program}
 
-Participe dos programas alfa e beta da Cloud Manager para obter acesso antecipado exclusivo aos recursos futuros antes de seu lançamento geral.
+Participe dos programas alfa e beta da Cloud Manager para obter acesso exclusivo aos recursos futuros antes do lançamento geral.
 
 As seguintes oportunidades estão disponíveis no momento:
 
