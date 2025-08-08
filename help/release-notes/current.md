@@ -3,10 +3,10 @@ title: Notas de versão do Cloud Manager 2025.8.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.8.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 73a094f47f518e2782ac96357e1adc4e923a0b63
+source-git-commit: cba5f331d2b4093822dce4470147966e2cac15b7
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 45%
+source-wordcount: '469'
+ht-degree: 31%
 
 ---
 
@@ -81,27 +81,6 @@ Use **Gerenciar Tokens de Acesso** no Cloud Manager para exibir, renomear e excl
 Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.md).
 
 Se você estiver interessado em testar este novo recurso e compartilhar seus comentários, envie um email para [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) com seu endereço de email associado à sua Adobe ID.
-
-
-
-
-
-
-
-
-O recurso **Traga seu próprio Git** (BYOG) foi expandido para incluir suporte para repositórios externos, como GitLab e Bitbucket. Esse novo suporte é uma adição ao suporte já existente para repositórios GitHub privados e empresariais. Ao adicionar esses novos repositórios, também é possível vinculá-los diretamente aos seus pipelines. Você pode hospedar esses repositórios em plataformas de nuvem pública ou em sua infraestrutura ou nuvem privada. Essa integração também elimina a necessidade de sincronização constante do código com o repositório da Adobe e oferece a capacidade de validar solicitações de pull antes de mesclá-las em uma ramificação principal.
-
-Os pipelines que usam repositórios externos (exceto os hospedados pelo GitHub) e o **Acionador de implantação** definidos como **Sobre alterações do Git** agora são iniciados automaticamente.
-
-Consulte [Adicionar repositórios externos no Cloud Manager](/help/managing-code/external-repositories.md).
-
-![Caixa de diálogo Adicionar repositório](/help/release-notes/assets/repositories-add-release-notes.png)
-
->[!NOTE]
->
->Atualmente, as verificações de qualidade do código de solicitação de pull prontas para uso são exclusivas de repositórios hospedados no GitHub, mas uma atualização para estender essa funcionalidade a outros fornecedores Git está em andamento.
-
-<!-- If you are interested in testing this new feature and sharing your feedback, send an email to [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) from your email address associated with your Adobe ID. Be sure to include which Git platform you want to use and whether you are on a private/public or enterprise repository structure. -->
 
 #### Gerenciar tokens de acesso{#access-tokens}
 
