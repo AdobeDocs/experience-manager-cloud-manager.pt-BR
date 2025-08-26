@@ -3,7 +3,7 @@ title: Notas de versão do Cloud Manager 2025.8.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.8.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: b64b8529e4c6072c9bcb7438dc2d89098d29115d
+source-git-commit: b34fe26f8c9a2d59a7df3d03717f302fe4456352
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 30%
@@ -88,7 +88,7 @@ Consulte [Gerenciar Tokens de Acesso](/help/managing-code/manage-access-tokens.m
 
 ## Correções de erros {#bug-fixes}
 
-Não há correções de erros significativas na versão de julho do Cloud Manager.
+Não há correções de erros significativas na versão de agosto do Cloud Manager.
 
 <!--
 Known Issues {#known-issues}
