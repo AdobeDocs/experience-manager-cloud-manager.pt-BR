@@ -52,7 +52,7 @@ O primeiro é o cabeçalho do Cloud Manager. O cabeçalho permanece à medida qu
 | 2 | Adobe Cloud Manager | Clique para abrir o console **Meus Programas** do Cloud Manager, não importa onde você esteja no Cloud Manager. |
 | 3 | Organização selecionada | O seletor de organização exibe a organização que você está utilizando no momento (neste exemplo, Foundation Internal). Clique em para alternar para outra organização se a Adobe ID estiver associada a várias organizações. |
 | 4 | Ícone de feedback | Clique em para fornecer feedback à Adobe sobre o Cloud Manager. |
-| 5 | Ícone do Assistente de IA | Oferece uma interface conversacional projetada para simplificar a busca de respostas para suas dúvidas relacionadas ao AEM. Consulte o [Assistente de IA](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/ai-assistant/ai-assistant-in-aem) |
+| 5 | Ícone do Assistente de IA | Oferece uma interface conversacional projetada para simplificar a busca de respostas para suas dúvidas relacionadas ao AEM. Consulte o [Assistente de IA](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/ai-assistant/ai-assistant-in-aem) |
 | 6 | ![Ícone da ajuda](https://spectrum.adobe.com/static/icons/workflow_18/Smock_HelpOutline_18_N.svg) | Clique em para fornecer acesso rápido aos recursos de aprendizagem e suporte. |
 | 7 | ![Ícone de Campainha](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) | Clique para exibir o número de [notificações](/help/using/notifications.md) incompletas atribuídas atualmente |
 | 8 | ![Ícone de aplicativos](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) | Clique para ir rapidamente entre a página inicial da AEM e as soluções da AEM |
