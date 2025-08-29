@@ -3,9 +3,9 @@ title: Notas de versão do Cloud Manager 2025.8.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2025.8.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: b34fe26f8c9a2d59a7df3d03717f302fe4456352
+source-git-commit: 5df4852716a608c7497e93eef030b4b5bd27d42b
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '475'
 ht-degree: 30%
 
 ---
@@ -35,7 +35,7 @@ A próxima versão está planejada para sexta-feira, 4 de setembro de 2025.
 
   A partir de 19 de agosto de 2025, o Adobe iniciará uma implantação em fases do novo Experience Hub para todos os usuários do Adobe Experience Manager.
 
-  O Experience Hub é um ponto de partida unificado que fornece experiências personalizadas e contextuais para ajudar os usuários a atingirem as metas com mais rapidez. A implantação será concluída até 26 de agosto de 2025, disponibilizando-a para todos os usuários. A nova Experience Hub pode ser acessada diretamente em [experience.adobe.com](https://experience.adobe.com/). Para saber mais, consulte [Adobe Experience Hub](/help/experience-hub.md).
+  O Experience Hub é um ponto de partida unificado que fornece experiências personalizadas e contextuais para ajudar os usuários a atingirem as metas com mais rapidez. A implantação será concluída até 26 de agosto de 2025, disponibilizando-a para todos os usuários. A nova Experience Hub pode ser acessada diretamente em [experience.adobe.com](https://experience.adobe.com/). Para saber mais, consulte [Adobe Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub).
 
 * **Pipelines somente de preparo e somente de produção**
 
