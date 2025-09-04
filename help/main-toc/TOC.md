@@ -7,10 +7,10 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 5df4852716a608c7497e93eef030b4b5bd27d42b
+source-git-commit: 1ae6792f8bc628c3530a63004c3d38f215c72778
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 88%
+source-wordcount: '384'
+ht-degree: 86%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 88%
 # Documentação do Cloud Manager {#content}
 
 + [Cloud Manager para AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Visão geral {#overview}
    + [Principais conceitos](/help/overview/key-concepts.md)
    + [Jornada do usuário](/help/overview/user-journey.md)
@@ -67,7 +67,7 @@ ht-degree: 88%
    + [Adicionar um repositório externo (beta privado)](/help/managing-code/external-repositories.md)
    + [Gerenciar tokens de acesso (beta privado)](/help/managing-code/manage-access-tokens.md)
    + [Suporte ao submódulo Git](/help/managing-code/git-submodules.md)
-   + [Configuração de verificação do GitHub](/help/managing-code/github-check-config.md)
+   + [Verificações de solicitação de pull para repositórios privados](/help/managing-code/github-check-config.md)
    + [Anotações de verificação do GitHub](/help/managing-code/github-annotations.md)
    + [Manuseio da versão do projeto do Maven](/help/managing-code/maven-project-version.md)
    + [Integrar ao Git](/help/managing-code/git-integration.md)
@@ -78,6 +78,7 @@ ht-degree: 88%
 + Notas de versão {#release-notes}
    + [Atual](/help/release-notes/current.md)
    + 2025 {#rn-2025}
+      + [2025.8.0](/help/release-notes/2025/2025-8-0.md)
       + [2025.7.0](/help/release-notes/2025/2025-7-0.md)
       + [2025.6.0](/help/release-notes/2025/2025-6-0.md)
       + [2025.5.0](/help/release-notes/2025/2025-5-0.md)

@@ -1,33 +1,35 @@
 ---
-title: Configuração de verificação do GitHub para repositórios privados
+title: Verificações de solicitação de pull para repositórios privados
 description: Saiba como controlar os pipelines criados automaticamente para validar cada solicitação de pull para um repositório privado.
 exl-id: 29c9e487-e196-411a-8cda-6751b0a56066
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '236'
-ht-degree: 100%
+source-git-commit: 1ae6792f8bc628c3530a63004c3d38f215c72778
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 92%
 
 ---
 
-# Configuração de verificação do GitHub para repositórios privados {#github-check-config}
+# Verificações de solicitação de pull para repositórios privados {#github-check-config}
+
+<!--OLD TITLE THAT I THOUGHT WAS BETTER Check configuration for private repositories -->
 
 Saiba como controlar os pipelines criados automaticamente para validar cada solicitação de pull para um repositório privado.
 
-## Configuração das verificações do GitHub {#configuration}
+## Configuração de verificações de repositório privado {#configuration}
 
 Ao usar [repositórios privados](private-repositories.md#using), um [pipeline de qualidade de código de pilha completa](/help/overview/ci-cd-pipelines.md) será criado automaticamente. Esse pipeline é iniciado a cada atualização de solicitação de pull.
 
 Você pode controlar essas verificações criando um arquivo `.cloudmanager/pr_pipelines.yml` na ramificação padrão do repositório privado.
 
 ```yaml
-github:
+pullRequest:
   shouldDeletePreviousComment: false
 pipelines:
   - type: CI_CD
     template:
       programId: 1234
       pipelineId: 456
-    namePrefix: Full Stack Code Quality Pipeline for PR 
+    namePrefix: Full Stack Code Quality Pipeline for PR
     importantMetricsFailureBehavior: CONTINUE
 ```
 
