@@ -2,7 +2,7 @@
 title: Adicionar repositórios externos no Cloud Manager
 description: Saiba como adicionar um repositório externo no Cloud Manager. O Cloud Manager oferece suporte à integração com repositórios GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 1ae6792f8bc628c3530a63004c3d38f215c72778
+source-git-commit: 76a5cb04514bc1961c8f9008e9bea5d1d6fe1c19
 workflow-type: tm+mt
 source-wordcount: '2453'
 ht-degree: 25%
@@ -318,8 +318,6 @@ Para comentários e comentários sobre a solicitação de pull, o Cloud Manager 
 
 ![Validação de DevOps do Azure de solicitações de pull com webhooks-4](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-4.png)
 
-
->[!ENDTABS]
 
 >[!ENDTABS]
 
