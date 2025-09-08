@@ -2,10 +2,10 @@
 title: Introdução ao Cloud Manager para AMS
 description: Comece aqui para conhecer o Cloud Manager para Adobe Managed Services (AMS) e como ele permite que as organizações gerenciem manualmente o Adobe Experience Manager na nuvem.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
-workflow-type: ht
-source-wordcount: '1256'
-ht-degree: 100%
+source-git-commit: 8f29a06f63b8dc10cb3d28e2f38da1ead84f32f5
+workflow-type: tm+mt
+source-wordcount: '1250'
+ht-degree: 95%
 
 ---
 
@@ -34,26 +34,23 @@ O [!UICONTROL Cloud Manager] para Adobe Experience Manager oferece aos desenvolv
 Com o Cloud Manager, sua equipe de desenvolvimento se beneficia dos seguintes recursos:
 
 * Integração/entrega contínua (CI/CD) de código para reduzir o tempo de comercialização de meses/semanas para dias/horas.
-
 * Para minimizar interrupções, antes de prosseguir para a produção são realizadas inspeções de código, testes de desempenho e validações de segurança com base nas práticas recomendadas.
-
 * Conectividade de API para complementar processos DevOps.
-
 * Dimensionamento automático que detecta de forma inteligente a necessidade de maior capacidade e ativa automaticamente outros segmentos do Dispatcher/publicação.
 
 Essa imagem ilustra o ![fluxo do processo de CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png) usado no [!UICONTROL Cloud Manager].
 
 ## Recursos principais do [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
-Veja a seguir em mais detalhes uma seleção dos principais recursos do Cloud Manager.
+As seções a seguir destacam os principais recursos do Cloud Manager.
 
 ### Interface de autoatendimento {#self-service-interface}
 
-A interface (UI) do [!UICONTROL Cloud Manager] permite acessar e gerenciar facilmente o ambiente de nuvem e o pipeline de CI/CD dos aplicativos do Adobe Experience Manager.
+Para explorar e começar a usar a interface do [!UICONTROL Cloud Manager], consulte [Primeiro logon](/help/getting-started/first-time-login.md).
+
+A interface (UI) do [!UICONTROL Cloud Manager] permite acessar e gerenciar facilmente o ambiente de nuvem e o pipeline de CI/CD dos seus aplicativos da Adobe Experience Manager.
 
 Você define os indicadores principais de desempenho (KPIs) específicos do aplicativo, como o pico de visualizações de página por minuto ou tempo de resposta esperado para o carregamento de uma página. Esses KPIs servem como base para medir o sucesso da implantação. As funções e permissões de diferentes membros da equipe podem ser facilmente definidas. A interface de autoatendimento oferece controle total. Ela também fornece links para recursos sobre práticas recomendadas e acesso a especialistas da Adobe para obter orientações quando necessário.
-
-Para explorar e começar a usar a interface do [!UICONTROL Cloud Manager], consulte [Primeiro logon](/help/getting-started/first-time-login.md).
 
 ### Pipeline de CI/CD {#ci-cd-pipeline}
 
@@ -95,24 +92,24 @@ A implantação azul/verde é uma técnica que reduz o tempo de inatividade e o 
 
 A qualquer momento, apenas um dos ambientes está ativo, com o ambiente ativo atendendo todo o tráfego de produção. Em geral, azul será o ambiente ativo no momento e o verde estará ocioso.
 
-* A implantação azul/verde é um complemento dos pipelines de CI/CD do Cloud Manager, no qual um segundo conjunto de instâncias de publicação e Dispatcher (verde) é criado e usado para implantações. As instâncias verdes são anexadas ao balanceador de carga de produção e as instâncias antigas (azul) são removidas e finalizadas.
+* A implantação azul/verde é um complemento dos pipelines de CI/CD do Cloud Manager, no qual um segundo conjunto de instâncias de publicação e Dispatcher (verde) é criado e usado para implantações. As instâncias verdes são anexadas ao balanceador de carga de produção e as instâncias antigas (azul) são removidas e encerradas.
 * Essa implementação de azul/verde trata as instâncias como transitórias e cada iteração de um pipeline azul/verde cria um novo conjunto de servidores de publicação e do Dispatcher.
 * Um balanceador de carga verde é criado como parte da configuração. Esse balanceador de carga nunca muda e é para ele que você deve apontar seu URL verde ou de “teste”.
 * Durante uma implantação azul/verde, é criada uma réplica exata dos níveis existentes de Dispatcher/publicação.
 
 #### Fluxo de implantação azul/verde {#flow}
 
-Quando a implantação azul/verde está ativada, o fluxo de implantação é diferente do fluxo de implantação padrão do Cloud Service.
+Quando a implantação azul/verde está habilitada, o fluxo de implantação é diferente do fluxo de implantação padrão do Cloud Service.
 
 | Etapa | Implantação azul/verde | Implantação padrão |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Implantação para autor | Implantação para autor |
 | 2 | Pausar para teste | - |
 | 3 | A infraestrutura verde é criada | - |
-| 4 | Implantação para níveis verdes de publicação/dispatcher | Implantação para editor |
+| 4 | Implantação para níveis verdes de publicação/Dispatcher | Implantação para editor |
 | 5 | Pausar para teste (até 24 horas) | - |
 | 6 | A infraestrutura verde é adicionada ao balanceador de carga de produção | - |
-| 7 | A infraestrutura azul é removida do balanceador de carga de produção- |
+| 7 | A infraestrutura azul é removida do balanceador de carga de produção | - |
 | 8 | Pausar para saída final (até 24 horas) | - |
 | 9 | A infraestrutura azul é encerrada automaticamente | - |
 | 10 | Pipeline completo | - |
