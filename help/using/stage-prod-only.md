@@ -2,10 +2,10 @@
 title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 34c0b39d50dd4998cb75cc032d71d24798dee729
+source-git-commit: 92237ea156e3921b5dc55cea3abdecee9d26b14b
 workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 96%
+ht-degree: 94%
 
 ---
 
@@ -103,7 +103,7 @@ Um pipeline somente de preparo é executado quase da mesma maneira que os pipeli
 
 ![Execução de pipeline somente de preparo](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Clicar em **Promover compilação** solicita que você confirme a execução do pipeline somente de preparo relacionado normalmente ou no [modo de emergência](#emergency-mode).
+Clicar em **Promover compilação** solicita que você confirme a execução do pipeline somente de produção relacionado normalmente ou no [modo de emergência](#emergency-mode).
 
 Se não existir um pipeline somente de produção, você será solicitado a criar um.
 
