@@ -119,7 +119,7 @@ Depois de criar perfis de produto, você pode atribuir usuários ou grupos de us
 
 1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique em ![Ícone Adicionar, sinal de adição](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) e selecione os perfis a serem atribuídos ao usuário.
 
-   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
+   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
 
    ![Editar produtos e grupos de usuários](/help/assets/admin-console-edit-products-and-user-groups.png)
 
