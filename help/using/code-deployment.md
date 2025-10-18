@@ -2,10 +2,10 @@
 title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager depois disso.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1637'
-ht-degree: 100%
+source-git-commit: b98e1711f1f98f52977dd6cb4cd2bc834d81a360
+workflow-type: tm+mt
+source-wordcount: '1636'
+ht-degree: 98%
 
 ---
 
@@ -61,10 +61,10 @@ A etapa **Teste de preparo** inclui as seguintes ações:
 A etapa **Implantação de produção** inclui as seguintes ações:
 
 * **Pedido de aprovação**
-   * Essa opção é ativada ao configurar o pipeline.
+   * Essa opção é habilitada ao configurar o pipeline.
    * Com essa opção, você pode agendar a implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
 * **Programar implantação de produção**
-   * Essa opção é ativada ao configurar o pipeline.
+   * Essa opção é habilitada ao configurar o pipeline.
    * A data e a hora agendadas são especificadas no fuso horário do usuário.
      ![Programar implantação](/help/assets/Production_Deployment1.png)
 * **Suporte do CSE** (se estiver habilitado)
@@ -107,7 +107,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
    >
    >Espera-se que os clientes 1-1-1 usem esse recurso.
 
-1. Cada artefato do AEM é implantado em toda instância do AEM por meio de APIs de gerenciamento de pacotes, e as dependências de pacote determinam a ordem da implantação.
+1. Cada artefato do AEM é implantado em toda instância do AEM por meio de APIs de gerenciador de pacotes, com as dependências de pacote determinando a ordem da implantação.
 
    * Para saber mais sobre como você pode usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório. Consulte [Gerenciador de pacotes](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
@@ -120,7 +120,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
    1. O backup das configurações atuais é feito e copiado para um local temporário.
    1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte [Configurações do Dispatcher](/help/getting-started/dispatcher-configurations.md) para mais detalhes. Essa abordagem limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
    1. O artefato é extraído para o diretório `httpd`. Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório Git serão ignoradas no momento da implantação. Esses arquivos são fundamentais para a estrutura do Dispatcher do AMS e não podem ser alterados.
-   1. O Apache executa um teste de configuração. Se nenhum erro for encontrado, o serviço é reiniciado. Se ocorrer um erro, as configurações são restauradas a partir do backup, o serviço é reiniciado e o erro é relatado ao Cloud Manager.
+   1. O Apache executa um teste de configuração. Se nenhum erro for encontrado, o serviço é reiniciado. Se forem encontrados erros, as configurações serão restauradas a partir do backup, o serviço será recarregado e o erro será relatado ao Cloud Manager.
    1. Cada caminho especificado na configuração do pipeline é invalidado ou removido do cache do Dispatcher.
 
    >[!NOTE]
