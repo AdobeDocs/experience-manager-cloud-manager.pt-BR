@@ -18,7 +18,7 @@ ht-degree: 85%
 # Documentação do Cloud Manager {#content}
 
 + [Cloud Manager para AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Visão geral {#overview}
    + [Principais conceitos](/help/overview/key-concepts.md)
    + [Jornada do usuário](/help/overview/user-journey.md)
@@ -61,7 +61,7 @@ ht-degree: 85%
    + [Cópia de conteúdo para consistência do ambiente](/help/using/content-copy.md)
 + Gerenciar código {#managing-code}
    + [Gerenciar repositórios no Cloud Manager](/help/managing-code/managing-repositories.md)
-   + [Informações de acesso do repositório &#x200B;](/help/managing-code/accessing-repositories.md)
+   + [Informações de acesso do repositório ](/help/managing-code/accessing-repositories.md)
    + [Adicionar um repositório da Adobe](/help/managing-code/adobe-repositories.md)
    + [Adicionar um repositório privado](/help/managing-code/private-repositories.md)
    + [Adicionar um repositório externo (beta privado)](/help/managing-code/external-repositories.md)
