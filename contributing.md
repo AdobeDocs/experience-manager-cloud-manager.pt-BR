@@ -1,13 +1,13 @@
 ---
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
-workflow-type: ht
-source-wordcount: '498'
-ht-degree: 100%
+source-git-commit: 23930ee54667561b5f3983056af4406301f28da2
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 92%
 
 ---
-# Contribuição na documentação do Adobe Experience Manager Screens
+# Contribuição na documentação do Adobe Experience Manager Cloud Manager
 
-Agradecemos sua colaboração na documentação do Adobe Experience Manager Screens. A Adobe aceita contribuições de conteúdo de toda a comunidade de leitores(as) e de colegas que trabalham na Adobe.
+Agradecemos sua colaboração com a documentação do Adobe Experience Manager Cloud Manager. A Adobe aceita contribuições de conteúdo de toda a comunidade de leitores(as) e de colegas que trabalham na Adobe.
 
 Este arquivo descreve como você pode contribuir e ressalta as diretrizes que se deve seguir durante esse processo.
 
@@ -44,18 +44,18 @@ Se você vir um problema e souber exatamente como corrigi-lo, considere a criaç
 
 Todas as solicitações de pull devem ter um [Contrato de licença de colaborador ou CLA](https://opensource.adobe.com/cla.html) assinado. O CLA dá permissão à Adobe para redistribuir suas contribuições como parte do projeto. É necessário enviar somente um CLA da Adobe por vez. Se já tiver enviado anteriormente, você pode prosseguir.
 
-### Vídeo de introdução rápido
+### Introdução rápida ao vídeo
 
 Assista ao vídeo a seguir para obter uma visão geral rápida de como criar tópicos e pull requests.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27069)
 
-### Contribuições de funcionários da Adobe
+### Contribuições dos funcionários da Adobe
 
 Caso trabalhe na Adobe e tenha uma contribuição a fazer, use a organização `AdobeDocs` no git corporativo.
 
 A Adobe aprecia qualquer colaboração e analisa sua contribuição se ela for feita no repositório público. No entanto, as solicitações de pull de funcionários(as) da Adobe são mais fáceis de se processar e podem ser aprovadas mais rapidamente no repositório corporativo. Certifique-se de que qualquer informação proprietária seja discutida apenas no repositório corporativo.
 
-## Informações adicionais
+## Mais informações
 
-Consulte o [Manual do colaborador do Adobe Docs](https://experienceleague.adobe.com/br/docs/contributor/contributor-guide/introduction) para obter mais detalhes sobre como usar a plataforma de criação do GitHub.
+Consulte o [Guia de contribuição do Adobe Docs](https://experienceleague.adobe.com/pt-br/docs/contributor/contributor-guide/introduction) para obter mais detalhes sobre como usar a plataforma de criação do GitHub.

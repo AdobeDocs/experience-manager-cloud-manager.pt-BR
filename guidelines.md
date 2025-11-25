@@ -1,8 +1,8 @@
 ---
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+source-git-commit: d8380bf56891af7ce3fe833e209ae8663e4bc6fe
 workflow-type: tm+mt
 source-wordcount: '713'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 # Diretrizes para colaboração na documentação do Adobe Experience Manager
@@ -23,17 +23,17 @@ Embora a Adobe aceite contribuições para a documentação do AEM, sejam na for
 
 As contribuições que não cumprirem esses padrões poderão ser rejeitadas.
 
-### Os casos de uso padrão estão documentados na Adobe.
+### Os casos de uso padrão estão documentados no Adobe
 
 A documentação do AEM abrange casos de uso padrão. Casos de uso que não se enquadrarem no escopo de instalação e de uso padrão do produto não farão parte da documentação do AEM.
 
-### A Adobe geralmente não documenta erros e suas soluções.
+### O Adobe geralmente não documenta bugs e suas soluções
 
 A documentação do AEM abrange casos de uso padrão. Por esse motivo, erros, efeitos causados por erros e soluções alternativas para erros não são documentados.
 
 As exceções a essa regra aplicam-se às notas de versão, nas quais problemas conhecidos podem ser listados com possíveis soluções aprovadas pelo Gerenciamento de produtos.
 
-### As contribuições à documentação não se destinam a responder perguntas técnicas.
+### As contribuições à documentação não se destinam a responder perguntas técnicas
 
 Quaisquer ideias para melhorar a documentação do AEM são bem-vindas como contribuições. No entanto, comentários, tópicos e solicitações de pull devem ser realizados apenas como *contribuições*. Eles não devem envolver perguntas sobre como usar o AEM, implementar o projeto do AEM ou resolver problemas técnicos.
 
@@ -41,7 +41,7 @@ Você pode relatar qualquer dúvida sobre o uso do AEM ou erros técnicos. Use o
 
 ***As contribuições para a documentação do AEM não substituem o atendimento ao cliente da Adobe***, e quaisquer contribuições que busquem respostas a perguntas relacionadas ao suporte serão rejeitadas.
 
-### As contribuições devem mencionar claramente as páginas pertinentes à documentação.
+### As contribuições devem mencionar claramente as páginas de documentação afetadas
 
 Se você criar um problema para sugerir melhorias na documentação, deverá incluir links para as páginas afetadas. Caso crie um tópico por meio de um link **Editar esta página** na documentação, o tópico será criado automaticamente com um link para a página.
 
