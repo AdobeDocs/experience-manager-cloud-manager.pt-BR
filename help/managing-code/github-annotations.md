@@ -2,10 +2,10 @@
 title: Anotações de verificação do GitHub
 description: Saiba como o GitHub verifica PRs anotados em seus repositórios privados para fornecer um feedback útil.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
-source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
-workflow-type: ht
-source-wordcount: '251'
-ht-degree: 100%
+source-git-commit: 75baacd1fd6f36ca1d6ea5c1993516569ab6ef47
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ Saiba como o GitHub verifica PRs anotados em seus repositórios privados para fo
 
 ## Visão geral {#overview}
 
-Se você usa [repositórios privados](private-repositories.md) para seu programa do Cloud Manager, as verificações no GitHub são executadas automaticamente para cada solicitação de pull. Essas verificações são anotadas com informações úteis para ajudar a entender os problemas com seu código o mais rápido possível.
+Se você usa [repositórios privados](private-repositories.md) para seu programa Cloud Manager, o verifica no GitHub é executado automaticamente para cada solicitação de pull. Essas verificações são anotadas com informações úteis para ajudar a entender os problemas com seu código o mais rápido possível.
 
 ![Exemplo de anotações de verificação do GitHub](assets/github-check-annotations.png)
 

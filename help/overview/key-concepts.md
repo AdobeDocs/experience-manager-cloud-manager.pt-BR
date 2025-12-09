@@ -2,10 +2,10 @@
 title: Principais conceitos
 description: Como qualquer ferramenta avançada, o Cloud Manager contém muitos conceitos e termos. Este documento resume alguns dos mais importantes para se começar a usar o Cloud Manager.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
-workflow-type: ht
+source-git-commit: 75baacd1fd6f36ca1d6ea5c1993516569ab6ef47
+workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -42,7 +42,7 @@ Uma instância é um servidor virtual específico que executa a [solução](#sol
 
 ## Organização {#organization}
 
-Uma organização é uma construção da Adobe que representa um cliente corporativo. Uma empresa pode ter várias organizações dependendo de como elas foram provisionadas no Identity Management System (IMS) da Adobe.
+Uma organização é uma construção da Adobe que representa um cliente corporativo. Uma empresa pode ter várias organizações dependendo de como elas são provisionadas no Identity Management System (IMS) da Adobe.
 
 ## Pipeline {#pipeline}
 
