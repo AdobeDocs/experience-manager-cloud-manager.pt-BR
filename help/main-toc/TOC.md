@@ -7,9 +7,9 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: c08c4e4fdfa8927acf1f0bfd1fe346afdc3ce5a3
+source-git-commit: d641d160a338553dab172234c593194a94892139
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '390'
 ht-degree: 85%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 85%
 # Documentação do Cloud Manager {#content}
 
 + [Cloud Manager para AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Visão geral {#overview}
    + [Principais conceitos](/help/overview/key-concepts.md)
    + [Jornada do usuário](/help/overview/user-journey.md)
@@ -61,7 +61,7 @@ ht-degree: 85%
    + [Cópia de conteúdo para consistência do ambiente](/help/using/content-copy.md)
 + Gerenciar código {#managing-code}
    + [Gerenciar repositórios no Cloud Manager](/help/managing-code/managing-repositories.md)
-   + [Informações de acesso do repositório &#x200B;](/help/managing-code/accessing-repositories.md)
+   + [Informações de acesso do repositório ](/help/managing-code/accessing-repositories.md)
    + [Adicionar um repositório da Adobe](/help/managing-code/adobe-repositories.md)
    + [Adicionar um repositório privado](/help/managing-code/private-repositories.md)
    + [Adicionar um repositório externo (beta privado)](/help/managing-code/external-repositories.md)
@@ -78,6 +78,7 @@ ht-degree: 85%
 + Notas de versão {#release-notes}
    + [Atual](/help/release-notes/current.md)
    + 2025 {#rn-2025}
+      + [2025.11.0](/help/release-notes/2025/2025-11-0.md)
       + [2025.10.0](/help/release-notes/2025/2025-10-0.md)
       + [2025.9.0](/help/release-notes/2025/2025-9-0.md)
       + [2025.8.0](/help/release-notes/2025/2025-8-0.md)
