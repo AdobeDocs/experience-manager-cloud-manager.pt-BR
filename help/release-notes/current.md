@@ -3,7 +3,7 @@ title: Notas de versão do Cloud Manager 2026.1.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2026.1.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 19b8efeab20b07bdb71595fbff979ea11d8801c0
+source-git-commit: 6279792f05ec04c82634d255dad7264f6d0cef64
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 21%
@@ -37,7 +37,7 @@ A próxima versão está planejada para sexta-feira, 5 de fevereiro de 2026.
   ![Opção Exibir/Editar variáveis no menu suspenso de um pipeline selecionado](/help/release-notes/assets/view-edit-variables-option.png)
   *Opção Exibir/Editar variáveis no menu suspenso de um pipeline selecionado.*
 
-  ![Caixa de diálogo Configuração de variáveis](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Caixa de diálogo Configuração de variáveis.
+  ![Caixa de diálogo Configuração de Variáveis ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Caixa de diálogo Configuração de Variáveis.*
 
 * **Estabilidade, desempenho e confiabilidade aprimoradas**
 
@@ -52,7 +52,7 @@ As seguintes oportunidades estão disponíveis no momento:
 
 ### Extensibilidade e personalização do Experience Hub {#exp-hub-extensibility}
 
-O [Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub) serve como ponto de entrada para o AEM, personalizado para as necessidades da sua organização. Conte à Adobe sobre suas extensões existentes da interface do usuário do AEM para que elas possam ajudá-lo a ativá-las no Experience Hub com o mínimo de esforço.
+O [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) serve como ponto de entrada para o AEM, personalizado para as necessidades da sua organização. Conte à Adobe sobre suas extensões existentes da interface do usuário do AEM para que elas possam ajudá-lo a ativá-las no Experience Hub com o mínimo de esforço.
 
 ![Diagrama do fluxo de trabalho de extensibilidade e personalização do Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
