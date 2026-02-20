@@ -7,10 +7,10 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 19b8efeab20b07bdb71595fbff979ea11d8801c0
+source-git-commit: 28841719e820e47577b411a4034ebc7a8e1bb556
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 84%
+source-wordcount: '390'
+ht-degree: 85%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 84%
 # Documentação do Cloud Manager {#content}
 
 + [Cloud Manager para AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Visão geral {#overview}
    + [Principais conceitos](/help/overview/key-concepts.md)
    + [Jornada do usuário](/help/overview/user-journey.md)
@@ -61,10 +61,10 @@ ht-degree: 84%
    + [Cópia de conteúdo para consistência do ambiente](/help/using/content-copy.md)
 + Gerenciar código {#managing-code}
    + [Gerenciar repositórios no Cloud Manager](/help/managing-code/managing-repositories.md)
-   + [Informações de acesso do repositório &#x200B;](/help/managing-code/accessing-repositories.md)
+   + [Informações de acesso do repositório ](/help/managing-code/accessing-repositories.md)
    + [Adicionar um repositório da Adobe](/help/managing-code/adobe-repositories.md)
    + [Adicionar um repositório privado](/help/managing-code/private-repositories.md)
-   + [Adicionar um repositório externo (beta privado)](/help/managing-code/external-repositories.md)
+   + [Adicionar um repositório externo](/help/managing-code/external-repositories.md)
    + [Gerenciar tokens de acesso (beta privado)](/help/managing-code/manage-access-tokens.md)
    + [Suporte ao submódulo Git](/help/managing-code/git-submodules.md)
    + [Verificações de solicitação de pull para repositórios privados](/help/managing-code/github-check-config.md)
