@@ -7,10 +7,10 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 8ceaefebdddefb508a4c296c00f053e6b4dfb248
+source-git-commit: 77f5000f0a237dc82e183eb074eddb23e3a2eb44
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 86%
+source-wordcount: '334'
+ht-degree: 85%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 86%
 # Documentação do Cloud Manager {#content}
 
 + [Cloud Manager para AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Visão geral {#overview}
    + [Principais conceitos](/help/overview/key-concepts.md)
    + [Jornada do usuário](/help/overview/user-journey.md)
@@ -61,7 +61,7 @@ ht-degree: 86%
    + [Cópia de conteúdo para consistência do ambiente](/help/using/content-copy.md)
 + Gerenciar código {#managing-code}
    + [Gerenciar repositórios no Cloud Manager](/help/managing-code/managing-repositories.md)
-   + [Informações de acesso do repositório &#x200B;](/help/managing-code/accessing-repositories.md)
+   + [Informações de acesso do repositório](/help/managing-code/accessing-repositories.md)
    + [Adicionar um repositório da Adobe](/help/managing-code/adobe-repositories.md)
    + [Adicionar um repositório privado](/help/managing-code/private-repositories.md)
    + [Adicionar um repositório externo](/help/managing-code/external-repositories.md)
@@ -77,6 +77,9 @@ ht-degree: 86%
    + [Avaliação](/help/product-update-wizard/evaluation.md)
 + Notas de versão {#release-notes}
    + [Atual](/help/release-notes/current.md)
+   + 2026 {#rn-2026}
+      + [2026.2.0](/help/release-notes/2026/2026-2-0.md)
+      + [2026.1.0](/help/release-notes/2026/2026-1-0.md)
    + 2025 {#rn-2025}
       + [2025.12.0](/help/release-notes/2025/2025-12-0.md)
       + [2025.11.0](/help/release-notes/2025/2025-11-0.md)
