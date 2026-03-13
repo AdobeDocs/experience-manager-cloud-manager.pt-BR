@@ -2,10 +2,10 @@
 title: Permissões personalizadas
 description: Saiba como usar permissões personalizadas para criar novos perfis de permissão personalizados com permissões configuráveis e restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '1373'
-ht-degree: 98%
+source-wordcount: '1391'
+ht-degree: 97%
 
 ---
 
@@ -153,7 +153,7 @@ Os itens de permissão referem-se ao escopo de aplicação das permissões. Norm
 
 | Tipo de item de permissão | Exemplo | Descrição |
 | --- | --- | --- |
-| Organização | organização:empresaA | Todos os recursos aplicáveis de uma organização. Um recurso pode ser um programa, ambiente ou pipeline. Se o usuário adicionar uma organização para qualquer permissão, todos os novos recursos dessa organização também possuirão essa permissão. |
+| Organização | organização:companyA | Todos os recursos aplicáveis de uma organização. Um recurso pode ser um programa, ambiente ou pipeline. Se o usuário adicionar uma organização para qualquer permissão, todos os novos recursos dessa organização também possuirão essa permissão. |
 | Programa | Programa A | Todos os recursos aplicáveis de um programa. |
 | Ambiente | Programa A : ambiente | Aplicável em um ambiente específico. |
 | Pipeline | Programa A : pipeline | Aplicável em um pipeline específico. |
@@ -163,7 +163,7 @@ Os itens de permissão referem-se ao escopo de aplicação das permissões. Norm
 Lembre-se das seguintes limitações ao usar permissões personalizadas:
 
 * Um [conjunto limitado de permissões está disponível](#configurable-permissions) para criar perfis personalizados.
-* Recursos (como o programa, ambiente, pipeline etc.) criados no Cloud Manager podem levar até dois minutos para serem exibidos no Admin Console para a configuração de permissões.
+* Recursos como programa, ambiente, pipeline etc. criados no Cloud Manager podem levar até dois minutos para serem exibidos no Admin Console para configuração de permissão.
 * Em situações raras nas quais o serviço de permissões personalizadas não responde, os perfis predefinidos ainda estarão disponíveis, e os usuários desses perfis ainda possuirão o acesso apropriado.
 
 ## Perguntas frequentes {#faq}

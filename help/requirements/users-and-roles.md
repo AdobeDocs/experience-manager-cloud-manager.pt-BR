@@ -2,9 +2,9 @@
 title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários, funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 9ad9af206fafea45f8bbf61b02950de0776b5a9f
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '796'
 ht-degree: 85%
 
 ---
@@ -57,10 +57,12 @@ Um admin deve criar novos perfis de produto no contexto de produto do [!UICONTRO
 
 Crie ou adicione usuários ou grupos a esses perfis de produtos com o Admin Console.
 
-<!-- CQDOC-22790
+<!-- 
+CQDOC-22790
 >[!IMPORTANT]
 >
->Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
+>Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. 
+-->
 
 **Para criar um perfil de produto usando o Admin Console:**
 
@@ -84,10 +86,13 @@ Crie ou adicione usuários ou grupos a esses perfis de produtos com o Admin Cons
    * **Nome de exibição** - O **Nome de exibição** deve ser o valor técnico definido pelo [!UICONTROL Cloud Manager] (consulte a tabela a seguir).
    * **Grupo de permissões** - Você pode escolher um grupo de permissões para o perfil (nem sempre está disponível).
 
-<!-- CQDOC-22790
-      >[!IMPORTANT]
-      >
-      >Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
+<!-- 
+CQDOC-22790
+
+>[!IMPORTANT]
+>
+>Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile.
+-->
 
 ![Criação de um novo perfil](/help/assets/screen_shot_2018-05-04at171819.png)
 
@@ -119,7 +124,7 @@ Depois de criar perfis de produto, você pode atribuir usuários ou grupos de us
 
 1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique em ![Ícone Adicionar, sinal de adição](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) e selecione os perfis a serem atribuídos ao usuário.
 
-   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
+   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
 
    ![Editar produtos e grupos de usuários](/help/assets/admin-console-edit-products-and-user-groups.png)
 

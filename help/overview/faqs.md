@@ -2,9 +2,9 @@
 title: Perguntas frequentes sobre o Cloud Manager
 description: Encontre as respostas para as perguntas mais frequentes sobre o Cloud Manager para clientes do AMS.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: e7e9844b5f06552fc2104584c63935dee7a9fa89
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '762'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,8 @@ Este documento fornece respostas às perguntas mais frequentes sobre o Cloud Man
 Yes. You need to add the `maven-toolchains-plugin` with the correct settings for Java 11.
 
 * This process is documented [here](/help/getting-started/using-the-wizard.md).
-* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). -->
+* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). 
+-->
 
 ## Minha compilação falha com um erro sobre maven-scr-plugin após alternar do Java 8 para o Java 11. O que posso fazer? {#maven-src-plugin}
 
