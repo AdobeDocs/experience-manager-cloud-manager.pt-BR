@@ -37,7 +37,7 @@ A próxima versão está planejada para sexta-feira, 5 de fevereiro de 2026.
   ![Opção Exibir/Editar variáveis no menu suspenso de um pipeline selecionado](/help/release-notes/assets/view-edit-variables-option.png)
   *Opção Exibir/Editar variáveis no menu suspenso de um pipeline selecionado.*
 
-  ![Caixa de diálogo Configuração de Variáveis ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Caixa de diálogo Configuração de Variáveis.*
+  ![Caixa de diálogo Configuração de Variáveis &#x200B;](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Caixa de diálogo Configuração de Variáveis.*
 
 * **Estabilidade, desempenho e confiabilidade aprimoradas**
 
