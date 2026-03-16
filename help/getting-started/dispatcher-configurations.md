@@ -2,10 +2,10 @@
 title: Configurações do Dispatcher
 description: Saiba como implantar arquivos de configuração do Dispatcher usando o Cloud Manager.
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '575'
-ht-degree: 100%
+source-git-commit: 037a296c21adde6f7fa731c71ee4a75cea042780
+workflow-type: tm+mt
+source-wordcount: '595'
+ht-degree: 89%
 
 ---
 
@@ -30,7 +30,7 @@ Siga estas etapas abaixo para concluir a configuração inicial do Dispatcher.
 
 1. Obtenha os arquivos de configuração de produção atuais do seu CSE.
 1. Remova dados específicos do ambiente em código fixo, como o IP do renderizador de publicação, e substitua-os por variáveis.
-1. Defina as variáveis necessárias em pares de valores chave para cada Dispatcher de destino e solicite que o CSE as adicione a `/etc/sysconfig/httpd` em cada instância.
+1. Defina as variáveis necessárias em pares de valores chave para cada Dispatcher de destino e adicione-as à pasta [variáveis](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=en#variables-files-(.vars)) em cada instância.
 1. Teste as configurações atualizadas em seu ambiente de preparo.
 1. Depois de testado, solicite que seu CSE realize a implantação na produção.
 1. Confirme os arquivos no seu repositório Git.
