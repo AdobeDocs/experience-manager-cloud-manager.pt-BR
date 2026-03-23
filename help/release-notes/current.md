@@ -3,10 +3,10 @@ title: Notas de versão do Cloud Manager 2026.3.0
 description: Saiba mais sobre o lançamento do Cloud Manager 2026.3.0 no Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
+source-git-commit: b7e651b72d1943aef69c1c69915d4752a6163931
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 7%
+source-wordcount: '461'
+ht-degree: 6%
 
 ---
 
@@ -30,7 +30,7 @@ A próxima versão planejada é quinta-feira, 2 de abril de 2026.
 ## Novidades {#what-is-new}
 
 * **Suporte para extensibilidade da interface do usuário no AEM Experience Hub**
-O suporte para Extensões de Interface do Usuário no [AEM Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub) agora está habilitado, permitindo que os desenvolvedores estendam a interface com funcionalidades e widgets personalizados criados com o Adobe App Builder.
+O suporte para Extensões de Interface do Usuário no [AEM Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) agora está habilitado, permitindo que os desenvolvedores estendam a interface com funcionalidades e widgets personalizados criados com o Adobe App Builder.
 
   Para saber mais, consulte [AEM Experience Hub](https://developer.adobe.com/uix/docs/services/aem-experience-hub/).
 
@@ -41,7 +41,7 @@ O suporte para Extensões de Interface do Usuário no [AEM Experience Hub](https
   ![Opção Exibir/Editar variáveis no menu suspenso de um pipeline selecionado](/help/release-notes/assets/view-edit-variables-option.png)
   *Opção Exibir/Editar variáveis no menu suspenso de um pipeline selecionado.*
 
-  ![Caixa de diálogo Configuração de Variáveis &#x200B;](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Caixa de diálogo Configuração de Variáveis.*
+  ![Caixa de diálogo Configuração de Variáveis ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Caixa de diálogo Configuração de Variáveis.*
 
 * **Estabilidade, desempenho e confiabilidade aprimoradas**
 
@@ -57,7 +57,7 @@ As seguintes oportunidades estão disponíveis no momento:
 <!--
 ### Experience Hub Extensibility and Customization {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
 
 ![Diagram of Experience Hub extensibility and customization workflow](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
@@ -68,7 +68,7 @@ Interested in the beta? Email [beta_exphubextensibility@adobe.com](mailto:beta_e
 
 ### Criações mais rápidas com cache de módulo {#quick-build-cm-pipelines}
 
-Um novo modelo de build compila apenas os módulos alterados (em vez do repositório inteiro) usando o armazenamento em cache no nível do módulo para reduzir os tempos de compilação. Ela se aplica a pipelines de qualidade de código, pilha completa e somente estágio.
+Um novo modelo de build compila apenas os módulos alterados (em vez do repositório inteiro) usando o armazenamento em cache no nível do módulo para reduzir os tempos de compilação. Ela se aplica aos pipelines de Qualidade de código e Pilha completa.
 
 ![Caixa de diálogo Editar Pipeline de Não Produção mostrando as duas opções de Estratégia de Compilação que são Compilação Completa e Compilação Inteligente](/help/release-notes/assets/non-production-pipeline-edit.png)
 *Caixa de diálogo Editar Pipeline de Não Produção mostrando as duas opções de Estratégia de Compilação que são Compilação Completa e Compilação Inteligente.*
@@ -78,7 +78,9 @@ Na caixa de diálogo **Adicionar/Editar Pipeline**, na guia **Código Source**, 
 * **Compilação Completa** — compila todos os módulos no repositório em cada execução.
 * **Compilação Inteligente** — cria apenas módulos que foram alterados desde a última confirmação, o que reduz o tempo geral de compilação.
 
-Você controla quais pipelines usam a **Compilação inteligente**. Durante a versão beta, essa opção aparece somente para os pipelines **Qualidade do Código** e **Implantação de Desenvolvimento**.
+Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline) e [Sobre o uso do Smart Build em um pipeline de não produção](/help/using/non-production-pipelines.md#about-smart-build).
+
+Você controla quais pipelines usam a **Compilação inteligente**. Durante a versão beta, essa opção aparece somente para os pipelines **Qualidade do código** e **Implantação do código de pilha completa de desenvolvimento**.
 
 Interessado? Envie um email para [beta_quickbuild_cmpipelines@adobe.com](mailto:beta_quickbuild_cmpipelines@adobe.com) com sua ID organizacional e ID do programa da Adobe.
 
