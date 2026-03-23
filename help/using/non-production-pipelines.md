@@ -2,7 +2,7 @@
 title: Adicionar um pipeline de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: eaf3db69bd3cc0a06aafd1b415c5bdb467019c1b
+source-git-commit: 2a022c10ce64bb42d4bffd63bea01de25af0bd41
 workflow-type: tm+mt
 source-wordcount: '1992'
 ht-degree: 27%
@@ -139,7 +139,7 @@ O ganho de desempenho com o uso do Smart Build depende de vários fatores, inclu
 * A frequência e o escopo das alterações de código.
 * A distribuição de dependências entre módulos.
 
-Geralmente, projetos com muitos módulos independentes normalmente veem a maior melhoria.
+Geralmente, projetos com muitos módulos independentes podem ver a maior melhoria.
 
 ### Recusa de cache por módulo{#smart-build-cache-optout}
 
@@ -226,4 +226,4 @@ Depois de configurar o pipeline, você pode implantar seu código. Consulte [Imp
 
 Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/327619?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
