@@ -2,7 +2,7 @@
 title: Adicionar um pipeline de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 2a022c10ce64bb42d4bffd63bea01de25af0bd41
+source-git-commit: ee409c97269a70aa9cf4ee4a39c425e62bc156e0
 workflow-type: tm+mt
 source-wordcount: '1992'
 ht-degree: 27%
@@ -226,4 +226,4 @@ Depois de configurar o pipeline, você pode implantar seu código. Consulte [Imp
 
 Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/327619?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
