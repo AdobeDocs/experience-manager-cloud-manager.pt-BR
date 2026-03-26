@@ -1,27 +1,30 @@
 ---
 solution: Experience Manager, Experience Manager Cloud Manager
+landing-page-name: experience-manager
+landing-page-breadcrumb-title: AEM
 type: Documentation
 cloud: Experience Cloud
-git-repo: https://github.com/AdobeDocs/experience-manager-cloud-manager.pt-BR
+git-repo: https://github.com/AdobeDocs/experience-manager-cloud-manager.en
+index: true
 recommendations: noDisplay
-source-git-commit: 2a25b0482800d4c5428a5595c9699dceed327043
-workflow-type: ht
-source-wordcount: '112'
-ht-degree: 100%
+source-git-commit: e8ef2dd8222d72be43e08e647c390b6ecacb385b
+workflow-type: tm+mt
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
 
 
 # Metadados para uso interno
 
-O arquivo metadata.md inclui metadados de nível de repositório que passam para os arquivos TOC.md do guia do usuário no repositório. Se desejar alterar o conteúdo de metadata.md de qualquer guia do usuário, faça isso em qualquer arquivo TOC.md.
+O arquivo metadata.md inclui metadados de nível de repositório que passam para os arquivos TOC.md do guia do usuário no repositório. Se quiser alterar o conteúdo metadata.md para qualquer guia do usuário, faça isso em qualquer arquivo TOC.md.
 
-| metadados | para que serve |
+| metadados | o que faz |
 |--- |--- |
 | solution-title | Usado no cabeçalho do artigo como link |
-| solution-hub-url | Abre a página de ajuda do hub |
-| solution-icon | Exibe o ícone da solução ao lado do título da solução. Ainda não implementado |
-| getting-started-url | Link para a página de introdução |
-| tutorials-url | Link para tutoriais em vídeo — tutoriais de ajuda ou tutoriais de KT |
-| mini-toc-levels | Determina o número de níveis de cabeçalho exibidos no painel direito. O padrão é 2 |
+| url do hub da solução | Abre a página helpx hub |
+| solution-icon | Exibe um ícone de solução ao lado do título da solução. Ainda não implementado |
+| getting-started-url | Link para a página de introdução ao helpx |
+| url de tutoriais | Link para tutoriais em vídeo — tutoriais do helpx ou tutoriais do KT |
+| minitoc-levels | Determina o número de níveis de cabeçalho exibidos no painel direito. o padrão é 2 |
 | git-repo | Especifica o local do repositório principal para uso interno |
