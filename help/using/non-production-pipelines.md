@@ -2,10 +2,10 @@
 title: Adicionar um pipeline de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: ddbffd1310e0af646c071c81d560fb50abeb01c1
+source-git-commit: 261c4334a514ee2101444e83a559d300bba3d507
 workflow-type: tm+mt
 source-wordcount: '1994'
-ht-degree: 23%
+ht-degree: 22%
 
 ---
 
@@ -17,7 +17,7 @@ Saiba como usar o Cloud Manager para criar e configurar pipelines de não produ�
 
 Ao usar o bloco **Pipelines** no [!UICONTROL Cloud Manager], o **Gerenciador de implantação** pode criar dois tipos diferentes de pipelines.
 
-* **Pipelines de produção** - um pipeline de produção é concebido para fins específicos e é constituído por uma série de etapas orquestradas, com o objetivo de levar o código-fonte até à produção.
+* **Pipelines de produção** - Um pipeline de produção é composto por uma série de etapas orquestradas que têm o objetivo de levar o código-fonte até a produção.
 * **Pipelines de não produção** - um pipeline não relacionado à produção serve principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
 
 Este documento se concentra em pipelines de não produção. Para mais detalhes sobre como configurar pipelines de produção, consulte o documento [Configuração de pipelines de produção](/help/using/production-pipelines.md).
@@ -226,4 +226,4 @@ Depois de configurar o pipeline, você pode implantar seu código. Consulte [Imp
 
 Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/327619?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
