@@ -7,7 +7,7 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 4a012c762d6cb334e31e18c6f5305bdf322fd480
+source-git-commit: 9ef2f45331c0aaf5c619af1151da38278cfc3c5d
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 85%
@@ -53,7 +53,7 @@ ht-degree: 85%
    + [Teste de qualidade do código](/help/using/code-quality-testing.md)
    + [Gerenciamento de ambientes](/help/using/managing-environments.md)
    + [Monitorar ambientes](/help/using/monitoring-environments.md)
-   + [Atualizações de Service Pack para ambientes de desenvolvimento (beta privado)](/help/using/service-packs-environments.md)
+   + {hide-from-toc}[Atualizações de Service Pack para Ambientes de Desenvolvimento (beta privado)](/help/using/service-packs-environments.md)
    + [API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
    + [CLI do Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Notificações](/help/using/notifications.md)
