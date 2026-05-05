@@ -3,9 +3,13 @@ title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários, funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 TQID: https://experienceleague.adobe.com/95vfyk6-SMg7GFaCVWkiaaGObo603DJqvExEgPFrwqw
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
 source-wordcount: 796
@@ -127,7 +131,7 @@ Depois de criar perfis de produto, você pode atribuir usuários ou grupos de us
 
 1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique em ![Ícone Adicionar, sinal de adição](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) e selecione os perfis a serem atribuídos ao usuário.
 
-   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
+   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
 
    ![Editar produtos e grupos de usuários](/help/assets/admin-console-edit-products-and-user-groups.png)
 

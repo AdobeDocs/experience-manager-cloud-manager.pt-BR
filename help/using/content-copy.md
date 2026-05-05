@@ -3,10 +3,15 @@ title: Cópia de conteúdo para consistência do ambiente
 description: A Cópia de conteúdo no Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção do Adobe Experience Manager 6.x hospedados no Adobe Managed Services para ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 TQID: https://experienceleague.adobe.com/ffcf9UNSOp7oIpDZdtLcoFWp-Ww-A1XV3kCDmKqJLSw
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
 source-wordcount: 1452
@@ -54,7 +59,7 @@ Antes que qualquer conteúdo possa ser copiado, um conjunto de conteúdo deve se
 
 1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
-1. No menu do lado esquerdo, na página **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
+1. No menu do lado esquerdo, na página **Serviços**, clique em ![Ícone de caixa &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
 
 1. Próximo ao canto superior direito da página, clique em **Adicionar conjunto de conteúdo**.
 
@@ -102,7 +107,7 @@ Ao editar seu conjunto de conteúdo, talvez seja necessário expandir os caminho
 
 1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
-1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
+1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
 
 1. Na tabela da página **Conjuntos de conteúdo**, clique no ícone de ![Mais](https://spectrum.adobe.com/static/icons/ui_18/More.svg) à direita de um caminho de conteúdo incluído e clique em **Editar** ou **Excluir**.
 
@@ -123,7 +128,7 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 
 1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
-1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
+1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
 
 1. Na tabela da página **Conjuntos de conteúdo**, à direita de um caminho de conteúdo incluído que você deseja copiar, clique no ícone ![Mais](https://spectrum.adobe.com/static/icons/ui_18/More.svg) e em **Copiar conteúdo**.
 
@@ -154,7 +159,7 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 
 1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
-1. No menu do lado esquerdo, em **Serviços**, clique no ![Ícone de Histórico ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) **Atividade de cópia de conteúdo**.
+1. No menu do lado esquerdo, em **Serviços**, clique no ![Ícone de Histórico &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) **Atividade de cópia de conteúdo**.
 
    ![Atividade de cópia de conteúdo](/help/assets/copy-content-activity.png)
 
