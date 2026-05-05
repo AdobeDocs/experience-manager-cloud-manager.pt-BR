@@ -37,7 +37,7 @@ Siga estas etapas abaixo para concluir a configuração inicial do Dispatcher.
 
 1. Obtenha os arquivos de configuração de produção atuais do seu CSE.
 1. Remova dados específicos do ambiente em código fixo, como o IP do renderizador de publicação, e substitua-os por variáveis.
-1. Defina as variáveis necessárias em pares de valores chave para cada Dispatcher de destino e adicione-as à pasta [variáveis](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=en#variables-files-(.vars)) em cada instância.
+1. Defina as variáveis necessárias em pares de valores chave para cada Dispatcher de destino e adicione-as à pasta [variáveis](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=pt-BR#variables-files-(.vars)) em cada instância.
 1. Teste as configurações atualizadas em seu ambiente de preparo.
 1. Depois de testado, solicite que seu CSE realize a implantação na produção.
 1. Confirme os arquivos no seu repositório Git.
