@@ -2,13 +2,26 @@
 title: Pipelines de CI/CD
 description: Saiba mais sobre os pipelines de CI/CD e como eles lidam com implantações em ambientes de preparo e produção no Cloud Manager.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
-source-git-commit: b7e651b72d1943aef69c1c69915d4752a6163931
+TQID: https://experienceleague.adobe.com/BwkZH2MIbXrzSxf0yk9yeDZZIpw7-Ldue-OPQPkWrdg
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+subfeature_v2:
+  - id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: 639
 ht-degree: 81%
 
 ---
-
 
 # Pipelines de CI/CD {#ci-cd-pipeline}
 
@@ -36,7 +49,7 @@ Este diagrama ilustra o que acontece quando uma versão é acionada no [!UICONTR
 | &#x200B;6. Implantação automática de artefatos no preparo do AMS AEM | O artefato de lançamento é implantado no ambiente de preparo. |
 | &#x200B;7. Acionar testes automatizados | O [!UICONTROL Cloud Manager] executa testes de desempenho e segurança no artefato. |
 | &#x200B;8. Implantação do acionador de produção | Após a conclusão dos testes automatizados, o [!UICONTROL Cloud Manager] inicia a implantação para produção. |
-| &#x200B;9. [!UICONTROL O Cloud Manager] obtém o(s) artefato(s) para implantar | O [!UICONTROL Cloud Manager] extrai os artefatos de lançamento armazenados. |
+| &#x200B;9. O [!UICONTROL Cloud Manager] obtém o(s) artefato(s) para implantar | O [!UICONTROL Cloud Manager] extrai os artefatos de lançamento armazenados. |
 | &#x200B;10. Implantar artefatos para produção | Os artefatos de lançamento são implantados no ambiente de produção. |
 
 ### Criações mais rápidas usando o Smart Build {#use=smart-build}

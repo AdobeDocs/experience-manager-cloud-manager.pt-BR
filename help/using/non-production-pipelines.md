@@ -2,9 +2,15 @@
 title: Adicionar um pipeline de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 261c4334a514ee2101444e83a559d300bba3d507
+TQID: https://experienceleague.adobe.com/Dj7SjKdao6RU-cIS7D1AQxg5qpKrJMTcYQJBfiqc-Gg
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: 1999
 ht-degree: 22%
 
 ---
@@ -58,7 +64,7 @@ Depois de configurar um programa e pelo menos um ambiente na interface do usuár
 |  | **Testando** | Visível somente ao editar um pipeline de não produção.<br>A interface do usuário mostra as categorias de teste que o pipeline executa como parte da validação de qualidade do código.<ul><li>**Teste de Código Estático** - Analisa o código quanto a problemas de qualidade e correção.<li>**Teste de carga/desempenho** - Avalia o comportamento relacionado ao desempenho como parte do teste de pipeline.<li>**Teste de segurança** - Verifica o código e a saída do pipeline em busca de problemas relacionados à segurança. |
 | **Opções de implantação** | **Acionador da implantação** | <ul><li>**Manual**: permite iniciar manualmente o pipeline.<li>**Sobre alterações do Git**: inicia o pipeline sempre que confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário. |
 |  | **Comportamento de Falhas de Métricas Importantes** | <ul><li>**Perguntar sempre**: esse comportamento é a configuração padrão e exige intervenção manual em qualquer falha importante.<li>**Falha imediata** - Se selecionado, o pipeline será cancelado sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que rejeita manualmente cada falha.<li>**Continuar imediatamente** - Se selecionado, o pipeline continuará automaticamente sempre que ocorrer uma falha importante. É basicamente semelhante a um usuário que aprova manualmente cada falha.</li></ul> |
-|  | **Aprovar após a caixa de seleção Implantação de Preparo** | Visível somente ao editar um pipeline de não produção.<br>Selecione esta opção para exigir aprovação após a implantação no ambiente de preparo, antes que o pipeline possa continuar. Se essa opção não estiver selecionada, o pipeline continuará com base no comportamento configurado. |
+|  | **Aprovar após a caixa de seleção Implantação de Preparo** | Visível somente ao editar um pipeline de não produção.<br>Selecione esta opção para exigir aprovação após a implantação no ambiente de preparo antes que o pipeline possa continuar. Se essa opção não estiver selecionada, o pipeline continuará com base no comportamento configurado. |
 
 >[!TAB Pipeline de Implantação - Guia Configuração]
 
@@ -69,7 +75,7 @@ Depois de configurar um programa e pelo menos um ambiente na interface do usuár
 |   | **Testando** | Visível somente ao editar um pipeline de não produção.<br>A interface do usuário mostra as categorias de teste que o pipeline executa como parte da validação de qualidade do código.<ul><li>**Teste de Código Estático** - Analisa o código quanto a problemas de qualidade e correção.<li>**Teste de carga/desempenho** - Avalia o comportamento relacionado ao desempenho como parte do teste de pipeline.<li>**Teste de segurança** - Verifica o código e a saída do pipeline em busca de problemas relacionados à segurança.</li></ul> |
 | **Opções de implantação** | **Acionador da implantação** | <ul><li>**Manual**: permite iniciar manualmente o pipeline.<li>**Sobre alterações do Git**: inicia o pipeline sempre que confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário. |
 |   | **Comportamento de Falhas de Métricas Importantes** | <ul><li>**Perguntar sempre** - A configuração padrão e solicita que o usuário decida como proceder quando uma métrica importante falhar.<li>**Falha imediata** - O pipeline é cancelado sempre que uma métrica importante falha. É como emular um usuário que rejeita manualmente cada falha.<li>**Continuar imediatamente** - O pipeline continua automaticamente sempre que uma métrica importante falha. É como emular um usuário que aprova manualmente cada falha.</li></ul> |
-|  | **Aprovar após a caixa de seleção Implantação de Preparo** | Visível somente ao editar um pipeline de não produção.<br>Selecione esta opção para exigir aprovação após a implantação no ambiente de preparo, antes que o pipeline possa continuar. Se essa opção não estiver selecionada, o pipeline continuará com base no comportamento configurado. |
+|  | **Aprovar após a caixa de seleção Implantação de Preparo** | Visível somente ao editar um pipeline de não produção.<br>Selecione esta opção para exigir aprovação após a implantação no ambiente de preparo antes que o pipeline possa continuar. Se essa opção não estiver selecionada, o pipeline continuará com base no comportamento configurado. |
 |  | **Ignorar alterações no Balanceador de Carga** | Selecione esta opção para impedir que o pipeline faça alterações no balanceador de carga durante a implantação. |
 |  | **Configuração do Dispatcher** | O **Gerenciador de Implantação** pode configurar um conjunto de caminhos de conteúdo que são invalidados ou removidos do cache do AEM Dispatcher quando um pipeline é executado. O Cloud Manager executa essas ações de cache como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar o `Dispatcher`, faça o seguinte:<ul><li>Em **PATH**, forneça um caminho de conteúdo que você deseja que o pipeline limpe ou invalide.<li>Em **TIPO**, selecione a ação a ser tomada nesse caminho.<ul><li>**Liberar** - Executa uma exclusão de cache no caminho especificado.</li><li>**Invalidar** - Executa uma invalidação de cache, semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.</li><li>Clique em **Adicionar caminho** para adicionar o caminho especificado. É possível adicionar até 100 caminhos por ambiente.</li></ul> |
 | **Pipeline** | Caixa de seleção **Auditoria de experiência** | Selecione essa opção para incluir uma etapa da Auditoria de experiência no pipeline. Quando ativado, o pipeline inclui a etapa Auditoria de experiência após a guia Código Source. |
@@ -89,7 +95,7 @@ Implanta o aplicativo AEM completo, incluindo o código do aplicativo e, por pad
 | --- | --- | --- |
 | **código Source** | **Repositório** | Na lista suspensa, escolha o repositório Git que o pipeline usa como origem. O Cloud Manager cria código a partir do repositório escolhido aqui. |
 |   | **Ramificação Git** | Na lista suspensa, escolha em qual ramificação o pipeline deve ser criado no repositório selecionado. O padrão é `main`. O pipeline usa a ramificação escolhida como origem para a compilação e a implantação. Se necessário, clique em **Atualizar** para atualizar a lista de ramificações disponíveis para o repositório selecionado. Use esta opção se uma ramificação criada recentemente não aparecer na lista. |
-|   | **Estratégia de compilação** | <ul><li>**Compilação Completa** - Cria todos os módulos no repositório sempre<li>**Compilação Inteligente** do Beta - Compila apenas módulos alterados desde a última confirmação.<br>Saiba mais sobre [como usar a Compilação Inteligente em um pipeline de não produção](#about-smart-build).</li></ol>**Importante**: a Compilação Inteligente está disponível somente para pipelines de Qualidade de Código e pipelines de implantação de Código de Pilha Completa de Desenvolvimento. |
+|   | **Estratégia de compilação** | <ul><li>**Compilação Completa** - Cria todos os módulos no repositório sempre<li>BETA **Compilação Inteligente** - Compila apenas módulos que foram alterados desde a última confirmação.<br>Saiba mais sobre [como usar o Smart Build em um pipeline de não produção](#about-smart-build).</li></ol>**Importante**: a Compilação Inteligente está disponível somente para pipelines de Qualidade de Código e pipelines de implantação de Código de Pilha Completa de Desenvolvimento. |
 |   | **Ignorar a caixa de seleção Configuração da Camada da Web** | Selecione esta opção para ignorar a implantação da configuração no nível da Web em um pipeline de código de Empilhamento completo. Deixe a opção desmarcada para implantar a configuração no nível da Web junto com o código do pipeline. |
 | **Pipeline** | Caixa de seleção **Auditoria de experiência** | Selecione essa opção para incluir uma etapa da Auditoria de experiência no pipeline. Quando ativado, o pipeline inclui a etapa Auditoria de experiência após a guia Código Source. |
 

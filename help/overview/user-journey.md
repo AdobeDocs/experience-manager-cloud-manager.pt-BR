@@ -2,13 +2,20 @@
 title: Jornada do usuário
 description: Saiba mais sobre os diferentes cenários de integração e a introdução ao Cloud Manager.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '532'
+TQID: https://experienceleague.adobe.com/EnNaMZzu5bLUD3Jjsp6ovqFvoFM30ju4FOQJfmySLEk
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 560
 ht-degree: 100%
 
 ---
-
 
 # Jornada do usuário {#user-journey}
 
@@ -65,7 +72,7 @@ Após fazer logon no [!UICONTROL Cloud Manager], você pode começar a usar o pr
 1. Configure o ambiente do repositório de código.
 1. Configure a equipe e funções. As associações de função são atribuídas adicionando o usuário a um perfil do [!UICONTROL Cloud Manager] usando o Admin Console.
 1. Configure as ramificações do código-fonte no repositório Git.
-1. Defina suas metas em termos de KPIs (indicadores principais de desempenho) de carga e desempenho 
+1. Defina suas metas em termos de KPIs (indicadores principais de desempenho) de carga e desempenho
 1. Defina cenários de teste para implantar com sucesso seu código em seus ambientes de preparo e produção depois que todas as verificações de qualidade forem aprovadas.
 
 ## Jornada de ponta a ponta {#end-to-end-journey}

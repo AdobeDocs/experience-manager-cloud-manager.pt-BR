@@ -2,13 +2,27 @@
 title: Teste de qualidade do código
 description: Saiba como o teste de qualidade de código de pipelines funciona e como ele pode melhorar a qualidade de suas implantações.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/gAO8BdTx9-Sq8evIuI3hIaHIUixk-IulQagCI-Jssrc
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '2783'
-ht-degree: 98%
+source-wordcount: 2911
+ht-degree: 97%
 
 ---
-
 
 # Teste de qualidade do código {#code-quality-testing}
 
@@ -31,7 +45,7 @@ Há três portas no pipeline:
 Para cada uma dessas portas, existe uma estrutura em três camadas para os problemas identificados pela porta.
 
 * **Crítico**: problemas que causam uma falha imediata do pipeline.
-* **Importante**: problemas que causam a pausa do pipeline. O(a) gerente de implantação, gerente de projeto ou proprietário da empresa podem ignorar os problemas. Se o fizerem, o pipeline continuará conforme esperado. Alternativamente, essas pessoas podem aceitar os problemas, interrompendo o pipeline com uma falha. O recurso de ignorar falhas importantes está sujeito a um [tempo limite](/help/using/code-deployment.md#timeouts).
+* **Importante**: problemas que causam a pausa do pipeline. O(a) gerente de implantação, gerente de projeto ou proprietário da empresa podem ignorar os problemas. Se o fizerem, o pipeline continuará conforme esperado. Alternativamente, essas pessoas podem aceitar os problemas, interrompendo o pipeline com uma falha. O recurso de ignorar falhas importantes está sujeito a um [tempo-limite](/help/using/code-deployment.md#timeouts).
 * **Informações**: problemas apenas para fins informativos e que não têm impacto na execução do pipeline.
 
 >[!NOTE]
@@ -54,7 +68,7 @@ Você pode baixar a lista completa atual de regras [usando este link](/help/ass
 >
 >A partir de quinta-feira, 13 de fevereiro de 2025 (Cloud Manager 2025.2.0), a qualidade de código do Cloud Manager usará uma versão atualizada do SonarQube 9.9 e uma lista atualizada de regras que você pode [baixar aqui](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
 
-Os resultados do teste de qualidade do código são fornecidos em forma de classificação, conforme resumido neste quadro.
+Os resultados do teste de qualidade do código são fornecidos em forma de classificação, conforme resumido nesta tabela.
 
 | Nome | Definição | Categoria | Limite de falhas |
 | --- | --- | --- | --- |
@@ -64,7 +78,7 @@ Os resultados do teste de qualidade do código são fornecidos em forma de class
 | Abrangência | Definida por uma combinação de abrangências da linha de teste unitária e da condição utilizando a fórmula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = Condições que foram avaliadas como `true` pelo menos uma vez durante a execução dos testes da unidade</li><li>`CF` = Condições que foram avaliadas como `false` pelo menos uma vez durante a execução dos testes da unidade</li><li>`LC` = Linhas abrangidas = lines_to_cover - uncovered_lines</li><li>`B` = número total de condições</li><li>`EL` = número total de linhas executáveis (lines_to_cover)</li></ul> | Importante | &lt; 50% |
 | Testes de unidade ignorados | Número de testes de unidade ignorados | Informações | > 1 |
 | Problemas em aberto | Tipos de problemas gerais - Vulnerabilidades, Erros e Code Smells | Informações | > 0 |
-| Linhas duplicadas | Definido como o número de linhas envolvidas em blocos duplicados. Um bloco de código é considerado duplicado nas condições a seguir.<br>Projetos não Java:<ul><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem estar distribuídos por pelo menos: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras linguagens</li></ul>Projetos Java:<ul></li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>As diferenças no recuo, bem como nos literais de string são ignoradas ao detectar duplicadas. | Informações | > 1% |
+| Linhas duplicadas | Definido como o número de linhas envolvidas em blocos duplicados. Um bloco de código é considerado duplicado sob as seguintes condições.<br>Projetos não Java:<ul><li>Deve haver pelo menos 100 tokens sucessivos e duplicados.</li><li>Esses tokens devem estar distribuídos por pelo menos: </li><li>30 linhas de código para COBOL </li><li>20 linhas de código para ABAP </li><li>10 linhas de código para outras linguagens</li></ul>Projetos Java:<ul></li><li> Deve haver pelo menos 10 declarações sucessivas e duplicadas, independentemente do número de tokens e linhas.</li></ul>As diferenças no recuo, bem como nos literais de string são ignoradas ao detectar duplicadas. | Informações | > 1% |
 | Compatibilidade do Cloud Service | Número de problemas de compatibilidade do Cloud Service identificados | Informações | > 0 |
 
 >[!NOTE]
@@ -139,7 +153,7 @@ A tabela a seguir lista as verificações de integridade.
 | O filtro de solicitação WCM e o filtro de depuração WCM estão desativados. | [Configuração de filtros WCM](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings#configuring) | Importante |
 | O pacote e o servlet WebDAV `Sling` estão configurados adequadamente. | Verificação de integridade do WebDAV | Importante |
 | O servidor da Web está configurado para impedir o clickjacking. | Configuração de servidor da Web | Importante |
-| A replicação não está usando o usuário `admin`. | Reprodução e usuários de transporte | Informações |
+| A replicação não está usando o usuário `admin`. | Replicação e usuários de transporte | Informações |
 
 ## Teste de desempenho {#performance-testing}
 
@@ -160,7 +174,7 @@ Antes do início do período de teste de 30 minutos, o Cloud Manager rastreará 
 * Por padrão, esse processo de rastreamento é limitado a no máximo 5.000 páginas.
 * O número máximo de páginas a serem testadas pode ser substituído pela configuração da [variável de pipeline](/help/getting-started/build-environment.md#pipeline-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES`.
    * Os valores permitidos são `2000` - `7000`.
-* As solicitações do crawler têm um tempo limite fixo de 10 segundos.
+* As solicitações do crawler têm um tempo-limite fixo de 10 segundos.
 
 #### Conjuntos de páginas para teste {#page-sets}
 

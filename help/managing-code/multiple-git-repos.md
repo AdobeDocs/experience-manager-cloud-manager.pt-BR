@@ -2,9 +2,15 @@
 title: Trabalhar com vários repositórios Git
 description: Em vez de trabalhar diretamente com o repositório Git do Cloud Manager, saiba como trabalhar com o seu próprio repositório Git ou vários repositórios Git.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
-workflow-type: ht
-source-wordcount: '738'
+TQID: https://experienceleague.adobe.com/xKzqOfbi12A0POy-C7Gm7-n649DEBX9JP3LfXA5UC3Y
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 743
 ht-degree: 100%
 
 ---
@@ -48,7 +54,7 @@ Por exemplo, um push para uma ramificação no projeto A pode acionar uma ação
 
 Por exemplo, uma alteração na ramificação `main` do projeto A é automaticamente enviada à ramificação `main` no repositório Git do Cloud Manager. Obviamente, pode haver um mapeamento entre ramificações, como quando um push para uma ramificação chamada `dev` no projeto A é enviado a uma ramificação chamada `development` no repositório Git do Cloud Manager. Etapas semelhantes são necessárias para o Projeto B.
 
-Dependendo da estratégia de ramificação e dos fluxos de trabalho, a sincronização pode ser configurada para ramificações diferentes. Se o repositório Git usado não fornecer um conceito semelhante às ações do GitHub, também é possível uma integração por meio do Jenkins (ou semelhante). Nesse caso, um webhook aciona uma tarefa do Jenkins que faz o trabalho.
+Dependendo da estratégia de ramificação e dos fluxos de trabalho, a sincronização pode ser configurada para ramificações diferentes. Se o repositório Git usado não fornecer um conceito semelhante às ações do GitHub, também é possível uma integração por meio do Jenkins (ou semelhante). Nesse caso, um webhook aciona um processo do Jenkins que faz o trabalho.
 
 Siga as etapas abaixo para adicionar uma nova (terceira) fonte ou repositório:
 

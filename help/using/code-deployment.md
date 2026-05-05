@@ -2,13 +2,24 @@
 title: Implantação do código
 description: Saiba como implantar seu código e o que acontece no Cloud Manager depois disso.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: b98e1711f1f98f52977dd6cb4cd2bc834d81a360
+TQID: https://experienceleague.adobe.com/IrL3c1lGfny74kN4ZUxcNjEtHh4GJOrgH36hzbTKJI4
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: 1699
 ht-degree: 98%
 
 ---
-
 
 # Implantação do código {#code-deployment}
 
@@ -80,7 +91,7 @@ Quando a implantação for concluída, o código estará em seu ambiente de dest
 
 As seguintes etapas atingirão o tempo-limite se forem deixadas aguardando o feedback do usuário:
 
-| Etapa | Tempo limite |
+| Etapa | Tempo-limite |
 |--- |--- |
 | Teste de qualidade do código | 7 dias |
 | Teste de segurança | 7 dias |
@@ -207,7 +218,7 @@ Além de estar disponível na interface, [a API do Cloud Manager](https://develo
 Para acionar uma reexecução, uma solicitação `PUT` precisa ser feita para o link HAL `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` no estado da etapa de implantação de produção.
 
 * Se esse link estiver presente, a execução poderá ser reiniciada dessa etapa.
-* Se estiver ausente, a execução não poderá ser reiniciada a partir dessa etapa. 
+* Se estiver ausente, a execução não poderá ser reiniciada a partir dessa etapa.
 
 Esse link só está disponível para a etapa de implantação de produção.
 
