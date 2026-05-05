@@ -2,13 +2,17 @@
 title: Cópia de conteúdo para consistência do ambiente
 description: A Cópia de conteúdo no Cloud Manager permite que os usuários copiem conteúdo mutável sob demanda de ambientes de produção do Adobe Experience Manager 6.x hospedados no Adobe Managed Services para ambientes inferiores para fins de teste.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 84b3366481c2efd497583627eac67046452f6c38
-workflow-type: ht
-source-wordcount: '1321'
-ht-degree: 100%
+TQID: https://experienceleague.adobe.com/ffcf9UNSOp7oIpDZdtLcoFWp-Ww-A1XV3kCDmKqJLSw
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 1452
+ht-degree: 99%
 
 ---
-
 
 # Cópia de conteúdo para consistência do ambiente {#content-copy}
 
@@ -96,7 +100,7 @@ Ao editar seu conjunto de conteúdo, talvez seja necessário expandir os caminho
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
-1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
+1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
 1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
 
@@ -117,7 +121,7 @@ Um ambiente pode estar indisponível para seleção se qualquer uma das seguinte
 
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização e o programa apropriados.
 
-1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
+1. No canto superior esquerdo da página, clique em ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para abrir o menu do lado esquerdo.
 
 1. No menu do lado esquerdo, em **Serviços**, clique em ![Ícone de caixa ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Conjuntos de conteúdo**.
 

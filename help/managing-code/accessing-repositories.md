@@ -2,9 +2,12 @@
 title: Informações de acesso do repositório
 description: Saiba como acessar e gerenciar os repositórios Git gerenciado pela Adobe usando o gerenciamento de conta Git por autoatendimento do Cloud Manager.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
-source-git-commit: 04fbc4a3fdba8b108055d66a4fdb1a31994cb18e
-workflow-type: ht
-source-wordcount: '381'
+TQID: https://experienceleague.adobe.com/S3oIN4DvfYCvKQLGQmFtWlqHcN5Mv9xvoNKjaMnNlm0
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 403
 ht-degree: 100%
 
 ---
@@ -58,6 +61,6 @@ O recurso **Acessar informações do repositório** também está disponível na
 
 ## Revogação de uma senha de acesso {#revoke-password}
 
-É possível revogar uma senha de acesso a qualquer momento. 
+É possível revogar uma senha de acesso a qualquer momento.
 
-Para fazer isso, [crie um tíquete de suporte para esta solicitação](https://experienceleague.adobe.com/pt-br?support-solution=Experience+Manager&amp;support-tab=home#support). O tíquete será tratado com alta prioridade e deverá ser revogado em um dia.
+Para fazer isso, [crie um tíquete de suporte para esta solicitação](https://experienceleague.adobe.com/pt-br?support-solution=Experience+Manager&support-tab=home#support). O tíquete será tratado com alta prioridade e deverá ser revogado em um dia.

@@ -2,13 +2,15 @@
 title: Configurar um projeto
 description: Saiba como configurar o seu projeto para gerenciá-lo e implantá-lo com o Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1395'
+TQID: https://experienceleague.adobe.com/OhaZ2-x6p1b6aF0xHwr2G-RNTYPd15pqHVxKVwv-GDM
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 1430
 ht-degree: 100%
 
 ---
-
 
 # Configurar um projeto {#setting-up-your-project}
 

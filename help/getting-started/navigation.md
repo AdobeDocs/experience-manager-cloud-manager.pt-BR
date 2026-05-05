@@ -2,13 +2,16 @@
 title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como navegar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
+TQID: https://experienceleague.adobe.com/qTv4G7eSJahDusX68iNXzcw64Aq8xxP6SRAtn-SB0t4
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: 1660
 ht-degree: 52%
 
 ---
-
 
 # Navegar na interface do usuário do Cloud Manager {#navigation}
 
@@ -52,11 +55,11 @@ O primeiro é o cabeçalho do Cloud Manager. O cabeçalho permanece à medida qu
 | ![Ícone vermelho e branco do Adobe](/help/getting-started/assets/AdobeLogoWhiteOnRed.svg) Cloud Manager | Clique para abrir o console **Meus Programas** do Cloud Manager, não importa onde você esteja no Cloud Manager. |
 | *`Name of selected organization`* | O seletor de organização exibe a organização na qual você está conectado no momento (neste exemplo, *Foundation Internal*). Clique em para alternar para outra organização se a Adobe ID estiver associada a várias organizações. |
 | ![Ícone de feedback](/help/getting-started/assets/AppComment.svg) Feedback | Clique em para fornecer feedback à Adobe sobre o Cloud Manager. |
-| ![Ícone do Assistente de IA](/help/getting-started/assets/AIChat.svg) | O Assistente de IA oferece uma interface conversacional projetada para simplificar a localização de respostas para suas consultas relacionadas ao AEM. Consulte o [Assistente de IA](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
+| ![Ícone do Assistente de IA](/help/getting-started/assets/AIChat.svg) | O Assistente de IA oferece uma interface conversacional projetada para simplificar a localização de respostas para suas consultas relacionadas ao AEM. Consulte o [Assistente de IA](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
 | ![Ícone da ajuda](https://spectrum.adobe.com/static/icons/workflow_18/Smock_HelpOutline_18_N.svg) | Clique em para fornecer acesso rápido aos recursos de aprendizagem e suporte. |
 | ![Ícone de sino branco](/help/getting-started/assets/Bell.svg) | Clique para exibir o número de [notificações](/help/using/notifications.md) incompletas atribuídas atualmente |
 | ![Ícone de aplicativos](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) | Clique para mover-se rapidamente entre a página inicial da AEM e as soluções da AEM |
-| *`Dynamic Account icon`* | Clique na imagem do usuário para acessar as **Configurações da Conta** e as **Configurações de Programa**, ou para sair.<br>Se você optar por não adicionar uma imagem do usuário, um ícone será atribuído aleatoriamente (como visto na imagem da barra de ferramentas acima). |
+| *`Dynamic Account icon`* | Clique na sua imagem de usuário para acessar as **Configurações da Conta** e as **Configurações do Programa**, ou para sair.<br>Se você optou por não adicionar uma imagem de usuário, um ícone será atribuído aleatoriamente (como visto na imagem da barra de ferramentas acima). |
 
 <!--
 1. The ![Show menu icon, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) icon on the left side of the header is  

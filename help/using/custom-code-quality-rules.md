@@ -2,13 +2,17 @@
 title: Regras de qualidade do código personalizado
 description: Descubra as especificidades das regras de qualidade de código personalizado executadas pelo Cloud Manager durante os testes de qualidade. Essas regras são baseadas nas práticas recomendadas pela engenharia do AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/Iee3iEbblEV7TDJxtYpBH8F6oomtD9EJMPX1SSRGIGA
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '3636'
-ht-degree: 95%
+source-wordcount: 4156
+ht-degree: 91%
 
 ---
-
 
 # Regras de qualidade do código personalizado {#custom-code-quality-rules}
 
@@ -37,7 +41,7 @@ A seção a seguir especifica as regras do SonarQube executadas pelo Cloud Manag
 
 Os métodos `Thread.stop()` e `Thread.interrupt()` podem gerar problemas difíceis de reproduzir e, em alguns casos, vulnerabilidades de segurança. A utilização deve ser rigorosamente monitorizada e validada. Em geral, a transmissão de mensagens é uma forma mais segura de atingir objetivos semelhantes.
 
-#### Código não compatível  {#non-compliant-code}
+#### Código não compatível {#non-compliant-code}
 
 ```java
 public class DontDoThis implements Runnable {
@@ -60,7 +64,7 @@ public class DontDoThis implements Runnable {
 }
 ```
 
-#### Código compatível  {#compliant-code}
+#### Código compatível {#compliant-code}
 
 ```java
 public class DoThis implements Runnable {
@@ -84,7 +88,7 @@ public class DoThis implements Runnable {
 }
 ```
 
-### Não use strings de formatação que possam ser controladas externamente  {#do-not-use-format-strings-which-may-be-externally-controlled}
+### Não use strings de formatação que possam ser controladas externamente {#do-not-use-format-strings-which-may-be-externally-controlled}
 
 * **Chave**: CQRules:CWE-134
 * **Tipo**: Vulnerabilidade
@@ -93,7 +97,7 @@ public class DoThis implements Runnable {
 
 Usar uma string de formatação de uma fonte externa (como um parâmetro de solicitação ou conteúdo gerado pelo usuário) pode expor um aplicativo a ataques de negação de serviço. Há casos em que uma string de formatação pode ser controlada externamente, mas isso somente é permitido de fontes confiáveis.
 
-#### Código não compatível  {#non-compliant-code-1}
+#### Código não compatível {#non-compliant-code-1}
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -103,16 +107,16 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-### As solicitações HTTP devem sempre ter um tempo limite de soquete e conexão {#http-requests-should-always-have-socket-and-connect-timeouts}
+### As solicitações HTTP devem sempre ter um tempo-limite de soquete e conexão {#http-requests-should-always-have-socket-and-connect-timeouts}
 
 * **Chave**: CQRules:ConnectionTimeoutMechanism
 * **Tipo**: Erro
 * **Severidade**: Crítica
 * **Desde**: Versão 2018.6.0
 
-Ao executar solicitações HTTP de dentro de um aplicativo do AEM, é essencial garantir que os tempos limite sejam configurados adequadamente para evitar um consumo desnecessário de threads. Infelizmente, o cliente HTTP padrão do Java™, `java.net.HttpUrlConnection`, e o cliente Apache HTTP Components amplamente usado não têm um tempo limite padrão. Portanto, é necessário configurar os tempos limite explicitamente. Como prática recomendada, essas ocorrências de tempo limite não devem exceder 60 segundos.
+Ao executar solicitações HTTP de dentro de um aplicativo do AEM, é essencial garantir que os tempos limite sejam configurados adequadamente para evitar um consumo desnecessário de threads. Infelizmente, o cliente HTTP padrão do Java™, `java.net.HttpUrlConnection`, e o cliente Apache HTTP Components amplamente usado não têm um tempo-limite padrão. Portanto, é necessário configurar os tempos limite explicitamente. Como prática recomendada, essas ocorrências de tempo-limite não devem exceder 60 segundos.
 
-#### Código não compatível  {#non-compliant-code-2}
+#### Código não compatível {#non-compliant-code-2}
 
 ```java
 @Reference
@@ -141,7 +145,7 @@ public void dontDoThisEither() {
 }
 ```
 
-#### Código compatível  {#compliant-code-1}
+#### Código compatível {#compliant-code-1}
 
 ```java
 @Reference
@@ -189,7 +193,7 @@ Objetos `ResourceResolver` obtidos do `ResourceResolverFactory` consumem recurso
 
 Um equívoco comum é achar que não se deve fechar explicitamente os objetos `ResourceResolver` criados em uma sessão JCR existente. Outro equívoco é pensar que fechar esses objetos fechará a sessão JCR subjacente. Não é isso o que ocorre. Independentemente de como um `ResourceResolver` foi aberto, deve-se fechá-lo quando não estiver mais em uso. Como o `ResourceResolver` implementa a interface `Closeable`, também é possível usar a sintaxe `try-with-resources` em vez de chamar explicitamente `close()`.
 
-#### Código não compatível  {#non-compliant-code-4}
+#### Código não compatível {#non-compliant-code-4}
 
 ```java
 public void dontDoThis(Session session) throws Exception {
@@ -198,7 +202,7 @@ public void dontDoThis(Session session) throws Exception {
 }
 ```
 
-#### Código compatível  {#compliant-code-2}
+#### Código compatível {#compliant-code-2}
 
 ```java
 public void doThis(Session session) throws Exception {
@@ -229,7 +233,7 @@ public void orDoThis(Session session) throws Exception {
 
 Conforme descrito na [Documentação do Sling](https://sling.apache.org/documentation/the-sling-engine/servlets.html), não é recomendado vincular servlets por caminhos. Os servlets vinculados a caminhos não podem usar os controles de acesso JCR padrão e, como resultado disso, exigem maior rigor de segurança. Em vez de usar servlets vinculados a caminhos, é recomendado criar nós no repositório e registrar os servlets por tipo de recurso.
 
-#### Código não compatível  {#non-compliant-code-5}
+#### Código não compatível {#non-compliant-code-5}
 
 ```java
 @Component(property = {
@@ -249,7 +253,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 
 Em geral, uma exceção deve ser registrada exatamente uma vez. O registro múltiplo de exceções pode causar confusão porque não deixa claro quantas vezes uma exceção ocorreu. O hábito mais comum que resulta nisso é registrar e emitir uma exceção de captura.
 
-#### Código não compatível  {#non-compliant-code-6}
+#### Código não compatível {#non-compliant-code-6}
 
 ```java
 public void dontDoThis() throws Exception {
@@ -262,7 +266,7 @@ public void dontDoThis() throws Exception {
 }
 ```
 
-#### Código compatível  {#compliant-code-3}
+#### Código compatível {#compliant-code-3}
 
 ```java
 public void doThis() {
@@ -285,13 +289,13 @@ public void orDoThis() throws MyCustomException {
 ### Evite declarações de log imediatamente seguidas por instruções de emissão {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
 * **Chave**: CQRules:CQBP-44---ConsecutivelyLogAndThrow
-* **Tipo**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-Outro padrão comum a ser evitado é registrar uma mensagem e imediatamente depois lançar uma exceção. Isso geralmente indica que a mensagem de exceção acabará duplicada nos arquivos de log. 
+Outro padrão comum a ser evitado é registrar uma mensagem e imediatamente depois lançar uma exceção. Isso geralmente indica que a mensagem de exceção acabará duplicada nos arquivos de log.
 
-#### Código não compatível  {#non-compliant-code-7}
+#### Código não compatível {#non-compliant-code-7}
 
 ```java
 public void dontDoThis() throws Exception {
@@ -300,7 +304,7 @@ public void dontDoThis() throws Exception {
 }
 ```
 
-#### Código compatível  {#compliant-code-4}
+#### Código compatível {#compliant-code-4}
 
 ```java
 public void doThis() throws Exception {
@@ -320,7 +324,7 @@ Em geral, o nível de log INFO deve ser usado para demarcar ações importantes 
 >
 >Esse fluxo de trabalho não se aplica ao registro de access.log-type para cada solicitação.
 
-#### Código não compatível  {#non-compliant-code-8}
+#### Código não compatível {#non-compliant-code-8}
 
 ```java
 public void doGet() throws Exception {
@@ -328,7 +332,7 @@ public void doGet() throws Exception {
 }
 ```
 
-#### Código compatível  {#compliant-code-5}
+#### Código compatível {#compliant-code-5}
 
 ```java
 public void doGet() throws Exception {
@@ -336,16 +340,16 @@ public void doGet() throws Exception {
 }
 ```
 
-### Não use `Exception.getMessage()` como o primeiro parâmetro de uma instrução de registro  {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
+### Não use `Exception.getMessage()` como o primeiro parâmetro de uma instrução de registro {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
 * **Chave**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
 * **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-Como prática recomendada, as mensagens de log devem fornecer informações contextuais sobre onde ocorreu uma exceção no aplicativo. Embora o contexto também possa ser determinado pelo uso de rastros de pilha, em geral, a mensagem de log será mais fácil de ler e entender. Como resultado disso, ao registrar uma exceção, não é uma prática recomendada usar a mensagem da exceção como a mensagem de registro. A mensagem de exceção deve detalhar o que deu errado. Por outro lado, a mensagem de log deve informar quem está lendo sobre o que o aplicativo estava fazendo quando a exceção ocorreu. A mensagem de exceção ainda é registrada. Ao especificar sua própria mensagem, será mais fácil entender os logs. 
+Como prática recomendada, as mensagens de log devem fornecer informações contextuais sobre onde ocorreu uma exceção no aplicativo. Embora o contexto também possa ser determinado pelo uso de rastros de pilha, em geral, a mensagem de log será mais fácil de ler e entender. Como resultado disso, ao registrar uma exceção, não é uma prática recomendada usar a mensagem da exceção como a mensagem de registro. A mensagem de exceção deve detalhar o que deu errado. Por outro lado, a mensagem de log deve informar quem está lendo sobre o que o aplicativo estava fazendo quando a exceção ocorreu. A mensagem de exceção ainda é registrada. Ao especificar sua própria mensagem, será mais fácil entender os logs.
 
-#### Código não compatível  {#non-compliant-code-9}
+#### Código não compatível {#non-compliant-code-9}
 
 ```java
 public void dontDoThis() {
@@ -357,7 +361,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Código compatível  {#compliant-code-6}
+#### Código compatível {#compliant-code-6}
 
 ```java
 public void doThis() {
@@ -378,7 +382,7 @@ public void doThis() {
 
 Como o nome sugere, as exceções do Java™ sempre devem ser usadas em casos excepcionais. Como resultado, quando uma exceção é capturada, é importante garantir que as mensagens de log sejam registradas no nível apropriado: AVISO ou ERRO. Isso garante a exibição correta dessas mensagens nos logs.
 
-#### Código não compatível  {#non-compliant-code-10}
+#### Código não compatível {#non-compliant-code-10}
 
 ```java
 public void dontDoThis() {
@@ -390,7 +394,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Código compatível  {#compliant-code-7}
+#### Código compatível {#compliant-code-7}
 
 ```java
 public void doThis() {
@@ -411,7 +415,7 @@ public void doThis() {
 
 O contexto é essencial ao entender as mensagens de log. Usar `Exception.printStackTrace()` faz com que somente o rastro de pilha seja enviado para o fluxo de erro padrão, perdendo todo o contexto. Além disso, em um aplicativo com várias threads como o AEM, se várias exceções forem impressas com esse método em paralelo, seus rastros de pilha podem se sobrepor, gerando bastante confusão. As exceções devem ser registradas somente por meio da estrutura de registro.
 
-#### Código não compatível  {#non-compliant-code-11}
+#### Código não compatível {#non-compliant-code-11}
 
 ```java
 public void dontDoThis() {
@@ -423,7 +427,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Código compatível  {#compliant-code-8}
+#### Código compatível {#compliant-code-8}
 
 ```java
 public void doThis() {
@@ -444,7 +448,7 @@ public void doThis() {
 
 O logon no AEM sempre deve ser feito por meio da estrutura de log, SLF4J. Ao enviar diretamente para a saída padrão ou para fluxos de erro padrão, as informações estruturais e contextuais fornecidas pela estrutura de registro são perdidas e podem, em alguns casos, causar problemas de desempenho.
 
-#### Código não compatível  {#non-compliant-code-12}
+#### Código não compatível {#non-compliant-code-12}
 
 ```java
 public void dontDoThis() {
@@ -456,7 +460,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Código compatível  {#compliant-code-9}
+#### Código compatível {#compliant-code-9}
 
 ```java
 public void doThis() {
@@ -477,7 +481,7 @@ public void doThis() {
 
 Caminhos que começam com `/libs` e `/apps` geralmente não devem ser codificados. Normalmente, esses caminhos são armazenados em relação ao caminho de pesquisa `Sling`, que tem como padrão `/libs,/apps`. O uso do caminho absoluto pode gerar defeitos sutis que só aparecerão posteriormente no ciclo de vida do projeto.
 
-#### Código não compatível  {#non-compliant-code-13}
+#### Código não compatível {#non-compliant-code-13}
 
 ```java
 public boolean dontDoThis(Resource resource) {
@@ -485,7 +489,7 @@ public boolean dontDoThis(Resource resource) {
 }
 ```
 
-#### Código compatível  {#compliant-code-10}
+#### Código compatível {#compliant-code-10}
 
 ```java
 public void doThis(Resource resource) {
@@ -566,7 +570,7 @@ Uma prática recomendada já consolidada é que a árvore de conteúdo `/libs` n
 
 Um problema comum que ocorre em projetos complexos é quando o mesmo componente OSGi é configurado várias vezes. Isso cria uma ambiguidade sobre qual configuração é operável. Essa regra age de acordo com o modo de execução, no sentido de que ela apenas identifica problemas em que o mesmo componente é configurado várias vezes no mesmo modo de execução ou combinação de modos de execução.
 
-#### Código não compatível  {#non-compliant-code-osgi}
+#### Código não compatível {#non-compliant-code-osgi}
 
 ```text
 + apps
@@ -578,7 +582,7 @@ Um problema comum que ocorre em projetos complexos é quando o mesmo componente 
       + com.day.cq.commons.impl.ExternalizerImpl
 ```
 
-#### Código compatível  {#compliant-code-osgi}
+#### Código compatível {#compliant-code-osgi}
 
 ```text
 + apps
@@ -598,7 +602,7 @@ Por motivos de segurança, caminhos que contêm `/config/` e `/install/` somente
 
 Um problema comum é o uso de nós nomeados como `config` nas caixas de diálogo de componente ou ao especificar a configuração do editor de rich text para edição em linha. Para solucionar esse problema, o nó incorreto deve ser renomeado para um nome que esteja em conformidade. Para configurar o editor de rich text, use a propriedade `configPath` do nó `cq:inplaceEditing` para especificar o novo local.
 
-#### Código não compatível  {#non-compliant-code-config-install}
+#### Código não compatível {#non-compliant-code-config-install}
 
 ```text
 + cq:editConfig [cq:EditConfig]
@@ -607,7 +611,7 @@ Um problema comum é o uso de nós nomeados como `config` nas caixas de diálogo
       + rtePlugins [nt:unstructured]
 ```
 
-#### Código compatível  {#compliant-code-config-install}
+#### Código compatível {#compliant-code-config-install}
 
 ```text
 + cq:editConfig [cq:EditConfig]
@@ -661,7 +665,7 @@ A compatibilidade com a replicação reversa não está disponível em implanta�
 
 Os clientes que usam replicação reversa devem entrar em contato com a Adobe para obter soluções alternativas.
 
-### Os recursos contidos nas bibliotecas de clientes ativadas por proxy devem estar em uma pasta chamada “resources” {#oakpal-resources-proxy}
+### Os recursos contidos nas bibliotecas de clientes habilitadas por proxy devem estar em uma pasta chamada “resources” {#oakpal-resources-proxy}
 
 * **Chave**: ClientlibProxyResource
 * **Tipo**: Erro
@@ -670,7 +674,7 @@ Os clientes que usam replicação reversa devem entrar em contato com a Adobe pa
 
 As bibliotecas de clientes do AEM podem conter recursos estáticos, como imagens e fontes. Conforme descrito na [documentação sobre o uso de bibliotecas do lado do cliente](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/implementing/developing/introduction/clientlibs#using-preprocessors), ao usar bibliotecas de clientes com proxy, esses recursos estáticos devem estar contidos em uma pasta secundária chamada de `resources` para serem referenciados corretamente nas instâncias de publicação.
 
-#### Código não compatível  {#non-compliant-proxy-enabled}
+#### Código não compatível {#non-compliant-proxy-enabled}
 
 ```text
 + apps
@@ -681,7 +685,7 @@ As bibliotecas de clientes do AEM podem conter recursos estáticos, como imagens
         + myimage.jpg
 ```
 
-#### Código compatível  {#compliant-proxy-enabled}
+#### Código compatível {#compliant-proxy-enabled}
 
 ```text
 + apps
@@ -706,7 +710,7 @@ Com a mudança para os microsserviços de ativos no processamento de ativos do A
 ### Recomendamos o uso de modelos editáveis em vez de modelos estáticos {#oakpal-static-template}
 
 * **Chave**: StaticTemplateUsage
-* **Tipo**: `Code Smell` 
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -737,7 +741,7 @@ O AEM Cloud Service exige que as definições de índice de pesquisa personaliza
 ### Os nós de definição do índice de pesquisa personalizada devem ter uma compatVersion de 2 {#oakpal-custom-search-compatVersion}
 
 * **Chave**: IndexCompatVersion
-* **Tipo**: `Code Smell` 
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -746,7 +750,7 @@ O AEM Cloud Service exige que as definições de índice de pesquisa personaliza
 ### Os nós descendentes dos nós de definição do índice de pesquisa personalizado devem ser do tipo `nt:unstructured` {#oakpal-descendent-nodes}
 
 * **Chave**: IndexDescendantNodeType
-* **Tipo**: `Code Smell` 
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -764,7 +768,7 @@ Um nó de definição do índice de pesquisa personalizado definido corretamente
 ### Os nós de definição do índice de pesquisa personalizado devem seguir as convenções de nomeação {#oakpal-custom-search-definitions}
 
 * **Chave**: IndexName
-* **Tipo**: `Code Smell` 
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -773,7 +777,7 @@ O AEM Cloud Service exige que as definições do índice de pesquisa personaliza
 ### Os nós de definição do índice de pesquisa personalizado devem usar o tipo de índice Lucene {#oakpal-index-type-lucene}
 
 * **Chave**: IndexType
-* **Tipo**: `Code Smell` 
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -791,7 +795,7 @@ O AEM Cloud Service proíbe definições de índice de pesquisa personalizada (o
 ### Os nós de definição do índice de pesquisa personalizado não devem conter uma propriedade denominada `reindex` {#oakpal-reindex-property}
 
 * **Chave**: IndexReindexProperty
-* **Tipo**: `Code Smell` 
+* **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
@@ -916,15 +920,15 @@ A seção a seguir lista as verificações da Ferramenta de Otimização do Disp
 
 * [Tokens inesperados da configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unexpected-tokens)
 
-* [Aspas sem correspondência na configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unmatched-quote)
+* [Cotação sem correspondência da configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unmatched-quote)
 
-* [Chave ausente na configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-brace)
+* [Chave ausente da configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-brace)
 
-* [Chave extra na configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-extra-brace)
+* [Chave extra de configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-extra-brace)
 
 * [Propriedade obrigatória ausente na configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-mandatory-property)
 
-* [Propriedade obsoleta na configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-deprecated-property)
+* [Propriedade obsoleta de configuração do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-deprecated-property)
 
 * [Configuração do Dispatcher não encontrada](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-not-found)
 
@@ -932,20 +936,20 @@ A seção a seguir lista as verificações da Ferramenta de Otimização do Disp
 
 * [Configuração geral do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
 
-* [O cache da farm de publicação do Dispatcher deve estar com `serveStaleOnError` habilitado](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
+* [O cache do farm de publicação do Dispatcher deve ter `serveStaleOnError` habilitado](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
 
 * [Os filtros farm de publicação do Dispatcher devem conter as regras de negação padrão da versão 6.x.x do arquétipo do AEM](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-contain-the-default-deny-rules-from-the-6xx-version-of-the-aem-archetype)
 
-* [A propriedade `statfileslevel` do cache da farm de publicação do Dispatcher deve ser >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
+* [A propriedade `statfileslevel` do cache do farm de publicação do Dispatcher deve ser >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
 
-* [A propriedade `gracePeriod` da farm de publicação do Dispatcher deve ser >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
+* [A propriedade `gracePeriod` do farm de publicação do Dispatcher deve ser >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
 
 * [Cada farm do Dispatcher deve ter um nome exclusivo](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [O cache da farm de publicação do Dispatcher deve estar com as regras `ignoreUrlParams` configuradas de maneira semelhante a uma lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [O cache do farm de publicação do Dispatcher deve ter suas regras `ignoreUrlParams` configuradas de maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [Os filtros farm de publicação do Dispatcher devem especificar os seletores Sling permitidos de maneira semelhante a uma lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [Os filtros farm de publicação do Dispatcher devem especificar os seletores Sling permitidos de uma maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [Os filtros de farm de publicação do Dispatcher devem especificar os padrões de sufixo do Sling permitidos de maneira semelhante a uma lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [Os filtros farm de publicação do Dispatcher devem especificar os padrões de sufixo do Sling permitidos de maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [Não use a diretiva “Require all granted” em uma seção do VirtualHost Diretory com um caminho de diretório raiz](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [Não use a diretiva &#39;Require all granted&#39; em uma seção do VirtualHost Diretory com um caminho de diretório raiz](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)

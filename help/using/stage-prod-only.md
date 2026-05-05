@@ -2,9 +2,13 @@
 title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 92237ea156e3921b5dc55cea3abdecee9d26b14b
+TQID: https://experienceleague.adobe.com/whq-Hkwp3mjTr0iftoKZHKdsi0xaKtVXazXjUENoaLk
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: 980
 ht-degree: 94%
 
 ---
@@ -76,7 +80,7 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 ### Pipelines somente de produção {#prod-only}
 
 1. Depois de clicar em **Adicionar pipeline somente produção**, sua caixa de diálogo associada será aberta.
-1. No campo **Nome do pipeline**, digite o nome desejado. As opções e funcionalidades restantes da caixa de diálogo funcionam da mesma forma que as da caixa de diálogo de criação de pipeline acoplado padrão. 
+1. No campo **Nome do pipeline**, digite o nome desejado. As opções e funcionalidades restantes da caixa de diálogo funcionam da mesma forma que as da caixa de diálogo de criação de pipeline acoplado padrão.
 1. No canto inferior direito da caixa de diálogo, clique em **Salvar**.
 
    ![Criação de um pipeline somente de produção](/help/assets/configure-pipelines/prod-only-pipeline.png)

@@ -2,13 +2,16 @@
 title: Configuração do programa
 description: Após a integração, o proprietário da empresa precisa fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/AqaA4GSOptV11h2y4V1Mt15KmEhEYBaiM-RvBFjtfWY
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: 570
 ht-degree: 93%
 
 ---
-
 
 # Configuração do programa {#program-setup}
 
@@ -86,10 +89,10 @@ Os KPIs de sites são medidos em testes executados no ambiente de preparo. Norma
 
 Por exemplo, um usuário que espera uma média de 1000 visualizações de página por minuto em seu ambiente de produção e tem quatro servidores de Dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores do Dispatcher/Publish.
 
-O teste de desempenho do Assets envolve uploads repetidos de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e várias métricas no nível do sistema são medidos durante o teste. 
+O teste de desempenho do Assets envolve uploads repetidos de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e várias métricas no nível do sistema são medidos durante o teste.
 
 Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN. Ou seja, o cache não é utilizado. Normalmente, essa experiência é um subconjunto relativamente pequeno do tráfego total de produção.
 
 ## Vídeo de visão geral {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/34268?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)
