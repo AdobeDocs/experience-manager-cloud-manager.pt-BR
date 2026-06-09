@@ -10,10 +10,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 1256
-ht-degree: 100%
+source-wordcount: 1665
+ht-degree: 73%
 
 ---
 
@@ -38,7 +38,7 @@ O **Gerenciador de implantação** é responsável pela configuração do pipeli
 
 >[!NOTE]
 >
->Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) esteja concluída.
+>Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída.
 
 ## Adicionar um novo pipeline de produção {#adding-production-pipeline}
 
@@ -50,24 +50,11 @@ Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu program
 
 1. Clique em **+Adicionar** e selecione **Adicionar pipeline de produção**.
 
-   ![Adicionar um pipeline de produção](/help/assets/configure-pipelines/add-prod1.png)
+   ![Adicionar um pipeline de produção](/help/assets/configure-pipelines/add-prod7.png)
 
 1. A caixa de diálogo **Adicionar pipeline de produção** é aberta na guia **Configuração**, onde várias opções do pipeline devem ser definidas. Essas opções são agrupadas em seções que podem ser recolhidas e são descritas nas etapas a seguir.
 
    1. Forneça um nome descritivo para o pipeline no campo **Nome do pipeline**.
-
-   1. Na seção **Código fonte**, você define de onde o pipeline recuperará o código que processa.
-
-      * **Repositório**: define de qual repositório Git o pipeline deve recuperar o código.
-
-      >[!TIP]
-      >
-      >Consulte o documento [Configuração do programa](/help/getting-started/program-setup.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
-
-      * **Ramificação Git**: no pipeline selecionado, define de qual ramificação o código deve ser recuperado.
-      * **Localização do código**: define o caminho na ramificação do repositório selecionado do qual o pipeline deve recuperar o código.
-
-      ![Definir repositórios para o pipeline](/help/assets/configure-pipelines/add-prod2.png)
 
    1. Na seção **Ambientes**, você define o que aciona uma implantação e como ela deve ser realizada em cada ambiente.
 
@@ -133,7 +120,16 @@ Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu program
 
          * **Configuração do Dispatcher**: define a configuração do Dispatcher para o ambiente de produção. As opções são as mesmas do ambiente de preparo.
 
-1. Clique em **Continuar** para avançar até a guia **Teste de preparo**, onde é possível configurar o teste de desempenho do AEM Sites e do AEM Assets, dependendo das licenças de produto que você possui.
+1. Clique em **Continuar** para avançar para a guia **Código Source**, na qual você seleciona o tipo de código para implantar e configurar o repositório de origem.
+
+   1. Em **Selecionar código para implantar**, escolha o tipo de implantação:
+
+      * **[Código de pilha completa](#full-stack-code)** - Código para o aplicativo AEM completo.
+      * **[Configuração da Camada da Web](#web-tier-config)** - Propriedades do Dispatcher para armazenar, processar e entregar páginas da Web ao cliente.
+
+      Consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md#code-sources) para obter mais informações sobre esses tipos de implantação. As etapas restantes para concluir a configuração do pipeline dependem do tipo selecionado. Siga os links acima para ir até a seção relevante deste documento.
+
+1. Clique em **Continuar** para avançar até a guia **Teste de preparo**, onde é possível configurar o teste de desempenho do AEM Sites e do AEM Assets, dependendo das licenças de produto que você possui. {#stage-testing}
 
    >[!TIP]
    >
@@ -145,7 +141,7 @@ Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu program
       * **Outras páginas ativas**
       * **Novas páginas**
 
-      ![Peso de carregamento dos sites](/help/assets/configure-pipelines/add-prod5.png)
+      ![Peso de carregamento dos sites](/help/assets/configure-pipelines/add-prod8.png)
 
    1. Na seção **Distribuição de teste de desempenho de ativos**, você define a distribuição de teste de imagens e PDFs, bem como de seus próprios ativos de teste.
 
@@ -161,6 +157,57 @@ Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu program
       ![Distribuição de testes de ativos](/help/assets/configure-pipelines/add-prod6.png)
 
 1. Clique em **Salvar** para concluir a adição do pipeline de produção.
+
+### Código de pilha completa {#full-stack-code}
+
+Um pipeline de código de pilha completa implanta compilações de código de back-end e front-end juntamente com a configuração HTTPD/Dispatcher.
+
+>[!NOTE]
+>
+>Se um pipeline de produção de pilha completa já existir, essa seleção será desativada.
+
+**Para configurar um pipeline de produção com código de pilha completa:**
+
+1. Na guia **Código Source**, defina as seguintes opções.
+
+   * **Repositório**: define de qual repositório Git o pipeline deve recuperar o código.
+
+   >[!TIP]
+   >
+   >Consulte o documento [Configuração do programa](/help/getting-started/program-setup.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
+
+   * **Ramificação Git** - Define de qual ramificação o pipeline deve recuperar o código.
+   * **Ignorar configuração no nível da Web**: quando essa opção está marcada, o pipeline não implanta sua configuração no nível da Web. Se um pipeline de configuração no nível da Web já existir para o mesmo ambiente, essa caixa de seleção será selecionada e desabilitada automaticamente, pois a configuração no nível da Web é gerenciada por esse pipeline. Quando não existir um pipeline de configuração no nível da Web, você pode selecionar ou desmarcar essa opção para controlar se o pipeline de pilha completa implanta a configuração do Dispatcher.
+
+   ![Origem do código de pilha completa](/help/assets/configure-pipelines/add-prod-fullstack-source.png)
+
+1. Clique em **Continuar** para avançar para a guia **Teste de Preparo**. Consulte [Teste de preparo](#stage-testing) para obter detalhes.
+
+### Configuração da camada da Web {#web-tier-config}
+
+Um pipeline de configuração no nível da Web implanta somente a configuração HTTPD/Dispatcher. Consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md#deployment-types) para obter mais detalhes sobre esse tipo de pipeline.
+
+>[!NOTE]
+>
+>Se um pipeline de produção de configuração no nível da Web já existir, essa seleção será desabilitada.
+
+Se você criar um pipeline de configuração no nível da Web para um ambiente com um pipeline de pilha completa existente, a configuração no pipeline de pilha completa será ignorada. Essa alteração afeta somente a configuração no nível da Web nesse ambiente.
+
+**Para configurar um pipeline de produção de configuração no nível da Web:**
+
+1. Na guia **Código Source**, defina as seguintes opções.
+
+   * **Repositório** - Na lista suspensa, selecione o repositório Git que contém a configuração da camada da Web.
+   * **Ramificação Git** - Selecione a ramificação no repositório escolhido que a Cloud Manager usa para a implantação.
+   * **Localização do Código** - Insira o caminho no repositório selecionado que contém a configuração da camada da Web a ser implantada. O local padrão é a raiz do repositório (`/`).
+
+   >[!NOTE]
+   >
+   >Se a Localização do código não apontar para a localização do código do Dispatcher, o código de aplicativo adicional pode ser extraído para o pacote de artefatos e implantado no Dispatcher, fazendo com que o Apache falhe na reinicialização e o pipeline falhe. Defina o caminho correto para os arquivos do dispatcher no repositório.
+
+   ![Fonte de configuração da camada da Web](/help/assets/configure-pipelines/add-prod-webtier-source.png)
+
+1. Clique em **Continuar** para avançar para a guia **Teste de Preparo**. Consulte [Teste de preparo](#stage-testing) para obter detalhes.
 
 ## Próximas etapas {#the-next-steps}
 

@@ -8,9 +8,9 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 1999
+source-wordcount: 2096
 ht-degree: 22%
 
 ---
@@ -91,6 +91,10 @@ Depois de configurar um programa e pelo menos um ambiente na interface do usuár
 
 Implanta o aplicativo AEM completo, incluindo o código do aplicativo e, por padrão, a configuração no nível da Web.
 
+>[!NOTE]
+>
+>Se um pipeline de código de pilha completa já existir para o ambiente selecionado, essa seleção ficará desativada.
+
 | Seção | Opção | Descrição |
 | --- | --- | --- |
 | **código Source** | **Repositório** | Na lista suspensa, escolha o repositório Git que o pipeline usa como origem. O Cloud Manager cria código a partir do repositório escolhido aqui. |
@@ -105,11 +109,19 @@ Implanta apenas a configuração no nível da Web, como propriedades do Dispatch
 
 Se um pipeline de pilha completa já existir, o Cloud Manager exibe um aviso de que a criação de um pipeline de configuração no nível da Web faz com que o pipeline de pilha completa existente ignore a configuração no nível da Web. Depois de criar o pipeline de configuração no nível da Web, o Cloud Manager gerencia as implantações de configuração no nível da Web por meio desse pipeline, em vez do pipeline de pilha completa.
 
+>[!NOTE]
+>
+>Se um pipeline de configuração no nível da Web já existir para o ambiente selecionado, essa seleção será desativada. Em um dado momento, somente pode haver um pipeline de configuração no nível da Web por ambiente.
+
 | Seção | Opção | Descrição |
 | --- | --- | --- |
 | **código Source** | **Repositório** | Na lista suspensa, selecione o repositório Git que contém a configuração no nível da Web. |
 |   | **Ramificação Git** | Selecione a ramificação no repositório escolhido que o Cloud Manager usa para a implantação. Se necessário, clique em **Atualizar** para atualizar a lista de ramificações disponíveis para o repositório selecionado. Use esta opção se uma ramificação criada recentemente não aparecer na lista. |
 |   | **Localização do código** | Insira o caminho no repositório selecionado que contém a configuração da camada da Web a ser implantada. O local padrão é a raiz do repositório (`/`). |
+
+>[!NOTE]
+>
+>Se a Localização do código não apontar para a localização do código do Dispatcher, o código de aplicativo adicional pode ser extraído para o pacote de artefatos e implantado no Dispatcher, fazendo com que o Apache falhe na reinicialização e o pipeline falhe. Defina o caminho correto para os arquivos do dispatcher no repositório.
 
 >[!ENDTABS]
 

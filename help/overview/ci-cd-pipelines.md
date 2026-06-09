@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 639
-ht-degree: 81%
+source-wordcount: 1091
+ht-degree: 51%
 
 ---
 
@@ -51,6 +51,63 @@ Este diagrama ilustra o que acontece quando uma versão é acionada no [!UICONTR
 | &#x200B;8. Implantação do acionador de produção | Após a conclusão dos testes automatizados, o [!UICONTROL Cloud Manager] inicia a implantação para produção. |
 | &#x200B;9. O [!UICONTROL Cloud Manager] obtém o(s) artefato(s) para implantar | O [!UICONTROL Cloud Manager] extrai os artefatos de lançamento armazenados. |
 | &#x200B;10. Implantar artefatos para produção | Os artefatos de lançamento são implantados no ambiente de produção. |
+
+### Fontes de código {#code-sources}
+
+Os pipelines também podem diferir pelo tipo de código que implantam, além de produção e não produção.
+
+* **[Pipelines de pilha completa](#full-stack-pipeline)** - Implante o código completo do aplicativo do AEM junto com as configurações HTTPD/Dispatcher.
+* **[Pipelines de configuração no nível da Web](#web-tier-config-pipelines)** - Implante somente configurações HTTPD/Dispatcher.
+
+### Pipelines de pilha completa {#full-stack-pipeline}
+
+Os pipelines de pilha completa implantam o código completo do aplicativo do AEM no tempo de execução do AEM e, por padrão, também implantam configurações no nível da Web.
+
+As restrições a seguir se aplicam.
+
+* Um usuário deve estar conectado com a função **Gerente de Implantação** para configurar ou executar pipelines.
+* Somente pode haver um pipeline de pilha completa por ambiente.
+
+A seguir, é descrito como o pipeline de pilha completa interage com um [pipeline de configuração de camada da Web](#web-tier-config-pipelines).
+
+* O pipeline de pilha completa para um ambiente ignora a configuração do Dispatcher se existir um pipeline de configuração no nível da Web correspondente.
+* Se não existir um pipeline de configuração no nível da Web correspondente para o ambiente, o usuário poderá configurar o pipeline de pilha completa para incluir ou ignorar a configuração do Dispatcher.
+
+Os pipelines de pilha completa podem ser pipelines de qualidade do código ou de implantação.
+
+#### Configurar pipelines de pilha completa {#configure-full-stack}
+
+Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#full-stack-code).
+Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+
+### Pipelines de configuração no nível da Web {#web-tier-config-pipelines}
+
+Os pipelines de configuração no nível da Web permitem a implantação exclusiva da configuração HTTPD/Dispatcher no tempo de execução do AEM, desvinculando-a de outras alterações de código. É um pipeline simplificado que fornece aos usuários que desejam implantar somente as alterações de configuração do Dispatcher um meio mais rápido de fazê-lo em apenas alguns minutos.
+
+>[!TIP]
+>
+>Os pipelines de configuração no nível da Web permitem armazenar a configuração da Web no mesmo local de origem ou em um local diferente do pipeline de pilha completa, dependendo do que melhor se adapta à estrutura do projeto.
+
+As restrições a seguir se aplicam.
+
+* Um usuário deve estar conectado com a função **Gerente de Implantação** para configurar ou executar pipelines.
+* Em um dado momento, somente pode haver um pipeline de configuração no nível da Web por ambiente.
+* O usuário não pode configurar um pipeline de configuração no nível da Web quando seu pipeline de pilha completa correspondente está em execução.
+
+O item a seguir descreve como o pipeline de configuração no nível da Web interage com o [pipeline de pilha completa](#full-stack-pipeline).
+
+* Se um pipeline de configuração no nível da Web não estiver definido para um ambiente, o usuário poderá optar por incluir ou ignorar a configuração do Dispatcher ao configurar o pipeline de pilha completa.
+* Depois que um pipeline de configuração no nível da Web é configurado para um ambiente, seu pipeline de pilha completa correspondente (se existir) ignora a configuração do Dispatcher durante a execução e a implantação.
+* Depois que um pipeline de configuração no nível da Web é excluído, seu pipeline de pilha completa correspondente (se existir) é redefinido para implantar configurações do Dispatcher durante a execução.
+
+>[!NOTE]
+>
+>Para programas do AMS com implantação azul-verde ativada, as atualizações no nível da Web usam implantação contínua por padrão. Use um pipeline de pilha completa se precisar de implantação azul-verde para alterações no nível da Web.
+
+#### Configurar pipelines no nível da Web {#configure-web-tier}
+
+Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#web-tier-config).
+Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Criações mais rápidas usando o Smart Build {#use=smart-build}
 
