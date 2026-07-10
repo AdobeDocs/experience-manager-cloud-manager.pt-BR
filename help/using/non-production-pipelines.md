@@ -3,14 +3,11 @@ title: Adicionar um pipeline de não produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de não produção para implantar seu código.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 TQID: https://experienceleague.adobe.com/Dj7SjKdao6RU-cIS7D1AQxg5qpKrJMTcYQJBfiqc-Gg
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
 workflow-type: tm+mt
-source-wordcount: 2096
+source-wordcount: 2080
 ht-degree: 22%
 
 ---
@@ -37,7 +34,7 @@ Existem dois tipos de pipelines de não produção:
 >
 >Você não pode configurar um pipeline até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída. Consulte os  [Repositórios do Cloud Manager](/help/managing-code/managing-repositories.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
-## Adicionar um novo pipeline de não produção {#add-non-production-pipeline}
+## Adicionar um pipeline de não produção {#add-non-production-pipeline}
 
 Depois de configurar um programa e pelo menos um ambiente na interface do usuário do Cloud Manager, você pode adicionar pipelines de não produção. Use esses pipelines para testar a qualidade do código antes de implantar em ambientes de produção.
 
@@ -99,7 +96,7 @@ Implanta o aplicativo AEM completo, incluindo o código do aplicativo e, por pad
 | --- | --- | --- |
 | **código Source** | **Repositório** | Na lista suspensa, escolha o repositório Git que o pipeline usa como origem. O Cloud Manager cria código a partir do repositório escolhido aqui. |
 |   | **Ramificação Git** | Na lista suspensa, escolha em qual ramificação o pipeline deve ser criado no repositório selecionado. O padrão é `main`. O pipeline usa a ramificação escolhida como origem para a compilação e a implantação. Se necessário, clique em **Atualizar** para atualizar a lista de ramificações disponíveis para o repositório selecionado. Use esta opção se uma ramificação criada recentemente não aparecer na lista. |
-|   | **Estratégia de compilação** | <ul><li>**Compilação Completa** - Cria todos os módulos no repositório sempre<li>BETA **Compilação Inteligente** - Compila apenas módulos que foram alterados desde a última confirmação.<br>Saiba mais sobre [como usar o Smart Build em um pipeline de não produção](#about-smart-build).</li></ol>**Importante**: a Compilação Inteligente está disponível somente para pipelines de Qualidade de Código e pipelines de implantação de Código de Pilha Completa de Desenvolvimento. |
+|   | **Estratégia de compilação** | <ul><li>**Compilação Completa** - Cria todos os módulos no repositório sempre<li>**Compilação Inteligente** - Compila apenas módulos que foram alterados desde a última confirmação.<br>Saiba mais sobre [como usar o Smart Build em um pipeline de não produção](#about-smart-build).</li></ol> |
 |   | **Ignorar a caixa de seleção Configuração da Camada da Web** | Selecione esta opção para ignorar a implantação da configuração no nível da Web em um pipeline de código de Empilhamento completo. Deixe a opção desmarcada para implantar a configuração no nível da Web junto com o código do pipeline. |
 | **Pipeline** | Caixa de seleção **Auditoria de experiência** | Selecione essa opção para incluir uma etapa da Auditoria de experiência no pipeline. Quando ativado, o pipeline inclui a etapa Auditoria de experiência após a guia Código Source. |
 
@@ -125,27 +122,30 @@ Se um pipeline de pilha completa já existir, o Cloud Manager exibe um aviso de 
 
 >[!ENDTABS]
 
-1. Clique em **Salvar**.
+1. Clique em **Salvar**.
 
-## Sobre o uso do Smart Build em um pipeline de não produção{#about-smart-build}
+## Sobre o uso do Smart Build no pipeline de não produção{#about-smart-build}
 
 A **Compilação Inteligente** do Cloud Manager é uma estratégia de compilação otimizada para pipelines de não produção. O Smart Build reduz os tempos de criação ao armazenar em cache módulos e recriar apenas os módulos que foram alterados desde a última execução bem-sucedida. Os módulos inalterados são reutilizados do cache, enquanto apenas os módulos modificados e suas dependências são recriados, melhorando a eficiência dos workflows de desenvolvimento iterativos.
 
-No momento, o Smart Build está disponível apenas para o seguinte:
+O Smart Build está disponível atualmente para o seguinte:
 
 * Pipelines de qualidade do código.
-* Desenvolva pipelines de implantação de pilha completa.
+* Pipelines de implantação de pilha completa de desenvolvimento, preparo e não produção.
+
 
 >[!NOTE]
 >
 >A primeira execução após a ativação da Compilação inteligente se comporta como uma Compilação completa porque o cache está vazio.
 
 O Smart Build é recomendado quando você tem o seguinte:
+
 * Você está desenvolvendo e confirmando ativamente alterações incrementais frequentes.
 * Seu projeto contém vários módulos Maven.
 * As compilações completas estão demorando muito.
 
 O Smart Build nem sempre é ideal quando você tem o seguinte:
+
 * Sua build depende muito de plug-ins que executam operações fora do gráfico de dependência do Maven.
 * Você precisa da validação completa de reconstrução em cada execução.
 
@@ -244,4 +244,4 @@ Depois de configurar o pipeline, você pode implantar seu código. Consulte [Imp
 
 Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/327619?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
