@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
+source-git-commit: 694d3e8dad6e2ba86186a4bf6fdda3739e1041da
 workflow-type: tm+mt
-source-wordcount: 1091
-ht-degree: 51%
+source-wordcount: 1122
+ht-degree: 50%
 
 ---
 
@@ -77,8 +77,7 @@ Os pipelines de pilha completa podem ser pipelines de qualidade do código ou de
 
 #### Configurar pipelines de pilha completa {#configure-full-stack}
 
-Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#full-stack-code).
-Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#full-stack-code).Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Pipelines de configuração no nível da Web {#web-tier-config-pipelines}
 
@@ -106,14 +105,13 @@ O item a seguir descreve como o pipeline de configuração no nível da Web inte
 
 #### Configurar pipelines no nível da Web {#configure-web-tier}
 
-Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#web-tier-config).
-Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#web-tier-config).Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Criações mais rápidas usando o Smart Build {#use=smart-build}
 
 O Cloud Manager agora usa uma estratégia de compilação otimizada chamada **Compilação Inteligente**, que usa cache de módulo para acelerar o processo de compilação. Durante cada build, somente os módulos que foram alterados são recriados, enquanto os módulos inalterados são reutilizados do cache.
 
-O Smart Build está disponível somente para pipelines de implantação de Qualidade de código e Empilhamento completo de desenvolvimento.
+O Smart Build está disponível para pipelines de qualidade do código e implantação de pilha completa (desenvolvimento, preparo, produção).
 
 Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline) e [Sobre o uso do Smart Build em um pipeline de não produção](/help/using/non-production-pipelines.md#about-smart-build).
 
