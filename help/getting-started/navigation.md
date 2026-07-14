@@ -3,17 +3,13 @@ title: Navegar pela interface do Cloud Manager
 description: Saiba como a interface do Cloud Manager é organizada e como navegar e gerenciar seus programas e ambientes.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 TQID: https://experienceleague.adobe.com/qTv4G7eSJahDusX68iNXzcw64Aq8xxP6SRAtn-SB0t4
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
-source-wordcount: 1660
-ht-degree: 52%
+source-wordcount: 1641
+ht-degree: 36%
 
 ---
 
@@ -24,7 +20,7 @@ Saiba como a interface do Cloud Manager é organizada e como navegar e gerenciar
 A interface do Cloud Manager é composta principalmente por duas interfaces gráficas:
 
 * [O console Meus programas](#my-programs-console), onde é possível exibir e gerenciar todos os programas.
-* [A janela Visão geral do programa](#program-overview), onde é possível ver os detalhes e gerenciar um programa individual.
+* [A janela Visão Geral do Programa](#program-overview) é o local onde você pode ver os detalhes e gerenciar um programa individual.
 
 ## Console Meus programas {#my-programs-console}
 
@@ -32,7 +28,7 @@ Ao fazer logon no Cloud Manager em [experience.adobe.com](https://experience.ado
 
 ![Console Meus programas](/help/getting-started/assets/cloud-manager-my-programs-console.png)
 
-O console **Meus Programas** fornece uma visão geral de todos os programas aos quais você tem acesso na organização selecionada. Ele é composto por várias partes.
+O console **Meus Programas** fornece uma visão geral de todos os programas aos quais você tem acesso na organização selecionada. Ele consiste em várias partes.
 
 |   | Área | Descrição |
 | --- | --- | --- |
@@ -45,11 +41,11 @@ O console **Meus Programas** fornece uma visão geral de todos os programas aos 
 
 ### Barras de ferramentas {#my-programs-toolbars}
 
-Há duas barras de ferramentas uma sobre a outra.
+Há duas barras de ferramentas.
 
 #### Cabeçalho do Cloud Manager {#cloud-manager-header}
 
-O primeiro é o cabeçalho do Cloud Manager. O cabeçalho permanece à medida que você navega pelo Cloud Manager. Ele é uma âncora que dá acesso às configurações e informações que se aplicam aos programas do Cloud Manager.
+O primeiro é o cabeçalho do Cloud Manager. O cabeçalho está sempre visível ao usar o Cloud Manager. É um local central que fornece acesso a configurações e informações que se aplicam a todos os programas do Cloud Manager.
 
 ![O cabeçalho da Experience Cloud](/help/getting-started/assets/cloud-manager-header-toolbar.png)
 
@@ -59,7 +55,7 @@ O primeiro é o cabeçalho do Cloud Manager. O cabeçalho permanece à medida qu
 | ![Ícone vermelho e branco do Adobe](/help/getting-started/assets/AdobeLogoWhiteOnRed.svg) Cloud Manager | Clique para abrir o console **Meus Programas** do Cloud Manager, não importa onde você esteja no Cloud Manager. |
 | *`Name of selected organization`* | O seletor de organização exibe a organização na qual você está conectado no momento (neste exemplo, *Foundation Internal*). Clique em para alternar para outra organização se a Adobe ID estiver associada a várias organizações. |
 | ![Ícone de feedback](/help/getting-started/assets/AppComment.svg) Feedback | Clique em para fornecer feedback à Adobe sobre o Cloud Manager. |
-| ![Ícone do Assistente de IA](/help/getting-started/assets/AIChat.svg) | O Assistente de IA oferece uma interface conversacional projetada para simplificar a localização de respostas para suas consultas relacionadas ao AEM. Consulte o [Assistente de IA](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
+| ![Ícone do Assistente de IA](/help/getting-started/assets/AIChat.svg) | O Assistente de IA oferece uma interface conversacional projetada para simplificar a localização de respostas para suas consultas relacionadas ao AEM. Consulte o [Assistente de IA](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
 | ![Ícone da ajuda](https://spectrum.adobe.com/static/icons/workflow_18/Smock_HelpOutline_18_N.svg) | Clique em para fornecer acesso rápido aos recursos de aprendizagem e suporte. |
 | ![Ícone de sino branco](/help/getting-started/assets/Bell.svg) | Clique para exibir o número de [notificações](/help/using/notifications.md) incompletas atribuídas atualmente |
 | ![Ícone de aplicativos](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) | Clique para mover-se rapidamente entre a página inicial da AEM e as soluções da AEM |
@@ -80,7 +76,7 @@ O primeiro é o cabeçalho do Cloud Manager. O cabeçalho permanece à medida qu
 
 #### Barra de ferramentas do programa {#program-toolbar}
 
-A barra de ferramentas do programa fornece links para alternar entre programas e ações do Cloud Manager adequados ao contexto.
+A barra de ferramentas do programa fornece links para alternar entre programas da Cloud Manager e ações relevantes ao contexto.
 
 ![Barra de ferramentas do programa Cloud Manager](/help/getting-started/assets/cloud-manager-programs-toolbar.png)
 
@@ -92,13 +88,13 @@ A barra de ferramentas do programa fornece links para alternar entre programas e
 
 ### Frases de chamariz e estatísticas {#cta-statistics}
 
-A seção de chamadas para ação e estatísticas fornece dados agregados para a sua organização. Por exemplo, se você tiver configurado os seus programas com êxito, será possível ver as estatísticas das suas atividades nos últimos 90 dias, incluindo:
+A seção call-to-action e estatísticas fornece dados agregados para sua organização. Por exemplo, se você tiver configurado os programas com êxito, serão exibidas estatísticas das atividades nos últimos 90 dias, incluindo as seguintes:
 
 * Número de [implantações](/help/using/code-deployment.md)
 * Número de [problemas de qualidade de código](/help/using/code-quality-testing.md) identificados
 * Número de builds
 
-Ou se você estiver apenas começando a configurar a organização, encontrará dicas sobre as próximas etapas ou recursos de documentação.
+Se você estiver iniciando a configuração de sua organização, há orientação sobre as próximas etapas ou recursos de documentação.
 
 ### Meus programas {#my-programs-section}
 
@@ -114,12 +110,12 @@ Você pode usar as seguintes opções de classificação para localizar o progra
    * Data de criação
    * Nome do programa
    * Status
-* ![Ícone Classificar para baixo](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Ícone Classificar para cima](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Classificar programas para baixo ou para cima, respectivamente.
+* ![Ícone Classificar para baixo](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Ícone Classificar para cima](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Classificar programas para cima ou para baixo, respectivamente.
 * ![Ícone de exibição de grade clássica](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) / ![Ícone ou lista com marcadores de texto](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TextBulleted_18_N.svg) Exiba programas no formato de grade ou lista, respectivamente.
 
 #### Cartões de programa {#program-cards}
 
-Cada cartão ou linha em uma tabela representa um programa e fornece uma visão geral e links rápidos para executar ações.
+Um cartão ou uma linha em uma tabela representa cada programa, fornecendo uma visão geral do programa e links rápidos para executar uma ação.
 
 ![Cartão do programa](/help/getting-started/assets/cloud-manager-program-card.png)
 
@@ -136,7 +132,7 @@ Clique no ![ícone Informações](/help/getting-started/assets/Info.svg) para ob
 
 ![Pop-up de informações no Cloud Manager AMS](/help/getting-started/assets/cloud-manager-information-view.png)
 
-Clique no ícone ![Mais, reticências](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) que dão acesso às ações adicionais que você pode realizar no programa.
+Clicar no ícone ![Mais, reticências](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg), fornece acesso a ações adicionais que você pode realizar no programa.
 
 ![Botão de reticências para programas](/help/getting-started/assets/cloud-manager-program-ellipsis.png)
 
@@ -156,9 +152,9 @@ Selecionar um programa no [**console Meus programas**](#my-programs-console) dir
 
 ![Visão geral do programa](/help/getting-started/assets/cloud-manager-program-overview.png)
 
-**Visão geral do programa** dá a você acesso a todos os detalhes de um programa do Cloud Manager. Assim como **Meus Programas**, ele é composto por várias partes.
+A **Visão Geral do Programa** fornece acesso a todos os detalhes de um programa do Cloud Manager. Assim como **Meus Programas**, ele consiste em várias partes.
 
-1. [Barras de ferramentas](#program-overview-toolbar) que permitem voltar rapidamente ao console **Meus programas** e navegar pelo programa.
+1. [Barras de ferramentas](#program-overview-toolbar) para retornar ao console **Meus Programas** rapidamente e navegar pelo programa.
 1. [Área de guias](#program-tabs) para alternar entre diferentes aspectos do programa.
 1. Uma [frase de chamariz](#cta) baseada nas últimas ações do programa.
 1. [Ambientes](#environments) associados do programa.
@@ -170,21 +166,21 @@ As barras de ferramentas da visão geral do programa são muito semelhantes às 
 
 #### Cabeçalho do Cloud Manager {#cloud-manager-header-2}
 
-O cabeçalho do Cloud Manager tem um ![ícone Mostrar menu, hambúrguer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) menu suspenso que se abre automaticamente para mostrar as guias navegáveis da Visão geral do programa.
+O cabeçalho do Cloud Manager tem um menu suspenso ![Mostrar ícone de menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) que é aberto automaticamente para mostrar as guias navegáveis da Visão geral do programa.
 
-Clique em ![Mostrar ícone de menu, hambúrguer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para ocultar as guias.
+Clique em ![Mostrar ícone do menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) para ocultar as guias.
 
 #### Barra de ferramentas do programa {#program-toolbar-2}
 
-A barra de ferramentas do programa possibilita alternar rapidamente para outros programas, mas também permite acessar ações adequadas ao contexto, como adicionar e editar o programa.
+A barra de ferramentas do programa ainda fornece acesso rápido para alternar para outros programas, mas também fornece acesso a ações contextuais, como adicionar e editar o programa.
 
 ![Barra de ferramentas do programa](assets/cloud-manager-program-toolbar.png)
 
-Além disso, se você ocultar as guias usando o ![ícone Mostrar menu, hambúrguer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), a barra de ferramentas ainda poderá mostrar a guia em que você está no momento.
+Além disso, se você ocultar as guias usando o ![ícone Mostrar menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), a barra de ferramentas ainda poderá mostrar a guia em que você está no momento.
 
 ### Guias do programa {#program-tabs}
 
-Cada programa tem diversas opções e dados associados. Esses dados são coletados em guias para simplificar a navegação no programa. As guias fornecem acesso a:
+Cada programa tem diversas opções e dados associados. Esses dados são organizados em guias para simplificar a navegação do programa. As guias concedem acesso ao seguinte:
 
 * Visão geral: a visão geral do programa conforme descrito no documento atual
 * [Atividade](/help/using/managing-pipelines.md#activity): o histórico de execuções de pipeline do programa
@@ -198,13 +194,13 @@ Cada programa tem diversas opções e dados associados. Esses dados são coletad
 
 Por padrão, ao abrir um programa, você acessa a guia **Visão geral**. A guia atual está realçada. Selecione outra guia para exibir seus detalhes.
 
-Use o ![ícone Mostrar menu, hambúrguer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) no [cabeçalho do Cloud Manager](#cloud-manager-header-2) para ocultar as guias.
+Para ocultar as guias, use o ![ícone Mostrar menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) no [cabeçalho do Cloud Manager](#cloud-manager-header-2).
 
 ### Frase de chamariz {#cta}
 
-A seção da frase de chamariz fornece informações úteis de acordo com o status do seu programa. No caso de um novo programa, é possível ver as próximas etapas disponíveis e um lembrete de uma data de ativação, [definida durante a criação do programa](/help/getting-started/program-setup.md).
+A seção da frase de chamariz fornece informações úteis de acordo com o status do seu programa. Para um novo programa, você verá as próximas etapas oferecidas e um lembrete de uma data de ativação, [definida durante a criação do programa](/help/getting-started/program-setup.md).
 
-No caso de um programa em tempo real, é possível ver o status da última implantação e links para obter detalhes e iniciar uma nova implantação.
+Para um programa em tempo real, o status da última implantação é mostrado, com links para detalhes e como iniciar uma nova implantação.
 
 ![Frase de chamariz](assets/info-banner.png)
 

@@ -3,27 +3,21 @@ title: Configuração do programa
 description: Após a integração, o proprietário da empresa precisa fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 TQID: https://experienceleague.adobe.com/AqaA4GSOptV11h2y4V1Mt15KmEhEYBaiM-RvBFjtfWY
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
-source-wordcount: 570
-ht-degree: 93%
+source-wordcount: 549
+ht-degree: 65%
 
 ---
 
 # Configuração do programa {#program-setup}
 
-Após a integração, o proprietário da empresa configura o programa adicionando uma descrição e definindo indicadores principais de desempenho (KPIs). Esses KPIs são usados para testes de desempenho.
+Após a integração, o líder de negócios configura o programa adicionando uma descrição e definindo indicadores-chave de desempenho (KPIs). Esses KPIs são usados para testes de desempenho.
 
 ## Configuração do programa com o [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
-
-Siga estas etapas para configurar o programa e definir KPIs.
 
 1. Faça logon no Cloud Manager, em [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com), e selecione a organização apropriada.
 
@@ -49,17 +43,19 @@ Siga estas etapas para configurar o programa e definir KPIs.
 
 1. Na guia **Provisionamento**, é possível definir as opções de Dimensionamento sob demanda para seus ambientes, se o dimensionamento automático estiver habilitado para o seu programa.
 
-   O dimensionamento automático se aplica somente ao ambiente de produção e pode não estar disponível para todos os programas de clientes.
+   O dimensionamento automático se aplica somente ao ambiente de produção e não está disponível para alguns programas de clientes.
 
    ![Opções de provisionamento](/help/assets/Setup_Program-Provisioning.png)
 
 1. Clique em **Salvar**.
 
-Seu programa foi criado. Pode levar vários minutos para que os recursos sejam provisionados antes que o programa esteja pronto para uso.
+Seu programa foi criado. Os recursos podem ser provisionados em vários minutos antes que o programa esteja pronto para uso.
 
 ## Editar um programa {#editing-program}
 
-É possível editar programas depois que eles forem configurados. Siga estas etapas para editar um programa.
+É possível editar programas depois que eles forem configurados.
+
+**Para editar um programa:**
 
 1. Faça logon no Cloud Manager, em [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com), e selecione a organização apropriada.
 
@@ -89,14 +85,14 @@ Use a barra de ações para alternar para outro programa, editar o programa atua
 
 ## KPIs {#kpis}
 
-Os KPIs de sites são medidos em testes executados no ambiente de preparo. Normalmente, esses KPIs são dimensionados para baixo para se ajustarem aos recursos do ambiente de preparo.
+Os KPIs de sites são medidos em testes executados no ambiente de preparo. Normalmente, esses KPIs são ajustados para corresponder aos recursos do ambiente de preparo.
 
-Por exemplo, um usuário que espera uma média de 1000 visualizações de página por minuto em seu ambiente de produção e tem quatro servidores de Dispatcher/publicação em produção deve dimensionar isso para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores do Dispatcher/Publish.
+Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em seu ambiente de produção e tem quatro servidores do Dispatcher/publicação em produção reduz esse cenário para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores do Dispatcher/Publish.
 
 O teste de desempenho do Assets envolve uploads repetidos de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e várias métricas no nível do sistema são medidos durante o teste.
 
-Você pode ter uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, em frente ao ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI deve refletir somente o tráfego que deve passar pela CDN. Ou seja, o cache não é utilizado. Normalmente, essa experiência é um subconjunto relativamente pequeno do tráfego total de produção.
+Você tem uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, configurada para o seu ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI reflete somente o tráfego que deve passar pela CDN. Ou seja, o cache não é utilizado. Normalmente, esse tráfego é um subconjunto relativamente pequeno do tráfego total de produção.
 
 ## Vídeo de visão geral {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/34268?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)
