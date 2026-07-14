@@ -3,27 +3,23 @@ title: Configuração de ramificações
 description: Saiba como configurar sua primeira ramificação no Git e como ela é usada pelo pipeline CI/CD para implantar o código do seu aplicativo.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
 TQID: https://experienceleague.adobe.com/Mxmx725a6m7J9UtwkI5o3tJGzZ7O3c3Bgv-fF393sZg
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
 workflow-type: tm+mt
-source-wordcount: 332
-ht-degree: 95%
+source-wordcount: 314
+ht-degree: 47%
 
 ---
 
 # Configurar ramificações {#configuring-branches}
 
-Saiba como configurar sua primeira ramificação no Git e como ela é usada pelo pipeline CI/CD para implantar o código do seu aplicativo.
+Saiba como configurar sua primeira ramificação no Git e como o pipeline de CI/CD o usa para implantar seu código de aplicativo.
 
 ## Configurar a primeira ramificação no Git {#setting-up-your-first-branch-in-git}
 
-Um único repositório Git, inicialmente vazio, [está provisionado](/help/requirements/environment-provisioning.md) para cada programa integrado no Cloud Manager. Esse repositório pode conter quantas ramificações seu processo de desenvolvimento necessitar, mas deve haver pelo menos uma ramificação usada pelo pipeline CI/CD para implantar o código do aplicativo no preparo e na produção. A prática recomendada é usar `main` como o nome desta ramificação. Por conveniência, essa é a abordagem padrão dos clientes do Git ao configurar novos projetos.
+Um único repositório Git, inicialmente vazio, [está provisionado](/help/requirements/environment-provisioning.md) para cada programa integrado no Cloud Manager. Esse repositório pode conter quantas ramificações seu processo de desenvolvimento necessitar, mas o pipeline de CI/CD deve usar pelo menos uma ramificação para implantar o código do aplicativo no preparo e na produção. A prática recomendada é usar `main` como o nome desta ramificação. Essa abordagem é o comportamento padrão dos clientes Git ao configurar novos projetos.
 
 Por exemplo, ao configurar um novo projeto, você executa um conjunto de comandos semelhantes aos seguintes.
 
@@ -57,7 +53,7 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Isso não é um requisito para usar o cliente da linha de comando. Há uma variedade de clientes gráficos do Git disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo do cliente seja compatível com a utilização de HTTPS do Git, ele deve ser compatível com o [!UICONTROL Cloud Manager].
+>Isso não é um requisito para usar o cliente da linha de comando. Há uma variedade de clientes gráficos do Git disponíveis como aplicativos independentes ou como parte de um ambiente de desenvolvimento integrado (IDE), como o Eclipse ou o IntelliJ. Desde que o aplicativo cliente seja compatível com o uso de HTTPS do Git, ele é compatível com o [!UICONTROL Cloud Manager].
 
 ## Enviar a primeira ramificação {#pushing-your-first-branch}
 
@@ -77,12 +73,12 @@ To <url>
 
 >[!NOTE]
 >
->O URL específico, junto às suas credenciais, é fornecido pelo CSE (engenheiro de sucesso do cliente) da Adobe durante o período de integração do [!UICONTROL Cloud Manager].
+>Seu Adobe CSE (Engenheiro de Sucesso do Cliente) fornece a URL específica, juntamente com suas credenciais, durante a integração do [!UICONTROL Cloud Manager].
 
 ## Ramificações adicionais {#additional-branches}
 
-Uma única ramificação `main` pode ser suficiente para projetos muito simples, mas, na maioria dos casos, é necessária uma estratégia de ramificação mais complexa. Muitos clientes seguem um processo em que as atividades diárias de desenvolvimento são executadas em uma ramificação chamada `develop`. A ramificação `develop` é então mesclada à ramificação `main` no momento de uma implantação.
+Uma ramificação `main` é suficiente para projetos simples, mas uma estratégia de ramificação mais complexa é recomendada. Muitos clientes seguem um processo em que as atividades de desenvolvimento de rotina são executadas em uma ramificação chamada `develop`. A ramificação `develop` é então mesclada à ramificação `main` no momento de uma implantação.
 
 >[!TIP]
 >
->Para ver comandos comuns do Git, consulte a [Folha de características do Git](https://training.github.com/downloads/github-git-cheat-sheet).
+>Para ver comandos comuns do Git, consulte o [Guia de Referência do Git](https://training.github.com/downloads/github-git-cheat-sheet/).

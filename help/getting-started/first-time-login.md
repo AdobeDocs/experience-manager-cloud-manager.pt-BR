@@ -3,31 +3,27 @@ title: Primeiro logon
 description: Siga esta página se tiver definindo as configurações gerais e estiver pronto para usar o Cloud Manager pela primeira vez.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 TQID: https://experienceleague.adobe.com/2fA-qKPKPhxCCRzxWC5pujXWQCa9vcP8tJtnSXSdipU
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
 workflow-type: tm+mt
-source-wordcount: 305
-ht-degree: 84%
+source-wordcount: 294
+ht-degree: 28%
 
 ---
 
 # Primeiro logon {#first-time-login}
 
-Após definir a configuração geral do [!UICONTROL Cloud Manager], você estará pronto para usá-lo.
+Após concluir a configuração geral do [!UICONTROL Cloud Manager], você estará pronto para usá-lo.
 
 >[!NOTE]
 >
->Dependendo das funções atribuídas no [!UICONTROL Cloud Manager] e o estado do aplicativo, as telas que você vê podem ser diferentes das ilustrações.
+>Dependendo das funções atribuídas no [!UICONTROL Cloud Manager] e o estado do aplicativo, as telas que você vê são diferentes daquelas nas ilustrações.
 
 ## Fazer logon pela primeira vez {#logging-in-for-the-first-time}
 
-1. Entre no Cloud Manager em [experience.adobe.com](https://experience.adobe.com/experiencemanager). Para saber mais, consulte [Sobre o Adobe Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub)
+1. Entre no Cloud Manager em [experience.adobe.com](https://experience.adobe.com/experiencemanager). Para saber mais, consulte [Sobre o Adobe Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 1. No painel lateral esquerdo, clique em **Cloud Manager**.
 
    ![Cloud Manager no painel lateral esquerdo no Experience Manager](/help/getting-started/assets/cloud-manager-experiencemanager.png)
@@ -45,13 +41,13 @@ Após definir a configuração geral do [!UICONTROL Cloud Manager], você estar�
 -->
 
 
-1. Se o programa ainda não estiver configurado, clique em **Configurar programa** na [chamada para ação](/help/getting-started/navigation.md#cta) para configurar a descrição do programa e definir os indicadores principais de desempenho (KPIs). Se o programa já estiver configurado, a CTA poderá apresentar etapas adicionais.
+1. Se o programa ainda não estiver configurado, clique em **Configurar programa** no [call-to-action](/help/getting-started/navigation.md#cta) para configurar a descrição do programa e definir os KPIs (indicadores-chave de desempenho). Se o programa já estiver configurado, o CTA oferecerá as próximas etapas adicionais.
 
-Você pode prosseguir para o documento [Configuração do programa](/help/getting-started/program-setup.md) para as próximas etapas de configuração.
+Você pode continuar com o documento [Configuração do Programa](/help/getting-started/program-setup.md) para ver as próximas etapas da configuração do seu programa.
 
 ## Atividade do Cloud Manager {#activity}
 
-O Cloud Manager fornece uma exibição consolidada para a atividade de um programa. Ele lista todas as execuções de pipeline de CI/CD, tanto de produção quanto de não produção. Essa funcionalidade oferece visibilidade sobre atividades passadas e atuais.
+O Cloud Manager fornece uma exibição consolidada da atividade de um programa. Ele lista todas as execuções de pipeline de CI/CD, tanto de produção quanto de não produção. Essa funcionalidade fornece informações sobre o histórico e a atividade atual.
 
 >[!TIP]
 >
@@ -59,4 +55,4 @@ O Cloud Manager fornece uma exibição consolidada para a atividade de um progra
 
 >[!NOTE]
 >
->Por padrão, um usuário com acesso a um ambiente do AEM também terá a função de usuário do Cloud Manager. Esta função por si só é insuficiente para conceder ao usuário acesso à visualização dos detalhes do programa. Esse usuário, apenas com a função de usuário do Cloud Manager, pode navegar pelas opções de menu do programa até o URL de criação do ambiente do AEM (se houver ambientes). Tais usuários devem entrar em contato com o administrador se quiserem obter acesso no nível do programa.
+>Por padrão, um usuário com acesso a um ambiente do AEM também terá a função de usuário do Cloud Manager. Essa função não concede ao usuário acesso à visualização de detalhes do programa. Um usuário com somente a função de Usuário do Cloud Manager pode navegar usando as opções do menu do programa até o URL do autor do ambiente do AEM (se existirem ambientes). Esses usuários devem entrar em contato com os administradores se quiserem obter acesso no nível do programa.
