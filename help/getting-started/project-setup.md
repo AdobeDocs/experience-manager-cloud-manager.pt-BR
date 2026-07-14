@@ -8,10 +8,10 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
-source-wordcount: 1430
-ht-degree: 100%
+source-wordcount: 1411
+ht-degree: 65%
 
 ---
 
@@ -25,23 +25,23 @@ Os projetos do AEM existentes precisam seguir algumas regras básicas para serem
 
 * Os projetos devem ser criados usando o Apache Maven.
 * É necessário que haja um arquivo `pom.xml` na raiz do repositório Git.
-   * Esse arquivo `pom.xml` pode se referir a quantos submódulos (que, por sua vez, podem ter outros módulos derivados) forem necessários.
+   * Esse arquivo `pom.xml` pode se referir a quantos submódulos (que por sua vez têm outros módulos derivados) forem necessários.
    * Você pode adicionar referências a repositórios de artefatos Maven adicionais em seu arquivos `pom.xml`.
    * O acesso a [repositórios de artefatos protegidos por senha](#password-protected-maven-repositories) é suportado quando configurado. No entanto, o acesso a repositórios de artefatos protegidos pela rede não é permitido.
-* Pacotes de conteúdo implantáveis são descobertos pela varredura de arquivos de pacote de conteúdo (.zip) contidos em um diretório chamado `target`.
-   * Qualquer número de submódulos pode produzir pacotes de conteúdo.
-* Os artefatos do Dispatcher que podem ser implantados são descobertos ao verificar arquivos `zip` que continham subdiretórios de `target` nomeados como `conf` e `conf.d`.
+* O Cloud Manager descobre pacotes de conteúdo implantáveis ao verificar arquivos de pacote de conteúdo (.zip) contidos em um diretório chamado `target`.
+   * Qualquer número de submódulos produz pacotes de conteúdo.
+* O Cloud Manager descobre artefatos Dispatcher implantáveis ao verificar `zip` arquivos contidos em subdiretórios de `target` nomeados como `conf` e `conf.d`.
 * Se houver mais de um pacote de conteúdo, a ordem de implantação dos pacotes não será garantida.
-* Se uma ordem específica for necessária, as dependências do pacote de conteúdo poderão ser usadas para definir a ordem.
-* Os pacotes podem ser [ignorados](#skipping-content-packages) na implantação.
+   * Se uma ordem específica for necessária, as dependências do pacote de conteúdo poderão ser usadas para definir a ordem.
+* Os pacotes podem ser [ignorados](#skipping-content-packages) da implantação.
 
 ## Ativar perfis do Maven no Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
-Em alguns casos limitados, pode ser necessário variar um pouco o processo de criação ao executar no Cloud Manager, comparado à quando ele é executado em estações de trabalho de desenvolvedor. Para estes casos, [perfis Maven](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) podem ser usados para definir como o processo de criação deve ser diferente em ambientes distintos, incluindo o Cloud Manager.
+Em alguns casos limitados, modifique um pouco o processo de criação ao executá-lo no Cloud Manager. Isso é diferente quando executado em estações de trabalho de desenvolvedor. Nesses casos, os [Perfis Maven](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) definem como a compilação difere em diferentes ambientes, incluindo o Cloud Manager.
 
-Para ativar um perfil do Maven no ambiente de build do Cloud Manager, é necessário procurar a `CM_BUILD` [variável de ambiente](/help/getting-started/build-environment.md#environment-variables). Por outro lado, um perfil destinado a ser usado somente fora do ambiente de build do Cloud Manager deve ser ativado procurando a ausência dessa variável.
+A ativação de um Perfil Maven no ambiente de compilação do Cloud Manager deve ser feita procurando pela `CM_BUILD` [variável de ambiente](/help/getting-started/build-environment.md#environment-variables). Por outro lado, um perfil destinado a ser usado somente fora do ambiente de compilação do Cloud Manager deve ser ativado verificando a ausência dessa variável.
 
-Por exemplo, se você quiser gerar uma mensagem simples apenas quando o build for executado no Cloud Manager, faça o seguinte:
+Por exemplo, se você quiser gerar uma mensagem simples apenas quando a build for executada no Cloud Manager, faça o seguinte:
 
 ```xml
         <profile>
@@ -79,7 +79,7 @@ Por exemplo, se você quiser gerar uma mensagem simples apenas quando o build fo
 >
 >Para testar esse perfil em uma estação de trabalho de desenvolvedor, você pode habilitá-lo na linha de comando (com `-PcmBuild`) ou em um ambiente de desenvolvimento integrado (IDE).
 
-Se você quiser gerar uma mensagem simples somente quando o build for executado fora do Cloud Manager, faça o seguinte:
+E se você quiser gerar uma mensagem simples apenas quando a build for executada fora do Cloud Manager, faça o seguinte:
 
 ```xml
         <profile>
@@ -115,19 +115,19 @@ Se você quiser gerar uma mensagem simples somente quando o build for executado 
 
 ## Suporte ao repositório do Maven protegido por senha {#password-protected-maven-repositories}
 
-Os artefatos de um repositório do Maven protegido por senha devem ser usados com cuidado, pois o código implantado dessa maneira não está totalmente sujeito às verificações de qualidade aplicadas pelos portais de qualidade do Cloud Manager. A Adobe também aconselha implantar as fonte de Java e todo o código-fonte do projeto junto com o binário.
+Os artefatos de um repositório Maven protegido por senha devem ser usados com cuidado, pois o código implantado dessa maneira não está totalmente sujeito às verificações de qualidade aplicadas pelos padrões de qualidade da Cloud Manager. A Adobe também aconselha implantar as fontes Java e todo o código-fonte do projeto junto com o binário.
 
 >[!TIP]
 >
->Artefatos de repositórios Maven protegidos por senha devem ser usados somente em casos raros e para códigos não vinculados ao AEM.
+>Artefatos de repositórios Maven protegidos por senha devem ser usados somente em casos raros e para código não vinculado ao AEM.
 
 Para usar um repositório do Maven protegido por senha a partir do Cloud Manager, especifique a senha (e, opcionalmente, o nome de usuário) como uma [variável de pipeline](/help/getting-started/build-environment.md#pipeline-variables) secreta e faça referência a esse segredo dentro de um arquivo chamado `.cloudmanager/maven/settings.xml` no repositório Git. Esse arquivo segue o esquema do [Arquivo de configurações Maven](https://maven.apache.org/settings.html).
 
-Quando o processo de build do Cloud Manager é iniciado, o elemento `<servers>` desse arquivo é mesclado com o arquivo `settings.xml` padrão fornecido pelo Cloud Manager. Servidores personalizados não devem usar IDs de servidor que comecem com `adobe` e `cloud-manager`. Esses IDs são considerados reservados. O Cloud Manager espelha somente os IDs de servidor que correspondem a um dos prefixos especificados ou ao ID `central` padrão.
+Quando o processo de build do Cloud Manager é iniciado, o elemento `<servers>` desse arquivo é mesclado com o arquivo `settings.xml` padrão fornecido pelo Cloud Manager. Servidores personalizados usam IDs de servidor que não iniciam com `adobe` ou `cloud-manager`. Esses IDs são considerados reservados. O Cloud Manager espelha somente os IDs de servidor que correspondem a um dos prefixos especificados ou ao ID `central` padrão.
 
-Com esse arquivo definido, a ID do servidor seria referenciada de dentro de um elemento `<repository>` e/ou `<pluginRepository>`, que está dentro do arquivo `pom.xml`. Geralmente, estes elementos `<repository>` e/ou `<pluginRepository>` ficariam contidos dentro de um [perfil específico do Cloud Manager](#activating-maven-profiles-in-cloud-manager), embora isso não seja estritamente necessário.
+Com este arquivo definido, a ID do servidor é referenciada de dentro de um elemento `<repository>` e/ou `<pluginRepository>` dentro do arquivo `pom.xml`. Estes elementos `<repository>` e/ou `<pluginRepository>` estão contidos dentro de um [perfil específico do Cloud Manager](#activating-maven-profiles-in-cloud-manager), embora isso não seja estritamente necessário.
 
-Por exemplo, se o repositório estiver em `https://repository.myco.com/maven2`, o nome de usuário que o Cloud Manager deve usar é `cloudmanager` e a senha é `secretword`.
+Por exemplo, suponha que o repositório esteja em `https://repository.myco.com/maven2`, o nome de usuário que a Cloud Manager usa é `cloudmanager` e a senha é `secretword`.
 
 Primeiro, defina a senha como um segredo no pipeline:
 
@@ -217,7 +217,7 @@ Configure o `maven-source-plugin` no seu projeto:
 
 ### Implantar fontes do projeto {#deploying-project-sources}
 
-É uma boa prática implantar toda a fonte do projeto juntamente com o binário em um repositório do Maven. Dessa forma, é possível reconstruir o artefato exato.
+É uma boa prática implantar todo o código-fonte do projeto junto com o binário em um repositório Maven. Dessa forma, é possível reconstruir o artefato exato.
 
 Configure o `maven-assembly-plugin` no seu projeto:
 
@@ -244,9 +244,9 @@ Configure o `maven-assembly-plugin` no seu projeto:
 
 ## Ignorar pacotes de conteúdo {#skipping-content-packages}
 
-No Cloud Manager, as compilações podem produzir qualquer número de pacotes de conteúdo. Por uma variedade de motivos, pode ser desejável produzir um pacote de conteúdo, mas não implantá-lo. Por exemplo, essa abordagem pode ser útil quando você cria pacotes de conteúdo exclusivamente para teste ou quando outra etapa do processo de build refaz o pacote. Ou seja, na forma de um subpacote de outro pacote.
+No Cloud Manager, as builds podem produzir qualquer número de pacotes de conteúdo. Por uma variedade de motivos, pode ser desejável produzir um pacote de conteúdo, mas não implantá-lo. Por exemplo, essa abordagem pode ser útil quando você cria pacotes de conteúdo exclusivamente para teste ou quando outra etapa do processo de build refaz o pacote. Ou seja, na forma de um subpacote de outro pacote.
 
-Nessas hipóteses, o Cloud Manager procurará por uma propriedade chamada `cloudManagerTarget` nas propriedades dos pacotes de conteúdo criados. Se essa propriedade for definida como `none`, o pacote será ignorado e não será implantado. O mecanismo para definir essa propriedade depende da forma em que o build produz o pacote de conteúdo. Por exemplo, com o `filevault-maven-plugin`, você configuraria o plug-in da seguinte maneira:
+Nessas hipóteses, o Cloud Manager procurará por uma propriedade chamada `cloudManagerTarget` nas propriedades dos pacotes de conteúdo criados. Se essa propriedade for definida como `none`, o pacote será ignorado e não será implantado. O mecanismo para definir essa propriedade depende da forma em que o build produz o pacote de conteúdo. Por exemplo, com o `filevault-maven-plugin`, configure o plug-in da seguinte maneira:
 
 ```xml
         <plugin>
@@ -282,7 +282,7 @@ Com o `content-package-maven-plugin`, o processo é semelhante:
 
 Em muitos casos, um mesmo código é implantado em vários ambientes do AEM. Sempre que possível, o Cloud Manager evitará reconstruir a base de código quando detectar que a mesma confirmação do Git é usada em várias execuções de pipeline de pilha completa.
 
-Quando uma execução é iniciada, é extraído. o commit HEAD atual do pipeline do branch (ramificação). O hash do commit fica visível na interface e por meio da API. Quando a etapa de compilação for concluída com sucesso, os artefatos resultantes serão armazenados com base nesse hash de confirmação e poderão ser reutilizados em execuções de pipeline subsequentes.
+Quando uma execução é iniciada, é extraído. o commit HEAD atual do pipeline do branch (ramificação). O hash do commit fica visível na interface e por meio da API. Quando a etapa de criação é concluída com sucesso, os artefatos resultantes são armazenados com base nesse hash de confirmação e podem ser reutilizados em execuções de pipeline subsequentes.
 
 Os pacotes serão reutilizados nos pipelines, se estiverem no mesmo programa. Ao procurar pacotes que possam ser reutilizados, o AEM ignora ramificações e reutiliza artefatos entre ramificações.
 
@@ -339,7 +339,7 @@ Se desejado, o comportamento de reutilização pode ser desabilitado para pipeli
 
 * Os artefatos de compilação não são reutilizados em diferentes programas, independentemente de o hash de confirmação ser idêntico.
 * Os artefatos de build são reutilizados no mesmo programa mesmo se a ramificação e/ou o pipeline for diferente.
-* [O manuseio de versão do Maven](/help/managing-code/maven-project-version.md) substitui a versão do projeto somente em pipelines de produção. Se o mesmo commit for usado para pipelines de desenvolvimento e produção, e o pipeline de desenvolvimento for executado primeiro, as versões serão implantadas no estágio e na produção inalteradas. No entanto, ainda será criada uma tag nesse caso.
+* [O manuseio de versão do Maven](/help/managing-code/maven-project-version.md) substitui a versão do projeto somente nos pipelines de produção. Se a mesma confirmação for usada para pipelines de desenvolvimento e produção e o pipeline de desenvolvimento for executado primeiro, as versões serão implantadas no armazenamento temporário e na produção sem alterações. No entanto, ainda será criada uma tag nesse caso.
 * Se a recuperação dos artefatos armazenados não for bem-sucedida, a etapa de build será executada como se nenhum artefato tivesse sido armazenado.
 * Variáveis de pipeline diferentes de `CM_DISABLE_BUILD_REUSE` não são consideradas quando o Cloud Manager decide reutilizar artefatos de build criados anteriormente.
 
