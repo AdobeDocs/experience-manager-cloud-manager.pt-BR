@@ -3,15 +3,12 @@ title: Gerenciar tokens de acesso no Cloud Manager
 description: Saiba como visualizar, editar e excluir tokens de acesso usados para Trazer seu próprio Git no Cloud Manager no Adobe Managed Services.
 exl-id: 873aad0b-d7c6-4bc3-a70d-bbfdc1e02193
 TQID: https://experienceleague.adobe.com/o-kW-Wuj-afgXomU0kErSwYsNZziQFkpvtxvU0PQj3M
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: b52942282fe5f825181123b3839ef155753c5e23
 workflow-type: tm+mt
-source-wordcount: 387
-ht-degree: 4%
+source-wordcount: 382
+ht-degree: 2%
 
 ---
 
@@ -19,13 +16,13 @@ ht-degree: 4%
 
 O Cloud Manager usa tokens de acesso para gerenciar repositórios hospedados em plataformas Git externas. Anteriormente, se um token expirasse, o repositório associado precisaria ser reintegrado para permanecer operacional.
 
-Agora, o **Gerenciar tokens de acesso** permite gerenciar tokens com mais eficiência. Você pode visualizar, renomear ou remover tokens conectados a provedores Git externos compatíveis, incluindo GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
+Agora, o **Gerenciar tokens de acesso** permite gerenciar tokens com mais eficiência. É possível gerenciar tokens para provedores Git compatíveis: GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
 
 Consulte também [Adicionar repositórios externos no Cloud Manager](/help/managing-code/external-repositories.md).
 
 ## Exibir tokens de acesso {#view-access-tokens}
 
-1. Faça logon no Cloud Manager, em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), e selecione a organização apropriada.
+1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selecione a organização apropriada.
 1. No console **[Meus Programas](/help/getting-started/navigation.md#my-programs-console)**, selecione o programa cujo token de acesso do Bring Your Own Git você deseja gerenciar.
 1. No menu lateral, em **Programa**, clique em ![Ícone de estrutura de tópicos de pastas](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Repositórios**.
 1. Próximo ao canto superior direito da página, clique em **Gerenciar tokens de acesso**.
