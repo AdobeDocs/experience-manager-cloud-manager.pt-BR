@@ -4,16 +4,12 @@ description: Saiba mais sobre o lançamento do Cloud Manager 2026.7.0 no Adobe M
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
 TQID: https://experienceleague.adobe.com/4zfTpSYuFwrJZ-oeL1SObT14v2Rd--Z1hKn5JllHAro
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: acd33650c938d49bac5c319f8c938202fe543bbd
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 3b9ef92a96dab9c1f4b93466d8a2d15185b5864f
 workflow-type: tm+mt
-source-wordcount: 391
+source-wordcount: 390
 ht-degree: 9%
 
 ---
@@ -47,16 +43,16 @@ Um novo modelo de build compila apenas módulos alterados (em vez do repositóri
 
   Para obter mais informações, consulte o seguinte:
 
-   * [Sobre o uso da Compilação Inteligente em um pipeline de produção](/help/using/production-pipelines.md#about-smart-build) e [Sobre o uso da Compilação Inteligente em um pipeline de não produção](/help/using/non-production-pipelines.md#about-smart-build)
-   * [Adicionar um pipeline de produção](/help/using/production-pipelines.md##adding-production-pipeline) e [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+  * [Sobre o uso da Compilação Inteligente em um pipeline de produção](/help/using/production-pipelines.md#about-smart-build) e [Sobre o uso da Compilação Inteligente em um pipeline de não produção](/help/using/non-production-pipelines.md#about-smart-build)
+  * [Adicionar um pipeline de produção](/help/using/production-pipelines.md#adding-production-pipeline) e [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ## Programas do Beta {#beta-program}
 
-Participe dos programas beta da Cloud Manager para obter acesso exclusivo aos recursos futuros antes do lançamento geral.
+Para obter acesso exclusivo aos recursos futuros antes do lançamento geral, participe dos programas beta da Cloud Manager.
 
 >[!IMPORTANT]
 >
->As versões do Beta contêm defeitos e são fornecidas &quot;NO ESTADO EM QUE SE ENCONTRAM&quot; sem garantias de nenhum tipo. A Adobe não tem nenhuma obrigação de manter, corrigir, atualizar, alterar, modificar ou oferecer suporte (por meio dos Serviços de suporte da Adobe ou de outra forma) às versões beta. Os clientes usam versões beta por sua conta e risco e não devem depender do funcionamento ou do desempenho corretos das versões beta, nem de qualquer documentação ou material que as acompanhe. Os recursos e as APIs na versão beta estão sujeitos a alterações sem aviso prévio. Qualquer uso das versões beta é totalmente de responsabilidade do cliente.
+>As versões do Beta contêm defeitos e são fornecidas &quot;NO ESTADO EM QUE SE ENCONTRAM&quot; sem garantias de nenhum tipo. A Adobe não tem nenhuma obrigação de manter, corrigir, atualizar, alterar, modificar ou oferecer suporte (por meio dos Serviços de suporte da Adobe ou de outra forma) às versões beta. Os clientes usam versões beta por sua conta e risco. Não confie no funcionamento ou no desempenho correto das versões beta, nem em qualquer documentação ou material que as acompanhe. Os recursos e as APIs na versão beta estão sujeitos a alterações sem aviso prévio. Qualquer uso das versões beta é totalmente de responsabilidade do cliente.
 
 As seguintes oportunidades do programa beta estão disponíveis no momento:
 
