@@ -3,25 +3,21 @@ title: Adicionar usuários e funções
 description: Saiba como usar o Admin Console para adicionar usuários, funções e criar perfis.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 TQID: https://experienceleague.adobe.com/95vfyk6-SMg7GFaCVWkiaaGObo603DJqvExEgPFrwqw
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 130406286e65ad0e0651451766ca740f3458a9c1
 workflow-type: tm+mt
-source-wordcount: 796
-ht-degree: 85%
+source-wordcount: 797
+ht-degree: 75%
 
 ---
 
 # Adicionar usuários e funções {#add-users-and-roles}
 
-Vários recursos do [!UICONTROL Cloud Manager] exigem permissões específicas para serem usados. Por exemplo, somente certos usuários têm permissão para definir os KPIs (indicadores-chave de desempenho) para um programa. Essas permissões são logicamente agrupadas em funções.
+Vários recursos do [!UICONTROL Cloud Manager] exigem permissões específicas para serem usados. Por exemplo, somente usuários autorizados têm permissão para definir os KPIs (indicadores-chave de desempenho) para um programa. Essas permissões são logicamente agrupadas em funções.
 
-Atualmente, o [!UICONTROL Cloud Manager] define quatro funções de usuário que controlam a disponibilidade de recursos específicos:
+O [!UICONTROL Cloud Manager] define quatro funções de usuário, que controlam a disponibilidade de recursos específicos:
 
 * Proprietário da empresa
 * Gerenciador de programas
@@ -51,9 +47,9 @@ A tabela a seguir resume as funções no Cloud Manager.
 
 ## Criar um perfil de produto usando o Admin Console {#using-admin-console-to-create-a-profile}
 
-As funções do [!UICONTROL Cloud Manager] são gerenciadas no Admin Console. Associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager].
+As funções do [!UICONTROL Cloud Manager] são gerenciadas no Admin Console. A adição do usuário a um perfil de produto [!UICONTROL Cloud Manager] fornece associações de função específicas.
 
-O Admin Console é um local central para gerenciar direitos da Adobe em toda a organização. Para saber mais sobre o Adobe Admin Console, consulte [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).
+O Admin Console é um local central para gerenciar direitos da Adobe em toda a organização. Para saber mais sobre o Adobe Admin Console, consulte [Admin Console](https://helpx.adobe.com/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html).
 
 Um admin deve criar novos perfis de produto no contexto de produto do [!UICONTROL AEM Managed Services] para atribuir permissões com base em função para usuários do [!UICONTROL Cloud Manager], correspondentes a cada uma das quatro funções do [!UICONTROL Cloud Manager].
 
@@ -87,11 +83,11 @@ CQDOC-22790
 
    ![Novo perfil](/help/assets/admin-console-product-profiles.png)
 
-1. Forneça as informações para configurar uma nova função do [!UICONTROL Cloud Manager].
+1. Para configurar uma nova função para [!UICONTROL Cloud Manager], forneça as informações.
 
    * **Nome do perfil** - O **Nome do perfil** pode ser qualquer coisa. No entanto, para evitar confusão, é recomendável usar os valores da coluna **Nome de perfil recomendado**.
    * **Nome de exibição** - O **Nome de exibição** deve ser o valor técnico definido pelo [!UICONTROL Cloud Manager] (consulte a tabela a seguir).
-   * **Grupo de permissões** - Você pode escolher um grupo de permissões para o perfil (nem sempre está disponível).
+   * **Grupo de Permissões** - Escolha um grupo de permissões para o perfil (nem sempre está disponível).
 
 <!-- 
 CQDOC-22790
@@ -131,12 +127,12 @@ Depois de criar perfis de produto, você pode atribuir usuários ou grupos de us
 
 1. Na caixa de diálogo **Editar produtos e grupos de usuários**, clique em ![Ícone Adicionar, sinal de adição](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) e selecione os perfis a serem atribuídos ao usuário.
 
-   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão editar (um lápis), mas funcionará da mesma maneira.
+   * Se o usuário já estiver atribuído às funções, o ícone ![Adicionar, mais o botão ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) será um botão de edição (um lápis), mas funcionará da mesma maneira.
 
    ![Editar produtos e grupos de usuários](/help/assets/admin-console-edit-products-and-user-groups.png)
 
 1. Clique em **Salvar** para salvar os perfis para o usuário.
 
-Repita as mesmas etapas para atribuir perfis a grupos de usuários, mas selecione **Grupos de usuários** no painel de navegação esquerdo da guia **Usuários**. Clique em um grupo de usuários e selecione os **Perfis de produto atribuídos**, clique em **Atribuir perfil de produto** para atribuir perfis.
+Repita as mesmas etapas para atribuir perfis a grupos de usuários, mas selecione **Grupos de usuários** no painel de navegação esquerdo da guia **Usuários**. Clique em um grupo de usuários, selecione os **Perfis de produto atribuídos** e clique em **Atribuir perfil de produto** para atribuir perfis.
 
 ![Atribuir perfis ao grupo](/help/assets/admin-console-edit-user-groups.png)
