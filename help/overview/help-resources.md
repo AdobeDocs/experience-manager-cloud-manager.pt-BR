@@ -21,6 +21,6 @@ ht-degree: 64%
 
 Entre em contato com Engenheiro de sucesso do cliente (CSE) do Adobe Managed Services para obter assistência com o [!UICONTROL Cloud Manager]. Eles podem informar se podem resolver seu problema ou se você precisa enviar um tíquete de suporte ao Atendimento ao cliente da Adobe.
 
-Acesse o [Suporte corporativo](https://experienceleague.adobe.com/?support-tab=home&lang=pt-BR#support) para criar tíquetes de suporte.
+Acesse o [Suporte corporativo](https://experienceleague.adobe.com/pt-br?support-tab=home&lang=pt-BR#support) para criar tíquetes de suporte.
 
-Consulte [Acesso ao portal de suporte do AEM](https://helpx.adobe.com/business/enterprise/get-help/support-and-expert-services.html) para obter mais informações sobre como criar tíquetes de suporte com o Atendimento ao cliente da Adobe.
+Consulte [Acesso ao portal de suporte do AEM](https://helpx.adobe.com/br/business/enterprise/get-help/support-and-expert-services.html) para obter mais informações sobre como criar tíquetes de suporte com o Atendimento ao cliente da Adobe.
