@@ -23,7 +23,7 @@ Saiba mais sobre a Adobe ID e como usá-la para acessar os recursos da Experienc
 
 Como parte do processo de integração, a Adobe cria um identificador de organização para sua empresa no Adobe Identity Management System (IMS). O IMS é o local onde todos os usuários e suas permissões podem ser gerenciados. Cada usuário que precisa ser membro dessa organização e que recebe acesso a qualquer um dos serviços da [!UICONTROL Experience Cloud] deve ter uma Adobe ID.
 
-Para obter informações sobre uma Adobe ID, consulte [Gerenciar tipos de identidade da Adobe](https://helpx.adobe.com/business/enterprise/set-up-your-organization/identity.html) para obter instruções detalhadas sobre como obter uma Adobe ID usando um dos tipos de identidade disponíveis.
+Para obter informações sobre uma Adobe ID, consulte [Gerenciar tipos de identidade da Adobe](https://helpx.adobe.com/br/business/enterprise/set-up-your-organization/identity.html) para obter instruções detalhadas sobre como obter uma Adobe ID usando um dos tipos de identidade disponíveis.
 
 ### Usuários e funções {#users-and-roles}
 
