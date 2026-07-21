@@ -10,10 +10,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: c2a6d2f87cf9f9c98f2af818f73b1fb2793c2e46
 workflow-type: tm+mt
-source-wordcount: 421
-ht-degree: 100%
+source-wordcount: 420
+ht-degree: 82%
 
 ---
 
@@ -77,9 +77,9 @@ Consulte o [Manual de referência do Git](https://git-scm.com/book/en/v2/Git-Too
 Ao usar submódulos do Git, observe que:
 
 * O URL do Git deve seguir exatamente a sintaxe descrita acima.
-* Por motivos de segurança, não incorpore credenciais nesses URLs.
+* Por motivos de segurança, não inclua credenciais nesses URLs.
 * Somente os submódulos na raiz da ramificação são permitidos.
-* As referências do submódulo Git são armazenadas em confirmações Git específicas. Como resultado, quando são feitas alterações no repositório do submódulo, a confirmação referenciada precisa ser atualizada. Por exemplo, usando `git submodule update --remote`.
+* As referências do submódulo Git são armazenadas em confirmações Git específicas. Como resultado, quando alterações no repositório do submódulo são feitas, é necessário atualizar a confirmação referenciada. Por exemplo, usando `git submodule update --remote`.
 * A menos que seja necessário, o Adobe recomenda que você use submódulos “superficiais” executando `git config -f .gitmodules submodule.<submodule path>.shallow true` para cada submódulo.
 
 
@@ -87,7 +87,7 @@ Ao usar submódulos do Git, observe que:
 
 O suporte para submódulos Git ao usar [repositórios privados](private-repositories.md) é basicamente o mesmo da utilização de repositórios da Adobe.
 
-No entanto, após configurar o arquivo `pom.xml` e executar os comandos `git submodule`, é necessário adicionar um arquivo `.gitmodules` no diretório raiz do repositório agregador do Cloud Manager para detectar a configuração do submódulo.
+No entanto, para que o Cloud Manager detecte a configuração do submódulo, você deve adicionar um arquivo `.gitmodules` ao diretório raiz do repositório do agregador após configurar seu arquivo `pom.xml` e executar os comandos `git submodule`.
 
 ![arquivo .gitmodules](assets/gitmodules.png)
 

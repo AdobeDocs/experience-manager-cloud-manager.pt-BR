@@ -10,9 +10,9 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: a7e83374a2282e4d63efb409d40722ebe9b4697e
 workflow-type: tm+mt
-source-wordcount: 2568
+source-wordcount: 2528
 ht-degree: 25%
 
 ---
@@ -80,11 +80,11 @@ THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/C
 
 1. Clique em **Salvar** para adicionar o repositório.
 
-   Agora, forneça um token de acesso para validar a propriedade do repositório externo.
+   Para validar a propriedade do repositório externo, forneça um token de acesso.
 
-1. Na caixa de diálogo **Validação de Propriedade de Repositório Privado**, forneça um token de acesso para validar a propriedade do repositório externo para que você possa acessá-lo e clique em **Validar**.
+1. Para validar a propriedade do repositório externo para acessá-lo, forneça um token de acesso na caixa de diálogo **Validação da Propriedade do Repositório Privado** e clique em **Validar**.
 
-   ![Selecionar um token de acesso existente para um repositório](/help/managing-code/assets/repositories-exisiting-access-token.png)
+   ![Seleção de um token de acesso para um repositório](/help/managing-code/assets/repositories-exisiting-access-token.png)
    *Selecionando um token de acesso existente para um repositório Bitbucket (somente para ilustração).*
 
 >[!BEGINTABS]
@@ -157,7 +157,7 @@ Consulte também [Gerenciar tokens de acesso](/help/managing-code/manage-access-
 
 1. Adicionar ou editar um pipeline:
    * [Adicionar um pipeline de produção](/help/using/production-pipelines.md#adding-production-pipeline)
-   * [Adicionar pipelines de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline)
+   * [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline)
    * [Editar um pipeline](/help/using/managing-pipelines.md#editing-pipelines)
 
    ![Repositório de código-fonte do pipeline e ramificação Git](/help/managing-code/assets/pipeline-repo-gitbranch.png)
@@ -210,9 +210,9 @@ Para todos os outros repositórios externos integrados com um token de acesso, c
 1. Na caixa de diálogo **Webhook de configuração**, faça o seguinte:
 
    1. Ao lado do campo **URL do Webhook**, clique em ![Ícone de cópia](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
-Cole o URL em um arquivo de texto sem formatação. A URL copiada é necessária para as configurações do Webhook do fornecedor do Git.
+      Cole o URL em um arquivo de texto sem formatação. A URL copiada é necessária para as configurações do Webhook do fornecedor do Git.
    1. Ao lado do campo de token/chave **Segredo do Webhook**, clique em **Gerar** e em ![Ícone Copiar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
-Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário para as configurações de Webhook do fornecedor de Git.
+      Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário para as configurações de Webhook do fornecedor de Git.
 1. Clique em **Fechar**.
 1. Navegue até sua solução de fornecedor do Git (GitHub Enterprise, GitLab, Bitbucket ou Azure DevOps).
 
@@ -222,10 +222,10 @@ Cole o segredo em um arquivo de texto simples. O segredo copiado é necessário 
 1. Cole o URL do Webhook copiado anteriormente no campo de texto do URL.
    1. Substitua o parâmetro de consulta `api_key` na URL do Webhook pela sua própria chave de API real.
 
-      Para gerar uma chave de API, você deve criar um projeto de integração no Adobe Developer Console. Consulte [Criando um Projeto de Integração de API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/) para obter detalhes completos.
+      Para gerar uma chave de API, você deve criar um projeto de integração no Adobe Developer Console. Consulte [Criando um Projeto de Integração de API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration) para obter detalhes completos.
 
 1. Cole o Segredo do Webhook copiado anteriormente no campo de texto **Segredo** (ou **Chave secreta** ou **Token secreto**).
-1. Configure o webhook para enviar os eventos exigidos pelo Cloud Manager. Use a tabela a seguir para determinar os eventos corretos para seu provedor Git.
+1. Para enviar os eventos exigidos pelo Cloud Manager, configure o webhook. Use a tabela a seguir para determinar os eventos corretos para seu provedor Git.
 
 >[!BEGINTABS]
 
@@ -277,7 +277,7 @@ O comportamento varia dependendo do provedor Git que você usa, conforme descrit
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/github -->
 
-Quando a verificação é criada, ela é exibida como a seguinte captura de tela abaixo. A principal diferença em relação a `GitHub.com` é que `GitHub.com` usa uma execução de verificação, enquanto o GitHub Enterprise (usando tokens de acesso pessoal) gera um status de confirmação:
+Quando a verificação é criada, ela é exibida como a seguinte captura de tela. A principal diferença em relação a `GitHub.com` é que `GitHub.com` usa uma execução de verificação, enquanto o GitHub Enterprise (usando tokens de acesso pessoal) gera um status de confirmação:
 
 ![Confirmar status para indicar o processo de validação de PR no GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
 
@@ -285,15 +285,15 @@ Quando a verificação é criada, ela é exibida como a seguinte captura de tela
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/gitlab -->
 
-As interações do GitLab dependem apenas de comentários. Quando a validação começar, um comentário será adicionado. Quando a validação for concluída (com êxito ou com falha), o comentário inicial será removido e substituído por um novo comentário que conterá os resultados da validação ou os detalhes do erro.
+As interações do GitLab dependem de comentários isoladamente. Quando a validação começar, um comentário será adicionado. Quando a validação for concluída (com êxito ou com falha), o comentário inicial será removido e substituído por um novo comentário que conterá os resultados da validação ou os detalhes do erro.
 
 Quando a validação de qualidade do código estiver em execução:
 
 ![Quando a validação de qualidade do código estiver em execução](/help/managing-code/assets/repository-webhook-gitlab1.png)
 
-Quando a validação da qualidade a frio for concluída:
+Quando a validação da qualidade do código for concluída:
 
-![Quando a validação da qualidade a frio for concluída](/help/managing-code/assets/repository-webhook-gitlab2.png)
+![Quando a validação da qualidade do código for concluída](/help/managing-code/assets/repository-webhook-gitlab2.png)
 
 Quando a validação da qualidade do código falha com um erro:
 
