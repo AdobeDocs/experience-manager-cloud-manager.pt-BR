@@ -4,21 +4,14 @@ description: Saiba como iniciar atualizações de service pack em ambientes de d
 hide: true
 exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
 TQID: https://experienceleague.adobe.com/jdKXZuiGX-MZMKrsWCM6BzZ2hGfZLnvwMh2XTstMmZs
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 8964aad406d3e7fc5b911b98f928ad0427511230
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: b4846046c6c410642d3e23f2cc2c002a6d53b3b7
 workflow-type: tm+mt
-source-wordcount: 468
-ht-degree: 1%
+source-wordcount: 455
+ht-degree: 2%
 
 ---
 
@@ -28,7 +21,7 @@ Saiba como iniciar atualizações de service pack em ambientes de desenvolviment
 
 >[!NOTE]
 >
->Este recurso só está disponível para [o programa beta privado](/help/release-notes/current.md#beta-program).
+>Este recurso só está disponível no [programa beta privado](/help/release-notes/current.md#beta-program).
 
 ## Visão geral {#service-pack-updates-overview}
 
@@ -71,7 +64,7 @@ Depois de iniciar a atualização, você pode monitorar o progresso na página A
 **Para acompanhar a atualização do service pack:**
 
 1. Navegue até a página Atividade no painel Cloud Manager.
-1. Procure a entrada Instalação do pacote de serviços.
+1. Localize a entrada Instalação do Service Pack.
 
    ![Instalações do Service Pack](/help/using/assets/service-pack-installation.png)
 
@@ -95,13 +88,13 @@ Quando a instalação for concluída, sua aprovação ou rejeição será necess
 
    ![Rejeitar ou Aprovar a atualização do service pack](/help/using/assets/service-pack-reject-approve.png)
 
-1. Siga um destes procedimentos:
+1. Siga uma das seguintes opções:
 
    * Para finalizar a atualização, clique em **Aprovar**.
 
    ![Aprovação do service pack](/help/using/assets/service-pack-approve.png)
 
    * Para cancelar a atualização, clique em **Rejeitar**.
-A instalação do service pack foi cancelada e nenhuma alteração foi aplicada.
+     A instalação do service pack foi cancelada e nenhuma alteração foi aplicada.
 
    ![Rejeição do pacote de serviços](/help/using/assets/service-pack-reject.png)
