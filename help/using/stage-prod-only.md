@@ -3,17 +3,13 @@ title: Pipelines somente de preparo e somente de produção
 description: Saiba como dividir implantações de preparo e produção usando pipelines dedicados.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 TQID: https://experienceleague.adobe.com/whq-Hkwp3mjTr0iftoKZHKdsi0xaKtVXazXjUENoaLk
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 6b0075d2405e89dce1c883a2b5fc0bd952a3fddd
 workflow-type: tm+mt
-source-wordcount: 980
-ht-degree: 94%
+source-wordcount: 975
+ht-degree: 53%
 
 ---
 
@@ -23,34 +19,34 @@ Você pode dividir implantações de preparo e produção usando pipelines dedic
 
 ## Visão geral {#overview}
 
-Os ambientes de preparo e produção são totalmente combinados. Por padrão, as implantações para eles estão vinculadas a um único pipeline. Ou seja, um pipeline de implantação é iniciado nos ambientes de preparo e produção desse programa. Embora esse acoplamento seja normalmente adequado, há certos casos de uso em que há desvantagens:
+Os ambientes de preparo e produção são totalmente combinados. Por padrão, as implantações para eles estão vinculadas a um único pipeline. Um pipeline de implantação é implantado nos ambientes de preparo e produção nesse programa. Embora esse acoplamento seja normalmente adequado, há certos casos de uso em que ocorrem desvantagens:
 
-* Se quiser implantar somente em preparo, rejeite a etapa **Promover para produção** no pipeline. No entanto, a execução será marcada como cancelada.
-* Se você quiser implantar o código mais recente em um ambiente de preparo para produção, será necessário reimplantar todo o pipeline, incluindo a implantação de preparo, mesmo que nenhum código tenha sido alterado lá.
-* Os ambientes não podem ser atualizados durante as implantações. Se você pausar para testar o ambiente de preparo por vários dias antes de promover para a produção, o ambiente de produção permanecerá bloqueado e não poderá ser atualizado. Isso torna impossíveis tarefas não dependentes, como a atualização de [variáveis de ambiente](/help/getting-started/build-environment.md#environment-variables).
+* Se quiser implantar no preparo, ignore a etapa **Promover para Produção** no pipeline. No entanto, a execução é marcada como cancelada.
+* Se você quiser implantar o código mais recente de um ambiente de preparo para produção, será necessário reimplantar todo o pipeline, incluindo a implantação de preparo, mesmo que nenhum código tenha sido alterado lá.
+* Os ambientes não podem ser atualizados durante as implantações. Se você atrasar os testes no ambiente de preparo por vários dias antes de promover para a produção, o ambiente de produção permanecerá bloqueado e não poderá ser atualizado. Isso torna impossíveis tarefas não dependentes, como a atualização de [variáveis de ambiente](/help/getting-started/build-environment.md#environment-variables).
 
-Os pipelines somente de preparo e somente de produção oferecem soluções para esses casos de uso fornecendo opções de implantação dedicadas.
+Os pipelines somente de preparo e de produção oferecem soluções para esses casos de uso fornecendo opções de implantação dedicadas.
 
-* **Pipelines de implantação somente de preparo:** implantam somente em um ambiente de preparo e a execução termina quando a implantação e os testes são concluídos. Um pipeline somente de preparo se comporta de forma idêntica ao pipeline de produção de pilha completa acoplado padrão, mas sem as etapas de implantação de produção (aprovação, agendamento, implantação).
-* **Pipelines de implantação somente de produção:** implanta apenas para produção, selecionando a execução de estágio bem-sucedida mais recente. Em seguida, implante seus artefatos na produção. Os pipelines somente de produção reutilizam artefatos da implantação de preparo, ignorando a fase de compilação.
+* **Pipelines de Implantação Somente de Preparo:** Implante apenas em um ambiente de preparo com a execução concluída após a implantação e os testes serem concluídos. Um pipeline somente de preparo se comporta de forma idêntica ao pipeline de produção de pilha completa acoplado padrão, mas sem as etapas de implantação de produção (aprovação, agendamento, implantação).
+* **Pipelines de Implantação Somente de Produção:** Implante apenas na produção selecionando a execução de estágio bem-sucedida mais recente. Em seguida, implante os artefatos na produção. Os pipelines somente de produção reutilizam artefatos de implantação de estágio, ignorando a fase de compilação.
 
-Os pipelines somente de preparo e somente de produção não são executados enquanto um pipeline de produção de pilha completa está em andamento e vice-versa. Se o pipeline somente de preparo e o pipeline de produção de pilha completa tiverem o acionador **Sobre alterações do Git** configurado e estiverem apontando para a mesma ramificação e repositório, apenas o pipeline somente de preparo será iniciado automaticamente. Os pipelines somente de produção não iniciam **`On Git Changes`** porque não estão diretamente vinculados a um repositório.
+Os pipelines somente de preparo e somente de produção não são executados enquanto um pipeline de produção de pilha completa está em andamento e vice-versa. Se o pipeline somente de preparo e o pipeline de produção de pilha completa tiverem o acionador **Sobre alterações do Git** configurado e estiverem apontando para a mesma ramificação e repositório, apenas o pipeline somente de preparo será iniciado automaticamente. Os pipelines somente de produção não acionam **`On Git Changes`** porque não estão diretamente vinculados a um repositório.
 
 Os pipelines somente de produção são acionados manualmente, pois não estão vinculados diretamente a um repositório para **Sobre alterações do Git**.
 
-Esses pipelines dedicados oferecem mais flexibilidade, mas observe os seguintes detalhes de operação e recomendações.
+Esses pipelines dedicados oferecem mais flexibilidade, mas observe os seguintes detalhes de operação e recomendações:
 
 >[!NOTE]
 >
->Os pipelines somente de produção sempre usam artefatos do pipeline somente de preparo. Isso é verdade mesmo se o pipeline de produção acoplado padrão tiver implantado algo diferente para ser preparado enquanto isso.
+>Os pipelines somente de produção sempre usam artefatos do pipeline somente de preparo. Esse processo permanece válido mesmo se o pipeline de produção acoplada padrão tiver implantado algo diferente para preparo enquanto isso.
 >
->* Esse cenário pode levar a reversões de código indesejadas.
->* A Adobe recomenda parar de usar o pipeline de produção acoplada padrão assim que você começar a usar os pipelines somente de produção e somente de preparo.
+>* Esse cenário resulta em reversões de código indesejadas.
+>* A Adobe recomenda interromper o uso do pipeline de produção acoplada padrão assim que você começar a usar os pipelines somente de produção e somente de preparo.
 >* Se você ainda decidir executar os pipelines acoplados padrão junto com os pipelines somente de preparo/produção, lembre-se da reutilização de artefatos para evitar reversões de código.
 
 ## Criação de pipeline {#pipeline-creation}
 
-Os pipelines somente de produção e somente de preparo são criados de maneira semelhante aos [pipelines de produção](/help/using/production-pipelines.md) e [pipelines de não produção](/help/using/non-production-pipelines.md) acoplados padrão. Consulte esses documentos para obter detalhes.
+Os pipelines somente de produção e somente de preparo são criados de maneira semelhante aos [pipelines de produção](/help/using/production-pipelines.md) e [pipelines de não produção](/help/using/non-production-pipelines.md) agrupados padrão. Consulte esses documentos para obter detalhes.
 
 1. Na janela **Pipelines**, clique em **Adicionar pipeline**.
 
@@ -61,11 +57,11 @@ Os pipelines somente de produção e somente de preparo são criados de maneira 
 
 >[!NOTE]
 >
->Determinadas opções podem estar esmaecidas se os pipelines correspondentes já existirem.
+>Determinadas opções estarão esmaecidas se os pipelines correspondentes já existirem.
 >
->* A opção **Adicionar pipeline somente de produção** não estará disponível se não existir um pipeline somente de preparo.
+>* **Adicionar pipeline somente de produção** não estará disponível se um pipeline somente de preparo ainda não existir.
 >* A opção **Adicionar pipeline de produção** não está disponível se já existir um pipeline acoplado padrão.
->* São permitidos apenas um pipeline somente de produção e um pipeline somente de preparo por programa.
+>* Somente um pipeline de produção e um pipeline de apenas estágio são permitidos por programa.
 
 ### Pipelines somente de preparo {#stage-only}
 
@@ -98,7 +94,7 @@ Os pipelines somente de produção e somente de preparo são executados basicame
 
 ### Modo de emergência {#emergency-mode}
 
-Ao iniciar pipelines somente de produção e somente de preparo, você será solicitado a confirmar o início e como eles são iniciados.
+Ao iniciar pipelines somente de produção e somente de preparo, você será solicitado a confirmar o início e como ele continua.
 
 * O **Modo normal** é uma execução padrão e inclui etapas de teste de preparo.
 * O **Modo de emergência** ignora as etapas de teste de estágio.
@@ -107,7 +103,7 @@ Ao iniciar pipelines somente de produção e somente de preparo, você será sol
 
 ### Pipelines somente de preparo {#stage-only-run}
 
-Um pipeline somente de preparo é executado quase da mesma maneira que os pipelines acoplados padrão. No entanto, no final da execução, após as etapas de teste, um botão **Promover compilação** é exibido. Esse botão permite iniciar uma execução de pipeline somente de produção usando os artefatos que foram implantados no preparo durante a execução e implantá-los na produção.
+Um pipeline somente de preparo é executado quase da mesma maneira que os pipelines acoplados padrão. No entanto, no final da execução, após as etapas de teste, um botão **Promover compilação** é exibido. Esse botão permite iniciar uma execução de pipeline somente de produção. Ele usa os artefatos que foram implantados para preparo na execução. Em seguida, ele os implanta na produção.
 
 ![Execução de pipeline somente de preparo](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
