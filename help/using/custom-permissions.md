@@ -3,23 +3,19 @@ title: Permissões personalizadas
 description: Saiba como usar permissões personalizadas para criar novos perfis de permissão personalizados com permissões configuráveis e restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
 TQID: https://experienceleague.adobe.com/DkUDc-aDMLd8EAnduk3j1lGSIoY-RdKyjq9-kxtQHF0
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: f6d27e47bd3d0c468b2382901e47094cce51390d
 workflow-type: tm+mt
-source-wordcount: 1391
-ht-degree: 97%
+source-wordcount: 1407
+ht-degree: 78%
 
 ---
 
 # Permissões personalizadas {#custom-permissions}
 
-Saiba como usar permissões personalizadas para criar novos perfis de permissão personalizados com permissões configuráveis e restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
+Saiba como você pode usar permissões personalizadas para criar novos perfis de permissão personalizados com permissões configuráveis para restringir o acesso a programas, pipelines e ambientes para usuários do Cloud Manager.
 
 ## Introdução {#introduction}
 
@@ -30,7 +26,7 @@ O Cloud Manager possui um conjunto de funções predefinidas que controlam o ace
 * Gerenciador de implantação
 * Desenvolvedor
 
-As permissões personalizadas permitem que usuários criem novos perfis com permissões configuráveis para restringir o acesso de usuários do Cloud Manager a programas, pipelines e ambientes.
+As permissões personalizadas permitem que os usuários criem novos perfis de permissão personalizados com permissões configuráveis para restringir o acesso de usuários do Cloud Manager a programas, pipelines e ambientes.
 
 >[!TIP]
 >
@@ -44,21 +40,23 @@ Criar e usar suas próprias permissões personalizadas requer estas três etapas
 1. [Atribuir permissões personalizadas ao novo perfil de produto](#assign-permissions).
 1. [Atribuir usuários ao novo perfil de produto](#assign-users).
 
-Esta seção detalha essas etapas. Talvez seja útil consultar as sessões [Termos](#terms) e [Permissões configuráveis](#configurable-permissions) ao criar permissões personalizadas.
+Esta seção detalha essas etapas. Consulte as seções [Termos](#terms) e [Permissões configuráveis](#configurable-permissions) conforme você cria suas próprias permissões personalizadas.
 
 >[!NOTE]
 >
->Você deve ter direitos de administrador de produto no Admin Console para criar novos perfis e gerenciar permissões no Cloud Manager.
+>Para criar novos perfis e gerenciar permissões para o Cloud Manager, você deve ter direitos de administrador de produto no Admin Console.
 
 ### Criar um novo perfil de produto {#create}
 
 Primeiro crie um novo perfil de produto, ao qual poderá atribuir permissões personalizadas.
 
+**Para criar um novo perfil de produto:**
+
 1. Faça logon no Cloud Manager em [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)
 
 1. Selecione o produto **AEM Managed Services**.
 
-1. Pesquise uma instância com um nome correspondente ao padrão `*-cloud-manager` e clique para gerenciar usuários e permissões.
+1. Procure uma instância com nome correspondente ao padrão `*-cloud-manager` e selecione-a para gerenciar usuários e permissões.
 
 1. Você será redirecionado(a) para a guia **Produtos** do Admin Console, onde é possível gerenciar usuários e permissões do Cloud Manager. No Admin Console, clique em **Novo Perfil**.
 
@@ -79,7 +77,9 @@ O novo perfil de produto é salvo e torna-se visível na lista de perfis de prod
 
 Agora que você tem um novo perfil de produto, é possível atribuir permissões personalizadas.
 
-1. No Admin Console, clique no nome do [novo perfil de produto recém-criado](#create).
+**Para atribuir permissões personalizadas ao novo perfil de produto:**
+
+1. Na Admin Console, clique no nome do [novo perfil de produto](#create).
 
 1. Na janela aberta, selecione a guia **Permissões** para exibir uma lista de permissões editáveis.
 
@@ -106,13 +106,15 @@ O novo perfil de produto é salvo com as permissões personalizadas.
 
 Agora é possível atribuir usuários ao novo perfil de produto criado com permissões personalizadas.
 
-1. No Admin Console, clique no nome do [novo perfil de produto ao qual você atribuiu permissões personalizadas](#assign-permissions).
+**Para atribuir usuários ao novo perfil de produto:**
+
+1. Na Admin Console, clique no nome do [novo perfil de produto ao qual você atribuiu permissões personalizadas](#assign-permissions).
 
 1. Na janela aberta, selecione a guia **Usuários**.
 
 1. Clique em **Adicionar usuários** e atribua usuários ao novo perfil de produto com permissões personalizadas.
 
-Consulte a seção **Adicionar usuários e grupos de usuários a um perfil de produto** do documento [Gerenciar perfis de produto para usuários corporativos](https://helpx.adobe.com/br/enterprise/using/manage-product-profiles.html) para obter mais detalhes sobre como usar o Admin Console.
+Consulte a seção **Adicionar usuários e grupos de usuários a um perfil de produto** do documento [Gerenciar perfis de produto para usuários corporativos](https://helpx.adobe.com/business/enterprise/manage-products-and-entitlements/manage-products-and-product-profiles/manage-product-profiles.html) para obter mais detalhes sobre como usar o Admin Console.
 
 ## Permissões configuráveis {#configurable-permissions}
 
@@ -141,7 +143,7 @@ As seguintes permissões estão disponíveis para criar perfis personalizados.
 
 As permissões no nível da organização são sempre aplicadas em todos os programas de uma organização.
 
-Um exemplo de permissão no nível da organização no Cloud Manager é o **Acesso às informações do repositório**. Essa permissão permite que os usuários gerem um nome de usuário, uma senha e um URL do repositório para acessar e contribuir para projetos de clientes. Embora o nome de usuário e a senha permaneçam consistentes em todos os repositórios da organização, cada programa tem um URL de repositório exclusivo.
+Um exemplo de permissão no nível da organização no Cloud Manager é o **Acesso às informações do repositório**. Essa permissão permite que os usuários gerem um nome de usuário, uma senha e um URL do repositório para acessar e contribuir para projetos de clientes. Embora o nome de usuário e a senha sejam os mesmos em todos os repositórios na organização, cada programa tem um URL de repositório exclusivo.
 
 Consulte o documento [Repositório de código-fonte](/help/requirements/source-code-repository.md) para mais informações.
 
@@ -168,15 +170,15 @@ Os itens de permissão referem-se ao escopo de aplicação das permissões. Norm
 
 ## Limitações {#limitations}
 
-Lembre-se das seguintes limitações ao usar permissões personalizadas:
+Considere as seguintes limitações ao usar permissões personalizadas:
 
 * Um [conjunto limitado de permissões está disponível](#configurable-permissions) para criar perfis personalizados.
-* Recursos como programa, ambiente, pipeline etc. criados no Cloud Manager podem levar até dois minutos para serem exibidos no Admin Console para configuração de permissão.
-* Em situações raras nas quais o serviço de permissões personalizadas não responde, os perfis predefinidos ainda estarão disponíveis, e os usuários desses perfis ainda possuirão o acesso apropriado.
+* Recursos como programas, ambientes e pipelines criados no Cloud Manager exigem dois minutos para serem exibidos no Admin Console para configuração de permissão.
+* Se um serviço de permissões personalizadas não responder, os perfis predefinidos ainda estarão disponíveis e os usuários nos perfis predefinidos ainda terão acesso apropriado.
 
 ## Perguntas frequentes {#faq}
 
-### Quais são os perfis de permissão predefinidos?
+### Quais perfis de permissão são predefinidos?
 
 * Proprietário da empresa
 * Gerenciador de programas
@@ -185,13 +187,13 @@ Lembre-se das seguintes limitações ao usar permissões personalizadas:
 
 Para mais detalhes sobre funções predefinidas, consulte [Permissões baseadas em funções](/help/requirements/role-based-permissions.md).
 
-### O que acontece com os perfis de permissão predefinidos com a introdução dos perfis personalizados?
+### O que acontece com os perfis de permissão predefinidos quando os perfis personalizados são introduzidos?
 
 Os perfis de produtos padrão e as funções do Cloud Manager continuarão funcionando como antes.
 
 ### Posso editar os perfis de permissão predefinidos?
 
-Não, os perfis padrão não são editáveis. Não é possível adicionar nem remover permissões do perfil de permissão padrão. Você só pode adicionar ou remover usuários de perfis predefinidos.
+Não, os perfis padrão não são editáveis. Não é possível adicionar ou remover permissões do perfil de permissões padrão. Você só pode adicionar ou remover usuários de perfis predefinidos.
 
 ### Devo excluir os perfis de permissão predefinidos, já que os perfis personalizados estão disponíveis?
 
@@ -199,7 +201,7 @@ Os perfis de permissão predefinidos não devem ser excluídos do Admin Console.
 
 ### Posso adicionar usuários a vários perfis de permissão?
 
-Sim, um usuário pode fazer parte de vários perfis, incluindo perfis de permissão predefinidos e personalizados. Quando um usuário é atribuído a vários perfis, as permissões combinadas de todos os perfis de permissão atribuídos são disponibilizadas para esse usuário.
+Sim. Os usuários podem fazer parte de vários perfis, incluindo perfis de permissão predefinidos e personalizados. Quando um usuário é atribuído a vários perfis, as permissões combinadas de todos os perfis de permissão atribuídos são disponibilizadas para esse usuário.
 
 ### O que acontece se um usuário possuir permissão para editar um ambiente ou pipeline, mas não possuir acesso ao programa que contém o ambiente ou pipeline?
 
