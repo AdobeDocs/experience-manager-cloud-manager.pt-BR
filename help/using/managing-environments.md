@@ -73,6 +73,6 @@ A tela **Ambientes** exibe cada ambiente de produção e de preparo no seu progr
 
 Este vídeo fornece uma introdução aos ambientes do Cloud Manager que são compostos por instâncias de criação, publicação e Dispatcher do AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/)
+>[!VIDEO](https://video.tv.adobe.com/v/34272?captions=por_br)
 
 *(3 minutos, 1 segundo)*
