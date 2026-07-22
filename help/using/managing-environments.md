@@ -3,19 +3,14 @@ title: Gerenciamento de ambientes
 description: Saiba como usar o Cloud Manager para gerenciar seus ambientes.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 TQID: https://experienceleague.adobe.com/Dz3Z5i-gSNSorc7Na74RKgm3e0P9b-3vjVRdJvu6a0c
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 0dde660205ad28bc5924a5cc14404c48a0533ceb
 workflow-type: tm+mt
-source-wordcount: 275
-ht-degree: 100%
+source-wordcount: 261
+ht-degree: 57%
 
 ---
 
@@ -35,11 +30,11 @@ Cada um dos ambientes listados exibe seu status associado.
 
 O bloco **Ambientes** exibe os ambientes de produção e de preparo provisionados no programa junto com o status.
 
-O status é o estado de energia acumulado nos nós do ambiente na seguinte ordem de prioridade.
+O status é o estado de energia agregado nos nós do ambiente listados em ordem.
 
 * Verde - Todos os nós estão em execução
 * Vermelho - Um ou mais nós foram interrompidos.
-* Azul - Um ou mais nós estão chegando.
+* Azul - Um ou mais nós estão sendo iniciados.
 * Amarelo - Um ou mais nós têm um estado de energia indisponível.
 
 ![Bloco de ambientes](/help/assets/Environments-card-new.png)
@@ -48,7 +43,7 @@ O status é o estado de energia acumulado nos nós do ambiente na seguinte ordem
 
 No bloco **Ambientes**, clique na linha de qualquer ambiente para exibir a tela **Ambientes**.
 
-A tela **Ambientes** exibe cada ambiente de produção e preparo do seu programa. O nome do ambiente é visto acima de cada cartão. O cartão inclui uma tabela de nós no ambiente, juntamente com o tamanho da CPU, o armazenamento, a região e o status.
+A tela **Ambientes** exibe cada ambiente de produção e de preparo no seu programa. O nome do ambiente aparece acima de cada cartão. O cartão inclui uma tabela de nós no ambiente, juntamente com o tamanho da CPU, o armazenamento, a região e o status.
 
 >[!NOTE]
 >
@@ -56,7 +51,7 @@ A tela **Ambientes** exibe cada ambiente de produção e preparo do seu progra
 
 * Verde - Em execução
 * Vermelho - Parado
-* Azul - Chegando
+* Azul - Início
 * Amarelo - Indisponível
 
 ![Guia Ambientes](/help/assets/Environments-tab.png)
@@ -67,12 +62,12 @@ A tela **Ambientes** exibe cada ambiente de produção e preparo do seu progra
 
 >[!NOTE]
 >
->Solicite os logs do seu ambiente por meio do engenheiro de sucesso do cliente.
+>Solicite os registros de ambiente por meio do representante de sucesso do cliente.
 
 ## Tutorial em vídeo {#video-tutorial}
 
-Este vídeo fornece uma visão geral dos ambientes do Cloud Manager que são compostos por instâncias de criação, publicação e Dispatcher do AEM.
+Este vídeo fornece uma introdução aos ambientes do Cloud Manager que são compostos por instâncias de criação, publicação e Dispatcher do AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/34272?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/)
 
 *(3 minutos, 1 segundo)*
