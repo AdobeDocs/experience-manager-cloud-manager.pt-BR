@@ -10,26 +10,26 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 628eceafe63153d64151937df85937135bdc8e7b
 workflow-type: tm+mt
-source-wordcount: 431
-ht-degree: 95%
+source-wordcount: 421
+ht-degree: 60%
 
 ---
 
 # Principais conceitos {#key-concepts}
 
-Como qualquer ferramenta avançada, o Cloud Manager contém muitos conceitos e termos. Este documento resume alguns dos mais importantes para se começar a usar o Cloud Manager.
+O Cloud Manager abrange muitos conceitos e termos. Este artigo resume alguns dos conceitos mais importantes para você ao começar a usar o Cloud Manager.
 
 ## Aplicativo {#application}
 
-Aplicativo é o conjunto de personalizações e configurações criadas por um(a) cliente para adaptar a [solução](#solution) subjacente (como o AEM Sites ou o AEM Assets) para casos de uso e necessidades específicos. Um aplicativo é uma unidade lógica que pode ser composta por vários [artefatos](#artifact).
+Aplicativo é o conjunto de personalizações e configurações criadas por um(a) cliente para adaptar a [solução](#solution) subjacente (como o AEM Sites ou o AEM Assets) para casos de uso e necessidades específicos. Um aplicativo é uma unidade lógica composta por vários [artefatos](#artifact).
 
 Um exemplo é o fictício [aplicativo de estilo de vida WKND](https://experienceleague.adobe.com/pt-br/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview).
 
 ## Artefato {#artifact}
 
-Um artefato é uma unidade implantável e o resultado de um processo de build que transforma o código-fonte em uma só unidade. Por exemplo, um arquivo .zip que contém o código-fonte.
+Um artefato é uma unidade implantável e é o resultado de um processo de criação que transforma o código-fonte em uma única unidade. Por exemplo, um arquivo .zip que contém o código-fonte.
 
 ## Repositório de artefatos {#artifact-repository}
 
@@ -53,15 +53,15 @@ Uma organização é uma construção da Adobe que representa um cliente corpora
 
 ## Pipeline {#pipeline}
 
-Um pipeline é um conjunto de etapas de implantação executadas em sequência.
+Um pipeline é um conjunto de etapas de implantação que são executadas em sequência.
 
 ## Produto {#product}
 
-Um produto é um conjunto específico de funcionalidades dentro de uma [solução](#solution) licenciada por uma organização. Diferentes [programas](#program) em uma organização podem ter direito a diferentes conjuntos de produtos, por exemplo, AEM Sites, AEM Assets ou AEM Forms.
+Um produto é um conjunto específico de funcionalidades dentro de uma [solução](#solution) licenciada por uma organização. Diferentes [programas](#program) em uma organização têm direito a diferentes conjuntos de produtos, por exemplo, AEM Sites, AEM Assets ou AEM Forms.
 
 ## Programa {#program}
 
-Um programa é um conjunto de ambientes que aceitam um agrupamento lógico de iniciativas do cliente, geralmente correspondendo a um contrato de nível de serviço (SLA) adquirido. Cada programa tem exatamente um ambiente de produção e pode ter muitos ambientes de não produção.
+Um programa é um conjunto de ambientes que aceitam um agrupamento lógico de iniciativas do cliente, geralmente correspondendo a um service level agreement (SLA) adquirido. Cada programa tem exatamente um ambiente de produção e muitos ambientes de não produção.
 
 ## Solução {#solution}
 
@@ -69,4 +69,4 @@ Uma solução é uma das soluções da Adobe [!UICONTROL Experience Cloud]. Por 
 
 ## Etapa {#step}
 
-Uma etapa é um conjunto de instruções configurado que realiza uma unidade de trabalho como um bloco de construção de um [pipeline](#pipeline).
+Uma etapa é um conjunto de instruções configurado que realiza alguma unidade de trabalho como componente de um [pipeline](#pipeline).

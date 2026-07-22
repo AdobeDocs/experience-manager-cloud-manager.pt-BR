@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 694d3e8dad6e2ba86186a4bf6fdda3739e1041da
+source-git-commit: f83ddaa74a656abd2328cd3969ff0cc10b79d729
 workflow-type: tm+mt
-source-wordcount: 1122
+source-wordcount: 1085
 ht-degree: 50%
 
 ---
@@ -71,17 +71,18 @@ As restrições a seguir se aplicam.
 A seguir, é descrito como o pipeline de pilha completa interage com um [pipeline de configuração de camada da Web](#web-tier-config-pipelines).
 
 * O pipeline de pilha completa para um ambiente ignora a configuração do Dispatcher se existir um pipeline de configuração no nível da Web correspondente.
-* Se não existir um pipeline de configuração no nível da Web correspondente para o ambiente, o usuário poderá configurar o pipeline de pilha completa para incluir ou ignorar a configuração do Dispatcher.
+* Se não existir um pipeline de configuração no nível da Web correspondente para o ambiente, o usuário poderá incluir ou ignorar a configuração do Dispatcher ao configurar o pipeline de pilha completa.
 
 Os pipelines de pilha completa podem ser pipelines de qualidade do código ou de implantação.
 
 #### Configurar pipelines de pilha completa {#configure-full-stack}
 
-Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#full-stack-code).Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#full-stack-code).
+Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Pipelines de configuração no nível da Web {#web-tier-config-pipelines}
 
-Os pipelines de configuração no nível da Web permitem a implantação exclusiva da configuração HTTPD/Dispatcher no tempo de execução do AEM, desvinculando-a de outras alterações de código. É um pipeline simplificado que fornece aos usuários que desejam implantar somente as alterações de configuração do Dispatcher um meio mais rápido de fazê-lo em apenas alguns minutos.
+Os pipelines de configuração no nível da Web permitem a implantação exclusiva da configuração HTTPD/Dispatcher no tempo de execução do AEM, desvinculando-a de outras alterações de código. É um pipeline simplificado que fornece aos usuários que desejam implantar somente as alterações de configuração do Dispatcher um meio eficiente de fazê-lo rapidamente.
 
 >[!TIP]
 >
@@ -105,7 +106,8 @@ O item a seguir descreve como o pipeline de configuração no nível da Web inte
 
 #### Configurar pipelines no nível da Web {#configure-web-tier}
 
-Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#web-tier-config).Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulte [Adicionar um pipeline de produção](/help/using/production-pipelines.md#web-tier-config).
+Consulte [Adicionar um pipeline de não produção](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Criações mais rápidas usando o Smart Build {#use=smart-build}
 
@@ -131,7 +133,7 @@ O pipeline de CI/CD fornece portas de qualidade ou critérios de aceitação, qu
 Para cada uma dessas portas, há três níveis de problemas que podem ser identificados:
 
 * **Crítico**: problemas críticos identificados pela porta causam uma falha imediata do pipeline.
-* **Importante**: problemas importantes identificados pela porta fazem com que o pipeline entre em pausa. Um gerente de implantação, gerente de projeto ou proprietário da empresa pode neutralizar os problemas, permitindo que o pipeline continue. Alternativamente, eles podem aceitar os problemas, interrompendo o pipeline com uma falha.
+* **Importante**: problemas importantes identificados pela porta fazem com que o pipeline entre em pausa. Um gerente de implantação, gerente de projeto ou líder de negócios pode anular os problemas, permitindo que o pipeline continue. Alternativamente, eles podem aceitar os problemas, interrompendo o pipeline com uma falha.
 * **Informações**: os problemas de informação identificados pela porta são fornecidos exclusivamente para fins informativos e não têm impacto na execução do pipeline.
 
 Este é um exemplo de verificação de código com problemas identificados.

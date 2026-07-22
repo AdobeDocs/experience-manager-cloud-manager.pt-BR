@@ -16,10 +16,10 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 3ecc950f1fc53c4c7bf4a079c08c33f6dd34fe23
 workflow-type: tm+mt
-source-wordcount: 4156
-ht-degree: 91%
+source-wordcount: 4096
+ht-degree: 80%
 
 ---
 
@@ -29,7 +29,7 @@ Saiba mais sobre as regras de qualidade de código personalizado executadas pelo
 
 >[!NOTE]
 >
->As amostras de código fornecidas aqui são apenas para fins ilustrativos. Consulte a [Documentação de conceitos da SonarQube](https://docs.sonarsource.com/sonarqube-server/latest/) para conhecer seus conceitos e regras de qualidade.
+>As amostras de código fornecidas aqui são apenas para fins ilustrativos. Para conhecer seus conceitos e regras de qualidade, consulte a [Documentação de conceitos da SonarQube](https://docs.sonarsource.com/sonarqube-server).
 
 As regras completas do SonarQube não estão disponíveis para download devido às informações proprietárias da Adobe. Você pode baixar a lista completa de regras [usando este link](/help/assets/CodeQuality-rules-latest-AMS.xlsx). Continue a ler este documento para obter descrições e exemplos das regras.
 
@@ -97,14 +97,14 @@ public class DoThis implements Runnable {
 }
 ```
 
-### Não use strings de formatação que possam ser controladas externamente {#do-not-use-format-strings-which-may-be-externally-controlled}
+### Não usar strings de formato controladas externamente {#do-not-use-format-strings-which-may-be-externally-controlled}
 
 * **Chave**: CQRules:CWE-134
 * **Tipo**: Vulnerabilidade
 * **Severidade**: Alta
 * **Desde**: Versão 2018.4.0
 
-Usar uma string de formatação de uma fonte externa (como um parâmetro de solicitação ou conteúdo gerado pelo usuário) pode expor um aplicativo a ataques de negação de serviço. Há casos em que uma string de formatação pode ser controlada externamente, mas isso somente é permitido de fontes confiáveis.
+Usar uma string de formatação de uma fonte externa (como um parâmetro de solicitação ou conteúdo gerado pelo usuário) pode expor um aplicativo a ataques de negação de serviço. Há circunstâncias em que uma string de formato é controlada externamente, mas isso só é permitido a partir de fontes confiáveis.
 
 #### Código não compatível {#non-compliant-code-1}
 
@@ -123,7 +123,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 * **Severidade**: Crítica
 * **Desde**: Versão 2018.6.0
 
-Ao executar solicitações HTTP de dentro de um aplicativo do AEM, é essencial garantir que os tempos limite sejam configurados adequadamente para evitar um consumo desnecessário de threads. Infelizmente, o cliente HTTP padrão do Java™, `java.net.HttpUrlConnection`, e o cliente Apache HTTP Components amplamente usado não têm um tempo-limite padrão. Portanto, é necessário configurar os tempos limite explicitamente. Como prática recomendada, essas ocorrências de tempo-limite não devem exceder 60 segundos.
+Ao executar solicitações HTTP de dentro de um aplicativo do AEM, é essencial garantir que os tempos limite sejam configurados adequadamente para evitar um consumo desnecessário de threads. Infelizmente, o cliente HTTP padrão do Java™, `java.net.HttpUrlConnection`, e o cliente Apache HTTP Components amplamente usado não têm um tempo-limite padrão. Portanto, é necessário configurar os tempos limite explicitamente. Como prática recomendada, esses tempos limite não excedem 60 segundos.
 
 #### Código não compatível {#non-compliant-code-2}
 
@@ -302,7 +302,7 @@ public void orDoThis() throws MyCustomException {
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-Outro padrão comum a ser evitado é registrar uma mensagem e imediatamente depois lançar uma exceção. Isso geralmente indica que a mensagem de exceção acabará duplicada nos arquivos de log.
+Outro padrão comum a ser evitado é registrar uma mensagem e imediatamente depois lançar uma exceção. Esse problema indica que a mensagem de exceção está duplicada nos arquivos de log.
 
 #### Código não compatível {#non-compliant-code-7}
 
@@ -327,7 +327,7 @@ public void doThis() throws Exception {
 * **Tipo**: `Code Smell`
 * **Severidade**: Baixa
 
-Em geral, o nível de log INFO deve ser usado para demarcar ações importantes e, por padrão, o AEM é configurado para fazer logon no nível INFO ou superior. Os métodos GET e HEAD devem ser operações somente leitura e, portanto, não constituem ações importantes. Registrar no nível INFO em resposta a solicitações GET ou HEAD provavelmente criará um ruído significativo de log, dificultando a identificação de informações úteis em arquivos de log. Ao manipular solicitações GET ou HEAD, o registro deve estar na camada de AVISO ou ERRO, se algo tiver dado errado. Para informações mais detalhadas sobre resolução de problemas, o registro deve estar na camada DEBUG ou TRACE.
+Em geral, o nível de log INFO deve ser usado para demarcar ações importantes e, por padrão, o AEM é configurado para fazer logon no nível INFO ou superior. Os métodos GET e HEAD devem ser operações somente leitura e, portanto, não constituem ações importantes. Fazer logon no nível INFO em resposta a solicitações GET ou HEAD gera um ruído significativo de log, dificultando a identificação de informações úteis em arquivos de log. Ao manipular solicitações GET ou HEAD, registre nos níveis AVISO ou ERRO se algo deu errado. Para obter informações mais detalhadas sobre solução de problemas, faça logon nos níveis DEBUG ou TRACE.
 
 >[!NOTE]
 >
@@ -356,7 +356,7 @@ public void doGet() throws Exception {
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-Como prática recomendada, as mensagens de log devem fornecer informações contextuais sobre onde ocorreu uma exceção no aplicativo. Embora o contexto também possa ser determinado pelo uso de rastros de pilha, em geral, a mensagem de log será mais fácil de ler e entender. Como resultado disso, ao registrar uma exceção, não é uma prática recomendada usar a mensagem da exceção como a mensagem de registro. A mensagem de exceção deve detalhar o que deu errado. Por outro lado, a mensagem de log deve informar quem está lendo sobre o que o aplicativo estava fazendo quando a exceção ocorreu. A mensagem de exceção ainda é registrada. Ao especificar sua própria mensagem, será mais fácil entender os logs.
+Como prática recomendada, as mensagens de log devem fornecer informações contextuais sobre onde ocorreu uma exceção no aplicativo. Ao determinar o contexto usando rastreamentos de pilha, em geral a mensagem de log é mais fácil de ler e entender. Como resultado disso, ao registrar uma exceção, não é uma prática recomendada usar a mensagem da exceção como a mensagem de registro. A mensagem de exceção detalha o que deu errado. Por outro lado, a mensagem de log informa ao leitor sobre o que o aplicativo estava fazendo quando a exceção ocorreu. A mensagem de exceção ainda é registrada. Ao especificar sua própria mensagem, será mais fácil entender os logs.
 
 #### Código não compatível {#non-compliant-code-9}
 
@@ -382,7 +382,7 @@ public void doThis() {
 }
 ```
 
-### Os logs em blocos de catch devem estar no nível AVISO ou ERRO {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
+### O registro em blocos catch está no nível AVISO ou ERRO {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
 * **Chave**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
 * **Tipo**: `Code Smell`
@@ -422,7 +422,7 @@ public void doThis() {
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-O contexto é essencial ao entender as mensagens de log. Usar `Exception.printStackTrace()` faz com que somente o rastro de pilha seja enviado para o fluxo de erro padrão, perdendo todo o contexto. Além disso, em um aplicativo com várias threads como o AEM, se várias exceções forem impressas com esse método em paralelo, seus rastros de pilha podem se sobrepor, gerando bastante confusão. As exceções devem ser registradas somente por meio da estrutura de registro.
+O contexto é essencial ao entender as mensagens de log. Usar `Exception.printStackTrace()` faz com que somente o rastreamento de pilha seja enviado para o fluxo de erro padrão, omitindo todo o contexto. Além disso, em um aplicativo multithread como o AEM, a saída de rastreamento de pilha paralela causa problemas. As exceções devem ser registradas somente por meio da estrutura de registro.
 
 #### Código não compatível {#non-compliant-code-11}
 
@@ -455,7 +455,7 @@ public void doThis() {
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-O logon no AEM sempre deve ser feito por meio da estrutura de log, SLF4J. Ao enviar diretamente para a saída padrão ou para fluxos de erro padrão, as informações estruturais e contextuais fornecidas pela estrutura de registro são perdidas e podem, em alguns casos, causar problemas de desempenho.
+O logon no AEM sempre deve ser feito por meio da estrutura de log, SLF4J. A saída diretamente para a saída padrão ou fluxos de erro padrão perde as informações estruturais e contextuais fornecidas pela estrutura de registro e, às vezes, causa problemas de desempenho.
 
 #### Código não compatível {#non-compliant-code-12}
 
@@ -488,7 +488,7 @@ public void doThis() {
 * **Severidade**: Baixa
 * **Desde**: Versão 2018.4.0
 
-Caminhos que começam com `/libs` e `/apps` geralmente não devem ser codificados. Normalmente, esses caminhos são armazenados em relação ao caminho de pesquisa `Sling`, que tem como padrão `/libs,/apps`. O uso do caminho absoluto pode gerar defeitos sutis que só aparecerão posteriormente no ciclo de vida do projeto.
+Os caminhos que começam com `/libs` e `/apps` não são codificados. Normalmente, esses caminhos são armazenados em relação ao caminho de pesquisa `Sling`, que tem como padrão `/libs,/apps`. O uso do caminho absoluto introduz defeitos sutis que só aparecem posteriormente no ciclo de vida do projeto.
 
 #### Código não compatível {#non-compliant-code-13}
 
@@ -513,11 +513,11 @@ public void doThis(Resource resource) {
 * **Severidade**: Baixa
 * **Desde**: Versão 2020.5.0
 
-Não use o Sling Scheduler para tarefas que exigem execução garantida. Os processos agendados no Sling têm execução garantida e são mais adequados para ambientes clusterizados e não clusterizados.
+Não use o Sling Scheduler para tarefas que exigem execução garantida. As tarefas agendadas do Sling garantem a execução e são mais adequadas para ambientes clusterizados e não clusterizados.
 
-Consulte a [documentação sobre manuseio de processos e eventos do Apache Sling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) para saber mais sobre como os processos do Sling são tratados em ambientes clusterizados.
+Para saber mais sobre como os Trabalhos do Sling são tratados em ambientes clusterizados, consulte a [documentação de Evento do Apache Sling e manuseio de trabalhos](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
-### Não utilize APIs obsoletas do AEM {#sonarqube-aem-deprecated}
+### Não use APIs obsoletas do AEM {#sonarqube-aem-deprecated}
 
 * **Chave**: AMSCORE-553
 * **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
@@ -526,9 +526,9 @@ Consulte a [documentação sobre manuseio de processos e eventos do Apache Sling
 
 As APIs do AEM estão em constante revisão para identificar quais não devem mais ser usadas e, portanto, consideradas descontinuadas.
 
-Muitas vezes, essas APIs são obsoletas usando a anotação padrão Java™ *@Deprecated* e, sendo assim, são identificadas por `squid:CallToDeprecatedMethod`.
+Geralmente, essas APIs são descontinuadas usando a anotação padrão do Java™ *@Deprecated* que identifica isso como `squid:CallToDeprecatedMethod`.
 
-No entanto, há casos em que uma API é obsoleta no contexto do AEM, mas pode não ser obsoleta em outros contextos. Esta regra identifica essa segunda classe.
+No entanto, há casos em que uma API é descontinuada no contexto do AEM, mas não em outros contextos. Esta regra identifica essa segunda classe.
 
 ## Regras de conteúdo OakPAL {#oakpal-rules}
 
@@ -536,9 +536,9 @@ A seção a seguir especifica as verificações do OakPAL executadas pelo Cloud 
 
 >[!NOTE]
 >
->O OakPAL é uma estrutura que valida pacotes de conteúdo usando um repositório Oak autônomo. Ela foi desenvolvida por um parceiro do AEM, vencedor do prêmio AEM Rock Star North America 2019.
+>O OakPAL é uma estrutura que valida pacotes de conteúdo usando um repositório Oak autônomo. Um parceiro da AEM e vencedor do prêmio &quot;AEM Rock Star North America&quot; de 2019 a desenvolveu.
 
-### Clientes não devem implementar nem estender APIs de produto anotadas com @ProviderType {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+### Não implemente ou estenda APIs de produto anotadas com @ProviderType {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
 * **Chave**: CQBP-84
 * **Tipo**: Erro
@@ -561,14 +561,14 @@ public class DontDoThis implements Page {
 }
 ```
 
-### Os pacotes de clientes não devem criar nem editar nós em `/libs` {#oakpal-customer-package}
+### Não criar ou editar nós em `/libs` em pacotes de clientes {#oakpal-customer-package}
 
 * **Chave**: BannedPath
 * **Tipo**: Erro
 * **Gravidade**: Bloqueador
 * **Desde**: Versão 2019.6.0
 
-Uma prática recomendada já consolidada é que a árvore de conteúdo `/libs` no repositório de conteúdo do AEM deve ser considerada somente leitura pelos clientes. A modificação dos nós e propriedades em `/libs` cria riscos significativos para atualizações importantes e secundárias. As edições de `/libs` são feitas pela Adobe apenas por meio de canais oficiais.
+Uma prática recomendada já consolidada é que a árvore de conteúdo `/libs` no repositório de conteúdo do AEM deve ser considerada somente leitura pelos clientes. A modificação dos nós e propriedades em `/libs` cria riscos significativos para atualizações importantes e secundárias. A Adobe faz edições em `/libs` somente por meio de canais oficiais.
 
 ### Os pacotes não devem conter configurações de OSGi duplicadas {#oakpal-package-osgi}
 
@@ -637,9 +637,9 @@ Um problema comum é o uso de nós nomeados como `config` nas caixas de diálogo
 * **Severidade**: Alta
 * **Desde**: Versão 2019.6.0
 
-Semelhante à regra [Pacotes não devem conter configurações OSGi duplicadas](#oakpal-package-osgi), esse é um problema comum em projetos complexos nos quais o mesmo caminho de nó é gravado por vários pacotes de conteúdo separados. Embora seja possível usar as dependências do pacote de conteúdo para garantir um resultado consistente, é melhor evitar qualquer sobreposição.
+Semelhante à regra [Os pacotes não devem conter configurações OSGi duplicadas](#oakpal-package-osgi), esse problema é comum em projetos complexos, em que vários pacotes de conteúdo separados gravam no mesmo caminho de nó. Embora seja possível usar as dependências do pacote de conteúdo para garantir um resultado consistente, é melhor evitar qualquer sobreposição.
 
-### O modo de criação padrão não deve ser a interface clássica {#oakpal-default-authoring}
+### O modo de criação padrão não é a interface clássica {#oakpal-default-authoring}
 
 * **Chave**: ClassicUIAuthoringMode
 * **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
@@ -648,7 +648,7 @@ Semelhante à regra [Pacotes não devem conter configurações OSGi duplicadas](
 
 A configuração do OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` define o modo de autoria padrão no AEM. Como a interface clássica foi descontinuada no AEM 6.4, um problema será gerado quando o modo de criação padrão estiver configurado para usá-la.
 
-### Componentes com caixas de diálogo devem ter caixas de diálogo de interface sensível ao toque {#oakpal-components-dialogs}
+### Componentes com caixas de diálogo exigem caixas de diálogo da interface para toque {#oakpal-components-dialogs}
 
 * **Chave**: ComponentWithOnlyClassicUIDialog
 * **Tipo**: compatibilidade entre `Code Smell` e o Cloud Service
@@ -674,7 +674,7 @@ A compatibilidade com a replicação reversa não está disponível em implanta�
 
 Os clientes que usam replicação reversa devem entrar em contato com a Adobe para obter soluções alternativas.
 
-### Os recursos contidos nas bibliotecas de clientes habilitadas por proxy devem estar em uma pasta chamada “resources” {#oakpal-resources-proxy}
+### Os recursos contidos nas bibliotecas de clientes habilitadas para proxy residem em uma pasta chamada recursos {#oakpal-resources-proxy}
 
 * **Chave**: ClientlibProxyResource
 * **Tipo**: Erro
@@ -723,7 +723,7 @@ Com a mudança para os microsserviços de ativos no processamento de ativos do A
 * **Severidade**: Baixa
 * **Desde**: Versão 2021.2.0
 
-Embora o uso de modelos estáticos tenha sido historicamente comum em projetos AEM, os modelos editáveis são altamente recomendados, pois fornecem maior flexibilidade e são compatíveis com recursos adicionais que não estão presentes nos modelos estáticos. Para mais informações, consulte a [documentação Modelos de página - Editáveis](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable).
+Embora o uso de modelos estáticos tenha sido historicamente comum em projetos AEM, os modelos editáveis são altamente recomendados, pois fornecem maior flexibilidade e são compatíveis com recursos adicionais que não estão presentes nos modelos estáticos. Mais informações podem ser encontradas na [Documentação de modelos de página — Editável](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable).
 
 A migração de modelos estáticos para editáveis pode ser amplamente automatizada usando as [Ferramentas de modernização do AEM](https://opensource.adobe.com/aem-modernize-tools/).
 
@@ -849,14 +849,14 @@ O AEM Cloud Service proíbe que definições de índice de pesquisa personalizad
 >
 >Recomendamos que você resolva esse problema o mais rápido possível, pois ele poderá causar falhas nos pipelines a partir da [versão de agosto de 2024 do Cloud Manager](/help/release-notes/current.md).
 
-### A personalização de determinadas definições de índice prontas para uso é proibida {#oakpal-customizing-ootb-index}
+### É proibido personalizar determinadas definições de índice padrão {#oakpal-customizing-ootb-index}
 
 * **Chave**: RestrictIndexCustomization
 * **Tipo**: melhoria
 * **Severidade**: Alta
 * **Desde**: versão 2024.6.0
 
-O AEM Cloud Service proíbe modificações não autorizadas nos seguintes índices protos para uso:
+O AEM Cloud Service proíbe modificações não autorizadas nos seguintes índices padrão:
 
 * `nodetypeLucene`
 * `slingResourceResolver`
@@ -945,20 +945,20 @@ A seção a seguir lista as verificações da Ferramenta de Otimização do Disp
 
 * [Configuração geral do Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
 
-* [O cache do farm de publicação do Dispatcher deve ter `serveStaleOnError` habilitado](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
+* [O cache do farm de publicação do Dispatcher tem `serveStaleOnError` habilitado](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
 
 * [Os filtros farm de publicação do Dispatcher devem conter as regras de negação padrão da versão 6.x.x do arquétipo do AEM](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-contain-the-default-deny-rules-from-the-6xx-version-of-the-aem-archetype)
 
-* [A propriedade `statfileslevel` do cache do farm de publicação do Dispatcher deve ser >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
+* [A propriedade `statfileslevel` do cache do farm de publicação do Dispatcher é >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
 
-* [A propriedade `gracePeriod` do farm de publicação do Dispatcher deve ser >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
+* [A propriedade `gracePeriod` do farm de publicação do Dispatcher é >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
 
-* [Cada farm do Dispatcher deve ter um nome exclusivo](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
+* [Cada farm do Dispatcher tem um nome exclusivo](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [O cache do farm de publicação do Dispatcher deve ter suas regras `ignoreUrlParams` configuradas de maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [O cache do farm de publicação do Dispatcher tem suas regras `ignoreUrlParams` configuradas de maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [Os filtros farm de publicação do Dispatcher devem especificar os seletores Sling permitidos de uma maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [Os filtros farm de publicação do Dispatcher especificam os seletores Sling permitidos de uma maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [Os filtros farm de publicação do Dispatcher devem especificar os padrões de sufixo do Sling permitidos de maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [Os filtros farm de publicação do Dispatcher especificam os padrões de sufixo do Sling permitidos de maneira incluída na lista de permissões](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
 * [Não use a diretiva &#39;Require all granted&#39; em uma seção do VirtualHost Diretory com um caminho de diretório raiz](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)

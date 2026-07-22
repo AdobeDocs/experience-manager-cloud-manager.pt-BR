@@ -11,10 +11,10 @@ feature_v2:
   - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 1b146c2a01d3371ed2fe014a15a84ddee2cd9b6c
 workflow-type: tm+mt
 source-wordcount: 270
-ht-degree: 59%
+ht-degree: 40%
 
 ---
 
@@ -25,7 +25,7 @@ A primeira fase do Assistente de Atualização de Produto é a fase **[!UICONTRO
 O relatório verifica a prontidão da instância do autor para atualização, detectando padrões para o seguinte:
 
 * Violações de regras em áreas afetadas ou substituídas pela atualização.
-* Ele usa recursos do AEM 6.x ou APIs que não são compatíveis com versões anteriores e podem ser interrompidas após a atualização.
+* Ele detecta recursos ou APIs do AEM 6.x que não são compatíveis com versões anteriores e podem falhar após a atualização.
 
 Este relatório ajuda a estimar o esforço de desenvolvimento necessário para atualizar para o Adobe Experience Manager (AEM) 6.5.
 
@@ -35,7 +35,7 @@ Este relatório ajuda a estimar o esforço de desenvolvimento necessário para a
 
 ## Executar o relatório de avaliação {#running}
 
-O detector de padrões pode ser executado em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer lentidão em instâncias críticas para os negócios, o Cloud Manager o executa no ambiente de preparo da instância de criação.
+O detector de padrões pode ser executado em qualquer ambiente. No entanto, para aumentar a taxa de detecção e evitar qualquer impacto no desempenho em instâncias críticas, o Cloud Manager a executa no ambiente de preparo da instância do autor.
 
 **Para executar o relatório de avaliação:**
 
@@ -45,10 +45,10 @@ O detector de padrões pode ser executado em qualquer ambiente. No entanto, para
 
    ![Executar avaliação](/help/assets/Run-Evaluation.png)
 
-1. O assistente informa o status da ação. Você notará os status **Em andamento** ou **Concluído**, conforme for o caso, quando o relatório de avaliação estiver sendo gerado.
+1. O assistente informa o status da ação. Nota **Em andamento** ou **Concluída**, conforme aplicável, enquanto o relatório de avaliação está sendo gerado.
 
 1. Depois que o relatório for gerado, você pode clicar em **[!UICONTROL Baixar relatório]** para salvar uma cópia.
 
    ![Relatório criado](/help/assets/Evaluation-1.png)
 
-O assistente de Atualização de Produto atual no Cloud Manager oferece suporte somente à fase **Avaliação**. As outras quatro fases: **Correção**, **Execução**, **Validação** e **Conclusão** serão disponibilizadas em breve.
+O assistente de Atualização de Produto atual no Cloud Manager oferece suporte somente à fase **Avaliação**. As outras quatro fases, ou seja, **Correção**, **Execução**, **Validação** e **Conclusão**, serão disponibilizadas em breve.

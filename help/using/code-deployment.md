@@ -14,10 +14,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: a3594b07bd6eec6f6ff7e9636f35ae83449357f3
 workflow-type: tm+mt
-source-wordcount: 1699
-ht-degree: 98%
+source-wordcount: 1684
+ht-degree: 82%
 
 ---
 
@@ -29,11 +29,11 @@ Saiba como implantar seu código e o que acontece no Cloud Manager depois disso.
 
 Depois de configurar o pipeline de produção, incluindo o repositório e os ambientes necessários, você poderá implantar o código.
 
-1. Clique em **Implantar** no Cloud Manager para iniciar o processo de implantação.
+1. Para iniciar a implantação, clique em **Implantar**.
 
    ![Botão Implantar](/help/assets/Deploy1.png)
 
-1. A tela **Execução de pipeline** será exibida. Clique em **Criar** para iniciar o processo.
+1. A tela **Execução de pipeline** será exibida. Clique em **Compilação** para iniciar o processo de compilação.
 
    ![Botão Criar](/help/assets/Deploy2.png)
 
@@ -47,7 +47,7 @@ Você pode revisar as etapas de vários processos de implantação, visualizando
 
 ## Etapas de implantação {#deployment-steps}
 
-Várias ações ocorrem durante cada etapa da implantação, conforme descrito nesta seção. Consulte a seção [Detalhes do processo de implantação](#deployment-process) para obter detalhes técnicos sobre como o próprio código é implantado nos bastidores.
+Várias ações ocorrem durante cada etapa da implantação, descritas nesta seção. Consulte [Detalhes do Processo de Implantação](#deployment-process) para obter detalhes técnicos sobre como o próprio código é implantado.
 
 ### Etapa de implantação de preparo {#stage-deployment}
 
@@ -65,19 +65,19 @@ A etapa **Implantação de preparo** inclui as seguintes ações:
 A etapa **Teste de preparo** inclui as seguintes ações:
 
 * **Teste de segurança**: esta etapa avalia o impacto sobre a segurança do código no ambiente do AEM. Consulte o documento [Como entender os resultados do teste](/help/using/code-quality-testing.md) para obter detalhes sobre o processo de teste.
-   * **Teste de desempenho**: esta etapa avalia o desempenho do código. Consulte [Entender os resultados dos testes](/help/using/code-quality-testing.md) para mais detalhes sobre o processo de teste.
+  * **Teste de desempenho**: esta etapa avalia o desempenho do código. Consulte [Entender os resultados dos testes](/help/using/code-quality-testing.md) para mais detalhes sobre o processo de teste.
 
 ### Etapa de implantação de produção {#production-deployment}
 
 A etapa **Implantação de produção** inclui as seguintes ações:
 
 * **Pedido de aprovação**
-   * Essa opção é habilitada ao configurar o pipeline.
-   * Com essa opção, você pode agendar a implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
+  * Essa opção é habilitada ao configurar o pipeline.
+  * Com essa opção, você pode agendar a implantação de produção ou clicar em **Agora** para executar a implantação de produção imediatamente.
 * **Programar implantação de produção**
-   * Essa opção é habilitada ao configurar o pipeline.
-   * A data e a hora agendadas são especificadas no fuso horário do usuário.
-     ![Programar implantação](/help/assets/Production_Deployment1.png)
+  * Essa opção é habilitada ao configurar o pipeline.
+  * A data e a hora agendadas são especificadas no fuso horário do usuário.
+    ![Programar implantação](/help/assets/Production_Deployment1.png)
 * **Suporte do CSE** (se estiver habilitado)
 * **Implantar para produção**
 
@@ -103,14 +103,14 @@ As seguintes etapas atingirão o tempo-limite se forem deixadas aguardando o fee
 
 ## Detalhes do processo de implantação {#deployment-process}
 
-O Cloud Manager carrega todos os arquivos target/*.zip de destino produzidos pelo processo de criação para um local de armazenamento. Esses artefatos são recuperados desse local durante as fases de implantação do pipeline.
+O Cloud Manager carrega todos os `target/*.zip` arquivos produzidos pelo processo de compilação para um local de armazenamento. Esses artefatos são recuperados desse local durante as fases de implantação do pipeline.
 
-Quando o Cloud Manager é implantado em topologias que não são de produção, a meta é concluir a implantação o mais rápido possível. Portanto, os artefatos são implantados em todos os nós simultaneamente da seguinte maneira:
+Quando o Cloud Manager é implantado em topologias que não sejam de produção, a meta é concluir a implantação da maneira mais eficiente possível. Portanto, os artefatos são implantados em todos os nós simultaneamente da seguinte maneira:
 
 1. O Cloud Manager determina se cada artefato é um pacote do AEM ou do Dispatcher.
 1. O Cloud Manager remove todos os que são do Dispatcher do balanceador de carga para isolar o ambiente durante a implantação.
 
-   * A menos que configurado de outra forma, você pode ignorar as alterações do balanceador de carga nas implantações de desenvolvimento e preparo. Ou seja, para o ambiente de desenvolvimento, desconecte e conecte etapas em pipelines de não produção e, para o ambiente de preparo, o pipeline de produção.
+   * A menos que configurado de outra forma, você pode ignorar as alterações do balanceador de carga nas implantações de desenvolvimento e preparo. Ou seja, para o ambiente de desenvolvimento, desconecte e conecte etapas em pipelines de não produção; e para o ambiente de preparo, as etapas do pipeline de produção.
 
    ![Ignorar balanceador de carga](/help/assets/load_balancer.png)
 
@@ -120,7 +120,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
 
 1. Cada artefato do AEM é implantado em toda instância do AEM por meio de APIs de gerenciador de pacotes, com as dependências de pacote determinando a ordem da implantação.
 
-   * Para saber mais sobre como você pode usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório. Consulte [Gerenciador de pacotes](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+   * Saiba mais sobre como você pode usar pacotes para instalar novas funcionalidades, transferir conteúdo entre instâncias e fazer backup do conteúdo do repositório. Consulte [Gerenciador de pacotes](https://experienceleague.adobe.com/pt-br/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
    >[!NOTE]
    >
@@ -129,8 +129,8 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
 1. O artefato do Dispatcher é implantado em cada Dispatcher da seguinte maneira:
 
    1. O backup das configurações atuais é feito e copiado para um local temporário.
-   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte [Configurações do Dispatcher](/help/getting-started/dispatcher-configurations.md) para mais detalhes. Essa abordagem limpa os diretórios para garantir que nenhum arquivo órfão seja deixado para trás.
-   1. O artefato é extraído para o diretório `httpd`. Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório Git serão ignoradas no momento da implantação. Esses arquivos são fundamentais para a estrutura do Dispatcher do AMS e não podem ser alterados.
+   1. Todas as configurações são excluídas, exceto os arquivos imutáveis. Consulte [Configurações do Dispatcher](/help/getting-started/dispatcher-configurations.md) para mais detalhes. Essa abordagem limpa os diretórios para garantir que nenhum arquivo órfão permaneça.
+   1. O artefato é extraído para o diretório `httpd`. Arquivos imutáveis não são substituídos. Quaisquer alterações feitas em arquivos imutáveis no repositório Git serão ignoradas no momento da implantação. Esses arquivos são essenciais para a estrutura do AMS Dispatcher e não podem ser alterados.
    1. O Apache executa um teste de configuração. Se nenhum erro for encontrado, o serviço é reiniciado. Se forem encontrados erros, as configurações serão restauradas a partir do backup, o serviço será recarregado e o erro será relatado ao Cloud Manager.
    1. Cada caminho especificado na configuração do pipeline é invalidado ou removido do cache do Dispatcher.
 
@@ -148,7 +148,7 @@ Quando o Cloud Manager é implantado em topologias que não são de produção, 
 
 O processo de implantação das topologias de produção é um pouco diferente para minimizar o impacto para visitantes de sites do AEM.
 
-As implantações de produção geralmente seguem as mesmas etapas descritas acima, mas de maneira contínua:
+As implantações de produção seguem as mesmas etapas descritas acima, mas de maneira contínua:
 
 1. Implante pacotes do AEM para o autor.
 1. Desconecte dispatcher1 do balanceador de carga.
@@ -162,13 +162,13 @@ Esse processo continua até que a implantação tenha atingido todos os editores
 
 ## Modo de execução de pipeline de emergência {#emergency-pipeline}
 
-Em situações críticas, os clientes do Adobe Managed Services podem precisar implantar alterações de código em seus ambientes de preparo e produção imediatamente. Essa capacidade permite que eles ignorem o ciclo completo de testes do Cloud Manager.
+Em cenários urgentes, os clientes do Adobe Managed Services precisam implantar alterações de código em seus ambientes de preparo e produção imediatamente. Essa capacidade permite ignorar o ciclo de teste completo do Cloud Manager.
 
 Para lidar com essas situações, o pipeline de produção do Cloud Manager pode ser executado em um modo de emergência. Quando esse modo é usado, as etapas de teste de segurança e desempenho não são executadas. Todas as outras etapas, incluindo qualquer etapa de aprovação configurada, são executadas como no modo de execução normal do pipeline.
 
 >[!NOTE]
 >
->O recurso de modo de execução de pipeline de emergência é ativado programa por programa. A ativação é feita pelos engenheiros de sucesso do cliente.
+>O recurso de modo de execução de pipeline de emergência é ativado programa por programa. Os engenheiros de sucesso do cliente executam a ativação.
 
 ### Usar o modo de execução de pipeline de emergência {#using-emergency-pipeline}
 
@@ -191,7 +191,7 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 Em casos raros, as etapas de implantação de produção podem falhar por motivos transitórios. Nesses casos, é possível executar novamente a etapa de implantação em produção, desde que ela tenha sido concluída, independentemente de ter sido bem-sucedida, cancelada ou malsucedida. A reexecução é realizada com o mesmo pipeline, que consiste nas três etapas a seguir:
 
 1. **A etapa de validação**: a mesma validação que ocorre durante uma execução de pipeline normal.
-1. **A etapa de build**: no contexto de uma reexecução, a etapa de build copia artefatos, sem executar um novo processo build real.
+1. **A etapa de compilação** - No contexto de uma reexecução, a etapa de compilação copia artefatos e não executa um novo processo de compilação.
 1. **A etapa de implantação em produção**: usa as mesmas configurações e opções que a etapa de implantação em produção em uma execução de pipeline normal.
 
 Nessas circunstâncias, quando uma reexecução for possível, a página de status do pipeline de produção fornecerá a opção **Reexecutar** ao lado da opção tradicional **Baixar log de compilação**.
@@ -211,7 +211,7 @@ Nessas circunstâncias, quando uma reexecução for possível, a página de stat
 
 ### Reexecutar API {#reexecute-api}
 
-Além de estar disponível na interface, [a API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) pode ser usada para acionar reexecuções e identificar execuções que foram acionadas como reexecuções.
+Além de estar disponível na interface, [a API do Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api#tag/Pipeline-Execution) pode ser usada para acionar reexecuções e identificar execuções que foram acionadas como reexecuções.
 
 #### Acionar uma reexecução {#triggering}
 

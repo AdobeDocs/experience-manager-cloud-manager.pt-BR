@@ -10,16 +10,16 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: e94834c5e13825a468ef5344e77024c4fe4a29e6
 workflow-type: tm+mt
-source-wordcount: 592
-ht-degree: 99%
+source-wordcount: 596
+ht-degree: 85%
 
 ---
 
 # Permissões baseadas em funções {#role-based-permissions}
 
-O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apropriadas. Por exemplo, um desenvolvedor desenvolve códigos e tem permissão para enviá-los para o repositório Git. Um proprietário de empresa tem permissões diferentes que permitem definir os indicadores principais de desempenho (KPIs) e aprovar implantações.
+O [!UICONTROL Cloud Manager] inclui funções pré-configuradas com permissões apropriadas. Por exemplo, os desenvolvedores de software gravam código e têm permissão para enviar o código para o repositório Git. Os líderes de negócios têm permissões diferentes que permitem definir os KPIs (indicadores-chave de desempenho) e aprovar implantações.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ O [!UICONTROL Cloud Manager] tem funções pré-configuradas com permissões apr
 
 ## Funções do usuário {#user-roles}
 
-O gerenciamento de funções do [!UICONTROL Cloud Manager] é feito usando o [Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html). Todo usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de produto do Adobe Managed Services. As associações de função específicas são fornecidas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] no Admin Console.
+O gerenciamento de funções do [!UICONTROL Cloud Manager] é feito usando o [Admin Console](https://helpx.adobe.com/br/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html). Todo usuário do [!UICONTROL Cloud Manager] deve ser membro da organização IMS do cliente e ter o Contexto de produto do Adobe Managed Services. Você fornece associações de função específicas adicionando o usuário a um perfil de produto do [!UICONTROL Cloud Manager] na Admin Console.
 
 Para saber mais sobre como configurar usuários, consulte [Configuração de usuários e funções](/help/requirements/users-and-roles.md).
 
