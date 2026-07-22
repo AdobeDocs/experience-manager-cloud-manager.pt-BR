@@ -3,29 +3,25 @@ title: Adicionar um pipeline de produção
 description: Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 TQID: https://experienceleague.adobe.com/WH6W8bZNCWo0BAGLwnMOPpB3bk5P6Fd7c5b-dRT5Vc0
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: b44ffa027df5c60b1e5b2b81ec0702bb60c7078c
 workflow-type: tm+mt
-source-wordcount: 2101
-ht-degree: 58%
+source-wordcount: 2085
+ht-degree: 54%
 
 ---
 
 # Adicionar um pipeline de produção {#configuring-production-pipelines}
 
-Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código. Se desejar começar com uma visão geral mais conceitual de como funcionam os pipelines no Cloud Manager, consulte [Pipelines de CI/CD.](/help/overview/ci-cd-pipelines.md)
+Saiba como usar o Cloud Manager para criar e configurar pipelines de produção para implantar seu código. Para obter uma visão geral mais conceitual de como os pipelines funcionam no Cloud Manager, consulte [Pipelines de CI/CD](/help/overview/ci-cd-pipelines.md).
 
 ## Visão geral {#overview}
 
 Você pode criar dois tipos diferentes de pipelines usando o bloco **Configurações de pipeline** no [!UICONTROL Cloud Manager].
 
-* **Pipelines de produção**: um pipeline de produção é um pipeline com propósito específico composto por uma série de etapas orquestradas para levar o código fonte do seu repositório Git até a produção.
+* **Pipelines de produção** - Um pipeline de produção é composto por uma série de etapas orquestradas que têm o objetivo de levar o código-fonte do seu repositório Git para a produção.
 * **Pipelines de não produção** - Um pipeline de não produção é utilizado principalmente para executar verificações de qualidade de código ou implantar o código-fonte em um ambiente de desenvolvimento.
 
 Este documento é voltado para pipelines de produção. Para obter detalhes sobre como configurar pipelines de não produção, consulte o documento [Configuração de pipelines de não produção.](/help/using/non-production-pipelines.md)
@@ -40,7 +36,7 @@ O **Gerenciador de implantação** é responsável pela configuração do pipeli
 >
 >Um pipeline não pode ser configurado até que seu repositório Git associado tenha pelo menos uma ramificação e a [configuração do programa](/help/getting-started/program-setup.md) seja concluída.
 
-## Adicionar um pipeline de produção {#adding-production-pipeline}
+## Adicionar um pipeline de produção {#add-a-production-pipeline}
 
 Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu programa e definir pelo menos um ambiente, você poderá adicionar um pipeline de produção.
 
@@ -62,34 +58,34 @@ Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu program
 
          * **Acionador de implantação** - Você tem as seguintes opções para definir os acionadores de implantação que iniciam o pipeline.
 
-            * **Manual**: inicie o pipeline manualmente usando a interface do Cloud Manager.
-            * **Sobre alterações do Git**: inicia o pipeline de CI/CD sempre que confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
+           * **Manual**: inicie o pipeline manualmente usando a interface do Cloud Manager.
+           * **Sobre alterações do Git**: inicia o pipeline de CI/CD sempre que confirmações forem adicionadas à ramificação Git configurada. Com essa opção, ainda é possível iniciar o pipeline manualmente, conforme necessário.
 
          * **Comportamento de falhas de métricas importantes** - Durante a configuração ou edição do pipeline, o Gerenciador de implantação tem a opção de definir o comportamento do pipeline quando uma falha importante é encontrada em qualquer uma das portas de qualidade. As opções disponíveis são:
 
-            * **Sempre perguntar**: a configuração padrão e requer intervenção manual em qualquer falha importante.
-            * **Falhar imediatamente**: o pipeline será cancelado sempre que ocorrer uma falha importante. Emula um usuário que rejeita manualmente cada falha.
-            * **Continuar imediatamente**: o pipeline continuará automaticamente sempre que ocorrer uma falha importante. Emula um usuário aprovando manualmente cada falha.
+           * **Sempre perguntar**: a configuração padrão e requer intervenção manual em qualquer falha importante.
+           * **Falhar imediatamente**: o pipeline será cancelado sempre que ocorrer uma falha importante. Emula um usuário que rejeita manualmente cada falha.
+           * **Continuar imediatamente**: o pipeline continuará automaticamente sempre que ocorrer uma falha importante. Emula um usuário aprovando manualmente cada falha.
 
          ![Acionador de implantação](/help/assets/configure-pipelines/add-prod3.png)
 
          * **Opções de implantação** - Você pode acelerar determinadas tarefas de implantação.
 
-            * **Aprovar após a implantação de preparo** - Essa aprovação ocorre após a implantação no ambiente de preparo, antes da realização de qualquer teste. Caso contrário, a aprovação ocorre antes da implantação da produção, que é feita após a conclusão de todos os testes.
+           * **Aprovar após a implantação de preparo** - Essa aprovação ocorre após a implantação no ambiente de preparo, antes da realização de qualquer teste. Caso contrário, a aprovação ocorre antes da implantação da produção, que é feita após a conclusão de todos os testes.
 
-            * **Ignorar alterações do balanceador de carga** - Não são efetuadas alterações no balanceador de carga.
+           * **Ignorar alterações do balanceador de carga** - Não são efetuadas alterações no balanceador de carga.
 
          ![Opções de implantação de preparo](/help/assets/configure-pipelines/add-prod4.png)
 
-         * **Configuração do Dispatcher**: a função **Gerenciador de implantação** pode configurar um conjunto de caminhos de conteúdo que serão invalidados ou liberados do cache do Dispatcher do AEM quando um pipeline for executado. Essas ações de cache são realizadas como parte da etapa do pipeline de implantação, logo após a implantação de qualquer pacote de conteúdo. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar, faça o seguinte:
+         * **Configuração do Dispatcher**: a função **Gerenciador de implantação** pode configurar um conjunto de caminhos de conteúdo que serão invalidados ou liberados do cache do Dispatcher do AEM quando um pipeline for executado. Essas ações de cache são executadas como parte da etapa do pipeline de implantação depois que qualquer pacote de conteúdo é implantado. Essas configurações usam o comportamento padrão do Dispatcher do AEM. Para configurar, faça o seguinte:
 
-            1. Em **CAMINHO**, forneça um caminho de conteúdo.
-            1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.
+           1. Em **CAMINHO**, forneça um caminho de conteúdo.
+           1. Em **TIPO**, selecione a ação a ser tomada nesse caminho.
 
-               * **Limpeza** - Executa uma exclusão do cache.
-               * **Invalidar** - Executa uma invalidação de cache, semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
+              * **Limpeza** - Executa uma exclusão do cache.
+              * **Invalidar** - Executa uma invalidação de cache, semelhante a quando o conteúdo é ativado de uma instância de criação para uma instância de publicação.
 
-            1. Clique em **Adicionar caminho** para adicionar o caminho especificado. É possível adicionar até 100 caminhos por ambiente.
+           1. Clique em **Adicionar caminho** para adicionar o caminho especificado. É possível adicionar até 100 caminhos por ambiente.
 
          ![Configuração do Dispatcher](/help/assets/configure-pipelines/dispatcher-stage.png)
 
@@ -101,20 +97,20 @@ Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu program
 
          * **Opções de implantação** - Você pode definir os parâmetros que controlam a implantação de produção.
 
-            * **Usar aprovação de ativação**: alguém com a função de **Proprietário da empresa**, **Gerenciador de projetos** ou **Gerenciador de Implantação** por meio da interface do [!UICONTROL Cloud Manager] deve aprovar manualmente uma implantação.
-            * **Agendado**: interrompe o pipeline antes da implantação de produção para permitir o seu agendamento. Se essa opção estiver selecionada, o pipeline será interrompido após a implantação no ambiente de preparo e solicitará que o usuário execute a ação.
-               * **`Now`**: realiza a implantação na produção imediatamente, concluindo efetivamente o pipeline.
-               * **Data**: permite o agendamento do horário em que a implantação deverá ser concluída.
-               * **Parar execução**: interrompe a implantação para a produção.
+           * **Usar aprovação de ativação**: alguém com a função de **Proprietário da empresa**, **Gerenciador de projetos** ou **Gerenciador de Implantação** por meio da interface do [!UICONTROL Cloud Manager] deve aprovar manualmente uma implantação.
+           * **Agendado**: interrompe o pipeline antes da implantação de produção para permitir o seu agendamento. Se essa opção estiver selecionada, o pipeline será interrompido após a implantação no ambiente de preparo e solicitará que o usuário execute a ação.
+             * **`Now`**: realiza a implantação na produção imediatamente, concluindo efetivamente o pipeline.
+             * **Data**: permite o agendamento do horário em que a implantação deverá ser concluída.
+             * **Parar execução**: interrompe a implantação para a produção.
 
            >[!TIP]
            >
            >Consulte [Implantação do código](/help/using/code-deployment.md) para saber como programar a implantação ou executar o pipeline imediatamente.
 
-            * **Usar a supervisão do CSE**: se essa opção for selecionada, será solicitado o auxílio de um CSE (Engenheiro de sucesso do cliente) para iniciar a implantação. Ao criar ou editar um pipeline quando essa opção estiver habilitada, a função **Gerente de implantação** terá as seguintes opções.
+           * **Usar a supervisão do CSE**: se essa opção for selecionada, será solicitado o auxílio de um CSE (Engenheiro de sucesso do cliente) para iniciar a implantação. Ao criar ou editar um pipeline quando essa opção estiver habilitada, a função **Gerente de implantação** terá as seguintes opções.
 
-               * **Qualquer CSE**: permite que qualquer CSE disponível inicie a implantação.
-               * **Meu CSE**: permite que somente o CSE específico atribuído ao cliente inicie a implantação. Essa opção também se aplica ao backup do CSE designado se o CSE atribuído não estiver disponível.
+             * **Qualquer CSE**: permite que qualquer CSE disponível inicie a implantação.
+             * **Meu CSE**: permite que somente o CSE específico atribuído ao cliente inicie a implantação. Essa opção também se aplica ao backup do CSE designado se o CSE atribuído não estiver disponível.
 
            ![Opções de implantação de produção](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
@@ -150,9 +146,9 @@ Após usar a interface do [!UICONTROL Cloud Manager] para configurar seu program
 
       * Defina seus próprios ativos personalizados fazendo upload deles.
 
-         1. **FORMATO** - Escolha se o ativo personalizado é um PDF de uma imagem.
-         1. **NOME DE ARQUIVO** - Use o botão do navegador de arquivos para selecionar uma imagem de sua máquina local.
-         1. **Adicionar arquivo de teste** - Clique para fazer upload do ativo selecionado.
+        1. **FORMATO** - Escolha se o ativo personalizado é um PDF ou uma imagem.
+        1. **NOME DE ARQUIVO** - Use o botão do navegador de arquivos para selecionar uma imagem de sua máquina local.
+        1. **Adicionar arquivo de teste** - Clique para fazer upload do ativo selecionado.
 
       ![Distribuição de testes de ativos](/help/assets/configure-pipelines/add-prod6.png)
 
@@ -170,14 +166,14 @@ Um pipeline de código de pilha completa implanta compilações de código de ba
 
 1. Na guia **Código Source**, defina as seguintes opções.
 
-   * **Repositório**: define de qual repositório Git o pipeline deve recuperar o código.
+   * **Repositório** - Define de qual repositório Git o pipeline recupera o código.
 
    >[!TIP]
    >
    >Consulte o documento [Configuração do programa](/help/getting-started/program-setup.md) para saber como adicionar e gerenciar repositórios no Cloud Manager.
 
-   * **Ramificação Git** - Define de qual ramificação o pipeline deve recuperar o código.
-   * **Ignorar configuração no nível da Web**: quando essa opção está marcada, o pipeline não implanta sua configuração no nível da Web. Se um pipeline de configuração no nível da Web já existir para o mesmo ambiente, essa caixa de seleção será selecionada e desabilitada automaticamente, pois a configuração no nível da Web é gerenciada por esse pipeline. Quando não existir um pipeline de configuração no nível da Web, você pode selecionar ou desmarcar essa opção para controlar se o pipeline de pilha completa implanta a configuração do Dispatcher.
+   * **Ramificação Git** - Define de qual ramificação o pipeline recupera o código.
+   * **Ignorar configuração no nível da Web**: quando essa opção está marcada, o pipeline não implanta sua configuração no nível da Web. Se um pipeline de configuração no nível da Web já existir para o mesmo ambiente, essa caixa de seleção será automaticamente selecionada e desabilitada, pois esse pipeline gerencia a configuração no nível da Web. Quando não existir um pipeline de configuração no nível da Web, você pode selecionar ou desmarcar essa opção para controlar se o pipeline de pilha completa implanta a configuração do Dispatcher.
 
    ![Origem do código de pilha completa](/help/assets/configure-pipelines/add-prod-fullstack-source.png)
 
@@ -210,7 +206,7 @@ Se você criar um pipeline de configuração no nível da Web para um ambiente c
 1. Clique em **Continuar** para avançar para a guia **Teste de Preparo**. Consulte [Teste de preparo](#stage-testing) para obter detalhes.
 
 
-## Sobre o uso do Smart Build em um pipeline de produção{#about-smart-build}
+## Usar o Smart Build em um pipeline de produção{#about-smart-build}
 
 A **Compilação Inteligente** do Cloud Manager é uma estratégia de compilação otimizada para pipelines de produção. O Smart Build reduz os tempos de criação ao armazenar em cache módulos e recriar apenas os módulos que foram alterados desde a última execução bem-sucedida. Os módulos inalterados são reutilizados do cache, enquanto apenas os módulos modificados e suas dependências são recriados, melhorando a eficiência dos workflows de desenvolvimento iterativos.
 
@@ -242,7 +238,7 @@ O ganho de desempenho com o uso do Smart Build depende de vários fatores, inclu
 * A frequência e o escopo das alterações de código.
 * A distribuição de dependências entre módulos.
 
-Geralmente, projetos com muitos módulos independentes podem ver a maior melhoria.
+Projetos com muitos módulos independentes podem ver a maior melhoria.
 
 ### Recusa de cache por módulo{#smart-build-cache-optout}
 
@@ -269,13 +265,13 @@ Essa sintaxe força o módulo a ser recriado em cada execução de pipeline, enq
 Lembre-se do seguinte ao usar o Smart Build:
 
 * O Smart Build depende da análise de dependência do Maven.
-* As alterações fora do gráfico de dependência não podem acionar recriações.
-* Alguns plug-ins podem não ser totalmente compatíveis com o armazenamento em cache.
-* Você pode voltar para a **Compilação completa** a qualquer momento editando o pipeline de não produção.
+* As alterações fora do gráfico de dependência não acionam recriações.
+* Alguns plug-ins não são totalmente compatíveis com o armazenamento em cache.
+* Você pode voltar para a **Compilação completa** a qualquer momento editando o pipeline de produção.
 
 Se você encontrar um comportamento de compilação inesperado, considere desabilitar o cache de módulos específicos ou alternar temporariamente sua estratégia de compilação para **Compilação Completa**.
 
-### Solução de problemas do Smart Build{#smart-build-troubleshoot}
+### Resolver problemas do Smart Build{#smart-build-troubleshoot}
 
 | Problema | Soluções sugeridas |
 | --- | --- |
@@ -283,7 +279,7 @@ Se você encontrar um comportamento de compilação inesperado, considere desabi
 | Sem melhoria de desempenho | · Verifique se várias execuções ocorreram (aquecimento de cache).<br>· Verifique se a maioria dos módulos está mudando com frequência. |
 | Artefatos inesperados ou alterações ausentes | · Revise se se as alterações estão fora do rastreamento de dependência Maven.<br>· Use **Compilação completa** para verificação. |
 
-Consulte [Adicionar um pipeline de produção](#adding-production-pipeline) para habilitar o Smart Build.
+Para habilitar o Smart Build, consulte [Adicionar um pipeline de produção](#add-a-production-pipeline).
 
 
 ## Próximas etapas {#the-next-steps}
@@ -294,4 +290,4 @@ Depois de configurar o pipeline, você implantará o código. Consulte [Implanta
 
 Este vídeo fornece uma visão geral do processo de criação de pipeline, que é detalhado neste documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/327605?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
