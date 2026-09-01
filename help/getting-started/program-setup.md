@@ -3,17 +3,13 @@ title: Configuração do programa
 description: Após a integração, o proprietário da empresa precisa fazer uma configuração inicial do programa.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 TQID: https://experienceleague.adobe.com/AqaA4GSOptV11h2y4V1Mt15KmEhEYBaiM-RvBFjtfWY
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 4381c51e54aaf1286b69c149dbf57c77bcd9a8bd
 workflow-type: tm+mt
-source-wordcount: 549
-ht-degree: 65%
+source-wordcount: 548
+ht-degree: 60%
 
 ---
 
@@ -81,7 +77,7 @@ Se você ainda não tiver criado um pipeline, consulte os documentos [Configura�
 
 ## Alternar entre programas {#swithing-programs}
 
-Ao trabalhar em um programa, é possível mudar rapidamente para outro programa sem voltar à página de visão geral do Cloud Manager.
+Ao trabalhar em um programa, é possível alternar para outro programa sem retornar à página de visão geral do Cloud Manager.
 
 Use a barra de ações para alternar para outro programa, editar o programa atual ou adicionar um novo programa.
 
@@ -91,12 +87,12 @@ Use a barra de ações para alternar para outro programa, editar o programa atua
 
 Os KPIs de sites são medidos em testes executados no ambiente de preparo. Normalmente, esses KPIs são ajustados para corresponder aos recursos do ambiente de preparo.
 
-Por exemplo, um usuário que espera uma média de 1000 exibições de página por minuto em seu ambiente de produção e tem quatro servidores do Dispatcher/publicação em produção reduz esse cenário para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores do Dispatcher/Publish.
+Por exemplo, uma equipe que espera uma média de 1000 exibições de página por minuto em seu ambiente de produção e tem quatro servidores de publicação/Dispatcher em produção dimensiona esse cenário para 250 exibições de página por minuto. Esse cenário pressupõe que o ambiente de preparo consiste em apenas um único par de servidores de publicação/Dispatcher.
 
 O teste de desempenho do Assets envolve uploads repetidos de ativos em um período de 30 minutos. O tempo de processamento de cada ativo e várias métricas no nível do sistema são medidos durante o teste.
 
-Você tem uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, configurada para o seu ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI reflete somente o tráfego que deve passar pela CDN. Ou seja, o cache não é utilizado. Normalmente, esse tráfego é um subconjunto relativamente pequeno do tráfego total de produção.
+Você tem uma rede de entrega de conteúdo (CDN), como Akamai ou CloudFront, configurada para o seu ambiente de produção. Como o [!UICONTROL Cloud Manager] testa diretamente no ambiente de preparo, o KPI reflete somente o tráfego que deve passar pela CDN. Isso se refere aos erros de cache. Normalmente, esse tráfego é um subconjunto relativamente pequeno do tráfego total de produção.
 
 ## Vídeo de visão geral {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/34268?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)

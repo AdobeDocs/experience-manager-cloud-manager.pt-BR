@@ -3,12 +3,9 @@ title: Configurar um projeto
 description: Saiba como configurar o seu projeto para gerenciá-lo e implantá-lo com o Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 TQID: https://experienceleague.adobe.com/OhaZ2-x6p1b6aF0xHwr2G-RNTYPd15pqHVxKVwv-GDM
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 4381c51e54aaf1286b69c149dbf57c77bcd9a8bd
 workflow-type: tm+mt
 source-wordcount: 1411
 ht-degree: 65%
@@ -25,14 +22,14 @@ Os projetos do AEM existentes precisam seguir algumas regras básicas para serem
 
 * Os projetos devem ser criados usando o Apache Maven.
 * É necessário que haja um arquivo `pom.xml` na raiz do repositório Git.
-   * Esse arquivo `pom.xml` pode se referir a quantos submódulos (que por sua vez têm outros módulos derivados) forem necessários.
-   * Você pode adicionar referências a repositórios de artefatos Maven adicionais em seu arquivos `pom.xml`.
-   * O acesso a [repositórios de artefatos protegidos por senha](#password-protected-maven-repositories) é suportado quando configurado. No entanto, o acesso a repositórios de artefatos protegidos pela rede não é permitido.
+  * Esse arquivo `pom.xml` pode se referir a quantos submódulos (que por sua vez têm outros módulos derivados) forem necessários.
+  * Você pode adicionar referências a repositórios de artefatos Maven adicionais em seu arquivos `pom.xml`.
+  * O acesso a [repositórios de artefatos protegidos por senha](#password-protected-maven-repositories) é suportado quando configurado. No entanto, o acesso a repositórios de artefatos protegidos pela rede não é permitido.
 * O Cloud Manager descobre pacotes de conteúdo implantáveis ao verificar arquivos de pacote de conteúdo (.zip) contidos em um diretório chamado `target`.
-   * Qualquer número de submódulos produz pacotes de conteúdo.
+  * Qualquer número de submódulos produz pacotes de conteúdo.
 * O Cloud Manager descobre artefatos Dispatcher implantáveis ao verificar `zip` arquivos contidos em subdiretórios de `target` nomeados como `conf` e `conf.d`.
 * Se houver mais de um pacote de conteúdo, a ordem de implantação dos pacotes não será garantida.
-   * Se uma ordem específica for necessária, as dependências do pacote de conteúdo poderão ser usadas para definir a ordem.
+  * Se uma ordem específica for necessária, as dependências do pacote de conteúdo poderão ser usadas para definir a ordem.
 * Os pacotes podem ser [ignorados](#skipping-content-packages) da implantação.
 
 ## Ativar perfis do Maven no Cloud Manager {#activating-maven-profiles-in-cloud-manager}
