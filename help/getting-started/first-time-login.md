@@ -10,7 +10,7 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
+source-git-commit: dac18093bc590afbd33e358582b3f1c703ce23e1
 workflow-type: tm+mt
 source-wordcount: 294
 ht-degree: 28%
@@ -59,4 +59,4 @@ O Cloud Manager fornece uma exibição consolidada da atividade de um programa. 
 
 >[!NOTE]
 >
->Por padrão, um usuário com acesso a um ambiente do AEM também terá a função de usuário do Cloud Manager. Essa função não concede ao usuário acesso à visualização de detalhes do programa. Um usuário com somente a função de Usuário do Cloud Manager pode navegar usando as opções do menu do programa até o URL do autor do ambiente do AEM (se existirem ambientes). Esses usuários devem entrar em contato com os administradores se quiserem obter acesso no nível do programa.
+>Por padrão, um usuário com acesso a um ambiente do AEM também terá a função de usuário do Cloud Manager. Essa função não fornece ao usuário acesso à visualização de detalhes do programa. Um usuário com somente a função de Usuário do Cloud Manager pode navegar usando as opções do menu do programa até o URL do autor do ambiente do AEM (se existirem ambientes). Esses usuários devem entrar em contato com os administradores se quiserem obter acesso no nível do programa.
