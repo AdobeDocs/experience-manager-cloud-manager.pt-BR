@@ -7,18 +7,16 @@ user-guide-description: Saiba como usar o Cloud Manager para gerenciar manualmen
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: e10c3c15c01c28f6bad0a9cf0464288937402cb7
+source-git-commit: 8ad70f139304d55e3f6508e8ebf3c90b870e0541
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '341'
 ht-degree: 82%
-
 ---
-
 
 # Documentação do Cloud Manager {#content}
 
 + [Cloud Manager para AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/pt-br/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Visão geral {#overview}
   + [Principais conceitos](/help/overview/key-concepts.md)
   + [Jornada do usuário](/help/overview/user-journey.md)
@@ -78,6 +76,7 @@ ht-degree: 82%
 + Notas de versão {#release-notes}
   + [Atual](/help/release-notes/current.md)
   + 2026 {#rn-2026}
+    + [2026.9.0](/help/release-notes/2026/2026-9-0.md)
     + [2026.8.0](/help/release-notes/2026/2026-8-0.md)
     + [2026.7.0](/help/release-notes/2026/2026-7-0.md)
     + [2026.6.0](/help/release-notes/2026/2026-6-0.md)
